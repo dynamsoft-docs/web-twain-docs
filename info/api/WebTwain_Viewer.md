@@ -912,7 +912,7 @@ DWObject.Viewer.acceptDrop = true;
 
 ---
 
-## allowslide
+## allowSlide
 
 ``` typescript
 /**
