@@ -15,11 +15,13 @@ This upgrade section talks about how to upgrade Dynamic Web TWAIN to the latest 
 
 Please be aware of the following namespace changes introduced in version 17.0.
 
-| v17.0 |v16.2- |
+| v17.0+ |v16.2- |
 |:-|:-|
 |`Dynamsoft.DWT` |`Dynamsoft.WebTwainEnv`|
 |`Dynamsoft.DWT.EnumDWT_` |`Dynamsoft.EnumDWT_`|
+|`Dynamsoft.DBR.EnumBarcodeFormat` |`Dynamsoft.EnumBarcodeFormat`|
 
+More barcode enumeration can be found <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/api-reference/enum/EnumBarcodeColourMode.html?ver=latest" target="_blank">here</a>
 
 See more Breaking Changes in V17.0 [here]({{site.info}}schedule/stable.html) 
 
