@@ -916,7 +916,7 @@ DWObject.Viewer.acceptDrop = true;
 
 ``` typescript
 /**
- * Set whether to switch images through the screen.
+ * Set whether to allow image navigation by swiping left or right on the viewer.
  * The default value is true.
  */
 .allowSlide: boolean; 
