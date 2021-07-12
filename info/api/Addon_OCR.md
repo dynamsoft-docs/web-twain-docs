@@ -185,7 +185,7 @@ The font set with `SetUnicodeFontName()` is only used when `SetIfUseDetectedFont
  * Configure the OCR operation.
  * @param language Specify the target language.
  */
-SetLanguage(language: Dynamsoft.DWT.EnumDWT_OCRLanguage | number): boolean;
+SetLanguage(language: Dynamsoft.DWT.EnumDWT_OCRLanguage | string): boolean;
 ```
 
 ---
