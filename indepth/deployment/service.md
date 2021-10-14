@@ -78,6 +78,8 @@ On **Linux**, the users can run one of the following commands to install it:
 
 Once the installation is done, the users can click 'Reconnect to the service' or refresh the page to start using Dynamic Web TWAIN.
 
+### Msg: Dynamsoft service is not installed / Dynamic Web TWAIN is not installed
+
 If Dynamsoft Service is not installed, users might receive the error 'The Dynamic Web TWAIN module is not installed' when accessing an application that uses Dynamic Web TWAIN. 
 
 If you see repeat prompt on installing the service, please check out <a href="{{site.indepth}}faqs/distribution/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly.html" target="_blank">Why is the browser prompting me to install Dynamsoft Service repeatedly?</a>
