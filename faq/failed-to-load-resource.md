@@ -18,7 +18,7 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 ### Cause 
 
-You are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1. Because in V15.3 ~ V17.1.1, we use "local.dynamsoft.com" certificate for service connection. However, this certificate has expired on November 20th, 2021. To slove this issue, the only resolution is to update the certificate. See below.
+You are trying to access an application that integrates a version of Dynamic Web TWAIN V15.3 ~ V17.1.1. Because in V15.3 ~ V17.1.1, we use "local.dynamsoft.com" certificate for service connection. However, this certificate has expired on November 20th, 2021. To solve this issue, the only resolution is to update the certificate. See below.
 
 ### Resolution 
 
