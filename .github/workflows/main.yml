@@ -7,39 +7,15 @@ on:
   # Triggers the workflow on push events but only for the master branch
   push:
     branches: 
-    - master 
-    - preview 
+    - v17.3
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  Build-Master:
-    if: ${{ github.ref == 'refs/heads/master' }}
-    # The type of runner that the job will run on
-    runs-on: self-hosted
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #- uses: actions/checkout@v2
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          cd /home/ubuntu
-          [ ! -d DWTDoc ] && mkdir -p DWTDoc
-          [ ! -d web-twain-docs ] && git clone --depth 1 https://github.com/Dynamsoft/web-twain-docs.git
-          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
-          cd web-twain-docs && git pull && cd .. && cp -rfp ./web-twain-docs/* ./DWTDoc/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DWTDoc/
-          cd DWTDoc && bundle exec jekyll build --incremental
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DWTDoc/_site/ ./www.dynamsoft.com/web-twain/docs/ prod
-
-  Build-Preview:
-    if: ${{ github.ref == 'refs/heads/preview' }}
+jobs:         
+  Build-v17-2-1:
+    if: ${{ github.ref == 'refs/heads/v17.3' }}
     # The type of runner that the job will run on
     runs-on: self-hosted
 
@@ -49,14 +25,18 @@ jobs:
       - name: Build the site
         run: |
           cd /home/ubuntu
-          [ ! -d web-twain-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/web-twain-docs.git web-twain-docs-preview
-          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
-          [ ! -d DWTDocPreview ] && mkdir -p DWTDocPreview
-          cd web-twain-docs-preview && git pull && cd .. && cp -rfp ./web-twain-docs-preview/* ./DWTDocPreview/
-          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DWTDocPreview/
-          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DWTDocPreview/_config.yml
-          cd DWTDocPreview && bundle exec jekyll build --incremental
+          [ -d web-twain-docs-archive ] && rm -rf web-twain-docs-archive
+          [ -d Docs-Template-Repo-archive ] && rm -rf Docs-Template-Repo-archive
+          [ -d DWTDocArchive ] && rm -rf DWTDocArchive
+          mkdir -p DWTDocArchive
+          git clone --depth 1 --branch v17.3 https://github.com/Dynamsoft/web-twain-docs.git web-twain-docs-archive
+          git clone --depth 1 --branch dwt-v17.3 https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-archive
+          cp -rfp ./web-twain-docs-archive/* ./DWTDocArchive/
+          cp -rfp ./Docs-Template-Repo-archive/* ./DWTDocArchive/
+          sed -i -e "1,3s/blob\/master$/blob\/v17.3/" \
+          -e "1,3s/blob\/main$/blob\/v17.3/" /home/ubuntu/DWTDocArchive/_config.yml
+          cd DWTDocArchive && bundle exec jekyll build
+      
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
@@ -64,5 +44,12 @@ jobs:
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
-          local-dir: /home/ubuntu/DWTDocPreview/_site/
-          server-dir: /www.dynamsoft.com/web-twain/docs/                  
+          local-dir: /home/ubuntu/DWTDocArchive/_site/
+          server-dir: /www.dynamsoft.com/web-twain/docs-archive/v17.3/
+
+      - name: Clear files
+        run: |
+          cd /home/ubuntu
+          [ -d web-twain-docs-archive ] && rm -rf web-twain-docs-archive
+          [ -d Docs-Template-Repo-archive ] && rm -rf Docs-Template-Repo-archive
+          [ -d DWTDocArchive ] && rm -rf DWTDocArchive
