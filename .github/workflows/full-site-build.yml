@@ -9,7 +9,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  Build-v17-2-1:
+  Build-v17-3:
     if: ${{ github.ref == 'refs/heads/v17.3' }}
     # The type of runner that the job will run on
     runs-on: self-hosted
