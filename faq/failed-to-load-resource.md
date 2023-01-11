@@ -31,8 +31,11 @@ In this case, if you are trying to access an application that integrates a versi
 <ol>
      <li> Upgrade to V18.0+ which comes with a valid certificate </li>
      <li> If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. 
-          Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\cert. </br>  
-Note: the new certificate from Dynamsoft will expire on December 8th, 2023. This means you will need to update the certificate again after this certificate expires.</li>
+          <div>Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\cert. </div> </br>  
+          
+<div> Note: the new certificate from Dynamsoft will expire on December 8th, 2023. This means you will need to update the certificate again after this certificate expires. </div>
+
+</li>
      <li> <a href="{{site.about}}getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side.</li>
      
  </ol>
