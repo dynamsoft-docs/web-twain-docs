@@ -1537,6 +1537,8 @@ HTTPUpload(
     onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
 ): void;
 ```
+Enumerations：<a href="{{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat" target="_blank">Dynamsoft.DWT.EnumDWT_UploadDataFormat</a>
+ 
 
 **Parameters**
 
@@ -3751,6 +3753,8 @@ Return or set the compression type for TIFF files.
 ```javascript
 TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 ```
+
+Enumerations：<a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_tiffcompressiontype" target="_blank">Dynamsoft.DWT.EnumDWT_TIFFCompressionType</a>
 
 **Availability**
 

@@ -849,6 +849,8 @@ Calculate the size in bytes of the specified image assuming an expected file typ
 GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 ```
 
+Enumerations：<a href="{{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype" target="_blank">Dynamsoft.DWT.EnumDWT_ImageType</a>
+
 **Parameters**
 
 `index`: Specify the image.

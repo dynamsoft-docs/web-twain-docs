@@ -163,7 +163,8 @@ SetLanguage(
     language: Dynamsoft.DWT.EnumDWT_Language | number
 ): boolean;
 ```
-
+Enumerations：<a href="{{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_language" target="_blank">Dynamsoft.DWT.EnumDWT_Language</a>
+ 
 **Parameters**
 
 `language`: Specify the language. Please refer to [EnumDWT_Language]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_language)

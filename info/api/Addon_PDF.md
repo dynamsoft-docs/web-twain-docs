@@ -143,6 +143,9 @@ Set the convert mode.
 SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 ```
 
+Enumerations：<a href="{{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_convertmode" target="_blank">Dynamsoft.DWT.EnumDWT_ConvertMode</a>
+ 
+
 **Parameters**
 
 `mode`: Specify the mode. The default value is 3 (Dynamsoft.DWT.EnumDWT_ConvertMode.CM_AUTO)

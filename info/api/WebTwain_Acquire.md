@@ -1934,6 +1934,8 @@ SetFileXferInfo(
 ): boolean;
 ```
 
+Enumerations：<a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat" target="_blank">Dynamsoft.DWT.EnumDWT_FileFormat</a>
+
 **Parameters**
 
 `fileName`: The path to transfer the file to.
@@ -2468,6 +2470,7 @@ Return or set the pixel type used when acquiring images.
 ```typescript
 PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
+Enumerations：<a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pixeltype" target="_blank">Dynamsoft.DWT.EnumDWT_PixelType</a> 
 
 **Availability**
 
@@ -2829,6 +2832,9 @@ Return whether the source supports duplex. If yes, it further returns the level 
 ```typescript
 readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 ```
+
+Enumerations：<a href="{{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_duplex" target="_blank">Dynamsoft.DWT.EnumDWT_DUPLEX</a>
+ 
 
 **Availability**
 
@@ -3787,6 +3793,9 @@ Return the type of the magnetic data if the data source supports magnetic data r
 readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 ```
 
+Enumerations：<a href="{{{site.info}}api/Dynamsoft_Enum.html#Dynamsoft.DWT.EnumDWT_MagType" target="_blank">Dynamsoft.DWT.EnumDWT_MagType</a>
+ 
+
 **Availability**
 
 <div class="availability">
@@ -3916,6 +3925,8 @@ Return or set the data source's transfer mode.
 TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 ```
 
+Enumerations：<a href="https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_transfermode" target="_blank">Dynamsoft.DWT.EnumDWT_TransferMode</a>
+
 **Availability**
 
 <div class="availability">
@@ -3961,6 +3972,8 @@ Return or set the unit of measure for all quantities. Note that this setting is 
 ```typescript
 Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 ```
+Enumerations：<a href="{{{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_unittype" target="_blank">Dynamsoft.DWT.EnumDWT_UnitType</a>
+ 
 
 **Availability**
 
