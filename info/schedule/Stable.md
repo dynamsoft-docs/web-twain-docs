@@ -25,26 +25,23 @@ permalink: /info/schedule/Stable.html
 - Expanded the capabilities of the Android platform. <!--See the APIs supported on Android service. -->
 
 #### Remote Scan
-- The remote scan solution powered by Dynamic Web TWAIN is now officially available. With it, you can turn any of your tranditional document scanners into a network-able scanner and allow your end users to use it without installing anything on the client device. Read <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> to learn how the Remote Scan solution works.
+- The Remote Scan solution powered by Dynamic Web TWAIN is now officially available. Using Remote Scan, you can turn any of your traditional document scanners into a network accessible scanner and allow your end users to use it without any client side installs. Read <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> to learn how the Remote Scan solution works.
 
 
 ### Improvements
 
 #### Image Viewer
-- The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN to reduce the load by removing the necessity of loading the Viewer resources into memory even when the Viewer is not being used. See the property [Dynamsoft.DWT.UseDefaultViewer]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer).
-- Added the enum [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode) with a new option for image editor setting, please refer to [createImageEditor]({{site.info}}api/WebTwain_Viewer.html#createimageeditor).
+- The Viewer component has been migrated to a dedicated resource file. This will allow for viewerless implementations of Dynamic Web TWAIN, as well as reducing the load on the browser by removing the necessity of loading the Viewer resources into memory when the Viewer is not being used. See the property [Dynamsoft.DWT.UseDefaultViewer]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer).
+- Added the enum [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode) with a new option for image editor setting. Please refer to [createImageEditor]({{site.info}}api/WebTwain_Viewer.html#createimageeditor).
 - Added new method `save()` to the ImageEditor object, please refer to [createImageEditor]({{site.info}}api/WebTwain_Viewer.html#createimageeditor).
 
 #### Optimized error handling during web twain initialization
-- Added an [OnWebTwainError]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) event for better capturing errors during the web twain object initialization. 
+- Added the [OnWebTwainError]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) event for better capturing errors during the Web TWAIN object initialization. 
 
 #### General Improvements
 - Updated the barcode reader library to v9.6.20
 - Improved progress bar accuracy during the encoding and decoding operations
 
-
-<!-- 
---> 
 ### Bug fixes
 Fixed bug where ShowFileDialog might not work properly on MacOS. 
 
