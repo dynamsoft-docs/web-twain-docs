@@ -9,62 +9,43 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains jobs called "Build-Master" and "Build-Preview"
-  Build-Master:
-    if: ${{ github.ref == 'refs/heads/master' }}
+  Build-v18-1:
+    if: ${{ github.ref == 'refs/heads/v18.1' }}
     # The type of runner that the job will run on
     runs-on: self-hosted
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #- uses: actions/checkout@v2
-
-      # Runs a set of commands using the runners shell
-      - name: Build and Upload to Prod Env
-        run: |
-          cd /home/ubuntu
-          [ -d DWTDoc ] && rm -rf DWTDoc
-          [ -d web-twain-docs ] && rm -rf web-twain-docs
-          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
-          mkdir -p DWTDoc
-          git clone --depth 1 https://github.com/dynamsoft-docs/web-twain-docs.git web-twain-docs
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
-          cp -rfp ./web-twain-docs/* ./DWTDoc/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DWTDoc/
-          cd DWTDoc && bundle exec jekyll build
-          python3 /home/ubuntu/ftp.py /home/ubuntu/DWTDoc/_site/ ./www.dynamsoft.com/web-twain/docs/ prod
-          
-  Build-Preview:
-    if: ${{ github.ref == 'refs/heads/preview' }}
-    # The type of runner that the job will run on
-    runs-on: self-hosted
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-
       # Runs a set of commands using the runners shell
       - name: Build the site
         run: |
           cd /home/ubuntu
-          [ -d DWTDocPreview ] && rm -rf DWTDocPreview
-          [ -d web-twain-docs-preview ] && rm -rf web-twain-docs-preview
-          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
-          mkdir -p DWTDocPreview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/web-twain-docs.git web-twain-docs-preview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
-          cp -rfp ./web-twain-docs-preview/* ./DWTDocPreview/
-          cp -rfp ./Docs-Template-Repo-Preview/* ./DWTDocPreview/
-          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DWTDocPreview/_config.yml
-          cd DWTDocPreview && bundle exec jekyll build
-      - name: Sync files to Test Env
+          [ -d web-twain-docs-archive ] && rm -rf web-twain-docs-archive
+          [ -d Docs-Template-Repo-archive ] && rm -rf Docs-Template-Repo-archive
+          [ -d DWTDocArchive ] && rm -rf DWTDocArchive
+          mkdir -p DWTDocArchive
+          git clone --depth 1 --branch v18.1 https://github.com/Dynamsoft/web-twain-docs.git web-twain-docs-archive
+          git clone --depth 1 --branch dwt-v18.1 https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-archive
+          cp -rfp ./web-twain-docs-archive/* ./DWTDocArchive/
+          cp -rfp ./Docs-Template-Repo-archive/* ./DWTDocArchive/
+          sed -i -e "1,3s/blob\/master$/blob\/v18.1/" \
+          -e "1,3s/blob\/main$/blob\/v18.1/" /home/ubuntu/DWTDocArchive/_config.yml
+          cd DWTDocArchive && bundle exec jekyll build
+      
+      - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-          username: ${{ secrets.FTP_TEST_SITE_USER }}
-          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
-          port: 7500 
-          local-dir: /home/ubuntu/DWTDocPreview/_site/
-          server-dir: /www.dynamsoft.com/web-twain/docs/
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 21 
+          local-dir: /home/ubuntu/DWTDocArchive/_site/
+          server-dir: /www.dynamsoft.com/web-twain/docs-archive/v18.1/
+
+      - name: Clear files
+        run: |
+          cd /home/ubuntu
+          [ -d web-twain-docs-archive ] && rm -rf web-twain-docs-archive
+          [ -d Docs-Template-Repo-archive ] && rm -rf Docs-Template-Repo-archive
+          [ -d DWTDocArchive ] && rm -rf DWTDocArchive
           

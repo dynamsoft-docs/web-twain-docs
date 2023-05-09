@@ -15,32 +15,35 @@
 </style>
 
 <body>
-    <header class="headWrapper">
+    <div class="headWrapper">
         {%- include page_header.html -%}
-    </header>
+    </div>
     {%- include dwtNav.html -%}
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
-    <main class="container" id="categoryMenuTree">
+    <div class="container" id="categoryMenuTree">
         <div class="row">
-            <aside class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
+            <div class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
                 <div id="sideBarCnt">
                     <div class="docSearchPart" style="margin-top: 30px;">
                         <input id="txtSearch" class="search" type="text">
                     </div>
-                    <nav class="mainPage">
+                    <div class="mainPage">
                         <ul id="fullTreeMenuListContainer" name="listLevel1">
                             {%- assign treeList = site.data.full_tree.tree_list -%}
                             {%- include liquid_generateFullTree.html treeList=treeList -%}
                         </ul>
-                    </nav>
+                    </div>
                 </div>
-            </aside>
-            <section class="docContainer col-xs-12 col-md-9">
+            </div>
+            <div class="docContainer col-xs-12 col-md-9">
                 <div id="docHead" class = "head row hide-xs hide-sm">
                     {%- include main-page-head.html -%}
                 </div>
                 <div class="main row showRightSideMenu" id="articleContent" data-needh3="{{page.needGenerateH3Content}}">
                     <div class="content markdown-body headCounter {{noTitleIndex}} col-xs-12 col-md-12 col-lg-9 col-xl-10 showRightSideMenu">
+                        <div id="versionNote" style="width: 100%; padding: 20px; background: #b42727; color: #ffffff;border-radius: 5px;">
+                            This is the archived documentation for <span id="versionNoteOldVersion">18.1</span>. If you are using the latest version<span id="versionNoteLatestVersion"></span>, please visit <a class="noVersionAdd" href="/web-twain/docs/about/index.html" style="color: #ffffff;text-decoration: underline !important;">this link</a>.
+                        </div>
                         {{ content }}
 
                     </div>
@@ -62,9 +65,9 @@
                         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
-    </main>
+    </div>
 
     <div class="history list" id="categoryMenuTree_history">
         <div class="container">
@@ -75,14 +78,14 @@
         </div>
     </div>
 
-    <footer id="footerWrapper">
+    <div id="footerWrapper">
         {%- include page_footer.html -%}
-    </footer>
+    </div>
+
+    <script type="text/javascript">anchors.add();</script>
+    <script type="text/javascript">UrlReplace();</script>
 
     <script type="text/javascript">
-        $(".currentVersion").text("latest version (18.1)");
-        anchors.add();
-        UrlReplace();
         FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}');
     </script>
 
