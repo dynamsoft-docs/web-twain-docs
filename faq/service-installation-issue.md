@@ -34,7 +34,7 @@ C:\Users\owen_thinkpad_t480s\AppData\Local\Temp, because this path can't be foun
 
 ### Resolution
 
-Run 'Command Prompt' as administrator, go to C:\WINDOWS\system32, then execute the following line to unsitall it:
+Run 'Command Prompt' as administrator, go to C:\WINDOWS\system32, then execute the following line to uninstall it:
 
 ``` shell
 wmic product where name="Dynamsoft Service" call uninstall /nointeractive
