@@ -41,7 +41,7 @@ DWT makes the following tasks easy
 
 When it comes to a web-based document scanning solution, you do not want to limit your end users to a specific browser and OS.
 
-Dynamic Web TWAIN SDK supports all mainstream browsers (IE, Chrome, Firefox and Safari) on Windows, macOS, Linux and Mobile. Check [Dynamic Web TWAIN features page](https://www.dynamsoft.com/web-twain/features/) for details.
+Dynamic Web TWAIN SDK supports all mainstream browsers (IE, Chrome, Firefox and Safari) on Windows, macOS, Linux. Check [Dynamic Web TWAIN features page](https://www.dynamsoft.com/web-twain/features/) for details.
 
 ### High Speed and Large Volume Document Scanning & Uploading
 
