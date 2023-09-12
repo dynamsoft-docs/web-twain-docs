@@ -15,27 +15,14 @@
 </style>
 
 <body>
-    <header class="headWrapper">
-        {%- include page_header.html -%}
-    </header>
+    {% assign url = 'https://www.dynamsoft.com/shared/head/' %}
+    {% remote_include {{ url }} %}
+
     {%- include dwtNav.html -%}
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
-    <main class="container" id="categoryMenuTree">
+    <div class="container" id="categoryMenuTree">
         <div class="row">
-            <aside class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
-                <div id="sideBarCnt">
-                    <div class="docSearchPart" style="margin-top: 30px;">
-                        <input id="txtSearch" class="search" type="text">
-                    </div>
-                    <nav class="mainPage">
-                        <ul id="fullTreeMenuListContainer" name="listLevel1">
-                            {%- assign treeList = site.data.full_tree.tree_list -%}
-                            {%- include liquid_generateFullTree.html treeList=treeList -%}
-                        </ul>
-                    </nav>
-                </div>
-            </aside>
-            <section class="docContainer col-xs-12 col-md-9">
+            <main class="docContainer col-xs-12 col-md-9">
                 <div id="docHead" class = "head row hide-xs hide-sm">
                     {%- include main-page-head.html -%}
                 </div>
@@ -62,9 +49,22 @@
                         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
                     </div>
                 </div>
-            </section>
+            </main>
+            <aside class="sideBar col-xs-12 col-md-3 hide-xs hide-sm">
+                <div id="sideBarCnt">
+                    <div class="docSearchPart" style="margin-top: 30px;">
+                        <input id="txtSearch" class="search" type="text">
+                    </div>
+                    <nav class="mainPage">
+                        <ul id="fullTreeMenuListContainer" name="listLevel1">
+                            {%- assign treeList = site.data.full_tree.tree_list -%}
+                            {%- include liquid_generateFullTree.html treeList=treeList -%}
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
         </div>
-    </main>
+    </div>
 
     <div class="history list" id="categoryMenuTree_history">
         <div class="container">
