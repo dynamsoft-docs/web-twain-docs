@@ -35,7 +35,7 @@ jobs:
           cp -rfp ./Docs-Template-Repo-archive/* ./DWTDocArchive/
           sed -i -e "1,3s/blob\/master$/blob\/v18.3/" \
           -e "1,3s/blob\/main$/blob\/v18.3/" /home/ubuntu/DWTDocArchive/_config.yml
-          cd DWTDocArchive && bundle exec jekyll build
+          cd DWTDocArchive && bundle exec jekyll build --incremental
       
       # - name: Sync files
       #   uses: SamKirkland/FTP-Deploy-Action@4.3.0
