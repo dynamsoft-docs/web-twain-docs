@@ -32,23 +32,13 @@ jobs:
           -e "1,3s/blob\/main$/blob\/v18.3/" /home/ubuntu/DWTDocArchive/_config.yml
           cd DWTDocArchive && bundle exec jekyll build
       
-      # - name: Sync files
-      #   uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      #   with:
-      #     server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
-      #     username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
-      #     password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
-      #     port: 21 
-      #     local-dir: /home/ubuntu/DWTDocArchive/_site/
-      #     server-dir: /www.dynamsoft.com/web-twain/docs-archive/v18.3/
-      
-      - name: Sync files to Test Env
+      - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-          username: ${{ secrets.FTP_TEST_SITE_USER }}
-          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
-          port: 7500 
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 21 
           local-dir: /home/ubuntu/DWTDocArchive/_site/
           server-dir: /www.dynamsoft.com/web-twain/docs-archive/v18.3/
 
