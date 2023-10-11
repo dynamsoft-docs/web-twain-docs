@@ -43,6 +43,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SaveAsJPEG()`](#saveasjpeg)                                                           | [`SaveAsPDF()`](#saveaspdf)                                               | [`SaveAsPNG()`](#saveaspng)                                                     |
 | [`SaveAsTIFF()`](#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     |
 | [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         | [`ShareImages()`](#shareimages)                                                 |
+| [`OutputSelectedAreasAsync()`](#outputselectedareaasync)   |
 
 **Other Methods**
 
@@ -2637,6 +2638,63 @@ DWObject.ConvertToBlob(
     }
 );
 ```
+
+---
+## OutputSelectedAreaAsync
+
+Copy selected area to Blob or base64.
+
+**Syntax**
+
+```typescript
+OutputSelectedAreaAsync({
+    index: number,
+    area: {
+        x: number,
+        y: number,
+        width: number,
+        height: number
+    },
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number,
+    imageFormatType: Dynamsoft.DWT.EnumDWT_ImageFormatType | number,
+}): Promise < Blob | string > ;
+```
+
+**Parameters**
+
+`index`: Image to be copied from.
+
+`area`: Area of image to be copied. X,Y is top left corner origin, width and height is size of area to be copied
+
+`type`: The target image type of the blob/base64 (See [`Dynamsoft.DWT.EnumDWT_ImageType`]({{site.info}}/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype) for allowable types).
+
+`imageFormatType`: Specify if the return should be Blob or base64 string ([`Dynamsoft.DWT.EnumDWT_ImageFormatType`]({{site.info}}/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imageformattype) for values)
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">N/A</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 

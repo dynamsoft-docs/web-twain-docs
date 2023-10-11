@@ -16,14 +16,15 @@ permalink: /info/api/Addon_PDF.html
 
 |                                       |
 | :------------------------------------ | :------------------------------------------ | ------------------------------------- | ------------------------------------- |
-| [`GetConvertMode()`](#getconvertmode) | [`IsModuleInstalled()`](#ismoduleinstalled) | [`IsTextBasedPDF()`](#istextbasedpdf) | [`SetConvertMode()`](#setconvertmode) |
-| [`SetPassword()`](#setpassword)       | [`SetResolution()`](#setresolution)         | [`Write.Setup()`](#writesetup)        |
+| [`GetConvertMode()`](#getconvertmode) | [`GetReaderOptions()`](#getreaderoptions) | [`IsModuleInstalled()`](#ismoduleinstalled) | [`IsTextBasedPDF()`](#istextbasedpdf) |
+| [`SetConvertMode()`](#setconvertmode) | [`SetPassword()`](#setpassword)       | [`SetResolution()`](#setresolution)         | [`Write.Setup()`](#writesetup)        |
+| [`SetReaderOptions()`](#setreaderoptions) |
 
 ---
 
 ## GetConvertMode
 <div class="blockquote-note"></div>
-> This API has been deprecated. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> This API has been deprecated as of release 18.4. Please use the [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) function.
 
 Return the convert mode.
 
@@ -54,6 +55,43 @@ GetConvertMode(): number;
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v18.2+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+## GetReaderOptions
+
+Returns the current PDF reader options.
+
+**Syntax**
+
+```typescript
+GetReaderOptions(): ReaderOptions;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
 </tr>
 
 </table>
@@ -144,7 +182,7 @@ IsTextBasedPDF(path: string): boolean;
 ## SetConvertMode
 
 <div class="blockquote-note"></div>
-> This API has been deprecated. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
 
 Set the convert mode.
 
@@ -186,21 +224,75 @@ SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 
 **Usage notes**
 
-There are four conversion modes
+There are three conversion modes
 
 - CM_RENDERALL (1): All the content in the target PDF file will be rasterized.
 - CM_IMAGEONLY (2): The PDF Rasterizer is turned off.
 - CM_AUTO (3): The library automatically detect whether a file needs to be rasterized or not and then process the file accordingly.
-- CM_RENDERALLWITHANNOTATION (4): Support loading PDF file with annotation. 
 
-Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
+Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#ftpdownload" target="_blank">`FTPDownload()`</a>.
+
+---
+## SetReaderOptions
+
+Sets the current PDF reader options.
+
+**Syntax**
+
+```typescript
+SetReaderOptions(options: ReaderOptions): boolean;
+```
+
+**Parameters**
+`options`: Please see the [ReaderOptions]({{site.info}}/api/interfaces.html#readeroptions) interface.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android</td>
+</tr>
+
+<tr>
+<td align="center">not supported  </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+<td align="center">v18.4+ </td>
+</tr>
+
+</table>
+</div>
+
+**Usage Notes**
+Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#ftpdownload" target="_blank">`FTPDownload()`</a>.
+
+**Example**
+
+```javascript
+DWObject.Addon.PDF.SetReaderOptions({
+    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
+    renderOptions: {
+        renderAnnotations: false,
+        renderGrayscale: true,
+    }
+});
+```
 
 ---
 
 ## SetPassword
 
 <div class="blockquote-note"></div>
-> This API has been deprecated. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> This API has been deprecated as of release 18.4. Please [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
 
 Set the password for reading encrypted PDF files.
 
@@ -242,14 +334,14 @@ SetPassword(password: string): boolean;
 
 **Usage notes**
 
-Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
+Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#ftpdownload" target="_blank">`FTPDownload()`</a>.
 
 ---
 
 ## SetResolution
 
 <div class="blockquote-note"></div>
-> This API has been deprecated. Please use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
 
 Set the resolution for rasterizing.
 
@@ -293,7 +385,7 @@ SetResolution(resolution: number): boolean;
 
 The default resolution for the conversion is 200. We recommend that you set a value smaller than 300, otherwise it might slow down the program or cause the process to fail.
 
-Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`FTPDownload()`</a>.
+Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#ftpdownload" target="_blank">`FTPDownload()`</a>.
 
 ---
 

@@ -29,8 +29,6 @@ dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
 
 baseurl: /web-twain/docs/
 
-theme: jekyll-theme-cayman
-
 useVersionTreeV2: true
 
 webp:
@@ -59,10 +57,12 @@ webp:
   # Default transforms `image.png` to `image.webp`, while changing to true transforms `image.png` to `image.png.webp`
   append_ext: false
 
-
-
 plugins:
   - jemoji
   - jekyll-webp
+  - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-readme-index
+  - jekyll-seo-tag
 
 url: "https://www.dynamsoft.com" # sitemap root

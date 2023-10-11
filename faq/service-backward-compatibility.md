@@ -14,24 +14,31 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 # Running two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer
 
-Dynamic Web TWAIN has limited backward compatibility between different versions and only one version is expected to be used on an end-user's computer.
+Dynamic Web TWAIN has limited backward compatibility between different versions and generally only one version is expected to be used on an end-user's computer.
 
-However, as Dynamic Web TWAIN is a popular document scanning SDK and has been integrated to many web applications all over the world. It is not uncommon that some end users use two different websites (developed by two different vendors) integrated with different versions of Dynamic Web TWAIN on the same computer.
+However, since Dynamic Web TWAIN is a popular document scanning SDK and has been integrated to many web applications all over the world, it is not uncommon that some end users use two different websites (developed by two different vendors) integrated with different versions of Dynamic Web TWAIN on the same computer.
 
-As a result, we have provided the following instructions for backward compatibility between **version 17.1.1** and some of the older versions, in order to support running both versions on the same computer.
+As a result, we have provided the following instructions for backward compatibility for some of the older versions, in order to support running both versions on the same computer.
 
-NOTE:
-* The instructions below also apply to all future versions after version 17.1.1.
-* There is a known issue for versions 17.2 and 17.2.*,  please use version 17.1.1 as a workaround. This issue has been fixed since version 17.3.
+From 16.x, the latest service within the major version supports all previous versions of the same major version.
+> Note: There is a known issue for the 17.2 and 17.2.x services. Please use the 17.3 service if you are using 17.x as your latest service.
 
-### Compatibility with version 17 minor versions
+### Instructions for setting up cross major version support
+1. Install the _older_ version of Dynamsoft Service.
+2. Copy the .dll files from C:\Windows\SysWOW64\Dynamsoft\DynamsoftService64_{version number}\ to a temporary location. For the list of .dll files you are required to copy, please refer to the list below.
+3. Install the _newer_ version of the Dynamsoft Service.
+4. Copy the .dll files from your temporary location into the _new_ DynamsoftService folder.
 
-Version 17.1.1 is compatible with other minor versions: 17.1 and 17.0.
+### List of required .dll files
+**Version 17.x**
+```javascript
+dwt_17.3.0.0531.dll
+DynamicPdfCorex64_11.4.0.0531.dll
+DynamicPdfRx64_11.4.0.0531.dll
+libcrypto-1_1-x64.dll
+```
 
-### Compatibility with older versions
-For older versions to work with version 17.1.1, please copy the following .dll files to the version 17 Service Installation folder: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
-
-**Version 16.x (16.2, 16.1.1,  16.1, 16.0)**
+**Version 16.x**
 ```javascript
 dwt_16.2.0.0112.dll
 DynamicPdfCorex64_11.1.0.0112.dll

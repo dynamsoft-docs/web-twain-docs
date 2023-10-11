@@ -1887,7 +1887,7 @@ DWObject.Viewer.pageMargin = 10;
 ## selectedAreaBorderColor
 
 <div class="blockquote-note"></div>
-> This API has been deprecated. Please use the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface
+> This API has been deprecated as of release 18.4. Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
 
 Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
 
@@ -2135,11 +2135,11 @@ Sets the graphical style for the selection box in the Viewer.
 **Syntax**
 
 ```javascript
-updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): void;
+updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
 ```
 
 **Parameters**
-`selectionBoxStyleSettings`: Selection box settings. Please refer to [SelectionBoxStyleSettings]{{site.info}api/Interfaces.html#selectionboxstylesettings}
+`selectionBoxStyleSettings`: Selection box settings. Please refer to [SelectionBoxStyleSettings]({{site.info}}api/Interfaces.html#selectionboxstylesettings) for details.
 
 **Availability**
 
@@ -2167,23 +2167,23 @@ updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): 
 </table>
 </div>
 
-**Usage Notes**
-This stylization only affects the Viewer object. Styling of the Image Editor view is not yet supported.
-
 **Example**
 
 ```javascript
 let styleSettings = {
     borderColor: "rgba(255, 105, 110, 1)",
     borderWidth:4,
-    lineStyle:[4,2],
+    lineDash:[4,2],
     handleWidth:10,
     handleHeight:10,
-    handleColor: "rgba(252, 92, 255, 1)";
+    handleColor: "rgba(252, 92, 255, 1)",
 }
 
 DWObject.Viewer.updateSelectionBoxStyle(styleSettings);
 ```
+
+**Usage Notes**
+If creating an `ImageEditor` object, the `Viewer` styling will be inherited by the `ImageEditor` on creation, but styles will be maintained seperately. That is to say that after creating the `ImageEditor`, changing one style will not affect the other.
 
 ---
 

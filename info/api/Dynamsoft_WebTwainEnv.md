@@ -50,7 +50,14 @@ interface Dynamsoft.DWT {
     IfUseActiveXForIE10Plus: boolean;
     readonly inited: boolean;
     ProductKey: string;
+    /**
+     * Define the path to the Web TWAIN resources folder
+     */
     ResourcesPath: string;
+    /**
+     * Define the path to the Web TWAIN dist folder (client side service installers)
+     */
+    ServiceInstallerLocation: string;
     
     // Functions
     CreateDWTObject(

@@ -11,54 +11,54 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
-## 18.4
+## 18.4 (09/26/2023)
 
-### Highlights
--	Added the ability to change the in viewer selection indicator
--	Added the ability to retrieve the selected area as a blob or base64 string
--	Added property to relocate installers
+### This Version's Highlights
+- Enhanced the encryption algorithm to strengthen local cache security.
+-	Added the ability to stylize the selection box in the Viewer and Image Editor.
+- Added a new function that allows you to export the selected image area to either a blob or base64 format.
+-	Added a property to relocate the server-side folder that hosts the Dynamsoft Service installers.
+- Added a new blank page detection method.
 
 ### New APIs and Properties
-#### Viewer Improvements
-- Added `updateSelectionBoxStyle()` to allow custom styling of the selection UI.
+#### Viewer and Image Editor Improvements
+- Added [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) to both the Viewer and the Image Editor to allow for custom styling of the rectangular selection box used when selecting a portion of an image in the Viewer and Image Editor.
 
 #### Editor Functionality
-- Added `outputSelectedArea()` to export the selected image area to blob or base64.
+- Added [`OutputSelectedAreaAsync()`]({{site.info}}api/WebTwain_IO.html#outputselectedareaasync) to export the selected image area to blob or base64.
 
 #### Resource Optimization
 - Added `Dynamsoft.DWT.ServiceInstallerLocation` to allow moving the dist folder to a different location than the Resources folder.
 
 #### Buffer
-- Added `MoveToDocumentAsync()` and `CopyToDocumentAsync()` to allow for more multi-document handling.
-- Added `IsBlankImageAsync()` as a newer blank page detection method using a different algorithim than the existing `IsBlankImage()` and `IsBlankImageExpress()` functions. This API currently is Windows only.
+- Added [`MoveToDocumentAsync()`]({{site.info}}api/WebTwain_Buffer.html#movetodocumentasync) and [`CopyToDocumentAsync()`]({{site.info}}api/WebTwain_Buffer.html#copytodocumentasync) to allow for more multi-document handling.
+- Added [`IsBlankImageAsync()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageasync) as an additional blank page detection method using a different algorithm than the existing `IsBlankImage()` and `IsBlankImageExpress()` functions. This method allows for sensitivity customization, enabling users to overlook minor marks and disregard background patterns. This API currently is Windows only.
 
-### Enhancements
-- Improved session security
+### Improvements
 
 #### PDF Rasterizer
-- `CM_AUTO` will now use `CM_RENDERALLWITHANNOTATIONS` instead of `CM_RENDERALL` if text is detected.
-- Added new `ReaderOptions` interface.
+- Added new [`ReaderOptions`]({{site.info}}api/Interfaces.html#readeroptions) interface.
+- Added functions [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) to utilize the new `ReaderOptions` interface.
 
 #### File Saving
-- Saving a Black and White JPG will now automatically convert the image to 8-bit colour space prior to saving. This is due to the limitation that JPGs do not allow 2-bit images, thus previously, Black and White images were not at all able to be saved to JPG without manually converting the colourspace prior.
+- Saving a Black and White JPG will now automatically convert the image to grayscale prior to saving. This is due to the limitation that JPGs do not allow black and white images.  Previously, Black and White images were not able to be saved to JPG without manually converting the colourspace prior.
 
 ### Bug Fixes
 - Fixed a bug where the Content-Type of ConvertToBlob was sometimes incorrectly reported in the response back from the Dynamsoft Service.
-- Fixed a bug where setting the container size by percentage was causing incorrect viewer sizing.
+- Fixed a bug where setting the container size by percentage caused incorrect viewer sizing.
 
 ### Deprecations
 #### PDF Rasterizer
-> [Alternative] Use the new [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> [Alternative] Use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) functions instead.
 
 * GetConvertMode()
-* SetConverMode()
+* SetConvertMode()
 * SetPassword()
 * SetResolution()
 
 #### Viewer
 
-* selectedAreaBorderColor has been relocated into the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface
-
+* selectedAreaBorderColor has been deprecated. Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
 
 
 ## 18.3 (06/20/2023)

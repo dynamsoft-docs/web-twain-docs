@@ -15,5 +15,4 @@ permalink: /faq/encrypt-pdf-files.html
 
 No. Currently, Dynamic Web TWAIN does not support generating an encrypted file in PDF format. However, you can use other tools to generate encrypted PDF files.
 
-Although Dynamic Web TWAIN does not support generating encrypted PDF files, it supports the use of API <a href="{{site.info}}api/Addon_PDF.html#setpassword" target="_blank">SetPassword</a> to load encrypted PDF files.
-
+Although Dynamic Web TWAIN does not support generating encrypted PDF files, loading password protected PDFs is supported through the use of the [`ReaderOptions`]({{site.info}}api/Interfaces.html#readeroptions) interface with [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions).

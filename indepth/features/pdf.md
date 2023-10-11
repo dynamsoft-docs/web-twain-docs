@@ -49,21 +49,20 @@ var onFailure = function(errorCode, errorString) {
 };
 DWObject.IfShowFileDialog = true;
 // PDF Addon is used here to ensure text-based PDF support
-DWObject.Addon.PDF.SetResolution(300);
-DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+DWObject.Addon.PDF.SetReaderOptions({
+    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
+    renderOptions:{
+        renderAnnotations: true;
+    }
+});
 DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
 ```
 
-The method [ `SetConvertMode()` ]({{site.info}}api/Addon_PDF.html#setconvertmode) decides how `PDFR` works and [ `SetResolution()` ]({{site.info}}api/Addon_PDF.html#setresolution) specifies the resolution. These two methods configure `PDFR` to detect and, if necessary, rasterize any PDF file that comes thereafter.
-
-#### Sample code
-
-See full sample <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN/blob/master/samples/PDFRasterizer.html" target="_blank">here</a>.
+The method [ `SetReaderOptions()` ]({{site.info}}api/Addon_PDF.html#setreaderoptions) configures how a PDF will be rasterized when being loaded into Dynamic Web TWAIN.
 
 #### Other methods
 
-* [ `GetConvertMode()` ]({{site.info}}api/Addon_PDF.html#getconvertmode): This method returns the current convert mode.
-* [ `SetPassword()` ]({{site.info}}api/Addon_PDF.html#setpassword): This method sets a password which is used to open encrypted PDF file(s).
+* [ `GetReaderOptions()` ]({{site.info}}api/Addon_PDF.html#getreaderoptions): This method returns the current [`ReaderOptions`]({{site.info}}/api/interfaces.html#readeroptions).
 
 ## Output as PDF
 

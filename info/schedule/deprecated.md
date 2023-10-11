@@ -40,15 +40,15 @@ The recommended fix is to patch the operating system, you can find the patch [he
 ## 18.4
 
 ### PDF Rasterizer
-> [Alternative] Use the [ReaderOptions]({{site.info}}api/interfaces.html#ReaderOptions) interface
+> [Alternative] Use the [SetReaderOptions()]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [GetReaderOptions()]({{site.info}}api/Addon_PDF.html#getreaderoptions) functions instead.
 
 * GetConvertMode()
-* SetConverMode()
+* SetConvertMode()
 * SetPassword()
 * SetResolution()
 
 ### Viewer
-> Moved into the [SelectionBoxStyleSettings]({{site.info}}api/interfaces.html#selectionboxstylesettings) interface
+> This API has been deprecated as of release 18.4. Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
 
 * selectedAreaBorderColor
 

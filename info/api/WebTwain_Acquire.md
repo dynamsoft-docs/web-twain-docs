@@ -3104,6 +3104,49 @@ readonly ImageLayoutFrameLeft: number;
 
 ---
 
+## ImageLayoutFrameNumber
+
+Returns the frame number of the current image.
+
+**Syntax**
+
+```typescript
+readonly ImageLayoutFrameNumber: number;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+<td align="center">all versions</td>
+</tr>
+
+</table>
+</div>
+
+**Usage Notes**
+
+Usually a chronological index of the acquired frames, these frames are related to one another in some way. Usually, they were acquired from the same page. The source assigns these values. Initial value is 1. Reset when a new page is acquired.
+
+`ImageLayoutFrameNumber` property, along with other properties about the current image information, is valid only in the `OnPreTransfer` and `OnPostTransfer` events.
+The frame information here is only about the current frame. To get the information about all the frames to be transferred in an acquire session, please use capability negotiation. The capability to be negotiated is ICAP_FRAMES (4372).
+
+---
+
 ## ImageLayoutFrameRight
 
 Return the value of the right edge of the current image frame (in Unit).

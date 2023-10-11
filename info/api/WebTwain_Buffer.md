@@ -27,8 +27,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
 | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
 | [`CreateDocument()`](#createdocument)         | [`OpenDocument()`](#opendocument)         | [`GetCurrentDocumentName()`](#getcurrentdocumentname)         | [`RenameDocument()`](#renamedocument)         |
-| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync`](#copytodocumentasync) |
-| [`MoveToDocumentAsync()`](#movetodocumentasync) | [`IsBlankImageAsync`](#isblankimageasync) |
+| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync()`](#copytodocumentasync) | [`MoveToDocumentAsync()`](#movetodocumentasync) |
+| [`IsBlankImageAsync()`](#isblankimageasync) |
 
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
@@ -1742,17 +1742,21 @@ Check whether the specified image is blank.
 **Syntax**
 
 ```typescript
-IsBlankImageAsync(index: number， options?： {
-    minBlockHeight?: number，
+IsBlankImageAsync(index: number, 
+  {options?: {
+    minBlockHeight?: number,
     maxBlockHeight?: number,
-}): Promise < boolean > ;
-
+    }
+  }
+): Promise < boolean > ;
 ```
 
 **Parameters**
 
-`index`: Specify the image to be analyzed.
+`index`: Specify the image in buffer to be analyzed.
+
 `minBlockHeight`: Minimum height of mark to be detected.
+
 `maxBlockHeight`: Maximum height of mark to be detected.
 
 **Availability**
@@ -1782,7 +1786,9 @@ IsBlankImageAsync(index: number， options?： {
 </div>
 
 **Usage Notes**
-This API uses a different algorithm than the one used in `IsBlankImage` and `IsBlankImageExpress`, which allows you to judge a page as blank even if it has a marks within the defined size.
+This API uses a different algorithm than the one used in `IsBlankImage` and `IsBlankImageExpress`, which allows you to judge a page as not blank if it has marks within a defined size. If the mark on the page satisfies the comparison parameters, then the page will be deemed not blank.
+
+Example: The mark on the page is 11 pixels tall, `minBlockHeight` is set to 9 pixels and `maxBlockHeight` is set to 13 pixels, the page will be marked as not blank.
 
 ---
 
@@ -2136,20 +2142,29 @@ DWObject.GetTagListByIndex(0);
 
 ## CopyToDocumentAsync
 
-Copy selected images to another document.
+Copy specified images to another document.
 
 **Syntax**
 
 ```typescript
-CopyToDocumentAsync(from: string, to: string, sourceIndices?: number[], targetIndex?: number): Promise<void>;
+CopyToDocumentAsync(from: string, to: string): Promise<void>;
+
+CopyToDocumentAsync(from: string, to: string, sourceIndices: number[]): Promise<void>;
+
+CopyToDocumentAsync(from: string, to: string, targetIndex: number): Promise<void>;
+
+CopyToDocumentAsync(from: string, to: string, sourceIndices: number[], targetIndex: number): Promise<void>;
 ```
 
 **Parameters**
 
-`from`: The source document document name.
+`from`: The source document name.
+
 `to`: The destination document name.
+
 `sourceIndices`: The indices of the images to be copied.
-`targetIndex`: The index at which the source images should be inserted into the new document. If not specifed, the images will be appended to the destination document.
+
+`targetIndex`: The index at which the source images should be inserted into the new document. If not specified, the images will be appended to the destination document.
 
 **Availability**
 
@@ -2236,20 +2251,29 @@ function failureCallback(errorCode, errorString) {
 
 ## MoveToDocumentAsync
 
-Move selected images to another document.
+Move specified images to another document.
 
 **Syntax**
 
 ```typescript
-MoveToDocumentAsync(from: string, to: string, sourceIndices?: number[], targetIndex?: number): Promise<void>;
+MoveToDocumentAsync(from: string, to: string): Promise<void>;
+
+MoveToDocumentAsync(from: string, to: string, sourceIndices: number[]): Promise<void>;
+
+MoveToDocumentAsync(from: string, to: string, targetIndex: number): Promise<void>;
+
+MoveToDocumentAsync(from: string, to: string, sourceIndices: number[], targetIndex: number): Promise<void>;
 ```
 
 **Parameters**
 
-`from`: The source document document name.
+`from`: The source document name.
+
 `to`: The destination document name.
+
 `sourceIndices`: The indices of the images to be moved.
-`targetIndex`: The index at which the source images should be inserted into the new document. If not specifed, the images will be appended to the destination document.
+
+`targetIndex`: The index at which the source images should be inserted into the new document. If not specified, the images will be appended to the destination document.
 
 **Availability**
 
