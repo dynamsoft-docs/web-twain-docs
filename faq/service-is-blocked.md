@@ -24,14 +24,10 @@ Dynamsoft Service is installed successfully, but when attempting to scan or load
 
 This can be due to permissions, firewall, or other programs (e.g. anti-virus) blocking connections to the Dynamsoft Service.
 To determine if Dynamsoft Service is blocked by another process, open Task Manager and go to the Details Tab.
-Typically, before opening the scan page, you will see three Dynamsoft Service processes listed: two under SYSTEM and one under the user account.
-
-![service blocked-1]({{site.assets}}imgs/service-blocked-1.png)
-
-When you open the scan page, two new processes are created under the user account.
-
-![service blocked-2]({{site.assets}}imgs/service-blocked-2.png)
-
+Typically, before opening the scan page, you will see three Dynamsoft Service processes listed: two under SYSTEM and one under the user account.<br>
+![service blocked-1]({{site.assets}}imgs/service-blocked-1.png)<br>
+When you open the scan page, two new processes are created under the user account.<br>
+![service blocked-2]({{site.assets}}imgs/service-blocked-2.png)<br>
 If these two processes are not under the user account, we can confirm that Dynamsoft Service is being blocked by another process.
 
 **Cause Two**
