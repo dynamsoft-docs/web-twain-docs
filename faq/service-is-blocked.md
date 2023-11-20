@@ -36,6 +36,8 @@ The issue occurs when the allocated memory address exceeds the 32-bit limit. In 
 
 ### Resolution
 
+#### Resolution for Cause 1
+
 To determine which process is blocking Dynamsoft Service, please follow the steps below.
 
 1. Collect <a href="{{site.faq}}general-troubleshooting-steps.html#how-to-enable-and-collect-verbose-log" target="_blank">verbose log</a>
@@ -50,3 +52,7 @@ To determine which process is blocking Dynamsoft Service, please follow the step
 However, if the identified PID is not a browser process as expected, the PID will typically be the process which is blocking Dynamsoft Service.
 
 If you need further assistance, please contact Dynamsoft Support.
+
+#### Resolution for Cause 2
+
+Please contact [Dynamsoft](https://www.dynamsoft.com/contact/) for patched installer.
