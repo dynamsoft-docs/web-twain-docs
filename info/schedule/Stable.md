@@ -11,7 +11,7 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
-## 18.4.2 (11/21/2023)
+## 18.4.2 (11/28/2023)
 
 ### Security Patch
 - This release closes an potential vulnerability when handling certificate updates.
