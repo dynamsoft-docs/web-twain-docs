@@ -1562,7 +1562,7 @@ HTTPDownloadDirectly(
 
 The Dynamic Web TWAIN library will decode the downloaded data based on the `type` parameter ( `HTTPDownloadEx()` , `HTTPDownloadThroughPost()` ) or the extension of the file in the `path` parameter ( `HTTPDownload()` ).
 
-For security reasons, the method `HTTPDownloadDirectly()` can only download the specified file to a whitelisted location. In other words, the user needs to call the method [ShowFileDialog()](#showfiledialog) and then get a whitelisted location to use. Check out the example below.
+For security reasons, the method `HTTPDownloadDirectly()` can only download the specified file to a whitelisted location. In other words, the user needs to call the method [ShowFileDialog()](#showfiledialog) and then get a whitelisted location to use. For security purposes, the following file extensions are not permitted to be downloaded via API: exe,app,sh,com,msi,dmg,rpm,pkg,deb,apk,aab,dll,cmd,bat,dylib,so.
 
 **Example**
 
@@ -1571,8 +1571,8 @@ DWObject.RegisterEvent(
     "OnGetFilePath",
     function (isSave, filesCount, index, directory, fileName) {
         DWObject.HTTPDownloadDirectly(
-        "tst.dynamsoft.com",
-        "/public/download/tools/Twack_32.msi",
+        "www.dynamsoft.com",
+        "/Products/Dynamsoft_Security_Whitepaper.pdf",
         directory + "\\" + fileName,
         function () {},
         function (errorCode, errorString) {
@@ -1582,7 +1582,7 @@ DWObject.RegisterEvent(
     }
 );
 
-DWObject.ShowFileDialog(true, "MSI|*.msi", 0, ".msi", "", true, false, 1);
+DWObject.ShowFileDialog(true, "PDF|*.pdf", 0, ".pdf", "", true, false, 1);
 ```
 
 ---
