@@ -371,8 +371,8 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+| | | |
+|:-|:-|:-|
 | [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)|[`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob)|[`FTPUpload()`]({{site.info}}api/WebTwain_IO.html#ftpupload)|
 |[`FTPUploadEx()`]({{site.info}}api/WebTwain_IO.html#ftpuploadex)|[`FTPUploadAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallasmultipagetiff)|[`FTPUploadAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallaspdf)|
 |[`FTPUploadAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagepdf)| [`FTPUploadAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagetiff)|[`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)| 
@@ -847,8 +847,8 @@ permalink: /info/api/
 
 ### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+| |
+|:-|
 |[`BackgroundFillColor`]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor) |
 
 <!--
@@ -865,8 +865,8 @@ permalink: /info/api/
 
 ### Events
 
-| | | | |
-|:-|:-|:-|:-|
+| |
+|:-|
 | [`OnPostTransferAsync`]({{site.info}}api/WebTwain_Acquire.html#onposttransferasync) | 
 
 

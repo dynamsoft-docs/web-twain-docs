@@ -30,6 +30,7 @@ permalink: /info/schedule/Stable.html
 - Added a RESTful API (See [this article](https://www.dynamsoft.com/blog/announcement/dynamsoft-service-restful-api/) for more details)
 
 ### New APIs and Properties
+
 #### Viewer and Image Editor Improvements
 - Added [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) to both the Viewer and the Image Editor to allow for custom styling of the rectangular selection box used when selecting a portion of an image in the Viewer and Image Editor.
 
