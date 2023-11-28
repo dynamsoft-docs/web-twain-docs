@@ -47,6 +47,7 @@ In the case that you have used our expired certificate - local.dynamsoft.com, yo
 
         - Method 3. <a href="{{site.about}}getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side. Please specify the exact service version build number found from the version your client currently has installed.
 
+<!--
         - Method 4 (**<u>Convenience but not recommend</u>**). For v17.2 or higher versions, you can use the new API <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update the client side certificate before it expires. **Please go to dynamsoft.webtwain.install.js file in the Resource Folder and search the keyword "OnSSLCertInfo"**, add the following lines of code:
             ```javascript
             Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
@@ -64,6 +65,7 @@ In the case that you have used our expired certificate - local.dynamsoft.com, yo
             };
             ```
             ***Please be aware that the download may not work properly in all environments due to your company's security policy.***
+-->
 
 <!--
 
