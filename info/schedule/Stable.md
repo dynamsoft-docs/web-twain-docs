@@ -11,18 +11,6 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
-## 18.4.2 (11/28/2023)
-
-### Security Patch
-- This release closes an potential vulnerability when handling certificate updates.
-
-### Deprecations
-The following APIs have been removed:
-* Addon.OCR.Download
-* Addon.OCR.DownloadLangData
-* Addon.OCRPro.Download
-
-
 ## 18.4.1 (10/24/2023)
 
 ### MacOS Service Hotfix
