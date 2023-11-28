@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-noTitleIndex: true
+# noTitleIndex: true
 title: Dynamic Web TWAIN SDK API Reference - Input and Output APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, IO APIs
 breadcrumbText: IO
