@@ -306,6 +306,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}activeX-in-Edge-IE-mode.html">How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode</a></li>
 
 <li><a href="{{site.faq}}service-is-blocked.html">The scanner's UI or the system's file dialog does not open when scanning</a></li>
+
+<li><a href="{{site.faq}}find-SDK-version.html">How do I know which SDK version I am using?</a></li>
 </ol>
 
 ## Error Troubleshooting
