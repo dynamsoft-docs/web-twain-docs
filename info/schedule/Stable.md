@@ -11,6 +11,10 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.4.2 (12/05/2023)
+
+- Security update for Dynamsoft Service.
+
 ## 18.4.1 (10/24/2023)
 
 ### MacOS Service Hotfix
