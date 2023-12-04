@@ -6,7 +6,7 @@ title:  How do I know which SDK version I am using?
 keywords: Dynamic Web TWAIN, Dynamsoft Service, SDK version
 breadcrumbText:  How do I know which SDK version I am using?
 description:  How do I know which SDK version I am using?
-permalink: /faq/find-SDK-version.md
+permalink: /faq/find-SDK-version.html
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
