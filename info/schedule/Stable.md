@@ -321,9 +321,6 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 #### Camera
 - [WASM] Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
 
-#### Global
-- [HTML5] <strong>Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate.</strong>
-
 #### Viewer
 - [HTML5 & WASM] Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox`</a>. 
 - [HTML5 & WASM] Added new method <a href="{{site.info}}api/WebTwain_Viewer.html#createtemplate" target="_blank">`createTemplate()`</a> to create document scanner template. 
