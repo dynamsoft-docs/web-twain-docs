@@ -24,7 +24,7 @@ Due to Dynamic Web TWAIN being a long-standing and popular product among enterpr
 
 * Method 1
 
-    > If you are not using NPM to manage Dynamic Web TWAIN resources, you can try to find and open the "**dynamsoft.webtwain.initiate.js**" file in your project. At the very top of the file, you can see the version number noted by Dynamsoft in the comments.
+    > If you are not using NPM to manage Dynamic Web TWAIN resources, you can try to find and open the "**dynamsoft.webtwain.config.js**" file in your project. At the very top of the file, you can see the version number noted by Dynamsoft in the comments.
     <br>
     ![config_comment]({{site.assets}}imgs/config-comment.png)
     
