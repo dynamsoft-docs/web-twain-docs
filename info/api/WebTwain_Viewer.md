@@ -292,7 +292,7 @@ imageEditor.show();
 ```
 
 <div class="sample-code-prefix template2"></div>
->- v18.3
+>- v18.3+
 >- v18.2
 >
 >
@@ -341,6 +341,8 @@ var editorSettings = {
       removeselected: "Remove All Selected Images",
     },
     visibility: {
+      previous:true,
+      next:true,
       scan: true,
       load: true,
       print: true,

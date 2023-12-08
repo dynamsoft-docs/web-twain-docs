@@ -18,4 +18,4 @@ permalink: /getstarted/
   - [Use Web TWAIN in React]({{site.indepth}}development/react.html)
   - [Use Web TWAIN in Vue]({{site.indepth}}development/vue.html)
 - [How to upgrade]({{site.indepth}}development/upgrade.html): how to upgrade to a newer version
-- [Using Web TWAIN via RESTful API]({{site.indepth}}development/restful.html)
+<!-- - [Using Web TWAIN via RESTful API]({{site.indepth}}development/restful.html) -->

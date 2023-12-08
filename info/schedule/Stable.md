@@ -11,6 +11,10 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.4.2 (12/05/2023)
+
+- Security update for Dynamsoft Service.
+
 ## 18.4.1 (10/24/2023)
 
 ### MacOS Service Hotfix
@@ -30,6 +34,7 @@ permalink: /info/schedule/Stable.html
 - Added a RESTful API (See [this article](https://www.dynamsoft.com/blog/announcement/dynamsoft-service-restful-api/) for more details)
 
 ### New APIs and Properties
+
 #### Viewer and Image Editor Improvements
 - Added [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) to both the Viewer and the Image Editor to allow for custom styling of the rectangular selection box used when selecting a portion of an image in the Viewer and Image Editor.
 
@@ -315,9 +320,6 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 #### Camera
 - [WASM] Added new method <a href="{{site.info}}api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
-
-#### Global
-- [HTML5] <strong>Added new method <a href="{{site.info}}api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">`UpdateCert()`</a> to automatically update the client side certificate.</strong>
 
 #### Viewer
 - [HTML5 & WASM] Added new property <a href="{{site.info}}api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox`</a>. 

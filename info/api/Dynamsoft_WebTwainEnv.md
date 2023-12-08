@@ -8,16 +8,17 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 permalink: /info/api/Dynamsoft_WebTwainEnv.html
 ---
 
-# `Dynamsoft.DWT`
-> The global properties and methods on this page live in the namespace `{Dynamsoft.DWT}`,
+# Global
+> The Global Web TWAIN properties and methods on this page live in the namespace `{Dynamsoft.DWT}`,
 
 **Methods**
 
 |                                       |                                           |                                       |                                    |
 |---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
 | [`CreateDWTObject()`](#createdwtobject) | [`CreateDWTobjectEx()`](#createdwtobjectex) | [`DeleteDWTObject()`](#deletedwtobject) | [`GetWebTwain()`](#getwebtwain)      |
-| [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   | [`UpdateCert()`](#updatecert)        |
+| [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   |        |
 
+<!-- [`UpdateCert()`](#updatecert)  -->
 
 **Properties**
 
@@ -25,8 +26,8 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 |-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
 | [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
 | [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
-| [`InstallerPath`](#installerpath)  | [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath)      |
-| [`ServiceInstallerLocation`](#serviceinstallerlocation)  | [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |
+| [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |
+| [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |
 
 
 **Events**
@@ -176,12 +177,12 @@ Creates a new `WebTwain` instance that listens to the specified host & ports. An
 
 Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId`.
 
-``` typescript
+```typescript
 interface DWTInitialConfig {
     WebTwainId: string,
-        Host ? : string,
-        Port ? : string,
-        PortSSL ? : string,
+    Host ? : string,
+    Port ? : string,
+    PortSSL ? : string,
 }
 ```
 
@@ -191,11 +192,32 @@ interface DWTInitialConfig {
 
 Delete the `WebTwain` instance specified by `Id` which can either be a `ContainerId` or a `WebTwainId`.
 
+<!-- **Syntax**
+
+```typescript
+
+``` -->
+
 ---
 
 ## GetWebTwain()
 
 Gets an `WebTwain` instance by its `ContainerId`.
+
+**Syntax**
+
+```typescript
+GetWebTwain(containerId: string): void;
+```
+
+**Example**
+
+```javascript
+var DWObject;
+		function Dynamsoft_OnReady() {
+            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+        }
+```
 
 ---
 
@@ -207,13 +229,31 @@ Gets an `WebTwain` instance by its `WebTwainId`.
   
 ## Load()
 
-Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container`.
+Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container`. Only used if [`AutoLoad`](#autoload) is set to false.
+
+**Syntax**
+
+```typescript
+Load(): boolean;
+```
+
+**Example**
+
+```javascript
+Dynamsoft.DWT.Load();
+```
 
 ---
 
 ## RegisterEvent()
 
-Registers an environmental event. Typically the event is `OnWebTwainReady` which is triggered when the initialization completes.
+Registers an environmental event.
+
+**Syntax**
+
+```typescript
+Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>any): void;
+```
 
 ---
 
@@ -223,7 +263,7 @@ Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft S
 
 ---
 
-## UpdateCert
+<!-- ## UpdateCert
 
 Update and download certificate (server.pem.ldsc & server_key.pem.ldsc) to DynamsoftServicex64_{version}\cert.
 
@@ -285,7 +325,7 @@ UpdateCert(
   };
 ```
 
----
+--- -->
 
 ## AutoLoad
 

@@ -8,7 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Uploader APIs Pag
 permalink: /info/api/Dynamsoft_FileUploader.html
 ---
 
-# `Dynamsoft.FileUploader`
+# Dynamsoft.FileUploader
 
 **Methods**
 

@@ -8,7 +8,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 permalink: /info/api/appendix.html
 ---
 
-# API Appendix
+# Web TWAIN Appendix
 
 ## Error List
 
