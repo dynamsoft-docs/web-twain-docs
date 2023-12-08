@@ -28,7 +28,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | :------------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------------------- |
 | [`LoadImage()`](#loadimage)                       | [`LoadImageEx()`](#loadimageex)                         | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary) |
 | [`LoadDibFromClipboard()`](#loaddibfromclipboard) | [`FTPDownload()`](#ftpdownload)                         | [`FTPDownloadEx()`](#ftpdownloadex)                         | [`HTTPDownload()`](#httpdownload)               |
-| [`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) | [`HTTPDownloadDirectly()`](#httpdownloaddirectly)           |
+| [`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) |       |
 
 **Output Methods**
 
@@ -39,11 +39,11 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`FTPUploadAsMultiPagePDF()`](#ftpuploadasmultipagepdf)                                 | [`FTPUploadAsMultiPageTIFF()`](#ftpuploadasmultipagetiff)                 | [`HTTPUpload()`](#httpupload)                                                   |
 | [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)                                   | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)                       | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)                         |
 | [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
-| [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)       | [`HTTPUploadThroughPostDirectly()`](#httpuploadthroughpostdirectly)       | [`SaveAsBMP()`](#saveasbmp)                                                     |
+| [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)       | [`OutputSelectedAreasAsync()`](#outputselectedareaasync)                  | [`SaveAsBMP()`](#saveasbmp)                                                     |
 | [`SaveAsJPEG()`](#saveasjpeg)                                                           | [`SaveAsPDF()`](#saveaspdf)                                               | [`SaveAsPNG()`](#saveaspng)                                                     |
 | [`SaveAsTIFF()`](#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     |
 | [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         | [`ShareImages()`](#shareimages)                                                 |
-| [`OutputSelectedAreasAsync()`](#outputselectedareaasync)   |
+|
 
 **Other Methods**
 
@@ -1502,91 +1502,6 @@ HTTPDownloadThroughPost(
 
 ---
 
-## HTTPDownloadDirectly
-
-Download the specified file via a HTTP Get request.
-
-**Syntax**
-
-```javascript
-HTTPDownloadDirectly(
-    host: string,
-    path: string,
-    localPath: string,
-    successCallback: () => void,
-    failureCallback: (errorCode: number, errorString: string) => void
-): void;
-```
-
-**Parameters**
-
-`host`: The HTTP Host.
-
-`path`: Specify the path of the file to download.
-
-`localPath`: Specify where to save the file.
-
-`successCallback`: A callback function that is executed if the request succeeds.
-
-`failureCallback`: A callback function that is executed if the request fails.
-- `errorCode`: The error code.
-- `errorString`: The error string.
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v7.0+ </td>
-<td align="center">v18.2+ </td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-The Dynamic Web TWAIN library will decode the downloaded data based on the `type` parameter ( `HTTPDownloadEx()` , `HTTPDownloadThroughPost()` ) or the extension of the file in the `path` parameter ( `HTTPDownload()` ).
-
-For security reasons, the method `HTTPDownloadDirectly()` can only download the specified file to a whitelisted location. In other words, the user needs to call the method [ShowFileDialog()](#showfiledialog) and then get a whitelisted location to use. For security purposes, the following file extensions are not permitted to be downloaded via API: exe,app,sh,com,msi,dmg,rpm,pkg,deb,apk,aab,dll,cmd,bat,dylib,so.
-
-**Example**
-
-```javascript
-DWObject.RegisterEvent(
-    "OnGetFilePath",
-    function (isSave, filesCount, index, directory, fileName) {
-        DWObject.HTTPDownloadDirectly(
-        "www.dynamsoft.com",
-        "/Products/Dynamsoft_Security_Whitepaper.pdf",
-        directory + "\\" + fileName,
-        function () {},
-        function (errorCode, errorString) {
-            console.log(errorString);
-        }
-        );
-    }
-);
-
-DWObject.ShowFileDialog(true, "PDF|*.pdf", 0, ".pdf", "", true, false, 1);
-```
-
----
-
 ## HTTPUpload
 
 Upload the specified image(s) via a HTTP Post.
@@ -2180,98 +2095,6 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 **Usage Notes**
 
 If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
-
----
-
-## HTTPUploadThroughPostDirectly
-
-**Syntax**
-
-```javascript
-HTTPUploadThroughPostDirectly(
-    host: string,
-    path: string,
-    target: string,
-    fileName: string,
-    onEmptyResponse: () => void,
-    onServerReturnedSomething: (
-        errorCode: number,
-        errorString: string,
-        response: string) => void
-): void;
-```
-
-**Parameters**
-
-`host`: The HTTP Host.
-
-`path`: Specify the file to upload.
-
-`target`: The target where the request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
-
-`fileName`: The file name.
-
-`onEmptyResponse`: A callback function that is executed if the response is empty.
-
-`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
-- `errorCode`: The error code.
-- `errorString`: The error string.
-- `response`: The response string.
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">v7.0+</td>
-<td align="center">v7.0+</td>
-<td align="center">v7.0+</td>
-<td align="center">v7.0+</td>
-<td align="center">v7.0+</td>
-<td align="center">v18.2+ </td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
-
-For security reasons, the method `HTTPUploadThroughPostDirectly()` can only upload a whitelisted file. In other words, the local file to upload should be either created by the library or selected manually by the user.
-
-To select a local file to upload, call the method [ShowFileDialog()](#showfiledialog) and then get the file path in the callback [OnGetFilePath](#ongetfilepath). Check out the example below.
-
-**Example**
-
-```javascript
-DWObject.RegisterEvent(
-  "OnGetFilePath",
-  function (isSave, filesCount, index, directory, fileName) {
-    DWObject.HTTPUploadThroughPostDirectly(
-      "localhost",
-      directory + "\\" + fileName,
-      "SaveUploadedFile.aspx",
-      fileName,
-      function () {},
-      function (errorCode, errorString, response) {
-        console.log(errorString + " " + response);
-      }
-    );
-  }
-);
-DWObject.ShowFileDialog(false, "All Files|*.*", 0, "", "", false, false, 1);
-```
 
 ---
 
