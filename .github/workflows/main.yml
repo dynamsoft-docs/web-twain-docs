@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on push events but only for the master branch
   push:
     branches: 
-      - v18.3
+    - v18.3
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,13 +24,15 @@ jobs:
       - name: Build the full site - main
         run: |
           cd ${{ runner.temp }}
-          mkdir -p DWTDocArchive
+          mkdir -p DocHome
           git clone --depth 1 --branch v18.3 https://github.com/Dynamsoft/web-twain-docs.git web-twain-docs-archive
           git clone --depth 1 --branch dwt-v18.3 https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-archive
-          cp -rfp ./web-twain-docs-archive/* ./DWTDocArchive/
-          cp -rfp ./Docs-Template-Repo-archive/* ./DWTDocArchive/
-          cd DWTDocArchive && bundle install && bundle exec jekyll build
-
+          cp -rfp ./web-twain-docs-archive/* ./DocHome/
+          cp -rfp ./Docs-Template-Repo-archive/* ./DocHome/
+          sed -i -e "1,3s/blob\/master$/blob\/v18.3/" \
+          -e "1,3s/blob\/main$/blob\/v18.3/" ${{ runner.temp }}/DocHome/_config.yml
+          cd DocHome && bundle install && bundle exec jekyll build
+          
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
@@ -38,8 +40,9 @@ jobs:
           username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
           port: 21 
-          local-dir: ${{ runner.temp }}/DWTDocArchive/_site/
+          local-dir: ${{ runner.temp }}/DocHome/_site/
           server-dir: /www.dynamsoft.com/web-twain/docs-archive/v18.3/
+
 
       - name: Trigger Webhook 
         run: | 
