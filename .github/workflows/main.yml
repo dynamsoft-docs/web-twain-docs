@@ -25,10 +25,10 @@ jobs:
         run: |
           cd ${{ runner.temp }}
           mkdir -p DocHome
-          git clone --depth 1 --branch v18.3 https://github.com/Dynamsoft/web-twain-docs.git web-twain-docs-archive
-          git clone --depth 1 --branch dwt-v18.3 https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-archive
-          cp -rfp ./web-twain-docs-archive/* ./DocHome/
-          cp -rfp ./Docs-Template-Repo-archive/* ./DocHome/
+          git clone --depth 1 --branch v18.3 https://github.com/Dynamsoft/web-twain-docs.git web-twain-docs
+          git clone --depth 1 --branch dwt-v18.3 https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo
+          cp -rfp ./web-twain-docs/* ./DocHome/
+          cp -rfp ./Docs-Template-Repo/* ./DocHome/
           sed -i -e "1,3s/blob\/master$/blob\/v18.3/" \
           -e "1,3s/blob\/main$/blob\/v18.3/" ${{ runner.temp }}/DocHome/_config.yml
           cd DocHome && bundle install && bundle exec jekyll build
