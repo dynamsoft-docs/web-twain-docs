@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on push events but only for the master branch
   push:
     branches: 
-    - v18.3
+      - v18.3
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -17,26 +17,20 @@ jobs:
   Build-v18-3:
     if: ${{ github.ref == 'refs/heads/v18.3' }}
     # The type of runner that the job will run on
-    runs-on: self-hosted
+    runs-on: [self-hosted, doc-build]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a set of commands using the runners shell
-      - name: Build the site
+      - name: Build the full site - main
         run: |
-          cd /home/ubuntu
-          [ -d web-twain-docs-archive ] && rm -rf web-twain-docs-archive
-          [ -d Docs-Template-Repo-archive ] && rm -rf Docs-Template-Repo-archive
-          [ -d DWTDocArchive ] && rm -rf DWTDocArchive
+          cd ${{ runner.temp }}
           mkdir -p DWTDocArchive
           git clone --depth 1 --branch v18.3 https://github.com/Dynamsoft/web-twain-docs.git web-twain-docs-archive
           git clone --depth 1 --branch dwt-v18.3 https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-archive
           cp -rfp ./web-twain-docs-archive/* ./DWTDocArchive/
           cp -rfp ./Docs-Template-Repo-archive/* ./DWTDocArchive/
-          sed -i -e "1,3s/blob\/master$/blob\/v18.3/" \
-          -e "1,3s/blob\/main$/blob\/v18.3/" /home/ubuntu/DWTDocArchive/_config.yml
-          cd DWTDocArchive && bundle exec jekyll build --incremental
-      
+          cd DWTDocArchive && bundle install && bundle exec jekyll build
+
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
@@ -47,19 +41,6 @@ jobs:
           local-dir: /home/ubuntu/DWTDocArchive/_site/
           server-dir: /www.dynamsoft.com/web-twain/docs-archive/v18.3/
 
-      # - name: Sync files to Test Env
-      #   uses: SamKirkland/FTP-Deploy-Action@4.3.0
-      #   with:
-      #     server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-      #     username: ${{ secrets.FTP_TEST_SITE_USER }}
-      #     password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
-      #     port: 7500 
-      #     local-dir: /home/ubuntu/DWTDocArchive/_site/
-      #     server-dir: /www.dynamsoft.com/web-twain/docs-archive/v18.3/
-
-      - name: Clear files
-        run: |
-          cd /home/ubuntu
-          [ -d web-twain-docs-archive ] && rm -rf web-twain-docs-archive
-          [ -d Docs-Template-Repo-archive ] && rm -rf Docs-Template-Repo-archive
-          [ -d DWTDocArchive ] && rm -rf DWTDocArchive
+      - name: Trigger Webhook 
+        run: | 
+          curl -X POST -H "${{ secrets.WEBHOOK_USER }}" -H "${{ secrets.WEBHOOK_TOKEN }}" -H "Content-Type: application/json" -d "[\"/web-twain/docs-archive/v18.3/*\"]" ${{ secrets.WEBHOOK_URL }}
