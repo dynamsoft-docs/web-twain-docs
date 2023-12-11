@@ -350,7 +350,7 @@ permalink: /info/api/
 |:-|:-|:-|:-|
 |[`LoadImage()`]({{site.info}}api/WebTwain_IO.html#loadimage)| [`LoadImageEx()`]({{site.info}}api/WebTwain_IO.html#loadimageex)|[`LoadImageFromBase64Binary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary)| [`LoadImageFromBinary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary)|
 |[`LoadDibFromClipboard()`]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboard)| [`FTPDownload()`]({{site.info}}api/WebTwain_IO.html#ftpdownload)| [`FTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#ftpdownloadex)| [`HTTPDownload()`]({{site.info}}api/WebTwain_IO.html#httpdownload)|
-| [`HTTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#httpdownloadex)|[`HTTPDownloadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)|[`HTTPDownloadDirectly()`]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly)|
+| [`HTTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#httpdownloadex)|[`HTTPDownloadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)|
 
 <!--
 * [`LoadImage()`]({{site.info}}api/WebTwain_IO.html#loadimage)
@@ -363,7 +363,6 @@ permalink: /info/api/
 * [`HTTPDownload()`]({{site.info}}api/WebTwain_IO.html#httpdownload)
 * [`HTTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#httpdownloadex)
 * [`HTTPDownloadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)
-* [`HTTPDownloadDirectly()`]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly) -->
 
 <!--* [`LoadDibFromClipboardAsync()`]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboardasync)-->
 
@@ -378,11 +377,10 @@ permalink: /info/api/
 |[`FTPUploadAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagepdf)| [`FTPUploadAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagetiff)|[`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)| 
 |[`HTTPUploadThroughPutEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)| [`HTTPUploadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)| [`HTTPUploadThroughPostEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostex)|
 | [`HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff)| [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)| [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)|
-|[`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)|[`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)|[`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)| 
+|[`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)|[`OutputSelectedAreasAsync()`]({{site.info}}api/WebTwain_IO.html#outputselectedareaasync)|[`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)| 
 |[`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)| [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)|[`SaveAsPNG()`]({{site.info}}api/WebTwain_IO.html#saveaspng)| 
 |[`SaveAsTIFF()`]({{site.info}}api/WebTwain_IO.html#saveastiff)| [`SaveSelectedImagesAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagepdf)|[`SaveSelectedImagesAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveselectedimagesasmultipagetiff)|
 | [`SaveAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#saveallasmultipagetiff)|[`SaveAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveallaspdf)|[`ShareImages()`]({{site.info}}api/WebTwain_IO.html#shareimages)| 
-|[`OutputSelectedAreasAsync()`]({{site.info}}api/WebTwain_IO.html#outputselectedareaasync)   |
 
 <!--
 * [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)
@@ -401,7 +399,6 @@ permalink: /info/api/
 * [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)
 * [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)
 * [`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)
-* [`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)
 * [`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)
 * [`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)
 * [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)
@@ -890,7 +887,6 @@ permalink: /info/api/
 * [`HTTPDownload()`]({{site.info}}api/WebTwain_IO.html#httpdownload)
 * [`HTTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#httpdownloadex)
 * [`HTTPDownloadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)
-* [`HTTPDownloadDirectly()`]({{site.info}}api/WebTwain_IO.html#httpdownloaddirectly) -->
 
 <!--* [`LoadDibFromClipboardAsync()`]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboardasync)-->
 
@@ -925,7 +921,6 @@ permalink: /info/api/
 * [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)
 * [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)
 * [`HTTPUploadThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)
-* [`HTTPUploadThroughPostDirectly()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostdirectly)
 * [`SaveAsBMP()`]({{site.info}}api/WebTwain_IO.html#saveasbmp)
 * [`SaveAsJPEG()`]({{site.info}}api/WebTwain_IO.html#saveasjpeg)
 * [`SaveAsPDF()`]({{site.info}}api/WebTwain_IO.html#saveaspdf)

@@ -2343,7 +2343,7 @@ updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
 
 **Parameters**
 
-`checkboxSettings`: Settings for checkboxex. Please refer to [CheckboxSettings]({{site.info}}api/Interfaces.html#checkboxsettings).
+`checkboxSettings`: Settings for checkboxes. Please refer to [CheckboxSettings]({{site.info}}api/Interfaces.html#checkboxsettings).
 
 **Availability**
 
