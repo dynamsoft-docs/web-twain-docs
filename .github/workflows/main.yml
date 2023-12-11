@@ -38,7 +38,7 @@ jobs:
           username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
           port: 21 
-          local-dir: /home/ubuntu/DWTDocArchive/_site/
+          local-dir: ${{ runner.temp }}/DWTDocArchive/_site/
           server-dir: /www.dynamsoft.com/web-twain/docs-archive/v18.3/
 
       - name: Trigger Webhook 
