@@ -24,14 +24,14 @@ jobs:
       - name: Build the full site - main
         run: |
           cd ${{ runner.temp }}
-          mkdir -p DocHome
-          git clone --depth 1 --branch v18.3 https://github.com/Dynamsoft/web-twain-docs.git web-twain-docs
-          git clone --depth 1 --branch dwt-v18.3 https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo
-          cp -rfp ./web-twain-docs/* ./DocHome/
-          cp -rfp ./Docs-Template-Repo/* ./DocHome/
+          mkdir -p DWTDocArchive
+          git clone --depth 1 --branch v18.3 https://${{ secrets.GIT_USER }}:${{ secrets.GIT_PAT }}@github.com/dynamsoft-docs/web-twain-docs.git web-twain-docs-archive
+          git clone --depth 1 --branch dwt-v18.3 https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Archive
+          cp -rfp ./web-twain-docs-archive/* ./DWTDocArchive/
+          cp -rfp ./Docs-Template-Repo-Archive/* ./DWTDocArchive/
           sed -i -e "1,3s/blob\/master$/blob\/v18.3/" \
-          -e "1,3s/blob\/main$/blob\/v18.3/" ${{ runner.temp }}/DocHome/_config.yml
-          cd DocHome && bundle install && bundle exec jekyll build
+          -e "1,3s/blob\/main$/blob\/v18.3/" ${{ runner.temp }}/DWTDocArchive/_config.yml
+          cd DWTDocArchive && bundle install && bundle exec jekyll build
           
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -40,7 +40,7 @@ jobs:
           username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
           port: 21 
-          local-dir: ${{ runner.temp }}/DocHome/_site/
+          local-dir: ${{ runner.temp }}/DWTDocArchive/_site/
           server-dir: /www.dynamsoft.com/web-twain/docs-archive/v18.3/
 
 
