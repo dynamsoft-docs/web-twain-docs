@@ -1,29 +1,34 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN SDK Hello World
+title: Dynamic Web TWAIN SDK Getting Started - Hello World
 keywords: Dynamic Web TWAIN, Documentation, Hello World
 breadcrumbText: Hello World
 description: Dynamic Web TWAIN SDK Documentation Hello World Page
 permalink: /getstarted/helloworld.html
 ---
 
-# Build the HelloWorld Page
+# HelloWorld
 
-> Before you start, please make sure you've downloaded and installed the latest version of `Dynamic Web TWAIN`. If you haven't done so, you can get the 30-day free trial installer [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
+> Before you start, please make sure you have downloaded and installed the latest version of `Dynamic Web TWAIN SDK`. If you have not yet done so, you can download the SDK with a 30-day free trial from [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
 
-The following steps show you how to create your first web-based scanning application in a few minutes!
+This guide will help you create your first browser-based scanning application using Dynamic Web TWAIN in just a few minutes! 
 
-## Start a Web Application
+If you would like to follow a video guide of HelloWorld, you can check out the video on [YouTube](https://www.youtube.com/watch?v=qShti9aVfLU){:target="_blank"}
 
-Create a `helloworld.html` anywhere and copy the `Resources` folder to the same location. You can typically find this folder in `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`
+## Create a Web Application
+<!-- Updated helloworld.html to HelloWorld.html to match the screenshot -->
+
+Create a `HelloWorld.html` anywhere and copy the `Resources` folder to the same location. You can typically find this folder in `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`.
 * Resources
 
-  ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)
+  ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)  <!-- TODO: Update screenshot for v18 SDK -->
+
 
 * The project
 
   ![Build-the-Hello-World-Scan-Page-2]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-2.png)
+
 
 ## Include the library
 
@@ -38,14 +43,23 @@ Embed the script of the library and add a `div` element for the library on the p
 <div id="dwtcontrolContainer"></div>
 ```
 
-> "dwtcontrolContainer" is the default id for the div. You can change it in the file `dynamsoft.webtwain.config.js` if necessary.
+<div class="blockquote-note"></div>
+> `dwtcontrolContainer` is the default id for the div in the default DWT resources, and any of the Dynamsoft provided demos. If you would like to use a different id for this div, you will need to change `Dynamsoft.DWT.Containers` in the file `dynamsoft.webtwain.config.js` to match.
 
-## Write code to scan
+## Adding the Basic Dynamic Web TWAIN controls
 
-Add a scan button and the minimum code.
+Now that we have our scripts included in the application, we will have to write the code to use the libraries.
+
+### Add a Scan button in HTML
 
 ``` html
 <input type="button" value="Scan" onclick="AcquireImage();" />
+```
+
+### Add the minimum code required for scanning from a document scanner
+
+
+```html
 <script type="text/javascript">
     var DWObject;
 
@@ -75,10 +89,18 @@ Add a scan button and the minimum code.
         }
     }
 </script>
-
 ```
+    
+APIs used in this HelloWorld project
+- [`Dynamsoft.DWT.GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain){:target="_blank" rel="noreferrer noopener"}
+- [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync){:target="_blank" rel="noreferrer noopener"}
+- [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
+- [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync){:target="_blank" rel="noreferrer noopener"}
+- [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
-## Review the complete code
+## Review the code
+
+At this point, our HelloWorld code should look like this:
 
 ``` html
 <html>
@@ -92,6 +114,7 @@ Add a scan button and the minimum code.
 <body>
     <input type="button" value="Scan" onclick="AcquireImage();" />
     <div id="dwtcontrolContainer"></div>
+
     <script type="text/javascript">
         var DWObject;
 
@@ -132,96 +155,24 @@ Add a scan button and the minimum code.
 
   ![Build-the-Hello-World-Scan-Page-3]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-3.png)
 
-  > If you see a license notice, please make sure you have a valid trial license. Contact [Dynamsoft Support]({{site.about}}getsupport.html) if you need help.
+  > If you see a license notice, please make sure you have a valid license. Open `dynamsoft.webtwain.config.js` and validate that you have a valid key in `Dynamsoft.DWT.ProductKey`. If you are unsure if your key is valid, or if you need a key, please contact [Dynamsoft Support]({{site.about}}getsupport.html) for further details.
 
 * Press the Scan button
 
+  After pressing the scan button, you will be presented with the Select Source dialog. Select your scanner and press the select button.
+
   ![Build-the-Hello-World-Scan-Page-4]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-4.png)
 
-  > Only TWAIN / ICA / SANE compliant devices are listed in the Select Source dialog. If your connected scanner doesn't show up in the list, please make sure the proper driver is installed. If you are using Windows and don't have a real scanner at hand, you may install the [Virtual Scanner](https://www.dynamsoft.com/web-twain/docs/faq/download-virtual-scanner-for-testing.html) – a scanner simulator which is developed by the [TWAIN Working Group](https://www.twain.org/) for testing purposes.
+  > Only TWAIN / WIA / ICA / SANE compliant devices are listed in the Select Source dialog. If your connected scanner doesn't show up in the list, please make sure the proper driver is installed. If you are using Windows and don't have a physical scanner on hand, you may install the [Virtual Scanner](https://www.dynamsoft.com/web-twain/docs/faq/download-virtual-scanner-for-testing.html) – a scanner simulator which is developed by the [TWAIN Working Group](https://www.twain.org/) for testing purposes.
 
-* After scan
+* Scanner UI
 
-    The scanned documents will show up in the page.
+* After scanning
+
+    The scanned documents will show up in the viewer.
 
   ![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
 
-## Upload the document as a PDF via HTTP Post
+## Next Step
 
-After scan, you may want to upload the scanned documents to a server. So as the last step in creating the hello world application, the following shows how to upload the scanned documents as a PDF file.
-
-### Add an upload button in HTML
-
-``` html
-<!-- Add a button -->
-<input type="button" value="Upload" onclick="UploadAsPDF();" />
-```
-
-### Add code to do the upload
-
-The method [HTTPUpload]({{site.info}}api/WebTwain_IO.html#httpupload) is used to do the upload.
-
-``` javascript
-function UploadAsPDF() {
-    var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
-    url += location.hostname;
-    var path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
-    url += location.port === "" ? path : ":" + location.port + path;
-    url += "saveUploadedPDF.aspx";
-    var indices = [];
-    if (DWObject) {
-        if (DWObject.HowManyImagesInBuffer === 0) {
-            console.log("There is no image to upload!");
-            return;
-        }
-        // DWObject.SelectAllImages();
-        indices = DWObject.SelectedImagesIndices;
-        DWObject.HTTPUpload(
-            url,
-            indices,
-            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-            Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
-            "HelloWorld.pdf",
-            function() {
-                //The server response is empty!
-                console.log("Successfully uploaded!")
-            },
-            function(errCode, errString, response) {
-                console.log(errString);
-            }
-        );
-    }
-}
-```
-
-### Write the server script to receive and save the uploaded file
-
-> On the server side, any script language can be used (ASP. NET, JSP, PHP, etc.). Here we are using ASP. NET (C#) as an example. Check out more [here]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
-
-> `RemoteFile` is the default field name for the uploaded file. So we use it to extract the file from the Post Request. This field name can be changed with the API [HttpFieldNameOfUploadedImage]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage).
-
-Create a `saveUploadedPDF.aspx` file in the same location as your `helloworld.html` and write the following script in it.
-
-``` csharp
-<%@ Page Language="C#" %>
-<%
-    try
-    {
-        String strImageName;
-        HttpFileCollection files = HttpContext.Current.Request.Files;
-        HttpPostedFile uploadfile = files["RemoteFile"];
-        strImageName = uploadfile.FileName;
-        uploadfile.SaveAs(Server.MapPath(".") + "\\" + strImageName);
-    }
-    catch
-    {
-    }
-%>
-```
-
-Now we can use the page to scan or acquire, then upload the images as a PDF document.
-
-### Get document scan & upload sample
-
-- [Try scan & upload online demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html)
-- [Get scan & upload sample source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4)
+The next step will be to [upload the scanned image to a server]({{site.getstarted}}uploading.html).
