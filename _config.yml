@@ -1,33 +1,33 @@
 repositoryUrl: https://github.com/dynamsoft-docs/web-twain-docs/blob/master
-firstLevelUrl: /web-twain/docs
+firstLevelUrl: /web-twain/docs-new
 repository: dynamsoft-docs/web-twain-docs
-docFullPath: https://www.dynamsoft.com/web-twain/docs
+docFullPath: https://www.dynamsoft.com/web-twain/docs-new
 productUrl: https://www.dynamsoft.com/web-twain/overview/
 productName: Dynamic Web TWAIN
-docHomePage: /web-twain/docs/
-dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
-dwt_logo: /web-twain/docs/assets/img-icon/dwt-logo.png
-edit_icon: /web-twain/docs/assets/img-icon/edit-icon.png
+docHomePage: /web-twain/docs-new/
+dynamsoft_logo: /web-twain/docs-new/assets/img-icon/dynamsoft-logo.png
+dwt_logo: /web-twain/docs-new/assets/img-icon/dwt-logo.png
+edit_icon: /web-twain/docs-new/assets/img-icon/edit-icon.png
 
-assets: /web-twain/docs/assets/
-_includes: /web-twain/docs/_includes/
-_layouts: /web-twain/docs/_layouts/
-about: /web-twain/docs/about/
-getstarted: /web-twain/docs/getstarted/
-indepth: /web-twain/docs/indepth/
-info: /web-twain/docs/info/
-faq: /web-twain/docs/faq/
+assets: /web-twain/docs-new/assets/
+_includes: /web-twain/docs-new/_includes/
+_layouts: /web-twain/docs-new/_layouts/
+about: /web-twain/docs-new/about/
+getstarted: /web-twain/docs-new/getstarted/
+indepth: /web-twain/docs-new/indepth/
+info: /web-twain/docs-new/info/
+faq: /web-twain/docs-new/faq/
 
-dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
-dbr_logo: /web-twain/docs/assets/img-icon/dbr-logo.png
-edit_icon: /web-twain/docs/assets/img-icon/edit-icon.png
-smile_icon: /web-twain/docs/assets/img-icon/icon-smile.png
-sad_icon: /web-twain/docs/assets/img-icon/icon-sad.png
-dbr_icon: /web-twain/docs/assets/img-icon/icon-dbr.svg
-dwt_icon: /web-twain/docs/assets/img-icon/icon-dwt.svg
-dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
+dynamsoft_logo: /web-twain/docs-new/assets/img-icon/dynamsoft-logo.png
+dbr_logo: /web-twain/docs-new/assets/img-icon/dbr-logo.png
+edit_icon: /web-twain/docs-new/assets/img-icon/edit-icon.png
+smile_icon: /web-twain/docs-new/assets/img-icon/icon-smile.png
+sad_icon: /web-twain/docs-new/assets/img-icon/icon-sad.png
+dbr_icon: /web-twain/docs-new/assets/img-icon/icon-dbr.svg
+dwt_icon: /web-twain/docs-new/assets/img-icon/icon-dwt.svg
+dnt_icon: /web-twain/docs-new/assets/img-icon/icon-dnt.svg
 
-baseurl: /web-twain/docs/
+baseurl: /web-twain/docs-new/
 
 useVersionTreeV2: true
 
