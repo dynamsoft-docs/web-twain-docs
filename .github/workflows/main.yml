@@ -33,17 +33,6 @@ jobs:
           -e "1,3s/blob\/main$/blob\/new-user-guide/" ${{ runner.temp }}/DWTDocNewGuide/_config.yml
           cd DWTDocNewGuide && bundle install && bundle exec jekyll build
 
-      - name: Download the artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: web-twain-docs
-
-      - name: 'Extract Tar files'
-        shell: cmd
-        run: |
-          mkdir ${{ runner.temp }}\DWTDocNewGuide\_site
-          tar -xzf web-twain-docs.tar.gz -C ${{ runner.temp }}\DWTDocNewGuide\_site
-
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
