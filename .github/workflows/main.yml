@@ -7,28 +7,49 @@ on:
   # Triggers the workflow on push events but only for the master branch
   push:
     branches: 
-    - master 
-    - preview 
+    - v18.3
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains jobs called "Build-Main" and "Build-Preview"
-  Build-Master:
-    if: ${{ github.ref == 'refs/heads/master' }}
-    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@main
-    with:
-      doc-repo: web-twain-docs
-      doc-url: web-twain/docs
-    secrets: inherit
+jobs:         
+  Build-new-user-guide:
+    if: ${{ github.ref == 'refs/heads/v18.3' }}
+    # The type of runner that the job will run on
+    runs-on: [self-hosted, doc-build]
 
-  Build-Preview:
-    if: ${{ github.ref == 'refs/heads/preview' }}
-    uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-testing.yml@preview
-    with:
-      doc-repo: web-twain-docs
-      doc-url: web-twain/docs
-    secrets: inherit
-             
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Build the full site - main
+        run: |
+          cd ${{ runner.temp }}
+          mkdir -p DWTDocNewGuide
+          git clone --depth 1 --branch new-user-guide https://${{ secrets.GIT_USER }}:${{ secrets.GIT_PAT }}@github.com/dynamsoft-docs/web-twain-docs.git web-twain-docs-new
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          cp -rfp ./web-twain-docs-new/* ./DWTDocNewGuide/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DWTDocNewGuide/
+          sed -i -e "1,3s/blob\/master$/blob\/new-user-guide/" \
+          -e "1,3s/blob\/main$/blob\/new-user-guide/" ${{ runner.temp }}/DWTDocNewGuide/_config.yml
+          cd DWTDocNewGuide && bundle install && bundle exec jekyll build
+
+      - name: Download the artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: web-twain-docs
+
+      - name: 'Extract Tar files'
+        shell: cmd
+        run: |
+          mkdir ${{ runner.temp }}\DWTDocNewGuide\_site
+          tar -xzf web-twain-docs.tar.gz -C ${{ runner.temp }}\DWTDocNewGuide\_site
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
+          username: ${{ secrets.FTP_TEST_SITE_USER }}
+          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
+          port: 7500 
+          local-dir: ${{ runner.temp }}\DWTDocNewGuide\_site/
+          server-dir: /www.dynamsoft.com/web-twain/docs-new/
