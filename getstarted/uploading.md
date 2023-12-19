@@ -184,6 +184,8 @@ After adding all the functions, the complete HelloWorld application should look 
 
 Now you can use the page to scan a document and then upload the images as a PDF document.
 
+<< Insert Screenshots >>
+
 <!-- ## Get document scan & upload sample
 
 These samples are not the Hello World with upload
@@ -191,10 +193,14 @@ These samples are not the Hello World with upload
 - [Get scan & upload sample source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4) -->
 
 
+## Further readings
+
+<< Insert links to further readings >>
+
 # Next step
 
-Now that you have completed your HelloWorld and uploaded your first file, it is now time to dive into learn how to customise your scan settings
+Now that you have completed your HelloWorld and uploaded your first file, it is now time to learn how to [customising your scan settings]({{site.getstarted}}scansettings.html).s
 
 <!-- - [Review HelloWorld]({{site.getstarted}}helloworld.html) -->
-- [Customising your scan settings]({{site.getstarted}}scansettings.html)
+<!-- - [Customising your scan settings]({{site.getstarted}}scansettings.html) -->
 <!-- - [Editing your images]({{site.getstarted}}editing.html) -->

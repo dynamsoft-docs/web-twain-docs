@@ -88,8 +88,12 @@ Newly introduced APIs and Properties:
 - [`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype){:target="_blank" rel="noreferrer noopener"}
 - [`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution){:target="_blank" rel="noreferrer noopener"}
 
+<< Insert Screenshots >>
+
 # Next step
 
-- [Editing your images]({{site.getstarted}}editing.html)
+The next thing to learn is how to [edit your images]({{site.getstarted}}editing.html).
+
+<!-- - [Editing your images]({{site.getstarted}}editing.html)
 - [Review HelloWorld]({{site.getstarted}}helloworld.html)
-- [Review Uploading Documents]({{site.getstarted}}uploading.html)
+- [Review Uploading Documents]({{site.getstarted}}uploading.html) -->

@@ -64,13 +64,13 @@ APIs and Properties used to change the colourspace:
 - [`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale){:target="_blank" rel="noreferrer noopener"}
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
 
+<< Insert screenshots >>
 
-<!-- TODO
+# Next steps
 
-## Review the complete code -->
+Congratulations, you have completed the HelloWorld tutorial for Dynamic Web TWAIN. << Insert what goes next >>
 
-# Next Steps
-
+<!-- 
 - [Customising your scan settings]({{site.getstarted}}scansettings.html)
 - [Review HelloWorld]({{site.getstarted}}helloworld.html)
-- [Review Uploading Documents]({{site.getstarted}}uploading.html)
+- [Review Uploading Documents]({{site.getstarted}}uploading.html) -->
