@@ -10,9 +10,11 @@ permalink: /getstarted/uploading.html
 
 # Uploading Images to the Server
 
-After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}helloworld.html), you created the scanning component of your HelloWorld, now you will add the code to your HelloWorld upload the scanned documents as a PDF file.
+After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}helloworld.html), you created the scanning component of your HelloWorld, now you will add the code to perform an upload scanned documents as a PDF file.
 
 ## Write the server script to receive and save the uploaded file
+
+<!-- TODO: Greatly Improve descriptors here -->
 
 On the server side, any script language can be used (ASP. NET, JSP, PHP, etc.). Here you will be using ASP.NET (C#) as an example. You can see some additional sample scripts in other languages [here]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
 
@@ -36,9 +38,7 @@ Create a `saveUploadedPDF.aspx` file in the same location as your `HelloWorld.ht
 %>
 ```
 
-**Notes**
-
-`RemoteFile` is the default field name for the uploaded file. So you use it to extract the file from the POST Request. This field name can be changed with the API [`HttpFieldNameOfUploadedImage`]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage).
+> `RemoteFile` is the default field name for the uploaded file. So you use it to extract the file from the POST Request. This field name can be changed with the API [`HttpFieldNameOfUploadedImage`]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage).
 
 ## Add an upload button in HTML
 
@@ -46,7 +46,7 @@ Create a `saveUploadedPDF.aspx` file in the same location as your `HelloWorld.ht
 <input type="button" value="Upload" onclick="UploadAsPDF();" />
 ```
 
-## Write the Upload function
+## Write the upload function
 
 ``` javascript
 function UploadAsPDF() {
@@ -82,8 +82,10 @@ function UploadAsPDF() {
 }
 ```
 
-To perform the upload, you will use the following APIs and Properties:
+<!-- To perform the upload, you will use the following APIs and Properties: -->
+Newly introduced APIs and Properties:
 <!-- - [`Dynamsoft.Lib.detect.ssl`]() -->
+
 - [`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)
 - [`SelectedImagesIndicies`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)
 - [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)
@@ -137,11 +139,19 @@ After adding all the functions, the complete HelloWorld application should look 
         }
 
         function UploadAsPDF() {
-            var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
-            url += location.hostname;
-            var path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
-            url += location.port === "" ? path : ":" + location.port + path;
-            url += "saveUploadedPDF.aspx";
+            // var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
+            // url += location.hostname;
+            // var path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
+            // url += location.port === "" ? path : ":" + location.port + path;
+            // url += "saveUploadedPDF.aspx";
+
+            // var url = (Dynamsoft.Lib.detect.ssl ? "https://" : "http://") + location.hostname + (location.port === "" ? location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1) : ":" + location.port + location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)) + "saveUploadedPDF.aspx";
+
+            // var url = `${location.protocol}//${location.host}${location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)}saveUploadedPDF.aspx`;
+
+            var url = location.protocol + "//" + location.host + location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1) + "saveUploadedPDF.aspx";
+
+
             var indices = [];
             if (DWObject) {
                 if (DWObject.HowManyImagesInBuffer === 0) {
@@ -181,10 +191,10 @@ These samples are not the Hello World with upload
 - [Get scan & upload sample source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4) -->
 
 
-# Next Steps
+# Next step
 
-Now that you have completed your HelloWorld and uploaded your first file, it is now time to dive into some more in depth usage of Dynamic Web TWAIN.
+Now that you have completed your HelloWorld and uploaded your first file, it is now time to dive into learn how to customise your scan settings
 
-- [Review HelloWorld]({{site.getstarted}}helloworld.html)
+<!-- - [Review HelloWorld]({{site.getstarted}}helloworld.html) -->
 - [Customising your scan settings]({{site.getstarted}}scansettings.html)
-- [Editing your images]({{site.getstarted}}editing.html)
+<!-- - [Editing your images]({{site.getstarted}}editing.html) -->

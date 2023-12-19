@@ -16,7 +16,7 @@ This guide will help you create your first browser-based scanning application us
 
 If you would like to follow a video guide of HelloWorld, you can check out the video on [YouTube](https://www.youtube.com/watch?v=qShti9aVfLU){:target="_blank"}
 
-## Create a Web Application
+## Create a web application
 <!-- Updated helloworld.html to HelloWorld.html to match the screenshot -->
 
 Create a `HelloWorld.html` anywhere and copy the `Resources` folder to the same location. You can typically find this folder in `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`.
@@ -43,12 +43,11 @@ Embed the script of the library and add a `div` element for the library on the p
 <div id="dwtcontrolContainer"></div>
 ```
 
-<div class="blockquote-note"></div>
 > `dwtcontrolContainer` is the default id for the div in the default DWT resources, and any of the Dynamsoft provided demos. If you would like to use a different id for this div, you will need to change `Dynamsoft.DWT.Containers` in the file `dynamsoft.webtwain.config.js` to match.
 
-## Adding the Basic Dynamic Web TWAIN controls
+## Add simple scanning functionality
 
-Now that we have our scripts included in the application, we will have to write the code to use the libraries.
+Now that we have our scripts included in the application, we will have to write the code to use the Web TWAIN library.
 
 ### Add a Scan button in HTML
 
@@ -56,7 +55,7 @@ Now that we have our scripts included in the application, we will have to write 
 <input type="button" value="Scan" onclick="AcquireImage();" />
 ```
 
-### Add the minimum code required for scanning from a document scanner
+### Add code to initiate scanning from a document scanner
 
 
 ```html
@@ -91,7 +90,8 @@ Now that we have our scripts included in the application, we will have to write 
 </script>
 ```
     
-APIs used in this HelloWorld project
+Newly introduced APIs and Properties:
+
 - [`Dynamsoft.DWT.GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain){:target="_blank" rel="noreferrer noopener"}
 - [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync){:target="_blank" rel="noreferrer noopener"}
 - [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
@@ -155,7 +155,7 @@ At this point, our HelloWorld code should look like this:
 
   ![Build-the-Hello-World-Scan-Page-3]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-3.png)
 
-  > If you see a license notice, please make sure you have a valid license. Open `dynamsoft.webtwain.config.js` and validate that you have a valid key in `Dynamsoft.DWT.ProductKey`. If you are unsure if your key is valid, or if you need a key, please contact [Dynamsoft Support]({{site.about}}getsupport.html) for further details.
+  > If you see a license notice, please make sure you have a valid license. Open `dynamsoft.webtwain.config.js` and ensure  that you have a licence defined at `Dynamsoft.DWT.ProductKey`. If you need further assistance, please contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
 * Press the Scan button
 
@@ -173,6 +173,9 @@ At this point, our HelloWorld code should look like this:
 
   ![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
 
-## Next Step
+## Further readings
+
+
+## Next step
 
 The next step will be to [upload the scanned image to a server]({{site.getstarted}}uploading.html).

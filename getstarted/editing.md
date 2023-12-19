@@ -17,7 +17,7 @@ Dynamic Web TWAIN offers a number of ways to manipulation of images before savin
 
 <!-- For the quick guide on available APIs, please see [ImageEditing]({{site.indepth}}features/edit.html){:target="_blank" rel="noreferrer noopener"} -->
 
-## Rotating Images
+## Rotating images
 
 ### Create new buttons to rotate the image
 
@@ -37,7 +37,7 @@ function RotateCCW(){
 }
 ```
 
-For more information on the APIs we just added please see:
+APIs used rotate images:
 
 - [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright){:target="_blank" rel="noreferrer noopener"}
 - [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft){:target="_blank" rel="noreferrer noopener"}
@@ -59,10 +59,15 @@ function ConvertToGray(){
 }
 ```
 
-For more information on the APIs we just added please see:
+APIs and Properties used to change the colourspace: 
 
 - [`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale){:target="_blank" rel="noreferrer noopener"}
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
+
+
+<!-- TODO
+
+## Review the complete code -->
 
 # Next Steps
 

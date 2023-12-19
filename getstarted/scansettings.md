@@ -44,7 +44,7 @@ function AcquireImage() {
     }
 ```
 
-New property just added to HelloWorld:
+Newly introduced APIs and Properties:
 
 - [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui){:target="_blank" rel="noreferrer noopener"}
 
@@ -83,12 +83,12 @@ function AcquireImage() {
     }
 ```
 
-New properties just added to HelloWorld:
+Newly introduced APIs and Properties:
 
 - [`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype){:target="_blank" rel="noreferrer noopener"}
 - [`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution){:target="_blank" rel="noreferrer noopener"}
 
-# Next Steps
+# Next step
 
 - [Editing your images]({{site.getstarted}}editing.html)
 - [Review HelloWorld]({{site.getstarted}}helloworld.html)
