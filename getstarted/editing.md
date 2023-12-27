@@ -8,10 +8,11 @@ description: Dynamic Web TWAIN SDK Documentation - Editing Images
 permalink: /getstarted/editing.html
 ---
 
-<div class='blockquote-note'></div>
-> This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
 
 # Editing Images
+
+<div class='blockquote-note'></div>
+> This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
 
 Dynamic Web TWAIN offers a number of ways to manipulation of images before saving the images. These include but are not limited to rotation, cutting, and resizing. For this example, we will be rotating an image and converting it to grayscale.
 

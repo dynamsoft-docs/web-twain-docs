@@ -10,6 +10,9 @@ permalink: /getstarted/uploading.html
 
 # Uploading Images to the Server
 
+<div class='blockquote-note'></div>
+> This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
+
 After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}helloworld.html), you created the scanning component of your HelloWorld, now you will add the code to perform an upload scanned documents as a PDF file.
 
 ## Write the server script to receive and save the uploaded file
