@@ -184,7 +184,7 @@ After adding all the functions, the complete HelloWorld application should look 
 
 Now you can use the page to scan a document and then upload the images as a PDF document.
 
-<< Insert Screenshots >>
+![HelloWorldUpload]({{site.assets}}imgs/HelloWorldUpload.png)
 
 <!-- ## Get document scan & upload sample
 
@@ -199,7 +199,7 @@ These samples are not the Hello World with upload
 
 # Next step
 
-Now that you have completed your HelloWorld and uploaded your first file, it is now time to learn how to [customising your scan settings]({{site.getstarted}}scansettings.html).s
+Now that you have completed your HelloWorld and uploaded your first file, it is now time to learn how to [customising your scan settings]({{site.getstarted}}scansettings.html).
 
 <!-- - [Review HelloWorld]({{site.getstarted}}helloworld.html) -->
 <!-- - [Customising your scan settings]({{site.getstarted}}scansettings.html) -->

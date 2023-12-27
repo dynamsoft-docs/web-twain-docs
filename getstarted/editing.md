@@ -43,6 +43,10 @@ APIs used rotate images:
 - [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft){:target="_blank" rel="noreferrer noopener"}
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
 
+### Test out the rotation
+
+Using your new buttons, scan an image and use your new buttons to rotate the image.
+
 ## Converting image to grayscale
 
 ### Create a new button to convert the image to grayscale
@@ -63,6 +67,15 @@ APIs and Properties used to change the colourspace:
 
 - [`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale){:target="_blank" rel="noreferrer noopener"}
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
+
+
+### Test out the colour conversion
+
+The HelloWorld guide is using `PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,` as a scan setting, which means the scan will be acquired as grayscale. We will change this to `PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,` to ensure you get a colour image so we can see the colour conversion function in action.
+
+![HelloWorldEditGrayscale1]({{site.assets}}imgs/HelloWorldEditGrayscale1.png)
+
+![HelloWorldEditGrayscale2]({{site.assets}}imgs/HelloWorldEditGrayscale2.png)
 
 << Insert screenshots >>
 

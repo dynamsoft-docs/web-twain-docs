@@ -19,7 +19,8 @@ If you would like to follow a video guide of HelloWorld, you can check out the v
 ## Create a web application
 <!-- Updated helloworld.html to HelloWorld.html to match the screenshot -->
 
-Create a `HelloWorld.html` anywhere and copy the `Resources` folder to the same location. You can typically find this folder in `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`.
+Create a `HelloWorld.html` anywhere and copy the `Resources` folder to the same location. You can typically find the `Resources` folder in `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`.
+
 * Resources
 
   ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)  <!-- TODO: Update screenshot for v18 SDK -->
@@ -175,6 +176,7 @@ At this point, our HelloWorld code should look like this:
 
 ## Further readings
 
+<< Insert links to further readings >>
 
 ## Next step
 
