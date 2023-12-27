@@ -1,5 +1,5 @@
 tree_list:
-  - name: Introduction
+  - name: Introduction to Dynamic Web TWAIN
     path: /about/
     childList:
       - name: System Requirements
@@ -8,44 +8,53 @@ tree_list:
         path: /getstarted/hardware.html
       - name: File Types
         path: /getstarted/filetype.html
-  - name: DEVELOPMENT
-    isCategory: true      
-  - name: Developer's Guide
-    path: /getstarted/
-    childList:
-      - name: HelloWorld 
-        path: /getstarted/helloworld.html
       - name: License
         path: /about/license.html
       - name: Set up Dynamsoft Service 
         path: /indepth/deployment/service.html
-      - name: Deploy to Server
+  # - name: DEVELOPMENT
+  #   isCategory: true      
+  - name: User Guide
+    path: /getstarted/
+    childList:
+      - name: HelloWorld 
+        path: /getstarted/helloworld.html
+      - name: Uploading Images to the Server
+        path: /getstarted/uploading.html
+      - name: Setting Scan Parameters
+        path: /getstarted/scansettings.html
+        # path: /indepth/features/input.html
+      - name: Editing Images
+        path: /getstarted/editing.html
+      # - name: Uploading and Saving Images
+      #   path: /indepth/features/output.html
+      - name: Deploying the Application
         path: /indepth/deployment/server.html
-      - name: Explore Features
-        path: /indepth/features/
+      - name: Additional Features
         childList:
-          - name: DWT Initialization 
-            path: /indepth/features/initialize.html
-          - name: Input Options
-            path: /indepth/features/input.html
-          - name: Viewer Setting
-            path: /indepth/features/viewer.html
-          - name: Image Editing
-            path: /indepth/features/edit.html
-          - name: UI Customization
-            path: /indepth/features/ui.html
-          - name: Output Options
-            path: /indepth/features/output.html
-          - name: Image Buffer Management
-            path: /indepth/features/buffer.html
-          - name: Barcode Recognition
-            path: /indepth/features/barcode.html
-          - name: PDF Handling
-            path: /indepth/features/pdf.html 
-          - name: Remote Scan
-            path: https://www.dynamsoft.com/remote-scan/docs/introduction/
-          - name: PDF Compressor (Beta) 
-            path: /indepth/features/pdfc.html 
+        - name: Barcode Recognition
+          path: /indepth/features/barcode.html
+        - name: PDF Handling
+          path: /indepth/features/pdf.html 
+        - name: Image Buffer Management
+          path: /indepth/features/buffer.html
+      - name: Advanced Usage
+        childList:
+        - name: Using Web TWAIN without a Viewer
+          path: /indepth/features/viewer.html
+        - name: Customizing the Interface
+          path: /indepth/features/ui.html
+      # - name: old menu option storage
+      # - name: Explore Features
+      #   path: /indepth/features/
+      #   childList:
+      #     - name: DWT Initialization 
+      #       path: /indepth/features/initialize.html
+      #     
+          # - name: Remote Scan
+          #   path: https://www.dynamsoft.com/remote-scan/docs/introduction/
+          # - name: PDF Compressor (Beta) 
+          #   path: /indepth/features/pdfc.html 
   - name: Samples and Demos
     childList:
       - name: Use Web TWAIN in Angular
@@ -60,6 +69,10 @@ tree_list:
       #   path: /indepth/development/restful.html
       - name: Code Gallery
         path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
+    name: QuickSheets
+    childList:
+      - name: Image Editing
+      - path: /indepth/features/edit.html
   - name: API Reference
     path: /info/api/
     childList:
@@ -104,11 +117,11 @@ tree_list:
   - name: Release Notes
     path: /info/schedule/
     childList:
-      - name: Stable
+      - name: Stable Releases
         path: /info/schedule/stable.html
-      - name: Addon
+      - name: Addons
         path: /info/schedule/Addon.html
-      - name: Deprecated
+      - name: Deprecations List
         path: /info/schedule/deprecated.html
   - name: Upgrade Instructions
     path: /indepth/development/upgrade.html
