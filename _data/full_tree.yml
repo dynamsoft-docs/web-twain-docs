@@ -71,8 +71,12 @@ tree_list:
         path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
     name: QuickSheets
     childList:
+      - name: Input
+      - path: /indepth/features/input.html
       - name: Image Editing
       - path: /indepth/features/edit.html
+      - name: Image Output
+      - path: /indepth/features/output.html
   - name: API Reference
     path: /info/api/
     childList:
