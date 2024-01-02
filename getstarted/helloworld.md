@@ -174,7 +174,7 @@ At this point, our HelloWorld code should look like this:
 
   ![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
 
-## Further readings
+## Further information
 
 << Insert links to further readings >>
 

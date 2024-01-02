@@ -189,16 +189,11 @@ Now you can use the page to scan a document and then upload the images as a PDF 
 
 ![HelloWorldUpload]({{site.assets}}imgs/HelloWorldUpload.png)
 
-<!-- ## Get document scan & upload sample
+# Additional information
 
-These samples are not the Hello World with upload
+**Samples Applications**
 - [Try scan & upload online demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html)
-- [Get scan & upload sample source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4) -->
-
-
-## Further readings
-
-<< Insert links to further readings >>
+- [Get scan & upload sample source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4)
 
 # Next step
 
