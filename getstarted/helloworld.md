@@ -172,11 +172,11 @@ At this point, our HelloWorld code should look like this:
 
   ![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
 
-**Further information**
+# Further information
 
 <!-- TODO -->
 << Insert links to further readings >>
 
-## Next article
+# Next article
 
 The next article in this guide will explain [uploading images to the server]({{site.getstarted}}uploading.html).

@@ -154,7 +154,6 @@ After adding all the functions, the complete HelloWorld application should look 
 
             var url = location.protocol + "//" + location.host + location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1) + "saveUploadedPDF.aspx";
 
-
             var indices = [];
             if (DWObject) {
                 if (DWObject.HowManyImagesInBuffer === 0) {
@@ -195,9 +194,9 @@ Now you can use the page to scan a document and then upload the images as a PDF 
 - [Try scan & upload online demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html)
 - [Get scan & upload sample source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4)
 
-# Next step
+# Next article
 
-Now that you have completed your HelloWorld and uploaded your first file, it is now time to learn how to [customising your scan settings]({{site.getstarted}}scansettings.html).
+Now that you have completed your HelloWorld application and uploaded your first file, it is now time to learn how explore [customising your scan settings]({{site.getstarted}}scansettings.html).
 
 <!-- - [Review HelloWorld]({{site.getstarted}}helloworld.html) -->
 <!-- - [Customising your scan settings]({{site.getstarted}}scansettings.html) -->

@@ -90,7 +90,7 @@ Newly introduced APIs and Properties:
 
 << Insert Screenshots >>
 
-# Next step
+# Next article
 
 The next thing to learn is how to [edit your images]({{site.getstarted}}editing.html).
 
