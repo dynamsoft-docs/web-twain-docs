@@ -14,7 +14,7 @@ permalink: /getstarted/editing.html
 <div class='blockquote-note'></div>
 > This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
 
-Dynamic Web TWAIN offers a number of ways to manipulation of images before saving the images. These include but are not limited to rotation, cutting, and resizing. For this example, we will be rotating an image and converting it to grayscale.
+DWT offers a number of ways to manipulation of images before saving the images. These include but are not limited to rotation, cutting, and resizing. For this example, we will be rotating an image and converting it to grayscale.
 
 <!-- For the quick guide on available APIs, please see [ImageEditing]({{site.indepth}}features/edit.html){:target="_blank" rel="noreferrer noopener"} -->
 
@@ -82,7 +82,7 @@ The HelloWorld guide is using `PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_G
 
 # Next steps
 
-Congratulations, you have completed the HelloWorld tutorial for Dynamic Web TWAIN. << Insert what goes next >>
+Congratulations, you have completed the HelloWorld tutorial for DWT. << Insert what goes next >>
 
 <!-- 
 - [Customising your scan settings]({{site.getstarted}}scansettings.html)

@@ -104,7 +104,7 @@ Embed the script of the library and add a `div` element for the library on the p
 
 ### Initialize the DWT environment
 
-Now that we have our scripts included in the application, we will have to write the code to use the DWT library.
+Now that the scripts have been included in the application, it is time to write the code to use the DWT library.
 
 DWT has a built in event that fires when the DWT Resources are loaded into browser memory. You can use this event to initialize the DWT object.
 
@@ -113,6 +113,10 @@ function Dynamsoft_OnReady() {
     DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }
 ```
+
+Links to API reference:
+
+- [`Dynamsoft.DWT.GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain){:target="_blank" rel="noreferrer noopener"}
 
 ## Add simple scanning functionality
 
@@ -149,9 +153,8 @@ function AcquireImage() {
 }
 ```
     
-Newly introduced APIs and Properties:
+Links to API Reference:
 
-- [`Dynamsoft.DWT.GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain){:target="_blank" rel="noreferrer noopener"}
 - [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync){:target="_blank" rel="noreferrer noopener"}
 - [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
 - [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync){:target="_blank" rel="noreferrer noopener"}

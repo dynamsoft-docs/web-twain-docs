@@ -86,7 +86,7 @@ function UploadAsPDF() {
 ```
 
 <!-- To perform the upload, you will use the following APIs and Properties: -->
-Newly introduced APIs and Properties:
+Links to API Reference:
 <!-- - [`Dynamsoft.Lib.detect.ssl`]() -->
 
 - [`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)

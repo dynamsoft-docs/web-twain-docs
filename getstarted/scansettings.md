@@ -44,7 +44,7 @@ function AcquireImage() {
     }
 ```
 
-Newly introduced APIs and Properties:
+Links to API Reference:
 
 - [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui){:target="_blank" rel="noreferrer noopener"}
 
@@ -83,7 +83,7 @@ function AcquireImage() {
     }
 ```
 
-Newly introduced APIs and Properties:
+Links to API Reference:
 
 - [`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype){:target="_blank" rel="noreferrer noopener"}
 - [`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution){:target="_blank" rel="noreferrer noopener"}
