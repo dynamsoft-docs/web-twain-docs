@@ -10,9 +10,9 @@ permalink: /getstarted/helloworld.html
 
 # HelloWorld
 
-> Before you start, please make sure you have downloaded and installed the latest version of `Dynamic Web TWAIN SDK`. If you have not yet done so, you can download the SDK with a 30-day free trial from [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
+> Before you start, please make sure you have downloaded and installed the latest version of Dynamic Web TWAIN SDK. If you have not yet done so, you can download the SDK with a 30-day free trial from [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
 
-This guide will help you create your first browser-based scanning application using Dynamic Web TWAIN in just a few minutes! 
+This guide will help you create your first browser-based scanning application using DWT in just a few minutes! 
 
 If you would like to follow a video guide of HelloWorld, you can check out the video on [YouTube](https://www.youtube.com/watch?v=qShti9aVfLU){:target="_blank"}
 
@@ -48,7 +48,7 @@ Embed the script of the library and add a `div` element for the library on the p
 
 ## Add simple scanning functionality
 
-Now that we have our scripts included in the application, we will have to write the code to use the Web TWAIN library.
+Now that we have our scripts included in the application, we will have to write the code to use the DWT library.
 
 ### Add a Scan button in HTML
 
@@ -160,7 +160,7 @@ At this point, our HelloWorld code should look like this:
 
 * Press the Scan button
 
-  After pressing the scan button, you will be presented with the Select Source dialog. Select your scanner and press the select button.
+  After pressing the Scan button, you will be presented with the Select Source dialog. Select your scanner and press the Select button.
 
   ![Build-the-Hello-World-Scan-Page-4]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-4.png)
 
@@ -168,17 +168,15 @@ At this point, our HelloWorld code should look like this:
 
 <!-- * Scanner UI -->
 
-* After scanning
-
-    The scanned documents will show up in the viewer.
+* After the scanner finishes scanning, the scanned documents will show up in the viewer.
 
   ![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
 
-## Further information
+**Further information**
 
 <!-- TODO -->
 << Insert links to further readings >>
 
-## Next step
+## Next article
 
-The next step will be to [upload the scanned image to a server]({{site.getstarted}}uploading.html).
+The next article in this guide will explain [uploading images to the server]({{site.getstarted}}uploading.html).
