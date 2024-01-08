@@ -26,5 +26,5 @@ You may encounter the error "user cancelled the operation" after successfully sc
 ### Resolution
 
 (For versions prior to v18.2) To prevent any issues related to the WIA driver, we recommend using the TWAIN driver provided by the manufacturer.
-</br>
+<br>
 (For v18.2 and above) To mitigate potential problems with the WIATWAIN driver, we suggest using either the TWAIN driver from the manufacturer or the WIA driver, which is officially supported starting from version v18.2.
