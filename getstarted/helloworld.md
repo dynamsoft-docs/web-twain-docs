@@ -10,64 +10,11 @@ permalink: /getstarted/helloworld.html
 
 # HelloWorld
 
-> Before you start, please make sure you have downloaded and installed the latest version of Dynamic Web TWAIN SDK. If you have not yet done so, you can download the SDK with a 30-day free trial from [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx).
-
-This guide will help you create your first browser-based scanning application using DWT in just a few minutes! 
+> Before you start, please make sure you have downloaded and installed the latest version of Dynamic Web TWAIN SDK. If you have not yet done so, you can download the SDK with a 30-day free trial from [here](https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx){:target="_blank"}.
 
 If you would like to follow a video guide of HelloWorld, you can check out the video on [YouTube](https://www.youtube.com/watch?v=qShti9aVfLU){:target="_blank"}
 
-# The code
-
-<!-- ## Review the code
-
-At this point, our HelloWorld code should look like this: -->
-
-```html
-<html>
-
-<head>
-    <title>Hello World</title>
-    <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
-    <script src="Resources/dynamsoft.webtwain.config.js"></script>
-</head>
-
-<body>
-    <input type="button" value="Scan" onclick="AcquireImage();" />
-    <div id="dwtcontrolContainer"></div>
-
-    <script type="text/javascript">
-        var DWObject;
-
-        function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-        }
-
-        function AcquireImage() {
-            if (DWObject) {
-                DWObject.SelectSourceAsync()
-                .then(function () {
-                    return DWObject.AcquireImageAsync({
-                        IfDisableSourceAfterAcquire: true,
-                    });
-                })
-                .then(function (result) {
-                    console.log(result);
-                })
-                .catch(function (exp) {
-                    console.error(exp.message);
-                })
-                .finally(function () {
-                    DWObject.CloseSourceAsync().catch(function (e) {
-                        console.error(e);
-                    });
-                });
-            }
-        }
-    </script>
-</body>
-
-</html>
-```
+This guide will help you create your first browser-based scanning application using DWT in just a few minutes! 
 
 # Building HelloWorld
 
@@ -118,6 +65,10 @@ Links to API reference:
 
 - [`Dynamsoft.DWT.GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain){:target="_blank" rel="noreferrer noopener"}
 
+**What is Dynamsoft_OnReady?**
+
+DWT's default behaviour is to initalizae the DWT environment as soon as the application has loaded the DWT scripts. Once the scripts have been completely loaded, `OnWebTwainReady` is automatically fired and will look for `Dynamsoft_OnReady()`. For more information please see the API description for the [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready){:target="_blank" rel="noreferrer noopener"}
+
 ## Add simple scanning functionality
 
 ### Add a Scan button in HTML
@@ -159,6 +110,57 @@ Links to API Reference:
 - [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
 - [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync){:target="_blank" rel="noreferrer noopener"}
 - [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
+
+## Review the code
+
+At this point, our HelloWorld code should look like this:
+
+```html
+<html>
+
+<head>
+    <title>Hello World</title>
+    <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+    <script src="Resources/dynamsoft.webtwain.config.js"></script>
+</head>
+
+<body>
+    <input type="button" value="Scan" onclick="AcquireImage();" />
+    <div id="dwtcontrolContainer"></div>
+
+    <script type="text/javascript">
+        var DWObject;
+
+        function Dynamsoft_OnReady() {
+            DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+        }
+
+        function AcquireImage() {
+            if (DWObject) {
+                DWObject.SelectSourceAsync()
+                .then(function () {
+                    return DWObject.AcquireImageAsync({
+                        IfDisableSourceAfterAcquire: true,
+                    });
+                })
+                .then(function (result) {
+                    console.log(result);
+                })
+                .catch(function (exp) {
+                    console.error(exp.message);
+                })
+                .finally(function () {
+                    DWObject.CloseSourceAsync().catch(function (e) {
+                        console.error(e);
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
+```
 
 ## Run the HelloWorld application
 
