@@ -18,10 +18,18 @@ After scanning your document, you may want to upload the scanned documents to a 
 ## Write the server script to receive and save the uploaded file
 
 <!-- TODO: Greatly Improve descriptors here -->
+On the server side, any script language can be used (ASP.NET, JSP, PHP, etc.). 
 
-On the server side, any script language can be used (ASP. NET, JSP, PHP, etc.). Here you will be using ASP.NET (C#) as an example. You can see some additional sample scripts in other languages [here]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
+<!-- Here you will be using ASP.NET (C#) as an example. You can see some additional sample scripts in other languages [here]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files). -->
 
+<div class="multi-panel-switching-prefix"></div>
+- [ASP.NET(C#)](#csharp)
+- [JSP](#jsp)
+- [PHP](#php)
+<!-- - [Node.JS](#nodejs) -->
 
+<div class="multi-panel-start" id="csharp"></div>
+<!-- C# -->
 Create a `saveUploadedPDF.aspx` file in the same location as your `HelloWorld.html` with the following contents:
 
 ``` csharp
@@ -40,6 +48,143 @@ Create a `saveUploadedPDF.aspx` file in the same location as your `HelloWorld.ht
     }
 %>
 ```
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start" id="jsp"></div>
+<!-- JSP -->
+
+To upload via JSP, you will need to utilize the following packages:
+
+```jsp
+<%@  page language="java" import="java.io.*,java.util.*,org.apache.commons.fileupload.*,org.apache.commons.fileupload.disk.*,org.apache.commons.fileupload.servlet.*"%>
+```
+
+To save the file to disk, you will need to add this to your script:
+
+```java
+// Create a factory for disk-based file items
+DiskFileItemFactory factory = new DiskFileItemFactory();
+// Configure a repository (to ensure a secure temp location is used)
+ServletContext servletContext = this.getServletConfig().getServletContext();
+File repository = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
+// Set factory constraints
+factory.setRepository(repository);
+// Sets the threshold beyond which files are written to disk
+factory.setSizeThreshold(1000000000);
+// Create a new file upload handler
+ServletFileUpload upload = new ServletFileUpload(factory);
+// Set overall request size constraint
+upload.setSizeMax(-1);
+// Parse the request
+List<FileItem> items = upload.parseRequest(request);
+// Process the uploaded items
+Iterator<FileItem> iter = items.iterator();
+String _fields = "";
+String fileName = "";
+long sizeInBytes = 0;
+String _temp_Name = application.getRealPath("/Dynamsoft_Upload");
+File _fieldsTXT = new File(_temp_Name);
+if(!_fieldsTXT.exists())
+{
+    boolean result = _fieldsTXT.createNewFile();
+    System.out.println("File create result:"+result);
+}
+Writer objWriter = new BufferedWriter(new FileWriter(_fieldsTXT));
+while (iter.hasNext()) {
+    FileItem item = iter.next();
+    // Process a regular form field
+    if (item.isFormField()) {
+        _fields = "FieldsTrue:";			
+        String fieldName = item.getFieldName();
+        String value = item.getString();			
+        try {
+            //File appending
+            objWriter.write(fieldName + " :  " + value);
+            objWriter.write(System.getProperty( "line.separator" ));
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+        }			
+    } 
+    // Process a file upload
+    else {
+        if(_fields.equals("FieldsTrue:")){
+            objWriter.flush();
+            objWriter.close();	
+        }
+        else{
+            objWriter.flush();
+            objWriter.close();
+            _fieldsTXT.delete();
+        }
+        String fieldName = item.getFieldName();
+        fileName = item.getName();
+        String contentType = item.getContentType();
+        boolean isInMemory = item.isInMemory();
+        sizeInBytes = item.getSize();
+        if(fileName!=null && sizeInBytes!=0){
+            String _temp_Name2 = application.getRealPath("/Dynamsoft_Upload/" + fileName);
+            File uploadedFile = new File(_temp_Name2);
+            if(!uploadedFile.exists())
+            {
+                boolean result = uploadedFile.createNewFile();
+                System.out.println("File create result:"+result);
+            }			
+            try {
+                item.write(uploadedFile);
+            } 
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+            if(_fieldsTXT.exists())
+            {
+                String _temp_Name3 = application.getRealPath("/action/Dynamsoft_Upload/" + fileName.substring(0,fileName.length()-4) + "_1.txt");
+                _fieldsTXT.renameTo(new File(_temp_Name3));
+            }
+        }
+    }
+}
+```
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start" id="php"></div>
+<!-- PHP -->
+
+```php
+$fileTempName = $_FILES['RemoteFile']['tmp_name'];
+$fileSize = $_FILES['RemoteFile']['size'];
+$fileName = "Dynamsoft_Upload\\" . $_FILES['RemoteFile']['name'];
+$fileName = iconv("UTF-8", "gb2312", $fileName);
+$count = count($_POST);
+if ($count > 0) {
+    $_fieldsTXT = fopen(substr($fileName, 0, strlen($fileName) - 4) . "_1.txt", "w");
+    $_fields = "";
+    foreach ($_POST as $key => $value) {
+        $_fields = "FieldsTrue:";
+        fwrite($_fieldsTXT, $key . " :  " . $value . PHP_EOL);
+    }
+}
+
+if (file_exists($fileName)) {
+    $fWriteHandle = fopen($fileName, 'w');
+} else {
+    $fWriteHandle = fopen($fileName, 'w');
+}
+
+$fReadHandle = fopen($fileTempName, 'rb');
+$fileContent = fread($fReadHandle, $fileSize);
+fwrite($fWriteHandle, $fileContent);
+fclose($fWriteHandle);
+```
+
+<div class="multi-panel-end"></div>
+
+<!-- <div class="multi-panel-start"></div>
+Node.JS
+<div class="multi-panel-end"></div> -->
+
+<div class="multi-panel-switching-end"></div>
 
 > `RemoteFile` is the default field name for the uploaded file. So you use it to extract the file from the POST Request. This field name can be changed with the API [`HttpFieldNameOfUploadedImage`]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage).
 
@@ -53,12 +198,9 @@ Create a `saveUploadedPDF.aspx` file in the same location as your `HelloWorld.ht
 
 ``` javascript
 function UploadAsPDF() {
-    // var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
-    var url = location.protocol=='https:' ? "https://" : "http://";
-    url += location.hostname;
-    var path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
-    url += location.port === "" ? path : ":" + location.port + path;
-    url += "saveUploadedPDF.aspx";
+
+    var url = `${location.protocol}//${location.host}${location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)}saveUploadedPDF.aspx`;
+
     var indices = [];
     if (DWObject) {
         if (DWObject.HowManyImagesInBuffer === 0) {
@@ -142,15 +284,6 @@ After adding all the functions, the complete HelloWorld application should look 
         }
 
         function UploadAsPDF() {
-            // var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
-            // url += location.hostname;
-            // var path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
-            // url += location.port === "" ? path : ":" + location.port + path;
-            // url += "saveUploadedPDF.aspx";
-
-            // var url = (Dynamsoft.Lib.detect.ssl ? "https://" : "http://") + location.hostname + (location.port === "" ? location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1) : ":" + location.port + location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)) + "saveUploadedPDF.aspx";
-
-            // var url = `${location.protocol}//${location.host}${location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)}saveUploadedPDF.aspx`;
 
             var url = location.protocol + "//" + location.host + location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1) + "saveUploadedPDF.aspx";
 
@@ -201,3 +334,16 @@ Now that you have completed your HelloWorld application and uploaded your first 
 <!-- - [Review HelloWorld]({{site.getstarted}}helloworld.html) -->
 <!-- - [Customising your scan settings]({{site.getstarted}}scansettings.html) -->
 <!-- - [Editing your images]({{site.getstarted}}editing.html) -->
+
+
+
+<!--             // var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
+            // url += location.hostname;
+            // var path = location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1);
+            // url += location.port === "" ? path : ":" + location.port + path;
+            // url += "saveUploadedPDF.aspx";
+
+            // var url = (Dynamsoft.Lib.detect.ssl ? "https://" : "http://") + location.hostname + (location.port === "" ? location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1) : ":" + location.port + location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)) + "saveUploadedPDF.aspx";
+
+            // var url = `${location.protocol}//${location.host}${location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)}saveUploadedPDF.aspx`;
+ -->
