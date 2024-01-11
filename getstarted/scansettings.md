@@ -13,9 +13,13 @@ permalink: /getstarted/scansettings.html
 <div class='blockquote-note'></div>
 > This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
 
-There are various settings you can specify to control your scan parameters to ensure that your incoming images are all uniform. For this example, we will explore setting  the scan PixelType (also known as colourspace) to greyscale, and setting the scan resolution to 150DPI by adding scan parameters to `AcquireImage()` in the HelloWorld application.
+There are various settings you can specify to control your scan parameters to ensure that your incoming images are all uniform. To achieve this, you will need to modify the parameters of `AcquireImage()` in the HelloWorld application.
 
 ## Disabling the Scanner's built in UI
+
+Showing the scanner interface will cause the the scanner driver to override any scan settings you designate via JSON by the settings that are defined in the scanner UI. To ensure the settings take effect, you will need to disable the scanner interface during the scan process.
+
+### Disable the Scanner's UI via JSON
 
 Add `IfShowUI: false` to the JSON in `AcquireImageAsync()` in `AcquireImage()`.
 
@@ -46,13 +50,18 @@ function AcquireImage() {
 
 Links to API Reference:
 
+- [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync){:target="_blank" rel="noreferrer noopener"}
+- [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
+- [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync){:target="_blank" rel="noreferrer noopener"}
 - [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui){:target="_blank" rel="noreferrer noopener"}
-
-**Why does the scanner UI have to be hidden?** 
-
-Showing the scanner interface will cause the the scanner driver to override any scan settings you designate via JSON by the settings that are defined in the scanner UI. Hiding the UI also prevents users from overriding the desired scan settings.
+- [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
+- [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
 ## Add the scan parameters to the JSON
+
+For this example, you will be setting the scan `PixelType` (also known as colourspace) to grayscale, and setting the scan `Resolution` to 150DPI.
+
+### Modify the `AcquireImage()` parameters
 
 Add `PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY` and `Resolution:150` to your JSON.
 
@@ -85,14 +94,78 @@ function AcquireImage() {
 
 Links to API Reference:
 
+- [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync){:target="_blank" rel="noreferrer noopener"}
+- [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync){:target="_blank" rel="noreferrer noopener"}
+- [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui){:target="_blank" rel="noreferrer noopener"}
+- [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
 - [`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype){:target="_blank" rel="noreferrer noopener"}
 - [`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution){:target="_blank" rel="noreferrer noopener"}
+- [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
 << Insert Screenshots >>
 
+## Review the completed code
+
+```html
+<html>
+
+<head>
+    <title>Hello World</title>
+    <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+    <script src="Resources/dynamsoft.webtwain.config.js"></script>
+</head>
+
+<body>
+    <input type="button" value="Scan" onclick="AcquireImage();" />
+    <div id="dwtcontrolContainer"></div>
+
+    <script type="text/javascript">
+        var DWObject;
+
+        function Dynamsoft_OnReady() {
+            DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+        }
+
+        function AcquireImage() {
+            if (DWObject) {
+                DWObject.SelectSourceAsync()
+                .then(function () {
+                    return DWObject.AcquireImageAsync({
+                        IfShowUI: false,
+                        IfDisableSourceAfterAcquire: true,
+                        PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
+                        Resolution: 150,
+                    });
+                })
+                .then(function (result) {
+                    console.log(result);
+                })
+                .catch(function (exp) {
+                    console.error(exp.message);
+                })
+                .finally(function () {
+                    DWObject.CloseSourceAsync().catch(function (e) {
+                        console.error(e);
+                    });
+                });
+            }
+    }
+    </script>
+</body>
+
+</html>
+
+```
+
+## Run the application
+
+# Previous Article
+
+
+
 # Next article
 
-The next thing to learn is how to [edit your images]({{site.getstarted}}editing.html).
+The next thing to learn is how explore [editing images]({{site.getstarted}}editing.html).
 
 <!-- - [Editing your images]({{site.getstarted}}editing.html)
 - [Review HelloWorld]({{site.getstarted}}helloworld.html)

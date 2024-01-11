@@ -24,7 +24,7 @@ Create a `HelloWorld.html` anywhere and copy the `Resources` folder to the same 
 
 * Resources
 
-  ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)  <!-- TODO: Update screenshot for v18 SDK -->
+  ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)  <!-- TODO: Update screenshot to remove Explorer path -->
 
 
 * The project
@@ -53,7 +53,9 @@ Embed the script of the library and add a `div` element for the library on the p
 
 Now that the scripts have been included in the application, it is time to write the code to use the DWT library.
 
-DWT has a built in event that fires when the DWT Resources are loaded into browser memory. You can use this event to initialize the DWT object.
+DWT has a built in event that fires, by default, `Dynamsoft_OnReady()` when the DWT Resources are loaded into browser memory. You can use this event to initialize the DWT object.
+
+<!-- DWT has a built in event `OnWebTwainReady` that fires and, by default, triggers `Dynamsoft_OnReady()` when the DWT Resources are loaded into browser memory. You can use this event to initialize the DWT object. -->
 
 ```js
 function Dynamsoft_OnReady() {
@@ -64,10 +66,11 @@ function Dynamsoft_OnReady() {
 Links to API reference:
 
 - [`Dynamsoft.DWT.GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain){:target="_blank" rel="noreferrer noopener"}
+<!-- - [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready){:target="_blank" rel="noreferrer noopener"} -->
 
-**What is Dynamsoft_OnReady?**
+<!-- **What is Dynamsoft_OnReady?**
 
-DWT's default behaviour is to initalizae the DWT environment as soon as the application has loaded the DWT scripts. Once the scripts have been completely loaded, `OnWebTwainReady` is automatically fired and will look for `Dynamsoft_OnReady()`. For more information please see the API description for the [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready){:target="_blank" rel="noreferrer noopener"}.
+DWT's default behaviour is to initalizae the DWT environment as soon as the application has loaded the DWT scripts. Once the scripts have been completely loaded, `OnWebTwainReady` is automatically fired and will look for `Dynamsoft_OnReady()`. For more information please see the API description for the [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready){:target="_blank" rel="noreferrer noopener"}. -->
 
 ## Add simple scanning functionality
 
@@ -184,10 +187,10 @@ At this point, our HelloWorld code should look like this:
 
   ![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
 
-# Further information
+<!-- # Further information
 
-<!-- TODO -->
-<< Insert links to further readings >>
+<!-- TODO
+<< Insert links to further readings >> -->
 
 # Next article
 
