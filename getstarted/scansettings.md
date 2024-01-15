@@ -102,7 +102,6 @@ Links to API Reference:
 - [`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution){:target="_blank" rel="noreferrer noopener"}
 - [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
-<< Insert Screenshots >>
 
 ## Review the completed code
 
@@ -158,10 +157,21 @@ Links to API Reference:
 ```
 
 ## Run the application
+<!-- 
+The Scan result without adding the parameters:
+
+![HelloWorld-Scan-NoSettings]({{site.assets}}imgs\HelloWorldScanSetting1.png) -->
+
+The Scan result with the added parameters:
+
+![HelloWorld-Scan-NoSettings]({{site.assets}}imgs\HelloWorldScanSetting2.png)
+
 
 # Previous Article
 
+If you need a refresher on setting up the base project, please review [HelloWorld]({{site.getstarted}}hellowworld.html)
 
+The previous article of [uploading images to the server]({{site.getstarted}}uploading.html) still applies, and you can apply the same concepts to the new upload process.
 
 # Next article
 

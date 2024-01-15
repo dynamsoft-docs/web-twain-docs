@@ -48,6 +48,19 @@ Links to API Reference:
 
 Using your new buttons, scan an image and use your new buttons to rotate the image.
 
+The scan:
+
+![HelloWorldEditRotate1]({{site.assets}}imgs/HelloWorldEditRotate1.png)
+
+Rotating the original scan once using the RotateCW button:
+
+![HelloWorldEditRotate2]({{site.assets}}imgs/HelloWorldEditRotate2.png)
+
+Rotating the original scan once using the RotateCCW button:
+
+![HelloWorldEditRotate3]({{site.assets}}imgs/HelloWorldEditRotate3.png)
+
+
 ## Converting image to grayscale
 
 ### Create a new button to convert the image to grayscale
@@ -101,13 +114,25 @@ function AcquireImage() {
 }
 ```
 
+Links to API Reference:
+
+- [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync){:target="_blank" rel="noreferrer noopener"}
+- [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync){:target="_blank" rel="noreferrer noopener"}
+- [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui){:target="_blank" rel="noreferrer noopener"}
+- [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
+- [`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype){:target="_blank" rel="noreferrer noopener"}
+- [`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution){:target="_blank" rel="noreferrer noopener"}
+- [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
+
 ### Test out the colour conversion
+
+This is the scan after changing the `PixelType` to `TWPT_RGB`:
 
 ![HelloWorldEditGrayscale1]({{site.assets}}imgs/HelloWorldEditGrayscale1.png)
 
-![HelloWorldEditGrayscale2]({{site.assets}}imgs/HelloWorldEditGrayscale2.png)
+Click the ConvertToGray button and the image will change to grayscale:
 
-<< Insert screenshots >>
+![HelloWorldEditGrayscale2]({{site.assets}}imgs/HelloWorldEditGrayscale2.png)
 
 ## Review the completed code
 
@@ -193,6 +218,11 @@ Links to API Reference:
 ## Run the application
 
 # Previous Article
+
+If you would like to review any of the previous steps, you can review:
+- Creating [HelloWorld]({{site.getstarted}}hellowworld.html)
+- [Uploading images to the server]({{site.getstarted}}uploading.html)
+- [Setting scan parameters]({{site.getstarted}}scansettings.html).
 
 # Next steps
 

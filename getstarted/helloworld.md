@@ -24,7 +24,7 @@ Create a `HelloWorld.html` anywhere and copy the `Resources` folder to the same 
 
 * Resources
 
-  ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)  <!-- TODO: Update screenshot to remove Explorer path -->
+  ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)
 
 
 * The project
