@@ -169,7 +169,7 @@ The Scan result with the added parameters:
 
 # Previous Article
 
-If you need a refresher on setting up the base project, please review [HelloWorld]({{site.getstarted}}hellowworld.html)
+If you need a refresher on setting up the base project, please review [HelloWorld]({{site.getstarted}}hellowworld.html).
 
 The previous article of [uploading images to the server]({{site.getstarted}}uploading.html) still applies, and you can apply the same concepts to the new upload process.
 

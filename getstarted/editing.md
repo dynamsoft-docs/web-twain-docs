@@ -20,7 +20,7 @@ DWT offers a number of ways to manipulate images before exporting the images to 
 
 ## Rotating images
 
-### Create new buttons to rotate the image
+### Add Rotate buttons in HTML
 
 ```html
 <input type="button" value="Rotate CW" onclick="RotateCW();" />
@@ -63,8 +63,7 @@ Rotating the original scan once using the RotateCCW button:
 
 ## Converting image to grayscale
 
-### Create a new button to convert the image to grayscale
-
+### Add a ConvertToGray button in HTML
 ```html
 <input type="button" value="ConvertToGray" onclick="ConvertToGray();" />
 ```
@@ -226,7 +225,9 @@ If you would like to review any of the previous steps, you can review:
 
 # Next steps
 
-Congratulations, you have completed the HelloWorld tutorial for DWT. << Insert what goes next >>
+Congratulations, you have completed the HelloWorld tutorial for DWT.
+
+<< Insert what goes next >>
 
 <!-- 
 - [Customising your scan settings]({{site.getstarted}}scansettings.html)

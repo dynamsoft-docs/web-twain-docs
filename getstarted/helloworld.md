@@ -183,7 +183,7 @@ At this point, our HelloWorld code should look like this:
 
 <!-- * Scanner UI -->
 
-* After the scanner finishes scanning, the scanned documents will show up in the viewer.
+* After the scanner finishes scanning, the scanned documents will show up in the viewer
 
   ![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
 

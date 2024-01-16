@@ -13,180 +13,7 @@ permalink: /getstarted/uploading.html
 <div class='blockquote-note'></div>
 > This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
 
-After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}helloworld.html), you created the scanning component of your HelloWorld, now you will add the code to perform an upload scanned documents as a PDF file.
-
-## Write the server script to receive and save the uploaded file
-
-<!-- TODO: Greatly Improve descriptors here -->
-On the server side, any script language can be used (ASP.NET, JSP, PHP, etc.). 
-
-<!-- Here you will be using ASP.NET (C#) as an example. You can see some additional sample scripts in other languages [here]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files). -->
-
-<div class="multi-panel-switching-prefix"></div>
-- [ASP.NET(C#)](#csharp)
-- [JSP](#jsp)
-- [PHP](#php)
-<!-- - [Node.JS](#nodejs) -->
-
-<div class="multi-panel-start" id="csharp"></div>
-<!-- C# -->
-Create a `saveUploadedPDF.aspx` file in the same location as your `HelloWorld.html` with the following contents:
-
-``` csharp
-<%@ Page Language="C#" %>
-<%
-    try
-    {
-        String strImageName;
-        HttpFileCollection files = HttpContext.Current.Request.Files;
-        HttpPostedFile uploadfile = files["RemoteFile"];
-        strImageName = uploadfile.FileName;
-        uploadfile.SaveAs(Server.MapPath(".") + "\\" + strImageName);
-    }
-    catch
-    {
-    }
-%>
-```
-<div class="multi-panel-end"></div>
-
-<div class="multi-panel-start" id="jsp"></div>
-<!-- JSP -->
-
-To upload via JSP, you will need to utilize the following packages:
-
-```jsp
-<%@  page language="java" import="java.io.*,java.util.*,org.apache.commons.fileupload.*,org.apache.commons.fileupload.disk.*,org.apache.commons.fileupload.servlet.*"%>
-```
-
-To save the file to disk, you will need to add this to your script:
-
-```java
-// Create a factory for disk-based file items
-DiskFileItemFactory factory = new DiskFileItemFactory();
-// Configure a repository (to ensure a secure temp location is used)
-ServletContext servletContext = this.getServletConfig().getServletContext();
-File repository = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
-// Set factory constraints
-factory.setRepository(repository);
-// Sets the threshold beyond which files are written to disk
-factory.setSizeThreshold(1000000000);
-// Create a new file upload handler
-ServletFileUpload upload = new ServletFileUpload(factory);
-// Set overall request size constraint
-upload.setSizeMax(-1);
-// Parse the request
-List<FileItem> items = upload.parseRequest(request);
-// Process the uploaded items
-Iterator<FileItem> iter = items.iterator();
-String _fields = "";
-String fileName = "";
-long sizeInBytes = 0;
-String _temp_Name = application.getRealPath("/Dynamsoft_Upload");
-File _fieldsTXT = new File(_temp_Name);
-if(!_fieldsTXT.exists())
-{
-    boolean result = _fieldsTXT.createNewFile();
-    System.out.println("File create result:"+result);
-}
-Writer objWriter = new BufferedWriter(new FileWriter(_fieldsTXT));
-while (iter.hasNext()) {
-    FileItem item = iter.next();
-    // Process a regular form field
-    if (item.isFormField()) {
-        _fields = "FieldsTrue:";			
-        String fieldName = item.getFieldName();
-        String value = item.getString();			
-        try {
-            //File appending
-            objWriter.write(fieldName + " :  " + value);
-            objWriter.write(System.getProperty( "line.separator" ));
-        } 
-        catch (Exception e) {
-            e.printStackTrace();
-        }			
-    } 
-    // Process a file upload
-    else {
-        if(_fields.equals("FieldsTrue:")){
-            objWriter.flush();
-            objWriter.close();	
-        }
-        else{
-            objWriter.flush();
-            objWriter.close();
-            _fieldsTXT.delete();
-        }
-        String fieldName = item.getFieldName();
-        fileName = item.getName();
-        String contentType = item.getContentType();
-        boolean isInMemory = item.isInMemory();
-        sizeInBytes = item.getSize();
-        if(fileName!=null && sizeInBytes!=0){
-            String _temp_Name2 = application.getRealPath("/Dynamsoft_Upload/" + fileName);
-            File uploadedFile = new File(_temp_Name2);
-            if(!uploadedFile.exists())
-            {
-                boolean result = uploadedFile.createNewFile();
-                System.out.println("File create result:"+result);
-            }			
-            try {
-                item.write(uploadedFile);
-            } 
-            catch (Exception e) {
-                e.printStackTrace();
-            }
-            if(_fieldsTXT.exists())
-            {
-                String _temp_Name3 = application.getRealPath("/action/Dynamsoft_Upload/" + fileName.substring(0,fileName.length()-4) + "_1.txt");
-                _fieldsTXT.renameTo(new File(_temp_Name3));
-            }
-        }
-    }
-}
-```
-
-<div class="multi-panel-end"></div>
-
-<div class="multi-panel-start" id="php"></div>
-<!-- PHP -->
-
-```php
-$fileTempName = $_FILES['RemoteFile']['tmp_name'];
-$fileSize = $_FILES['RemoteFile']['size'];
-$fileName = "Dynamsoft_Upload\\" . $_FILES['RemoteFile']['name'];
-$fileName = iconv("UTF-8", "gb2312", $fileName);
-$count = count($_POST);
-if ($count > 0) {
-    $_fieldsTXT = fopen(substr($fileName, 0, strlen($fileName) - 4) . "_1.txt", "w");
-    $_fields = "";
-    foreach ($_POST as $key => $value) {
-        $_fields = "FieldsTrue:";
-        fwrite($_fieldsTXT, $key . " :  " . $value . PHP_EOL);
-    }
-}
-
-if (file_exists($fileName)) {
-    $fWriteHandle = fopen($fileName, 'w');
-} else {
-    $fWriteHandle = fopen($fileName, 'w');
-}
-
-$fReadHandle = fopen($fileTempName, 'rb');
-$fileContent = fread($fReadHandle, $fileSize);
-fwrite($fWriteHandle, $fileContent);
-fclose($fWriteHandle);
-```
-
-<div class="multi-panel-end"></div>
-
-<!-- <div class="multi-panel-start"></div>
-Node.JS
-<div class="multi-panel-end"></div> -->
-
-<div class="multi-panel-switching-end"></div>
-
-> `RemoteFile` is the default field name for the uploaded file. So you use it to extract the file from the POST Request. This field name can be changed with the API [`HttpFieldNameOfUploadedImage`]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage).
+After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}helloworld.html), you created the scanning component of your HelloWorld, now you will add the code to perform an upload scanned documents as a PDF file. 
 
 ## Add an upload button in HTML
 
@@ -198,32 +25,23 @@ Node.JS
 
 ``` javascript
 function UploadAsPDF() {
+    if (!DWObject || DWObject.HowManyImagesInBuffer === 0) {
+        console.log("There is no image to upload!");
+        return;
+    }
 
     var url = `${location.protocol}//${location.host}${location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)}saveUploadedPDF.aspx`;
+    var indices = DWObject.SelectAllImages();
 
-    var indices = [];
-    if (DWObject) {
-        if (DWObject.HowManyImagesInBuffer === 0) {
-            console.log("There is no image to upload!");
-            return;
-        }
-        // DWObject.SelectAllImages();
-        indices = DWObject.SelectedImagesIndices;
-        DWObject.HTTPUpload(
-            url,
-            indices,
-            Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-            Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
-            "HelloWorld.pdf",
-            function() {
-                //The server response is empty!
-                console.log("Successfully uploaded!")
-            },
-            function(errCode, errString, response) {
-                console.log(errString);
-            }
-        );
-    }
+    DWObject.HTTPUpload(
+        url,
+        indices,
+        Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+        Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
+        "HelloWorld.pdf",
+        () => console.log("Successfully uploaded!"),
+        (errCode, errString, response) => console.log(errString)
+    );
 }
 ```
 
@@ -262,7 +80,7 @@ After adding all the functions, the complete HelloWorld application should look 
         }
 
         function AcquireImage() {
-            if(DWObject) {
+            if (DWObject) {
                 DWObject.SelectSourceAsync()
                     .then(function () {
                         return DWObject.AcquireImageAsync({
@@ -284,32 +102,23 @@ After adding all the functions, the complete HelloWorld application should look 
         }
 
         function UploadAsPDF() {
-
-            var url = location.protocol + "//" + location.host + location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1) + "saveUploadedPDF.aspx";
-
-            var indices = [];
-            if (DWObject) {
-                if (DWObject.HowManyImagesInBuffer === 0) {
-                    console.log("There is no image to upload!");
-                    return;
-                }
-                // DWObject.SelectAllImages();
-                indices = DWObject.SelectedImagesIndices;
-                DWObject.HTTPUpload(
-                    url,
-                    indices,
-                    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-                    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
-                    "HelloWorld.pdf",
-                    function () {
-                        //The server response is empty!
-                        console.log("Successfully uploaded!")
-                    },
-                    function (errCode, errString, response) {
-                        console.log(errString);
-                    }
-                );
+            if (!DWObject || DWObject.HowManyImagesInBuffer === 0) {
+                console.log("There is no image to upload!");
+                return;
             }
+
+            var url = `${location.protocol}//${location.host}${location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)}saveUploadedPDF.aspx`;
+            var indices = DWObject.SelectAllImages();
+
+            DWObject.HTTPUpload(
+                url,
+                indices,
+                Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+                Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
+                "HelloWorld.pdf",
+                () => console.log("Successfully uploaded!"),
+                (errCode, errString, response) => console.log(errString)
+            );
         }
     </script>
 </body>
@@ -317,19 +126,28 @@ After adding all the functions, the complete HelloWorld application should look 
 </html>
 ```
 
+## Run the application
+
 Now you can use the page to scan a document and then upload the images as a PDF document.
 
 ![HelloWorldUpload]({{site.assets}}imgs/HelloWorldUpload.png)
 
+
 # Additional information
 
+For the purposes of this guide, a Dynamsoft hosted end point is provided, but for your own application you will need to create your own end point. Please see [this guide <<link does not work yet as article is not yet written>>]() for creating your own endpoint.
+
 **Samples Applications**
-- [Try scan & upload online demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html)
-- [Get scan & upload sample source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4)
+- [Try the Scan Documents + Upload demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html)
+- [Get the Scan Documents + Upload demo source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4)
+
+# Previous Article
+
+If you need a refresher on creating the base project, please review [HelloWorld]({{site.getstarted}}helloworld.html).
 
 # Next article
 
-Now that you have completed your HelloWorld application and uploaded your first file, it is now time to learn how explore [customising your scan settings]({{site.getstarted}}scansettings.html).
+Now that you have completed your HelloWorld application and uploaded your first file, it is now time to learn how explore [setting scan parameters]({{site.getstarted}}scansettings.html).
 
 <!-- - [Review HelloWorld]({{site.getstarted}}helloworld.html) -->
 <!-- - [Customising your scan settings]({{site.getstarted}}scansettings.html) -->
