@@ -14,52 +14,9 @@ permalink: /getstarted/editing.html
 <div class='blockquote-note'></div>
 > This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
 
-DWT offers a number of ways to manipulate images before exporting the images to a file. These include but are not limited to rotation, cutting, and resizing. For this example, you will be rotating an image and converting it to grayscale.
+DWT offers a number of ways to manipulate images before exporting the images to a file. These include but are not limited to rotation, cutting, and resizing. For this example, you will be converting an image to grayscale, and rotating the image.
 
 <!-- For the quick guide on available APIs, please see [ImageEditing]({{site.indepth}}features/edit.html){:target="_blank" rel="noreferrer noopener"} -->
-
-## Rotating images
-
-### Add Rotate buttons in HTML
-
-```html
-<input type="button" value="Rotate CW" onclick="RotateCW();" />
-<input type="button" value="Rotate CCW" onclick="RotateCCW();" />
-```
-
-### Add functions to perform rotation on the current image
-
-```js
-function RotateCW(){
-    DWObject.RotateRight(DWObject.CurrentImageIndexInBuffer);
-}
-function RotateCCW(){
-    DWObject.RotateLeft(DWObject.CurrentImageIndexInBuffer);
-}
-```
-
-Links to API Reference:
-
-- [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright){:target="_blank" rel="noreferrer noopener"}
-- [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft){:target="_blank" rel="noreferrer noopener"}
-- [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
-
-### Test out the rotation
-
-Using your new buttons, scan an image and use your new buttons to rotate the image.
-
-The scan:
-
-![HelloWorldEditRotate1]({{site.assets}}imgs/HelloWorldEditRotate1.png)
-
-Rotating the original scan once using the RotateCW button:
-
-![HelloWorldEditRotate2]({{site.assets}}imgs/HelloWorldEditRotate2.png)
-
-Rotating the original scan once using the RotateCCW button:
-
-![HelloWorldEditRotate3]({{site.assets}}imgs/HelloWorldEditRotate3.png)
-
 
 ## Converting image to grayscale
 
@@ -67,20 +24,6 @@ Rotating the original scan once using the RotateCCW button:
 ```html
 <input type="button" value="ConvertToGray" onclick="ConvertToGray();" />
 ```
-
-### Add the function to do the colour conversion
-
-```js
-function ConvertToGray(){
-    DWObject.ConvertToGrayScale(DWObject.CurrentImageIndexInBuffer);
-}
-```
-
-Links to API Reference:
-
-- [`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale){:target="_blank" rel="noreferrer noopener"}
-- [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
-
 
 ### Change the scan setting
 
@@ -114,15 +57,44 @@ Links to API Reference:
 - [`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution){:target="_blank" rel="noreferrer noopener"}
 - [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
-### Test out the colour conversion
+### Add the function to do the colour conversion
 
-This is the scan after changing the `PixelType` to `TWPT_RGB`:
+```js
+function ConvertToGray(){
+    DWObject.ConvertToGrayScale(DWObject.CurrentImageIndexInBuffer);
+}
+```
 
-![HelloWorldEditGrayscale1]({{site.assets}}imgs/HelloWorldEditGrayscale1.png)
+Links to API Reference:
 
-Click the ConvertToGray button and the image will change to grayscale:
+- [`ConvertToGrayScale()`]({{site.info}}api/WebTwain_Edit.html#converttograyscale){:target="_blank" rel="noreferrer noopener"}
+- [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
 
-![HelloWorldEditGrayscale2]({{site.assets}}imgs/HelloWorldEditGrayscale2.png)
+## Rotating images
+
+### Add Rotate buttons in HTML
+
+```html
+<input type="button" value="Rotate CW" onclick="RotateCW();" />
+<input type="button" value="Rotate CCW" onclick="RotateCCW();" />
+```
+
+### Add functions to perform rotation on the current image
+
+```js
+function RotateCW(){
+    DWObject.RotateRight(DWObject.CurrentImageIndexInBuffer);
+}
+function RotateCCW(){
+    DWObject.RotateLeft(DWObject.CurrentImageIndexInBuffer);
+}
+```
+
+Links to API Reference:
+
+- [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright){:target="_blank" rel="noreferrer noopener"}
+- [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft){:target="_blank" rel="noreferrer noopener"}
+- [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
 
 ## Review the completed code
 
@@ -137,9 +109,11 @@ Click the ConvertToGray button and the image will change to grayscale:
 
 <body>
     <input type="button" value="Scan" onclick="AcquireImage();" />
+    <input type="button" value="Upload" onclick="Upload();" />
     <input type="button" value="Rotate CW" onclick="RotateCW();" />
     <input type="button" value="Rotate CCW" onclick="RotateCCW();" />
     <input type="button" value="ConvertToGray" onclick="ConvertToGray();" />
+
 
     <div id="dwtcontrolContainer"></div>
 
@@ -153,16 +127,34 @@ Click the ConvertToGray button and the image will change to grayscale:
         function AcquireImage() {
             if (DWObject) {
                 DWObject.SelectSourceAsync()
-                    .then(() => DWObject.AcquireImageAsync({
-                        IfShowUI: false,
+                    .then(() => DWObject.AcquireImageAsync({ 
                         IfDisableSourceAfterAcquire: true,
+                        IfShowUI: false,
                         PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
                         Resolution: 150,
-                    }))
+                        }))
                     .then(result => console.log(result))
                     .catch(exp => console.error(exp.message))
                     .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
             }
+        }
+        function Upload() {
+            if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
+                var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
+                var aryIndex = [DWObject.CurrentImageIndexInBuffer];
+                DWObject.HTTPUpload(strUrl, aryIndex, Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
+                    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, "WebTWAINImage.png", onUploadSuccess, onUploadFailure);
+            } else {
+                alert("There is no image in buffer.");
+            }
+        }
+
+        function onUploadSuccess() {
+            alert('Upload successful');
+        }
+
+        function onUploadFailure(errorCode, errorString, sHttpResponse) {
+            alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
         }
 
         function RotateCW(){
@@ -196,6 +188,39 @@ Links to API Reference:
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
 
 ## Run the application
+
+### Open the application in your browser
+
+![HelloWorldEditGrayscale1]({{site.assets}}imgs/HelloWorldEdit.png)
+
+### Press the Scan button
+
+Since the `PixelType` was changed to `TWPT_RGB`, the recieved image is in colour.
+
+![HelloWorldEditGrayscale1]({{site.assets}}imgs/HelloWorldEditGrayscale1.png)
+
+### Convert the image to grayscale
+
+
+Click the ConvertToGray button and the image will change to grayscale:
+
+![HelloWorldEditGrayscale2]({{site.assets}}imgs/HelloWorldEditGrayscale2.png)
+
+### Rotate the image
+
+Using the Rotate CW and Rotate CCW buttons, rotate the image.
+
+<!-- The scan:
+
+![HelloWorldEditRotate1]({{site.assets}}imgs/HelloWorldEditRotate1.png) -->
+
+* Rotating the original converted grayscale image once using the RotateCW button:
+
+![HelloWorldEditRotate2]({{site.assets}}imgs/HelloWorldEditRotate2.png)
+
+* Rotating the original converted grayscale image once using the RotateCCW button:
+
+![HelloWorldEditRotate3]({{site.assets}}imgs/HelloWorldEditRotate3.png)
 
 # Previous Article
 

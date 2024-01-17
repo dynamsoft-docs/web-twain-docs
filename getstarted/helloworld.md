@@ -100,8 +100,8 @@ function AcquireImage() {
 Links to API Reference:
 
 - [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync){:target="_blank" rel="noreferrer noopener"}
-- [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
 - [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync){:target="_blank" rel="noreferrer noopener"}
+- [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
 - [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
 ## Review the code
@@ -148,25 +148,32 @@ At this point, our HelloWorld code should look like this:
 
 ## Run the HelloWorld application
 
-* Open the page in your browser
+### Open the page in your browser
 
-  ![Build-the-Hello-World-Scan-Page-3]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-3.png)
+![Build-the-Hello-World-Scan-Page-3]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-3.png)
 
-  > If you see a license notice, please make sure you have a valid license. Open `dynamsoft.webtwain.config.js` and ensure  that you have a licence defined at `Dynamsoft.DWT.ProductKey`. If you need further assistance, please contact [Dynamsoft Support]({{site.about}}getsupport.html).
+> If you see a license notice, please make sure you have a valid license. Open `dynamsoft.webtwain.config.js` and ensure  that you have a licence defined at `Dynamsoft.DWT.ProductKey`. If you need further assistance, please contact [Dynamsoft Support]({{site.about}}getsupport.html).
 
-* Press the Scan button
+### Press the Scan button
 
-  After pressing the Scan button, you will be presented with the Select Source dialog. Select your scanner and press the Select button.
+After pressing the Scan button, you will be presented with the Select Source dialog. Select your scanner and press the Select button. 
 
-  ![Build-the-Hello-World-Scan-Page-4]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-4.png)
+![Build-the-Hello-World-Scan-Page-4]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-4.png)
 
-  > Only TWAIN / WIA / ICA / SANE compliant devices are listed in the Select Source dialog. If your connected scanner doesn't show up in the list, please make sure the proper driver is installed. If you are using Windows and don't have a physical scanner on hand, you may install the [Virtual Scanner](https://www.dynamsoft.com/web-twain/docs/faq/download-virtual-scanner-for-testing.html) – a scanner simulator which is developed by the [TWAIN Working Group](https://www.twain.org/) for testing purposes.
+> Only TWAIN / WIA / ICA / SANE compliant devices are listed in the Select Source dialog. If your connected scanner doesn't show up in the list, please make sure the proper driver is installed. If you are using Windows and don't have a physical scanner on hand, you may install the [Virtual Scanner](https://www.dynamsoft.com/web-twain/docs/faq/download-virtual-scanner-for-testing.html) – a scanner simulator which is developed by the [TWAIN Working Group](https://www.twain.org/) for testing purposes.
 
-<!-- * Scanner UI -->
+### Scanner UI
 
-* After the scanner finishes scanning, the scanned documents will show up in the viewer
+You will be then presented with your scanner's built in interface. Please initiate a scan from this dialog. Your scanner's interface may differ from the provided screenshot.
 
-  ![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
+![Build-the-Hello-World-Scan-Page-UI]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-UI.png)
+
+
+###  View the scanned image
+
+After the scanner finishes scanning, the scanned documents will show up in the viewer
+
+![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
 
 <!-- # Further information
 

@@ -96,6 +96,8 @@ Links to API Reference:
 
 <body>
     <input type="button" value="Scan" onclick="AcquireImage();" />
+    <input type="button" value="Upload" onclick="Upload();" />
+
     <div id="dwtcontrolContainer"></div>
 
     <script type="text/javascript">
@@ -108,34 +110,55 @@ Links to API Reference:
         function AcquireImage() {
             if (DWObject) {
                 DWObject.SelectSourceAsync()
-                    .then(() => DWObject.AcquireImageAsync({
+                    .then(() => DWObject.AcquireImageAsync({ 
                         IfDisableSourceAfterAcquire: true,
                         IfShowUI: false,
                         PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
                         Resolution: 150,
-                    }))
+                        }))
                     .then(result => console.log(result))
                     .catch(exp => console.error(exp.message))
                     .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
             }
         }
+        function Upload() {
+            if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
+                var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
+                var aryIndex = [DWObject.CurrentImageIndexInBuffer];
+                DWObject.HTTPUpload(strUrl, aryIndex, Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
+                    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, "WebTWAINImage.png", onUploadSuccess, onUploadFailure);
+            } else {
+                alert("There is no image in buffer.");
+            }
+        }
+
+        function onUploadSuccess() {
+            alert('Upload successful');
+        }
+
+        function onUploadFailure(errorCode, errorString, sHttpResponse) {
+            alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
+        }
+
     </script>
 </body>
 
 </html>
-
 ```
 
 ## Run the application
-<!-- 
-The Scan result without adding the parameters:
 
-![HelloWorld-Scan-NoSettings]({{site.assets}}imgs\HelloWorldScanSetting1.png) -->
+### Open the application in your browser
 
-The Scan result with the added parameters:
+![HelloWorld-Scan-1]({{site.assets}}imgs\HelloWorldScanSetting1.png)
 
-![HelloWorld-Scan-NoSettings]({{site.assets}}imgs\HelloWorldScanSetting2.png)
+### Press the Scan button
 
+### View the scan
+
+With the added parameters, you should receive a grayscale image
+
+![HelloWorld-Scan-2]({{site.assets}}imgs\HelloWorldScanSetting2.png)
 
 # Previous Article
 

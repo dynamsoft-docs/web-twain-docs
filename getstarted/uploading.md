@@ -21,7 +21,7 @@ After scanning your document, you may want to upload the scanned documents to a 
 <input type="button" value="Upload" onclick="Upload();" />
 ```
 
-## Write the upload function and the associate call back functions
+## Write the Upload function and the associated callback functions
 
 ``` javascript
 function Upload() {
@@ -122,19 +122,27 @@ After adding all the functions, the complete HelloWorld application should look 
 
 ## Run the application
 
-Scan a document
+### Open the application in your browser
+
+![HelloWorldUpload0]({{site.assets}}imgs/HelloWorldUpload0.png)
+
+### Scan a document
 
 ![HelloWorldUpload1]({{site.assets}}imgs/HelloWorldUpload1.png)
 
-Upload the document
+### Upload the image
+
+After uploading, you should receive the Upload successful message
 
 ![HelloWorldUpload2]({{site.assets}}imgs/HelloWorldUpload2.png)
 
 
 
-# Additional information
+**Additional information**
 
-For the purposes of this guide, a Dynamsoft hosted end point is used, but for your own application you will need to create your own end point. Please see [this guide <<link does not work yet as article is not yet written>>]() for creating your own endpoint.
+For the purposes of this guide, a Dynamsoft hosted end point is used, but for your own application you will need to create your own end point. 
+
+<!-- Please see [this guide <<link does not work yet as article is not yet written>>]() for creating your own endpoint. -->
 
 **Samples Applications**
 - [Try the Scan Documents + Upload demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html){:target="_blank" rel="noreferrer noopener"}
