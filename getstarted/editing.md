@@ -222,7 +222,7 @@ Using the Rotate CW and Rotate CCW buttons, rotate the image.
 
 ![HelloWorldEditRotate3]({{site.assets}}imgs/HelloWorldEditRotate3.png)
 
-# Previous Article
+# Previous Articles
 
 If you would like to review any of the previous steps, you can review:
 - Creating [HelloWorld]({{site.getstarted}}hellowworld.html)
@@ -233,7 +233,7 @@ If you would like to review any of the previous steps, you can review:
 
 Congratulations, you have completed the HelloWorld tutorial for DWT.
 
-<< Insert what goes next >>
+<!-- << Insert what goes next >> -->
 
 <!-- 
 - [Customising your scan settings]({{site.getstarted}}scansettings.html)

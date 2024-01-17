@@ -160,7 +160,7 @@ With the added parameters, you should receive a grayscale image
 
 ![HelloWorld-Scan-2]({{site.assets}}imgs\HelloWorldScanSetting2.png)
 
-# Previous Article
+# Previous Articles
 
 If you need a refresher on setting up the base project, please review [HelloWorld]({{site.getstarted}}hellowworld.html).
 
