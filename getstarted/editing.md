@@ -90,27 +90,18 @@ In the previous step of the HelloWorld guide, you added `PixelType: Dynamsoft.DW
 function AcquireImage() {
     if (DWObject) {
         DWObject.SelectSourceAsync()
-        .then(function () {
-            return DWObject.AcquireImageAsync({
+            .then(() => DWObject.AcquireImageAsync({
                 IfShowUI: false,
                 IfDisableSourceAfterAcquire: true,
-                PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,  //Change this enumeration from GRAY to RGB
+                PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
                 Resolution: 150,
-            });
-        })
-        .then(function (result) {
-            console.log(result);
-        })
-        .catch(function (exp) {
-            console.error(exp.message);
-        })
-        .finally(function () {
-            DWObject.CloseSourceAsync().catch(function (e) {
-                console.error(e);
-            });
-        });
+            }))
+            .then(result => console.log(result))
+            .catch(exp => console.error(exp.message))
+            .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
     }
 }
+
 ```
 
 Links to API Reference:
@@ -162,38 +153,28 @@ Click the ConvertToGray button and the image will change to grayscale:
         function AcquireImage() {
             if (DWObject) {
                 DWObject.SelectSourceAsync()
-                .then(function () {
-                    return DWObject.AcquireImageAsync({
+                    .then(() => DWObject.AcquireImageAsync({
                         IfShowUI: false,
                         IfDisableSourceAfterAcquire: true,
                         PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
                         Resolution: 150,
-                    });
-                })
-                .then(function (result) {
-                    console.log(result);
-                })
-                .catch(function (exp) {
-                    console.error(exp.message);
-                })
-                .finally(function () {
-                    DWObject.CloseSourceAsync().catch(function (e) {
-                        console.error(e);
-                    });
-                });
+                    }))
+                    .then(result => console.log(result))
+                    .catch(exp => console.error(exp.message))
+                    .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
             }
-    }
+        }
 
-    function RotateCW(){
-        DWObject.RotateRight(DWObject.CurrentImageIndexInBuffer);
-    }
-    function RotateCCW(){
-        DWObject.RotateLeft(DWObject.CurrentImageIndexInBuffer);
-    }
+        function RotateCW(){
+            DWObject.RotateRight(DWObject.CurrentImageIndexInBuffer);
+        }
+        function RotateCCW(){
+            DWObject.RotateLeft(DWObject.CurrentImageIndexInBuffer);
+        }
 
-    function ConvertToGray(){
-        DWObject.ConvertToGrayScale(DWObject.CurrentImageIndexInBuffer);
-    }
+        function ConvertToGray(){
+            DWObject.ConvertToGrayScale(DWObject.CurrentImageIndexInBuffer);
+        }
     </script>
 </body>
 

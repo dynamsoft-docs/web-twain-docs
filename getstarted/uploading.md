@@ -13,35 +13,40 @@ permalink: /getstarted/uploading.html
 <div class='blockquote-note'></div>
 > This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
 
-After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}helloworld.html), you created the scanning component of your HelloWorld, now you will add the code to perform an upload scanned documents as a PDF file. 
+After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}helloworld.html), you created the scanning component of your HelloWorld, now you will add the code to perform an upload scanned documents as a PNG file. 
 
-## Add an upload button in HTML
+## Add an Upload button in HTML
 
 ``` html
-<input type="button" value="Upload" onclick="UploadAsPDF();" />
+<input type="button" value="Upload" onclick="Upload();" />
 ```
 
-## Write the upload function
+## Write the upload function and the associate call back functions
 
 ``` javascript
-function UploadAsPDF() {
-    if (!DWObject || DWObject.HowManyImagesInBuffer === 0) {
-        console.log("There is no image to upload!");
-        return;
+function Upload() {
+    if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
+        var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
+        var aryIndex = [DWObject.CurrentImageIndexInBuffer];
+        DWObject.HTTPUpload(
+            strUrl, 
+            aryIndex, 
+            Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
+            Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, 
+            "WebTWAINImage.png", 
+            onUploadSuccess, 
+            onUploadFailure);
+    } else {
+        alert("There is no image in buffer.");
     }
+}
 
-    var url = `${location.protocol}//${location.host}${location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)}saveUploadedPDF.aspx`;
-    var indices = DWObject.SelectAllImages();
+function onUploadSuccess() {
+    alert('Upload successful');
+}
 
-    DWObject.HTTPUpload(
-        url,
-        indices,
-        Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-        Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
-        "HelloWorld.pdf",
-        () => console.log("Successfully uploaded!"),
-        (errCode, errString, response) => console.log(errString)
-    );
+function onUploadFailure(errorCode, errorString, sHttpResponse) {
+    alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
 }
 ```
 
@@ -49,9 +54,9 @@ function UploadAsPDF() {
 Links to API Reference:
 <!-- - [`Dynamsoft.Lib.detect.ssl`]() -->
 
-- [`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)
-- [`SelectedImagesIndicies`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)
-- [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)
+- [`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer){:target="_blank" rel="noreferrer noopener"}
+- [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
+- [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload){:target="_blank" rel="noreferrer noopener"}
 
 ## Review the complete code
 
@@ -68,7 +73,7 @@ After adding all the functions, the complete HelloWorld application should look 
 
 <body>
     <input type="button" value="Scan" onclick="AcquireImage();" />
-    <input type="button" value="Upload" onclick="UploadAsPDF();" />
+    <input type="button" value="Upload" onclick="Upload();" />
 
     <div id="dwtcontrolContainer"></div>
 
@@ -82,44 +87,33 @@ After adding all the functions, the complete HelloWorld application should look 
         function AcquireImage() {
             if (DWObject) {
                 DWObject.SelectSourceAsync()
-                    .then(function () {
-                        return DWObject.AcquireImageAsync({
-                            IfDisableSourceAfterAcquire: true,
-                        });
-                    })
-                    .then(function (result) {
-                        console.log(result);
-                    })
-                    .catch(function (exp) {
-                        console.error(exp.message);
-                    })
-                    .finally(function () {
-                        DWObject.CloseSourceAsync().catch(function (e) {
-                            console.error(e);
-                        });
-                    });
+                    .then(() => DWObject.AcquireImageAsync({ 
+                        IfDisableSourceAfterAcquire: true 
+                        }))
+                    .then(result => console.log(result))
+                    .catch(exp => console.error(exp.message))
+                    .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+            }
+        }
+        function Upload() {
+            if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
+                var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
+                var aryIndex = [DWObject.CurrentImageIndexInBuffer];
+                DWObject.HTTPUpload(strUrl, aryIndex, Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
+                    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, "WebTWAINImage.png", onUploadSuccess, onUploadFailure);
+            } else {
+                alert("There is no image in buffer.");
             }
         }
 
-        function UploadAsPDF() {
-            if (!DWObject || DWObject.HowManyImagesInBuffer === 0) {
-                console.log("There is no image to upload!");
-                return;
-            }
-
-            var url = `${location.protocol}//${location.host}${location.pathname.substring(0, location.pathname.lastIndexOf("/") + 1)}saveUploadedPDF.aspx`;
-            var indices = DWObject.SelectAllImages();
-
-            DWObject.HTTPUpload(
-                url,
-                indices,
-                Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
-                Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
-                "HelloWorld.pdf",
-                () => console.log("Successfully uploaded!"),
-                (errCode, errString, response) => console.log(errString)
-            );
+        function onUploadSuccess() {
+            alert('Upload successful');
         }
+
+        function onUploadFailure(errorCode, errorString, sHttpResponse) {
+            alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
+        }
+
     </script>
 </body>
 
@@ -128,18 +122,23 @@ After adding all the functions, the complete HelloWorld application should look 
 
 ## Run the application
 
-Now you can use the page to scan a document and then upload the images as a PDF document.
+Scan a document
 
-![HelloWorldUpload]({{site.assets}}imgs/HelloWorldUpload.png)
+![HelloWorldUpload1]({{site.assets}}imgs/HelloWorldUpload1.png)
+
+Upload the document
+
+![HelloWorldUpload2]({{site.assets}}imgs/HelloWorldUpload2.png)
+
 
 
 # Additional information
 
-For the purposes of this guide, a Dynamsoft hosted end point is provided, but for your own application you will need to create your own end point. Please see [this guide <<link does not work yet as article is not yet written>>]() for creating your own endpoint.
+For the purposes of this guide, a Dynamsoft hosted end point is used, but for your own application you will need to create your own end point. Please see [this guide <<link does not work yet as article is not yet written>>]() for creating your own endpoint.
 
 **Samples Applications**
-- [Try the Scan Documents + Upload demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html)
-- [Get the Scan Documents + Upload demo source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4)
+- [Try the Scan Documents + Upload demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html){:target="_blank" rel="noreferrer noopener"}
+- [Get the Scan Documents + Upload demo source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4){:target="_blank" rel="noreferrer noopener"}
 
 # Previous Article
 

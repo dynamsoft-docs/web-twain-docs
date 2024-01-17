@@ -25,27 +25,17 @@ Add `IfShowUI: false` to the JSON in `AcquireImageAsync()` in `AcquireImage()`.
 
 ```js
 function AcquireImage() {
-        if (DWObject) {
-            DWObject.SelectSourceAsync()
-            .then(function () {
-                return DWObject.AcquireImageAsync({
-                    IfShowUI: false,
-                    IfDisableSourceAfterAcquire: true,
-                });
-            })
-            .then(function (result) {
-                console.log(result);
-            })
-            .catch(function (exp) {
-                console.error(exp.message);
-            })
-            .finally(function () {
-                DWObject.CloseSourceAsync().catch(function (e) {
-                    console.error(e);
-                });
-            });
-        }
+    if (DWObject) {
+        DWObject.SelectSourceAsync()
+            .then(() => DWObject.AcquireImageAsync({
+                IfShowUI: false,
+                IfDisableSourceAfterAcquire: true,
+            }))
+            .then(result => console.log(result))
+            .catch(exp => console.error(exp.message))
+            .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
     }
+}
 ```
 
 Links to API Reference:
@@ -67,29 +57,19 @@ Add `PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY` and `Resolution:150` 
 
 ```js
 function AcquireImage() {
-        if (DWObject) {
-            DWObject.SelectSourceAsync()
-            .then(function () {
-                return DWObject.AcquireImageAsync({
-                    IfShowUI: false,
-                    IfDisableSourceAfterAcquire: true,
-                    PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
-                    Resolution: 150,
-                });
-            })
-            .then(function (result) {
-                console.log(result);
-            })
-            .catch(function (exp) {
-                console.error(exp.message);
-            })
-            .finally(function () {
-                DWObject.CloseSourceAsync().catch(function (e) {
-                    console.error(e);
-                });
-            });
-        }
+    if (DWObject) {
+        DWObject.SelectSourceAsync()
+            .then(() => DWObject.AcquireImageAsync({
+                IfShowUI: false,
+                IfDisableSourceAfterAcquire: true,
+                PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
+                Resolution: 150,
+            }))
+            .then(result => console.log(result))
+            .catch(exp => console.error(exp.message))
+            .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
     }
+}
 ```
 
 Links to API Reference:
@@ -128,27 +108,17 @@ Links to API Reference:
         function AcquireImage() {
             if (DWObject) {
                 DWObject.SelectSourceAsync()
-                .then(function () {
-                    return DWObject.AcquireImageAsync({
+                    .then(() => DWObject.AcquireImageAsync({
                         IfShowUI: false,
                         IfDisableSourceAfterAcquire: true,
                         PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
                         Resolution: 150,
-                    });
-                })
-                .then(function (result) {
-                    console.log(result);
-                })
-                .catch(function (exp) {
-                    console.error(exp.message);
-                })
-                .finally(function () {
-                    DWObject.CloseSourceAsync().catch(function (e) {
-                        console.error(e);
-                    });
-                });
+                    }))
+                    .then(result => console.log(result))
+                    .catch(exp => console.error(exp.message))
+                    .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
             }
-    }
+        }
     </script>
 </body>
 
@@ -176,7 +146,3 @@ The previous article of [uploading images to the server]({{site.getstarted}}uplo
 # Next article
 
 The next thing to learn is how explore [editing images]({{site.getstarted}}editing.html).
-
-<!-- - [Editing your images]({{site.getstarted}}editing.html)
-- [Review HelloWorld]({{site.getstarted}}helloworld.html)
-- [Review Uploading Documents]({{site.getstarted}}uploading.html) -->

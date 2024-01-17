@@ -87,22 +87,12 @@ DWT's default behaviour is to initalizae the DWT environment as soon as the appl
 function AcquireImage() {
     if (DWObject) {
         DWObject.SelectSourceAsync()
-        .then(function () {
-            return DWObject.AcquireImageAsync({
-                IfDisableSourceAfterAcquire: true,
-            });
-        })
-        .then(function (result) {
-            console.log(result);
-        })
-        .catch(function (exp) {
-            console.error(exp.message);
-        })
-        .finally(function () {
-            DWObject.CloseSourceAsync().catch(function (e) {
-                console.error(e);
-            });
-        });
+            .then(() => DWObject.AcquireImageAsync({ 
+                IfDisableSourceAfterAcquire: true 
+                }))
+            .then(result => console.log(result))
+            .catch(exp => console.error(exp.message))
+            .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
     }
 }
 ```
@@ -141,24 +131,15 @@ At this point, our HelloWorld code should look like this:
         function AcquireImage() {
             if (DWObject) {
                 DWObject.SelectSourceAsync()
-                .then(function () {
-                    return DWObject.AcquireImageAsync({
-                        IfDisableSourceAfterAcquire: true,
-                    });
-                })
-                .then(function (result) {
-                    console.log(result);
-                })
-                .catch(function (exp) {
-                    console.error(exp.message);
-                })
-                .finally(function () {
-                    DWObject.CloseSourceAsync().catch(function (e) {
-                        console.error(e);
-                    });
-                });
+                    .then(() => DWObject.AcquireImageAsync({ 
+                        IfDisableSourceAfterAcquire: true 
+                        }))
+                    .then(result => console.log(result))
+                    .catch(exp => console.error(exp.message))
+                    .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
             }
         }
+
     </script>
 </body>
 
