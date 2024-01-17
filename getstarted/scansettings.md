@@ -28,8 +28,8 @@ function AcquireImage() {
     if (DWObject) {
         DWObject.SelectSourceAsync()
             .then(() => DWObject.AcquireImageAsync({
-                IfShowUI: false,
                 IfDisableSourceAfterAcquire: true,
+                IfShowUI: false,
             }))
             .then(result => console.log(result))
             .catch(exp => console.error(exp.message))
@@ -43,8 +43,8 @@ Links to API Reference:
 - [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync){:target="_blank" rel="noreferrer noopener"}
 - [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
 - [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync){:target="_blank" rel="noreferrer noopener"}
-- [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui){:target="_blank" rel="noreferrer noopener"}
 - [`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire){:target="_blank" rel="noreferrer noopener"}
+- [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui){:target="_blank" rel="noreferrer noopener"}
 - [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
 ## Add the scan parameters to the JSON
@@ -60,8 +60,8 @@ function AcquireImage() {
     if (DWObject) {
         DWObject.SelectSourceAsync()
             .then(() => DWObject.AcquireImageAsync({
-                IfShowUI: false,
                 IfDisableSourceAfterAcquire: true,
+                IfShowUI: false,
                 PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
                 Resolution: 150,
             }))
@@ -109,8 +109,8 @@ Links to API Reference:
             if (DWObject) {
                 DWObject.SelectSourceAsync()
                     .then(() => DWObject.AcquireImageAsync({
-                        IfShowUI: false,
                         IfDisableSourceAfterAcquire: true,
+                        IfShowUI: false,
                         PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
                         Resolution: 150,
                     }))

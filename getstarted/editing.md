@@ -91,8 +91,8 @@ function AcquireImage() {
     if (DWObject) {
         DWObject.SelectSourceAsync()
             .then(() => DWObject.AcquireImageAsync({
-                IfShowUI: false,
                 IfDisableSourceAfterAcquire: true,
+                IfShowUI: false,
                 PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
                 Resolution: 150,
             }))
