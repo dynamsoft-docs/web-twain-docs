@@ -15,25 +15,25 @@ permalink: /getstarted/scansettings.html
 
 There are various settings you can specify to control your scan parameters to ensure that your incoming images are all uniform. To achieve this, you will need to modify the parameters of `AcquireImage()` in the HelloWorld application.
 
-## Disabling the Scanner's built in UI
+## Add Scan parameters to the JSON
 
-Showing the scanner interface will cause the the scanner driver to override any scan settings you designate via JSON by the settings that are defined in the scanner UI. To ensure the settings take effect, you will need to disable the scanner interface during the scan process.
 
 ### Disable the Scanner's UI via JSON
+Showing the scanner interface will cause the the scanner driver to override any scan settings you designate via JSON by the settings that are defined in the scanner UI. To ensure the settings take effect, you will need to disable the scanner interface during the scan process.
 
 Add `IfShowUI: false` to the JSON in `AcquireImageAsync()` in `AcquireImage()`.
 
 ```js
 function AcquireImage() {
     if (DWObject) {
-        DWObject.SelectSourceAsync()
-            .then(() => DWObject.AcquireImageAsync({
-                IfDisableSourceAfterAcquire: true,
+        DWObject.SelectSourceAsync().then(function () {
+            return DWObject.AcquireImageAsync({ 
+                IfCloseSourceAfterAcquire: true,
                 IfShowUI: false,
-            }))
-            .then(result => console.log(result))
-            .catch(exp => console.error(exp.message))
-            .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+            });
+        }).catch(function (exp) {
+            alert(exp.message);
+        });
     }
 }
 ```
@@ -47,27 +47,25 @@ Links to API Reference:
 - [`IfShowUI`]({{site.info}}api/WebTwain_Acquire.html#ifshowui){:target="_blank" rel="noreferrer noopener"}
 - [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
-## Add the scan parameters to the JSON
+### Add the scan parameters to the JSON
 
 For this example, you will be setting the scan `PixelType` (also known as colourspace) to grayscale, and setting the scan `Resolution` to 150DPI.
-
-### Modify the `AcquireImage()` parameters
 
 Add `PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY` and `Resolution:150` to your JSON.
 
 ```js
 function AcquireImage() {
     if (DWObject) {
-        DWObject.SelectSourceAsync()
-            .then(() => DWObject.AcquireImageAsync({
-                IfDisableSourceAfterAcquire: true,
+        DWObject.SelectSourceAsync().then(function () {
+            return DWObject.AcquireImageAsync({ 
+                IfCloseSourceAfterAcquire: true,
                 IfShowUI: false,
                 PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
                 Resolution: 150,
-            }))
-            .then(result => console.log(result))
-            .catch(exp => console.error(exp.message))
-            .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+            });
+        }).catch(function (exp) {
+            alert(exp.message);
+        });
     }
 }
 ```
@@ -83,7 +81,7 @@ Links to API Reference:
 - [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync){:target="_blank" rel="noreferrer noopener"}
 
 
-## Review the completed code
+## Review the code
 
 ```html
 <html>
@@ -109,18 +107,19 @@ Links to API Reference:
 
         function AcquireImage() {
             if (DWObject) {
-                DWObject.SelectSourceAsync()
-                    .then(() => DWObject.AcquireImageAsync({ 
-                        IfDisableSourceAfterAcquire: true,
+                DWObject.SelectSourceAsync().then(function () {
+                    return DWObject.AcquireImageAsync({ 
+                        IfCloseSourceAfterAcquire: true,
                         IfShowUI: false,
                         PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
                         Resolution: 150,
-                        }))
-                    .then(result => console.log(result))
-                    .catch(exp => console.error(exp.message))
-                    .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+                    });
+                }).catch(function (exp) {
+                    alert(exp.message);
+                });
             }
         }
+
         function Upload() {
             if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
                 var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
@@ -164,7 +163,7 @@ With the added parameters, you should receive a grayscale image
 
 If you need a refresher on setting up the base project, please review [HelloWorld]({{site.getstarted}}hellowworld.html).
 
-The previous article of [uploading images to the server]({{site.getstarted}}uploading.html) still applies, and you can apply the same concepts to the new upload process.
+If this scan is all that you need, you can review [uploading images to the server]({{site.getstarted}}uploading.html).
 
 # Next article
 

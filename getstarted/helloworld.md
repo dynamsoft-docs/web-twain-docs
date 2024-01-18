@@ -86,13 +86,13 @@ DWT's default behaviour is to initalizae the DWT environment as soon as the appl
 ```js
 function AcquireImage() {
     if (DWObject) {
-        DWObject.SelectSourceAsync()
-            .then(() => DWObject.AcquireImageAsync({ 
-                IfDisableSourceAfterAcquire: true 
-                }))
-            .then(result => console.log(result))
-            .catch(exp => console.error(exp.message))
-            .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+        DWObject.SelectSourceAsync().then(function () {
+            return DWObject.AcquireImageAsync({ 
+                IfCloseSourceAfterAcquire: true 
+            });
+        }).catch(function (exp) {
+            alert(exp.message);
+        });
     }
 }
 ```
@@ -130,13 +130,13 @@ At this point, our HelloWorld code should look like this:
 
         function AcquireImage() {
             if (DWObject) {
-                DWObject.SelectSourceAsync()
-                    .then(() => DWObject.AcquireImageAsync({ 
-                        IfDisableSourceAfterAcquire: true 
-                        }))
-                    .then(result => console.log(result))
-                    .catch(exp => console.error(exp.message))
-                    .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+                DWObject.SelectSourceAsync().then(function () {
+                    return DWObject.AcquireImageAsync({ 
+                        IfCloseSourceAfterAcquire: true 
+                    });
+                }).catch(function (exp) {
+                    alert(exp.message);
+                });
             }
         }
 

@@ -58,9 +58,7 @@ Links to API Reference:
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
 - [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload){:target="_blank" rel="noreferrer noopener"}
 
-## Review the complete code
-
-After adding all the functions, the complete HelloWorld application should look like this:
+## Review the code
 
 ```html
 <html>
@@ -86,13 +84,13 @@ After adding all the functions, the complete HelloWorld application should look 
 
         function AcquireImage() {
             if (DWObject) {
-                DWObject.SelectSourceAsync()
-                    .then(() => DWObject.AcquireImageAsync({ 
-                        IfDisableSourceAfterAcquire: true 
-                        }))
-                    .then(result => console.log(result))
-                    .catch(exp => console.error(exp.message))
-                    .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+                DWObject.SelectSourceAsync().then(function () {
+                    return DWObject.AcquireImageAsync({ 
+                        IfCloseSourceAfterAcquire: true 
+                    });
+                }).catch(function (exp) {
+                    alert(exp.message);
+                });
             }
         }
         function Upload() {
@@ -154,7 +152,7 @@ If you need a refresher on creating the base project, please review [HelloWorld]
 
 # Next article
 
-Now that you have completed your HelloWorld application and uploaded your first file, it is now time to learn how explore [setting scan parameters]({{site.getstarted}}scansettings.html).
+Now that you have completed your HelloWorld application and uploaded your first file, it is now time to explore [setting scan parameters]({{site.getstarted}}scansettings.html).
 
 <!-- - [Review HelloWorld]({{site.getstarted}}helloworld.html) -->
 <!-- - [Customising your scan settings]({{site.getstarted}}scansettings.html) -->

@@ -32,19 +32,18 @@ In the previous step of the HelloWorld guide, you added `PixelType: Dynamsoft.DW
 ```js
 function AcquireImage() {
     if (DWObject) {
-        DWObject.SelectSourceAsync()
-            .then(() => DWObject.AcquireImageAsync({
-                IfDisableSourceAfterAcquire: true,
+        DWObject.SelectSourceAsync().then(function () {
+            return DWObject.AcquireImageAsync({ 
+                IfCloseSourceAfterAcquire: true,
                 IfShowUI: false,
                 PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
                 Resolution: 150,
-            }))
-            .then(result => console.log(result))
-            .catch(exp => console.error(exp.message))
-            .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+            });
+        }).catch(function (exp) {
+            alert(exp.message);
+        });
     }
 }
-
 ```
 
 Links to API Reference:
@@ -96,7 +95,7 @@ Links to API Reference:
 - [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft){:target="_blank" rel="noreferrer noopener"}
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
 
-## Review the completed code
+## Review the code
 
 ```html
 <html>
@@ -124,18 +123,19 @@ Links to API Reference:
             DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
         }
 
+        
         function AcquireImage() {
             if (DWObject) {
-                DWObject.SelectSourceAsync()
-                    .then(() => DWObject.AcquireImageAsync({ 
-                        IfDisableSourceAfterAcquire: true,
+                DWObject.SelectSourceAsync().then(function () {
+                    return DWObject.AcquireImageAsync({ 
+                        IfCloseSourceAfterAcquire: true,
                         IfShowUI: false,
                         PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB,
                         Resolution: 150,
-                        }))
-                    .then(result => console.log(result))
-                    .catch(exp => console.error(exp.message))
-                    .finally(() => DWObject.CloseSourceAsync().catch(e => console.error(e)));
+                    });
+                }).catch(function (exp) {
+                    alert(exp.message);
+                });
             }
         }
         function Upload() {
