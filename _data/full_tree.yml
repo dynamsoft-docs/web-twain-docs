@@ -1,5 +1,5 @@
 tree_list:
-  - name: Introduction to Dynamic Web TWAIN
+  - name: Introduction
     path: /about/
     childList:
       - name: System Requirements
@@ -8,17 +8,17 @@ tree_list:
         path: /getstarted/hardware.html
       - name: File Types
         path: /getstarted/filetype.html
-      - name: License
-        path: /about/license.html
-      - name: Set up Dynamsoft Service 
-        path: /indepth/deployment/service.html
-  # - name: DEVELOPMENT
-  #   isCategory: true      
-  - name: User Guide
-    path: /getstarted/
+  - name: DEVELOPMENT
+    isCategory: true
+  - name: HelloWorld
+    path: /getstarted/helloworld.html
     childList:
-      - name: HelloWorld 
+      - name: Introduction
         path: /getstarted/helloworld.html
+      - name: Initializing the Environment
+        path: /getstarted/initialize.html
+      - name: Scanning an Image
+        path: /getstarted/scanning.html
       - name: Uploading Images to the Server
         path: /getstarted/uploading.html
       - name: Setting Scan Parameters
@@ -28,33 +28,44 @@ tree_list:
         path: /getstarted/editing.html
       # - name: Uploading and Saving Images
       #   path: /indepth/features/output.html
-      - name: Deploying the Application
+      # - name: Deploying the Application
+      #   path: /indepth/deployment/server.html      
+  - name: User Guide
+    path: /getstarted/
+    childList:
+      # - name: HelloWorld 
+      #   path: /getstarted/helloworld.html
+      - name: License
+        path: /about/license.html
+      - name: Set up Dynamsoft Service 
+        path: /indepth/deployment/service.html
+      - name: Deploy to Server
         path: /indepth/deployment/server.html
-      - name: Additional Features
+      - name: Explore Features
+        path: /indepth/features/
         childList:
-        - name: Barcode Recognition
-          path: /indepth/features/barcode.html
-        - name: PDF Handling
-          path: /indepth/features/pdf.html 
-        - name: Image Buffer Management
-          path: /indepth/features/buffer.html
-      - name: Advanced Usage
-        childList:
-        - name: Using Web TWAIN without a Viewer
-          path: /indepth/features/viewer.html
-        - name: Customizing the Interface
-          path: /indepth/features/ui.html
-      # - name: old menu option storage
-      # - name: Explore Features
-      #   path: /indepth/features/
-      #   childList:
-      #     - name: DWT Initialization 
-      #       path: /indepth/features/initialize.html
-      #     
-          # - name: Remote Scan
-          #   path: https://www.dynamsoft.com/remote-scan/docs/introduction/
-          # - name: PDF Compressor (Beta) 
-          #   path: /indepth/features/pdfc.html 
+          - name: DWT Initialization 
+            path: /indepth/features/initialize.html
+          - name: Input Options
+            path: /indepth/features/input.html
+          - name: Viewer Setting
+            path: /indepth/features/viewer.html
+          - name: Image Editing
+            path: /indepth/features/edit.html
+          - name: UI Customization
+            path: /indepth/features/ui.html
+          - name: Output Options
+            path: /indepth/features/output.html
+          - name: Image Buffer Management
+            path: /indepth/features/buffer.html
+          - name: Barcode Recognition
+            path: /indepth/features/barcode.html
+          - name: PDF Handling
+            path: /indepth/features/pdf.html 
+          - name: PDF Compressor (Beta) 
+            path: /indepth/features/pdfc.html 
+          - name: Remote Scan
+            path: https://www.dynamsoft.com/remote-scan/docs/introduction/
   - name: Samples and Demos
     childList:
       - name: Use Web TWAIN in Angular
@@ -69,14 +80,6 @@ tree_list:
       #   path: /indepth/development/restful.html
       - name: Code Gallery
         path: https://www.dynamsoft.com/web-twain/resources/code-gallery/
-    name: QuickSheets
-    childList:
-      - name: Input
-      - path: /indepth/features/input.html
-      - name: Image Editing
-      - path: /indepth/features/edit.html
-      - name: Image Output
-      - path: /indepth/features/output.html
   - name: API Reference
     path: /info/api/
     childList:
@@ -121,11 +124,11 @@ tree_list:
   - name: Release Notes
     path: /info/schedule/
     childList:
-      - name: Stable Releases
+      - name: Stable
         path: /info/schedule/stable.html
-      - name: Addons
+      - name: Addon
         path: /info/schedule/Addon.html
-      - name: Deprecations List
+      - name: Deprecated
         path: /info/schedule/deprecated.html
   - name: Upgrade Instructions
     path: /indepth/development/upgrade.html

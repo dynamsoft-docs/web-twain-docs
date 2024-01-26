@@ -10,10 +10,10 @@ permalink: /getstarted/uploading.html
 
 # Uploading Images to the Server
 
-<div class='blockquote-note'></div>
-> This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html)
+<!-- <div class='blockquote-note'></div>
+> This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html) -->
 
-After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}helloworld.html), you created the scanning component of your HelloWorld, now you will add the code to perform an upload scanned documents as a PNG file. 
+After scanning your document, you may want to upload the scanned documents to a server. In the [previous guide]({{site.getstarted}}scanning.html), you created the scanning component of your HelloWorld, now you will add the code to perform an upload scanned documents as a PNG file. 
 
 ## Add an Upload button in HTML
 
@@ -27,10 +27,10 @@ After scanning your document, you may want to upload the scanned documents to a 
 function Upload() {
     if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
         var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
-        var aryIndex = [DWObject.CurrentImageIndexInBuffer];
+        var imgAry = [DWObject.CurrentImageIndexInBuffer];
         DWObject.HTTPUpload(
             strUrl, 
-            aryIndex, 
+            imgAry, 
             Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
             Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, 
             "WebTWAINImage.png", 
@@ -57,6 +57,9 @@ Links to API Reference:
 - [`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer){:target="_blank" rel="noreferrer noopener"}
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
 - [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload){:target="_blank" rel="noreferrer noopener"}
+- [`Dynamsoft.DWT.EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype){:target="_blank" rel="noreferrer noopener"}
+- [`Dynamsoft.DWT.EnumDWT_UploadDataFormat`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat){:target="_blank" rel="noreferrer noopener"}
+
 
 ## Review the code
 
@@ -96,8 +99,8 @@ Links to API Reference:
         function Upload() {
             if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
                 var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
-                var aryIndex = [DWObject.CurrentImageIndexInBuffer];
-                DWObject.HTTPUpload(strUrl, aryIndex, Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
+                var imgAry = [DWObject.CurrentImageIndexInBuffer];
+                DWObject.HTTPUpload(strUrl, imgAry, Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
                     Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, "WebTWAINImage.png", onUploadSuccess, onUploadFailure);
             } else {
                 alert("There is no image in buffer.");
@@ -142,13 +145,15 @@ For the purposes of this guide, a Dynamsoft hosted end point is used, but for yo
 
 <!-- Please see [this guide <<link does not work yet as article is not yet written>>]() for creating your own endpoint. -->
 
-**Samples Applications**
+**Sample Applications**
 - [Try the Scan Documents + Upload demo](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html){:target="_blank" rel="noreferrer noopener"}
 - [Get the Scan Documents + Upload demo source code](https://www.dynamsoft.com/web-twain/sample-downloads/?demoSampleId=4){:target="_blank" rel="noreferrer noopener"}
 
 # Previous Article
 
-If you need a refresher on creating the base project, please review [HelloWorld]({{site.getstarted}}helloworld.html).
+If you need a refresher on creating the base project, please review [initalizing the environment]({{site.getstarted}}initialize.html).
+
+To get the image you are uploading, review [scanning an image]({{site.getstarted}}scanning.html)
 
 # Next article
 
