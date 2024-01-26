@@ -23,4 +23,4 @@ Throughout this guide you will be introduced to:
 - [Setting scan parameters]({{site.getstarted}}scansettings.html)
 - [Editing images]({{site.getstarted}}editing.html)
 
-If you are ready to begin, it is time to begin [initalizing the environment]({{site.getstarted}}initialize.html)
+If you are ready to begin, it is time to begin [initalizing the environment]({{site.getstarted}}initialize.html).

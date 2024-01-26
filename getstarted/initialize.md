@@ -57,7 +57,7 @@ function Dynamsoft_OnReady() {
 }
 ```
 
-Links to API Reference:
+Link to API Reference:
 
 - [`Dynamsoft.DWT.GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain){:target="_blank" rel="noreferrer noopener"}
 <!-- - [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready){:target="_blank" rel="noreferrer noopener"} -->

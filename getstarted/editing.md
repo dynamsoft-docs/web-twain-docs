@@ -14,11 +14,11 @@ permalink: /getstarted/editing.html
 <div class='blockquote-note'></div>
 > This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html). -->
 
-DWT offers a number of ways to manipulate images before exporting the images to a file. These include but are not limited to rotation, cutting, and resizing. For this example, you will be converting an image to grayscale, and rotating the image.
+DWT offers a number of ways to manipulate images before exporting the images to a file. These include but are not limited to rotation, cutting, and resizing. For this example, you will be converting an image to black and white, and then rotating the image.
 
 <!-- For the quick guide on available APIs, please see [ImageEditing]({{site.indepth}}features/edit.html){:target="_blank" rel="noreferrer noopener"} -->
 
-## Converting image to grayscale
+## Converting image to black and white
 
 ### Add a ConvertToBW button in HTML
 ```html
@@ -160,36 +160,29 @@ Links to API Reference:
 
 ### Open the application in your browser
 
-![HelloWorldEditGrayscale1]({{site.assets}}imgs/HelloWorldEdit.png)
+![HelloWorldEdit]({{site.assets}}imgs/HelloWorldEdit.png)
 
 ### Press the Scan button
 
-Since the `PixelType` was changed to `TWPT_RGB`, the recieved image is in colour.
+![HelloWorldEditBW1]({{site.assets}}imgs/HelloWorldEditBW1.png)
 
-![HelloWorldEditGrayscale1]({{site.assets}}imgs/HelloWorldEditGrayscale1.png)
+### Convert the image to black and white
 
-### Convert the image to grayscale
+Click the ConvertToBW button and the image will change to black and white:
 
-
-Click the ConvertToBW button and the image will change to grayscale:
-
-![HelloWorldEditGrayscale2]({{site.assets}}imgs/HelloWorldEditGrayscale2.png)
+![HelloWorldEditBW2]({{site.assets}}imgs/HelloWorldEditBW2.png)
 
 ### Rotate the image
 
 Using the Rotate CW and Rotate CCW buttons, rotate the image.
 
-<!-- The scan:
+* Rotating the converted image once using the RotateCW button:
 
-![HelloWorldEditRotate1]({{site.assets}}imgs/HelloWorldEditRotate1.png) -->
+![HelloWorldEditRotate2]({{site.assets}}imgs/HelloWorldEditRotateCW.png)
 
-* Rotating the original converted grayscale image once using the RotateCW button:
+* Rotating the converted image once using the RotateCCW button:
 
-![HelloWorldEditRotate2]({{site.assets}}imgs/HelloWorldEditRotate2.png)
-
-* Rotating the original converted grayscale image once using the RotateCCW button:
-
-![HelloWorldEditRotate3]({{site.assets}}imgs/HelloWorldEditRotate3.png)
+![HelloWorldEditRotate3]({{site.assets}}imgs/HelloWorldEditRotateCCW.png)
 
 # Previous Articles
 
