@@ -94,6 +94,10 @@ DWT's default behaviour is to initalizae the DWT environment as soon as the appl
 </html>
 ```
 
+## Run the application
+
+![HelloWorldInit]({{site.assets}}imgs/HelloWorldInit.png)
+
 # Next article
 
 Now that the envrionment is loaded and ready to go, the next step will be [scanning an image]({{site.getstarted}}scanning.html).
