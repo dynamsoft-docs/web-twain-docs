@@ -151,7 +151,7 @@ For the purposes of this guide, a Dynamsoft hosted end point is used, but for yo
 
 # Previous Article
 
-If you need a refresher on creating the base project, please review [initalizing the environment]({{site.getstarted}}initialize.html).
+<!-- If you need a refresher on creating the base project, please review [initalizing the environment]({{site.getstarted}}initialize.html). -->
 
 To get the image you are uploading, review [scanning an image]({{site.getstarted}}scanning.html)
 
