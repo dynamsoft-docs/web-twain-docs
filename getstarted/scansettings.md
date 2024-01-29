@@ -158,7 +158,7 @@ With the added parameters, you should receive a grayscale image
 
 # Previous Articles
 
-If you need a refresher on setting up the base project, please review [initalizing the environment]({{site.getstarted}}initialize.html).
+<!-- If you need a refresher on setting up the base project, please review [initalizing the environment]({{site.getstarted}}initialize.html). -->
 
 If you have yet to acquire the image from the scaner, please review [scanning an image]({{site.getstarted}}scanning.html).
 

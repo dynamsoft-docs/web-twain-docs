@@ -13,10 +13,10 @@ tree_list:
   - name: HelloWorld
     path: /getstarted/helloworld.html
     childList:
-      - name: Introduction
-        path: /getstarted/helloworld.html
-      - name: Initializing the Environment
-        path: /getstarted/initialize.html
+      # - name: Introduction
+        # path: /getstarted/helloworld.html
+      # - name: Initializing the Environment
+      #   path: /getstarted/initialize.html
       - name: Scanning an Image
         path: /getstarted/scanning.html
       - name: Uploading Images to the Server

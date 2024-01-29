@@ -17,10 +17,10 @@ This guide will help you create your first browser-based scanning application us
 If you would like to follow a video guide of HelloWorld, you can see our video guide on [YouTube](https://www.youtube.com/watch?v=qShti9aVfLU){:target="_blank"}.
 
 Throughout this guide you will be introduced to:
-- [Initalizing the environment]({{site.getstarted}}initialize.html)
+<!-- - [Initalizing the environment]({{site.getstarted}}initialize.html) -->
 - [Scanning an image]({{site.getstarted}}scanning.html)
 - [Uploading images to the server]({{site.getstarted}}uploading.html)
 - [Setting scan parameters]({{site.getstarted}}scansettings.html)
 - [Editing images]({{site.getstarted}}editing.html)
 
-If you are ready to begin, it is time to begin [initalizing the environment]({{site.getstarted}}initialize.html).
+If you are ready to begin, it is time to begin [scanning an image]({{site.getstarted}}scanning.html).

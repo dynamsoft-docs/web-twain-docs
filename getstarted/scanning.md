@@ -13,6 +13,55 @@ permalink: /getstarted/scanning.html
 
 # Scanning an Image
 
+The main use case for DWT is to acquire images from a document scanner. To achieve this, you will need to create a web application and add the required functionality.
+
+## Initializing the Environment
+
+To use any of the DWT functions, you will need to create a web application that loads the DWT environment.
+
+### Create a web application
+
+Create a `HelloWorld.html` anywhere and copy the `Resources` folder to the same location. You can typically find the `Resources` folder in `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`.
+
+* Resources
+
+  ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)
+
+
+* The project
+
+  ![Build-the-Hello-World-Scan-Page-2]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-2.png)
+
+
+### Include the DWT scripts
+
+Embed the script of the library and add a `div` element for the library on the page.
+
+```html
+<script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+<script src="Resources/dynamsoft.webtwain.config.js"></script>
+```
+
+```html
+<div id="dwtcontrolContainer"></div>
+```
+
+> `dwtcontrolContainer` is the default id for the div in the default DWT resources, and any of the Dynamsoft provided demos. If you would like to use a different id for this div, you will need to change `Dynamsoft.DWT.Containers` in the file `dynamsoft.webtwain.config.js` to match.
+
+### Initialize the DWT environment
+
+Now that the scripts have been included in the application, it is time to write the code to use the DWT library.
+
+DWT has a built in event that, by default, triggers `Dynamsoft_OnReady()` when the DWT Resources are loaded into browser memory. You can use this event to initialize the DWT object.
+
+<!-- DWT has a built in event `OnWebTwainReady` that fires and, by default, triggers `Dynamsoft_OnReady()` when the DWT Resources are loaded into browser memory. You can use this event to initialize the DWT object. -->
+
+```js
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+}
+```
+
 The core functionality of DWT is to acquire images from a scanner. Since you have initalized the environment, you can now utilize the DWT API to get an image from the scanner.
 
 ## Add simple scanning functionality
@@ -122,9 +171,9 @@ After the scanner finishes scanning, the scanned documents will show up in the v
 <!-- TODO
 << Insert links to further readings >> -->
 
-# Previous article
+<!-- # Previous article
 
-If you need a refresher on setting up the base project, please see [initalizing the environment]({{site.getstarted}}initialize.html).
+If you need a refresher on setting up the base project, please see [initalizing the environment]({{site.getstarted}}initialize.html). -->
 
 # Next article
 

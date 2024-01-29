@@ -187,7 +187,7 @@ Using the Rotate CW and Rotate CCW buttons, rotate the image.
 # Previous Articles
 
 If you would like to review any of the previous steps, you can review:
-- [Initalizing the environment]({{site.getstarted}}initialize.html)
+<!-- - [Initalizing the environment]({{site.getstarted}}initialize.html) -->
 - [Scanning an image]({{site.getstarted}}scanning.html)
 - [Uploading images to the server]({{site.getstarted}}uploading.html)
 - [Setting scan parameters]({{site.getstarted}}scansettings.html)
