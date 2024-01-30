@@ -178,11 +178,11 @@ Using the Rotate CW and Rotate CCW buttons, rotate the image.
 
 * Rotating the converted image once using the RotateCW button:
 
-![HelloWorldEditRotate2]({{site.assets}}imgs/HelloWorldEditRotateCW.png)
+![HelloWorldEditCW]({{site.assets}}imgs/HelloWorldEditRotateCW.png)
 
 * Rotating the converted image once using the RotateCCW button:
 
-![HelloWorldEditRotate3]({{site.assets}}imgs/HelloWorldEditRotateCCW.png)
+![HelloWorldEditCCW]({{site.assets}}imgs/HelloWorldEditRotateCCW.png)
 
 # Previous Articles
 
