@@ -9,12 +9,32 @@ tree_list:
       - name: File Types
         path: /getstarted/filetype.html
   - name: DEVELOPMENT
-    isCategory: true      
+    isCategory: true
+  - name: HelloWorld
+    path: /getstarted/helloworld.html
+    childList:
+      # - name: Introduction
+        # path: /getstarted/helloworld.html
+      # - name: Initializing the Environment
+      #   path: /getstarted/initialize.html
+      - name: Scanning an Image
+        path: /getstarted/scanning.html
+      - name: Uploading Images to the Server
+        path: /getstarted/uploading.html
+      - name: Setting Scan Parameters
+        path: /getstarted/scansettings.html
+        # path: /indepth/features/input.html
+      - name: Editing Images
+        path: /getstarted/editing.html
+      # - name: Uploading and Saving Images
+      #   path: /indepth/features/output.html
+      # - name: Deploying the Application
+      #   path: /indepth/deployment/server.html      
   - name: User Guide
     path: /getstarted/
     childList:
-      - name: HelloWorld 
-        path: /getstarted/helloworld.html
+      # - name: HelloWorld 
+      #   path: /getstarted/helloworld.html
       - name: License
         path: /about/license.html
       - name: Set up Dynamsoft Service 
@@ -42,10 +62,10 @@ tree_list:
             path: /indepth/features/barcode.html
           - name: PDF Handling
             path: /indepth/features/pdf.html 
-          - name: Remote Scan
-            path: https://www.dynamsoft.com/remote-scan/docs/introduction/
           - name: PDF Compressor (Beta) 
             path: /indepth/features/pdfc.html 
+          - name: Remote Scan
+            path: https://www.dynamsoft.com/remote-scan/docs/introduction/
   - name: Samples and Demos
     childList:
       - name: Use Web TWAIN in Angular
