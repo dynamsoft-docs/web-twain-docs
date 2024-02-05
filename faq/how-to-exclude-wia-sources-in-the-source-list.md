@@ -27,11 +27,7 @@ DWObject.IfUseTwainDSM = true;
 
 ``` javascript
 var sources = DWObject.GetSourceNames();
-for (var i = 0; i < sources.length; i++) {
-    if (sources[i].toLowerCase().indexOf('wia') != -1) {
-        sources.splice(i, 1);
-    }
-}
+sources = sources.filter(source => !source.toLowerCase().includes('wia'));
 ```
 
 If you are still having issues with a device, please feel free to [contact us](https://www.dynamsoft.com/company/contact/) via email, live chat, or phone call.

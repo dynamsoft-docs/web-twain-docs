@@ -234,7 +234,7 @@ Initiates the library. If there are predefined `Containers` , one `WebTwain` ins
 **Syntax**
 
 ```typescript
-Load(): boolean;
+Load(): Promise<void>;
 ```
 
 **Example**
