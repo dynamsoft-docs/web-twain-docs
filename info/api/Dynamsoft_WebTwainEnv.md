@@ -186,13 +186,13 @@ CreateDWTObject(
 
 **Parameters**
 
-`ContainerId`: Specify the HTML element (typically of the type HTMLDivElement) to hold the UI.
+`ContainerId`: Specify the id of HTML element (typically of the type HTMLDivElement) to hold the UI.
 
 `host`: Specify the host. Default value: `"127.0.0.1"`
 
-`port`: Specify the port. Default value: `18625`
+`port`: Specify the port. Default value: `18622`
 
-`portSSL`: Specify the SSL port. Default value: `18626`
+`portSSL`: Specify the SSL port. Default value: `18623`
 
 `successCallback`: A callback function that is executed if the request succeeds.
 - `DWObject`: The `WebTwain` instance.
@@ -228,7 +228,7 @@ CreateDWTObject(
 
 ```typescript
 var DWObject;
-Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18625, 18626,
+Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18622, 18623,
     function (DWTObject) { 
         DWObject = DWTObject;
         DWObject.SelectSourceAsync().then(function () {
@@ -277,7 +277,7 @@ CreateDWTObjectEx(
   dwtInitialConfig: DWTInitialConfig, 
   successCallBack: (DWObject: WebTwain) => void, 
   failureCallBack: (errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -321,8 +321,8 @@ var DWObject;
 Dynamsoft.DWT.CreateDWTObjectEx({
       WebTwainId: 'dwtId',
       Host: "127.0.0.1",
-      Port: 18625,
-      PortSSL : 18626
+      Port: 18622,
+      PortSSL : 18623
   },function (DWTObject) {
       DWObject = DWTObject;
       DWObject.Viewer.bind("dwtcontrolContainer");
