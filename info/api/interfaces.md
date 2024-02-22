@@ -28,9 +28,9 @@ needGenerateH3Content: true
 ```typescript
 interface DWTInitialConfig {
     WebTwainId: string,
-    Host ? : string,
-    Port ? : string,
-    PortSSL ? : string,
+    Host ? : string, // Default value: "127.0.0.1"
+    Port ? : string | number, // Default value: 18625
+    PortSSL ? : string | number, // Default value: 18626
 }
 ```
 
