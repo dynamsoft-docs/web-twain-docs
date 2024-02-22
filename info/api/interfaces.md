@@ -58,8 +58,8 @@ interface Container {
 ```typescript
 interface DisplayInfo {
     loaderBarSource?: string;
-	loaderBarClassName?: string;
-	buttons?: any;
+    loaderBarClassName?: string;
+    buttons?: any;
     customProgressText?: any;
     dialogText?: any;
     errorMessages?: any;
