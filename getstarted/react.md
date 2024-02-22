@@ -96,16 +96,8 @@ export default class DWT extends React.Component {
                     IfDisableSourceAfterAcquire: true,
                 });
             })
-            .then( (result) => {
-                console.log(result);
-            })
             .catch((exp) => {
                 console.error(exp.message);
-            })
-            .finally(() => {
-                this.DWObject.CloseSourceAsync().catch((e) => {
-                    console.error(e);
-                });
             });
         }
     }
