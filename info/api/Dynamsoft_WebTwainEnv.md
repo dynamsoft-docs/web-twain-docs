@@ -843,7 +843,7 @@ Host: string;
 
 **Usage Notes**
 
-Default value: `localhost`.
+Default value: `127.0.0.1`.
 
 ---
 
