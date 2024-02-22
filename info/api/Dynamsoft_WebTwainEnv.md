@@ -488,7 +488,7 @@ Dynamsoft.DWT.Load();
 
 **Usage Note**
 
-- Only used if [`AutoLoad`](#autoload) is set to false.
+- Only used if [`AutoLoad`](#autoload) is set to `false`.
 
 ---
 
