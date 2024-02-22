@@ -488,7 +488,7 @@ Dynamsoft.DWT.Load();
 
 **Usage Note**
 
-- Only used if [`AutoLoad`](#autoload) is set to false.
+- Only used if [`AutoLoad`](#autoload) is set to `false`.
 
 ---
 
@@ -843,7 +843,7 @@ Host: string;
 
 **Usage Notes**
 
-Default value: `localhost`.
+Default value: `127.0.0.1`.
 
 ---
 
