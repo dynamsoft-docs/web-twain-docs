@@ -186,13 +186,13 @@ CreateDWTObject(
 
 **Parameters**
 
-`ContainerId`: Specify the HTML element (typically of the type HTMLDivElement) to hold the UI.
+`ContainerId`: Specify the id of HTML element (typically of the type HTMLDivElement) to hold the UI.
 
 `host`: Specify the host. Default value: `"127.0.0.1"`
 
-`port`: Specify the port. Default value: `18625`
+`port`: Specify the port. Default value: `18622`
 
-`portSSL`: Specify the SSL port. Default value: `18626`
+`portSSL`: Specify the SSL port. Default value: `18623`
 
 `successCallback`: A callback function that is executed if the request succeeds.
 - `DWObject`: The `WebTwain` instance.
@@ -228,7 +228,7 @@ CreateDWTObject(
 
 ```typescript
 var DWObject;
-Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18625, 18626,
+Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18622, 18623,
     function (DWTObject) { 
         DWObject = DWTObject;
         DWObject.SelectSourceAsync().then(function () {
@@ -277,7 +277,7 @@ CreateDWTObjectEx(
   dwtInitialConfig: DWTInitialConfig, 
   successCallBack: (DWObject: WebTwain) => void, 
   failureCallBack: (errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -321,8 +321,8 @@ var DWObject;
 Dynamsoft.DWT.CreateDWTObjectEx({
       WebTwainId: 'dwtId',
       Host: "127.0.0.1",
-      Port: 18625,
-      PortSSL : 18626
+      Port: 18622,
+      PortSSL : 18623
   },function (DWTObject) {
       DWObject = DWTObject;
       DWObject.Viewer.bind("dwtcontrolContainer");
@@ -929,7 +929,7 @@ Default Value: `false`.
 
 ## IfUseActiveXforIE10Plus
 
-This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. If `true`, ActiveX will be used, else HTML5 will be used.
+This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. 
 
 **Syntax**
 
@@ -963,7 +963,9 @@ IfUseActiveXForIE10Plus: boolean;
 
 **Usage Notes**
 
-Default value: `false`. 
+- Default value: `false`. 
+- If set to `true`, ActiveX will be used, else HTML5 will be used.
+- This property needs to be set before Dynamic Web TWAIN loads.
 
 ---
 
@@ -1125,7 +1127,7 @@ ServiceInstallerLocation: string;
 
 ## UseDefaultViewer
 
-Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+Whether to use the built-in viewer. 
 
 **Syntax**
 
@@ -1156,6 +1158,11 @@ UseDefaultViewer: boolean;
 
 </table>
 </div>
+
+**Usage Notes**
+
+- If it is set to `false`, the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+
 
 ---
 
@@ -1210,7 +1217,7 @@ function Dynamsoft_OnReady() {
 
 ## OnWebTwainError
 
-A built-in callback triggered when an error is detected when loading the Web TWAIN environment
+A built-in callback triggered when an error is detected when loading the Web TWAIN environment.
 
 **Syntax**
 
