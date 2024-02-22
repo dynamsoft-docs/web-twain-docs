@@ -52,6 +52,12 @@ The recommended fix is to patch the operating system, you can find the patch [he
 
 * selectedAreaBorderColor
 
+## 18.2
+
+### Global
+
+* Dynamsoft.DWT.GetWebTwainEx()
+
 ## 18.0
 
 ### Dynamic Web TWAIN
