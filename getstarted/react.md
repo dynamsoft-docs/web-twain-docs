@@ -93,7 +93,7 @@ export default class DWT extends React.Component {
             this.DWObject.SelectSourceAsync()
             .then(() => {
                 return this.DWObject.AcquireImageAsync({
-                    IfDisableSourceAfterAcquire: true,
+                    IfCloseSourceAfterAcquire: true,
                 });
             })
             .catch((exp) => {

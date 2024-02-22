@@ -139,24 +139,16 @@ export default {
         alert("dwt init fail");
         return;
       }
-      if (this.DWObject.UseLocalService) {
+ 
         this.DWObject.SelectDeviceAsync(this.sourceList[this.selectedIndex])
           .then(() => {
-            return this.DWObject.OpenSourceAsync();
-          })
-          .then(() => {
-            return this.DWObject.AcquireImageAsync({});
+            return this.DWObject.AcquireImageAsync({
+                IfCloseSourceAfterAcquire: true 
+            });
           })
           .catch((e) => {
             console.error(e);
-          })
-          .finally(() => {
-            console.log("CloseSource")
-            this.DWObject.CloseSourceAsync().catch((e) => {
-              console.error(e);
-            });
           });
-      }
     },
     /**
      * Open local images.
