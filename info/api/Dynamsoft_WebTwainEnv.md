@@ -169,7 +169,100 @@ Specify the class name of the DIV element that contains the loader bar. With thi
 
 ## CreateDWTObject()
 
-Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate a UI and bind it to this element.
+Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate UI and bind it to this element.
+
+**Syntax**
+
+```typescript
+CreateDWTObject(
+    ContainerId: string, 
+    host?: string, 
+    port?: string | number, 
+    portSSL?: string | number, 
+    successCallBack: (DWObject: WebTwain) => void,
+    failureCallBack: (errorString: string) => void
+): boolean;
+```
+
+**Parameters**
+
+`ContainerId`: Specify the id of HTML element (typically of the type HTMLDivElement) to hold the UI.
+
+`host`: Specify the host. Default value: `"127.0.0.1"`
+
+`port`: Specify the port. Default value: `18622`
+
+`portSSL`: Specify the SSL port. Default value: `18623`
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `DWObject`: The `WebTwain` instance.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorString`: The error string.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```typescript
+var DWObject;
+Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18622, 18623,
+    function (DWTObject) { 
+        DWObject = DWTObject;
+        DWObject.SelectSourceAsync().then(function () {
+        DWObject.AcquireImageAsync({ 
+            IfCloseSourceAfterAcquire: true 
+        });
+    }).catch(function (exp) {
+        alert(exp.message);
+    });}, 
+    function (errorString) {console.log(errorString);}
+);
+```
+
+OR
+
+```typescript
+var DWObject;
+Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',
+        function (DWTObject) { 
+            DWObject = DWTObject;
+            DWObject.SelectSourceAsync().then(function () {
+            DWObject.AcquireImageAsync({ 
+                IfCloseSourceAfterAcquire: true 
+            });
+        }).catch(function (exp) {
+            alert(exp.message);
+        });}, 
+        function (errorString) {console.log(errorString);}
+);
+```
+
+**Usage Notes**
+
+- `host`, `port`, `portSSL`: These three optional parameters must be set at the same time.
 
 ---
 
@@ -177,59 +270,185 @@ Creates a new `WebTwain` instance that listens to the specified host & ports. An
 
 Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId`.
 
+**Syntax**
+
 ```typescript
-interface DWTInitialConfig {
-    WebTwainId: string,
-    Host ? : string,
-    Port ? : string,
-    PortSSL ? : string,
-}
+CreateDWTObjectEx(
+  dwtInitialConfig: DWTInitialConfig, 
+  successCallBack: (DWObject: WebTwain) => void, 
+  failureCallBack: (errorString: string) => void
+): boolean;
+```
+
+**Parameters**
+
+`dwtInitialConfig`: Specify the initial configuration of the instance. Please refer to [`DWTInitialConfig`]({{site.info}}api/Interfaces.html#DWTInitialConfig).
+
+`successCallback`: A callback function that is executed if the request succeeds.
+- `DWObject`: The `WebTwain` instance.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorString`: The error string.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+<td align="center">v16.0+</td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```typescript
+var DWObject;
+Dynamsoft.DWT.CreateDWTObjectEx({
+      WebTwainId: 'dwtId',
+      Host: "127.0.0.1",
+      Port: 18622,
+      PortSSL : 18623
+  },function (DWTObject) {
+      DWObject = DWTObject;
+      DWObject.Viewer.bind("dwtcontrolContainer");
+      DWObject.Viewer.show();
+      DWObject.SelectSourceAsync().then(function () {
+              DWObject.AcquireImageAsync({ 
+                  IfCloseSourceAfterAcquire: true 
+              });
+          }).catch(function (exp) {
+              alert(exp.message);
+          });
+  }, function (errorString) {
+      console.log(errorString);
+});
 ```
 
 ---
 
 ## DeleteDWTObject()
 
-Delete the `WebTwain` instance specified by `Id` which can either be a `ContainerId` or a `WebTwainId`.
+Delete and destroy the specified `WebTwain` instance.
 
-<!-- **Syntax**
+**Syntax**
 
 ```typescript
+DeleteDWTObject(Id: string): boolean;
+```
 
-``` -->
+**Parameters**
+
+`Id`: Specify the instance with its `ContainerId` or `WebTwainId`.
+
+**Return Value**
+
+`true`: Successfully.
+
+`false`: Failed.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
 ## GetWebTwain()
 
-Gets an `WebTwain` instance by its `ContainerId`.
+Return the `WebTwain` instance by its `ContainerId` or `WebTwainId`.
 
 **Syntax**
 
 ```typescript
-GetWebTwain(containerId: string): void;
+GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
 ```
+
+**Parameters**
+
+`ContainerIdOrWebTwainId`: Specify the instance with its `ContainerId` or `WebTwainId`.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.1+</td>
+<td align="center">v10.1+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
 ```javascript
 var DWObject;
-		function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
-        }
+function Dynamsoft_OnReady() {
+    DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+}
 ```
+
+**Usage Note**
+
+- If no parameter is provided, the first valid `WebTwain` instance is returnd.
 
 ---
 
-## GetWebTwainEx()
+<!-- ## GetWebTwainEx()
 
 Gets an `WebTwain` instance by its `WebTwainId`.
 
----
+--- -->
   
 ## Load()
 
-Initiates the library. If there are predefined `Containers` , one `WebTwain` instance will be created for each `Container`. Only used if [`AutoLoad`](#autoload) is set to false.
+Initiates the library. If there are predefined [`Containers`](#containers), one `WebTwain` instance will be created for each `Container`. 
 
 **Syntax**
 
@@ -237,11 +456,39 @@ Initiates the library. If there are predefined `Containers` , one `WebTwain` ins
 Load(): Promise<void>;
 ```
 
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.2+</td>
+<td align="center">v10.2+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 
 ```javascript
 Dynamsoft.DWT.Load();
 ```
+
+**Usage Note**
+
+- Only used if [`AutoLoad`](#autoload) is set to `false`.
 
 ---
 
@@ -252,7 +499,58 @@ Registers an environmental event.
 **Syntax**
 
 ```typescript
-Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>any): void;
+Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>any): boolean;
+```
+
+**Parameters**
+
+`eventName`: Specify the event. Supported events: [`OnWebTwainReady`](#onwebtwainready), [`OnWebTwainError`](#onwebtwainerror), [`OnWebTwainPostExecute`](#onwebtwainpostexecute), [`OnWebTwainPreExecute`](#onwebtwainpreexecute)
+
+`listener`: Specify the callback.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v1.0+</td>
+<td align="center">v10.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+Dynamsoft.DWT.RegisterEvent('OnWebTwainReady',
+ Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
+);
+ 
+function Dynamsoft_OnReady() {
+DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+}
+ 
+Dynamsoft.DWT.RegisterEvent("OnWebTwainError", function (error) {
+});
+ 
+Dynamsoft.DWT.RegisterEvent("OnWebTwainPostExecute", function () {
+});
+ 
+Dynamsoft.DWT.RegisterEvent("OnWebTwainPreExecute", function () {
+});
 ```
 
 ---
@@ -260,6 +558,36 @@ Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>
 ## Unload()
 
 Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
+
+**Syntax**
+
+```typescript
+Unload(): void;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.2+</td>
+<td align="center">v10.2+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -331,6 +659,36 @@ UpdateCert(
 
 Specifies whether or not to load the Web TWAIN environment when the Dynamic Web TWAIN scripts are loaded into memory.
 
+**Syntax**
+
+```typescript
+AutoLoad: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.2+</td>
+<td align="center">v10.2+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
+
 **Usage Notes**
 
 Default value: `true`.
@@ -339,26 +697,77 @@ Default value: `true`.
 
 ## Containers
 
-An array of `Container` definitions that specifies the UI elements for `WebTwain` instances. The `Container` interface is defined below
+Defines the Id and UI of the WebTwain instances.
 
-``` typescript
-interface Container {
-    WebTwainId?: string, // Id of the WebTwain instance
-    ContainerId?: string, // Id of the element
-    Width?: string | number, // Width of the element
-    Height?: string | number // Height of the element
-}
+**Syntax**
+
+```typescript
+Containers: Container[];
 ```
 
-`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+Please refer to [`Container`]({{site.info}}api/Interfaces.html#Container).
 
-`Width` and `Height` determine the initial size of `Viewer` object.
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.1+</td>
+<td align="center">v10.1+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
 ## CustomizableDisplayInfo
 
-This property contains all the customizable elements of the Dynamic Web TWAIN interface.
+Define the display info.
+
+**Syntax**
+
+```typescript
+CustomizableDisplayInfo: DisplayInfo;
+```
+
+Please refer to [`DisplayInfo`]({{site.info}}api/Interfaces.html#DisplayInfo).
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -366,21 +775,111 @@ This property contains all the customizable elements of the Dynamic Web TWAIN in
 
 This property allows you to specify a specified name to the client machine that will be used to identify the client machine when using Dynamsoft License Server. If this is not set, a randomly generated non-tracable UID will be generated.
 
+**Syntax**
+
+```typescript
+DeviceFriendlyName: string;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.0+</td>
+</tr>
+
+</table>
+</div>
+
 ---
 
 ## Host
 
-This property allows you to specify the target address for the local Dynamsoft Service.
+Specify the target address for the local Dynamsoft Service.
+
+**Syntax**
+
+```typescript
+Host: string;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+</tr>
+
+</table>
+</div>
 
 **Usage Notes**
 
-Default value: `localhost`.
+Default value: `127.0.0.1`.
 
 ---
 
 ## `IfAddMD5InUploadHeader`
   
 Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
+
+**Syntax**
+
+```typescript
+IfAddMD5InUploadHeader: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Usage Notes**
 
@@ -392,6 +891,36 @@ Default value: `false`.
 
 This property defines whether any Dynamic Web TWAIN generated masks will apply to the entire window or just the `Viewer` object. Setting this property to `true` will confine the mask to the `Viewer` object.
 
+**Syntax**
+
+```typescript
+IfConfineMaskWithinTheViewer: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
 **Usage Notes**
 
 Default Value: `false`.
@@ -400,11 +929,43 @@ Default Value: `false`.
 
 ## IfUseActiveXforIE10Plus
 
-This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. If `true`, ActiveX will be used, else HTML5 will be used.
+This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. 
+
+**Syntax**
+
+```typescript
+IfUseActiveXForIE10Plus: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.3+</td>
+<td align="center">v10.3+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
 
 **Usage Notes**
 
-Default value: `false`. 
+- Default value: `false`. 
+- If set to `true`, ActiveX will be used, else HTML5 will be used.
+- This property needs to be set before Dynamic Web TWAIN loads.
 
 ---
 
@@ -412,11 +973,83 @@ Default value: `false`.
 
 This is a readonly property that specifies what version the server side Dynamic Web TWAIN resources are being used with the web application.
 
+**Syntax**
+
+```typescript
+readonly JSVersion: string;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v13.1+</td>
+<td align="center">v13.1+</td>
+<td align="center">v13.1+</td>
+<td align="center">v13.1+</td>
+<td align="center">v13.1+</td>
+</tr>
+
+</table>
+</div>
+
 ---
 
 ## ProductKey
 
 Sets or returns the product key for the library. A valid product key is required for each module of Dynamic Web TWAIN.
+
+**Syntax**
+
+```typescript
+ProductKey: string;	
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.1+</td>
+<td align="center">v10.1+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```typescript
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******';
+```
+
+If you have multiple license keys, separate them with semicolons like below:
+
+```typescript
+Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******';
+```
 
 ---
 
@@ -424,17 +1057,112 @@ Sets or returns the product key for the library. A valid product key is required
 
 Sets or returns where the path to the Dynamic Web TWAIN resource files are hosted.
 
+**Syntax**
+
+```typescript
+ResourcesPath: string;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.1+</td>
+<td align="center">v10.1+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
+
 ---
 
 ## ServiceInstallerLocation
 
 Sets or returns where the path to the Dynamsoft Service installers are hosted.
 
+**Syntax**
+
+```typescript
+ServiceInstallerLocation: string;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+<td align="center">v18.4+</td>
+</tr>
+
+</table>
+</div>
+
 ---
 
 ## UseDefaultViewer
 
-Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+Whether to use the built-in viewer. 
+
+**Syntax**
+
+```typescript
+UseDefaultViewer: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage Notes**
+
+- If it is set to `false`, the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+
 
 ---
 
@@ -442,20 +1170,87 @@ Whether to use the built-in viewer. If it is set to `false` , the file `dynamsof
 
 A built-in callback triggered when the Web TWAIN resources have completed loading
 
+**Syntax**
+
+```typescript
+RegisterEvent("OnWebTwainReady", function () {});
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v10.1+</td>
+<td align="center">v10.1+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
+
 **Example**
 ```javascript
 Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', 
   Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
 ); 
+
+var DWObject;
+
+function Dynamsoft_OnReady() {
+  DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+}
 ```
 
 ---
 
 ## OnWebTwainError
 
-A built-in callback triggered when an error is detected when loading the Web TWAIN environment
+A built-in callback triggered when an error is detected when loading the Web TWAIN environment.
+
+**Syntax**
+
+```typescript
+RegisterEvent("OnWebTwainError", function () {});
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v18.2+</td>
+<td align="center">v18.2+</td>
+<td align="center">v18.2+</td>
+<td align="center">v18.2+</td>
+<td align="center">v18.2+</td>
+</tr>
+
+</table>
+</div>
 
 **Example**
+
 ```javascript
 Dynamsoft.DWT.RegisterEvent('OnWebTwainError', 
   Dynamsoft_OnError 
@@ -476,7 +1271,39 @@ This event triggers at the resolution of an asynchronous API.
 
 The default behaviour is to hide the mask and loading spinner triggered by `OnWebTwainPreExecute`.
 
-You may override this function to implement your own post-excecute scenario.
+You may override this function to implement your own post-excecute scenario. Please refer to this [article]({{site.indepth}}features/ui.html#loading-bar-and-backdrop).
+
+
+**Syntax**
+
+```typescript
+RegisterEvent("OnWebTwainPostExecute", function () {});
+```
+
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v10.3+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -486,4 +1313,34 @@ This event triggers at the beginning of an asynchronous API.
 
 The default behaviour is to display a mask and a loading spinner.
 
-You may override this function to either hide the default loading spinner, or define your own
+You may override this function to either hide the default loading spinner, or define your own. Please refer to this [article]({{site.indepth}}features/ui.html#loading-bar-and-backdrop).
+
+**Syntax**
+
+```typescript
+RegisterEvent("OnWebTwainPreExecute", function () {});
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v10.3+</td>
+<td align="center">v11.0+</td>
+<td align="center">v11.0+</td>
+<td align="center">v12.1+</td>
+</tr>
+
+</table>
+</div>

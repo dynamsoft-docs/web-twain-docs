@@ -19,6 +19,54 @@ needGenerateH3Content: true
 
 ---
 
+## Global
+
+### DWTInitialConfig
+
+**Syntax**
+
+```typescript
+interface DWTInitialConfig {
+    WebTwainId: string,
+    Host ? : string, // Default value: "127.0.0.1"
+    Port ? : string | number, // Default value: 18622
+    PortSSL ? : string | number, // Default value: 18623
+}
+```
+
+### Container
+
+**Syntax**
+
+``` typescript
+interface Container {
+    WebTwainId?: string, // Id of the WebTwain instance
+    ContainerId?: string, // Id of the element
+    Width?: string | number, // Width of the element
+    Height?: string | number // Height of the element
+}
+```
+
+`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+
+`Width` and `Height` determine the initial size of `Viewer` object.
+
+### DisplayInfo
+
+**Syntax**
+
+```typescript
+interface DisplayInfo {
+    loaderBarSource?: string;
+    loaderBarClassName?: string;
+    buttons?: any;
+    customProgressText?: any;
+    dialogText?: any;
+    errorMessages?: any;
+    generalMessages?: any;
+}
+```
+
 ## Scan
 
 ### Device
