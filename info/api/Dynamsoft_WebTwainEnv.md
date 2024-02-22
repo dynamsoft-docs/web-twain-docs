@@ -169,7 +169,7 @@ Specify the class name of the DIV element that contains the loader bar. With thi
 
 ## CreateDWTObject()
 
-Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate a UI and bind it to this element.
+Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate UI and bind it to this element.
 
 **Syntax**
 
@@ -181,18 +181,18 @@ CreateDWTObject(
     portSSL?: string | number, 
     successCallBack: (DWObject: WebTwain) => void,
     failureCallBack: (errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
 
 `ContainerId`: Specify the HTML element (typically of the type HTMLDivElement) to hold the UI.
 
-`host`: Specify the host.
+`host`: Specify the host. Default value: `"127.0.0.1"`
 
-`port`: Specify the port.
+`port`: Specify the port. Default value: `18625`
 
-`portSSL`: Specify the SSL port.
+`portSSL`: Specify the SSL port. Default value: `18626`
 
 `successCallback`: A callback function that is executed if the request succeeds.
 - `DWObject`: The `WebTwain` instance.
@@ -228,7 +228,7 @@ CreateDWTObject(
 
 ```typescript
 var DWObject;
-Dynamsoft.DWT.CreateDWTObject('DWTemessage',"127.0.0.1", 18625, 18626,
+Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18625, 18626,
     function (DWTObject) { 
         DWObject = DWTObject;
         DWObject.SelectSourceAsync().then(function () {
@@ -241,6 +241,28 @@ Dynamsoft.DWT.CreateDWTObject('DWTemessage',"127.0.0.1", 18625, 18626,
     function (errorString) {console.log(errorString);}
 );
 ```
+
+OR
+
+```typescript
+var DWObject;
+Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',
+        function (DWTObject) { 
+            DWObject = DWTObject;
+            DWObject.SelectSourceAsync().then(function () {
+            DWObject.AcquireImageAsync({ 
+                IfCloseSourceAfterAcquire: true 
+            });
+        }).catch(function (exp) {
+            alert(exp.message);
+        });}, 
+        function (errorString) {console.log(errorString);}
+);
+```
+
+**Usage Notes**
+
+- `host`, `port`, `portSSL`: These three optional parameters must be set at the same time.
 
 ---
 
@@ -477,12 +499,12 @@ Registers an environmental event.
 **Syntax**
 
 ```typescript
-Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>any): void;
+Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>any): boolean;
 ```
 
 **Parameters**
 
-`eventName`: Specify the event. 
+`eventName`: Specify the event. Supported events: [`OnWebTwainReady`](#onwebtwainready), [`OnWebTwainError`](#onwebtwainerror), [`OnWebTwainPostExecute`](#onwebtwainpostexecute), [`OnWebTwainPreExecute`](#onwebtwainpreexecute)
 
 `listener`: Specify the callback.
 
@@ -513,16 +535,21 @@ Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>
 **Example**
 
 ```javascript
-Dynamsoft.DWT.RegisterEvent("click", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+Dynamsoft.DWT.RegisterEvent('OnWebTwainReady',
+ Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
+);
+ 
+function Dynamsoft_OnReady() {
+DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+}
+ 
+Dynamsoft.DWT.RegisterEvent("OnWebTwainError", function (error) {
 });
-
-DWObject.Viewer.on("dblclick", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+ 
+Dynamsoft.DWT.RegisterEvent("OnWebTwainPostExecute", function () {
 });
-
-DWObject.Viewer.on("contextmenu", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+ 
+Dynamsoft.DWT.RegisterEvent("OnWebTwainPreExecute", function () {
 });
 ```
 
