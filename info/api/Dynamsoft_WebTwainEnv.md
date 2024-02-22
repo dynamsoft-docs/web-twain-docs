@@ -929,7 +929,7 @@ Default Value: `false`.
 
 ## IfUseActiveXforIE10Plus
 
-This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. If `true`, ActiveX will be used, else HTML5 will be used.
+This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. 
 
 **Syntax**
 
@@ -963,7 +963,9 @@ IfUseActiveXForIE10Plus: boolean;
 
 **Usage Notes**
 
-Default value: `false`. 
+- Default value: `false`. 
+- If set to `true`, ActiveX will be used, else HTML5 will be used.
+- This property needs to be set before Dynamic Web TWAIN loads.
 
 ---
 
@@ -1125,7 +1127,7 @@ ServiceInstallerLocation: string;
 
 ## UseDefaultViewer
 
-Whether to use the built-in viewer. If it is set to `false` , the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+Whether to use the built-in viewer. 
 
 **Syntax**
 
@@ -1156,6 +1158,11 @@ UseDefaultViewer: boolean;
 
 </table>
 </div>
+
+**Usage Notes**
+
+- If it is set to `false`, the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
+
 
 ---
 
@@ -1210,7 +1217,7 @@ function Dynamsoft_OnReady() {
 
 ## OnWebTwainError
 
-A built-in callback triggered when an error is detected when loading the Web TWAIN environment
+A built-in callback triggered when an error is detected when loading the Web TWAIN environment.
 
 **Syntax**
 
