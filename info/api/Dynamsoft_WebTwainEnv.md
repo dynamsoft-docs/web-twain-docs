@@ -482,7 +482,7 @@ Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>
 
 **Parameters**
 
-`eventName`: Specify the event. Supported events: [`OnWebTwainReady`](#onwebtwainready), [`OnWebTwainError`](#onwebtwainerror), [`OnWebTwainPostExecute`](#onwebtwainpostexecute), [`OnWebTwainPreExecute`](#onwebtwainpreexecute)
+`eventName`: Specify the event. 
 
 `listener`: Specify the callback.
 
@@ -513,15 +513,17 @@ Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>
 **Example**
 
 ```javascript
-Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', 
-  Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
-); 
+Dynamsoft.DWT.RegisterEvent("click", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
+});
 
-var DWObject;
+DWObject.Viewer.on("dblclick", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
+});
 
-function Dynamsoft_OnReady() {
-  DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
-}
+DWObject.Viewer.on("contextmenu", function (dwtEvent, domEvent) {
+  console.log(dwtEvent, domEvent);
+});
 ```
 
 ---
