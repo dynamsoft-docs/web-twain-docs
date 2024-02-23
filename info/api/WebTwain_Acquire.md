@@ -121,7 +121,7 @@ AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
     failureCallBack?: (deviceConfiguration?: DeviceConfiguration, errorCode: number, errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -157,94 +157,6 @@ AcquireImage(
 
 </table>
 </div>
-
-**Usage notes**
-
-`extendedImageInfoQueryLevel` is 0 by default which means the following information will be retrieved (if available):
-
-| Label                  | Value  |
-| :--------------------- | :----- |
-| TWEI_BARCODEX          | 0x1200 |
-| TWEI_BARCODEY          | 0x1201 |
-| TWEI_BARCODETEXT       | 0x1202 |
-| TWEI_BARCODETYPE       | 0x1203 |
-| TWEI_ENDORSEDTEXT      | 0x1213 |
-| TWEI_BARCODECONFIDENCE | 0x121A |
-| TWEI_BARCODEROTATION   | 0x121B |
-| TWEI_BARCODETEXTLENGTH | 0x121C |
-| TWEI_BOOKNAME          | 0x1238 |
-| TWEI_CHAPTERNUMBER     | 0x1239 |
-| TWEI_DOCUMENTNUMBER    | 0x123A |
-| TWEI_PAGENUMBER        | 0x123B |
-| TWEI_CAMERA            | 0x123C |
-| TWEI_FRAMENUMBER       | 0x123D |
-| TWEI_FRAME             | 0x123E |
-| TWEI_PIXELFLAVOR       | 0x123F |
-| TWEI_MAGDATA           | 0x1243 |
-| TWEI_MAGTYPE           | 0x1244 |
-| TWEI_PAGESIDE          | 0x1245 |
-
-If it's set to 1, the following will also be retrieved (if available):
-
-| Label                      | Value  |
-| :------------------------- | :----- |
-| TWEI_DESHADETOP            | 0x1204 |
-| TWEI_DESHADELEFT           | 0x1205 |
-| TWEI_DESHADEHEIGHT         | 0x1206 |
-| TWEI_DESHADEWIDTH          | 0x1207 |
-| TWEI_DESHADESIZE           | 0x1208 |
-| TWEI_SPECKLESREMOVED       | 0x1209 |
-| TWEI_HORZLINEXCOORD        | 0x120A |
-| TWEI_HORZLINEYCOORD        | 0x120B |
-| TWEI_HORZLINELENGTH        | 0x120C |
-| TWEI_HORZLINETHICKNESS     | 0x120D |
-| TWEI_VERTLINEXCOORD        | 0x120E |
-| TWEI_VERTLINEYCOORD        | 0x120F |
-| TWEI_VERTLINELENGTH        | 0x1210 |
-| TWEI_VERTLINETHICKNESS     | 0x1211 |
-| TWEI_PATCHCODE             | 0x1212 |
-| TWEI_FORMCONFIDENCE        | 0x1214 |
-| TWEI_FORMTEMPLATEMATCH     | 0x1215 |
-| TWEI_FORMTEMPLATEPAGEMATCH | 0x1216 |
-| TWEI_FORMHORZDOCOFFSET     | 0x1217 |
-| TWEI_FORMVERTDOCOFFSET     | 0x1218 |
-| TWEI_BARCODECOUNT          | 0x1219 |
-| TWEI_DESHADECOUNT          | 0x121D |
-| TWEI_DESHADEBLACKCOUNTOLD  | 0x121E |
-| TWEI_DESHADEBLACKCOUNTNEW  | 0x121F |
-| TWEI_DESHADEBLACKRLMIN     | 0x1220 |
-| TWEI_DESHADEBLACKRLMAX     | 0x1221 |
-| TWEI_DESHADEWHITECOUNTOLD  | 0x1222 |
-| TWEI_DESHADEWHITECOUNTNEW  | 0x1223 |
-| TWEI_DESHADEWHITERLMIN     | 0x1224 |
-| TWEI_DESHADEWHITERLAVE     | 0x1225 |
-| TWEI_DESHADEWHITERLMAX     | 0x1226 |
-| TWEI_BLACKSPECKLESREMOVED  | 0x1227 |
-| TWEI_WHITESPECKLESREMOVED  | 0x1228 |
-| TWEI_HORZLINECOUNT         | 0x1229 |
-| TWEI_VERTLINECOUNT         | 0x122A |
-| TWEI_DESKEWSTATUS          | 0x122B |
-| TWEI_SKEWORIGINALANGLE     | 0x122C |
-| TWEI_SKEWFINALANGLE        | 0x122D |
-| TWEI_SKEWCONFIDENCE        | 0x122E |
-| TWEI_SKEWWINDOWX1          | 0x122F |
-| TWEI_SKEWWINDOWY1          | 0x1230 |
-| TWEI_SKEWWINDOWX2          | 0x1231 |
-| TWEI_SKEWWINDOWY2          | 0x1232 |
-| TWEI_SKEWWINDOWX3          | 0x1233 |
-| TWEI_SKEWWINDOWY3          | 0x1234 |
-| TWEI_SKEWWINDOWX4          | 0x1235 |
-| TWEI_SKEWWINDOWY4          | 0x1236 |
-| TWEI_ICCPROFILE            | 0x1240 |
-| TWEI_LASTSEGMENT           | 0x1241 |
-| TWEI_SEGMENTNUMBER         | 0x1242 |
-| TWEI_FILESYSTEMSOURCE      | 0x1246 |
-| TWEI_IMAGEMERGED           | 0x1247 |
-| TWEI_MAGDATALENGTH         | 0x1248 |
-| TWEI_PAPERCOUNT            | 0x1249 |
-| TWEI_PRINTERTEXT           | 0x124A |
-
-If it's set to 2, then besides what's mentioned in the two tables above, the Dynamic Web TWAIN library will also try to query the scanner for its own custom extended image info.
 
 **Example**
 
@@ -500,7 +412,7 @@ Display the TWAIN source's built-in user interface.
 EnableSourceUI(
     successCallBack: () => void,
     failureCallBack: (errorCode: number, errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -990,7 +902,7 @@ Start the acquisition by passing all settings at once.
 **Syntax**
 
 ```typescript
-startScan(scanSetup: ScanSetup): Promise<IScanSetup>;
+startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 ```
 
 **Parameters**
@@ -2532,7 +2444,7 @@ DefaultSourceName: string;
 <td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported</td>
+<td align="center">v17.0+</td>
 <td align="center">not supported</td>
 </tr>
 
@@ -4086,7 +3998,7 @@ Gets detailed information about all capabilities of the current data source.
 getCapabilities(
     successCallback: (capabilityDetails: CapabilityDetails[]) => void,
     failureCallback: (errorCode: number, errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -4137,7 +4049,7 @@ setCapabilities(
     capabilities: Capabilities,
     successCallback: (capabilities: Capabilities) => void,
     failureCallback: (capabilities: Capabilities) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
