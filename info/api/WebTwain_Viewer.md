@@ -118,7 +118,7 @@ Clear the selected area(s) on the current page.
 **Syntax**
 
 ```typescript
-clearSelectedAreas(): void;
+clearSelectedAreas(): boolean;
 ```
 
 **Availability**
@@ -222,7 +222,7 @@ Only one CustomElement object can be created. If you try creating another one, y
 
 If the width defined by the CustomElement object exceeds the width of the main viewer, the width of the main viewer is used.
 
-The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
+The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects.
 
 ---
 
@@ -523,7 +523,7 @@ Replace the previous `ShowImageEditor()` method.
 
 Only one ImageEditor object can be created. If you try creating it again, you'll get the error 'An ImageEditor already exists.' and the existing ImageEditor object will be returned.
 
-The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
+The method [ `unbind()` ](#unbind) will dispose all created ImageEditor objects.
 
 ---
 
@@ -634,7 +634,7 @@ By default, scrolling the scroll bar on Thumbnail does not trigger the `topchang
 
 Only one ThumbnailViewer object can be created. If you try creating it again, you will get the error 'A ThumbnailViewer already exists.' and the existing ThumbnailViewer object will be returned.
 
-The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects, ThumbnailViewer objects and ImageEditor objects.
+The method [ `unbind()` ](#unbind) will dispose all created ThumbnailViewer objects.
 
 ---
 
@@ -1184,7 +1184,7 @@ Set one or more rectangular area(s) on the current page.
 ```typescript
 setSelectedAreas(
     areas: Area[]
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -2338,7 +2338,7 @@ Update checkbox style
 **Syntax**
 
 ```typescript
-updateCheckboxStyle(checkboxSettings?: CheckboxSettings): void;
+updateCheckboxStyle(checkboxSettings?: CheckboxSettings): boolean;
 ```
 
 **Parameters**
@@ -2378,7 +2378,7 @@ Update page number style
 **Syntax**
 
 ```typescript
-updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
+updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): boolean;
 ```
 
 **Parameters**
