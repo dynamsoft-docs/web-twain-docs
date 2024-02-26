@@ -2444,8 +2444,8 @@ DefaultSourceName: string;
 <td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">v17.0+</td>
 <td align="center">not supported</td>
+<td align="center">v17.0+</td>
 </tr>
 
 </table>
