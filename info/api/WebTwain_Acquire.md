@@ -121,7 +121,7 @@ AcquireImage(
     deviceConfiguration?: DeviceConfiguration,
     successCallBack?: () => void,
     failureCallBack?: (deviceConfiguration?: DeviceConfiguration, errorCode: number, errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -158,94 +158,6 @@ AcquireImage(
 </table>
 </div>
 
-**Usage notes**
-
-`extendedImageInfoQueryLevel` is 0 by default which means the following information will be retrieved (if available):
-
-| Label                  | Value  |
-| :--------------------- | :----- |
-| TWEI_BARCODEX          | 0x1200 |
-| TWEI_BARCODEY          | 0x1201 |
-| TWEI_BARCODETEXT       | 0x1202 |
-| TWEI_BARCODETYPE       | 0x1203 |
-| TWEI_ENDORSEDTEXT      | 0x1213 |
-| TWEI_BARCODECONFIDENCE | 0x121A |
-| TWEI_BARCODEROTATION   | 0x121B |
-| TWEI_BARCODETEXTLENGTH | 0x121C |
-| TWEI_BOOKNAME          | 0x1238 |
-| TWEI_CHAPTERNUMBER     | 0x1239 |
-| TWEI_DOCUMENTNUMBER    | 0x123A |
-| TWEI_PAGENUMBER        | 0x123B |
-| TWEI_CAMERA            | 0x123C |
-| TWEI_FRAMENUMBER       | 0x123D |
-| TWEI_FRAME             | 0x123E |
-| TWEI_PIXELFLAVOR       | 0x123F |
-| TWEI_MAGDATA           | 0x1243 |
-| TWEI_MAGTYPE           | 0x1244 |
-| TWEI_PAGESIDE          | 0x1245 |
-
-If it's set to 1, the following will also be retrieved (if available):
-
-| Label                      | Value  |
-| :------------------------- | :----- |
-| TWEI_DESHADETOP            | 0x1204 |
-| TWEI_DESHADELEFT           | 0x1205 |
-| TWEI_DESHADEHEIGHT         | 0x1206 |
-| TWEI_DESHADEWIDTH          | 0x1207 |
-| TWEI_DESHADESIZE           | 0x1208 |
-| TWEI_SPECKLESREMOVED       | 0x1209 |
-| TWEI_HORZLINEXCOORD        | 0x120A |
-| TWEI_HORZLINEYCOORD        | 0x120B |
-| TWEI_HORZLINELENGTH        | 0x120C |
-| TWEI_HORZLINETHICKNESS     | 0x120D |
-| TWEI_VERTLINEXCOORD        | 0x120E |
-| TWEI_VERTLINEYCOORD        | 0x120F |
-| TWEI_VERTLINELENGTH        | 0x1210 |
-| TWEI_VERTLINETHICKNESS     | 0x1211 |
-| TWEI_PATCHCODE             | 0x1212 |
-| TWEI_FORMCONFIDENCE        | 0x1214 |
-| TWEI_FORMTEMPLATEMATCH     | 0x1215 |
-| TWEI_FORMTEMPLATEPAGEMATCH | 0x1216 |
-| TWEI_FORMHORZDOCOFFSET     | 0x1217 |
-| TWEI_FORMVERTDOCOFFSET     | 0x1218 |
-| TWEI_BARCODECOUNT          | 0x1219 |
-| TWEI_DESHADECOUNT          | 0x121D |
-| TWEI_DESHADEBLACKCOUNTOLD  | 0x121E |
-| TWEI_DESHADEBLACKCOUNTNEW  | 0x121F |
-| TWEI_DESHADEBLACKRLMIN     | 0x1220 |
-| TWEI_DESHADEBLACKRLMAX     | 0x1221 |
-| TWEI_DESHADEWHITECOUNTOLD  | 0x1222 |
-| TWEI_DESHADEWHITECOUNTNEW  | 0x1223 |
-| TWEI_DESHADEWHITERLMIN     | 0x1224 |
-| TWEI_DESHADEWHITERLAVE     | 0x1225 |
-| TWEI_DESHADEWHITERLMAX     | 0x1226 |
-| TWEI_BLACKSPECKLESREMOVED  | 0x1227 |
-| TWEI_WHITESPECKLESREMOVED  | 0x1228 |
-| TWEI_HORZLINECOUNT         | 0x1229 |
-| TWEI_VERTLINECOUNT         | 0x122A |
-| TWEI_DESKEWSTATUS          | 0x122B |
-| TWEI_SKEWORIGINALANGLE     | 0x122C |
-| TWEI_SKEWFINALANGLE        | 0x122D |
-| TWEI_SKEWCONFIDENCE        | 0x122E |
-| TWEI_SKEWWINDOWX1          | 0x122F |
-| TWEI_SKEWWINDOWY1          | 0x1230 |
-| TWEI_SKEWWINDOWX2          | 0x1231 |
-| TWEI_SKEWWINDOWY2          | 0x1232 |
-| TWEI_SKEWWINDOWX3          | 0x1233 |
-| TWEI_SKEWWINDOWY3          | 0x1234 |
-| TWEI_SKEWWINDOWX4          | 0x1235 |
-| TWEI_SKEWWINDOWY4          | 0x1236 |
-| TWEI_ICCPROFILE            | 0x1240 |
-| TWEI_LASTSEGMENT           | 0x1241 |
-| TWEI_SEGMENTNUMBER         | 0x1242 |
-| TWEI_FILESYSTEMSOURCE      | 0x1246 |
-| TWEI_IMAGEMERGED           | 0x1247 |
-| TWEI_MAGDATALENGTH         | 0x1248 |
-| TWEI_PAPERCOUNT            | 0x1249 |
-| TWEI_PRINTERTEXT           | 0x124A |
-
-If it's set to 2, then besides what's mentioned in the two tables above, the Dynamic Web TWAIN library will also try to query the scanner for its own custom extended image info.
-
 **Example**
 
 > The example code shows 4 ways to use the API `AcquireImage()`
@@ -261,13 +173,16 @@ var deviceConfiguration = {
   IfGetImageInfo: true,
   IfGetExtImageInfo: true,
   extendedImageInfoQueryLevel: 0,
+  IfCloseSourceAfterAcquire: true,
 };
 
 function successCallback() {
+  DWObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
   alert(errorString);
 }
 
@@ -500,7 +415,7 @@ Display the TWAIN source's built-in user interface.
 EnableSourceUI(
     successCallBack: () => void,
     failureCallBack: (errorCode: number, errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -581,7 +496,17 @@ OpenSource(): boolean;
 DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
 DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
 DWObject.OpenSource();
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  alert(errorString);
+}
 ```
 
 ---
@@ -768,12 +693,23 @@ SelectSource(
 DWObject.SelectSource(
   function () {
     DWObject.OpenSource();
-    DWObject.AcquireImage();
+    DWObject.AcquireImage(successCallback, failureCallback);
   },
   function (errorCode, errorString) {
     console.log(errorString);
   }
 );
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
+
 ```
 
 ---
@@ -823,7 +759,9 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 DWObject.SelectSourceAsync()
   .then(function (sourceIndex) {
     console.log(sourceIndex);
-    return DWObject.AcquireImageAsync();
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    });
   })
   .catch(function (e) {
     console.log(e);
@@ -876,7 +814,17 @@ SelectSourceByIndex(index: number): boolean;
 DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
 DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
 DWObject.OpenSource();
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -927,7 +875,9 @@ DWObject.SelectSourceByIndexAsync(0)
     return DWObject.OpenSourceAsync();
   })
   .then(() => {
-    return DWObject.AcquireImageAsync();
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    });
   });
 ```
 
@@ -990,7 +940,7 @@ Start the acquisition by passing all settings at once.
 **Syntax**
 
 ```typescript
-startScan(scanSetup: ScanSetup): Promise<IScanSetup>;
+startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 ```
 
 **Parameters**
@@ -1702,8 +1652,18 @@ if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
         )
     ) {
           DWObject.IfShowUI = true;
-          DWObject.AcquireImage();
+          DWObject.AcquireImage(successCallback, failureCallback);
     }
+}
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
 }
 ```
 
@@ -1780,7 +1740,17 @@ DWObject.OpenSource();
 DWObject.IfShowUI = false;
 DWObject.Unit = Dynamsoft.DWT.EnumDWT_UnitType.TWUN_PIXELS;
 DWObject.SetImageLayout(50, 50, 100, 100);
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -1977,7 +1947,17 @@ if (DWObject.Duplex != 0) { // Note: DWObject.Duplex doesn't support Linux.
     DWObject.IfDuplexEnabled = true;
 }
 
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -2027,7 +2007,17 @@ If the property is set to `true` , the data source will try acquiring images fro
 ```javascript
 DWObject.OpenSource();
 DWObject.IfFeederEnabled = true;
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -2076,7 +2066,17 @@ It's recommended to use this API after `OpenSource()` is called.
 ```javascript
 DWObject.OpenSource();
 DWObject.IfShowUI = true; // display the scanner UI before acquiring image
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -2533,7 +2533,7 @@ DefaultSourceName: string;
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
-<td align="center">not supported</td>
+<td align="center">v17.0+</td>
 </tr>
 
 </table>
@@ -4086,7 +4086,7 @@ Gets detailed information about all capabilities of the current data source.
 getCapabilities(
     successCallback: (capabilityDetails: CapabilityDetails[]) => void,
     failureCallback: (errorCode: number, errorString: string) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -4137,7 +4137,7 @@ setCapabilities(
     capabilities: Capabilities,
     successCallback: (capabilities: Capabilities) => void,
     failureCallback: (capabilities: Capabilities) => void
-): void;
+): boolean;
 ```
 
 **Parameters**
@@ -4211,8 +4211,11 @@ DWObject.setCapabilities(
   },
   function (successData) {
     DWObject.AcquireImage(
-      function () {},
       function () {
+        DWObject.CloseSource();
+      },
+      function () {
+        DWObject.CloseSource();
         console.log(DWObject.ErrorString);
       }
     );
@@ -4220,8 +4223,11 @@ DWObject.setCapabilities(
   function (errorData) {
     console.error(errorData);
     DWObject.AcquireImage(
-      function () {},
       function () {
+        DWObject.CloseSource();
+      },
+      function () {
+        DWObject.CloseSource();
         console.log(DWObject.ErrorString);
       }
     );
@@ -4257,7 +4263,9 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 DWObject.GetDevicesAsync().then((deviceList)=>{
   return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    }) 
 }).catch((e)=>{
     console.error(e)
 })
@@ -4307,7 +4315,9 @@ SelectDeviceAsync(device: Device): Promise< boolean>;
 DWObject.GetDevicesAsync().then((deviceList)=>{
   return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    }) 
 }).catch((e)=>{
     console.error(e)
 })
@@ -4391,7 +4401,9 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 DWObject.GetDevicesAsync().then((deviceList)=>{
   return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    }) 
 }).catch((e)=>{
     console.error(e)
 })
