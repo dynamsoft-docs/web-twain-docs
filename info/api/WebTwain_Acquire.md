@@ -173,13 +173,16 @@ var deviceConfiguration = {
   IfGetImageInfo: true,
   IfGetExtImageInfo: true,
   extendedImageInfoQueryLevel: 0,
+  IfCloseSourceAfterAcquire: true,
 };
 
 function successCallback() {
+  DWObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
   alert(errorString);
 }
 
@@ -493,7 +496,17 @@ OpenSource(): boolean;
 DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
 DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
 DWObject.OpenSource();
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  alert(errorString);
+}
 ```
 
 ---
@@ -680,12 +693,23 @@ SelectSource(
 DWObject.SelectSource(
   function () {
     DWObject.OpenSource();
-    DWObject.AcquireImage();
+    DWObject.AcquireImage(successCallback, failureCallback);
   },
   function (errorCode, errorString) {
     console.log(errorString);
   }
 );
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
+
 ```
 
 ---
@@ -735,7 +759,9 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 DWObject.SelectSourceAsync()
   .then(function (sourceIndex) {
     console.log(sourceIndex);
-    return DWObject.AcquireImageAsync();
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    });
   })
   .catch(function (e) {
     console.log(e);
@@ -788,7 +814,17 @@ SelectSourceByIndex(index: number): boolean;
 DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
 DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
 DWObject.OpenSource();
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -839,7 +875,9 @@ DWObject.SelectSourceByIndexAsync(0)
     return DWObject.OpenSourceAsync();
   })
   .then(() => {
-    return DWObject.AcquireImageAsync();
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    });
   });
 ```
 
@@ -1614,8 +1652,18 @@ if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
         )
     ) {
           DWObject.IfShowUI = true;
-          DWObject.AcquireImage();
+          DWObject.AcquireImage(successCallback, failureCallback);
     }
+}
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
 }
 ```
 
@@ -1692,7 +1740,17 @@ DWObject.OpenSource();
 DWObject.IfShowUI = false;
 DWObject.Unit = Dynamsoft.DWT.EnumDWT_UnitType.TWUN_PIXELS;
 DWObject.SetImageLayout(50, 50, 100, 100);
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -1889,7 +1947,17 @@ if (DWObject.Duplex != 0) { // Note: DWObject.Duplex doesn't support Linux.
     DWObject.IfDuplexEnabled = true;
 }
 
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -1939,7 +2007,17 @@ If the property is set to `true` , the data source will try acquiring images fro
 ```javascript
 DWObject.OpenSource();
 DWObject.IfFeederEnabled = true;
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -1988,7 +2066,17 @@ It's recommended to use this API after `OpenSource()` is called.
 ```javascript
 DWObject.OpenSource();
 DWObject.IfShowUI = true; // display the scanner UI before acquiring image
-DWObject.AcquireImage();
+DWObject.AcquireImage(successCallback, failureCallback);
+
+function successCallback() {
+  DWObject.CloseSource();
+  console.log("successful");
+}
+
+function failureCallback(errorCode, errorString) {
+  DWObject.CloseSource();
+  console.log(errorString);
+}
 ```
 
 ---
@@ -4123,8 +4211,11 @@ DWObject.setCapabilities(
   },
   function (successData) {
     DWObject.AcquireImage(
-      function () {},
       function () {
+        DWObject.CloseSource();
+      },
+      function () {
+        DWObject.CloseSource();
         console.log(DWObject.ErrorString);
       }
     );
@@ -4132,8 +4223,11 @@ DWObject.setCapabilities(
   function (errorData) {
     console.error(errorData);
     DWObject.AcquireImage(
-      function () {},
       function () {
+        DWObject.CloseSource();
+      },
+      function () {
+        DWObject.CloseSource();
         console.log(DWObject.ErrorString);
       }
     );
@@ -4169,7 +4263,9 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 DWObject.GetDevicesAsync().then((deviceList)=>{
   return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    }) 
 }).catch((e)=>{
     console.error(e)
 })
@@ -4219,7 +4315,9 @@ SelectDeviceAsync(device: Device): Promise< boolean>;
 DWObject.GetDevicesAsync().then((deviceList)=>{
   return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    }) 
 }).catch((e)=>{
     console.error(e)
 })
@@ -4303,7 +4401,9 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 DWObject.GetDevicesAsync().then((deviceList)=>{
   return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
+    return DWObject.AcquireImageAsync({
+      IfCloseSourceAfterAcquire: true,
+    }) 
 }).catch((e)=>{
     console.error(e)
 })
