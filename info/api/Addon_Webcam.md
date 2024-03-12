@@ -23,7 +23,7 @@ permalink: /info/api/Addon_Webcam.html
 | [`GetFrameURL()`](#getframeurl)                                                 | [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           |
 | [`PlayVideo()`](#playvideo)                                                     | [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
 
-## CaptureImage
+## CaptureImage()
 
 Capture an image from the current camera.
 
@@ -70,7 +70,7 @@ CaptureImage(
 
 ---
 
-## GetSourceList
+## GetSourceList()
 
 Return a list of all available cameras.
 
@@ -106,7 +106,7 @@ GetSourceList(): string[];
 
 ---
 
-## SelectSource
+## SelectSource()
 
 Select a camera to use.
 
@@ -146,7 +146,7 @@ SelectSource(name: string): boolean;
 
 ---
 
-## CloseSource
+## CloseSource()
 
 Close the current camera.
 
@@ -186,7 +186,7 @@ When you close the camera, the video stream will stop at the last frame.
 
 ---
 
-## PlayVideo
+## PlayVideo()
 
 Start to play the video stream from the current camera.
 
@@ -234,7 +234,7 @@ PlayVideo(
 
 ---
 
-## PauseVideo
+## PauseVideo()
 
 Pause the video.
 
@@ -270,7 +270,7 @@ PauseVideo(): boolean;
 
 ---
 
-## StopVideo
+## StopVideo()
 
 Stop the video.
 
@@ -312,9 +312,9 @@ When you close the camera, the video stream will stop at the last frame.
 
 ---
 
-## GetCameraControlPropertySetting
+## GetCameraControlPropertySetting()
 
-Return information about the specified camera property.
+Return information about the specified camera property. Please refer to [`CameraControlProperty`]({{site.info}}/api/interfaces.html#cameracontrolproperty).
 
 **Syntax**
 
@@ -322,17 +322,6 @@ Return information about the specified camera property.
 GetCameraControlPropertySetting(
     property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlProperty;
-
-interface CameraControlProperty {
-    /**
-     * Return the value of the property.
-     */
-    GetValue(): number;
-    /**
-     * Return whether the property is set autmatically or not.
-     */
-    GetIfAuto(): boolean;
-}
 ```
 
 **Parameters**
@@ -365,9 +354,9 @@ interface CameraControlProperty {
 
 ---
 
-## GetCameraControlPropertyMoreSetting
+## GetCameraControlPropertyMoreSetting()
 
-Return detailed information about the specified camera property.
+Return detailed information about the specified camera property. Please refer to [`CameraControlPropertyExtra`]({{site.info}}/api/interfaces.html#cameracontrolpropertyextra).
 
 **Syntax**
 
@@ -375,29 +364,6 @@ Return detailed information about the specified camera property.
 GetCameraControlPropertyMoreSetting(
     property: Dynamsoft.DWT.EnumDWT_CameraControlProperty | number
 ): CameraControlPropertyExtra;
-
-interface CameraControlPropertyExtra {
-    /**
-     * Return the minimum value of the property.
-     */
-    GetMinValue(): number;
-    /**
-     * Return the maximum value of the property.
-     */
-    GetMaxValue(): number;
-    /**
-     * Return the default value of the property.
-     */
-    GetDefaultValue(): number;
-    /**
-     * Return the smallest increment by which the property can change.
-     */
-    GetSteppingDelta(): number;
-    /**
-     * Return whether the property is set autmatically or not.
-     */
-    GetIfAuto(): boolean;
-}
 ```
 
 **Parameters**
@@ -430,7 +396,7 @@ interface CameraControlPropertyExtra {
 
 ---
 
-## SetCameraControlPropertySetting
+## SetCameraControlPropertySetting()
 
 Set the specified camera property.
 
@@ -478,9 +444,9 @@ SetCameraControlPropertySetting(
 
 ---
 
-## GetVideoPropertySetting
+## GetVideoPropertySetting()
 
-Return information about the specified video property.
+Return information about the specified video property. Please refer to [`VideoControlProperty`]({{site.info}}/api/interfaces.html#videocontrolproperty).
 
 **Syntax**
 
@@ -488,17 +454,6 @@ Return information about the specified video property.
 GetVideoPropertySetting(
     property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlProperty;
-
-interface VideoControlProperty {
-    /**
-     * Return the value of the property.
-     */
-    GetValue(): number;
-    /**
-     * Return whether the property is set autmatically or not.
-     */
-    GetIfAuto(): boolean;
-}
 ```
 
 **Parameters**
@@ -531,9 +486,9 @@ interface VideoControlProperty {
 
 ---
 
-## GetVideoPropertyMoreSetting
+## GetVideoPropertyMoreSetting()
 
-Return detailed information about the specified video property.
+Return detailed information about the specified video property. Please refer to [`VideoControlPropertyExtra`]({{site.info}}/api/interfaces.html#videocontrolpropertyextra).
 
 **Syntax**
 
@@ -541,29 +496,6 @@ Return detailed information about the specified video property.
 GetVideoPropertyMoreSetting(
     property: Dynamsoft.DWT.EnumDWT_VideoProperty | number
 ): VideoControlPropertyExtra;
-
-interface VideoControlPropertyExtra {
-    /**
-     * Return the minimum value of the property.
-     */
-    GetMinValue(): number;
-    /**
-     * Return the maximum value of the property.
-     */
-    GetMaxValue(): number;
-    /**
-     * Return the default value of the property.
-     */
-    GetDefaultValue(): number;
-    /**
-     * Return the smallest increment by which the property can change.
-     */
-    GetSteppingDelta(): number;
-    /**
-     * Return whether the property is set autmatically or not.
-     */
-    GetIfAuto(): boolean;
-}
 ```
 
 **Parameters**
@@ -596,7 +528,7 @@ interface VideoControlPropertyExtra {
 
 ---
 
-## SetVideoPropertySetting
+## SetVideoPropertySetting()
 
 Set the specified video property.
 
@@ -644,29 +576,14 @@ SetVideoPropertySetting(
 
 ---
 
-## GetFrameRate
+## GetFrameRate()
 
-Return the frame rates supported by the current camera.
+Return the frame rates supported by the current camera. Please refer to [`FrameRate`]({{site.info}}/api/interfaces.html#framerate).
 
 **Syntax**
 
 ```typescript
 GetFrameRate(): FrameRate;
-
-interface FrameRate {
-    /**
-     * Return the number of available frame rates.
-     */
-    GetCount(): number;
-    /**
-     * Return the specified frame rate.
-     */
-    Get(index: number): number;
-    /**
-     * Return the current frame rate.
-     */
-    GetCurrent(): number;
-}
 ```
 
 **Availability**
@@ -695,29 +612,14 @@ interface FrameRate {
 
 ---
 
-## GetMediaType
+## GetMediaType()
 
-Return the media types supported by the current camera.
+Return the media types supported by the current camera. Please refer to [`MediaType`]({{site.info}}/api/interfaces.html#mediatype).
 
 **Syntax**
 
 ```typescript
 GetMediaType(): MediaType;
-
-interface MediaType {
-    /**
-     * Return the number of available media types.
-     */
-    GetCount(): number;
-    /**
-     * Return the specified media type.
-     */
-    Get(index: number): string;
-    /**
-     * Return the current media type.
-     */
-    GetCurrent(): string;
-}
 ```
 
 **Availability**
@@ -746,29 +648,14 @@ interface MediaType {
 
 ---
 
-## GetResolution
+## GetResolution()
 
-Return the resolutions supported by the current camera.
+Return the resolutions supported by the current camera. Please refer to [`Resolution`]({{site.info}}/api/interfaces.html#resolution).
 
 **Syntax**
 
 ```typescript
 GetResolution(): Resolution;
-
-interface Resolution {
-    /**
-     * Return the number of available resolutions.
-     */
-    GetCount(): number;
-    /**
-     * Return the specified resolution.
-     */
-    Get(index: number): string;
-    /**
-     * Return the current resolution.
-     */
-    GetCurrent(): string;
-}
 ```
 
 **Availability**
@@ -797,7 +684,7 @@ interface Resolution {
 
 ---
 
-## SetFrameRate
+## SetFrameRate()
 
 Set the frame rate.
 
@@ -837,7 +724,7 @@ SetFrameRate(rate: number): boolean;
 
 ---
 
-## SetMediaType
+## SetMediaType()
 
 Set the media type.
 
@@ -877,7 +764,7 @@ SetMediaType(type: string): boolean;
 
 ---
 
-## SetResolution
+## SetResolution()
 
 Set the resolution.
 
@@ -923,7 +810,7 @@ DWObject.Addon.Webcam.SetResolution("640 x 480");
 
 ---
 
-## SetVideoRotateMode
+## SetVideoRotateMode()
 
 Rotate the video.
 
@@ -965,7 +852,7 @@ SetVideoRotateMode(
 
 ---
 
-## GetFrameURL
+## GetFrameURL()
 
 Return the URL (http(s)://) for the latest frame.
 
@@ -1001,7 +888,7 @@ GetFrameURL(): string;
 
 ---
 
-## GetFramePartURL
+## GetFramePartURL()
 
 Return the internal URL (dwt://) for the latest frame.
 
