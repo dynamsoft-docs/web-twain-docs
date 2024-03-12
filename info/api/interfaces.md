@@ -16,9 +16,6 @@ needGenerateH3Content: true
 | [`Device`](#device)  | [`DeviceConfiguration`](#DeviceConfiguration)  |
 -->
 
-
----
-
 ## Global
 
 ### DWTInitialConfig
@@ -77,13 +74,27 @@ interface DisplayInfo {
 interface Device{
    name: string;
    displayName: string;
-   deviceType: DeviceType;
-   serverInfo?: serverInfo;
+   deviceType: Dynamsoft.DWT.EnumDWT_DeviceType;
+   serviceInfo?: ServiceInfo;
    deviceInfo?: any;
 }
 ```
 
----
+- [`EnumDWT_DeviceType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype)
+- [`ServiceInfo`]({{site.info}}api/Interfaces.html#serviceinfo)
+
+### ServiceInfo
+
+**Syntax**
+
+```typescript
+interface ServiceInfo {
+	server: string;
+	attrs?: any;
+}
+```
+
+
 
 ### DeviceConfiguration
 
@@ -106,7 +117,11 @@ interface DeviceConfiguration {
 }
 ```
 
-`extendedImageInfoQueryLevel` is 0 by default which means the following information will be retrieved (if available):
+- [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pixeltype)
+- [`EnumDWT_ExtImageInfo`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_extimageinfo)
+- [`EnumDWT_CapSupportedSizes`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes)
+
+`extendedImageInfoQueryLevel` is 0 (`default`) by default which means the following information will be retrieved (if available):
 
 | Label                  | Value  |
 | :--------------------- | :----- |
@@ -130,7 +145,7 @@ interface DeviceConfiguration {
 | TWEI_MAGTYPE           | 0x1244 |
 | TWEI_PAGESIDE          | 0x1245 |
 
-If it's set to 1, the following will also be retrieved (if available):
+If it's set to 1 (`standard`), the following will also be retrieved (if available):
 
 | Label                      | Value  |
 | :------------------------- | :----- |
@@ -190,9 +205,9 @@ If it's set to 1, the following will also be retrieved (if available):
 | TWEI_PAPERCOUNT            | 0x1249 |
 | TWEI_PRINTERTEXT           | 0x124A |
 
-If it's set to 2, then besides what's mentioned in the two tables above, the Dynamic Web TWAIN library will also try to query the scanner for its own custom extended image info.
+If it's set to 2 (`supported`), then besides what's mentioned in the two tables above, the Dynamic Web TWAIN library will also try to query the scanner for its own custom extended image info.
 
----
+
 
 ### SourceDetails
 
@@ -229,9 +244,9 @@ interface SourceDetails {
      */
     Manufacturer?: string;
     /**
-     *
+     * Supported Groups
      */
-    SupportedGroups?: 1073741827,
+    SupportedGroups?: number
     /**
      * The version of the protocol based on which the data source is developed.
      */
@@ -244,9 +259,9 @@ interface SourceDetails {
 }
 ```
 
-Please refer to [Version]({{site.info}}api/Interfaces.html#version).
+- [Version]({{site.info}}api/Interfaces.html#version)
 
----
+
 
 ### Version
 
@@ -262,7 +277,7 @@ interface Version {
 }
 ```
 
----
+
 
 ### ScanSetup
 
@@ -273,29 +288,29 @@ interface ScanSetup {
   /**
    * An id that specifies this specific setup.
    */
-  setupId?: string,
+  setupId?: string;
   /**
    * Whether to ignore or fail the acquistion when an exception is raised. Set "ignore" or "fail".
    */
-  exception?: string,
+  exception?: string;
   /**
    * The name of the data source (the scanner). If not set, the default data source is used.
    */
-  scanner?: string,
+  scanner?: string;
   ui?: {
     /**
      * Whether to show the UI of the device.
      */
-    bShowUI?: boolean,
+    bShowUI?: boolean;
     /**
      * Whether to show the indicator of the device.
      */
-    bShowIndicator?: boolean,
-  },
+    bShowIndicator?: boolean;
+  };
   /**
    * The TWAIN transfer mode.
    */
-  transferMode?: Dynamsoft.DWT.EnumDWT_TransferMode | number,
+  transferMode?: Dynamsoft.DWT.EnumDWT_TransferMode | number;
   /**
    * Set how the transfer is done.
    */
@@ -304,28 +319,28 @@ interface ScanSetup {
      * Specify the file name (or pattern) for file transfer.
      * Example: "C:\\WebTWAIN<%06d>.bmp"
      */
-    fileName?: string,
+    fileName?: string;
     /**
      * Specify the file format.
      */
-    fileFormat?: Dynamsoft.DWT.EnumDWT_FileFormat | number,
+    fileFormat?: Dynamsoft.DWT.EnumDWT_FileFormat | number;
     /**
      * Specify the quality of JPEG files.
      */
-    jpegQuality?: number,
+    jpegQuality?: number;
     /**
      * Specify the compression type of the file.
      */
-    compressionType?: Dynamsoft.DWT.EnumDWT_CompressionType | number
-  }
+    compressionType?: Dynamsoft.DWT.EnumDWT_CompressionType | number;
+  };
   /**
    * Set where the scanned images are inserted.
    */
-  insertingIndex?: number,
+  insertingIndex?: number;
   /**
    * The profile is a base64 string, if present, it overrides settings and more settings.
    */
-  profile?: string,
+  profile?: string;
   /**
    * Basic settings.
    */
@@ -333,83 +348,83 @@ interface ScanSetup {
     /**
      * "ignore" (default) or "fail".
      */
-    exception?: string,
+    exception?: string;
     /**
      * Specify the pixel type.
      */
-    pixelType?: Dynamsoft.DWT.EnumDWT_PixelType | number,
+    pixelType?: Dynamsoft.DWT.EnumDWT_PixelType | number;
     /**
      * Specify the resolution.
      */
-    resolution?: number,
+    resolution?: number;
     /**
      * Whether to enable document feader.
      */
-    bFeeder?: boolean,
+    bFeeder?: boolean;
     /**
      * Whether to enable duplex scan.
      */
-    bDuplex?: boolean
-  },
+    bDuplex?: boolean;
+  };
   moreSettings?: {
     /**
      * "ignore" (default) or "fail".
      */
-    exception?: string,
+    exception?: string;
     /**
      * Specify the bit depth.
      */
-    bitDepth?: number,
+    bitDepth?: number;
     /**
      * Specify the page size.
      */
-    pageSize?: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number,
+    pageSize?: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
     /**
      * Specify the unit.
      */
-    unit?: Dynamsoft.DWT.EnumDWT_UnitType | number,
+    unit?: Dynamsoft.DWT.EnumDWT_UnitType | number;
     /**
      * Specify a layout to scan, if present, it'll override pageSize.
      */
     layout?: {
-      left?: number,
-      top?: number,
-      right?: number,
-      bottom?: number
-    },
+      left?: number;
+      top?: number;
+      right?: number;
+      bottom?: number;
+    };
     /**
      * Specify the pixel flavor.
      */
-    pixelFlavor?: Dynamsoft.DWT.EnumDWT_CapPixelFlavor | number,
+    pixelFlavor?: Dynamsoft.DWT.EnumDWT_CapPixelFlavor | number;
     /**
      * Specify Brightness.
      */
-    brightness?: number,
+    brightness?: number;
     /**
      * Specify contrast.
      */
-    contrast?: number,
+    contrast?: number;
     /**
      * Specify how many images are transferred per session.
      */
-    nXferCount?: number,
+    nXferCount?: number;
     /**
      * Whether to enable automatic blank image detection and removal.
      */
-    autoDiscardBlankPages?: boolean,
+    autoDiscardBlankPages?: boolean;
     /**
      * Whether to enable automatic border detection.
      */
-    autoBorderDetection?: boolean,
+    autoBorderDetection?: boolean;
     /**
      * Whether to enable automatic skew correction.
      */
-    autoDeskew?: boolean,
+    autoDeskew?: boolean;
     /**
      * Whether to enable automatic brightness adjustment.
      */
-    autoBright?: boolean
-  },
+    autoBright?: boolean;
+  };
   /**
    * A callback triggered before the scan, after the scan and after each page has been transferred.
    * Returned status
@@ -417,7 +432,7 @@ interface ScanSetup {
    * {event: 'postTransfer', bScanCompleted: false, result: {…}} //Equivalent to OnPostTransfer event
    * {event: 'postTransfer', bScanCompleted: true, result: {…}} //Equivalent to OnPostAllTransfers event
    */
-  funcScanStatus?: (status: Status) => void,
+  funcScanStatus?: (status: Status) => void;
   /**
    * Set up how the scanned images are outputted.
    */
@@ -425,69 +440,69 @@ interface ScanSetup {
     /**
      * Output type. "http" is the only supported type for now.
      */
-    type?: string,
+    type?: string;
     /**
      * Set the output format.
      */
-    format?: Dynamsoft.DWT.EnumDWT_ImageType | number,
+    format?: Dynamsoft.DWT.EnumDWT_ImageType | number;
     /**
      * Specify how many times the library will try the output.
      */
-    reTries?: 3,
+    reTries?: number;
     /**
      * Whether to use the FileUploader.
      */
-    useUploader?: false,
+    useUploader?: boolean;
     /**
      * Whether to upload all images in one HTTP post.
      */
-    singlePost?: boolean,
+    singlePost?: boolean;
     /**
      * Whether to show a progress bar when outputting.
      */
-    showProgressBar?: boolean,
+    showProgressBar?: boolean;
     /**
      * Whether to remove the images after outputting.
      */
-    removeAfterOutput?: boolean,
+    removeAfterOutput?: boolean;
     /**
      * A callback triggered during the outputting.
      * @argument fileInfo A JSON object that contains the fileName, percentage, statusCode, responseString, etc.
      */
-    funcHttpUploadStatus?: (fileInfo: any) => void,
+    funcHttpUploadStatus?: (fileInfo: any) => void;
     /**
      * Setup for PDF output.
      */
     pdfSetup?: {
-      author?: string,
-      compression?: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number,
-      creator?: string,
+      author?: string;
+      compression?: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
+      creator?: string;
       /**
        * Example: 'D:20181231'
        */
-      creationDate?: string,
-      keyWords?: string,
+      creationDate?: string;
+      keyWords?: string;
       /**
        * Example: 'D:20181231'
        */
-      modifiedDate?: string,
-      producer?: string,
-      subject?: string,
-      title?: string,
-      version?: number,
-      quality?: number
-    },
+      modifiedDate?: string;
+      producer?: string;
+      subject?: string;
+      title?: string;
+      version?: number;
+      quality?: number;
+    };
     /**
      * Setup for TIFF output.
      */
     tiffSetup?: {
-      quality?: number,
-      compression?: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number,
+      quality?: number;
+      compression?: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
       /**
        * Specify Tiff custom tags.
        */
-      tiffTags?: TiffTag[]
-    },
+      tiffTags?: TiffTag[];
+    };
     /**
      * Setup for HTTP upload via Post.
      */
@@ -496,41 +511,78 @@ interface ScanSetup {
        * Target of the request.
        * Example: "http://dynamsoft.com/receivepost.aspx"
        */
-      url?: string,
+      url?: string;
       /**
        * Custom headers in the form.
        * Example: {md5: ""}
        */
-      headers?: any,
+      headers?: any;
       /**
        * Custom form fields.
        * Example: {"UploadedBy": "Dynamsoft"}
        */
-      formFields?: any,
+      formFields?: any;
       /**
        * The maximum size of a file to be uploaded (in bytes).
        */
-      maxSizeLimit?: number,
+      maxSizeLimit?: number;
       /**
        * Specify how many threads (<=4) are to be used. Only valid when {useUploader} is true.
        */
-      threads?: number,
+      threads?: number;
       /**
        * Specify the names for the files in the form.
        * Example: "RemoteName<%06d>"
        */
-      remoteName?: string,
+      remoteName?: string;
       /**
        * Specify the name(s) (pattern) of the uploaded files.
        * Example: "uploadedFile<%06d>.jpg"
        */
-      fileName?: string
-    }
-  }
+      fileName?: string;
+    };
+  };
 }
 ```
 
----
+- [`EnumDWT_TransferMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_transfermode)
+- [`EnumDWT_FileFormat`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat)
+- [`EnumDWT_CompressionType`]({{site.info}}api/Dynamsoft_Enum.html#)
+- [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html##dynamsoftdwtenumdwt_pixeltype)
+- [`EnumDWT_CapSupportedSizes`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes)
+- [`EnumDWT_UnitType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_unittype)
+- [`EnumDWT_CapPixelFlavor`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cappixelflavor)
+- [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype)
+- [`EnumDWT_PDFCompressionType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pdfcompressiontype)
+- [`EnumDWT_TIFFCompressionType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_tiffcompressiontype)
+- [`Status`]({{site.info}}api/Interfaces.html#status)
+- [`TiffTag`]({{site.info}}api/Interfaces.html#tifftag)
+
+### Status
+
+**Syntax**
+
+```typescript
+interface Status {
+    bScanCompleted?: boolean;
+    event?: string;
+    result?: {
+        currentPageNum?: number;
+    };
+}
+```
+
+### TiffTag
+
+**Syntax**
+
+```typescript
+interface TiffTag {
+    tagIdentifier?: number;
+    content?: string;
+    useBase64Encoding?: boolean;
+}
+```
 
 ### OutputInfo
 
@@ -557,7 +609,7 @@ interface OutputInfo {
 }
 ```
 
----
+
 
 ### CapabilityDetails
 
@@ -616,9 +668,9 @@ interface CapabilityDetails {
 }
 ```
 
-Please refer to [ValueAndLabel]({{site.info}}api/Interfaces.html#valueandlabel).
+- [ValueAndLabel]({{site.info}}api/Interfaces.html#valueandlabel)
 
----
+
 
 ### ValueAndLabel
 
@@ -637,9 +689,11 @@ interface ValueAndLabel {
 }
 ```
 
-Please refer to [EnumDWT_Cap]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap), [EnumDWT_CapType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_captype) and [EnumDWT_CapValueType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capvaluetype).
+- [EnumDWT_Cap]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap)
+- [EnumDWT_CapType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_captype) 
+- [EnumDWT_CapValueType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capvaluetype)
 
----
+
 
 ### Capabilities
 
@@ -658,9 +712,9 @@ interface Capabilities {
 }
 ```
 
-Please refer to [CapabilitySetup]({{site.info}}api/Interfaces.html#capabilitysetup).
+- [CapabilitySetup]({{site.info}}api/Interfaces.html#capabilitysetup)
 
----
+
 
 ### CapabilitySetup
 
@@ -675,7 +729,7 @@ interface CapabilitySetup {
     /**
      * The value to set to the capability or the value of the capability after setting.
      */
-    curValue: number | string; //array is not supported
+    curValue: number | string | object; 
     errorCode?: number;
     errorString?: string;
     /**
@@ -685,7 +739,7 @@ interface CapabilitySetup {
 }
 ```
 
----
+- [EnumDWT_Cap]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap)
 
 ## Viewer
 
@@ -803,8 +857,9 @@ interface ImageEditor {
 };
 ```
 
+- [`SelectionBoxStyleSettings`]({{site.info}}api/Interfaces.html#selectionboxstylesettings)
 
----
+
 
 ### EditorSettings
 
@@ -935,11 +990,9 @@ interface EditorSettings {
 }
 ```
 
-**Note**
+- [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode).
 
-Please refer to [EnumDWT_WorkMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_workmode).
 
----
 
 ### ThumbnailViewer
 
@@ -988,11 +1041,14 @@ interface ThumbnailViewer {
     off(eventName: string, callback?: () => void): void;
 }
 ```
-**Note**
 
-Please refer to [ViewMode]({{site.info}}api/Interfaces.html#viewmode) and [ThumbnailViewerEvent]({{site.info}}api/Interfaces.html#thumbnailviewerevent).
 
----
+- [`ViewMode`]({{site.info}}api/Interfaces.html#viewmode) 
+- [`CheckboxSettings`]({{site.info}}api/Interfaces.html#checkboxsettings)
+- [`PageNumberSettings`]({{site.info}}api/Interfaces.html#pagenumbersettings)
+- [`ThumbnailViewerEvent`]({{site.info}}api/Interfaces.html#thumbnailviewerevent)
+- [`KeyboardEvent`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
+- [`MouseEvent`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)
 
 ### ThumbnailViewerSettings
 
@@ -1108,7 +1164,7 @@ interface ThumbnailViewerSettings {
       right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
       bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
       translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-      translateY?: number | string //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
+      translateY?: number | string; //default: "",  number unit: px, string value: "10px"/"10%", relative to itself
     };
     pageNumber?: {
       visibility?: string; //"visible": hidden", default: "hidden"
@@ -1127,12 +1183,12 @@ interface ThumbnailViewerSettings {
       right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
       bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
       translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-      translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-    }
+      translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+    };
 }
 ```
 
----
+
 
 ### ThumbnailViewerEvent
 
@@ -1149,7 +1205,7 @@ interface ThumbnailViewerEvent {
 };
 ```
 
----
+
 
 ### ViewMode
 
@@ -1173,7 +1229,7 @@ interface ViewMode {
 }
 ```
 
----
+
 
 ### Area
 
@@ -1188,7 +1244,7 @@ interface Area {
 };
 ```
 
----
+
 
 ### CheckboxSettings
 
@@ -1211,11 +1267,11 @@ interface CheckboxSettings {
   right?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
   bottom?: number | string;  //default: "", number unit: px, string value: "10px"/"10%", relative to parent container
   translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
 }
 ```
 
----
+
 
 ### PageNumberSettings
 
@@ -1239,26 +1295,26 @@ interface PageNumberSettings {
   right?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
   bottom?: number | string; //default: 0, number unit: px, string value: "10px"/"10%", relative to parent container
   translateX?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
-  translateY?: number | string //default: "", number unit: px, string value: "10px"/"10%", relative to itself
+  translateY?: number | string; //default: "", number unit: px, string value: "10px"/"10%", relative to itself
 }
 ```
 
----
+
 
 ### SelectionBoxStyleSettings
 ```typescript
 interface SelectionBoxStyleSettings { 
-    borderColor?: string, //Default: rgba(0,0,0,1). Selection box line segment colour in "rgba(r, g, b, a)"
-    borderWidth?: number, //Default: 1. Unit: pixels. Width of individual pattern segments.
-    lineDash?: [number,number], //Default: [5,2]. Unit: pixels. Line spacing where x is shaded pixels and y is gap in pixels.
-    handleWidth?: number, //Default: 9. Unit: pixels. Width of the selection box control handle.
-    handleHeight?: number, //Default: 9. Unit: pixels. Height of the selection box control handle.
-    handleColor?: string //Default: rgba(0,0,0,1). Selection box control handle colour in "rgba(r, g, b, a)"
+    borderColor?: string; //Default: rgba(0,0,0,1). Selection box line segment colour in "rgba(r, g, b, a)"
+    borderWidth?: number; //Default: 1. Unit: pixels. Width of individual pattern segments.
+    lineDash?: [number,number]; //Default: [5,2]. Unit: pixels. Line spacing where x is shaded pixels and y is gap in pixels.
+    handleWidth?: number; //Default: 9. Unit: pixels. Width of the selection box control handle.
+    handleHeight?: number; //Default: 9. Unit: pixels. Height of the selection box control handle.
+    handleColor?: string; //Default: rgba(0,0,0,1). Selection box control handle colour in "rgba(r, g, b, a)"
 } 
 
 ```
 
----
+
 
 ### ViewerEvent
 
@@ -1279,7 +1335,7 @@ interface ViewerEvent {
 };
 ```
 
----
+
 
 ### rect
 
@@ -1300,7 +1356,7 @@ interface rect{
 };
 ```
 
----
+
 
 ## Buffer
 
@@ -1315,7 +1371,7 @@ interface TagInfo {
 }
 ```
 
----
+
 
 ### BufferChangeInfo
 
@@ -1342,7 +1398,7 @@ interface BufferChangeInfo {
 }
 ```
 
----
+
 
 ### DocumentInfo
 
@@ -1355,7 +1411,7 @@ interface DocumentInfo {
 }
 ```
 
----
+
 
 ## Output
 
@@ -1382,7 +1438,7 @@ interface Base64Result {
 }
 ```
 
----
+
 
 ## PDF
 
@@ -1429,10 +1485,436 @@ interface ReaderOptions {
 
 ```
 
-Please see [this list]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_convertmode) for available ConvertMode enumerations.
+- [`EnumDWT_ConvertMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_convertmode)
 
----
 
+
+### PDFWSettings
+
+Specify the pdf writing settings.
+
+**Syntax**
+
+```typescript
+interface PDFWSettings {
+    /**
+     * Specify the author.
+     */
+    author?: string;
+    /**
+     * Specify the compression type.
+     */
+    compression?: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
+     /**
+     * Specify the page type.
+     */
+    pageType?: Dynamsoft.DWT.EnumPDF_Page | number; 
+    /**
+     * Specify the creator.
+     */
+    creator?: string;
+    /**
+     * Specify the creation date.
+     * Note that the argument should start with 'D:' like 'D:20181231'.
+     */
+    creationDate?: string;
+    /**
+     * Specify the key words.
+     */
+    keyWords?: string;
+    /**
+     * Specify the modified date.
+     * Note that the argument should start with 'D:' like 'D:20181231'.
+     */
+    modifiedDate?: string;
+    /**
+     * Specify the producer.
+     */
+    producer?: string;
+    /**
+     * Specify the subject.
+     */
+    subject?: string;
+    /**
+     * Specify the title.
+     */
+    title?: string;
+    /**
+     * Specify the PDF version. For example, 1.5. The allowed values are 1.1 ~ 1.7.
+     * NOTE: If the compression type is PDF_JBig2, the lowest allowed version is 1.4
+     * If the compression type is PDF_JP2000, the lowest allowed version is 1.5
+     */
+    version?: string;
+    /**
+     * Specify the quality of the images in the file.
+     * The value ranges from 0 to 100.
+     * Only valid when the {compression} is 'JPEG' or 'JPEG2000'.
+     */
+    quality?: number;
+}
+```
+
+- [`EnumDWT_PDFCompressionType`]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_pdfcompressiontype.html) 
+- [`EnumPDF_Page`]({{site.info}}api/Dynamsoft_Enum.html#enumpdf_page.html)
+
+
+## Webcam
+
+### CameraControlProperty
+
+The information about the specified camera property.
+
+**Syntax**
+
+```typescript
+interface CameraControlProperty {
+    /**
+     * Return the value of the property.
+     */
+    GetValue(): number;
+    /**
+     * Return whether the property is set autmatically or not.
+     */
+    GetIfAuto(): boolean;
+}
+```
+
+### CameraControlPropertyExtra
+
+The detailed information about the specified camera property.
+
+**Syntax**
+
+```typescript
+interface CameraControlPropertyExtra {
+    /**
+     * Return the minimum value of the property.
+     */
+    GetMinValue(): number;
+    /**
+     * Return the maximum value of the property.
+     */
+    GetMaxValue(): number;
+    /**
+     * Return the default value of the property.
+     */
+    GetDefaultValue(): number;
+    /**
+     * Return the smallest increment by which the property can change.
+     */
+    GetSteppingDelta(): number;
+    /**
+     * Return whether the property is set autmatically or not.
+     */
+    GetIfAuto(): boolean;
+}
+```
+
+### VideoControlProperty
+
+The information about the specified video property.
+
+**Syntax**
+
+```typescript
+interface VideoControlProperty {
+    /**
+     * Return the value of the property.
+     */
+    GetValue(): number;
+    /**
+     * Return whether the property is set autmatically or not.
+     */
+    GetIfAuto(): boolean;
+}
+```
+
+### VideoControlPropertyExtra
+
+The detailed information about the specified video property.
+
+**Syntax**
+
+```typescript
+interface VideoControlPropertyExtra {
+    /**
+     * Return the minimum value of the property.
+     */
+    GetMinValue(): number;
+    /**
+     * Return the maximum value of the property.
+     */
+    GetMaxValue(): number;
+    /**
+     * Return the default value of the property.
+     */
+    GetDefaultValue(): number;
+    /**
+     * Return the smallest increment by which the property can change.
+     */
+    GetSteppingDelta(): number;
+    /**
+     * Return whether the property is set autmatically or not.
+     */
+    GetIfAuto(): boolean;
+}
+```
+
+### FrameRate
+
+The frame rates.
+
+**Syntax**
+
+```typescript
+interface FrameRate {
+    /**
+     * Return the number of available frame rates.
+     */
+    GetCount(): number;
+    /**
+     * Return the specified frame rate.
+     */
+    Get(index: number): number;
+    /**
+     * Return the current frame rate.
+     */
+    GetCurrent(): number;
+}
+```
+
+### MediaType
+
+The media types.
+
+**Syntax**
+
+```typescript
+interface MediaType {
+    /**
+     * Return the number of available media types.
+     */
+    GetCount(): number;
+    /**
+     * Return the specified media type.
+     */
+    Get(index: number): string;
+    /**
+     * Return the current media type.
+     */
+    GetCurrent(): string;
+}
+```
+
+### Resolution
+
+The resolutions.
+
+**Syntax**
+
+```typescript
+interface Resolution {
+    /**
+     * Return the number of available resolutions.
+     */
+    GetCount(): number;
+    /**
+     * Return the specified resolution.
+     */
+    Get(index: number): string;
+    /**
+     * Return the current resolution.
+     */
+    GetCurrent(): string;
+}
+```
+
+
+## BarcodeReader
+
+### TextResult
+
+**Syntax**
+
+```typescript
+interface TextResult {
+    /**
+     * Barcode result content in a byte array.
+     */
+    barcodeBytes: number[];
+    /**
+     * The barcode format.
+     */
+    barcodeFormat: Dynamsoft.DBR.EnumBarcodeFormat | number;
+    /**
+     * Extra barcde formats.
+     */
+    barcodeFormat_2: Dynamsoft.DBR.EnumBarcodeFormat_2 | number;
+    /**
+     * Barcode formats as a string.
+     */
+    barcodeFormatString: string;
+    /**
+     * Extra barcode formats as a string.
+     */
+    barcodeFormatString_2: string;
+    /**
+     * The barcode result text.
+     */
+    barcodeText: string;
+    /**
+     * Detailed result information.
+     */
+    detailedResult: any;
+    /**
+     * The corresponding localization result.
+     */
+    localizationResult: LocalizationResult;
+    /**
+     * Other information
+     */
+    results: Result[];
+}
+```
+
+- [`EnumBarcodeFormat`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumBarcodeFormat.html?ver=9.6.33)
+- [`EnumBarcodeFormat_2`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumBarcodeFormat_2.html?ver=9.6.33)
+- [`LocalizationResult`]({{site.info}}api/Interfaces.html#localizationresult) 
+- [`Result`]({{site.info}}api/Interfaces.html#result)
+
+### LocalizationResult
+
+**Syntax**
+
+```typescript
+interface LocalizationResult {
+    /**
+     * The angle of a barcode. Values range from 0 to 360.
+     */
+    angle: number;
+    /**
+     * The X coordinate of the left-most point.
+     */
+    x1: number;
+    /**
+     * The X coordinate of the second point in a clockwise direction.
+     */
+    x2: number;
+    /**
+     * The X coordinate of the third point in a clockwise direction.
+     */
+    x3: number;
+    /**
+     * The X coordinate of the fourth point in a clockwise direction.
+     */
+    x4: number;
+    /**
+     * The Y coordinate of the left-most point.
+     */
+    y1: number;
+    /**
+     * The Y coordinate of the second point in a clockwise direction.
+     */
+    y2: number;
+    /**
+     * The Y coordinate of the third point in a clockwise direction.
+     */
+    y3: number;
+    /**
+     * The Y coordinate of the fourth point in a clockwise direction.
+     */
+    y4: number;
+    moduleSize: number;
+    pageNumber: number;
+    regionName: number;
+    resultCoordinateType: number;
+    terminatePhase: number;
+}
+```
+
+### Result
+
+**Syntax**
+
+```typescript
+interface Result {
+    accompanyingTextBytes: number[];
+    clarity: number;
+    confidence: number;
+    deformation: number;
+    resultType: number;
+}
+```
+
+### RuntimeSettings
+
+**Syntax**
+
+```typescript
+interface RuntimeSettings {
+    barcodeFormatIds: number;
+    barcodeFormatIds_2: number;
+    binarizationModes: number[];
+    deblurLevel: number;
+    expectedBarcodesCount: number;
+    furtherModes: FurtherModes;
+    intermediateResultSavingMode: number;
+    intermediateResultTypes: number;
+    localizationModes: number[];
+    maxAlgorithmThreadCount: number;
+    minBarcodeTextLength: number;
+    minResultConfidence: number;
+    pdfRasterDPI: number;
+    pdfReadingMode: number;
+    region: Region;
+    resultCoordinateType: number;
+    returnBarcodeZoneClarity: number;
+    scaleDownThreshold: number;
+    scaleUpModes: number[];
+    terminatePhase: number;
+    textResultOrderModes: number[];
+    timeout: number;
+}
+```
+
+- [`FurtherModes`]({{site.info}}api/Interfaces.html#furthermodes)
+- [`Region`]({{site.info}}api/Interfaces.html#region)
+
+### FurtherModes
+
+**Syntax**
+
+```typescript
+interface FurtherModes {
+    accompanyingTextRecognitionModes: number[];
+    barcodeColourModes: number[];
+    barcodeComplementModes: number[];
+    colourClusteringModes: number[];
+    colourConversionModes: number[];
+    deformationResistingModes: number[];
+    dpmCodeReadingModes: number[];
+    grayscaleTransformationModes: number[];
+    imagePreprocessingModes: number[];
+    regionPredetectionModes: number[];
+    textAssistedCorrectionMode: number;
+    textFilterModes: number[];
+    textureDetectionModes: number[];
+}
+```
+
+### Region
+
+**Syntax**
+
+```typescript
+interface Region {
+    regionBottom: number;
+    regionLeft: number;
+    regionMeasuredByPercentage: number;
+    regionRight: number;
+    regionTop: number;
+}
+```
 
 <!--
 ---

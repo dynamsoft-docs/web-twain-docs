@@ -21,109 +21,14 @@ permalink: /info/api/Addon_BarcodeReader.html
 
 ---
 
-## decode
+## decode()
 
-Read an image in the buffer and try to locate and decode barcode(s) on it.
+Read an image in the buffer and try to locate and decode barcode(s) on it. Please refer to [`TextResult`]({{site.info}}/api/interfaces.html#textresult).
 
 **Syntax**
 
 ```typescript
-decode(index: number): Promise < ITextResults > ;
-
-interface TextResults {
-    [index: number]: TextResult;
-    description ? : string;
-    exception ? : number;
-    imageid ? : number;
-}
-interface TextResult {
-    /**
-     * Barcode result content in a byte array.
-     */
-    barcodeBytes: number[];
-    /**
-     * The barcode format.
-     */
-    barcodeFormat: Dynamsoft.DBR.EnumBarcodeFormat | number;
-    /**
-     * Extra barcde formats.
-     */
-    barcodeFormat_2: Dynamsoft.DBR.EnumBarcodeFormat_2 | number;
-    /**
-     * Barcode formats as a string.
-     */
-    barcodeFormatString: string;
-    /**
-     * Extra barcode formats as a string.
-     */
-    barcodeFormatString_2: string;
-    /**
-     * The barcode result text.
-     */
-    barcodeText: string;
-    /**
-     * Detailed result information.
-     */
-    detailedResult: any | null;
-    /**
-     * The corresponding localization result.
-     */
-    localizationResult: LocalizationResult;
-    /**
-     * Other information
-     */
-    results: Result[];
-}
-interface LocalizationResult {
-    /**
-     * The angle of a barcode. Values range from 0 to 360.
-     */
-    angle: number;
-    /**
-     * The X coordinate of the left-most point.
-     */
-    x1: number;
-    /**
-     * The X coordinate of the second point in a clockwise direction.
-     */
-    x2: number;
-    /**
-     * The X coordinate of the third point in a clockwise direction.
-     */
-    x3: number;
-    /**
-     * The X coordinate of the fourth point in a clockwise direction.
-     */
-    x4: number;
-    /**
-     * The Y coordinate of the left-most point.
-     */
-    y1: number;
-    /**
-     * The Y coordinate of the second point in a clockwise direction.
-     */
-    y2: number;
-    /**
-     * The Y coordinate of the third point in a clockwise direction.
-     */
-    y3: number;
-    /**
-     * The Y coordinate of the fourth point in a clockwise direction.
-     */
-    y4: number;
-    moduleSize: number;
-    pageNumber: number;
-    regionName: number;
-    resultCoordinateType: number;
-    terminatePhase: number;
-}
-interface Result {
-    accompanyingTextBytes: number[];
-    clarity: number;
-    confidence: number;
-    deformation: number;
-    resultType: number;
-}
+decode(index: number): Promise<TextResult[]> ;
 ```
 
 **Parameters**
@@ -156,61 +61,16 @@ interface Result {
 
 ---
 
-## getRuntimeSettings
+## getRuntimeSettings()
 
-Return the current runtime settings or the settings of the specified built-in template. The template can only be "speed", "balance", or "coverage".
+Return the current runtime settings or the settings of the specified built-in template. Please refer to [`RuntimeSettings`]({{site.info}}api/Interfaces.html#runtimesettings).
+
+The template can only be "speed", "balance", or "coverage". 
 
 **Syntax**
 
 ```typescript
-getRuntimeSettings(template?: string): Promise < RuntimeSettings > ;
-
-interface RuntimeSettings {
-    barcodeFormatIds: number;
-    barcodeFormatIds_2: number;
-    binarizationModes: number[];
-    deblurLevel: number;
-    expectedBarcodesCount: number;
-    furtherModes: FurtherModes;
-    intermediateResultSavingMode: number;
-    intermediateResultTypes: number;
-    localizationModes: number[];
-    maxAlgorithmThreadCount: number;
-    minBarcodeTextLength: number;
-    minResultConfidence: number;
-    pdfRasterDPI: number;
-    pdfReadingMode: number;
-    region: Region;
-    resultCoordinateType: number;
-    returnBarcodeZoneClarity: number;
-    scaleDownThreshold: number;
-    scaleUpModes: number[];
-    terminatePhase: number;
-    textResultOrderModes: number[];
-    timeout: number;
-}
-interface FurtherModes {
-    accompanyingTextRecognitionModes: number[];
-    barcodeColourModes: number[];
-    barcodeComplementModes: number[];
-    colourClusteringModes: number[];
-    colourConversionModes: number[];
-    deformationResistingModes: number[];
-    dpmCodeReadingModes: number[];
-    grayscaleTransformationModes: number[];
-    imagePreprocessingModes: number[];
-    regionPredetectionModes: number[];
-    textAssistedCorrectionMode: number;
-    textFilterModes: number[];
-    textureDetectionModes: number[];
-}
-interface Region {
-    regionBottom: number;
-    regionLeft: number;
-    regionMeasuredByPercentage: number;
-    regionRight: number;
-    regionTop: number;
-}
+getRuntimeSettings(template?: string): Promise<RuntimeSettings> ;
 ```
 
 **Availability**
@@ -238,19 +98,19 @@ interface Region {
 
 ---
 
-## updateRuntimeSettings
+## updateRuntimeSettings()
 
 Update the runtime settings with a given object or use the string "speed", "balance", or "coverage" to use our preset settings. The default setting is "coverage".
 
 **Syntax**
 
 ```typescript
-updateRuntimeSettings(settings: RuntimeSettings): Promise < RuntimeSettings > ;
+updateRuntimeSettings(settings: RuntimeSettings): Promise<RuntimeSettings> ;
 ```
 
 **Parameters**
 
-`settings`: Specify the runtime settings.
+`settings`: Specify the runtime settings. Please refer to [`RuntimeSettings`]({{site.info}}api/Interfaces.html#runtimesettings).
 
 **Availability**
 
@@ -298,14 +158,14 @@ DWObject.Addon.BarcodeReader.getRuntimeSettings("balance")
 
 ---
 
-## resetRuntimeSettings
+## resetRuntimeSettings()
 
-Reset all runtime settings to default values.
+Reset all runtime settings to default values. Please refer to [`RuntimeSettings`]({{site.info}}api/Interfaces.html#runtimesettings).
 
 **Syntax**
 
 ```typescript
-resetRuntimeSettings(): Promise < RuntimeSettings > ;
+resetRuntimeSettings(): Promise<RuntimeSettings> ;
 ```
 
 **Availability**
@@ -334,7 +194,7 @@ resetRuntimeSettings(): Promise < RuntimeSettings > ;
 
 ---
 
-## initRuntimeSettingsWithString
+## initRuntimeSettingsWithString()
 
 Set up the barcode reader with advanced settings.
 
@@ -343,12 +203,16 @@ Set up the barcode reader with advanced settings.
 ```typescript
 initRuntimeSettingsWithString(
     settings: string
-): Promise < RuntimeSettings > ;
+): Promise<RuntimeSettings> ;
 ```
 
 **Parameters**
 
 `settings`: The runtime setting in the form of a string.
+
+**Return value**
+
+Please refer to [`RuntimeSettings`]({{site.info}}api/Interfaces.html#runtimesettings).
 
 **Availability**
 

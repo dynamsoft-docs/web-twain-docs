@@ -871,16 +871,16 @@ Note: The below enumeration value has been deprecated as of 18.4.
 
 ## `Dynamsoft.DWT.EnumDWT_DeviceType`
 
-| Label | Value|
-|:-|:-|
-| TWAINSCANNER | 0x10 |
-| WIASCANNER | 0x20 |
-| TWAINX64SCANNER | 0x40 |
-| ICASCANNER | 0x80 |
-| SANESCANNER | 0x100 |
-| ESCLSCANNER | 0x200 |
-| WIFIDIRECTSCANNER | 0x400 |
-| WIATWAINSCANNER | 0x800 |
+| Label | Value| Description |
+|:-|:-|:-|
+| TWAINSCANNER | 0x10 | |
+| WIASCANNER | 0x20 | |
+| TWAINX64SCANNER | 0x40 | |
+| ICASCANNER | 0x80 | |
+| SANESCANNER | 0x100 | |
+| ESCLSCANNER | 0x200 | |
+| WIFIDIRECTSCANNER | 0x400 | |
+| WIATWAINSCANNER | 0x800 | Deprecated since version 18.2 and will be removed in future versions, please use the value `WIASCANNER` instead.|
 
 
 ## `Dynamsoft.DWT.EnumDWT_ExtImageInfo`
@@ -895,5 +895,26 @@ Note: The below enumeration value has been deprecated as of 18.4.
 
 | Label | Value | Description |
 |:-|:-|:-|
-| Normal | 0 | Original mode, the image data is processed in the buffer |
-| Balance | 1 | The image data is processed in the browser canvas |
+| normal | 0 | Original mode, the image data is processed in the buffer |
+| balance | 1 | The image data is processed in the browser canvas |
+
+
+## `Dynamsoft.DWT.Dynamsoft.DWT.EnumDWT_CompressionType`
+
+| Label | Value |
+|:-|:-|
+| TWCP_NONE | 0 |
+| TWCP_PACKBITS | 1 |
+| TWCP_GROUP31D | 2 |
+| TWCP_GROUP31DEOL | 3 |
+| TWCP_GROUP32D | 4 |
+| TWCP_GROUP4 | 5 |
+| TWCP_JPEG | 6 |
+| TWCP_LZW | 7 |
+| TWCP_JBIG | 8 |
+| TWCP_PNG | 9 |
+| TWCP_RLE4 | 10 |
+| TWCP_RLE8 | 11 |
+| TWCP_BITFIELDS | 12 |
+| TWCP_ZIP | 13 |
+| TWCP_JPEG2000 | 14 |
