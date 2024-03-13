@@ -1039,6 +1039,98 @@ interface ThumbnailViewer {
      * @param callback Specify the listener to remove
      */
     off(eventName: string, callback?: () => void): void;
+        location: string;
+    /**
+     * Specify the size of width or height in pixels or percentage. The default value is 30%.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * number in pixels, string in percentage
+     */
+    size: number | string;
+    /**
+     * 
+     * Specify scroll direction. Allowed values are 'vertical' and 'horizontal'.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    scrollDirection: string;
+    /**
+     * Set the margin between images & the margin between image and the viewer border). The default value is 10.
+     * Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * number in pixels, string in percentage
+     */
+    margin: number | string;
+    /**
+     * Set the background of the entire thumbnail viewer. The default value is white.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    background: string;
+    /**
+     * Set the border of the thumbnail viewer.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    border: string;
+    /**
+     * Whether to allow keyboard control.
+     */
+    allowKeyboardControl: boolean;
+    /**
+     * Whether to allow image dragging. The default value is true.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    allowPageDragging: boolean;
+    /**
+     * Whether to allow the mouse to resize the thumbnail viewer. The default value is false.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+	allowResizing: boolean;
+    /**
+
+     * When set to true, will make sure the first image in the viewer is always selected when scrolling through multiple images.
+     */
+    autoChangeIndex: boolean;
+    /**
+     * Return or set the background colour/image of the thumbnail viewer. The default value is white.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    pageBackground: string;
+    /**
+     * Set the border of the thumbnail viewer.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    pageBorder: string;
+    /**
+     * Set the image background when the mouse is hovered.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    hoverBackground: string;
+    /**
+     * Set the image border when the mouse is hovered.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    hoverBorder: string;
+    /**
+     * Set the background when dragging the image. The default value is yellow.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    placeholderBackground: string;
+    /**
+     * Set the border of the selected image.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    selectedImageBorder: string;
+    /**
+     * Set the background of the selected image.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     * Allow any CSS rules
+     */
+    selectedImageBackground: string;
 }
 ```
 
