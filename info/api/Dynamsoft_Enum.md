@@ -795,6 +795,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | Russian | 7 |
 | Chinese | 8 |
 
+{% comment %}
 ## `Dynamsoft.DWT.EnumDWT_InitMsg`
 
 | Label | Value|
@@ -804,6 +805,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | NotInstalledError | 3 |
 | DownloadError | 4 |
 | DownloadNotRestartError | 5 |
+{% endcomment %}
 
 ## `Dynamsoft.DWT.EnumDWT_Driver`
 
