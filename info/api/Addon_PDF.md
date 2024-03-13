@@ -22,7 +22,7 @@ permalink: /info/api/Addon_PDF.html
 
 ---
 
-## GetConvertMode
+## GetConvertMode()
 <div class="blockquote-note"></div>
 > This API has been deprecated as of release 18.4. Please use the [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) function.
 
@@ -61,9 +61,9 @@ GetConvertMode(): number;
 </div>
 
 ---
-## GetReaderOptions
+## GetReaderOptions()
 
-Returns the current PDF reader options.
+Returns the current PDF reader options. Please refer to [`ReaderOptions`]({{site.info}}/api/interfaces.html#readeroptions).
 
 **Syntax**
 
@@ -99,7 +99,7 @@ GetReaderOptions(): ReaderOptions;
 
 ---
 
-## IsModuleInstalled
+## IsModuleInstalled()
 
 Return whether the PDF module has been installed.
 
@@ -137,7 +137,7 @@ IsModuleInstalled(): boolean;
 
 ---
 
-## IsTextBasedPDF
+## IsTextBasedPDF()
 
 Detect whether a local PDF file is text based or not.
 
@@ -179,7 +179,7 @@ IsTextBasedPDF(path: string): boolean;
 
 ---
 
-## SetConvertMode
+## SetConvertMode()
 
 <div class="blockquote-note"></div>
 > This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
@@ -233,7 +233,7 @@ There are three conversion modes
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#ftpdownload" target="_blank">`FTPDownload()`</a>.
 
 ---
-## SetReaderOptions
+## SetReaderOptions()
 
 Sets the current PDF reader options.
 
@@ -244,7 +244,7 @@ SetReaderOptions(options: ReaderOptions): boolean;
 ```
 
 **Parameters**
-`options`: Please see the [ReaderOptions]({{site.info}}/api/interfaces.html#readeroptions) interface.
+`options`: Please see the [`ReaderOptions`]({{site.info}}/api/interfaces.html#readeroptions) interface.
 
 **Availability**
 
@@ -289,7 +289,7 @@ DWObject.Addon.PDF.SetReaderOptions({
 
 ---
 
-## SetPassword
+## SetPassword()
 
 <div class="blockquote-note"></div>
 > This API has been deprecated as of release 18.4. Please [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
@@ -338,7 +338,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 
 ---
 
-## SetResolution
+## SetResolution()
 
 <div class="blockquote-note"></div>
 > This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
@@ -396,69 +396,12 @@ Set up the PDF writing engine.
 **Syntax**
 
 ```typescript
-Write.Setup(settings: PDFWSettings): void;
-
-interface PDFWSettings {
-    /**
-     * Specify the author.
-     */
-    author?: string;
-    /**
-     * Specify the compression type.
-     */
-    compression?: Dynamsoft.DWT.EnumDWT_PDFCompressionType | number;
-     /**
-     * Specify the page type.
-     */
-    pageType?: Dynamsoft.DWT.EnumPDF_Page | number; 
-    /**
-     * Specify the creator.
-     */
-    creator?: string;
-    /**
-     * Specify the creation date.
-     * Note that the argument should start with 'D:' like 'D:20181231'.
-     */
-    creationDate?: string;
-    /**
-     * Specify the key words.
-     */
-    keyWords?: string;
-    /**
-     * Specify the modified date.
-     * Note that the argument should start with 'D:' like 'D:20181231'.
-     */
-    modifiedDate?: string;
-    /**
-     * Specify the producer.
-     */
-    producer?: string;
-    /**
-     * Specify the subject.
-     */
-    subject?: string;
-    /**
-     * Specify the title.
-     */
-    title?: string;
-    /**
-     * Specify the PDF version. For example, 1.5. The allowed values are 1.1 ~ 1.7.
-     * NOTE: If the compression type is PDF_JBig2, the lowest allowed version is 1.4
-     * If the compression type is PDF_JP2000, the lowest allowed version is 1.5
-     */
-    version?: string;
-    /**
-     * Specify the quality of the images in the file.
-     * The value ranges from 0 to 100.
-     * Only valid when the {compression} is 'JPEG' or 'JPEG2000'.
-     */
-    quality?: number;
-}
+Write.Setup(settings: PDFWSettings): boolean;
 ```
 
 **Parameters**
 
-`settings`: Configures how the PDF is generated.
+`settings`: Configures how the PDF is generated. Please refer to [`PDFWSettings`]({{site.info}}/api/interfaces.html#pdfwsettings).
 
 **Availability**
 
@@ -486,8 +429,38 @@ interface PDFWSettings {
 </table>
 </div>
 
+**Example**
+
+```javascript
+DWObject.Addon.PDF.Write.Setup({
+    author: "Dynamsoft",
+    compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG,
+    pageType: Dynamsoft.DWT.EnumPDF_Page.Page_A4,
+    creator: "DWT",
+    creationDate: "D:20230101085959",
+    keyWords: "samplepdf",
+    modifiedDate: "D:20230101090101",
+    producer: "Dynamic Web TWAIN",
+    subject: "SamplePdf",
+    title: "SamplePdf",
+    version: "1.5",
+    quality: 90,
+    });
+
+DWObject.SaveAllAsPDF("DynamicWebTWAIN.pdf", OnSuccess, OnFailure);
+
+function OnSuccess() {
+    console.log('successful');
+}
+
+function OnFailure(errorCode, errorString) {
+    if(errorCode != -2326)
+    alert(errorString);
+}
+```
+
 **Usage notes**
 
-Use this method before you create a PDF with methods such as <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a>, <a href="{{site.info}}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>, and <a href="{{site.info}}api/WebTwain_IO.html#saveallaspdf" target="_blank">`SaveAllAsPDF()`</a>
+Use this method before you create a PDF with methods such as <a href="{{site.info}}api/WebTwain_IO.html#httpupload" target="_blank">`HTTPUpload()`</a>, <a href="{{site.info}}api/WebTwain_IO.html#saveaspdf" target="_blank">`SaveAsPDF()`</a>, and <a href="{{site.info}}api/WebTwain_IO.html#saveallaspdf" target="_blank">`SaveAllAsPDF()`</a>.
 
 Only the core module license is required to use this method.

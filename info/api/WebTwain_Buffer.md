@@ -53,7 +53,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ---
 
-## IndexToImageID
+## IndexToImageID()
 
 Return the imageId of an image specified by the index.
 
@@ -93,7 +93,7 @@ IndexToImageID(index: number): number;
 
 ---
 
-## ImageIDToIndex
+## ImageIDToIndex()
 
 Return the index of an image specified by the imageId.
 
@@ -137,21 +137,21 @@ An `imageId` is unique and won't change as long as the Dynamsoft Service process
 
 ---
 
-## RenameTag
+## RenameTag()
 
 Rename a tag.
 
 **Syntax**
 
 ```typescript
-RenameTag(oldName:string, newName:string): boolean;
+RenameTag(oldTag:string, newTag:string): boolean;
 ```
 
 **Parameters**
 
-`oldName`: Specify the tag to change.
+`oldTag`: Specify the tag to change.
 
-`newName`: Specify the new tag name.
+`newTag`: Specify the new tag name.
 
 **Availability**
 
@@ -179,7 +179,7 @@ RenameTag(oldName:string, newName:string): boolean;
 
 ---
 
-## RemoveTag
+## RemoveTag()
 
 Remove the specified tag from one or more images(if not specified, remove from all).
 
@@ -225,7 +225,7 @@ If the index is not specified, the tag will be removed from _all images_. If the
 
 ---
 
-## GetTagList
+## GetTagList()
 
 Return the status of all current tags.
 
@@ -265,7 +265,7 @@ GetTagList(): TagInfo[];
 
 ---
 
-## ClearImageTags
+## ClearImageTags()
 
 Remove all tags from the specified image.
 
@@ -305,7 +305,7 @@ ClearImageTags(index: number): boolean;
 
 ---
 
-## FilterImagesByTag
+## FilterImagesByTag()
 
 Filter images by the specified tag.
 
@@ -345,7 +345,7 @@ FilterImagesByTag(tag: string): boolean;
 
 ---
 
-## ClearFilter
+## ClearFilter()
 
 Stop filtering images by tag. Return an array of UUID of images under the viewer.
 
@@ -381,7 +381,7 @@ ClearFilter(): number[];
 
 ---
 
-## SetDefaultTag
+## SetDefaultTag()
 
 Set a default tag for newly incoming images.
 
@@ -421,7 +421,7 @@ SetDefaultTag(tag: string): boolean;
 
 ---
 
-## TagImages
+## TagImages()
 
 Add a tag to specified images.
 
@@ -463,7 +463,7 @@ TagImages(indices: number[], tag: string): boolean;
 
 ---
 
-## GetImageBitDepth
+## GetImageBitDepth()
 
 Return the pixel bit depth of the specified image.
 
@@ -519,7 +519,7 @@ GetImageBitDepthAsync(index: number): Promise<number>;
 
 --->
 
-## GetImageHeight
+## GetImageHeight()
 
 Return the height (in pixels) of the specified image.
 
@@ -559,7 +559,7 @@ GetImageHeight(index: number): number;
 
 ---
 
-## GetImageWidth
+## GetImageWidth()
 
 Return the width (in pixels) of the specified image.
 
@@ -599,7 +599,7 @@ GetImageWidth(index: number): number;
 
 ---
 
-## GetImageXResolution
+## GetImageXResolution()
 
 Return the horizontal resolution of the specified image.
 
@@ -639,7 +639,7 @@ GetImageXResolution(index: number): number;
 
 ---
 
-## GetImageYResolution
+## GetImageYResolution()
 
 Return the vertical resolution of the specified image.
 
@@ -679,7 +679,7 @@ GetImageYResolution(index: number): number;
 
 ---
 
-## GetSkewAngle
+## GetSkewAngle()
 
 Return the skew angle of the specified image.
 
@@ -730,7 +730,7 @@ GetSkewAngle(
 
 ---
 
-## GetSkewAngleEx
+## GetSkewAngleEx()
 
 Return the skew angle of the specified rectangle on the specified image.
 
@@ -793,11 +793,11 @@ GetSkewAngleEx(
 
 **Usage notes**
 
-After you get the skew angle of an image, you can rotate it with the method [Rotate]({{site.info}}api/WebTwain_Edit.html#rotate) to perform deskewing.
+After you get the skew angle of an image, you can rotate it with the method [`Rotate()`]({{site.info}}api/WebTwain_Edit.html#rotate) to perform deskewing.
 
 ---
 
-## GetImageSize
+## GetImageSize()
 
 Calculate the size in bytes of the specified image assuming it's resized to the given dimensions.
 
@@ -841,7 +841,7 @@ GetImageSize(index: number, width: number, height: number): number;
 
 ---
 
-## GetImageSizeWithSpecifiedType
+## GetImageSizeWithSpecifiedType()
 
 Calculate the size in bytes of the specified image assuming an expected file type.
 
@@ -855,7 +855,7 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 
 `index`: Specify the image.
 
-`type`: Specify the expected file type.
+`type`: Specify the expected file type. Please refer to [`Dynamsoft.DWT.EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 **Availability**
 
@@ -883,7 +883,7 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 
 ---
 
-## GetSelectedImagesSize
+## GetSelectedImagesSize()
 
 Calculate the size in bytes of all selected images assuming an expected file type.
 
@@ -895,7 +895,7 @@ GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 
 **Parameters**
 
-`type`: Specify the expected file type.
+`type`: Specify the expected file type. Please refer to [`Dynamsoft.DWT.EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 **Availability**
 
@@ -927,7 +927,7 @@ If the calculation fails, -1 is returned.
 
 ---
 
-## GetImagePartURL
+## GetImagePartURL()
 
 Return the internal URL of the specified image.
 
@@ -983,7 +983,7 @@ if x/a < y/b, return the image (x, b\*x/a); if x/a > y/b, return the image (a\*y
 
 ---
 
-## GetImageURL
+## GetImageURL()
 
 Return the direct URL of the specified image.
 
@@ -1039,7 +1039,7 @@ if x/a < y/b, return the image (x, b\*x/a); if x/a > y/b, return the image (a\*y
 
 ---
 
-## SelectAllImages
+## SelectAllImages()
 
 Select all images and return the indices. Viewer will be scrolled to the last image.
 
@@ -1075,7 +1075,7 @@ SelectAllImages(): number[];
 
 ---
 
-## SelectImages
+## SelectImages()
 
 Select the specified images.
 
@@ -1115,7 +1115,7 @@ SelectImages(indices: number[]): boolean;
 
 ---
 
-## MoveImage
+## MoveImage()
 
 Change the position of an image in the buffer.
 
@@ -1157,7 +1157,7 @@ MoveImage(from: number, to: number): boolean;
 
 ---
 
-## SwitchImage
+## SwitchImage()
 
 Exchange the positions of two images.
 
@@ -1199,7 +1199,7 @@ SwitchImage(index1: number, index2: number): boolean;
 
 ---
 
-## RemoveImage
+## RemoveImage()
 
 Remove the specified image.
 
@@ -1241,7 +1241,7 @@ RemoveImage(index: number): boolean;
 
 ---
 
-## RemoveAllImages
+## RemoveAllImages()
 
 Remove all images.
 
@@ -1292,7 +1292,7 @@ RemoveAllImagesAsync(): Promise<boolean>;
 
 --->
 
-## RemoveAllSelectedImages
+## RemoveAllSelectedImages()
 
 Remove all selected images.
 
@@ -1564,7 +1564,7 @@ readonly BlankImageCurrentStdDev: number;
 
 **Usage notes**
 
-This property is only valid after `IsBlankImageExpress` or `IsBlankImage()` is called.
+This property is only valid after [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) or [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) is called.
 
 ---
 
@@ -1606,7 +1606,7 @@ BlankImageMaxStdDev: number;
 
 [0, 100] is the interval of allowed values, inclusive. 0 gives a single-color image. The default value is 1.
 
-This property is only valid before `IsBlankImageExpress` is called.
+This property is only valid before [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) is called.
 
 ---
 
@@ -1647,7 +1647,7 @@ BlankImageThreshold: number;
 **Usage notes**
 
 [0, 255] is the interval of allowed values, inclusive. The default value is 128.
-This property is only valid before `IsBlankImageExpress` is called.
+This property is only valid before [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) is called.
 
 ---
 
@@ -1694,7 +1694,7 @@ All cached data is encrypted and can only be read by Dynamic Web TWAIN and it wi
 
 ---
 
-## IsBlankImage
+## IsBlankImage()
 
 Check whether the specified image is blank.
 
@@ -1735,7 +1735,7 @@ IsBlankImage(index: number): boolean;
 ---
 
 
-## IsBlankImageAsync
+## IsBlankImageAsync()
 
 Check whether the specified image is blank.
 
@@ -1786,13 +1786,13 @@ IsBlankImageAsync(index: number,
 </div>
 
 **Usage Notes**
-This API uses a different algorithm than the one used in `IsBlankImage` and `IsBlankImageExpress`, which allows you to judge a page as not blank if it has marks within a defined size. If the mark on the page satisfies the comparison parameters, then the page will be deemed not blank.
+This API uses a different algorithm than the one used in [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) and [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress), which allows you to judge a page as not blank if it has marks within a defined size. If the mark on the page satisfies the comparison parameters, then the page will be deemed not blank.
 
 Example: The mark on the page is 11 pixels tall, `minBlockHeight` is set to 9 pixels and `maxBlockHeight` is set to 13 pixels, the page will be marked as not blank.
 
 ---
 
-## IsBlankImageExpress
+## IsBlankImageExpress()
 
 Check whether the specified image is blank.
 
@@ -1832,15 +1832,15 @@ IsBlankImageExpress(index: number): boolean;
 
 **Usage notes**
 
-`IsBlankImage` is more accurate than `IsBlankImageExpress` but it works slower.
+[`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) is more accurate than [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) but it works slower.
 
-`BlankImageCurrentStdDev` should be read after either `IsBlankImage()` or `IsBlankImageExpress`.
+[`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagecurrentstddev) should be read after either [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) or [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress).
 
-If you believe an image should be blank but `IsBlankImage()` or `IsBlankImageExpress` is returning `false`, you can read `BlankImageCurrentStdDev` for that image and then set a bigger value to `BlankImageMaxStdDev`.
+If you believe an image should be blank but [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) or [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) is returning `false`, you can read [`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagecurrentstddev) for that image and then set a bigger value to [`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev).
 
-Both `BlankImageCurrentStdDev` and `BlankImageMaxStdDev` range from 0 to 100.
+Both [`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagecurrentstddev) and [`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) range from 0 to 100.
 
-If the image is not blank and it is not black and white, `IsBlankImage()` or `IsBlankImageExpress` may return `true`. In that case, you can increase the [BlankImageThreshold]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold) value so that the image is not detected as blank.
+If the image is not blank and it is not black and white, [`IsBlankImage()`]({{site.info}}api/WebTwain_Buffer.html#isblankimage) or [`IsBlankImageExpress()`]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) may return `true`. In that case, you can increase the [`BlankImageThreshold`]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold) value so that the image is not detected as blank.
 
 ---
 
@@ -1882,7 +1882,7 @@ IfAllowLocalCache: boolean;
 
 The default value of IfAllowLocalCache is true. When the property is true, you can scan as many images as you want as long as you have a big enough disk.  
 The default threshold is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.  
-If necessary, you can set the threshold using `BufferMemoryLimit` for better performance.  
+If necessary, you can set the threshold using [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit) for better performance.  
 All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.
 
 ---
@@ -1901,7 +1901,9 @@ RegisterEvent('OnBufferChanged',
 
 **Parameters**
 
-`bufferChangeInfo`: Details about the buffer change. `TagInfo`: Please refer to [BufferChangeInfo]({{site.info}}api/Interfaces.html#bufferchangeinfo).
+`bufferChangeInfo`: Details about the buffer change. 
+
+`TagInfo`: Please refer to [`BufferChangeInfo`]({{site.info}}api/Interfaces.html#bufferchangeinfo).
 
 **Availability**
 
@@ -1948,7 +1950,7 @@ A built-in callback triggered when the current image in buffer is changed like f
 ```typescript
 RegisterEvent('OnBitmapChanged',
     function (
-        indexString: number[],
+        indices: number[],
         type: number,
         index: number
     ) {}
@@ -1957,7 +1959,7 @@ RegisterEvent('OnBitmapChanged',
 
 **Parameters**
 
-`indexString`: Array of the changed index(indices).
+`indices`: Array of the changed index(indices).
 
 `type`: Operation type.
    1 means new image(s) were added at the tail,
@@ -1996,8 +1998,8 @@ RegisterEvent('OnBitmapChanged',
 ```javascript
 DWObject.RegisterEvent(
   "OnBitmapChanged",
-  function (strUpdatedIndex, operationType, sCurrentIndex) {
-    console.log("Image " + sCurrentIndex + " has changed!");
+  function (updatedIndices, operationType, currentIndex) {
+    console.log(updatedIndices);
   }
 );
 ```
@@ -2094,7 +2096,7 @@ Pair: [from: number, to: number];
 
 ---
 
-## GetTagListByIndex
+## GetTagListByIndex()
 
 Return the tag(s) of a specified image.
 
@@ -2140,7 +2142,7 @@ DWObject.GetTagListByIndex(0);
 
 ---
 
-## CopyToDocumentAsync
+## CopyToDocumentAsync()
 
 Copy specified images to another document.
 
@@ -2192,9 +2194,23 @@ CopyToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 </table>
 </div>
 
+**Example**
+
+```typescript
+DWObject.CreateDocument("Document1");
+DWObject.CreateDocument("Document2");
+DWObject.OpenDocument("Document1");
+await DWObject.SelectSourceAsync();
+await DWObject.AcquireImageAsync({   //scan 5 Images
+        IfCloseSourceAfterAcquire: true 
+    });
+await DWObject.CopyToDocumentAsync("Document1", "Document2", [0,1]);
+DWObject.OpenDocument("Document2");
+```
+
 ---
 
-## CreateDocument
+## CreateDocument()
 
 Create a document for the scanned image(s).
 
@@ -2249,7 +2265,7 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## MoveToDocumentAsync
+## MoveToDocumentAsync()
 
 Move specified images to another document.
 
@@ -2301,9 +2317,23 @@ MoveToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 </table>
 </div>
 
+**Example**
+
+```typescript
+DWObject.CreateDocument("Document1");
+DWObject.CreateDocument("Document2");
+DWObject.OpenDocument("Document1");
+await DWObject.SelectSourceAsync();
+await DWObject.AcquireImageAsync({   //scan 5 Images
+        IfCloseSourceAfterAcquire: true 
+    });
+await DWObject.MoveToDocumentAsync("Document1", "Document2", [0,1]);
+DWObject.OpenDocument("Document2");
+```
+
 ---
 
-## OpenDocument
+## OpenDocument()
 
 Use the specified document for the scanned image(s)
 
@@ -2360,7 +2390,7 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## GetCurrentDocumentName
+## GetCurrentDocumentName()
 
 Get the current document name. The default value is 'dynamsoft-default-document'. Scanned image(s) are saved in this document by default if no document name is created.
 
@@ -2396,7 +2426,7 @@ GetCurrentDocumentName():string;
 
 ---
 
-## RenameDocument
+## RenameDocument()
 
 Rename a document.
 
@@ -2438,7 +2468,7 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 
 ---
 
-## RemoveDocument
+## RemoveDocument()
 
 Delete the specified document.
 
@@ -2478,7 +2508,7 @@ RemoveDocument(documentName:string):boolean;
 
 ---
 
-## GetDocumentInfoList
+## GetDocumentInfoList()
 
 Get the list of all documents and their information.
 
@@ -2490,7 +2520,7 @@ GetDocumentInfoList(): DocumentInfo[];
 
 **Arguments**
 
-`DocumentInfo`: Please refer to [DocumentInfo]({{site.info}}api/Interfaces.html#documentinfo).
+`DocumentInfo`: Please refer to [`DocumentInfo`]({{site.info}}api/Interfaces.html#documentinfo).
 
 **Availability**
 

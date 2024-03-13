@@ -110,7 +110,7 @@ permalink: /info/api/WebTwain_Acquire.html
 
 ---
 
-## AcquireImage
+## AcquireImage()
 
 Start image acquisition.
 
@@ -233,7 +233,7 @@ function AcquireImage4() {
 
 ---
 
-## CloseSource
+## CloseSource()
 
 Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
 
@@ -287,7 +287,7 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## CloseSourceAsync
+## CloseSourceAsync()
 
 Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
 
@@ -325,7 +325,7 @@ CloseSourceAsync(): Promise<boolean>;
 
 ---
 
-## DisableSource
+## DisableSource()
 
 Disable the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to stop the acquiring process. If the data source's user interface is displayed, it will be closed.
 
@@ -365,7 +365,7 @@ After `DisableSource()` is called, the Source is still open and you can continue
 
 ---
 
-## EnableSource
+## EnableSource()
 
 Enable the data source to start the acquiring process.
 
@@ -405,7 +405,7 @@ The method is equivalent to `AcquireImage()` without parameters.
 
 ---
 
-## EnableSourceUI
+## EnableSourceUI()
 
 Display the TWAIN source's built-in user interface.
 
@@ -456,7 +456,7 @@ This method enables the user to manipulate the settings for scanning but not sta
 
 ---
 
-## OpenSource
+## OpenSource()
 
 Load a data source to get it ready to acquire images.
 
@@ -511,7 +511,7 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## OpenSourceAsync
+## OpenSourceAsync()
 
 Load a data source to get it ready to acquire images.
 
@@ -547,7 +547,7 @@ OpenSourceAsync(): Promise<boolean>;
 
 ---
 
-## GetSourceNames
+## GetSourceNames()
 
 Return all available data sources (scanners, etc.) and optionally all detailed information about them.
 
@@ -563,7 +563,7 @@ GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 
 **Arguments**
 
-`SourceDetails`: Please refer to [SourceDetails]({{site.info}}api/Interfaces.html#sourcedetails).
+`SourceDetails`: Please refer to [`SourceDetails`]({{site.info}}api/Interfaces.html#sourcedetails).
 
 **Availability**
 
@@ -597,7 +597,7 @@ DWObject.GetSourceNames(); // return a list of scanner sources such as ['PaperSt
 
 ---
 
-## GetSourceNamesAsync
+## GetSourceNamesAsync()
 
 Return all available data sources (scanners, etc.) and optionally all detailed information about them.
 
@@ -637,7 +637,7 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 
 ---
 
-## SelectSource
+## SelectSource()
 
 Bring up the Source Selection User Interface (UI) for the user to choose a data source.
 
@@ -714,7 +714,7 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## SelectSourceAsync
+## SelectSourceAsync()
 
 Bring up the Source Selection User Interface (UI) for the user to choose a data source.
 
@@ -770,7 +770,7 @@ DWObject.SelectSourceAsync()
 
 ---
 
-## SelectSourceByIndex
+## SelectSourceByIndex()
 
 Select a data source by its index.
 
@@ -829,7 +829,7 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## SelectSourceByIndexAsync
+## SelectSourceByIndexAsync()
 
 Select a data source by its index.
 
@@ -883,7 +883,7 @@ DWObject.SelectSourceByIndexAsync(0)
 
 ---
 
-## SetOpenSourceTimeout
+## SetOpenSourceTimeout()
 
 Sets a timer which stops the data source opening process once it expires.
 
@@ -933,7 +933,7 @@ DWObject.SelectSource(function () {
 
 ---
 
-## startScan
+## startScan()
 
 Start the acquisition by passing all settings at once.
 
@@ -977,7 +977,7 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 
 ---
 
-## CancelAllPendingTransfers
+## CancelAllPendingTransfers()
 
 Cancels all pending transfers.
 
@@ -1016,7 +1016,7 @@ This method is only valid in the events [OnPreAllTransfers](#onprealltransfers),
 
 ---
 
-## CloseSourceManager
+## CloseSourceManager()
 
 Closes and unloads Data Source Manager.
 
@@ -1058,7 +1058,7 @@ DWObject.CloseSourceManager();
 
 ---
 
-## CloseSourceManagerAsync
+## CloseSourceManagerAsync()
 
 Closes and unloads Data Source Manager.
 
@@ -1094,7 +1094,7 @@ CloseSourceManagerAsync(): Promise<boolean>;
 
 ---
 
-## CloseWorkingProcess
+## CloseWorkingProcess()
 
 Closes the scanning process to release resources on the machine.
 
@@ -1134,7 +1134,7 @@ In the HTML5 edition, Dynamic Web TWAIN uses a separate process to communicate w
 
 ---
 
-## FeedPage
+## FeedPage()
 
 Ejects the current page and begins scanning the next page in the document feeder.
 
@@ -1174,7 +1174,7 @@ Use this method after [OpenSource()](#opensource) is called and make sure [IfFee
 
 ---
 
-## GetCustomDSData
+## GetCustomDSData()
 
 Get the custom data source data and saves the data in a specified file.
 
@@ -1225,7 +1225,7 @@ DWObject.GetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
 
 ---
 
-## GetCustomDSDataEx
+## GetCustomDSDataEx()
 
 Gets custom DS data and returns it in a base64 string.
 
@@ -1272,7 +1272,7 @@ DWObject.GetCustomDSDataEx(); // Return a base64 string
 
 ---
 
-## GetSourceNameItems
+## GetSourceNameItems()
 
 Get the name of a data source by its index in data source manager source list.
 
@@ -1319,7 +1319,7 @@ DWObject.GetSourceNameItems(0); // return the name of scanner 1
 
 ---
 
-## OpenSourceManager
+## OpenSourceManager()
 
 Load and open data source manager.
 
@@ -1365,7 +1365,7 @@ DWObject.OpenSourceManager();
 
 ---
 
-## OpenSourceManagerAsync
+## OpenSourceManagerAsync()
 
 Load and open data source manager.
 
@@ -1404,7 +1404,7 @@ If application identification needs to be set, it should be set before this API.
 
 ---
 
-## ResetImageLayout
+## ResetImageLayout()
 
 Reset the image layout in the data source.
 
@@ -1444,7 +1444,7 @@ To set the image layout manually, you can use [SetImageLayout()](#setimagelayout
 
 ---
 
-## RewindPage
+## RewindPage()
 
 If called while {IfFeederEnabled} property is true, the data source will return the current page to the input area and return the last page from the output area into the acquisition area.
 
@@ -1484,7 +1484,7 @@ Use this method after [OpenSource()](#opensource) method and make sure [IfFeeder
 
 ---
 
-## SetCustomDSData
+## SetCustomDSData()
 
 Sets custom data source data to be used for scanning, the data is stored in a file which can be regarded as a scanning profile.
 
@@ -1535,7 +1535,7 @@ DWObject.SetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
 
 ---
 
-## SetCustomDSDataEx
+## SetCustomDSDataEx()
 
 Set custom data source data to be used for scanning, the input is a base64 string.
 
@@ -1584,7 +1584,7 @@ DWObject.SetCustomDSData("the base64 string of your profile");
 
 ---
 
-## SetFileXferInfo
+## SetFileXferInfo()
 
 Set the file transfer information to be used in File Transfer mode.
 
@@ -1669,7 +1669,7 @@ function failureCallback(errorCode, errorString) {
 
 ---
 
-## SetImageLayout
+## SetImageLayout()
 
 Set the left, top, right, and bottom sides of the image layout rectangle for the current data source. The image layout rectangle defines a frame of the data source's scanning area to be acquired.
 
@@ -4076,7 +4076,7 @@ RegisterEvent("OnSourceUIClose", function () {});
 
 ---
 
-## getCapabilities
+## getCapabilities()
 
 Gets detailed information about all capabilities of the current data source.
 
@@ -4126,7 +4126,7 @@ getCapabilities(
 
 ---
 
-## setCapabilities
+## setCapabilities()
 
 Sets up one or multiple capabilities in one call.
 
@@ -4236,7 +4236,7 @@ DWObject.setCapabilities(
 ```
 ---
 
-## GetDevicesAsync
+## GetDevicesAsync()
 
 Return all available devices (scanners, eSCL scanners, etc.) for the device type (if specified)
 
@@ -4299,7 +4299,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 ---
 
-## SelectDeviceAsync
+## SelectDeviceAsync()
 
 Select the device to use for scanning
 
@@ -4355,7 +4355,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 ---
 
-## AcquireImageAsync
+## AcquireImageAsync()
 
 Scan documents into another DWObject control. eSCL is not supported.
 
