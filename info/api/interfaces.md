@@ -1039,7 +1039,11 @@ interface ThumbnailViewer {
      * @param callback Specify the listener to remove
      */
     off(eventName: string, callback?: () => void): void;
-        location: string;
+    /**
+     * Where to put the thumbnail view. The allowed values are left, top, right, bottom. The default value is left.
+     * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
+     */
+    location: string;
     /**
      * Specify the size of width or height in pixels or percentage. The default value is 30%.
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
@@ -1083,9 +1087,8 @@ interface ThumbnailViewer {
      * Whether to allow the mouse to resize the thumbnail viewer. The default value is false.
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      */
-	allowResizing: boolean;
+    allowResizing: boolean;
     /**
-
      * When set to true, will make sure the first image in the viewer is always selected when scrolling through multiple images.
      */
     autoChangeIndex: boolean;

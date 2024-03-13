@@ -1998,8 +1998,8 @@ RegisterEvent('OnBitmapChanged',
 ```javascript
 DWObject.RegisterEvent(
   "OnBitmapChanged",
-  function (strUpdatedIndex, operationType, sCurrentIndex) {
-    console.log("Image " + sUpdatedIndex + " has changed!");
+  function (updatedIndices, operationType, currentIndex) {
+    console.log(updatedIndices);
   }
 );
 ```
