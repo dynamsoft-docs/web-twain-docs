@@ -2194,6 +2194,20 @@ CopyToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 </table>
 </div>
 
+**Example**
+
+```typescript
+DWObject.CreateDocument("Document1");
+DWObject.CreateDocument("Document2");
+DWObject.OpenDocument("Document1");
+await DWObject.SelectSourceAsync();
+await DWObject.AcquireImageAsync({   //scan 5 Images
+        IfCloseSourceAfterAcquire: true 
+    });
+await DWObject.CopyToDocumentAsync("Document1", "Document2", [0,1]);
+DWObject.OpenDocument("Document2");
+```
+
 ---
 
 ## CreateDocument()
@@ -2302,6 +2316,20 @@ MoveToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 
 </table>
 </div>
+
+**Example**
+
+```typescript
+DWObject.CreateDocument("Document1");
+DWObject.CreateDocument("Document2");
+DWObject.OpenDocument("Document1");
+await DWObject.SelectSourceAsync();
+await DWObject.AcquireImageAsync({   //scan 5 Images
+        IfCloseSourceAfterAcquire: true 
+    });
+await DWObject.MoveToDocumentAsync("Document1", "Document2", [0,1]);
+DWObject.OpenDocument("Document2");
+```
 
 ---
 
