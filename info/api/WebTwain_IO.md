@@ -121,7 +121,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 ---
 
-## LoadImage  
+## LoadImage()  
 
 Load image(s) specified by its absolute path.  
 
@@ -164,7 +164,7 @@ LoadImage(
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported</td>
+<td align="center">v12.1+</td>
 <td align="center">not supported</td>
 </tr>
 
@@ -187,7 +187,7 @@ DWObject.LoadImage(
 
 ---
 
-## LoadImageEx  
+## LoadImageEx()  
 
 Load image(s) specified by its absolute path.
 
@@ -234,7 +234,7 @@ LoadImageEx(
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">18.2+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -242,7 +242,7 @@ LoadImageEx(
 
 **Usage Notes**
 
-You can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) before calling this API to enable/disable "Open File" dialog.
+You can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) before calling this API to enable/disable "Open File" dialog.
 
 **Example**
 
@@ -282,7 +282,7 @@ DWObject.LoadImageEx(
 
 ---
 
-## LoadImageFromBase64Binary
+## LoadImageFromBase64Binary()
 
 Load image(s) from a base64 string.
 
@@ -294,7 +294,7 @@ LoadImageFromBase64Binary(
     imageType: Dynamsoft.DWT.EnumDWT_ImageType,
     successCallback ? : () => void,
     failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+): boolean | Promise<boolean>;
 ```
 
 **Parameters**
@@ -369,7 +369,7 @@ DWObject.ConvertToBase64(
 
 ---
 
-## LoadImageFromBinary
+## LoadImageFromBinary()
 
 Load image(s) from a binary object (Blob or ArrayBuffer).
 
@@ -453,7 +453,7 @@ DWObject.ConvertToBlob(
 
 ---
 
-## LoadDibFromClipboard
+## LoadDibFromClipboard()
 
 Load an image from the system clipboard. The image must be in DIB format.
 
@@ -510,7 +510,7 @@ However, calling them asynchronously is recommended.
 
 ## OnGetFilePath
 
-This event is triggered when [ShowFileDialog()]({{site.info}}api/WebTwain_IO.html#showfiledialog) is called or when [LoadImageEx()]({{site.info}}api/WebTwain_IO.html#loadimageex) is called with [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) set to true.
+This event is triggered when [ShowFileDialog()]({{site.info}}api/WebTwain_IO.html#showfiledialog) is called or when [LoadImageEx()]({{site.info}}api/WebTwain_IO.html#loadimageex) is called with [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) set to true.
 
 **Syntax**
 
@@ -518,7 +518,7 @@ This event is triggered when [ShowFileDialog()]({{site.info}}api/WebTwain_IO.htm
 RegisterEvent(
     "OnGetFilePath",
     function (
-        isSave: boolean,
+        isSave: number,
         filesCount: number,
         index: number,
         directory: string,
@@ -529,7 +529,7 @@ RegisterEvent(
 
 **Parameters**
 
-`isSave`: Whether or not the event is triggered after a save-file dialog was shown.
+`isSave`: Whether or not the event is triggered after a save-file dialog was shown. `0` means false, `1` means true.
 
 `filesCount`: How many files were selected.
 
@@ -628,7 +628,7 @@ DWObject.RegisterEvent("OnPostLoad", function (path, name, type) {
 
 ---
 
-## FTPDownload
+## FTPDownload()
 
 Download the specified file via FTP.
 
@@ -681,7 +681,7 @@ FTPDownload(
 
 ---
 
-## FTPDownloadEx
+## FTPDownloadEx()
 
 Download the specified file via FTP.
 
@@ -757,7 +757,7 @@ DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDW
 
 ---
 
-## FTPUpload
+## FTPUpload()
 
 Upload the specified image via FTP.
 
@@ -836,7 +836,7 @@ DWObject.FTPUpload(
 
 ---
 
-## FTPUploadEx
+## FTPUploadEx()
 
 Upload the specified image via FTP.
 
@@ -895,7 +895,7 @@ FTPUploadEx(
 
 ---
 
-## FTPUploadAllAsMultiPageTIFF
+## FTPUploadAllAsMultiPageTIFF()
 
 Upload all images as a multi-page TIFF via FTP.
 
@@ -948,7 +948,7 @@ FTPUploadAllAsMultiPageTIFF(
 
 ---
 
-## FTPUploadAllAsPDF
+## FTPUploadAllAsPDF()
 
 Upload all images as a multi-page PDF via FTP.
 
@@ -1001,7 +1001,7 @@ FTPUploadAllAsPDF(
 
 ---
 
-## FTPUploadAsMultiPagePDF
+## FTPUploadAsMultiPagePDF()
 
 Upload selected images as a multi-page PDF via FTP.
 
@@ -1053,7 +1053,7 @@ FTPUploadAsMultiPagePDF(
 
 ---
 
-## FTPUploadAsMultiPageTIFF
+## FTPUploadAsMultiPageTIFF()
 
 Upload selected images as a multi-page TIFF via FTP.
 
@@ -1109,7 +1109,7 @@ FTPUploadAsMultiPageTIFF(
 
 ## FTPUserName
 
-The password to connect to the FTP.
+The user name to connect to the FTP.
 
 **Syntax**
 
@@ -1276,7 +1276,7 @@ HTTPUserName: string;
 
 ---
 
-## HTTPDownload
+## HTTPDownload()
 
 Download the specified file via a HTTP Get request.
 
@@ -1355,7 +1355,7 @@ DWObject.HTTPDownload("localhost", "/files/sample.tif", onSuccess, onFailure);
 
 ---
 
-## HTTPDownloadEx
+## HTTPDownloadEx()
 
 Download the specified file via a HTTP Get request.
 
@@ -1443,7 +1443,7 @@ DWObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_Imag
 
 ---
 
-## HTTPDownloadThroughPost
+## HTTPDownloadThroughPost()
 
 Download the specified file via a HTTP Post request.
 
@@ -1502,7 +1502,7 @@ HTTPDownloadThroughPost(
 
 ---
 
-## HTTPUpload
+## HTTPUpload()
 
 Upload the specified image(s) via a HTTP Post.
 
@@ -1607,7 +1607,7 @@ function OnServerReturnedSomething(errCode, errString, responseStr) {
 
 ---
 
-## HTTPUploadThroughPutEx
+## HTTPUploadThroughPutEx()
 
 Upload the specified image via a HTTP Put request.
 
@@ -1668,7 +1668,7 @@ HTTPUploadThroughPutEx(
 
 ---
 
-## HTTPUploadThroughPost
+## HTTPUploadThroughPost()
 
 Upload the specified image via a HTTP Post request.
 
@@ -1748,7 +1748,7 @@ var uploadfilename = Digital.getMilliseconds();
 
 DWObject.HTTPUploadThroughPost(
     strHTTPServer,
-    i,
+    DWObject.CurrentImageIndexInBuffer,
     strActionPage,
     uploadfilename + ".jpg",
     function () {
@@ -1762,7 +1762,7 @@ DWObject.HTTPUploadThroughPost(
 
 ---
 
-## HTTPUploadThroughPostEx
+## HTTPUploadThroughPostEx()
 
 Upload the specified image in a specific image format via a HTTP Post request.
 
@@ -1834,7 +1834,7 @@ If you want to use this method to upload / download files through HTTPS, please 
 
 ---
 
-## HTTPUploadAllThroughPostAsMultiPageTIFF
+## HTTPUploadAllThroughPostAsMultiPageTIFF()
 
 Upload all images in the buffer as a TIFF file via a HTTP Post request.
 
@@ -1900,7 +1900,7 @@ If you want to use this method to upload / download files through HTTPS, please 
 
 ---
 
-## HTTPUploadAllThroughPostAsPDF
+## HTTPUploadAllThroughPostAsPDF()
 
 Upload all images in the buffer as a PDF file via a HTTP Post request.
 
@@ -1966,7 +1966,7 @@ If you want to use this method to upload / download files through HTTPS, please 
 
 ---
 
-## HTTPUploadThroughPostAsMultiPagePDF
+## HTTPUploadThroughPostAsMultiPagePDF()
 
 Upload all selected images in the buffer as a PDF file via a HTTP Post request.
 
@@ -2032,7 +2032,7 @@ If you want to use this method to upload / download files through HTTPS, please 
 
 ---
 
-## HTTPUploadThroughPostAsMultiPageTIFF
+## HTTPUploadThroughPostAsMultiPageTIFF()
 
 Upload all selected images in the buffer as a TIFF file via a HTTP Post request.
 
@@ -2318,7 +2318,7 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 
 ---
 
-## ConvertToBase64
+## ConvertToBase64()
 
 Convert the specified images to a base64 string.
 
@@ -2393,7 +2393,7 @@ DWObject.ConvertToBase64(
 
 ---
 
-## ConvertToBlob
+## ConvertToBlob()
 
 Convert the specified images to a blob.
 
@@ -2463,7 +2463,7 @@ DWObject.ConvertToBlob(
 ```
 
 ---
-## OutputSelectedAreaAsync
+## OutputSelectedAreaAsync()
 
 Copy selected area to Blob or base64.
 
@@ -2521,7 +2521,7 @@ OutputSelectedAreaAsync({
 
 ---
 
-## SaveAsBMP
+## SaveAsBMP()
 
 Save the specified image as a BMP file.
 
@@ -2576,11 +2576,11 @@ SaveAsBMP(
 
 **Usage Notes**
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
 
-## SaveAsJPEG
+## SaveAsJPEG()
 
 Save the specified image as a JPEG file.
 
@@ -2635,11 +2635,11 @@ SaveAsJPEG(
 
 **Usage notes**
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
 
-## SaveAsPDF
+## SaveAsPDF()
 
 Save the specified image as a PDF file.
 
@@ -2696,11 +2696,11 @@ SaveAsPDF(
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
 
-## SaveAsPNG
+## SaveAsPNG()
 
 Save the specified image as a PNG file.
 
@@ -2755,11 +2755,11 @@ SaveAsPNG(
 
 **Usage notes**
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
 
-## SaveAsTIFF
+## SaveAsTIFF()
 
 Save the specified image as a TIFF file.
 
@@ -2814,11 +2814,11 @@ SaveAsTIFF(
 
 **Usage notes**
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
 
-## SaveAllAsMultiPageTIFF
+## SaveAllAsMultiPageTIFF()
 
 Saves all the images in buffer as a multi-page TIFF file.
 
@@ -2870,13 +2870,13 @@ SaveAllAsMultiPageTIFF(
 
 **Usage notes**
 
-If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.
+{% comment %}If you are using WASM mode on the desktop, the image will always be saved to the Downloads folder even if you specify an absolute path.{% endcomment %}
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
 
-## SaveAllAsPDF
+## SaveAllAsPDF()
 
 Saves all the images in buffer as a multi-page PDF file.
 
@@ -2930,10 +2930,10 @@ SaveAllAsPDF(
 
 Learn about [how to config PDF save settings]({{site.info}}api/Addon_PDF.html#writesetup).
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
-## ShareImages
+## ShareImages()
 
 Shares images using Android's built in share functionality. 
 
@@ -2979,7 +2979,7 @@ If `indicies` is an array, the behavour is dependant on `type`:
 
 ---
 
-## SaveSelectedImagesAsMultiPagePDF
+## SaveSelectedImagesAsMultiPagePDF()
 
 Saves all selected images in buffer as a multi-page PDF file.
 
@@ -3033,11 +3033,11 @@ SaveSelectedImagesAsMultiPagePDF(
 
 Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
 
-## SaveSelectedImagesAsMultiPageTIFF
+## SaveSelectedImagesAsMultiPageTIFF()
 
 Saves all selected images in buffer as a multi-page TIFF file.
 
@@ -3091,11 +3091,11 @@ SaveSelectedImagesAsMultiPageTIFF(
 
 If called without any callback functions, these methods become synchronously and return a boolean value to indicate whether it succeeded. However, calling them asynchronously is recommended.
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [IfShowFileDialog]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
 
-## ClearTiffCustomTag
+## ClearTiffCustomTag()
 
 Clear the content of all custom tiff tags.
 
@@ -3131,7 +3131,7 @@ ClearTiffCustomTag(): boolean;
 
 ---
 
-## SetTiffCustomTag
+## SetTiffCustomTag()
 
 Sets a custom tiff tag (up to 32 tags). The string to be set in a tag can be base64 encoded.
 
@@ -3181,7 +3181,7 @@ SetTiffCustomTag(
 
 The method `SetTiffCustomTag()` sets one or up to 32 tags to be added to a TIFF file when generating it. The content of the tags can be plain text or a base64-encoded string. If it's encoded, it'll be decoded when generating the TIFF file.
 
-To make sure you don't included unwanted tags, call `ClearTiffCustomTag()` to clear old tags before setting up new ones.
+To make sure you don't included unwanted tags, call [`ClearTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#cleartiffcustomtag) to clear old tags before setting up new ones.
 
 **Example**
 
@@ -3193,7 +3193,7 @@ DWObject.SaveAsTIFF("C:\\DWT.tiff", 0);
 
 ---
 
-## ClearAllHTTPFormField
+## ClearAllHTTPFormField()
 
 Clear all the custom fields from the HTTP Post Form.
 
@@ -3229,7 +3229,7 @@ ClearAllHTTPFormField(): boolean;
 
 ---
 
-## SetHTTPFormField
+## SetHTTPFormField()
 
 Add a custom field to the HTTP Post Form. Or add a binary file to the HTTP Post Form.
 
@@ -3285,7 +3285,7 @@ SetHTTPFormField(
 
 ---
 
-## SetHTTPHeader
+## SetHTTPHeader()
 
 Add a custom header to the HTTP Post Form.
 
@@ -3330,7 +3330,7 @@ SetHTTPHeader(
 
 ---
 
-## SetUploadSegment
+## SetUploadSegment()
 
 Set the segmentation threshold and segment size.
 
@@ -3379,7 +3379,7 @@ SetUploadSegment(
 
 Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory. 
 
-**_Note:_** This does not affect the Android Service edition. The dialog will always show not matter what ```IfShowFileDialog``` is set to.
+**_Note:_** This does not affect the Android Service edition. The dialog will always show not matter what `IfShowFileDialog` is set to.
 
 **Syntax**
 
@@ -3413,9 +3413,9 @@ IfShowFileDialog: boolean;
 </table>
 </div>
 
-**Usage notes**
+{% comment %}**Usage notes**
 
-Supported in Service mode only.
+Supported in Service mode only. {% endcomment %}
 
 ---
 
@@ -3457,7 +3457,7 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 
 **Usage Notes**
 
-This API is only valid if `IfShowProgressBar = true;`
+This API is only valid if [`IfShowProgressBar`]({{site.info}}api/WebTwain_IO.html#ifshowprogressbar) is set to `true`.
 
 ---
 
@@ -3498,7 +3498,7 @@ IfShowProgressBar: boolean;
 
 ---
 
-## ShowFileDialog
+## ShowFileDialog()
 
 Show the system's save-file dialog or open-file dialog.
 
@@ -3561,11 +3561,11 @@ ShowFileDialog(
 
 **Usage notes**
 
-Supported in Service mode only.
+{% comment %}Supported in Service mode only{% endcomment %}.
 
 The `filter` pattern string consists of a combination(s) of valid file extensions with asterisk (\*). For example: `JPG, PNG and TIF | *.jpg;*png;*.tif` . On macOS, the string is different. For example `JPG, PNG , TIF` . To show all files, use `All Files | *.*` . Do not include spaces in the pattern string.
 
-This method will trigger [ `OnGetFilePath` ](#ongetfilepath) event even when it fails. If multiple files are selected, the event will be called multiple times.
+This method will trigger [`OnGetFilePath`]({{site.info}}api/WebTwain_IO.html#ongetfilepath) event even when it fails. If multiple files are selected, the event will be called multiple times.
 
 **Example**
 
@@ -3604,7 +3604,7 @@ DWObject.ShowFileDialog(
 
 ---
 
-## Print
+## Print()
 
 Export all image data in the buffer to a new browser window and use the browser's built-in print feature to print the image(s).
 
@@ -3648,14 +3648,14 @@ The parameter only works in Windows Service mode.
 
 ---
 
-## PrintEx
+## PrintEx()
 
 Print selected image(s).
 
 **Syntax**
 
 ```javascript
-PrintEx(indices: number[]): void;
+PrintEx(indices: number[]): boolean;
 ```
 
 **Parameters**
