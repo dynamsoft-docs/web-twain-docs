@@ -133,13 +133,21 @@ ChangeImageSize(
     index: number,
     width: number,
     height: number,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
+): boolean;
+
+// Call this API asynchronously
+ChangeImageSize(
+    index: number,
+    width: number,
+    height: number,
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
-    successCallback?: () => void,
-    failureCallback?: (
+    successCallback: () => void,
+    failureCallback: (
         errorCode: number,
         errorString: string
     ) => void
-): void | boolean;
+): void;
 ```
 
 **Parameters**
@@ -197,13 +205,8 @@ SetDPI(
     xResolution: number,
     yResolution: number,
     resample: boolean,
-    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
-    successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
-): void | boolean;
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
+): boolean;
 ```
 
 **Parameters**
@@ -217,12 +220,6 @@ SetDPI(
 `resample`: Whether to resample the image. When it is true, the image size will change.
 
 `method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
-
-`successCallback`: A callback function that is executed if the request succeeds.
-
-`failureCallback`: A callback function that is executed if the request fails.
- * `errorCode`: The error code.
- * `errorString` The error string.
 
 
 **Availability**
@@ -261,25 +258,13 @@ Convert the specified image to black & white.
 
 ```javascript
 ConvertToBW(
-    index: number,
-    successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
-): void | boolean;
+    index: number
+): boolean;
 ```
 
 **Parameters**
 
 `index`: Specify the index of the image to be converted. The index is 0-based.
-
-`successCallback`: A callback function that is executed if the request succeeds.
-
-`failureCallback`: A callback function that is executed if the request fails.
- * `errorCode`: The error code.
- * `errorString`: The error string.
-
 
 **Availability**
 <div class="availability">
@@ -316,24 +301,13 @@ Convert the specified image to grayscale.
 
 ```javascript
 ConvertToGrayScale(
-    index: number,
-    successCallback?: () => void,
-    failureCallback?: (
-        errorCode: number,
-        errorString: string
-    ) => void
-): void | boolean;
+    index: number
+): boolean;
 ```
 
 **Parameters**
 
 `index`: Specify the index of the image to be converted. The index is 0-based.
-
-`successCallback`: A callback function that is executed if the request succeeds.
-
-`failureCallback`: A callback function that is executed if the request fails.
- * `errorCode`: The error code.
- * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -388,10 +362,15 @@ Invert the colour of the pixels on the specified image.
 
 ```typescript
 Invert(
+    index: number
+): boolean;
+
+// Call this API asynchronously
+Invert(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -441,10 +420,8 @@ Change the width of the specified image by adding a margin or removing part of t
 ```typescript
 SetImageWidth(
     index: number,
-    width: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    width: number
+): boolean;
 ```
 
 **Parameters**
@@ -452,12 +429,6 @@ SetImageWidth(
 `index`: Specify the image.
 
 `width`: Specify the new width.
-
-`successCallback`: A callback function that is executed if the request succeeds.
-
-`failureCallback`: A callback function that is executed if the request fails.
-- `errorCode`: The error code.
-- `errorString`: The error string.
 
 **Availability**
 
@@ -495,10 +466,15 @@ Flip the specified image.
 
 ```typescript
 Flip(
+    index: number
+): boolean;
+
+// Call this API asynchronously
+Flip(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -565,10 +541,15 @@ Mirror the specified image.
 
 ```typescript
 Mirror(
+    index: number
+): boolean;
+
+// Call this API asynchronously
+Mirror(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -634,10 +615,15 @@ Rotate the specified image 90 degrees counterclockwise.
 
 ```typescript
 RotateLeft(
+    index: number
+): boolean;
+
+// Call this API asynchronously
+RotateLeft(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -703,10 +689,15 @@ Rotate the specified image 90 degrees clockwise.
 
 ```typescript
 RotateRight(
+    index: number
+): boolean;
+
+// Call this API asynchronously
+RotateRight(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -774,10 +765,17 @@ Rotate the specified image by the specified angle.
 Rotate(
     index: number,
     angle: number,
+    keepSize: boolean
+): boolean;
+
+// Call this API asynchronously
+Rotate(
+    index: number,
+    angle: number,
     keepSize: boolean,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -855,10 +853,18 @@ RotateEx(
     index: number,
     angle: number,
     keepSize: boolean,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
+): boolean;
+
+// Call this API asynchronously
+RotateEx(
+    index: number,
+    angle: number,
+    keepSize: boolean,
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -917,9 +923,18 @@ Crop(
     left: number,
     top: number,
     right: number,
+    bottom: number
+): boolean;
+
+// Call this API asynchronously
+Crop(
+    index: number,
+    left: number,
+    top: number,
+    right: number,
     bottom: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
@@ -981,10 +996,19 @@ Erase(
     left: number,
     top: number,
     right: number,
+    bottom: number
+): boolean;
+
+// Call this API asynchronously
+Erase(
+    index: number,
+    left: number,
+    top: number,
+    right: number,
     bottom: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -1246,7 +1270,7 @@ CutFrameToClipboard(
 
 **Usage notes**
 
-The empty area resulted from the crop/erase/cut will be filled with the colour set with [BackgroundFillColor](#backgroundfillcolor).
+The empty area resulted from the crop/erase/cut will be filled with the colour set with [`BackgroundFillColor`](#backgroundfillcolor).
 
 ---
 
