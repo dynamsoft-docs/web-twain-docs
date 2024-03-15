@@ -206,7 +206,7 @@ LoadImageEx(
 
 `fileName`: The path of the image to load.
 
-`type`: The format of the image. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The format of the image. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -301,7 +301,7 @@ LoadImageFromBase64Binary(
 
 `imageData`: The image data which is a base64 string without the data URI scheme.
 
-`imageType`: The format of the image. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`imageType`: The format of the image. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
  
@@ -337,7 +337,7 @@ LoadImageFromBase64Binary(
 
 **Usage Notes**
 
-You may leverage [ConvertToBase64]({{site.info}}api/WebTwain_IO.html#converttobase64) to get a base64 string.
+You may leverage [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64) to get a base64 string.
 
 **Example**
 
@@ -422,7 +422,7 @@ LoadImageFromBinary(
 
 **Usage Notes**
 
-You may leverage [ConvertToBlob]({{site.info}}api/WebTwain_IO.html#converttoblob) to get a Blob object.
+You may leverage [`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob) to get a Blob object.
 
 **Example**
 
@@ -502,7 +502,7 @@ LoadDibFromClipboard(
 
 **Usage Notes**
 
-If called without any callback functions, these methods (except for [LoadImageFromBinary()]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary) ) become synchronously and return a boolean value to indicate whether it succeeded.
+If called without any callback functions, these methods (except for [`LoadImageFromBinary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary) ) become synchronously and return a boolean value to indicate whether it succeeded.
 
 However, calling them asynchronously is recommended.
 
@@ -510,7 +510,7 @@ However, calling them asynchronously is recommended.
 
 ## OnGetFilePath
 
-This event is triggered when [ShowFileDialog()]({{site.info}}api/WebTwain_IO.html#showfiledialog) is called or when [LoadImageEx()]({{site.info}}api/WebTwain_IO.html#loadimageex) is called with [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) set to true.
+This event is triggered when [`ShowFileDialog()`]({{site.info}}api/WebTwain_IO.html#showfiledialog) is called or when [`LoadImageEx()`]({{site.info}}api/WebTwain_IO.html#loadimageex) is called with [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) set to true.
 
 **Syntax**
 
@@ -535,7 +535,7 @@ RegisterEvent(
 
 `index`: The index of the current image.
 
-`directory`: The parent directory of currently selected file(s), "\\\\" is not included. If the methed [ShowFileDialog]({{site.info}}api/WebTwain_IO.html#showfiledialog) failed, the initial directory path set in the [ShowFileDialog]({{site.info}}api/WebTwain_IO.html#showfiledialog) method is returned.
+`directory`: The parent directory of currently selected file(s), "\\\\" is not included. If the methed [`ShowFileDialog()`]({{site.info}}api/WebTwain_IO.html#showfiledialog) failed, the initial directory path set in the [`ShowFileDialog()`]({{site.info}}api/WebTwain_IO.html#showfiledialog) method is returned.
 
 `fileName`: The current file name.
 
@@ -592,7 +592,7 @@ RegisterEvent(
 
 `fileName`: The name of the loaded file. For example, "image1.jpg".
 
-`fileType`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`fileType`: The file type. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 **Availability**
 
@@ -703,7 +703,7 @@ FTPDownloadEx(
 
 `path`: Specify the file to download.
 
-`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The format of the file. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -861,7 +861,7 @@ FTPUploadEx(
 
 `path`: The path to save the file.
 
-`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The format of the file. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -1377,7 +1377,7 @@ HTTPDownloadEx(
 
 `path`: Specify the path of the file to download.
 
-`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The format of the file. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -1413,7 +1413,7 @@ HTTPDownloadEx(
 
 **Usage Notes**
 
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport).
 
 **Example**
 
@@ -1465,7 +1465,7 @@ HTTPDownloadThroughPost(
 
 `path`: Specify the path of the file to download.
 
-`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The format of the file. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -1536,9 +1536,9 @@ HTTPUpload(
 
 `indices`: Specify the image(s).
 
-`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The format of the file. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
-`dataFormat`: Whether to upload the file as binary or a base64 string. Please refer to [EnumDWT_UploadDataFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
+`dataFormat`: Whether to upload the file as binary or a base64 string. Please refer to [`EnumDWT_UploadDataFormat`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
 
 `fileName`: The file name.
 
@@ -1577,7 +1577,7 @@ HTTPUpload(
 
 **Usage Notes**
 
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport).
 
 **Example**
 
@@ -1632,7 +1632,7 @@ HTTPUploadThroughPutEx(
 
 `path`: Specify the path to put the file.
 
-`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The format of the file. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -1730,7 +1730,7 @@ HTTPUploadThroughPost(
 
 **Usage Notes**
 
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport).
 
 **Example**
 
@@ -1793,7 +1793,7 @@ HTTPUploadThroughPostEx(
 
 `fileName`: The file name.
 
-`type`: The format of the file. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The format of the file. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
@@ -1830,7 +1830,7 @@ HTTPUploadThroughPostEx(
 
 **Usage Notes**
 
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -1896,7 +1896,7 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 
 **Usage Notes**
 
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -1962,7 +1962,7 @@ HTTPUploadAllThroughPostAsPDF(
 
 **Usage Notes**
 
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -2028,7 +2028,7 @@ HTTPUploadThroughPostAsMultiPagePDF(
 
 **Usage Notes**
 
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -2094,7 +2094,7 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 
 **Usage Notes**
 
-If you want to use this method to upload / download files through HTTPS, please don't forget to set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [HTTPPort]({{site.info}}api/WebTwain_IO.html#httpport).
+If you want to use this method to upload / download files through HTTPS, please don't forget to set [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl) to true and set the correct [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport).
 
 ---
 
@@ -2337,10 +2337,10 @@ ConvertToBase64(
 
 `indices`: Specify one or multiple images.
 
-`type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The file type. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
-- `result`: The resulting base64 string. Please refer to [Base64Result]({{site.info}}api/Interfaces.html#base64result).
+- `result`: The resulting base64 string. Please refer to [`Base64Result`]({{site.info}}api/Interfaces.html#base64result).
 - `indices`: The indices of the converted images.
 - `type`: The file type.
 
@@ -2412,7 +2412,7 @@ ConvertToBlob(
 
 `indices`: Specify one or multiple images.
 
-`type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: The file type. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 - `result`: The resulting blob.
@@ -2576,7 +2576,7 @@ SaveAsBMP(
 
 **Usage Notes**
 
-If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
+If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
 ---
 
@@ -2694,7 +2694,7 @@ SaveAsPDF(
 
 **Usage notes**
 
-Learn about [how to config PDF save settings](./Addon_PDF.md#writesetup).
+Learn about [how to config PDF save settings]({{site.info}}api/Addon_PDF.md#writesetup).
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
@@ -3031,7 +3031,7 @@ SaveSelectedImagesAsMultiPagePDF(
 
 **Usage notes**
 
-Learn about [how to config PDF save settings](./Addon_PDF.md#write-setup).
+Learn about [how to config PDF save settings]({{site.info}}api/Addon_PDF.md#write-setup).
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
@@ -3724,9 +3724,9 @@ JPEGQuality: number;
 
 **Usage notes**
 
-The default value of JPEGQuality property is 80.
+The default value of `JPEGQuality` property is 80.
 
-The valid range is 0-100. The higher the JPEGQuality property, the better the quality and the bigger the size of the file.
+The valid range is 0-100. The higher the `JPEGQuality` property, the better the quality and the bigger the size of the file.
 
 ---
 
@@ -3776,7 +3776,7 @@ When you save a new image in the same name of an existing TIFF file:
 
 ## TIFFCompressionType
 
-Return or set the compression type for TIFF files.
+Return or set the compression type for TIFF files. Please refer to [`EnumDWT_TIFFCompressionType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_tiffcompressiontype).
 
 **Syntax**
 
@@ -3810,15 +3810,15 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 
 **Usage notes**
 
-When set to TIFF_AUTO (0), 1-bit images will be compressed in TIFF_T6 (4) while images with other bit depth will be compressed in TIFF_LZW (5).
+When set to `TIFF_AUTO` (0), 1-bit images will be compressed in `TIFF_T6` (4) while images with other bit depth will be compressed in `TIFF_LZW` (5).
 
-When set to TIFF_JPEG (7), 1-bit images will be compressed in TIFF_T6 (4), color images or grey images (8-bit or higher) in TIFF_JPEG (7) standard, and other images by TIFF_LZW (5).
+When set to `TIFF_JPEG` (7), 1-bit images will be compressed in `TIFF_T6` (4), color images or grey images (8-bit or higher) in `TIFF_JPEG` (7) standard, and other images by `TIFF_LZW` (5).
 
-TIFF_T4 (3) and TIFF_FAX3 (3) are two names for the same compression type. So are TIFF_T6 (4) and TIFF_FAX4 (4).
+`TIFF_T4` (3) and `TIFF_FAX3` (3) are two names for the same compression type. So are `TIFF_T6` (4) and `TIFF_FAX4` (4).
 
-TIFF_RLE (2), TIFF_T4 (3), TIFF_FAX3 (3) and TIFF_PACKBITS (32773) only support compression of 1-bit images. TIFF_JPEG (7) supports compression of 8-bit above color images and 8-bit grey images.
+`TIFF_RLE` (2), `TIFF_T4` (3), `TIFF_FAX3` (3) and `TIFF_PACKBITS` (32773) only support compression of 1-bit images. `TIFF_JPEG` (7) supports compression of 8-bit above color images and 8-bit grey images.
 
-When TIFF_JPEG (7) is used, you can use JPEGQuality to further reduce the size of the TIFF file.
+When `TIFF_JPEG` (7) is used, you can use [`JPEGQuality`]({{site.info}}api/WebTwain_IO.html#jpegquality) to further reduce the size of the TIFF file.
 
 
 
