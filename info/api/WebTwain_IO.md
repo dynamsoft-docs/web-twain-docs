@@ -2694,7 +2694,7 @@ SaveAsPDF(
 
 **Usage notes**
 
-Learn about [how to config PDF save settings]({{site.info}}api/Addon_PDF.md#writesetup).
+Learn about [how to config PDF save settings]({{site.info}}api/Addon_PDF.html#writesetup).
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
@@ -3031,7 +3031,7 @@ SaveSelectedImagesAsMultiPagePDF(
 
 **Usage notes**
 
-Learn about [how to config PDF save settings]({{site.info}}api/Addon_PDF.md#write-setup).
+Learn about [how to config PDF save settings]({{site.info}}api/Addon_PDF.html#write-setup).
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
 
