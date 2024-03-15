@@ -291,6 +291,7 @@ GenerateURLForUploadData(
 **Example**
 
 ```javascript
+var dsUploadManager;
 Dynamsoft.FileUploader.Init(
   "",
   function (obj) {
