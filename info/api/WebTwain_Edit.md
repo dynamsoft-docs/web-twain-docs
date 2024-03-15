@@ -69,7 +69,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | :-------------------------------------------- |
 | [`BackgroundFillColor`](#backgroundfillcolor) |
 
-## ChangeBitDepth
+## ChangeBitDepth()
 
 Change the bit depth of the specified image.
 
@@ -109,8 +109,8 @@ ChangeBitDepth(
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">18.2+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -122,7 +122,7 @@ The allowed bit depths are 1, 4, 8, 24.
 
 ---
 
-## ChangeImageSize
+## ChangeImageSize()
 
 Change the size of the specified image.
 
@@ -185,7 +185,7 @@ ChangeImageSize(
 
 ---
 
-## SetDPI
+## SetDPI()
 
 Change the DPI (dots per inch) of the specified image.
 
@@ -253,7 +253,7 @@ SetDPI(
 
 ---
 
-## ConvertToBW
+## ConvertToBW()
 
 Convert the specified image to black & white.
 
@@ -308,7 +308,7 @@ ConvertToBW(
 
 ---
 
-## ConvertToGrayScale
+## ConvertToGrayScale()
 
 Convert the specified image to grayscale.
 
@@ -380,7 +380,7 @@ ConvertToGrayScaleAsync(
 
 ----->
 
-## Invert
+## Invert()
 
 Invert the colour of the pixels on the specified image.
 
@@ -432,7 +432,7 @@ Invert(
 
 ---
 
-## SetImageWidth
+## SetImageWidth()
 
 Change the width of the specified image by adding a margin or removing part of the image.
 
@@ -487,7 +487,7 @@ SetImageWidth(
 
 ---
 
-## Flip
+## Flip()
 
 Flip the specified image.
 
@@ -557,7 +557,7 @@ FlipAsync(
 
 --->
 
-## Mirror
+## Mirror()
 
 Mirror the specified image.
 
@@ -626,7 +626,7 @@ MirrorAsync(
 
 --->
 
-## RotateLeft
+## RotateLeft()
 
 Rotate the specified image 90 degrees counterclockwise.
 
@@ -695,7 +695,7 @@ RotateLeftAsync(
 
 --->
 
-## RotateRight
+## RotateRight()
 
 Rotate the specified image 90 degrees clockwise.
 
@@ -764,7 +764,7 @@ RotateRightAsync(
 
 --->
 
-## Rotate
+## Rotate()
 
 Rotate the specified image by the specified angle.
 
@@ -844,7 +844,7 @@ RotateAsync(
 
 --->
 
-## RotateEx
+## RotateEx()
 
 Rotate the specified image by the specified angle.
 
@@ -905,7 +905,7 @@ RotateEx(
 
 ---
 
-## Crop
+## Crop()
 
 Crop the specified image using the specified coordinates.
 
@@ -969,7 +969,7 @@ Crop(
 
 ---
 
-## Erase
+## Erase()
 
 Erase a rectangular area from the specified image.
 
@@ -1033,7 +1033,7 @@ Erase(
 
 ---
 
-## CopyToClipboard
+## CopyToClipboard()
 
 Copy the specified image to the clipboard of the operating system.
 
@@ -1091,7 +1091,7 @@ CopyToClipboardAsync(index: number): Promise<boolean>;
 
 --->
 
-## CutToClipboard
+## CutToClipboard()
 
 Cut the specified image to the clipboard of the operating system.
 
@@ -1133,7 +1133,7 @@ CutToClipboard(index: number): boolean;
 
 ---
 
-## CropToClipboard
+## CropToClipboard()
 
 Crop a rectangular area from the specified image to the clipboard of the operating system.
 
@@ -1189,7 +1189,7 @@ CropToClipboard(
 
 ---
 
-## CutFrameToClipboard
+## CutFrameToClipboard()
 
 Cut a rectangular area from the specified image to the clipboard of the operating system.
 
@@ -1292,7 +1292,7 @@ By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB v
 
 ---
 
-## ChangeBrightnessAsync
+## ChangeBrightnessAsync()
 
 Change the image brightness.
 
@@ -1301,7 +1301,7 @@ Change the image brightness.
 ```typescript
 ChangeBrightnessAsync(
     index: number, 
-    val: number
+    value: number
 ): Promise<boolean>;
 ```
 
@@ -1309,7 +1309,7 @@ ChangeBrightnessAsync(
 
 `index`: Specify the index of image in buffer.
 
-`val`: Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
+`value`: Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
 
 **Availability**
 
@@ -1339,7 +1339,7 @@ ChangeBrightnessAsync(
 
 ---
 
-## ChangeContrastAsnyc
+## ChangeContrastAsnyc()
 
 Change the image contrast.
 
@@ -1348,7 +1348,7 @@ Change the image contrast.
 ```typescript
 ChangeContrastAsnyc(
     index: number, 
-    val: number
+    value: number
 ): Promise<boolean>;
 ```
 
@@ -1356,7 +1356,7 @@ ChangeContrastAsnyc(
 
 `index`: Specify the index of image in buffer.
 
-`val`: Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
+`value`: Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
 
 **Availability**
 
