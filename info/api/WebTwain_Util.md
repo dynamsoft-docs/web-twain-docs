@@ -229,7 +229,7 @@ The language set with this method is only for the built-in security dialogs whic
 
 ## GenerateURLForUploadData()
 
-Generate a URL to be used by a FileUpoader instance to fetch the data to upload.
+Generate a URL to be used by a [FileUpoader]({{site.info}}api/Dynamsoft_FileUploader.html) instance to fetch the data to upload.
 
 **Syntax**
 
@@ -287,6 +287,33 @@ GenerateURLForUploadData(
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+Dynamsoft.FileUploader.Init(
+  "",
+  function (obj) {
+    dsUploadManager = obj;
+  },
+  function () {}
+);
+DWObject.GenerateURLForUploadData(
+  [0, 1],
+  EnumDWT_ImageType.IT_PDF,
+  function (resultURL) {
+    var serverUrl = "https://yoursite/yourserverurl.aspx";
+    var jobtemp = dsUploadManager.CreateJob();
+    jobtemp.ServerUrl = serverUrl;
+    jobtemp.SourceValue.Add(resultURL, "uploadedFile.pdf");
+    dsUploadManager.Run(jobtemp);
+  },
+  function (
+    erroCode,
+    errorString
+  ) {}
+);
+```
 
 ---
 
