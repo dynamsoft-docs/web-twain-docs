@@ -302,7 +302,7 @@ Dynamsoft.FileUploader.Init(
 DWObject.GenerateURLForUploadData(
   [0, 1],
   EnumDWT_ImageType.IT_PDF,
-  function (resultURL) {
+  function (resultURL, newIndices, enumImageType) {
     var serverUrl = "https://yoursite/yourserverurl.aspx";
     var jobtemp = dsUploadManager.CreateJob();
     jobtemp.ServerUrl = serverUrl;
