@@ -1765,16 +1765,16 @@ IsBlankImageAsync(index: number,
     minBlockHeight?: number,
     maxBlockHeight?: number,
     }
-): Promise < boolean > ;
+): Promise<boolean> ;
 ```
 
 **Parameters**
 
 `index`: Specify the image in buffer to be analyzed.
 
-`minBlockHeight`: Minimum height of mark to be detected.
+`minBlockHeight`: Minimum height of mark to be detected. Default value: 10
 
-`maxBlockHeight`: Maximum height of mark to be detected.
+`maxBlockHeight`: Maximum height of mark to be detected. Default value: 30
 
 **Availability**
 
