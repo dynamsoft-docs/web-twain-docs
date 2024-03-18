@@ -8,9 +8,13 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Uploader APIs Pag
 permalink: /info/api/Dynamsoft_FileUploader.html
 ---
 
-# Dynamsoft.FileUploader
+# FileUploader Module
 
-## Init()
+The File Uploader is an independent component that is dedicated to file uploading. [>> HTTP with the File Uploader]({{site.indepth}}/features/output.html#http-with-the-file-uploader)
+
+## Dynamsoft.FileUploader
+
+### Init()
 
 Initialize and create a FileUploader instance.
 
@@ -37,11 +41,27 @@ Init(
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -60,7 +80,7 @@ Dynamsoft.FileUploader.Init(
 
 The FileUploader library is installed with Dynamsoft Service by default, therefore, `URL` can be left empty "".
 
-# UploadManager
+## UploadManager
 
 **Methods**
 
@@ -70,7 +90,7 @@ The FileUploader library is installed with Dynamsoft Service by default, therefo
 | [`CancelAllUpload()`](#cancelallupload) | | |
 
 
-## CreateJob()
+### CreateJob()
 
 Create an upload job. 
 
@@ -84,13 +104,29 @@ Please refer to [`Job`](#job).
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
 
-## Run()
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
+### Run()
 
 Start uploading (processing the specified job).
 
@@ -106,13 +142,29 @@ Run(job: Job): boolean;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
 
-## Cancel()
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
+### Cancel()
 
 Cancel a job.
 
@@ -128,13 +180,29 @@ Cancel(job: Job): boolean;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
 
-## CancelAllupload()
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
+### CancelAllupload()
 
 Cancel all jobs.
 
@@ -146,11 +214,27 @@ CancelAllUpload(): boolean;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -177,7 +261,7 @@ Dynamsoft.FileUploader.Init(
 );
 ```
 
-# Job
+## Job
 
 **Properties**
 
@@ -194,7 +278,7 @@ Dynamsoft.FileUploader.Init(
 | [`OnUploadTransferPercentage`](#onuploadtransferpercentage) | [`OnRunSuccess`](#onrunsuccess) | [`OnRunFailure`](#onrunfailure) |
 
 
-## BlockSize
+### BlockSize
 
 Specify the block size (in bytes). By default, it's 10240.
 
@@ -204,7 +288,31 @@ Specify the block size (in bytes). By default, it's 10240.
 BlockSize: number;
 ```
 
-## FileName
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
+### FileName
 
 Specify the file name.
 
@@ -214,7 +322,31 @@ Specify the file name.
 FileName: string;
 ```
 
-## FormField
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
+### FormField
 
 Specifies extra fields to be uploaded in the same HTTP post.
 
@@ -226,11 +358,27 @@ FormField: FormField;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -253,7 +401,7 @@ Add(
 job.FormField.Add("customField", "FormFieldValue");
 ```
 
-## HttpHeader
+### HttpHeader
 
 Specifies headers in the the HTTP Post Request of the upload job. For example: `job.HttpHeader["Content-Type"] = "text/plain";`
 
@@ -265,17 +413,33 @@ HttpHeader: object;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
 By default, HttpHeader is an empty object. If left as it is, default headers are used. Otherwise, the headers set by this property will be added to the HTTP Post Request or replace existing ones with the same names.
 
-## HttpVersion
+### HttpVersion
 
 Return the Http version.
 
@@ -285,7 +449,31 @@ Return the Http version.
 readonly HttpVersion: string;
 ```
 
-## ServerUrl
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
+### ServerUrl
 
 Specifies the target of the HTTP Post Request of the upload job. This typically is a file on the server. For example: `job.ServerUrl = 'http://www.dynamsoft.com/ScanAndUpload/Actions/SaveToFile.aspx';`
 
@@ -297,14 +485,30 @@ ServerUrl: string;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 
-## SourceValue
+### SourceValue
 
 Specifies the files to be uploaded and the name for it. The files are specified by URLs which can be created with the method [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata). This object has a method Add to add file to the job.
 
@@ -316,11 +520,27 @@ SourceValue: SourceValue;
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Usage notes**
 
@@ -346,7 +566,7 @@ Add(
 job.SourceValue.Add(url, fileName);
 ```
 
-## ThreadNum
+### ThreadNum
 
 Specify the number of threads (<=4) for the upload.
 
@@ -356,7 +576,31 @@ Specify the number of threads (<=4) for the upload.
 ThreadNum: number;
 ```
 
-## Version
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
+### Version
 
 Return the version of the job.
 
@@ -366,7 +610,31 @@ Return the version of the job.
 readonly Version: number;
 ```
 
-## OnUploadTransferPercentage
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
+
+### OnUploadTransferPercentage
 
 The event is triggered during the execution of an upload job. It has a parameter which specifies the percentage of the completion of the job.
 
@@ -384,11 +652,27 @@ The event is triggered during the execution of an upload job. It has a parameter
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -399,7 +683,7 @@ function FileUpload_ OnUploadTransferPercentage (job, sPercentage){
 }
 ```
 
-## OnRunSuccess
+### OnRunSuccess
 
 The event is triggered when an upload job completes successfully.
 
@@ -415,11 +699,27 @@ The event is triggered when an upload job completes successfully.
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
@@ -430,7 +730,7 @@ function FileUpload_OnRunSuccess(job) {
 }
 ```
 
-## OnRunFailure
+### OnRunFailure
 
 The event is triggered when an upload job completes successfully.
 
@@ -454,11 +754,27 @@ The event is triggered when an upload job completes successfully.
 
 **Availability**
 
-<div class="availability"></div>
+<div class="availability">
+<table>
 
-|:-|:-|
-|ActiveX|H5(Windows)|H5(macOS/TWAIN)|H5(macOS/ICA)|H5(Linux)|
-| not supported | v17.2+ | v17.2+ | v17.2+ | v17.2+ |
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+<td align="center">v14.0+</td>
+</tr>
+
+</table>
+</div>
 
 **Example**
 
