@@ -42,8 +42,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)       | [`OutputSelectedAreasAsync()`](#outputselectedareaasync)                  | [`SaveAsBMP()`](#saveasbmp)                                                     |
 | [`SaveAsJPEG()`](#saveasjpeg)                                                           | [`SaveAsPDF()`](#saveaspdf)                                               | [`SaveAsPNG()`](#saveaspng)                                                     |
 | [`SaveAsTIFF()`](#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     |
-| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         | [`ShareImages()`](#shareimages)                                                 |
-|
+| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         |                                                 |
+
 
 **Other Methods**
 
@@ -129,10 +129,15 @@ Load image(s) specified by its absolute path.
 
 ```javascript
 LoadImage(
+    fileName: string
+): boolean;
+
+// Call this API asynchronously
+LoadImage(
     fileName: string,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**  
@@ -196,9 +201,15 @@ Load image(s) specified by its absolute path.
 ```javascript
 LoadImageEx(
     fileName: string,
+    type: Dynamsoft.DWT.EnumDWT_ImageType | number
+): boolean;
+
+// Call this API asynchronously
+LoadImageEx(
+    fileName: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
@@ -291,10 +302,16 @@ Load image(s) from a base64 string.
 ```javascript
 LoadImageFromBase64Binary(
     imageData: string,
+    imageType: Dynamsoft.DWT.EnumDWT_ImageType
+): boolean;
+
+// Call this API asynchronously
+LoadImageFromBase64Binary(
+    imageData: string,
     imageType: Dynamsoft.DWT.EnumDWT_ImageType,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): boolean | Promise<boolean>;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): Promise<boolean>;
 ```
 
 **Parameters**
@@ -460,10 +477,13 @@ Load an image from the system clipboard. The image must be in DIB format.
 **Syntax**
 
 ```javascript
+LoadDibFromClipboard(): boolean;
+
+// Call this API asynchronously
 LoadDibFromClipboard(
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -2530,9 +2550,15 @@ Save the specified image as a BMP file.
 ```javascript
 SaveAsBMP(
     fileName: string,
+    index: number
+): boolean;
+
+// Call this API asynchronously
+SaveAsBMP(
+    fileName: string,
     index: number,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
 ): void | boolean;
 ```
 
@@ -2589,10 +2615,16 @@ Save the specified image as a JPEG file.
 ```javascript
 SaveAsJPEG(
     fileName: string,
+    index: number
+): boolean;
+
+// Call this API asynchronously
+SaveAsJPEG(
+    fileName: string,
     index: number,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -2648,10 +2680,16 @@ Save the specified image as a PDF file.
 ```javascript
 SaveAsPDF(
     fileName: string,
+    index: number
+): boolean;
+
+// Call this API asynchronously
+SaveAsPDF(
+    fileName: string,
     index: number,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -2709,10 +2747,16 @@ Save the specified image as a PNG file.
 ```javascript
 SaveAsPNG(
     fileName: string,
+    index: number
+): boolean;
+
+// Call this API asynchronously
+SaveAsPNG(
+    fileName: string,
     index: number,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -2768,10 +2812,16 @@ Save the specified image as a TIFF file.
 ```javascript
 SaveAsTIFF(
     fileName: string,
+    index: number
+): boolean;
+
+// Call this API asynchronously
+SaveAsTIFF(
+    fileName: string,
     index: number,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Availability**
@@ -2826,10 +2876,15 @@ Saves all the images in buffer as a multi-page TIFF file.
 
 ```javascript
 SaveAllAsMultiPageTIFF(
+    fileName: string
+): boolean;
+
+// Call this API asynchronously
+SaveAllAsMultiPageTIFF(
     fileName: string,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -2884,10 +2939,15 @@ Saves all the images in buffer as a multi-page PDF file.
 
 ```javascript
 SaveAllAsPDF(
+    fileName: string
+): boolean;
+
+// Call this API asynchronously
+SaveAllAsPDF(
     fileName: string,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -2933,51 +2993,6 @@ Learn about [how to config PDF save settings]({{site.info}}api/Addon_PDF.html#wr
 If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to true.
 
 ---
-## ShareImages()
-
-Shares images using Android's built in share functionality. 
-
-**Syntax**
-```javascript
-ShareImages(
-    fileName: string,
-    indices: number[],
-    type: Dynamsoft.DWT.EnumDWT_ImageType
-): Promise< void>; 
-```
-If `indicies` is an array, the behavour is dependant on `type`:
-
- - If type is set to PDF or TIFF, a single multi-page file is shared
-
- - If any other type is set, mutiple single page files will be shared in the format of filename1.filetype, filename2.filetype, etc.
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">v18.2+</td>
-</tr>
-
-</table>
-</div>
-
----
 
 ## SaveSelectedImagesAsMultiPagePDF()
 
@@ -2987,10 +3002,15 @@ Saves all selected images in buffer as a multi-page PDF file.
 
 ```javascript
 SaveSelectedImagesAsMultiPagePDF(
+    fileName: string
+): boolean;
+
+// Call this API asynchronously
+SaveSelectedImagesAsMultiPagePDF(
     fileName: string,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -3045,10 +3065,15 @@ Saves all selected images in buffer as a multi-page TIFF file.
 
 ```javascript
 SaveSelectedImagesAsMultiPageTIFF(
+    fileName: string
+): boolean;
+
+// Call this API asynchronously
+SaveSelectedImagesAsMultiPageTIFF(
     fileName: string,
-    successCallback ? : () => void,
-    failureCallback ? : (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -3092,6 +3117,52 @@ SaveSelectedImagesAsMultiPageTIFF(
 If called without any callback functions, these methods become synchronously and return a boolean value to indicate whether it succeeded. However, calling them asynchronously is recommended.
 
 If you would like to save images by showing the 'Save File' dialog box, you can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) to `true`.
+
+---
+
+## ShareImages()
+
+Shares images using Android's built in share functionality. 
+
+**Syntax**
+```javascript
+ShareImages(
+    fileName: string,
+    indices: number[],
+    type: Dynamsoft.DWT.EnumDWT_ImageType
+): Promise< void>; 
+```
+If `indicies` is an array, the behavour is dependant on `type`:
+
+ - If type is set to PDF or TIFF, a single multi-page file is shared
+
+ - If any other type is set, mutiple single page files will be shared in the format of filename1.filetype, filename2.filetype, etc.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+<td align="center">Android Service</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
+<td align="center">v18.2+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -3245,7 +3316,7 @@ SetHTTPFormField(
 SetHTTPFormField(
     name: string,
     content: Blob,
-    fileName ? : string
+    fileName?: string
 ): boolean;
 ```
 
@@ -3611,7 +3682,7 @@ Export all image data in the buffer to a new browser window and use the browser'
 **Syntax**
 
 ```javascript
-Print(useOSPrintWindow ? : boolean): boolean;
+Print(useOSPrintWindow?: boolean): boolean;
 ```
 
 **Parameters**
