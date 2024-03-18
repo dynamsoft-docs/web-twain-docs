@@ -687,10 +687,15 @@ Return the skew angle of the specified image.
 
 ```typescript
 GetSkewAngle(
+    index: number
+): number;
+
+// Call this API asynchronously
+GetSkewAngle(
     index: number,
-    successCallback?: (angle: number) => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): number | void;
+    successCallback: (angle: number) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -742,10 +747,19 @@ GetSkewAngleEx(
     left: number,
     top: number,
     right: number,
+    bottom: number
+): number;
+
+// Call this API asynchronously
+GetSkewAngleEx(
+    index: number,
+    left: number,
+    top: number,
+    right: number,
     bottom: number,
-    successCallback?: (angle: number) => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): number | void;
+    successCallback: (angle: number) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -1743,11 +1757,10 @@ Check whether the specified image is blank.
 
 ```typescript
 IsBlankImageAsync(index: number, 
-  {options?: {
+  options?: {
     minBlockHeight?: number,
     maxBlockHeight?: number,
     }
-  }
 ): Promise < boolean > ;
 ```
 
