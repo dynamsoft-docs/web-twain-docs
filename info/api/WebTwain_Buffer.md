@@ -948,7 +948,9 @@ Return the internal URL of the specified image.
 **Syntax**
 
 ```typescript
-GetImagePartURL(index: number, width?: number, height?: number): string;
+GetImagePartURL(index: number): string;
+
+GetImagePartURL(index: number, width: number, height: number): string;
 ```
 
 **Parameters**
@@ -1004,7 +1006,9 @@ Return the direct URL of the specified image.
 **Syntax**
 
 ```typescript
-GetImageURL(index: number, width?: number, height?: number): string;
+GetImageURL(index: number): string;
+
+GetImageURL(index: number, width: number, height: number): string;
 ```
 
 **Parameters**
