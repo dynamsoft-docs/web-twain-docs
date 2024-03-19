@@ -3632,7 +3632,7 @@ ShowFileDialog(
 
 **Usage notes**
 
-{% comment %}Supported in Service mode only{% endcomment %}.
+{% comment %}Supported in Service mode only.{% endcomment %}
 
 The `filter` pattern string consists of a combination(s) of valid file extensions with asterisk (\*). For example: `JPG, PNG and TIF | *.jpg;*png;*.tif` . On macOS, the string is different. For example `JPG, PNG , TIF` . To show all files, use `All Files | *.*` . Do not include spaces in the pattern string.
 
