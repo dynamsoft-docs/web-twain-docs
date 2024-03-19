@@ -117,11 +117,27 @@ Start image acquisition.
 **Syntax**
 
 ```typescript
+AcquireImage(): void;
+
 AcquireImage(
-    deviceConfiguration?: DeviceConfiguration,
-    successCallBack?: () => void,
-    failureCallBack?: (deviceConfiguration?: DeviceConfiguration, errorCode: number, errorString: string) => void
-): boolean;
+  deviceConfiguration: DeviceConfiguration
+): void;
+
+AcquireImage(
+  successCallBack: () => void,
+  failureCallBack: (
+    errorCode: number,
+    errorString: string) => void
+): void;
+
+AcquireImage(
+  deviceConfiguration: DeviceConfiguration,
+  successCallBack: () => void,
+  failureCallBack: (
+      deviceConfiguration: DeviceConfiguration,
+      errorCode: number,
+      errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -644,10 +660,13 @@ Bring up the Source Selection User Interface (UI) for the user to choose a data 
 **Syntax**
 
 ```typescript
+SelectSource(): boolean | string;
+
+// Call this API asynchronously
 SelectSource(
-    successCallBack?: () => void,
-    failureCallBack?: (errorCode: number, errorString: string) => void
-): boolean | string;
+    successCallBack: () => void,
+    failureCallBack: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -4252,10 +4271,9 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 
 **Parameters**
 
-`deviceType`: The device type. Please refere to [`EnumDWT_DeviceType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype)
+`deviceType`: The device type. Please refere to [`EnumDWT_DeviceType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
 
-
-`refresh`: Default value is **false**
+`refresh`: Default value is `false`.
 
 **Arguments**
 
