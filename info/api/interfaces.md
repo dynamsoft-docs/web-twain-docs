@@ -31,6 +31,8 @@ interface DWTInitialConfig {
 }
 ```
 
+- `Host`, `Port`, `PortSSL`: These three optional parameters must be set at the same time.
+
 ### Container
 
 **Syntax**
@@ -44,9 +46,8 @@ interface Container {
 }
 ```
 
-`WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
-
-`Width` and `Height` determine the initial size of `Viewer` object.
+- `WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+- `Width` and `Height` determine the initial size of `Viewer` object.
 
 ### DisplayInfo
 
