@@ -2499,7 +2499,7 @@ OutputSelectedAreaAsync(
         height: number
     },
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
-    imageFormatType: Dynamsoft.DWT.EnumDWT_ImageFormatType | number,
+    imageFormatType: Dynamsoft.DWT.EnumDWT_ImageFormatType | number
 ): Promise < Blob | string > ;
 ```
 
