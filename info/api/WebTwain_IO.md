@@ -311,7 +311,7 @@ LoadImageFromBase64Binary(
     imageType: Dynamsoft.DWT.EnumDWT_ImageType,
     successCallback: () => void,
     failureCallback: (errorCode: number, errorString: string) => void
-): Promise<boolean>;
+): void;
 ```
 
 **Parameters**
