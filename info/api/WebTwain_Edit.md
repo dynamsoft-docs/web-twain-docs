@@ -207,6 +207,20 @@ SetDPI(
     resample: boolean,
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
 ): boolean;
+
+// Call this API asynchronously
+SetDPI(
+    index: number,
+    xResolution: number,
+    yResolution: number,
+    resample: boolean,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
+    successCallback: () => void,
+    failureCallback: (
+        errorCode: number,
+        errorString: string
+    ) => void
+): void;
 ```
 
 **Parameters**
@@ -221,6 +235,11 @@ SetDPI(
 
 `method`: Specify the algorithm for the change. Please refer to [EnumDWT_InterpolationMethod]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_interpolationmethod).
 
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString` The error string.
 
 **Availability**
 <div class="availability">
@@ -260,11 +279,27 @@ Convert the specified image to black & white.
 ConvertToBW(
     index: number
 ): boolean;
+
+// Call this API asynchronously
+ConvertToBW(
+    index: number,
+    successCallback: () => void,
+    failureCallback: (
+        errorCode: number,
+        errorString: string
+    ) => void
+): void;
 ```
 
 **Parameters**
 
 `index`: Specify the index of the image to be converted. The index is 0-based.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+ * `errorCode`: The error code.
+ * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -303,6 +338,16 @@ Convert the specified image to grayscale.
 ConvertToGrayScale(
     index: number
 ): boolean;
+
+// Call this API asynchronously
+ConvertToGrayScale(
+    index: number,
+    successCallback: () => void,
+    failureCallback: (
+        errorCode: number,
+        errorString: string
+    ) => void
+): void;
 ```
 
 **Parameters**
@@ -422,6 +467,14 @@ SetImageWidth(
     index: number,
     width: number
 ): boolean;
+
+// Call this API asynchronously
+SetImageWidth(
+    index: number,
+    width: number,
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -429,6 +482,12 @@ SetImageWidth(
 `index`: Specify the image.
 
 `width`: Specify the new width.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Availability**
 
@@ -935,7 +994,7 @@ Crop(
     bottom: number,
     successCallback: () => void,
     failureCallback: (errorCode: number, errorString: string) => void
-): void | boolean;
+): void;
 ```
 
 **Parameters**
