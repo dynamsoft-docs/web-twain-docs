@@ -662,7 +662,7 @@ Bring up the Source Selection User Interface (UI) for the user to choose a data 
 ```typescript
 SelectSource(): boolean | string;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SelectSource(
     successCallBack: () => void,
     failureCallBack: (errorCode: number, errorString: string) => void

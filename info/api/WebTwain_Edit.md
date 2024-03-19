@@ -136,7 +136,7 @@ ChangeImageSize(
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 ChangeImageSize(
     index: number,
     width: number,
@@ -208,7 +208,7 @@ SetDPI(
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SetDPI(
     index: number,
     xResolution: number,
@@ -280,7 +280,7 @@ ConvertToBW(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 ConvertToBW(
     index: number,
     successCallback: () => void,
@@ -339,7 +339,7 @@ ConvertToGrayScale(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 ConvertToGrayScale(
     index: number,
     successCallback: () => void,
@@ -410,7 +410,7 @@ Invert(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 Invert(
     index: number,
     successCallback: () => void,
@@ -468,7 +468,7 @@ SetImageWidth(
     width: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SetImageWidth(
     index: number,
     width: number,
@@ -528,7 +528,7 @@ Flip(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 Flip(
     index: number,
     successCallback: () => void,
@@ -603,7 +603,7 @@ Mirror(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 Mirror(
     index: number,
     successCallback: () => void,
@@ -677,7 +677,7 @@ RotateLeft(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 RotateLeft(
     index: number,
     successCallback: () => void,
@@ -751,7 +751,7 @@ RotateRight(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 RotateRight(
     index: number,
     successCallback: () => void,
@@ -827,7 +827,7 @@ Rotate(
     keepSize: boolean
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 Rotate(
     index: number,
     angle: number,
@@ -915,7 +915,7 @@ RotateEx(
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 RotateEx(
     index: number,
     angle: number,
@@ -985,7 +985,7 @@ Crop(
     bottom: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 Crop(
     index: number,
     left: number,
@@ -1058,7 +1058,7 @@ Erase(
     bottom: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 Erase(
     index: number,
     left: number,

@@ -132,7 +132,7 @@ LoadImage(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 LoadImage(
     fileName: string,
     successCallback: () => void,
@@ -204,7 +204,7 @@ LoadImageEx(
     type: Dynamsoft.DWT.EnumDWT_ImageType | number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 LoadImageEx(
     fileName: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
@@ -305,7 +305,7 @@ LoadImageFromBase64Binary(
     imageType: Dynamsoft.DWT.EnumDWT_ImageType
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 LoadImageFromBase64Binary(
     imageData: string,
     imageType: Dynamsoft.DWT.EnumDWT_ImageType,
@@ -479,7 +479,7 @@ Load an image from the system clipboard. The image must be in DIB format.
 ```javascript
 LoadDibFromClipboard(): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 LoadDibFromClipboard(
     successCallback: () => void,
     failureCallback: (errorCode: number, errorString: string) => void
@@ -2553,7 +2553,7 @@ SaveAsBMP(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveAsBMP(
     fileName: string,
     index: number,
@@ -2618,7 +2618,7 @@ SaveAsJPEG(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveAsJPEG(
     fileName: string,
     index: number,
@@ -2683,7 +2683,7 @@ SaveAsPDF(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveAsPDF(
     fileName: string,
     index: number,
@@ -2750,7 +2750,7 @@ SaveAsPNG(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveAsPNG(
     fileName: string,
     index: number,
@@ -2815,7 +2815,7 @@ SaveAsTIFF(
     index: number
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveAsTIFF(
     fileName: string,
     index: number,
@@ -2879,7 +2879,7 @@ SaveAllAsMultiPageTIFF(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveAllAsMultiPageTIFF(
     fileName: string,
     successCallback: () => void,
@@ -2942,7 +2942,7 @@ SaveAllAsPDF(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveAllAsPDF(
     fileName: string,
     successCallback: () => void,
@@ -3005,7 +3005,7 @@ SaveSelectedImagesAsMultiPagePDF(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveSelectedImagesAsMultiPagePDF(
     fileName: string,
     successCallback: () => void,
@@ -3068,7 +3068,7 @@ SaveSelectedImagesAsMultiPageTIFF(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SaveSelectedImagesAsMultiPageTIFF(
     fileName: string,
     successCallback: () => void,

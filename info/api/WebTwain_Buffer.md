@@ -690,7 +690,7 @@ GetSkewAngle(
     index: number
 ): number;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 GetSkewAngle(
     index: number,
     successCallback: (angle: number) => void,
@@ -750,7 +750,7 @@ GetSkewAngleEx(
     bottom: number
 ): number;
 
-// Call this API asynchronously
+// Call this API asynchronously to avoid blocking the browser's main thread 
 GetSkewAngleEx(
     index: number,
     left: number,
