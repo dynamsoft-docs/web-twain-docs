@@ -393,7 +393,7 @@ Use the `Add()` method of the Object to add fields for uploading, check out the 
 Add(
     key: string,
     value: string
-): void;
+): boolean;
 ```
 
 **Example**
