@@ -210,7 +210,7 @@ LoadImageEx(
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
     successCallback: () => void,
     failureCallback: (errorCode: number, errorString: string) => void
-): void | boolean;
+): void;
 ```
 
 **Parameters**
@@ -2559,7 +2559,7 @@ SaveAsBMP(
     index: number,
     successCallback: () => void,
     failureCallback: (errorCode: number, errorString: string) => void
-): void | boolean;
+): void;
 ```
 
 **Parameters**
