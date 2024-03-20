@@ -548,7 +548,7 @@ interface ScanSetup {
 
 - [`EnumDWT_TransferMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_transfermode)
 - [`EnumDWT_FileFormat`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat)
-- [`EnumDWT_CompressionType`]({{site.info}}api/Dynamsoft_Enum.html#)
+- [`EnumDWT_CompressionType`]({{site.info}}api/Dynamsoft_Enum.html#compressiontype)
 - [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html##dynamsoftdwtenumdwt_pixeltype)
 - [`EnumDWT_CapSupportedSizes`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes)
 - [`EnumDWT_UnitType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_unittype)
