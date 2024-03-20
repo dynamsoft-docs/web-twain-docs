@@ -69,7 +69,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | :-------------------------------------------- |
 | [`BackgroundFillColor`](#backgroundfillcolor) |
 
-## ChangeBitDepth
+## ChangeBitDepth()
 
 Change the bit depth of the specified image.
 
@@ -109,8 +109,8 @@ ChangeBitDepth(
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
-<td align="center">not supported </td>
-<td align="center">18.2+ </td>
+<td align="center">v12.1+ </td>
+<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -122,7 +122,7 @@ The allowed bit depths are 1, 4, 8, 24.
 
 ---
 
-## ChangeImageSize
+## ChangeImageSize()
 
 Change the size of the specified image.
 
@@ -133,13 +133,21 @@ ChangeImageSize(
     index: number,
     width: number,
     height: number,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+ChangeImageSize(
+    index: number,
+    width: number,
+    height: number,
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
-    successCallback?: () => void,
-    failureCallback?: (
+    successCallback: () => void,
+    failureCallback: (
         errorCode: number,
         errorString: string
     ) => void
-): void | boolean;
+): void;
 ```
 
 **Parameters**
@@ -185,7 +193,7 @@ ChangeImageSize(
 
 ---
 
-## SetDPI
+## SetDPI()
 
 Change the DPI (dots per inch) of the specified image.
 
@@ -197,13 +205,22 @@ SetDPI(
     xResolution: number,
     yResolution: number,
     resample: boolean,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+SetDPI(
+    index: number,
+    xResolution: number,
+    yResolution: number,
+    resample: boolean,
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
-    successCallback?: () => void,
-    failureCallback?: (
+    successCallback: () => void,
+    failureCallback: (
         errorCode: number,
         errorString: string
     ) => void
-): void | boolean;
+): void;
 ```
 
 **Parameters**
@@ -223,7 +240,6 @@ SetDPI(
 `failureCallback`: A callback function that is executed if the request fails.
  * `errorCode`: The error code.
  * `errorString` The error string.
-
 
 **Availability**
 <div class="availability">
@@ -253,7 +269,7 @@ SetDPI(
 
 ---
 
-## ConvertToBW
+## ConvertToBW()
 
 Convert the specified image to black & white.
 
@@ -261,13 +277,18 @@ Convert the specified image to black & white.
 
 ```javascript
 ConvertToBW(
+    index: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+ConvertToBW(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (
+    successCallback: () => void,
+    failureCallback: (
         errorCode: number,
         errorString: string
     ) => void
-): void | boolean;
+): void;
 ```
 
 **Parameters**
@@ -279,7 +300,6 @@ ConvertToBW(
 `failureCallback`: A callback function that is executed if the request fails.
  * `errorCode`: The error code.
  * `errorString`: The error string.
-
 
 **Availability**
 <div class="availability">
@@ -308,7 +328,7 @@ ConvertToBW(
 
 ---
 
-## ConvertToGrayScale
+## ConvertToGrayScale()
 
 Convert the specified image to grayscale.
 
@@ -316,24 +336,23 @@ Convert the specified image to grayscale.
 
 ```javascript
 ConvertToGrayScale(
+    index: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+ConvertToGrayScale(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (
+    successCallback: () => void,
+    failureCallback: (
         errorCode: number,
         errorString: string
     ) => void
-): void | boolean;
+): void;
 ```
 
 **Parameters**
 
 `index`: Specify the index of the image to be converted. The index is 0-based.
-
-`successCallback`: A callback function that is executed if the request succeeds.
-
-`failureCallback`: A callback function that is executed if the request fails.
- * `errorCode`: The error code.
- * `errorString`: The error string.
 
 **Availability**
 <div class="availability">
@@ -380,7 +399,7 @@ ConvertToGrayScaleAsync(
 
 ----->
 
-## Invert
+## Invert()
 
 Invert the colour of the pixels on the specified image.
 
@@ -388,10 +407,15 @@ Invert the colour of the pixels on the specified image.
 
 ```typescript
 Invert(
+    index: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+Invert(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -432,7 +456,7 @@ Invert(
 
 ---
 
-## SetImageWidth
+## SetImageWidth()
 
 Change the width of the specified image by adding a margin or removing part of the image.
 
@@ -441,10 +465,16 @@ Change the width of the specified image by adding a margin or removing part of t
 ```typescript
 SetImageWidth(
     index: number,
+    width: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+SetImageWidth(
+    index: number,
     width: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -487,7 +517,7 @@ SetImageWidth(
 
 ---
 
-## Flip
+## Flip()
 
 Flip the specified image.
 
@@ -495,10 +525,15 @@ Flip the specified image.
 
 ```typescript
 Flip(
+    index: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+Flip(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -557,7 +592,7 @@ FlipAsync(
 
 --->
 
-## Mirror
+## Mirror()
 
 Mirror the specified image.
 
@@ -565,10 +600,15 @@ Mirror the specified image.
 
 ```typescript
 Mirror(
+    index: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+Mirror(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -626,7 +666,7 @@ MirrorAsync(
 
 --->
 
-## RotateLeft
+## RotateLeft()
 
 Rotate the specified image 90 degrees counterclockwise.
 
@@ -634,10 +674,15 @@ Rotate the specified image 90 degrees counterclockwise.
 
 ```typescript
 RotateLeft(
+    index: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+RotateLeft(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -695,7 +740,7 @@ RotateLeftAsync(
 
 --->
 
-## RotateRight
+## RotateRight()
 
 Rotate the specified image 90 degrees clockwise.
 
@@ -703,10 +748,15 @@ Rotate the specified image 90 degrees clockwise.
 
 ```typescript
 RotateRight(
+    index: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+RotateRight(
     index: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -764,7 +814,7 @@ RotateRightAsync(
 
 --->
 
-## Rotate
+## Rotate()
 
 Rotate the specified image by the specified angle.
 
@@ -774,10 +824,17 @@ Rotate the specified image by the specified angle.
 Rotate(
     index: number,
     angle: number,
+    keepSize: boolean
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+Rotate(
+    index: number,
+    angle: number,
     keepSize: boolean,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -844,7 +901,7 @@ RotateAsync(
 
 --->
 
-## RotateEx
+## RotateEx()
 
 Rotate the specified image by the specified angle.
 
@@ -855,10 +912,18 @@ RotateEx(
     index: number,
     angle: number,
     keepSize: boolean,
+    method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+RotateEx(
+    index: number,
+    angle: number,
+    keepSize: boolean,
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -905,7 +970,7 @@ RotateEx(
 
 ---
 
-## Crop
+## Crop()
 
 Crop the specified image using the specified coordinates.
 
@@ -917,10 +982,19 @@ Crop(
     left: number,
     top: number,
     right: number,
+    bottom: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+Crop(
+    index: number,
+    left: number,
+    top: number,
+    right: number,
     bottom: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -969,7 +1043,7 @@ Crop(
 
 ---
 
-## Erase
+## Erase()
 
 Erase a rectangular area from the specified image.
 
@@ -981,10 +1055,19 @@ Erase(
     left: number,
     top: number,
     right: number,
+    bottom: number
+): boolean;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+Erase(
+    index: number,
+    left: number,
+    top: number,
+    right: number,
     bottom: number,
-    successCallback?: () => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): void | boolean;
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -1033,7 +1116,7 @@ Erase(
 
 ---
 
-## CopyToClipboard
+## CopyToClipboard()
 
 Copy the specified image to the clipboard of the operating system.
 
@@ -1091,7 +1174,7 @@ CopyToClipboardAsync(index: number): Promise<boolean>;
 
 --->
 
-## CutToClipboard
+## CutToClipboard()
 
 Cut the specified image to the clipboard of the operating system.
 
@@ -1133,7 +1216,7 @@ CutToClipboard(index: number): boolean;
 
 ---
 
-## CropToClipboard
+## CropToClipboard()
 
 Crop a rectangular area from the specified image to the clipboard of the operating system.
 
@@ -1189,7 +1272,7 @@ CropToClipboard(
 
 ---
 
-## CutFrameToClipboard
+## CutFrameToClipboard()
 
 Cut a rectangular area from the specified image to the clipboard of the operating system.
 
@@ -1246,7 +1329,7 @@ CutFrameToClipboard(
 
 **Usage notes**
 
-The empty area resulted from the crop/erase/cut will be filled with the colour set with [BackgroundFillColor](#backgroundfillcolor).
+The empty area resulted from the crop/erase/cut will be filled with the colour set with [`BackgroundFillColor`](#backgroundfillcolor).
 
 ---
 
@@ -1292,7 +1375,7 @@ By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB v
 
 ---
 
-## ChangeBrightnessAsync
+## ChangeBrightnessAsync()
 
 Change the image brightness.
 
@@ -1301,7 +1384,7 @@ Change the image brightness.
 ```typescript
 ChangeBrightnessAsync(
     index: number, 
-    val: number
+    value: number
 ): Promise<boolean>;
 ```
 
@@ -1309,7 +1392,7 @@ ChangeBrightnessAsync(
 
 `index`: Specify the index of image in buffer.
 
-`val`: Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
+`value`: Specify the brightness. Allowed values [-1000~1000]. Negative value means decrease the brightness.
 
 **Availability**
 
@@ -1339,7 +1422,7 @@ ChangeBrightnessAsync(
 
 ---
 
-## ChangeContrastAsnyc
+## ChangeContrastAsnyc()
 
 Change the image contrast.
 
@@ -1348,7 +1431,7 @@ Change the image contrast.
 ```typescript
 ChangeContrastAsnyc(
     index: number, 
-    val: number
+    value: number
 ): Promise<boolean>;
 ```
 
@@ -1356,7 +1439,7 @@ ChangeContrastAsnyc(
 
 `index`: Specify the index of image in buffer.
 
-`val`: Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
+`value`: Specify the contrast. Allowed values [-1000~1000]. Negative value means decrease the contrast.
 
 **Availability**
 

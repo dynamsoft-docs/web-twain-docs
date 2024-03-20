@@ -117,16 +117,32 @@ Start image acquisition.
 **Syntax**
 
 ```typescript
+AcquireImage(): void;
+
 AcquireImage(
-    deviceConfiguration?: DeviceConfiguration,
-    successCallBack?: () => void,
-    failureCallBack?: (deviceConfiguration?: DeviceConfiguration, errorCode: number, errorString: string) => void
-): boolean;
+  deviceConfiguration: DeviceConfiguration
+): void;
+
+AcquireImage(
+  successCallBack: () => void,
+  failureCallBack: (
+    errorCode: number,
+    errorString: string) => void
+): void;
+
+AcquireImage(
+  deviceConfiguration: DeviceConfiguration,
+  successCallBack: () => void,
+  failureCallBack: (
+      deviceConfiguration: DeviceConfiguration,
+      errorCode: number,
+      errorString: string) => void
+): void;
 ```
 
 **Parameters**
 
-`deviceConfiguration`: Configuration for the acquisition. Please refer to [DeviceConfiguration]({{site.info}}api/Interfaces.html#DeviceConfiguration).
+`deviceConfiguration`: Configuration for the acquisition. Please refer to [`DeviceConfiguration`]({{site.info}}api/Interfaces.html#DeviceConfiguration).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
@@ -361,7 +377,7 @@ DisableSource(): boolean;
 
 **Usage notes**
 
-After `DisableSource()` is called, the Source is still open and you can continue to acquire images by calling `AcquireImage()` or `EnableSource()` .
+After `DisableSource()` is called, the Source is still open and you can continue to acquire images by calling [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage) or [`EnableSource()`]({{site.info}}api/WebTwain_Acquire.html#enablesource).
 
 ---
 
@@ -452,7 +468,7 @@ EnableSourceUI(
 
 **Usage notes**
 
-This method enables the user to manipulate the settings for scanning but not start an actual scan. It only works if the source supports the capability `CAP_ENABLEDSUIONLY` . User can call [GetCustomDSDataEx()](#getcustomdsdataex) to save the settings in the callback `successCallBack` and later call [SetCustomDSDataEx()](#setcustomdsdataex) to apply the settings before starting a scan.
+This method enables the user to manipulate the settings for scanning but not start an actual scan. It only works if the source supports the capability `CAP_ENABLEDSUIONLY` . User can call [`GetCustomDSDataEx()`](#getcustomdsdataex) to save the settings in the callback `successCallBack` and later call [`SetCustomDSDataEx()`](#setcustomdsdataex) to apply the settings before starting a scan.
 
 ---
 
@@ -644,10 +660,13 @@ Bring up the Source Selection User Interface (UI) for the user to choose a data 
 **Syntax**
 
 ```typescript
+SelectSource(): boolean | string;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
 SelectSource(
-    successCallBack?: () => void,
-    failureCallBack?: (errorCode: number, errorString: string) => void
-): boolean | string;
+    successCallBack: () => void,
+    failureCallBack: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -726,7 +745,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 
 **Parameters**
 
-`deviceType`: Specify the device type of scanners. Please refer to [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
+`deviceType`: Specify the device type of scanners. Please refer to [`EnumDWT_DeviceType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
 
 **Availability**
 <div class="availability">
@@ -945,7 +964,7 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 
 **Parameters**
 
-`scanSetup`: Configuration for the acquisition. Please refer to [ScanSetup]({{site.info}}api/Interfaces.html#scansetup).
+`scanSetup`: Configuration for the acquisition. Please refer to [`ScanSetup`]({{site.info}}api/Interfaces.html#scansetup).
 
 **Availability**
 
@@ -1012,7 +1031,7 @@ CancelAllPendingTransfers(): boolean;
 
 **Usage notes**
 
-This method is only valid in the events [OnPreAllTransfers](#onprealltransfers), [OnPreTransfer](#onpretransfer) and [OnPostTransfer](#onposttransfer).
+This method is only valid in the events [`OnPreAllTransfers`](#onprealltransfers), [`OnPreTransfer`](#onpretransfer) and [`OnPostTransfer`](#onposttransfer).
 
 ---
 
@@ -1170,7 +1189,7 @@ FeedPage(): boolean;
 
 **Usage notes**
 
-Use this method after [OpenSource()](#opensource) is called and make sure [IfFeederEnabled](#iffeederenabled) is `true` .
+Use this method after [`OpenSource()`](#opensource) is called and make sure [`IfFeederEnabled`](#iffeederenabled) is `true` .
 
 ---
 
@@ -1214,7 +1233,7 @@ GetCustomDSData(fileName: string): boolean;
 
 **Usage notes**
 
-Typically, the data source data file is set by the method [SetCustomDSData()](#setcustomdsdata).
+Typically, the data source data file is set by the method [`SetCustomDSData()`](#setcustomdsdata).
 
 **Example**
 
@@ -1261,7 +1280,7 @@ GetCustomDSDataEx(): string;
 
 **Usage notes**
 
-Typically, the data source data file is set by the method [SetCustomDSDataEx()](#setcustomdsdataex).
+Typically, the data source data file is set by the method [`SetCustomDSDataEx()`](#setcustomdsdataex).
 
 **Example**
 
@@ -1440,7 +1459,7 @@ ResetImageLayout(): boolean;
 
 **Usage notes**
 
-To set the image layout manually, you can use [SetImageLayout()](#setimagelayout)
+To set the image layout manually, you can use [`SetImageLayout()`](#setimagelayout)
 
 ---
 
@@ -1480,7 +1499,7 @@ RewindPage(): boolean;
 
 **Usage notes**
 
-Use this method after [OpenSource()](#opensource) method and make sure [IfFeederEnabled](#iffeederenabled) is `true` .
+Use this method after [`OpenSource()`](#opensource) method and make sure [`IfFeederEnabled`](#iffeederenabled) is `true` .
 
 ---
 
@@ -1524,7 +1543,7 @@ SetCustomDSData(fileName: string): boolean;
 
 **Usage notes**
 
-Typically, the data source data file is created by the method [GetCustomDSData()](#getcustomdsdata).
+Typically, the data source data file is created by the method [`GetCustomDSData()`](#getcustomdsdata).
 
 **Example**
 
@@ -1575,7 +1594,7 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 
 **Usage notes**
 
-Typically the data source data string is created by the method [GetCustomDSDataEx()](#getcustomdsdataex)
+Typically the data source data string is created by the method [`GetCustomDSDataEx()`](#getcustomdsdataex)
 
 ```javascript
 // Please note, the API only works for TWAIN driver.
@@ -1637,7 +1656,7 @@ Example argument for the parameter `fileName`
 - "C:\\webtwain" + <> + ".jpg": The scanned images will result in "C:\\webtwain1.jpg", "C:\\webtwain2.jpg", "C:\\webtwain3.jpg", etc.
 - "C:\\webtwain" + <%06d> + ".jpg": The scanned images will result in "C:\\webtwain000001.jpg", "C:\\webtwain000002.jpg", "C:\\webtwain000003.jpg", etc.
 
-Check out the available formats [Dynamsoft.DWT.EnumDWT_FileFormat]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat).
+Check out the available formats [`Dynamsoft.DWT.EnumDWT_FileFormat`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat).
 
 **Example**
 
@@ -1728,7 +1747,7 @@ Since there are several ways to negotiate the scan area, it becomes confusing wh
 
 The TWAIN Working Group has suggested the following behavior
 
-- If the current frame is set by `SetImageLayout` . The same frame shall be what you get with the APIs [CapGetFrameBottom()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameBottom), [CapGetFrameLeft()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameLeft), [CapGetFrameRight()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameRight), [CapGetFrameTop()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameTop) and the property [PageSize](#pagesize) shall return `TWSS_NONE` (0).
+- If the current frame is set by `SetImageLayout()`. The same frame shall be what you get with the APIs [CapGetFrameBottom()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameBottom), [CapGetFrameLeft()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameLeft), [CapGetFrameRight()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameRight), [CapGetFrameTop()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameTop) and the property [PageSize](#pagesize) shall return `TWSS_NONE` (0).
 - If the current frame is set from negotiating the capability `ICAP_FRAMES` with the method [CapSetFrame()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapSetFrame), the property [PageSize](#pagesize) shall return `TWSS_NONE` (0) and the image layout shall reflect the same frame with the properties [ImageLayoutFrameBottom](#imagelayoutframebottom), [ImageLayoutFrameLeft](#imagelayoutframeleft), [ImageLayoutFrameRight](#imagelayoutframeright) and [ImageLayoutFrameTop](#imagelayoutframetop).
 - If the current fixed frame is set by the property [PageSize](#pagesize), the same dimensions shall be reflected in the APIs [CapGetFrameBottom()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameBottom), [CapGetFrameLeft()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameLeft), [CapGetFrameRight()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameRight), [CapGetFrameTop()](https://www.dynamsoft.com/docs/dwt15.3.1/API/Capability-Negotiation.html#CapGetFrameTop) as well as [ImageLayoutFrameBottom](#imagelayoutframebottom), [ImageLayoutFrameLeft](#imagelayoutframeleft), [ImageLayoutFrameRight](#imagelayoutframeright) and [ImageLayoutFrameTop](#imagelayoutframetop). Note, however, the orientation (in other words, whether it's in the portrait mole or landscape mode) also plays a role in the order of the values.
 
@@ -1757,7 +1776,7 @@ function failureCallback(errorCode, errorString) {
 
 ## BitDepth
 
-Return or set the pixel bit depth for the current value of `PixelType` .
+Return or set the pixel bit depth for the current value of [`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype) .
 
 **Syntax**
 
@@ -1791,7 +1810,7 @@ BitDepth: number;
 
 **Usage notes**
 
-Set this property after `OpenSource()` and before `AcquireImage()` .
+Set this property after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) and before [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage).
 
 By default, the bit depth is 1 for `TWPT_BW` , 8 for `TWPT_GRAY` and 24 for `TWPT_RGB` .
 
@@ -1934,9 +1953,9 @@ IfDuplexEnabled: boolean;
 
 **Usage notes**
 
-Set this property after `OpenSource()` and before `AcquireImage()` .
+Set this property after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) and before [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage).
 
-Not all scanners support duplex scanning. To confirm, check the user manual of the device or check the value of `Duplex` after `OpenSource()` .
+Not all scanners support duplex scanning. To confirm, check the user manual of the device or check the value of [`Duplex`]({{site.info}}api/WebTwain_Acquire.html#duplex) after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource).
 
 **Example**
 
@@ -1998,7 +2017,7 @@ IfFeederEnabled: boolean;
 
 **Usage notes**
 
-Set this property after `OpenSource()` and before `AcquireImage()` .
+Set this property after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) and before [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage).
 
 If the property is set to `true` , the data source will try acquiring images from the document feeder first. If the data source doesn't have a document feeder, the flatbed will be used.
 
@@ -2057,9 +2076,9 @@ IfShowUI: boolean;
 
 **Usage notes**
 
-If the property is set to `true` , the data source will display its user interface when `AcquireImage()` is called. Otherwise, the UI will not be displayed and the scan will start immediately.
+If the property is set to `true` , the data source will display its user interface when [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage) is called. Otherwise, the UI will not be displayed and the scan will start immediately.
 
-It's recommended to use this API after `OpenSource()` is called.
+It's recommended to use this API after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) is called.
 
 **Example**
 
@@ -2117,7 +2136,7 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 
 **Usage notes**
 
-Set this property right after the SDK is initialized or after calling `CloseSourceManager()` and `OpenSourceManager()` .
+Set this property right after the SDK is initialized or after calling [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager) and [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager).
 
 The allowed values for `EnumDWT_Driver` are
 
@@ -2144,7 +2163,7 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 
 **Parameters**
 
-`PageSize`: Please refer to [EnumDWT_CapSupportedSizes]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes)
+`PageSize`: Please refer to [`EnumDWT_CapSupportedSizes`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes)
 
 **Availability**
 
@@ -2172,7 +2191,7 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 
 **Usage notes**
 
-Set this property after `OpenSource()` and before `AcquireImage()`.
+Set this property after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) and before [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage).
 
 ---
 
@@ -2186,9 +2205,7 @@ Return or set the pixel type used when acquiring images.
 PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
-**Parameters**
-
-`PixelType`: Please refer to [EnumDWT_PixelType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pixeltype)
+Please refer to [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pixeltype).
 
 **Availability**
 
@@ -2216,7 +2233,7 @@ PixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 
 **Usage notes**
 
-Set this property after `OpenSource()` and before `AcquireImage()`.
+Set this property after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) and before [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage).
 
 ---
 
@@ -2256,7 +2273,7 @@ Resolution: number;
 
 **Usage notes**
 
-Set this property after `OpenSource()` and before `AcquireImage()`.
+Set this property after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) and before [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage).
 
 ---
 
@@ -2332,7 +2349,7 @@ BlankImageThreshold: number;
 
 **Usage notes**
 
-`BlankImageThreshold` ranges from 0 to 255 and is 128 by default, it's only effective when [ `PixelType` ] is set to `TWPT_BW` . The bigger the value is, the more likely an image may be regarded as blank.
+`BlankImageThreshold` ranges from 0 to 255 and is 128 by default, it's only effective when [`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype) is set to `TWPT_BW` . The bigger the value is, the more likely an image may be regarded as blank.
 
 ---
 
@@ -2372,7 +2389,7 @@ Brightness: number;
 
 **Usage notes**
 
-Set this property after `OpenSource()` and before `AcquireImage()` .
+Set this property after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) and before [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage).
 
 Typically, the value range is -1000 ~ 1000 where -1000 indicates the darkest and 1000 the brightest.
 
@@ -2414,9 +2431,9 @@ Contrast: number;
 
 **Usage notes**
 
-Set this property after `OpenSource()` and before `AcquireImage()` .
+Set this property after [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource) and before [`AcquireImage()`]({{site.info}}api/WebTwain_Acquire.html#acquireimage).
 
-Typically, the value range is -1000 ~ 1000 where -1000 indicates the darkest and 1000 the brightest.
+Typically, the value range is -1000 ~ 1000 where -1000 indicates the lowest contrast and 1000 the highest contrast.
 
 ---
 
@@ -2825,9 +2842,9 @@ IfAutoScan: boolean;
 
 **Usage notes**
 
-This property is only valid when [IfFeederEnabled](#iffeederenabled) is set to `true` .
+This property is only valid when [`IfFeederEnabled`]({{site.info}}api/WebTwain_Acquire.html#iffeederenabled) is set to `true` .
 
-The fundamental assumption behind this property is that the device may be able to capture the number of images indicated by the property [XferCount](#xfercount) without waiting for the Application to request the image transfers. This is only possible if the device has internal buffers capable of caching the images it captures.
+The fundamental assumption behind this property is that the device may be able to capture the number of images indicated by the property [`XferCount`]({{site.info}}api/WebTwain_Acquire.html#xfercount) without waiting for the Application to request the image transfers. This is only possible if the device has internal buffers capable of caching the images it captures.
 
 ---
 
@@ -2867,7 +2884,7 @@ readonly IfFeederLoaded: boolean;
 
 **Usage notes**
 
-This property is only valid when [IfFeederEnabled](#iffeederenabled) and [IfPaperDetectable](#ifpaperdetectable) are `true` .
+This property is only valid when [`IfFeederEnabled`]({{site.info}}api/WebTwain_Acquire.html#iffeederenabled) and [`IfPaperDetectable`]({{site.info}}api/WebTwain_Acquire.html#ifpaperdetectable) are `true` .
 
 ---
 
@@ -2907,7 +2924,7 @@ readonly IfPaperDetectable: boolean;
 
 **Usage notes**
 
-Check this property after [OpenSource()](#opensource) is called.
+Check this property after [`OpenSource()`](#opensource) is called.
 
 ---
 
@@ -2948,7 +2965,7 @@ IfShowIndicator: boolean;
 
 This property works only when IfShowUI is set to `false` .
 
-The indicator will only be hidden if you set both [IfShowUI](#ifshowui) and [IfShowIndicator](#ifshowindicator) to `false` .
+The indicator will only be hidden if you set both [`IfShowUI`](#ifshowui) and [`IfShowIndicator`](#ifshowindicator) to `false` .
 
 ---
 
@@ -2988,7 +3005,7 @@ readonly IfUIControllable: boolean;
 
 **Usage notes**
 
-Check this property after [OpenSource()](#opensource) is called.
+Check this property after [`OpenSource()`](#opensource) is called.
 
 ---
 
@@ -3142,8 +3159,8 @@ readonly ImageLayoutFrameNumber: number;
 
 Usually a chronological index of the acquired frames, these frames are related to one another in some way. Usually, they were acquired from the same page. The source assigns these values. Initial value is 1. Reset when a new page is acquired.
 
-`ImageLayoutFrameNumber` property, along with other properties about the current image information, is valid only in the `OnPreTransfer` and `OnPostTransfer` events.
-The frame information here is only about the current frame. To get the information about all the frames to be transferred in an acquire session, please use capability negotiation. The capability to be negotiated is ICAP_FRAMES (4372).
+`ImageLayoutFrameNumber` property, along with other properties about the current image information, is valid only in the [`OnPreTransfer`]({{site.info}}api/WebTwain_Acquire.html#onpretransfer) and [`OnPostTransfer`]({{site.info}}api/WebTwain_Acquire.html#onposttransfer) events.
+The frame information here is only about the current frame. To get the information about all the frames to be transferred in an acquire session, please use capability negotiation. The capability to be negotiated is `ICAP_FRAMES` (4372).
 
 ---
 
@@ -3479,6 +3496,8 @@ Return the pixel type of the current image.
 readonly ImagePixelType: Dynamsoft.DWT.EnumDWT_PixelType | number;
 ```
 
+Please refer to [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pixeltype).
+
 **Availability**
 
 <div class="availability">
@@ -3551,6 +3570,8 @@ Return the type of the magnetic data if the data source supports magnetic data r
 readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 ```
 
+Please refer to [`EnumDWT_MagType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_magtype).
+
 **Availability**
 
 <div class="availability">
@@ -3577,11 +3598,11 @@ readonly MagType: Dynamsoft.DWT.EnumDWT_MagType | number;
 
 **Usage notes**
 
-The numbers returned by these APIs are based on the value of the [Unit](#unit) property which by default means "inches".
+The numbers returned by these APIs are based on the value of the [`Unit`](#unit) property which by default means "inches".
 
-These APIs are only valid in the callbacks for the events [OnPreTransfer](#onpretransfer) and [OnPostTransfer](#onposttransfer).
+These APIs are only valid in the callbacks for the events [`OnPreTransfer`](#onpretransfer) and [`OnPostTransfer`](#onposttransfer).
 
-`MagData` and `MagType` are device-dependent. Check the user manual of the device to see if magnetic data recognition is supported.
+[`MagData`](#magdata) and [`MagType`](#magtype) are device-dependent. Check the user manual of the device to see if magnetic data recognition is supported.
 
 ---
 
@@ -3621,7 +3642,7 @@ readonly PendingXfers: number;
 
 **Usage notes**
 
-This property is only valid in the event [OnPostTransfer](#onposttransfer).
+This property is only valid in the event [`OnPostTransfer`](#onposttransfer).
 
 The data source returns -1 if it is not sure how many transfers are pending which normally occurs when the ADF (Automatic Document Feeder) is used.
 
@@ -3680,6 +3701,8 @@ Return or set the data source's transfer mode.
 TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 ```
 
+Please refer to [`EnumDWT_TransferMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_transfermode).
+
 **Availability**
 
 <div class="availability">
@@ -3708,11 +3731,11 @@ TransferMode: Dynamsoft.DWT.EnumDWT_TransferMode | number;
 
 Allowed values are
 
-- TWSX_NATIVE | 0: The default mode. In this mode, the whole image is transfered in a single memory block.
-- TWSX_FILE | 1: In this mode, the image is transfered to a specified file on the disk directly. This mode is ideal when transferring large images that might encounter memory limitations with Native mode. Check out [SetFileXferInfo](#setfilexferinfo) for more information.
-- TWSX_MEMORY | 2: In this mode, the image is transferred in multiple memory blocks. It's ideal for transferring very large images or a large number of images in a short time.
+- `TWSX_NATIVE` | 0: The default mode. In this mode, the whole image is transfered in a single memory block.
+- `TWSX_FILE` | 1: In this mode, the image is transfered to a specified file on the disk directly. This mode is ideal when transferring large images that might encounter memory limitations with Native mode. Check out [`SetFileXferInfo`](#setfilexferinfo) for more information.
+- `TWSX_MEMORY` | 2: In this mode, the image is transferred in multiple memory blocks. It's ideal for transferring very large images or a large number of images in a short time.
 
-TWSX_NATIVE and TWSX_MEMORY are required by all TWAIN data sources while TWSX_FILE is not. Therefore, make sure the data source supports TWSX_FILE before you use it.
+`TWSX_NATIVE` and `TWSX_MEMORY` are required by all TWAIN data sources while `TWSX_FILE` is not. Therefore, make sure the data source supports `TWSX_FILE` before you use it.
 
 ---
 
@@ -3910,7 +3933,7 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 
 **Parameters**
 
-`outputInfo`: Detailed information about the image that just got transferred. Please refer to [OutputInfo]({{site.info}}api/Interfaces.html#outputinfo).
+`outputInfo`: Detailed information about the image that just got transferred. Please refer to [`OutputInfo`]({{site.info}}api/Interfaces.html#outputinfo).
 
 **Availability**
 
@@ -3992,7 +4015,7 @@ Multiple transfers may occur in two cases
 
 In such cases, the event `OnPreTransfer` is triggered multiple times but `OnPreAllTransfers` is triggerred only once.
 
-In the callback function of this event, you can call `CancelAllPendingTransfers()` to cancel all the transfers.
+In the callback function of this event, you can call [`CancelAllPendingTransfers()`](#cancelallpendingtransfers) to cancel all the transfers.
 
 ---
 
@@ -4034,9 +4057,9 @@ RegisterEvent('OnPreTransfer',function(){...});
 
 In the callback function of this event, you can
 
-- Check `PendingXFERs` for the number of pending transfers.
-- Check the information about the transferred image including `ImageLayoutDocumentNumber` , `ImageLayoutFrameLeft` , `ImageLayoutFrameTop` , `ImageLayoutFrameRight` , `ImageLayoutFrameBottom` , `ImageLayoutPageNumber` , `ImageLayoutFrameNumber` , etc.
-- Call `CancelAllPendingTransfers()` to cancel all the rest of the transfers.
+- Check [`PendingXFERs`](#pendingxfers) for the number of pending transfers.
+- Check the information about the transferred image including [`ImageLayoutDocumentNumber`](#imagelayoutdocumentnumber), [`ImageLayoutFrameLeft`](#imagelayoutframeleft), [`ImageLayoutFrameTop`], [`ImageLayoutFrameRight`](#imagelayoutframeright), [`ImageLayoutFrameBottom`](#imagelayoutframebottom), [`ImageLayoutPageNumber`](#imagelayoutpagenumber), [`ImageLayoutFrameNumber`](#imagelayoutframenumber), etc.
+- Call [`CancelAllPendingTransfers()`](#cancelallpendingtransfers) to cancel all the rest of the transfers.
 
 ---
 
@@ -4092,7 +4115,7 @@ getCapabilities(
 **Parameters**
 
 `successCallback`: A callback function that is executed if the request succeeds.
-- `capabilityDetails`: Detailed information about the specified capabilities. Please refer to [CapabilityDetails]({{site.info}}api/Interfaces.html#capabilitydetails).
+- `capabilityDetails`: Detailed information about the specified capabilities. Please refer to [`CapabilityDetails`]({{site.info}}api/Interfaces.html#capabilitydetails).
 
 `failureCallback`: A callback function that is executed if the request fails.
 - `errorCode`: The error code.
@@ -4150,7 +4173,7 @@ setCapabilities(
 `failureCallback`: A callback function that is executed if the request fails.
 - `capabilities`: The capabilities to set.
 
-Please refer to [Capabilities]({{site.info}}api/Interfaces.html#capabilities).
+Please refer to [`Capabilities`]({{site.info}}api/Interfaces.html#capabilities).
 
 **Availability**
 
@@ -4248,14 +4271,13 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 
 **Parameters**
 
-`deviceType`: The device type. Please refere to [EnumDWT_DeviceType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype)
+`deviceType`: The device type. Please refere to [`EnumDWT_DeviceType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
 
-
-`refresh`: Default value is **false**
+`refresh`: Default value is `false`.
 
 **Arguments**
 
-`Device`: Please refer to [Device]({{site.info}}api/Interfaces.html#device).
+`Device`: Please refer to [`Device`]({{site.info}}api/Interfaces.html#device).
 
 **Example**
 
@@ -4325,7 +4347,7 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 **Parameters**
 
-`device`: the device object. Please refer to [Device]({{site.info}}api/Interfaces.html#device).
+`device`: the device object. Please refer to [`Device`]({{site.info}}api/Interfaces.html#device).
 
 **Availability**
 
@@ -4367,7 +4389,7 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 
 **Parameters**
 
-`deviceConfiguration`: The device configuration. Please refer to [DeviceConfiguration]({{site.info}}api/Interfaces.html#DeviceConfiguration).
+`deviceConfiguration`: The device configuration. Please refer to [`DeviceConfiguration`]({{site.info}}api/Interfaces.html#DeviceConfiguration).
 
 **Availability**
 

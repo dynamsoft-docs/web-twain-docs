@@ -901,7 +901,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | balance | 1 | The image data is processed in the browser canvas |
 
 
-## `Dynamsoft.DWT.Dynamsoft.DWT.EnumDWT_CompressionType`
+## `Dynamsoft.DWT.EnumDWT_CompressionType`
 
 | Label | Value |
 |:-|:-|

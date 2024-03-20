@@ -176,9 +176,15 @@ Creates a new `WebTwain` instance that listens to the specified host & ports. An
 ```typescript
 CreateDWTObject(
     ContainerId: string, 
-    host?: string, 
-    port?: string | number, 
-    portSSL?: string | number, 
+    successCallBack: (DWObject: WebTwain) => void,
+    failureCallBack: (errorString: string) => void
+): boolean;
+
+CreateDWTObject(
+    ContainerId: string, 
+    host: string, 
+    port: string | number, 
+    portSSL: string | number, 
     successCallBack: (DWObject: WebTwain) => void,
     failureCallBack: (errorString: string) => void
 ): boolean;
@@ -259,10 +265,6 @@ Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',
         function (errorString) {console.log(errorString);}
 );
 ```
-
-**Usage Notes**
-
-- `host`, `port`, `portSSL`: These three optional parameters must be set at the same time.
 
 ---
 
