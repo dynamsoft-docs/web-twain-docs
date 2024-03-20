@@ -43,11 +43,14 @@ needGenerateH3Content: true
 
 | |
 | :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
-| [`Events`](#events) |
+| [`on()`](#on) | [`off()`](#off) |
 
+| |
+| :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
+| [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected)| [`pageRendered`](#pagerendered) | [`resize`](#resize) |
 ---
 
-## bind
+## bind()
 
 Create a Dynamsoft Viewer instance and bind it to the WebTwain instance.
 
@@ -111,7 +114,7 @@ Replace the previous `BindViewer` method.
 
 ---
 
-## clearSelectedAreas
+## clearSelectedAreas()
 
 Clear the selected area(s) on the current page.
 
@@ -153,7 +156,7 @@ DWObject.Viewer.clearSelectedAreas();
 
 ---
 
-## createCustomElement
+## createCustomElement()
 
 Add a custom page DIV element and specify its position and display order. Generate an independent CustomElement object.
 
@@ -226,7 +229,7 @@ The method [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind) will dispo
 
 ---
 
-## createImageEditor
+## createImageEditor()
 
 Generate an independent ImageEditor object.
 
@@ -527,7 +530,7 @@ The method [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind) will dispo
 
 ---
 
-## createThumbnailViewer
+## createThumbnailViewer()
 
 Generate a independent ThumbnailViewer object.
 
@@ -638,7 +641,7 @@ The method [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind) will dispo
 
 ---
 
-## first
+## first()
 
 Show the first page and return the index which should be 0. If there is no page in the viewer, -1 is returned.
 
@@ -680,7 +683,7 @@ DWObject.Viewer.first();
 
 ---
 
-## fitWindow
+## fitWindow()
 
 Set how the page is fit in the viewer.
 
@@ -739,7 +742,7 @@ If no parameter is provided, it tries to fit the whole page within the viewer.
 
 ---
 
-## gotoPage
+## gotoPage()
 
 Show the specified page and return its index.
 
@@ -787,7 +790,7 @@ DWObject.Viewer.gotoPage(0);
 
 ---
 
-## hide
+## hide()
 
 Hide the viewer.
 
@@ -829,7 +832,7 @@ DWObject.Viewer.hide();
 
 ---
 
-## last
+## last()
 
 Show the last page and return its index. If there is no page in the viewer, -1 is returned.
 
@@ -871,7 +874,7 @@ DWObject.Viewer.last();
 
 ---
 
-## next
+## next()
 
 Show the next page and return its index. If there is no page in the viewer, -1 is returned.
 
@@ -914,124 +917,7 @@ var currentIndex = DWObject.Viewer.next(); // return 4 which represents the 5th 
 
 ---
 
-## off
-
-Unbind event listener(s) from the specified viewer event.
-
-**Syntax**
-
-```typescript
-Viewer.off(
-    eventName: string,
-    callback?: () => void
-): void;
-```
-
-**Parameters**
-
-`eventName`: Specify the event.
-
-`callback`: Specify the listener to remove
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-</tr>
-
-</table>
-</div>
-
-**Example**
-
-```javascript
-DWObject.Viewer.off("pageAreaSelected");
-```
-
-**Usage notes**
-
-If no listener is specified, all listeners will be removed.
-
----
-
-## on
-
-Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
-
-**Syntax**
-
-```typescript
-Viewer.on(
-    eventName: string,
-    callback: (event: ViewerEvent) => void
-): void;
-```
-
-**Parameters**
-
-`eventName`: Specify the event name.
-
-`callback`: Specify the listner.
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-<td align="center">v16.2+ </td>
-</tr>
-
-</table>
-</div>
-
-**Example**
-
-```javascript
-//bind pageAreaSelected event on the main viewer
-var callback = function (sImageIndex, rect) {
-  console.log(sImageIndex);
-};
-DWObject.Viewer.on("pageAreaSelected", callback);
-
-//bind click event on the thumbnail viewer
-var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
-objThumbnailViewer.show();
-objThumbnailViewer.on("click", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
-});
-```
-
----
-
-## previous
+## previous()
 
 Show the previous page and return its index. If there is no page in the viewer, -1 is returned.
 
@@ -1074,7 +960,7 @@ var currentIndex = DWObject.Viewer.previous(); // return 2 which represents the 
 
 ---
 
-## render
+## render()
 
 Refresh the viewer.
 
@@ -1120,7 +1006,7 @@ DWObject.Viewer.render(); //It will trigger the pageRendered event
 
 ---
 
-## setButtonClass
+## setButtonClass()
 
 Set the CSS class name of the specified button.
 
@@ -1175,7 +1061,7 @@ DWObject.Viewer.setButtonClass("crop", "CropClass");
 
 ---
 
-## setSelectedAreas
+## setSelectedAreas()
 
 Set one or more rectangular area(s) on the current page.
 
@@ -1242,7 +1128,7 @@ DWObject.Viewer.setSelectedAreas([
 
 ---
 
-## setViewMode
+## setViewMode()
 
 Set the view mode of the viewer.
 
@@ -1298,7 +1184,7 @@ DWObject.Viewer.setViewMode(2, 2);
 
 ---
 
-## show
+## show()
 
 Show the viewer.
 
@@ -1340,7 +1226,7 @@ DWObject.Viewer.show();
 
 ---
 
-## unbind
+## unbind()
 
 Unbind and destroy the viewer.
 
@@ -2131,7 +2017,7 @@ DWObject.Viewer.singlePageMode = true;
 
 ---
 
-## updateSelectionBoxStyle
+## updateSelectionBoxStyle()
 
 Sets the graphical style for the selection box in the Viewer. 
 
@@ -2333,7 +2219,7 @@ DWObject.Viewer.autoChangeIndex = true;
 
 ---
 
-## updateCheckboxStyle
+## updateCheckboxStyle()
 
 Update checkbox style
 
@@ -2373,7 +2259,7 @@ updateCheckboxStyle(checkboxSettings?: CheckboxSettings): boolean;
 
 ---
 
-## updatePageNumberStyle
+## updatePageNumberStyle()
 
 Update page number style
 
@@ -2521,7 +2407,7 @@ DWObject.Viewer.zoomOrigin = {x:"left", y:"top"}; // Set the zoom origin to top 
 
 ## Events
 
-### On
+### on()
 
 Built-in callbacks that are triggered for a certain mouse event or keyboard event on a page.
 
@@ -2614,6 +2500,60 @@ DWObject.Viewer.on("keyup", function (keyboardEvent) {
   console.log(keyboardEvent);
 });
 ```
+
+### off()
+
+Unbind event listener(s) from the specified viewer event.
+
+**Syntax**
+
+```typescript
+off(
+    eventName: string,
+    callback?: () => void
+): void;
+```
+
+**Parameters**
+
+`eventName`: Specify the event.
+
+`callback`: Specify the listener to remove
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+<td align="center">v16.2+ </td>
+</tr>
+
+</table>
+</div>
+
+**Example**
+
+```javascript
+DWObject.Viewer.off("pageAreaSelected");
+```
+
+**Usage notes**
+
+If no listener is specified, all listeners will be removed.
+
 
 ---
 
