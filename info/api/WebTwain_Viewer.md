@@ -173,11 +173,11 @@ createCustomElement(
 
  `location`: Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
 
- `ifFull`: The default value is `false`, that is, the created CustomElement is displayed according to the set area. If set to true, the main viewer will be covered by the CustomElement.
+ `ifFull`: The default value is `false`, that is, the created [`CustomElement`]({{site.info}}api/Interfaces.html#customelement) is displayed according to the set area. If set to true, the main viewer will be covered by the [`CustomElement`]({{site.info}}api/Interfaces.html#customelement).
 
 **Arguments**
 
-`CustomElement`: Please refer to [CustomElement]({{site.info}}api/Interfaces.html#customelement).
+`CustomElement`: Please refer to [`CustomElement`]({{site.info}}api/Interfaces.html#customelement).
 
 **Availability**
 
@@ -222,7 +222,7 @@ Only one CustomElement object can be created. If you try creating another one, y
 
 If the width defined by the CustomElement object exceeds the width of the main viewer, the width of the main viewer is used.
 
-The method [ `unbind()` ](#unbind) will dispose all created CustomElement objects.
+The method [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind) will dispose all created CustomElement objects.
 
 ---
 
@@ -240,11 +240,11 @@ createImageEditor(
 
 **Parameters**
 
-`editorSettings`: Configure the object. Please refer to [EditorSettings]({{site.info}}api/Interfaces.html#editorsettings).
+`editorSettings`: Configure the object. Please refer to [`EditorSettings`]({{site.info}}api/Interfaces.html#editorsettings).
 
 **Arguments**
 
-`ImageEditor`: Please refer to [ImageEditor]({{site.info}}api/Interfaces.html#imageeditor).
+`ImageEditor`: Please refer to [`ImageEditor`]({{site.info}}api/Interfaces.html#imageeditor).
 
 **Availability**
 
@@ -523,7 +523,7 @@ Replace the previous `ShowImageEditor()` method.
 
 Only one ImageEditor object can be created. If you try creating it again, you'll get the error 'An ImageEditor already exists.' and the existing ImageEditor object will be returned.
 
-The method [ `unbind()` ](#unbind) will dispose all created ImageEditor objects.
+The method [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind) will dispose all created ImageEditor objects.
 
 ---
 
@@ -541,11 +541,11 @@ createThumbnailViewer(
 
 **Parameters**
 
-`thumbnailViewerSettings`: Configure the ThumbnailViewer object. Please refer to [ThumbnailViewerSettings]({{site.info}}api/Interfaces.html#thumbnailviewersettings).
+`thumbnailViewerSettings`: Configure the ThumbnailViewer object. Please refer to [`ThumbnailViewerSettings`]({{site.info}}api/Interfaces.html#thumbnailviewersettings).
 
 **Arguments**
 
-`ThumbnailViewer`: Please refer to [ThumbnailViewer]({{site.info}}api/Interfaces.html#thumbnailviewer).
+`ThumbnailViewer`: Please refer to [`ThumbnailViewer`]({{site.info}}api/Interfaces.html#thumbnailviewer).
 
 **Availability**
 
@@ -611,7 +611,7 @@ thumbnail.show();
 
 **Usage notes**
 
-For the CheckboxSettings and PageNumberSettings interface, please refer to the APIs [updateCheckboxStyle]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle) and [updatePageNumberStyle]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle).
+For the CheckboxSettings and PageNumberSettings interface, please refer to the APIs [`updateCheckboxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatecheckboxstyle) and [`updatePageNumberStyle()`]({{site.info}}api/WebTwain_Viewer.html#updatepagenumberstyle).
 
 The following table shows the events available to a ThumbnailViewer object.
 
@@ -634,7 +634,7 @@ By default, scrolling the scroll bar on Thumbnail does not trigger the `topchang
 
 Only one ThumbnailViewer object can be created. If you try creating it again, you will get the error 'A ThumbnailViewer already exists.' and the existing ThumbnailViewer object will be returned.
 
-The method [ `unbind()` ](#unbind) will dispose all created ThumbnailViewer objects.
+The method [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind) will dispose all created ThumbnailViewer objects.
 
 ---
 
@@ -728,7 +728,7 @@ DWObject.Viewer.fitWindow();
 
 **Usage notes**
 
-This API only works if the view mode of the viewer is set to -1 by -1 ([ `singlePageMode` ](#singlepagemode) is true).
+This API only works if the view mode of the viewer is set to -1 by -1 ([`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode) is true).
 
 The allowed values are
 
@@ -1189,7 +1189,7 @@ setSelectedAreas(
 
 **Parameters**
 
-`areas`: Specify the rectangular area(s). Please refer to [Area]({{site.info}}api/Interfaces.html#area).
+`areas`: Specify the rectangular area(s). Please refer to [`Area`]({{site.info}}api/Interfaces.html#area).
 
 **Availability**
 
@@ -1219,7 +1219,7 @@ setSelectedAreas(
 
 The coordinates are based on the size of the original page (instead of the size of the viewer).
 
-This method only works when [ `cursor` ](#cursor) is set to "crosshair".
+This method only works when [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cursor) is set to "crosshair".
 
 **Example**
 
@@ -1287,7 +1287,7 @@ setViewMode(
 
 **Usage notes**
 
-Setting the view mode as -1 by -1 is equivalent to setting [ `singlePageMode` ](#singlepagemode) to true.
+Setting the view mode as -1 by -1 is equivalent to setting [`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode) to true.
 
 
 **Example**
@@ -1876,7 +1876,7 @@ pageMargin: number | string;
 
 **Usage Notes**
 
-The page margin is only effective when the view mode is not -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
+The page margin is only effective when the view mode is not -1 \* -1 (in other words, [`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode) is `false` ).
 
 **Example**
 
@@ -1889,7 +1889,9 @@ DWObject.Viewer.pageMargin = 10;
 ## selectedAreaBorderColor
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
+> This API has been deprecated as of release 18.4. 
+
+Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
 
 Set the border color of the selected area. Also applies to the selection box on the video opened by the method `showVideo`.
 
@@ -2017,7 +2019,7 @@ selectedPageBorder: string;
 
 **Usage Notes**
 
-This API is only effective when the view mode is not -1 \* -1 (in other words, [ `singlePageMode` ](#singlepagemode) is `false` ).
+This API is only effective when the view mode is not -1 \* -1 (in other words, [`singlePageMode`]({{site.info}}api/WebTwain_Viewer.html#singlepagemode) is `false` ).
 
 The default value is "1px solid rgb(125, 162, 206)". Now you can specify the border by CSS. Read more on the [border shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
 
@@ -2065,7 +2067,7 @@ selectionRectAspectRatio: number | string;
 
 **Usage Notes**
 
-This API is only effective when drawing manually (it won't work if the selection is done with the API [`setSelectedAreas()`](#setselectedareas)).
+This API is only effective when drawing manually (it won't work if the selection is done with the API [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedareas)).
 
 **Example**
 
@@ -2141,7 +2143,7 @@ updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): 
 ```
 
 **Parameters**
-`selectionBoxStyleSettings`: Selection box settings. Please refer to [SelectionBoxStyleSettings]({{site.info}}api/Interfaces.html#selectionboxstylesettings) for details.
+`selectionBoxStyleSettings`: Selection box settings. Please refer to [`SelectionBoxStyleSettings`]({{site.info}}api/Interfaces.html#selectionboxstylesettings) for details.
 
 **Availability**
 
@@ -2343,7 +2345,7 @@ updateCheckboxStyle(checkboxSettings?: CheckboxSettings): boolean;
 
 **Parameters**
 
-`checkboxSettings`: Settings for checkboxes. Please refer to [CheckboxSettings]({{site.info}}api/Interfaces.html#checkboxsettings).
+`checkboxSettings`: Settings for checkboxes. Please refer to [`CheckboxSettings`]({{site.info}}api/Interfaces.html#checkboxsettings).
 
 **Availability**
 
@@ -2383,7 +2385,7 @@ updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): boolean;
 
 **Parameters**
 
-`pageNumberSettings`: Settings for page numbers. Please refer to [PageNumberSettings]({{site.info}}api/Interfaces.html#pagenumbersettings).
+`pageNumberSettings`: Settings for page numbers. Please refer to [`PageNumberSettings`]({{site.info}}api/Interfaces.html#pagenumbersettings).
 
 **Availability**
 
@@ -2450,7 +2452,7 @@ selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 
 The default value is 0 (Single). Even if checkbox is used, only one image can be selected if the selection mode is set to 0 (Single).
 
-Please refer to [EnumDWT_SelectionMode]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_selectionmode).
+Please refer to [`EnumDWT_SelectionMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_selectionmode).
 
 **Example**
 
@@ -2537,8 +2539,8 @@ on(
 `eventName`: Specify the event. Value: click, contextmenu, dblclick, mousemove, mousedown, mouseup, mouseout, mouseover, keydown, keyup.
 
 `callback`: Specify the callback.
-- `dwtEvent`: The viewer-specific event object. Please refer to [ViewerEvent]({{site.info}}api/Interfaces.html#viewerevent) and <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent" target="_blank">KeyboardEvent</a>.
-- `domEvent`: The original mouse event object. Please refer to <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent" target="_blank">MouseEvent</a>.
+- `dwtEvent`: The viewer-specific event object. Please refer to [`ViewerEvent`]({{site.info}}api/Interfaces.html#viewerevent) and <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent" target="_blank">`KeyboardEvent`</a>.
+- `domEvent`: The original mouse event object. Please refer to <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent" target="_blank">`MouseEvent`</a>.
 
 **Availability**
 
@@ -2623,7 +2625,7 @@ This event is triggered when user selects an area (draws a rectangle) or move a 
 
 ```typescript
 on('pageAreaSelected',
-    (index: number, rect: rect)=> void
+    (index: number, rect: rect[])=> void
 ): void;
 ```
 
@@ -2631,7 +2633,7 @@ on('pageAreaSelected',
 
 `index`: The index of the current page.
 
-`rect`: Some attribute values of the selected area. Please refer to [rect]({{site.info}}api/Interfaces.html#rect).
+`rect`: Some attribute values of the selected area. Please refer to [`rect`]({{site.info}}api/Interfaces.html#rect).
 
 **Availability**
 

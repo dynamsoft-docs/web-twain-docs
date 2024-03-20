@@ -67,31 +67,31 @@ You can use the `Viewer` in the following ways
 
 ### Navigate through all images
 
-You can use the mouse, the arrow keys or the APIs [ `first()` ]({{site.info}}api/WebTwain_Viewer.html#first), [ `next()` ]({{site.info}}api/WebTwain_Viewer.html#next), [ `previous()` ]({{site.info}}api/WebTwain_Viewer.html#previous), [ `last()` ]({{site.info}}api/WebTwain_Viewer.html#last) and [ `gotoPage()` ]({{site.info}}api/WebTwain_Viewer.html#gotopage) to navigate through the images in buffer.
+You can use the mouse, the arrow keys or the APIs [`first()`]({{site.info}}api/WebTwain_Viewer.html#first), [`next()`]({{site.info}}api/WebTwain_Viewer.html#next), [`previous()`]({{site.info}}api/WebTwain_Viewer.html#previous), [ `last()` ]({{site.info}}api/WebTwain_Viewer.html#last) and [`gotoPage()`]({{site.info}}api/WebTwain_Viewer.html#gotopage) to navigate through the images in buffer.
 
 ### Show one or multiple images in one view
 
-You can change the view mode to show one or multiple images. The API is [ `setViewMode()` ]({{site.info}}api/WebTwain_Viewer.html#setviewmode).
+You can change the view mode to show one or multiple images. The API is [`setViewMode()`]({{site.info}}api/WebTwain_Viewer.html#setviewmode).
 
 ### Fit one image to the view
 
-The image in the viewer can fit to the width or height of the viewer or both. The API is [ `fitWindow()` ]({{site.info}}api/WebTwain_Viewer.html#fitwindow).
+The image in the viewer can fit to the width or height of the viewer or both. The API is [`fitWindow()`]({{site.info}}api/WebTwain_Viewer.html#fitwindow).
 
 ### Show the image in its actual size
 
-You can show the image in its actual size by setting [ `zoom` ]({{site.info}}api/WebTwain_Viewer.html#zoom) to 1. This is only supported when the view mode is set to -1 x -1.
+You can show the image in its actual size by setting [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom) to 1. This is only supported when the view mode is set to -1 x -1.
 
 ### Zoom in to see more details of an image
 
-To do this, you just set a bigger or smaller value to  [ `zoom` ]({{site.info}}api/WebTwain_Viewer.html#zoom). This is only supported when the view mode is set to -1 x -1.
+To do this, you just set a bigger or smaller value to  [`zoom`]({{site.info}}api/WebTwain_Viewer.html#zoom). This is only supported when the view mode is set to -1 x -1.
 
 ### Select an area
 
-You can use the API [ `setSelectedAreas()` ]({{site.info}}api/WebTwain_Viewer.html#setselectedAreas).
+You can use the API [`setSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#setselectedAreas).
 
 ## Unbind the Viewer
 
-You can call the method [ `unbind()` ]({{site.info}}api/WebTwain_Viewer.html#unbind) on a `WebTwain` instance to unbind and destroy its viewer.
+You can call the method [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind) on a `WebTwain` instance to unbind and destroy its viewer.
 
 ## The Image Editor
 

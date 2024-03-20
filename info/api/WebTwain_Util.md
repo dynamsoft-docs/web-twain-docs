@@ -93,56 +93,14 @@ isUsingActiveX(): boolean;
 
 ---
 
-## RegisterEvent
+## RegisterEvent()
 
 Specify an event listener for the specified built-in event.
 
 **Syntax**
 
 ```typescript
-RegisterEvent(name: string, callback: () => void): boolean;
-```
-
-**Parameters**
-
-`name`: Specify the event.
-
-`callback`: The event listener.
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">v9.2+ </td>
-<td align="center">v10.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v11.0+ </td>
-<td align="center">v12.1+ </td>
-</tr>
-
-</table>
-</div>
-
----
-
-## UnregisterEvent
-
-Remove an event listener from the specified built-in event.
-
-**Syntax**
-
-```typescript
-UnregisterEvent(name: string, callback: () => void): boolean;
+RegisterEvent(name: string, callback: (...arg: any[]) => void): boolean;
 ```
 
 **Parameters**
@@ -181,7 +139,49 @@ There can only be one listener for each built-in event. If you call `RegisterEve
 
 ---
 
-## SetLanguage
+## UnregisterEvent()
+
+Remove an event listener from the specified built-in event.
+
+**Syntax**
+
+```typescript
+UnregisterEvent(name: string, callback?: (...arg: any[]) => void): boolean;
+```
+
+**Parameters**
+
+`name`: Specify the event.
+
+`callback`: The event listener.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v9.2+ </td>
+<td align="center">v10.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v11.0+ </td>
+<td align="center">v12.1+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## SetLanguage()
 
 Set the language for the authorization dialogs.
 
@@ -195,7 +195,7 @@ SetLanguage(
 
 **Parameters**
 
-`language`: Specify the language. Please refer to [EnumDWT_Language]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_language)
+`language`: Specify the language. Please refer to [`EnumDWT_Language`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_language).
 
 **Availability**
 
@@ -227,9 +227,9 @@ The language set with this method is only for the built-in security dialogs whic
 
 ---
 
-## GenerateURLForUploadData
+## GenerateURLForUploadData()
 
-Generate a URL to be used by a FileUpoader instance to fetch the data to upload.
+Generate a URL to be used by a [FileUpoader]({{site.info}}api/Dynamsoft_FileUploader.html) instance to fetch the data to upload.
 
 **Syntax**
 
@@ -253,12 +253,12 @@ GenerateURLForUploadData(
 
 `indices`: Specify the images to upload.
 
-`type`: Specify the file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+`type`: Specify the file type. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 - `resultURL`: The generated URL.
 - `indices`: The indices of the images.
-- `type`: The file type. Please refer to [EnumDWT_ImageType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
+- `type`: The file type. Please refer to [`EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype).
 
 `failureCallback`: A callback function that is executed if the request fails.
 - `errorCode`: The error code.
@@ -287,6 +287,34 @@ GenerateURLForUploadData(
 
 </table>
 </div>
+
+**Example**
+
+```javascript
+var dsUploadManager;
+Dynamsoft.FileUploader.Init(
+  "",
+  function (obj) {
+    dsUploadManager = obj;
+  },
+  function () {}
+);
+DWObject.GenerateURLForUploadData(
+  [0, 1],
+  EnumDWT_ImageType.IT_PDF,
+  function (resultURL, newIndices, enumImageType) {
+    var serverUrl = "https://yoursite/yourserverurl.aspx";
+    var jobtemp = dsUploadManager.CreateJob();
+    jobtemp.ServerUrl = serverUrl;
+    jobtemp.SourceValue.Add(resultURL, "uploadedFile.pdf");
+    dsUploadManager.Run(jobtemp);
+  },
+  function (
+    erroCode,
+    errorString
+  ) {}
+);
+```
 
 ---
 
@@ -326,7 +354,7 @@ readonly ErrorCode: number;
 
 **Usage notes**
 
-The `ErrorCode` and `ErrorString` always reflect the result of the last API call. So make sure you read them in time.
+The [`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode) and [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring) always reflect the result of the last API call. So make sure you read them in time.
 
 ---
 
@@ -366,7 +394,7 @@ readonly ErrorString: string;
 
 **Usage notes**
 
-The `ErrorCode` and `ErrorString` always reflect the result of the last API call. So make sure you read them in time.
+The [`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode) and [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring) always reflect the result of the last API call. So make sure you read them in time.
 
 ---
 
@@ -406,7 +434,12 @@ LogLevel: number;
 
 **Usage notes**
 
-The logs for the Dynamic Web TWAIN library are saved in the directory `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17\log\`. By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines. Please set it back to 0 if you don't need to record log as it will slow down the speed.
+The logs for the Dynamic Web TWAIN library are saved in the directory:
+  - Windows `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`
+  - macOS, `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`
+  - Linux, `/opt/dynamsoft/DynamsoftService/log`
+
+By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines. Please set it back to 0 if you don't need to record log as it will slow down the speed.
 
 ---
 
@@ -446,7 +479,7 @@ readonly Manufacturer: string;
 
 **Usage notes**
 
-`Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
+[`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer), [`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily), [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname) and [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo) together form the identity string of the Dynamic Web TWAIN library.
 
 ---
 
@@ -486,7 +519,7 @@ readonly ProductFamily: string;
 
 **Usage notes**
 
-`Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
+[`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer), [`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily), [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname) and [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo) together form the identity string of the Dynamic Web TWAIN library.
 
 ---
 
@@ -526,7 +559,7 @@ readonly ProductName: string;
 
 **Usage notes**
 
-`Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
+[`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer), [`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily), [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname) and [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo) together form the identity string of the Dynamic Web TWAIN library.
 
 ---
 
@@ -566,7 +599,7 @@ readonly VersionInfo: string;
 
 **Usage notes**
 
-`Manufacturer` , `ProductFamily` , `ProductName` and `VersionInfo` together form the identity string of the Dynamic Web TWAIN library.
+[`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer), [`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily), [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname) and [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo) together form the identity string of the Dynamic Web TWAIN library.
 
 
 

@@ -687,10 +687,15 @@ Return the skew angle of the specified image.
 
 ```typescript
 GetSkewAngle(
+    index: number
+): number;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+GetSkewAngle(
     index: number,
-    successCallback?: (angle: number) => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): number | void;
+    successCallback: (angle: number) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -742,10 +747,19 @@ GetSkewAngleEx(
     left: number,
     top: number,
     right: number,
+    bottom: number
+): number;
+
+// Call this API asynchronously to avoid blocking the browser's main thread 
+GetSkewAngleEx(
+    index: number,
+    left: number,
+    top: number,
+    right: number,
     bottom: number,
-    successCallback?: (angle: number) => void,
-    failureCallback?: (errorCode: number, errorString: string) => void
-): number | void;
+    successCallback: (angle: number) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
@@ -934,7 +948,9 @@ Return the internal URL of the specified image.
 **Syntax**
 
 ```typescript
-GetImagePartURL(index: number, width?: number, height?: number): string;
+GetImagePartURL(index: number): string;
+
+GetImagePartURL(index: number, width: number, height: number): string;
 ```
 
 **Parameters**
@@ -990,7 +1006,9 @@ Return the direct URL of the specified image.
 **Syntax**
 
 ```typescript
-GetImageURL(index: number, width?: number, height?: number): string;
+GetImageURL(index: number): string;
+
+GetImageURL(index: number, width: number, height: number): string;
 ```
 
 **Parameters**
@@ -1743,21 +1761,20 @@ Check whether the specified image is blank.
 
 ```typescript
 IsBlankImageAsync(index: number, 
-  {options?: {
+  options?: {
     minBlockHeight?: number,
     maxBlockHeight?: number,
     }
-  }
-): Promise < boolean > ;
+): Promise<boolean> ;
 ```
 
 **Parameters**
 
 `index`: Specify the image in buffer to be analyzed.
 
-`minBlockHeight`: Minimum height of mark to be detected.
+`minBlockHeight`: Minimum height of mark to be detected. Default value: 10
 
-`maxBlockHeight`: Maximum height of mark to be detected.
+`maxBlockHeight`: Maximum height of mark to be detected. Default value: 30
 
 **Availability**
 
