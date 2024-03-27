@@ -1560,7 +1560,9 @@ HTTPUpload(
 
 `dataFormat`: Whether to upload the file as binary or a base64 string. Please refer to [`EnumDWT_UploadDataFormat`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat).
 
-`fileName`: The file name.
+`fileName`: The file name. If `fileName` specifies the extension of the file additionally, 
+ - if the extension is not the same as the format of the file which is specified by `type`, the extra extension will be added to the file name. For example, `fileName` is set to `"test.jpg"`, and `type` is `Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF`, the final file name would be `test.jpg.pdf` and the file format is PDF.
+ - if the extension is the same as the format of the file which is specified by `type`, the file name equals to the string which is specified by `fileName`. For example, `fileName` is set to `"test.pdf"`, and `type` is `Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF`, the final file name would be `test.pdf` and the file format is PDF.
 
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
