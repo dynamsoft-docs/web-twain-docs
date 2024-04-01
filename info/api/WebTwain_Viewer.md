@@ -48,6 +48,7 @@ needGenerateH3Content: true
 | |
 | :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
 | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected)| [`pageRendered`](#pagerendered) | [`resize`](#resize) |
+
 ---
 
 ## bind()
