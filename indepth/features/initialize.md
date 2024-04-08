@@ -133,7 +133,7 @@ This method manually creates a `WebTwain` instance without a default built-in vi
 CreateDWTObjectEx(
     dwtInitialConfig: DWTInitialConfig,
     successCallBack: (DWObject: WebTwain) => void,
-    failureCallBack: (errorString: string) => void
+    failureCallBack: ({code: number, message: string}) => void
 ): void;
 ```
 
