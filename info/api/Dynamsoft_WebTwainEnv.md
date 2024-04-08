@@ -64,7 +64,7 @@ interface Dynamsoft.DWT {
     CreateDWTObjectEx(
         dwtInitialConfig: DWTInitialConfig,                 
         asyncSuccessFunc: (DWObject: WebTwain) => {},                   
-        asyncFailureFunc: (errorString: string) => {}
+        asyncFailureFunc: ({code: number, message: string}) => {}
     ): void;
     DeleteDWTObject(Id?: string): boolean;
     GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
