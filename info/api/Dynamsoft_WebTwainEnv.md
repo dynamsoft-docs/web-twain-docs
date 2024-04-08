@@ -278,7 +278,7 @@ Creates a new UI-less `WebTwain` instance. This instance will be uniquely identi
 CreateDWTObjectEx(
   dwtInitialConfig: DWTInitialConfig, 
   successCallBack: (DWObject: WebTwain) => void, 
-  failureCallBack: (errorString: string) => void
+  failureCallBack: ({code: number, message: string}) => void
 ): boolean;
 ```
 
@@ -290,7 +290,8 @@ CreateDWTObjectEx(
 - `DWObject`: The `WebTwain` instance.
 
 `failureCallback`: A callback function that is executed if the request fails.
-- `errorString`: The error string.
+- `code`: The error code.
+- `message`: The error string.
 
 **Availability**
 
