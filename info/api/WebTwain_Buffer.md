@@ -313,11 +313,23 @@ Filter images by the specified tag.
 
 ```typescript
 FilterImagesByTag(tag: string): boolean;
+
+FilterImagesByTag(
+    tag: string,
+    successCallback: () => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
 
 `tag`: The tag used as the filter. If nothing or an empty string is used, the filter is cleared.
+
+`successCallback`: A callback function that is executed if the request succeeds.
+
+`failureCallback`: A callback function that is executed if the request fails.
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Availability**
 
