@@ -1011,7 +1011,7 @@ SetOpenSourceTimeout(duration: number): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported</td>
+<td align="center">v12.1+</td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
 </tr>
