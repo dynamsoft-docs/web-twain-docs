@@ -1918,9 +1918,7 @@ RegisterEvent('OnBufferChanged',
 
 **Parameters**
 
-`bufferChangeInfo`: Details about the buffer change. 
-
-`TagInfo`: Please refer to [`BufferChangeInfo`]({{site.info}}api/Interfaces.html#bufferchangeinfo).
+`bufferChangeInfo`: Details about the buffer change. Please refer to [`BufferChangeInfo`]({{site.info}}api/Interfaces.html#bufferchangeinfo).
 
 **Availability**
 
