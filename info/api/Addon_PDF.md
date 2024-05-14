@@ -294,7 +294,7 @@ DWObject.Addon.PDF.SetReaderOptions({
 ## SetPassword()
 
 <div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. Please [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
+> This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) function.
 
 Set the password for reading encrypted PDF files.
 
