@@ -11,6 +11,87 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.5 (05/14/2024)
+
+### New features
+
+- [Save the encrypted image caches in local Dynamsoft Service folder]({{site.indepth}}features/buffer.html#save-the-encrypted-image-caches-in-local-dynamsoft-service-folder)
+  
+  In certain scenarios, there may be requirements to store encrypted image caches on a local disk for temporary data storage or backup purposes. Dynamic Web TWAIN introduces a new feature that facilitates developers in securely storing image caches in encrypted form within the Dynamsoft Service folder.
+
+- [Access-Control-Allow-Origin for Dynamsoft Service]({{site.indepth}}deployment/service.html#access-control-allow-origin)
+
+  A new security feature configures Dynamsoft Service to respond only to requests from specified origins.
+
+- [Generate the encrypted PDF files]({{site.indepth}}features/pdf.html#pdf-save-settings)
+
+  Supports the generation of encrypted PDF files.
+
+### New APIs
+
+- Global
+
+  | APIs                                                         | Description                                                  |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | [`IfCheckCORS`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifcheckcors) | Whether to check CORS issue in detail.  |
+
+- Buffer
+
+  | APIs                                                         | Description                                                  |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | [`updateImage()`]({{site.info}}api/WebTwain_Buffer.html#updateimage) | Update the specified image with a new image.                 |
+  | [`OnDiskExceedLimit`]({{site.info}}api/WebTwain_Buffer.html#ondiskexceedlimit) | A built-in callback triggered when disk cache exceeds the limit. |
+
+- Input/Output
+
+  | APIs                                                         | Description                                                  |
+  | ------------------------------------------------------------ | ------------------------------------------------------------ |
+  | [`createLocalStorage()`]({{site.info}}api/WebTwain_IO.html#createlocalstorage) | Create a storage folder locally to save the cache of encrypted images. |
+  | [`localStorageExist()`]({{site.info}}api/WebTwain_IO.html#localstorageexist) | Determine whether the storage folder exists or not.          |
+  | [`saveToLocalStorage()`]({{site.info}}api/WebTwain_IO.html#savetolocalstorage) | Save encrypted image caches to the specified storage folder. |
+  | [`loadFromLocalStorage()`]({{site.info}}api/WebTwain_IO.html#loadfromlocalstorage) | Load image from the specified storage folder.                |
+  | [`removeLocalStorage()`]({{site.info}}api/WebTwain_IO.html#removelocalstorage) | Remove the specified storage folder.                         |
+  | [`httpUploadBlob()`]({{site.info}}api/WebTwain_IO.html#httpuploadblob) | Upload images which are in blob format.                      |
+  | [`saveBlob()`]({{site.info}}api/WebTwain_IO.html#saveblob)   | Save image which are in blob format.                         |
+  | [`IfSortBySelectionOrder`]({{site.info}}api/WebTwain_IO.html#ifsortbyselectionorder) | Whether to load the files by the selection order when load files by open file dialog. |
+
+### Improvements
+
+- Updated third-party libraries to enhance security.
+- Added an optional parameter `capabilities` to the method [`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) for getting specified capabilities.
+- Added `modifyId` to the interface [`BufferChangeInfo`]({{site.info}}api/interfaces.html#bufferchangeinfo) for returning the `imageId` of the modified image when [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged) is triggered.
+- Added `password` to the interface [`PDFWSettings`]({{site.info}}api/interfaces.html#pdfwsettings) for configuring the password of the PDF file to save when [`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup) is called.
+- Added data type `Device` to the parameter `scanner` in the interface [`ScanSetup`]({{site.info}}api/interfaces.html#scansetup) for supporting the device object when [`startScan()`]({{site.info}}api/WebTwain_Acquire.html#startscan) is used.
+- Optimized the quality of the deskewed image in the built-in ImageEditor.
+
+### Changes
+
+- Changed the design of the default Dynamsoft Service installation pop-up.
+
+  ![Installation changes]({{site.assets}}imgs/installation-changes.png)
+
+- Changed the data type of `imageId` from `number` to `string`. The affected APIs are as follows: 
+
+  - Methods: [`ImageIDToIndex()`]({{site.info}}api/WebTwain_Buffer.html#imageidtoindex), [`IndexToImageID()`]({{site.info}}api/WebTwain_Buffer.html#indextoimageid)
+  - Interfaces:
+
+    | Interfaces                                                   | Related Methods or Events                                    |
+    | ------------------------------------------------------------ | ------------------------------------------------------------ |
+    | [`TagInfo`]({{site.info}}api/interfaces.html#taginfo)        | [`GetTagList()`]({{site.info}}api/WebTwain_Buffer.html#gettaglist) |
+    | [`DocumentInfo`]({{site.info}}api/interfaces.html#documentinfo) | [`GetDocumentInfoList()`]({{site.info}}api/WebTwain_Buffer.html#getdocumentinfolist) |
+    | [`OutputInfo`]({{site.info}}api/interfaces.html#outputinfo)  | [`OnPostTransferAsync`]({{site.info}}api/WebTwain_Acquire.html#onposttransferasync) |
+    | [`BufferChangeInfo`]({{site.info}}api/interfaces.html#bufferchangeinfo) | [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged) |
+
+### Bug fixes
+
+- Resolved a bug where a predominantly white image turned black when changing its bit depth to 1 or converting it to B&W by fixing a threshold issue in the methods [`ChangeBitDepth()`]({{site.info}}api/WebTwain_Edit.html#changebitdepth) and [`ConvertToBW()`]({{site.info}}api/WebTwain_Edit.html#converttobw).
+- Resolved the file compatibility issue when loading PDF files via drag and drop.
+- Resolved a bug where [`Dynamsoft.DWT.Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload) was still called even when the web page reload was cancelled.
+
+### Barcode Reader Addon
+
+- Updated to version 9.6.40.
+
 ## 18.4.2 (12/05/2023)
 
 - Security update for Dynamsoft Service.
@@ -159,7 +240,7 @@ The following table gives a quick comparison between the two editions.
 | Interact with scanners from browsers on Windows, macOS and Linux  | Yes                                                                  | Yes                                                |
 | Interact with scanners from browsers on Android                   | This will be supported in the next release.                          | Yes                                                |
 | Interact with mobile cameras on iOS and Android devices           | No                                                                   | Yes                                                |
-| Barcode Reader addon                                              | Windows platform for now; macOS and Linux support will be added soon | Cross-platform support on all desktops and mobile  |
+| Barcode Reader addon                                              | Windows platform for now                                             | Cross-platform support on all desktops and mobile  |
 | Remote Scan                                                       | Windows/macOS/Linux support                                          | Cross-platform support                             |
 
 NOTE: 

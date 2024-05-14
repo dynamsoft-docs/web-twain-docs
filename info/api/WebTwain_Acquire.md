@@ -24,52 +24,55 @@ permalink: /info/api/WebTwain_Acquire.html
 
 **Methods**
 
-|                                                   |
-| :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
-| [`GetSourceNameItems()`](#getsourcenameitems)     | [`GetSourceNames()`](#getsourcenames)       | [`GetSourceNamesAsync()`](#getsourcenamesasync) | [`SelectSource()`](#selectsource)                 |
-| [`SelectSourceAsync()`](#selectsourceasync) | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) | [`SetOpenSourceTimeout()`](#setopensourcetimeout) |
-| [`OpenSource()`](#opensource)               | [`OpenSourceAsync()`](#opensourceasync)         | [`EnableSourceUI()`](#enablesourceui)                     | [`EnableSource()`](#enablesource)                 |
-| [`AcquireImage()`](#acquireimage)           | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       | [`CloseSource()`](#closesource)                   |
-| [`CloseSourceAsync()`](#closesourceasync)   | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)   | [`SelectDeviceAsync()`](#selectdeviceasync)                   |
-| [`AcquireImageAsync()`](#acquireimageasync)   |
+|                                                   |                                                 |                                                           |                                             |
+| ------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------- | ------------------------------------------- |
+| [`GetSourceNameItems()`](#getsourcenameitems)     | [`GetSourceNames()`](#getsourcenames)           | [`GetSourceNamesAsync()`](#getsourcenamesasync)           | [`SelectSource()`](#selectsource)           |
+| [`SelectSourceAsync()`](#selectsourceasync)       | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) | [`OpenSource()`](#opensource)               |
+| [`OpenSourceAsync()`](#opensourceasync)           | [`EnableSourceUI()`](#enablesourceui)           | [`EnableSource()`](#enablesource)                         | [`AcquireImage()`](#acquireimage)           |
+| [`AcquireImageAsync()`](#acquireimageasync)       | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       | [`CloseSource()`](#closesource)             |
+| [`CloseSourceAsync()`](#closesourceasync)         | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)                   | [`SelectDeviceAsync()`](#selectdeviceasync) |
+| [`SetOpenSourceTimeout()`](#setopensourcetimeout) |
 
 **Properties**
 
-|                                           |
-| :---------------------------------------- | :------------------------------------------------------------ | ------------------------------------- | ------------------------------------- |
+|                                           |                                                              |                                       |                                       |
+| ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------- | ------------------------------------- |
 | [`CurrentSourceName`](#currentsourcename) | [`IfDisableSourceAfterAcquire`](#ifdisablesourceafteracquire) | [`IfDuplexEnabled`](#ifduplexenabled) | [`IfFeederEnabled`](#iffeederenabled) |
-| [`PageSize`](#pagesize)                   | [`PixelType`](#pixeltype)                                     | [`Resolution`](#resolution)           | [`SourceCount`](#sourcecount)         |
+| [`PageSize`](#pagesize)                   | [`PixelType`](#pixeltype)                                    | [`Resolution`](#resolution)           | [`SourceCount`](#sourcecount)         |
 
 **Events**
 
-|                                             |
-| :------------------------------------------ | :---------------------------------- | --------------------------------------------- |
-| [`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer) | [`OnPostTransferAsync`](#onposttransferasync) |
-| [`OnPreAllTransfers`](#onprealltransfers)   | [`OnPreTransfer`](#onpretransfer)   |
+|                                             |                                     |                                               |                                           |
+| ------------------------------------------- | ----------------------------------- | --------------------------------------------- | ----------------------------------------- |
+| [`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer) | [`OnPostTransferAsync`](#onposttransferasync) | [`OnPreAllTransfers`](#onprealltransfers) |
+| [`OnPreTransfer`](#onpretransfer)           |                                     |                                               |                                           |
+
+
 
 **2. The following APIs are compatible with TWAIN and ICA** 
 
 **Methods**
 
-|                                         |
-| :-------------------------------------- | :-------------------------------------- |
+|                                         |                                         |
+| --------------------------------------- | --------------------------------------- |
 | [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
 
 **3. The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)** 
 
 **Methods**
 
-|                                                                                   |
-| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+|                                             |                                                       |                                                             |                                                         |
+| ------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------- |
 | [`OpenSourceManager()`](#opensourcemanager) | [`OpenSourceManagerAsync()`](#opensourcemanagerasync) | [`CloseSourceManager()`](#closesourcemanager)               | [`CloseSourceManagerAsync()`](#closesourcemanagerasync) |
 | [`GetCustomDSData()`](#getcustomdsdata)     | [`GetCustomDSDataEx()`](#getcustomdsdataex)           | [`CancelAllPendingTransfers()`](#cancelallpendingtransfers) | [`FeedPage()`](#feedpage)                               |
 | [`ResetImageLayout()`](#resetimagelayout)   | [`RewindPage()`](#rewindpage)                         | [`SetCustomDSData()`](#setcustomdsdata)                     | [`SetCustomDSDataEx()`](#setcustomdsdataex)             |
-| [`SetFileXferInfo()`](#setfilexferinfo)     | [`SetImageLayout()`](#setimagelayout)                 |
+| [`SetFileXferInfo()`](#setfilexferinfo)     | [`SetImageLayout()`](#setimagelayout)                 |                                |                                                         |
+
 
 **Properties**
 
-|                                                     |
-| :-------------------------------------------------- | :---------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------- |
+|                                                     |                                                             |                                                     |                                                           |
+| --------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------- |
 | [`BitDepth`](#bitdepth)                             | [`Brightness`](#brightness)                                 | [`Contrast`](#contrast)                             | [`DataSourceStatus`](#datasourcestatus)                   |
 | [`DefaultSourceName`](#defaultsourcename)           | [`Duplex`](#duplex)                                         | [`IfAutoBright`](#ifautobright)                     | [`IfAutoDiscardBlankpages`](#ifautodiscardblankpages)     |
 | [`IfAutoFeed`](#ifautofeed)                         | [`IfAutomaticBorderDetection`](#ifautomaticborderdetection) | [`IfAutomaticDeskew`](#ifautomaticdeskew)           | [`IfAutoScan`](#ifautoscan)                               |
@@ -78,12 +81,12 @@ permalink: /info/api/WebTwain_Acquire.html
 | [`ImageLayoutFrameBottom`](#imagelayoutframebottom) | [`ImageLayoutFrameLeft`](#imagelayoutframeleft)             | [`ImageLayoutFrameNumber`](#imagelayoutframenumber) | [`ImageLayoutFrameRight`](#imagelayoutframeright)         |
 | [`ImageLayoutFrameTop`](#imagelayoutframetop)       | [`ImageLayoutPageNumber`](#imagelayoutpagenumber)           | [`ImagePixelType`](#imagepixeltype)                 | [`MagData`](#magdata)                                     |
 | [`MagType`](#magtype)                               | [`PendingXfers`](#pendingxfers)                             | [`PixelFlavor`](#pixelflavor)                       | [`TransferMode`](#transfermode)                           |
-| [`Unit`](#unit)                                     | [`XferCount`](#xfercount)                                   |[`IfAppendImage`](#ifappendimage) |
+| [`Unit`](#unit)                                     | [`XferCount`](#xfercount)                                   | [`IfAppendImage`](#ifappendimage)                   |                                                           |
 
 **Events**
 
 |                                       |
-| :------------------------------------ |
+| ------------------------------------- |
 | [`OnSourceUIClose`](#onsourceuiclose) |
 
 <div class="multi-panel-end">
@@ -94,15 +97,16 @@ permalink: /info/api/WebTwain_Acquire.html
 
 **Methods**
 
-|                                                     |
-| :-------------------------------------------------- | :---------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------- |
-| [`SelectSourceAsync()`](#selectsourceasync)  | [`CloseSourceAsync()`](#closesourceasync)  | [`GetDevicesAsync()`](#getdevicesasync)   | [`SelectDeviceAsync()`](#selectdeviceasync)                   |
-| [`AcquireImageAsync()`](#acquireimageasync)   |[`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
+|                                             |                                           |                                         |                                             |
+| ------------------------------------------- | ----------------------------------------- | --------------------------------------- | ------------------------------------------- |
+| [`SelectSourceAsync()`](#selectsourceasync) | [`CloseSourceAsync()`](#closesourceasync) | [`GetDevicesAsync()`](#getdevicesasync) | [`SelectDeviceAsync()`](#selectdeviceasync) |
+| [`AcquireImageAsync()`](#acquireimageasync) | [`getCapabilities()`](#getcapabilities)   | [`setCapabilities()`](#setcapabilities) |                                             |
+
 
 **Events**
 
 |                                       |
-| :------------------------------------ |
+| ------------------------------------- |
 | [`OnPostTransferAsync`](#onposttransferasync)  |
 
 <div class="multi-panel-end"></div>
@@ -934,7 +938,7 @@ SetOpenSourceTimeout(duration: number): boolean;
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
-<td align="center">not supported</td>
+<td align="center">v12.1+</td>
 </tr>
 
 </table>
@@ -3731,11 +3735,17 @@ Please refer to [`EnumDWT_TransferMode`]({{site.info}}api/Dynamsoft_Enum.html#dy
 
 Allowed values are
 
-- `TWSX_NATIVE` | 0: The default mode. In this mode, the whole image is transfered in a single memory block.
-- `TWSX_FILE` | 1: In this mode, the image is transfered to a specified file on the disk directly. This mode is ideal when transferring large images that might encounter memory limitations with Native mode. Check out [`SetFileXferInfo`](#setfilexferinfo) for more information.
-- `TWSX_MEMORY` | 2: In this mode, the image is transferred in multiple memory blocks. It's ideal for transferring very large images or a large number of images in a short time.
+- `TWSX_NATIVE | 0` : The default mode. In this mode, the whole image is transfered in a single memory block.
+- `TWSX_FILE | 1`: In this mode, the image is transfered to a specified file on the disk directly. This mode is ideal when transferring large images that might encounter memory limitations with Native mode. Check out [`SetFileXferInfo`](#setfilexferinfo) for more information.
+- `TWSX_MEMORY | 2`: In this mode, the image is transferred in multiple memory blocks. It's ideal for transferring very large images or a large number of images in a short time.
 
 `TWSX_NATIVE` and `TWSX_MEMORY` are required by all TWAIN data sources while `TWSX_FILE` is not. Therefore, make sure the data source supports `TWSX_FILE` before you use it.
+
+| Supported values   | Windows(TWAIN) | Windows(WIA) | macOS(TWAIN) | macOS(ICA) | Linux(SANE) |
+| ------------------ | -------------- | ------------ | ------------ | ---------- | ----------- |
+| `TWSX_NATIVE`      | ✔              | ✖            | ✖            | ✔          | ✔           |
+| `TWSX_MEMORY`      | ✔              | ✔            | ✔            | ✖          | ✖           |
+| `TWSX_FILE`        | ✔              | ✔            | ✖            | ✔          | ✖           |
 
 ---
 
@@ -3923,7 +3933,7 @@ DWObject.RegisterEvent("OnPostTransfer", function () {
 
 ## OnPostTransferAsync
 
-This event is triggered after each page has been scanned and transferred. This is the asynchronous counterpart to the synchronous event {OnPostTransfer}.
+This event is triggered after each page has been scanned and transferred. This is the asynchronous counterpart to the synchronous event [`OnPostTransfer`](#onposttransfer).
 
 **Syntax**
 
@@ -4013,7 +4023,7 @@ Multiple transfers may occur in two cases
 - Multiple images are scanned through the ADF(Auto Document Feeder)
 - Multiple frames are scanned on one single page
 
-In such cases, the event `OnPreTransfer` is triggered multiple times but `OnPreAllTransfers` is triggerred only once.
+In such cases, the event [`OnPreTransfer`](#onpretransfer) is triggered multiple times but `OnPreAllTransfers` is triggerred only once.
 
 In the callback function of this event, you can call [`CancelAllPendingTransfers()`](#cancelallpendingtransfers) to cancel all the transfers.
 
@@ -4058,7 +4068,7 @@ RegisterEvent('OnPreTransfer',function(){...});
 In the callback function of this event, you can
 
 - Check [`PendingXFERs`](#pendingxfers) for the number of pending transfers.
-- Check the information about the transferred image including [`ImageLayoutDocumentNumber`](#imagelayoutdocumentnumber), [`ImageLayoutFrameLeft`](#imagelayoutframeleft), [`ImageLayoutFrameTop`], [`ImageLayoutFrameRight`](#imagelayoutframeright), [`ImageLayoutFrameBottom`](#imagelayoutframebottom), [`ImageLayoutPageNumber`](#imagelayoutpagenumber), [`ImageLayoutFrameNumber`](#imagelayoutframenumber), etc.
+- Check the information about the transferred image including [`ImageLayoutDocumentNumber`](#imagelayoutdocumentnumber), [`ImageLayoutFrameLeft`](#imagelayoutframeleft), [`ImageLayoutFrameTop`](#imagelayoutframetop), [`ImageLayoutFrameRight`](#imagelayoutframeright), [`ImageLayoutFrameBottom`](#imagelayoutframebottom), [`ImageLayoutPageNumber`](#imagelayoutpagenumber), [`ImageLayoutFrameNumber`](#imagelayoutframenumber), etc.
 - Call [`CancelAllPendingTransfers()`](#cancelallpendingtransfers) to cancel all the rest of the transfers.
 
 ---
@@ -4101,18 +4111,26 @@ RegisterEvent("OnSourceUIClose", function () {});
 
 ## getCapabilities()
 
-Gets detailed information about all capabilities of the current data source.
+Gets detailed information about specified/all capabilities of the current data source.
 
 **Syntax**
 
 ```typescript
 getCapabilities(
+    capabilities: Dynamsoft.DWT.EnumDWT_Cap[] | number[],
     successCallback: (capabilityDetails: CapabilityDetails[]) => void,
     failureCallback: (errorCode: number, errorString: string) => void
-): boolean;
+): void; 
+
+getCapabilities(
+    successCallback: (capabilityDetails: CapabilityDetails[]) => void,
+    failureCallback: (errorCode: number, errorString: string) => void
+): void;
 ```
 
 **Parameters**
+
+`capabilities`: Specify the capabilities to get. Please refer to [`Dynamsoft.DWT.EnumDWT_Cap`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap).
 
 `successCallback`: A callback function that is executed if the request succeeds.
 - `capabilityDetails`: Detailed information about the specified capabilities. Please refer to [`CapabilityDetails`]({{site.info}}api/Interfaces.html#capabilitydetails).
@@ -4136,7 +4154,7 @@ getCapabilities(
 </tr>
 
 <tr>
-<td align="center">v16.0+</td>
+<td align="center">not supported</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
@@ -4190,7 +4208,7 @@ Please refer to [`Capabilities`]({{site.info}}api/Interfaces.html#capabilities).
 </tr>
 
 <tr>
-<td align="center">v16.0+</td>
+<td align="center">not supported</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>

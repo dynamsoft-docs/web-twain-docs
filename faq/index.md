@@ -216,7 +216,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}securely-transfer-to-server.html">How can I securely transfer scanned documents to my server?</a></li>
 
-<li><a href="{{site.faq}}encrypt-pdf-files.html">Can I generate an encrypted file in PDF format?</a></li>
+<li><a href="{{site.faq}}encrypt-pdf-files.html">Can I generate/load an encrypted file in PDF format?</a></li>
 
 <li><a href="{{site.faq}}limit-upload-size-to-server.html">Can I limit the size of documents to be uploaded to my server?</a></li>
 

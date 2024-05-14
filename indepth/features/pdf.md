@@ -93,4 +93,26 @@ DWObject.IfShowFileDialog = true;
 DWObject.SaveAllAsPDF(' ', function() {}, function() {})
 ```
 
+From version 18.5, `Dynamic Web TWAIN` supports the generation of encrypted PDF files. For example,
+
+``` javascript
+DWObject.Addon.PDF.Write.Setup({
+    author: "Dynamsoft-Support-Team",
+    compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JP2000,
+    pageType:Dynamsoft.DWT.EnumPDF_Page_A4,
+    creator: "DWT",
+    creationDate: "D:20200930",
+    keyWords: "TWAIN, DWT, Dynamsoft",
+    modifiedDate: "D:20200930",
+    producer: "Dynamsoft Corporation",
+    subject: "Demoing File",
+    title: "Sample PDF Made by DWT",
+    version: 1.5,
+    quality: 80,
+    password: "dwtpassword"
+});
+DWObject.IfShowFileDialog = true;
+DWObject.SaveAllAsPDF(' ', function() {}, function() {})
+```
+
 Note: Only the core module license is required to use this method.

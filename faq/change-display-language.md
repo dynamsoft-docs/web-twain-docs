@@ -131,6 +131,6 @@ Dynamsoft.DWT.CustomizableDisplayInfo = {
 };
 ```
 
-For the Dynamsoft Service installation message below, you can customize the display language by searching for 'Dynamsoft._show_install_dialog' in dynamsoft.webtwain.install.js, and changing the display language accordingly.
+For the Dynamsoft Service installation message below, you can customize the display language by searching for `Dynamsoft._show_install_dialog` in dynamsoft.webtwain.install.js, and changing the display language accordingly.
 
-![install dialog]({{site.assets}}imgs/install-dialog.png)
+![install dialog]({{site.assets}}imgs/Initialization-1.png)

@@ -27,7 +27,7 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 | [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
 | [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
 | [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |
-| [`UseDefaultViewer`](#usedefaultviewer) |                 |                      |
+| [`UseDefaultViewer`](#usedefaultviewer) | [`IfCheckCORS`](#ifcheckcors)   |                      |
 
 
 **Events**
@@ -177,8 +177,8 @@ Creates a new `WebTwain` instance that listens to the specified host & ports. An
 CreateDWTObject(
     ContainerId: string, 
     successCallBack: (DWObject: WebTwain) => void,
-    failureCallBack: (errorString: string) => void
-): boolean;
+    failureCallBack: ({code: number, message: string}) => void
+): void;
 
 CreateDWTObject(
     ContainerId: string, 
@@ -186,8 +186,8 @@ CreateDWTObject(
     port: string | number, 
     portSSL: string | number, 
     successCallBack: (DWObject: WebTwain) => void,
-    failureCallBack: (errorString: string) => void
-): boolean;
+    failureCallBack: ({code: number, message: string}) => void
+): void;
 ```
 
 **Parameters**
@@ -244,7 +244,7 @@ Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18622, 18623,
     }).catch(function (exp) {
         alert(exp.message);
     });}, 
-    function (errorString) {console.log(errorString);}
+    function (error) {console.log(error);}
 );
 ```
 
@@ -262,7 +262,7 @@ Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',
         }).catch(function (exp) {
             alert(exp.message);
         });}, 
-        function (errorString) {console.log(errorString);}
+        function (error) {console.log(error);}
 );
 ```
 
@@ -279,7 +279,7 @@ CreateDWTObjectEx(
   dwtInitialConfig: DWTInitialConfig, 
   successCallBack: (DWObject: WebTwain) => void, 
   failureCallBack: ({code: number, message: string}) => void
-): boolean;
+): void;
 ```
 
 **Parameters**
@@ -323,9 +323,6 @@ CreateDWTObjectEx(
 var DWObject;
 Dynamsoft.DWT.CreateDWTObjectEx({
       WebTwainId: 'dwtId',
-      Host: "127.0.0.1",
-      Port: 18622,
-      PortSSL : 18623
   },function (DWTObject) {
       DWObject = DWTObject;
       DWObject.Viewer.bind("dwtcontrolContainer");
@@ -337,8 +334,8 @@ Dynamsoft.DWT.CreateDWTObjectEx({
           }).catch(function (exp) {
               alert(exp.message);
           });
-  }, function (errorString) {
-      console.log(errorString);
+  }, function (error) {
+      console.log(error);
 });
 ```
 
@@ -850,7 +847,7 @@ Default value: `127.0.0.1`.
 
 ---
 
-## `IfAddMD5InUploadHeader`
+## IfAddMD5InUploadHeader
   
 Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
 
@@ -1166,6 +1163,47 @@ UseDefaultViewer: boolean;
 
 - If it is set to `false`, the file `dynamsoft.webtwain.viewer.js` is not loaded at all and there is no way to add it back later. Therefore, only set it to `false` when you absolutely won't need the viewer or will be building your own viewer.
 
+---
+
+## IfCheckCORS
+
+Whether to check CORS issue in detail.
+
+**Syntax**
+
+```typescript
+IfCheckCORS: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage Notes**
+
+- Default value: `false`.
+- When set to `true`, if encountering a CORS issue, it will detect the issue more specifically and return the corresponding CORS error.
+- When set to `false`, if encountering a CORS issue, it will solely detect that the Dynamsoft Service is not connected and prompt a service installation window.
 
 ---
 

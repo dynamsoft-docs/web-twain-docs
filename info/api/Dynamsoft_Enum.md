@@ -269,7 +269,9 @@ permalink: /info/api/Dynamsoft_Enum.html
 | IT_MULTIPAGE_PDF | 7 |
 | IT_MULTIPAGE_TIF | 8 |
  
-Note: IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [startScan]({{site.info}}api/WebTwain_Acquire.html#startscan)
+Note: 
+- IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [`startScan()`]({{site.info}}api/WebTwain_Acquire.html#startscan).
+- IT_ALL is only applicable to the ImageType of [`LoadImageEx()`]({{site.info}}api/WebTwain_IO.html#loadimageex){% comment %}, [`LoadImageFromBase64Binary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary), [`HTTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#httpdownloadex), [`HTTPDownloadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost){% endcomment %}.
 
 ## `Dynamsoft.DWT.EnumDWT_ImageFormatType`
 
@@ -920,3 +922,13 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWCP_BITFIELDS | 12 |
 | TWCP_ZIP | 13 |
 | TWCP_JPEG2000 | 14 |
+
+## `Dynamsoft.DWT.EnumDWT_ResponseType`
+
+| Label | Value|
+|:-|:-|
+| Text | 0 |
+| Blob | 1 |
+| ArrayBuffer | 2 |
+| XML | 3 |
+| JSON | 4 |

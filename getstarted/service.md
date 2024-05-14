@@ -21,7 +21,45 @@ Dynamsoft Service is the core piece of Dynamic Web TWAIN when running in Service
 
 The Dynamsoft Service uses `localhost` and `18622` `18625` ports for HTTP connection and `18623` `18626` ports for HTTPS connection.  
 These ports can be configured in the `DSConfiguration.ini` file located in:
-`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\DSConfiguration.ini` (Windows)
+  - Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}`
+  - macOS: `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.}`
+  - Linux: `/opt/dynamsoft/DynamsoftService`
+
+### Access-Control-Allow-Origin
+
+For security purposes, you may want the Dynamsoft Service to only respond to requests from specified origins. Starting from Dynamic Web TWAIN version 18.5, this can be achieved by adding `Access-Control-Allow-Origin` in the `DSConfiguration.ini` file.
+
+By default, the `Access-Control-Allow-Origin` setting is not configured in the ini file. This means that the Dynamsoft Service can respond to requests from any origin.
+
+You can set multiple origins by using commas as the separator, and `http://` or `https://` needs to be specified before each origin. If there is a port for the origin, please remember to specify it. If not specified, the default port is 80.
+
+No origin:
+
+```bash
+Access-Control-Allow-Origin=*
+```
+
+Single origin:
+
+```bash
+Access-Control-Allow-Origin=http://192.168.8.212
+```
+
+Multiple origins:
+
+```bash
+Access-Control-Allow-Origin=http://192.168.8.212, http://192.168.8.126:8033, https://www.dynamsoft.com
+```
+
+![Access-Control-Allow-Origin]({{site.assets}}imgs/Access-Control-Allow-Origin.png)
+
+After configuring the origins in the `DSConfiguration.ini` file, please set [`IfCheckCORS`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifcheckcors) to `true` in `dynamsoft.webtwain.config.js`. 
+
+When a request comes from a different origin, a CORS error message will be displayed, both in a pop-up and in the console.
+
+  ![CORS-error-popup]({{site.assets}}imgs/CORS-error-popup.png)
+
+  ![CORS-error-console]({{site.assets}}imgs/CORS-error-console.png)
 
 ## Installation of Dynamsoft Service
 
@@ -47,7 +85,9 @@ On **Linux**, instead of double clicking, the downloaded installer needs to be r
   sudo rpm -ivh DynamsoftServiceSetup.rpm
   ```
 
-Once the installation is done, the users can click 'Reconnect to the service' or refresh the page to start using Dynamic Web TWAIN.
+Once the installation is done, the users can click the orange sentance 'click here to verify completion' or refresh the page to start using Dynamic Web TWAIN.
+
+![Initialization]({{site.assets}}imgs/Initialization-2.png)
 
 ### Msg: Dynamsoft service is not installed / Dynamic Web TWAIN is not installed
 

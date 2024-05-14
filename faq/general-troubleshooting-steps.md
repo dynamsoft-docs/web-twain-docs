@@ -22,7 +22,7 @@ permalink: /faq/general-troubleshooting-steps.html
 1. Remove any old log files from
   - Windows `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`
   - macOS, `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`
-  - Linux, `/opt/dynamsoft/DynamsoftService/log`
+  - Linux: `/opt/dynamsoft/DynamsoftService/log`
 
 2. Set the log level
   - Option A - (Only recommended for v18.0+) For only one client machine, add the line `LogLevel=14` to `DSConfiguration.ini` on that specific machine. To find the `DSConfiguration.ini` file, please return to the previous directory from the log directory.

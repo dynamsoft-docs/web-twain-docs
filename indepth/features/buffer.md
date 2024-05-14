@@ -34,6 +34,94 @@ You can also set how much memory `Dynamic Web TWAIN` can use before images start
 
 Although you can scan and load as many images as you like, you may want to handle them in smaller volumes when doing further processing. For example, when dealing with extremely large volumes, you should not try to upload or save the images all at once as that would be too time consuming and prone to errors.
 
+## Save the encrypted image caches in local Dynamsoft Service folder
+
+In certain scenarios, there may be requirements to store encrypted image caches on a local disk for temporary data storage or backup purposes. For instance, when scanning a large batch of documents, accidentally closing the web page can result in the loss of scanned data, necessitating rescanning of the documents. This issue can be mitigated by backing up the data before closing the page.
+
+Starting from version 18.5, Dynamic Web TWAIN introduces a new feature that facilitates developers in securely storing image caches in encrypted form within the Dynamsoft Service folder. This feature offers several advantages:
+
+- Data is stored securely in encrypted form.
+- The speed of storing data locally and loading it back into the Dynamic Web TWAIN buffer is fast.
+- The stored data remains intact even when the Dynamic Web TWAIN object is destroyed.
+
+*However, it's important to note that since the storage folder is located within the Dynamsoft Service directory, the stored data will be lost if Dynamsoft Service is uninstalled. The upgrade of Dynamsoft Service will not affect the storage folder.*
+
+**Create a storage folder**
+
+First of all, you need to create a storage item by [`createLocalStorage()`]({{site.info}}api/WebTwain_IO.html#createlocalstorage) which is used to save the encrypeted image caches. For example,
+
+```javascript
+var folderSettings = {
+  password: "XXXXXXXX",
+}; // Specify the password of the created storage folder
+var storageItemUid = await DWObject.createLocalStorage(folderSettings);
+```
+
+Please ensure to set a strong password to enhance data security, especially in multi-user login scenarios.
+
+The local directory of the created storage folder is under 
+  - Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`
+  - macOS: `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`
+  - Linux: `/opt/dynamsoft/DynamsoftService/storage`
+
+**Save image caches**
+
+To save the specified image(s) to the storage folder, [`saveToLocalStorage()`]({{site.info}}api/WebTwain_IO.html#savetolocalstorage) method is required.
+
+```javascript
+var bExist = await DWObject.localStorageExist(storageItemUid); // Determine whether the folder exists
+
+if (bExist) {
+  var saveImageSettings = {
+    uid: storageItemUid,
+    password: "XXXXXXXX",
+    indices: [0,1], // The first two images in buffer
+  };
+  await DWObject.saveToLocalStorage(saveImageSettings);
+}
+else {
+  console.log("The storage folder does not exist.");
+}
+```
+
+**Load image(s) from the storage folder**
+
+To load the encypted image caches into Dynamic Web TWAIN again, please use the method [`loadFromLocalStorage()`]({{site.info}}api/WebTwain_IO.html#loadfromlocalstorage).
+
+```javascript
+var bExist = await DWObject.localStorageExist(storageItemUid); // Determine whether the folder exists
+
+if (bExist) {
+  var loadImageSettings = {
+    uid: storageItemUid,
+    password: "XXXXXXXX",
+  };
+  await DWObject.loadFromLocalStorage(loadImageSettings);
+}
+else {
+  console.log("The storage folder does not exist.");
+}
+```
+
+**Remove the storage folder**
+
+If you would like to remove the storage folder by programming, the method [`removeLocalStorage()`]({{site.info}}api/WebTwain_IO.html#removelocalstorage) can help.
+
+```javascript
+var bExist = await DWObject.localStorageExist(storageItemUid); // Determine whether the folder exists
+
+if (bExist) {
+  var removeFolderSettings = {
+    uid: storageItemUid,
+    password: "XXXXXXXX",
+  };
+  await DWObject.removeLocalStorage(removeFolderSettings);
+}
+else {
+  console.log("The storage folder does not exist.");
+}
+```
+
 ## Rearranging the images within the buffer
 
 `Dynamic Web TWAIN` offers a number of methods to help you shift the images within the buffer.
@@ -42,14 +130,14 @@ Although you can scan and load as many images as you like, you may want to handl
 >  
 > You can also just drag the images around in the viewer to change their positions.
 
-* Use the [ `MoveImage()` ]({{site.info}}api/WebTwain_Buffer.html#moveimage) method:
+* Use the [`MoveImage()`]({{site.info}}api/WebTwain_Buffer.html#moveimage) method:
 
 ``` javascript
 /* Assuming there are 5 images in the buffer, the following code changes the 1st image to be the 3rd. The sequence changes to 12034 from 01234*/
 DWObject.MoveImage(0, 2);
 ```
 
-* If you are looking to simply switch two images in the buffer, use [ `SwitchImage()` ]({{site.info}}api/WebTwain_Buffer.html#switchimage):
+* If you are looking to simply switch two images in the buffer, use [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage):
 
 ``` javascript
 // Switch the positions of the 1st and the 3rd images
@@ -86,19 +174,19 @@ DWObject.SetDefaultTag("patient123");
 DWObject.AcquireImage();
 ```
 
-To filter the images in the buffer by a tag, use [ `FilterImagesByTag()` ]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag). 
+To filter the images in the buffer by a tag, use [`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag). 
 
-To clear the tags on a specific image, use [ `ClearImageTags()` ]({{site.info}}api/WebTwain_Buffer.html#clearimagetags).
+To clear the tags on a specific image, use [`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags).
 
 ## Image Data
 
 The buffer also provides access to a wide array of info for each image. Here is the full list of the info available via the buffer:
 
-* Bit depth, which helps to identify the pixel type of the image: [ `GetImageBitDepth()` ]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepth)
-* Height of the image in pixels: [ `GetImageHeight()` ]({{site.info}}api/WebTwain_Buffer.html#getimageheight)
-* Width of the image in pixels: [ `GetImageWidth()` ]({{site.info}}api/WebTwain_Buffer.html#getimagewidth)
-* Horizontal resolution of the specified image: [ `GetImageXResolution()` ]({{site.info}}api/WebTwain_Buffer.html#getimagexresolution)
-* Vertical resolution of the specified image: [ `GetImageYResolution()` ]({{site.info}}api/WebTwain_Buffer.html#getimageyresolution)
+* Bit depth, which helps to identify the pixel type of the image: [`GetImageBitDepth()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepth)
+* Height of the image in pixels: [`GetImageHeight()`]({{site.info}}api/WebTwain_Buffer.html#getimageheight)
+* Width of the image in pixels: [`GetImageWidth()`]({{site.info}}api/WebTwain_Buffer.html#getimagewidth)
+* Horizontal resolution of the specified image: [`GetImageXResolution()`]({{site.info}}api/WebTwain_Buffer.html#getimagexresolution)
+* Vertical resolution of the specified image: [`GetImageYResolution()`]({{site.info}}api/WebTwain_Buffer.html#getimageyresolution)
 
 The following is only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
