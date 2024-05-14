@@ -24,10 +24,10 @@ needGenerateH3Content: true
 
 ```typescript
 interface DWTInitialConfig {
-    WebTwainId: string,
-    Host ? : string, // Default value: "127.0.0.1"
-    Port ? : string | number, // Default value: 18622
-    PortSSL ? : string | number, // Default value: 18623
+    WebTwainId: string;
+    Host ? : string; // Default value: "127.0.0.1"
+    Port ? : string | number; // Default value: 18622
+    PortSSL ? : string | number; // Default value: 18623
 }
 ```
 
@@ -39,10 +39,10 @@ interface DWTInitialConfig {
 
 ``` typescript
 interface Container {
-    WebTwainId?: string, // Id of the WebTwain instance
-    ContainerId?: string, // Id of the element
-    Width?: string | number, // Width of the element
-    Height?: string | number // Height of the element
+    WebTwainId?: string; // Id of the WebTwain instance
+    ContainerId?: string; // Id of the element
+    Width?: string | number; // Width of the element
+    Height?: string | number; // Height of the element
 }
 ```
 
@@ -260,7 +260,7 @@ interface SourceDetails {
 }
 ```
 
-- [Version]({{site.info}}api/Interfaces.html#version)
+- [`Version`]({{site.info}}api/Interfaces.html#version)
 
 
 
@@ -295,9 +295,9 @@ interface ScanSetup {
    */
   exception?: string;
   /**
-   * The name of the data source (the scanner). If not set, the default data source is used.
+   * The name of the data source (the scanner) or Device object. If not set, the default data source is used.
    */
-  scanner?: string;
+  scanner?: string | Device;
   ui?: {
     /**
      * Whether to show the UI of the device.
@@ -359,7 +359,7 @@ interface ScanSetup {
      */
     resolution?: number;
     /**
-     * Whether to enable document feader.
+     * Whether to enable document feeder.
      */
     bFeeder?: boolean;
     /**
@@ -546,10 +546,11 @@ interface ScanSetup {
 }
 ```
 
+- [`Device`]({{site.info}}api/Interfaces.html#device)
 - [`EnumDWT_TransferMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_transfermode)
 - [`EnumDWT_FileFormat`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_fileformat)
 - [`EnumDWT_CompressionType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_compressiontype)
-- [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html##dynamsoftdwtenumdwt_pixeltype)
+- [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pixeltype)
 - [`EnumDWT_CapSupportedSizes`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes)
 - [`EnumDWT_UnitType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_unittype)
 - [`EnumDWT_CapPixelFlavor`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cappixelflavor)
@@ -594,7 +595,7 @@ interface OutputInfo {
   /**
    * Id of the image if it's transferred to the buffer.
    */
-  imageId?: number;
+  imageId?: string;
   /**
    * Path of the image if it's transferred to the disk.
    */
@@ -635,8 +636,25 @@ interface CapabilityDetails {
     curIndex?: number;
     /**
      * The current value of the Capability
+     * Except TWON_ARRAY type whose current values return via the attribute values
      */
-    curValue?: ValueAndLabel;
+    curValue?: ValueAndLabel | string | number | Frame;
+    /**
+     * The default value of the Capability
+     */
+    defaultValue?: ValueAndLabel | string | number | Frame;
+    /**
+     * The maximum value of the Capability
+     */
+    maxValue?: number;
+    /**
+     * The minimum value of the Capability
+     */
+    minValue?: number;
+    /**
+     * The step size of the Capability
+     */
+    stepSize?: number;
     /**
      * The index for the default value of the Capability
      */
@@ -663,13 +681,18 @@ interface CapabilityDetails {
      */
     valueType?: ValueAndLabel;
     /**
-     * The available values of the Capability
+     * The current values of the Capability when conType's label is TWON_ARRAY.
      */
-    values?: ValueAndLabel[];
+    values?: ValueAndLabel[] | any[];
+    /**
+     * The available values of the Capability when conType's label is TWON_ENUMERATION.
+     */
+    enums?: ValueAndLabel[] | any[];
 }
 ```
 
-- [ValueAndLabel]({{site.info}}api/Interfaces.html#valueandlabel)
+- [`ValueAndLabel`]({{site.info}}api/Interfaces.html#valueandlabel)
+- [`Frame`]({{site.info}}api/Interfaces.html#frame)
 
 
 
@@ -690,11 +713,24 @@ interface ValueAndLabel {
 }
 ```
 
-- [EnumDWT_Cap]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap)
-- [EnumDWT_CapType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_captype) 
-- [EnumDWT_CapValueType]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capvaluetype)
+- [`EnumDWT_Cap`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap)
+- [`EnumDWT_CapType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_captype) 
+- [`EnumDWT_CapValueType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capvaluetype)
 
 
+
+### Frame
+
+**Syntax**
+
+```typescript
+interface Frame{
+    left:number,
+    top:number,
+    right:number,
+    bottom:number,
+}
+```
 
 ### Capabilities
 
@@ -709,11 +745,11 @@ interface Capabilities {
     /**
      * Specifies how to set capabilities
      */
-    capabilities: CapabilitySetup[]
+    capabilities: CapabilitySetup[];
 }
 ```
 
-- [CapabilitySetup]({{site.info}}api/Interfaces.html#capabilitysetup)
+- [`CapabilitySetup`]({{site.info}}api/Interfaces.html#capabilitysetup)
 
 
 
@@ -729,8 +765,14 @@ interface CapabilitySetup {
     capability: Dynamsoft.DWT.EnumDWT_Cap | number;
     /**
      * The value to set to the capability or the value of the capability after setting.
+     * Except TWON_ARRAY type whose current values are set via the attribute values.
      */
-    curValue: number | string | object; 
+    curValue?: number | string | object; 
+    /**
+     * The value array to set to the capability or the value array of the capability after setting.
+     * Only available for TWON_ARRAY type.
+    */
+    values?: any[];
     errorCode?: number;
     errorString?: string;
     /**
@@ -740,7 +782,7 @@ interface CapabilitySetup {
 }
 ```
 
-- [EnumDWT_Cap]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap)
+- [`EnumDWT_Cap`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_cap)
 
 ## Viewer
 
@@ -774,7 +816,7 @@ interface CustomElement {
 **Syntax**
 
 <div class="sample-code-prefix template2"></div>
->- v18.4
+>- v18.4+
 >- v18.3
 >- v18.2
 >
@@ -1333,10 +1375,10 @@ interface ViewMode {
 
 ```typescript
 interface Area {
-    left: number,
-    top: number,
-    right: number,
-    bottom: number,
+    left: number;
+    top: number;
+    right: number;
+    bottom: number;
 };
 ```
 
@@ -1463,7 +1505,7 @@ interface rect{
 ```typescript
 interface TagInfo {
     name: string;
-    imageIds: number[];
+    imageIds: string[];
 }
 ```
 
@@ -1482,19 +1524,21 @@ interface BufferChangeInfo {
     /**
      * The image id (not the index) of the current page.
      */
-    currentId: number;
+    currentId: string;
     /**
      * All image ids.
      */
-    imageIds: number[];
+    imageIds: string[];
     /**
      * All selected image ids.
      */
-    selectedIds: number[];
+    selectedIds: string[];
+    /**
+     * The modified imageId, only available when action type is 'modify'.
+    */
+    modifiedId?: string; 
 }
 ```
-
-
 
 ### DocumentInfo
 
@@ -1503,10 +1547,39 @@ interface BufferChangeInfo {
 ```typescript
 interface DocumentInfo {
    name: string;
-   imageIds: number[];
+   imageIds: string[];
 }
 ```
 
+
+<!-- ### MetaData
+
+**Syntax**
+
+```typescript
+interface MetaData{
+    /**
+     * The width of image.
+     */
+    width: number;
+    /**
+     * The height of image.
+     */
+    height: number;
+    /**
+     * The bit depth of image.
+     */
+    bitDepth: number;
+    /**
+     * The x-axis resolution of image.
+     */
+    resolutionX: number;
+    /**
+     * The y-axis resolution of image.
+     */
+    resolutionY: number;
+}
+``` -->
 
 
 ## Output
@@ -1540,7 +1613,7 @@ interface Base64Result {
 
 ### ReaderOptions
 
-Sets the PDF Rasterizer parameters
+Sets the PDF Rasterizer parameters.
 
 **Syntax**
 
@@ -1549,32 +1622,32 @@ interface ReaderOptions {
     /**
      * Default value: CM_AUTO
      */
-    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode | number,   
+    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode | number;   
     /**
      * If a password is required to open the PDF, set it here. Default value: "".
      */
-    password?: string,  
+    password?: string;  
     renderOptions?: {
         /**
          * Controls whether or not annotations will be rendered. Only valid if convertMode is set to CM_RENDERALL or CM_AUTO with a valid PDF Rastierzer license. Default value: false.
          */
-        renderAnnotations?: boolean,
+        renderAnnotations?: boolean;
         /**
          * DPI. Only affects text being rasterized. Does not affect images extracted from the PDF file. Default value: 200.
          */
-        resolution?: number,  
+        resolution?: number;  
         /**
          * Pixels. 0 is no limit. Default value: 0.
          */
-        maxWidth?: number,
+        maxWidth?: number;
         /** 
          * Pixels. 0 is no limit. Default value: 0.
          */
-        maxHeight?: number,
+        maxHeight?: number;
         /**
          * Whether or not to render in grayscale. Default value: false.
          */
-        renderGrayscale?: boolean
+        renderGrayscale?: boolean;
     }
 
 }
@@ -1647,6 +1720,13 @@ interface PDFWSettings {
      * Only valid when the {compression} is 'JPEG' or 'JPEG2000'.
      */
     quality?: number;
+    /**
+     * From version 18.5
+     * Specify the password.
+     * Default value: ''
+     * Up to 32 characters.
+     */
+    password?: string;
 }
 ```
 
@@ -2024,8 +2104,8 @@ interface FormField {
      * @param value Sepcify the value of the field.
      */
     Add: (
-        key: string,
-        value: string
+        key: string;
+        value: string;
     ) => boolean;
 }
 ```
@@ -2042,9 +2122,9 @@ interface SourceValue {
      * @param key Specify the key of the file in the request. This key can be used to retrieve the file content in server-side scripts.
      */
     Add: (
-        source: string,
-        name: string,
-        key?: string
+        source: string;
+        name: string;
+        key?: string;
     ) => void;
 }
 ```

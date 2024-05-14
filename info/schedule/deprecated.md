@@ -47,6 +47,8 @@ The recommended fix is to patch the operating system, you can find the patch [he
 * SetPassword()
 * SetResolution()
 
+Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT_ConvertMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_convertmode).
+
 ### Viewer
 > This API has been deprecated as of release 18.4. Please use the [`updateSelectionBoxStyle()`]({{site.info}}api/WebTwain_Viewer.html#updateselectionboxstyle) function.
 

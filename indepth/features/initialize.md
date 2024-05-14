@@ -95,12 +95,18 @@ This method manually creates a `WebTwain` instance with a default built-in viewe
  * @param failureCallback A callback function that is executed if the request fails.
  */
 CreateDWTObject(
-    ContainerId: string,
-    host ? : string,
-    port ? : string | number,
-    portSSL ? : string | number,
+    ContainerId: string, 
     successCallBack: (DWObject: WebTwain) => void,
-    failureCallBack: (errorString: string) => void
+    failureCallBack: ({code: number, message: string}) => void
+): void;
+
+CreateDWTObject(
+    ContainerId: string, 
+    host: string, 
+    port: string | number, 
+    portSSL: string | number, 
+    successCallBack: (DWObject: WebTwain) => void,
+    failureCallBack: ({code: number, message: string}) => void
 ): void;
 ```
 
@@ -138,6 +144,8 @@ CreateDWTObjectEx(
 ```
 
 The following is the `DWTInitialConfig` interface:
+
+- `Host`, `Port`, `PortSSL`: These three optional parameters must be set at the same time.
 
 ``` typescript
 interface DWTInitialConfig {

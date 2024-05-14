@@ -12,12 +12,12 @@ permalink: /info/api/WebTwain_Buffer.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
-> All APIs on this page support Android Service from version 18.2.
+> All APIs on this page support Android Service from version 18.2 except [`IsBlankImageAsync()`](#isblankimageasync).
 
 **Methods**
 
-|                                                 |
-| :---------------------------------------------- | :------------------------------------------------------ | ------------------------------------------------------------------- | --------------------------------------------------- |
+|                                                 |                                                         |                                                                     |                                                     |
+| ----------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------- |
 | [`ClearImageTags()`](#clearimagetags)           | [`RenameTag()`](#renametag)                             | [`RemoveTag()`](#removetag)                                         | [`GetTagList()`](#gettaglist)                       |
 | [`FilterImagesByTag()`](#filterimagesbytag)     | [`ClearFilter()`](#clearfilter)                         | [`SetDefaultTag()`](#setdefaulttag)                                 | [`TagImages()`](#tagimages)                         |
 | [`GetImageBitDepth()`](#getimagebitdepth)       | [`GetImageSize()`](#getimagesize)                       | [`GetImageSizeWithSpecifiedType()`](#getimagesizewithspecifiedtype) | [`GetSelectedImagesSize()`](#getselectedimagessize) |
@@ -26,10 +26,9 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`ImageIDToIndex()`](#imageidtoindex)           | [`IndexToImageID()`](#indextoimageid)                   | [`IsBlankImage()`](#isblankimage)                                   | [`IsBlankImageExpress()`](#isblankimageexpress)     |
 | [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
 | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
-| [`CreateDocument()`](#createdocument)         | [`OpenDocument()`](#opendocument)         | [`GetCurrentDocumentName()`](#getcurrentdocumentname)         | [`RenameDocument()`](#renamedocument)         |
-| [`RemoveDocument()`](#removedocument)         | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync()`](#copytodocumentasync) | [`MoveToDocumentAsync()`](#movetodocumentasync) |
-| [`IsBlankImageAsync()`](#isblankimageasync) |
-
+| [`CreateDocument()`](#createdocument)           | [`OpenDocument()`](#opendocument)                       | [`GetCurrentDocumentName()`](#getcurrentdocumentname)               | [`RenameDocument()`](#renamedocument)               |
+| [`RemoveDocument()`](#removedocument)           | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync()`](#copytodocumentasync)                     | [`MoveToDocumentAsync()`](#movetodocumentasync)     |
+| [`IsBlankImageAsync()`](#isblankimageasync)     |  [`updateImage()`](#updateimage)                        |
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
@@ -39,17 +38,18 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Properties**
 
-|                                                           |
-| :-------------------------------------------------------- | :------------------------------------------------ | --------------------------------------------- | ------------------------------------------------- |
+|                                                           |                                                   |                                               |                                                   |
+| --------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- | ------------------------------------------------- |
 | [`BlankImageCurrentStdDev`](#blankimagecurrentstddev)     | [`BlankImageMaxStdDev`](#blankimagemaxstddev)     | [`BlankImageThreshold`](#blankimagethreshold) | [`BufferMemoryLimit`](#buffermemorylimit)         |
 | [`CurrentImageIndexInBuffer`](#currentimageindexinbuffer) | [`HowManyImagesInBuffer`](#howmanyimagesinbuffer) | [`IfAllowLocalCache`](#ifallowlocalcache)     | [`SelectedImagesIndices`](#selectedimagesindices) |
 | [`MaxImagesInBuffer`](#maximagesinbuffer)                 |
 
 **Events**
 
-|                                       |
-| :------------------------------------ | :------------------------------------ | --------------------------------------------------------- | ----------------------------------------------------------- |
+|                                       |                                       |                                                           |                                                             |
+| ------------------------------------- | ------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------- |
 | [`OnBufferChanged`](#onbufferchanged) | [`OnBitmapChanged`](#onbitmapchanged) | [`OnIndexChangeDragDropDone`](#onindexchangedragdropdone) | [`OnTopImageInTheViewChanged`](#ontopimageintheviewchanged) |
+| [`OnDiskExceedLimit`](#ondiskexceedlimit) |
 
 ---
 
@@ -60,7 +60,7 @@ Return the imageId of an image specified by the index.
 **Syntax**
 
 ```typescript
-IndexToImageID(index: number): number;
+IndexToImageID(index: number): string;
 ```
 
 **Parameters**
@@ -100,7 +100,7 @@ Return the index of an image specified by the imageId.
 **Syntax**
 
 ```typescript
-ImageIDToIndex(imageId: number): number;
+ImageIDToIndex(imageId: string): number;
 ```
 
 **Parameters**
@@ -133,7 +133,7 @@ ImageIDToIndex(imageId: number): number;
 
 **Usage notes**
 
-An `imageId` is unique and won't change as long as the Dynamsoft Service process is running. It's a better way to keep track of an image than the `index` which changes easily.
+An `imageId` is unique and won't change. It's a better way to keep track of an image than the `index` which changes easily.
 
 ---
 
@@ -1897,7 +1897,7 @@ IfAllowLocalCache: boolean;
 
 **Usage notes**
 
-The default value of IfAllowLocalCache is true. When the property is true, you can scan as many images as you want as long as you have a big enough disk.  
+The default value of `IfAllowLocalCache` is true. When the property is true, you can scan as many images as you want as long as you have a big enough disk.  
 The default threshold is set to 800 (MB), anything beyond 800MB gets compressed, encrypted and cached on the local disk.  
 If necessary, you can set the threshold using [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit) for better performance.  
 All cached data is encrypted and can only be read by Dynamic Web TWAIN and it will be destroyed when it is no longer used.
@@ -1918,9 +1918,7 @@ RegisterEvent('OnBufferChanged',
 
 **Parameters**
 
-`bufferChangeInfo`: Details about the buffer change. 
-
-`TagInfo`: Please refer to [`BufferChangeInfo`]({{site.info}}api/Interfaces.html#bufferchangeinfo).
+`bufferChangeInfo`: Details about the buffer change. Please refer to [`BufferChangeInfo`]({{site.info}}api/Interfaces.html#bufferchangeinfo).
 
 **Availability**
 
@@ -2562,3 +2560,100 @@ GetDocumentInfoList(): DocumentInfo[];
 
 </table>
 </div>
+
+---
+
+## updateImage()
+
+Update the specified image with a new image.
+
+**Syntax**
+
+```typescript
+updateImage(imageId: string, blob: Blob): Promise <void>;
+```
+
+**Parameters**
+
+`imageId`: Specify the image to be updated by its image id.
+
+`blob`: The blob of the new image. Only support the blob which contains single image page. Multi-pages Tiff and PDF are not supoported.
+
+<!-- `metaData`: The additional data for the new image. Only available for RGBA image. Please refer to [`MetaData`]({{site.info}}api/Interfaces.html#metadata). -->
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+Supported blob type: `image/jpeg`, `image/png`, `image/bmp`, `image/tiff`, `application/pdf`, `image/jpg`, `image/tif`.
+
+---
+
+## OnDiskExceedLimit
+
+A built-in callback triggered when disk cache exceeds the limit.
+
+**Syntax**
+
+```typescript
+RegisterEvent('OnDiskExceedLimit',
+    function () {}
+): boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+| System      | Triggered when       |
+| ----------- | -------------------- |
+| Windows x86 | < 1.2GB              |
+| Windows x64 | < 4GB                |
+| macOS 32bit | < 1.2GB              |
+| macOS 64bit | < 4GB                |
+| Linux       | < 4GB                |
+| Android     | < 100MB              |

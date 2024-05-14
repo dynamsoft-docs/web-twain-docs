@@ -15,6 +15,7 @@ permalink: /info/schedule/Addon.html
 
 | Version | Service | Core | PDFR | Barcode | Camera/Webcam | OCRB | OCRPro| Uploader | 
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| v18.5| 1.8.5.312 | 18.5.0.0312 | 11.5.2.0312 | 9.6.40.220 | N/A /15.0.0.0625 | N/A | N/A | 1.8.5.0312 |
 | v18.4.2| 1.8.4.1110 | 18.4.2.1110 | 11.5.1.0926 | 9.6.20.307 | N/A /15.0.0.0625 | N/A | N/A | 1.8.4.0926 |
 | v18.4.1| 1.8.4.1013 | 18.4.1.1013 | 11.5.1.0926 | 9.6.20.307 | N/A /15.0.0.0625 | N/A | N/A | 1.8.4.0926 |
 | v18.4| 1.8.4.0926 | 18.4.0.0926 | 11.5.1.0926 | 9.6.20.307 | N/A /15.0.0.0625 | N/A | N/A | 1.8.4.0926 |
@@ -36,6 +37,20 @@ permalink: /info/schedule/Addon.html
 ## PDFR
 
 A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client side to convert text-based PDF files into images and display in the image viewer.
+
+### `11.5.2.0312` (05/14/2024)
+* Updated third party libraries
+
+### `11.5.1.0926` (09/26/2023)
+* Deprecate the methods:
+  * GetConvertMode()
+  * SetConvertMode()
+  * SetPassword()
+  * SetResolution()
+  
+  Use [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) and [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) instead.
+
+* Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT_ConvertMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_convertmode).
 
 ### `11.5.0.0627` (06/20/2023)
 * Introduced the preview version of Dynamsoft's PDF Compressor

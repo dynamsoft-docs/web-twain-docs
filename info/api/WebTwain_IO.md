@@ -24,48 +24,50 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Input Methods**
 
-|                                                   |
-| :------------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------------------- |
+|                                                   |                                                         |                                                             |                                                 |
+| ------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------- |
 | [`LoadImage()`](#loadimage)                       | [`LoadImageEx()`](#loadimageex)                         | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary) |
 | [`LoadDibFromClipboard()`](#loaddibfromclipboard) | [`FTPDownload()`](#ftpdownload)                         | [`FTPDownloadEx()`](#ftpdownloadex)                         | [`HTTPDownload()`](#httpdownload)               |
-| [`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) |       |
+| [`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) | [`loadFromLocalStorage()`](#loadfromlocalstorage)           |
 
 **Output Methods**
 
-|                                                                                                                          |
-| :----------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+|                                                                                         |                                                                           |                                                                                 |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | [`ConvertToBase64()`](#converttobase64)                                                 | [`ConvertToBlob()`](#converttoblob)                                       | [`FTPUpload()`](#ftpupload)                                                     |
 | [`FTPUploadEx()`](#ftpuploadex)                                                         | [`FTPUploadAllAsMultiPageTIFF()`](#ftpuploadallasmultipagetiff)           | [`FTPUploadAllAsPDF()`](#ftpuploadallaspdf)                                     |
 | [`FTPUploadAsMultiPagePDF()`](#ftpuploadasmultipagepdf)                                 | [`FTPUploadAsMultiPageTIFF()`](#ftpuploadasmultipagetiff)                 | [`HTTPUpload()`](#httpupload)                                                   |
 | [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)                                   | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)                       | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)                         |
 | [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
-| [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)       | [`OutputSelectedAreaAsync()`](#outputselectedareaasync)                  | [`SaveAsBMP()`](#saveasbmp)                                                     |
+| [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff)       | [`OutputSelectedAreaAsync()`](#outputselectedareaasync)                   | [`SaveAsBMP()`](#saveasbmp)                                                     |
 | [`SaveAsJPEG()`](#saveasjpeg)                                                           | [`SaveAsPDF()`](#saveaspdf)                                               | [`SaveAsPNG()`](#saveaspng)                                                     |
 | [`SaveAsTIFF()`](#saveastiff)                                                           | [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)     |
-| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         |                                                 |
+| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)                                   | [`SaveAllAsPDF()`](#saveallaspdf)                                         | [`httpUploadBlob()`](#httpuploadblob)                                           |
+| [`saveBlob()`](#saveblob)                                                               | [`saveToLocalStorage()`](#savetolocalstorage)                             |
+           
 
 
 **Other Methods**
 
-|                                               |
-| :-------------------------------------------- | :---------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
+|                                               |                                           |                                                     |                                           |
+| --------------------------------------------- | ----------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
 | [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield) |
 | [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) | [`ShowFileDialog()`](#showfiledialog)               | [`Print()`](#print)                       |
-| [`PrintEx()`](#printex)                       |
+| [`PrintEx()`](#printex)                       | [`createLocalStorage()`](#createlocalstorage) | [`localStorageExist()`](#localstorageexist)     | [`removeLocalStorage()`](#removelocalstorage) |
 
 **Properties**
 
-|                                                                 |
-| :-------------------------------------------------------------- | :---------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------- |
+|                                                                 |                                                                               |                                             |                                                     |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------- |
 | [`FTPPassword`](#ftppassword)                                   | [`FTPPort`](#ftpport)                                                         | [`FTPUserName`](#ftpusername)               | [`IfPASVMode`](#ifpasvmode)                         |
 | [`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)                                                       | [`IfSSL`](#ifssl)                           | [`HTTPPostResponseString`](#httppostresponsestring) |
 | [`IfShowFileDialog`](#ifshowfiledialog)                         | [`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       |
-| [`IfTiffMultiPage`](#iftiffmultipage)                           | [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) |                    
+| [`IfTiffMultiPage`](#iftiffmultipage)                           | [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) | [`IfSortBySelectionOrder`](#ifsortbyselectionorder)   |                 
 
 **Events**
 
-|                                   |
-| :-------------------------------- | :-------------------------- | --------------------------------------------------------------- |
+|                                   |                             |                                                                 |
+| --------------------------------- | --------------------------- | --------------------------------------------------------------- |
 | [`OnGetFilePath`](#ongetfilepath) | [`OnPostLoad`](#onpostload) | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
 
 
@@ -79,29 +81,31 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Input Methods**
 
-|                                                   |
-| :------------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------------- | ----------------------------------------------- |
-| [`LoadImageEx()`](#loadimageex)                         | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary) |[`LoadDibFromClipboard()`](#loaddibfromclipboard) |               
-| [`HTTPDownload()`](#httpdownload)               |[`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) |       
+|                                                   |                                                         |                                                             |                                                 |
+| ------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------- |
+| [`LoadImageEx()`](#loadimageex)                   | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary)         |[`LoadDibFromClipboard()`](#loaddibfromclipboard)|               
+| [`HTTPDownload()`](#httpdownload)                 |[`HTTPDownloadEx()`](#httpdownloadex)                    | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)     | [`loadFromLocalStorage()`](#loadfromlocalstorage)|      
 
 **Output Methods**
 
-|                                                                                                                          |
-| :----------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| [`ConvertToBase64()`](#converttobase64) | [`ConvertToBlob()`](#converttoblob) | [`HTTPUpload()`](#httpupload) |
-| [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)  | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)  | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)  |
-| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
-|[`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff) |  [`SaveAsBMP()`](#saveasbmp)   | [`SaveAsJPEG()`](#saveasjpeg) | 
-|[`SaveAsPDF()`](#saveaspdf) | [`SaveAsPNG()`](#saveaspng)  |[`SaveAsTIFF()`](#saveastiff) | 
- |[`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff)| [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff) | 
-|[`SaveAllAsPDF()`](#saveallaspdf) |[`ShareImages()`](#shareimages)|
+|                                                              |                                                              |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [`ConvertToBase64()`](#converttobase64)                      | [`ConvertToBlob()`](#converttoblob)                          | [`HTTPUpload()`](#httpupload)                                |
+| [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)        | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)          | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)      |
+| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf) | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
+| [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff) | [`SaveAsBMP()`](#saveasbmp)                                  | [`SaveAsJPEG()`](#saveasjpeg)                                |
+| [`SaveAsPDF()`](#saveaspdf)                                  | [`SaveAsPNG()`](#saveaspng)                                  | [`SaveAsTIFF()`](#saveastiff)                                |
+| [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff) | [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)        |
+| [`SaveAllAsPDF()`](#saveallaspdf)                            | [`ShareImages()`](#shareimages)                              | [`OutputSelectedAreaAsync()`](#outputselectedareaasync)      |
+| [`httpUploadBlob()`](#httpuploadblob)                        |  [`saveToLocalStorage()`](#savetolocalstorage)                             | 
 
 **Other Methods**
 
-|                                               |
-| :-------------------------------------------- | :---------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
+|                                               |                                           |                                                     |                                           |
+| --------------------------------------------- | ----------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
 | [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield) |
 | [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) |  [`Print()`](#print)                       |[`PrintEx()`](#printex)                       |
+| [`createLocalStorage()`](#createlocalstorage) | [`localStorageExist()`](#localstorageexist)     | [`removeLocalStorage()`](#removelocalstorage) |
 
 **Properties**
 
@@ -113,9 +117,9 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Events**
 
-|                                   |
-| :-------------------------------- | :-------------------------- | --------------------------------------------------------------- |
-|  [`OnPostLoad`](#onpostload) | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
+|                                   |                             |                                                                 |
+| --------------------------------- | --------------------------- | --------------------------------------------------------------- |
+|  [`OnPostLoad`](#onpostload)      | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
 
 <div class="multi-panel-end"></div>
 
@@ -2120,6 +2124,83 @@ If you want to use this method to upload / download files through HTTPS, please 
 
 ---
 
+## httpUploadBlob()
+
+Upload images which are in blob format.
+
+**Syntax**
+
+```typescript
+httpUploadBlob(
+    URL: string,
+    blobData: Blob,
+    fileName: string,
+    optionConfig?:{
+      responseType?: Dynamsoft.DWT.EnumDWT_ResponseType, 
+      formFields?:{ 
+        name: string,
+        value: Blob | string,
+        fileName?: string
+      }[],
+      headers?:{
+        name: string,
+        value: string
+      }[]
+    }
+): Promise<any>;
+```
+
+**Parameters**
+
+`URL`: The server-side script to receive the post. For the sample code of Server Script, please refer to [Upload-Server-Script]({{site.indepth}}development/Server-script.html#how-to-process-uploaded-files).
+
+`blobData`: The blob data of the image to upload.
+
+`fileName`: The file name. If `fileName` specifies the extension of the file additionally, 
+ - if the extension is not the same as the blob type, the extra extension will be added to the file name. For example, `fileName` is set to `"test.jpg"`, and blob type is `application/pdf`, the final file name would be `test.jpg.pdf` and the file format is PDF.
+ - if the extension is the same as the blob type, the file name equals to the string which is specified by `fileName`. For example, `fileName` is set to `"test.pdf"`, and blob type is `application/pdf`, the final file name would be `test.pdf` and the file format is PDF.
+
+`optionConfig`:
+- `responseType`: The response type. Please refer to [`EnumDWT_ResponseType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_responsetype).
+- `formFields`: The fields to the HTTP Post Form.
+    - `name`: The name of field.
+    - `value`: The value of field. 
+    - `fileName`: Specify the file name, if `value` is `Blob`.
+- `headers`: The headers to the HTTP Post Form.
+    - `name`: The name of header.
+    - `value`: The value of header.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+Supported blob type: `image/jpeg`, `image/png`, `image/bmp`, `image/tiff`, `application/pdf`, `image/jpg`, `image/tif`.
+
+
+---
+
 ## HttpFieldNameOfUploadedImage
 
 Return or set the field name for the uploaded file. By default, it's "RemoteFile".
@@ -3122,6 +3203,59 @@ If you would like to save images by showing the 'Save File' dialog box, you can 
 
 ---
 
+## saveBlob()
+
+Save image which are in blob format.
+
+**Syntax**
+
+```typescript
+saveBlob(
+    fileName: string,
+    blobData: Blob,
+): Promise<void>;
+```
+
+**Parameters**
+
+`fileName`: The file name. If `fileName` specifies the extension of the file additionally, 
+ - if the extension is not the same as the blob type, the extra extension will be added to the file name. For example, `fileName` is set to `"test.jpg"`, and blob type is `application/pdf`, the final file name would be `test.jpg.pdf` and the file format is PDF.
+ - if the extension is the same as the blob type, the file name equals to the string which is specified by `fileName`. For example, `fileName` is set to `"test.pdf"`, and blob type is `application/pdf`, the final file name would be `test.pdf` and the file format is PDF.
+
+`blobData`: The blob data of the image to save.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+Supported blob type: `image/jpeg`, `image/png`, `image/bmp`, `image/tiff`, `application/pdf`, `image/jpg`, `image/tif`.
+
+
+
+---
+
 ## ShareImages()
 
 Shares images using Android's built in share functionality. 
@@ -3761,6 +3895,281 @@ PrintEx(indices: number[]): boolean;
 
 ---
 
+
+## createLocalStorage()
+
+Create a storage folder locally to save the cache of encrypted images.
+
+**Syntax**
+
+```typescript
+createLocalStorage(
+  settings?: {
+    password?: string;
+  }
+): Promise<string>; 
+```
+
+**Parameters**
+
+`settings`: 
+- `password`: Specify the password which is used to protect the storage folder. Up to 32 characters.
+
+**Return value**
+
+A Promise object which will be resolved with the uid string which will be used as the storage folder's name when the folder is created successfully.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+- If `password` is not specified, the returned `uid` string will be set as the password of the storage folder.
+- The local directory of the created storage folder is under 
+  - Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`
+  - macOS: `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`
+  - Linux: `/opt/dynamsoft/DynamsoftService/storage`
+- The creation will not be successful, if the remaining disk space is less than 
+
+  | System      | Remaining Disk Space |
+  | ----------- | -------------------- |
+  | Windows x86 | < 1.2GB              |
+  | Windows x64 | < 4GB                |
+  | macOS 32bit | < 1.2GB              |
+  | macOS 64bit | < 4GB                |
+  | Linux       | < 4GB                |
+  | Android     | < 100MB              |
+
+---
+
+## localStorageExist()
+
+Determine whether the storage folder exists or not.
+
+**Syntax**
+
+```typescript
+localStorageExist(uid: string):Promise<boolean>;
+```
+
+**Parameters**
+
+`uid`: Specify the uid of the storage folder to determine.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## saveToLocalStorage() 
+
+Save encrypted image caches to the specified storage folder. 
+
+**Syntax**
+
+```typescript
+saveToLocalStorage(
+  settings:{
+    uid: string;
+    password?: string;
+    indices?: number[];
+  }
+): Promise<string[]>;  
+```
+
+**Parameters**
+
+`settings`:
+- `uid`: Specify the storage folder to save the images cache.
+- `password`: The password of the specified storage folder.
+- `indices`: Specify the indices to save. 
+  - If not set, means all images in buffer. 
+  - If set to `[]`, all cache in the specified storage folder will be clear.
+
+**Return value**
+
+A Promise object which will be resolved with the array of image ids which are saved to the storage folder successfully.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage notes**
+
+- Each time this method is called successfully, the original cache in the specified folder will be overwritten by the new cache.
+- The remaining disk space is calculated before saving each encrypted image caches. Subsequent saves will not be successful, if the remaining disk space is less than 
+
+  | System      | Remaining Disk Space |
+  | ----------- | -------------------- |
+  | Windows x86 | < 1.2GB              |
+  | Windows x64 | < 4GB                |
+  | macOS 32bit | < 1.2GB              |
+  | macOS 64bit | < 4GB                |
+  | Linux       | < 4GB                |
+  | Android     | < 100MB              |
+
+---
+
+## loadFromLocalStorage()
+
+Load image from the specified storage folder.
+
+**Syntax**
+
+```typescript
+loadFromLocalStorage (
+    settings:{
+        uid: string,
+        password?:string,
+    }
+): Promise<{oriImageId: string, newImageId: string}[]>; 
+```
+
+**Parameters**
+
+`settings`:
+- `uid`: Specify the storage folder to load the images.
+- `password`: The password of the specified storage folder.
+
+**Return value**
+
+A Promise object which will be resolved with the array of object which contains the original image id (in storage folder) and the new image id (in Web TWAIN buffer) of the loaded image.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## removeLocalStorage()
+
+Remove the specified storage folder. 
+
+**Syntax**
+
+```typescript
+removeLocalStorage(
+  settings:{
+    uid: string,
+    password?: string,
+  }
+): Promise<boolean>; 
+```
+
+**Parameters**
+
+`settings`:
+- `uid`: Specify the storage folder to remove.
+- `password`: The password of the specified storage folder.
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+<td align="center">v18.5+</td>
+</tr>
+
+</table>
+</div>
+
+---
+
 ## JPEGQuality
 
 Return or set the quality for JPEG compression.
@@ -3893,7 +4302,39 @@ When set to `TIFF_JPEG` (7), 1-bit images will be compressed in `TIFF_T6` (4), c
 
 When `TIFF_JPEG` (7) is used, you can use [`JPEGQuality`]({{site.info}}api/WebTwain_IO.html#jpegquality) to further reduce the size of the TIFF file.
 
+## IfSortBySelectionOrder
 
+Whether to load the files by the selection order when load files by open file dialog.
+
+**Syntax**
+
+```javascript
+IfSortBySelectionOrder: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">ActiveX</td>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">not supported </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+<td align="center">v18.5+ </td>
+</tr>
+
+</table>
+</div>
 
 
 <div class="multi-panel-switching-end"></div>

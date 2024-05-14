@@ -58,6 +58,7 @@ permalink: /info/api/appendix.html
 |-2003 | HTTP process error |
 |-2004 | FTP download file is too large |
 |-2007 | The system is busy, some operations are not completed. Please try later |
+|-2137 | Cross-Origin Resource Sharing (CORS) policy is blocking the access. Please contact the Administrator to configure 'Access-Control-Allow-Origin'.|
 |-2207 | The dynamsoft service installed on your computer is outdated and no longer works with the JavaScript code on the website |
 |-2208 | The connection with the local dynamsoft service encountered a problem and has been reset |
 |-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
@@ -125,6 +126,8 @@ permalink: /info/api/appendix.html
 |-2369 | The module for Dynamic Web TWAIN has failed to download |
 |-2370 | The current product key is invalid, please contact the site administrator |
 |-2372 | You cannot convert more than one image to binary when the format is BMP, JPG or PNG |
+|-2395 | The module for Dynamic Web TWAIN failed to download.|
+|-2399 | Invalid imageId.|
 |-2612 | The devices must be an Array. |
 |-2614 | The Dynamsoft Service has been restarted. |
 |-2615 | User cancelled the operation. |
@@ -164,6 +167,23 @@ permalink: /info/api/appendix.html
 |-2833 | The PDF render grayscale must be a boolean. |
 |-2834 | The PDF reader options is invalid. |
 |-2835 | Failed to load CSS file "{filename}". |
+|-2839 | The DocumentCombiner object has been disposed.|
+|-2840 | The file type only supports PDF or TIFF.|
+|-2841 | Add failed, the filetype of the Blob is different from the filetype specified in the createDocumentCombiner parameter.|
+|-2843 | The blob cannot be empty.|
+|-2844 | Only Blob of JPEG, PNG, BMP, TIFF and PDF image types can be saved.|
+|-2845 | Only Blob of JPEG, PNG, BMP, TIFF and PDF image types can be uploaded.|
+|-2846 | The uid cannot be empty.|
+|-2847 | The uid is invalid.|
+|-2848 | The capabilitie value is out of range.|
+|-2849 | The password must not exceed 32 characters in length.|
+|-2850 | The password is not a string.|
+|-2851 | The password must not exceed 32 characters in length.|
+|-2852 | The password is not a string.|
+|-2853 | The imageId cannot be empty.|
+|-2854 | The imageId does not exist.|
+|-2855 | The blob cannot be empty.|
+|-2856 | Invalid blob value.|
 |-2901 | Source document does not exist. Please check the document name or create the document before performing this operation. |
 |-2902 | Target document does not exist. Please check the document name or create the document before performing this operation. |
 |-2905 | This API is not supported on the current operating system. Please contact your system administrator. |
