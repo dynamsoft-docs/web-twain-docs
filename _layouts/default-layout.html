@@ -28,13 +28,12 @@
                 </div>
                 <div class="main row showRightSideMenu" id="articleContent" data-needh3="{{page.needGenerateH3Content}}">
                     <div class="content markdown-body headCounter {{noTitleIndex}} col-xs-12 col-md-12 col-lg-9 col-xl-10 showRightSideMenu">
-                        <div class="dbrThanksDownloading">
-                            <p class="thanksDownloadTitle">Thanks for Downloading Dynamic Web TWAIN 30-Day Trial!</p>
-                            <p style="margin-bottom: 0;">Your download will start shortly. If your download does not begin, <a class="bluelink downloadlink" href="">click here to retry</a>.</p>
+                        <div id="versionNote" style="width: 100%; padding: 20px; background: #b42727; color: #ffffff;border-radius: 5px;">
+                            This is the archived documentation for <span id="versionNoteOldVersion">18.4</span>. If you are using the latest version<span id="versionNoteLatestVersion"></span>, please visit <a class="noVersionAdd" href="/web-twain/docs/about/index.html" style="color: #ffffff;text-decoration: underline !important;">this link</a>.
                         </div>
-                        <article>
-                            {{ content }}
-                        </article>
+
+                        {{ content }}
+
                     </div>
                     <div class="rightSideMenu col-xs-12 col-md-12 col-lg-3 col-xl-2  hide-md hide-sm hide-xs showRightSideMenu">
                         <div id="feedbackFooter" style="color: #306877;">
@@ -85,7 +84,6 @@
     </footer>
 
     <script type="text/javascript">
-        $(".currentVersion").text("latest version (18.4)");
         anchors.add();
         UrlReplace();
         FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}');
