@@ -13,6 +13,6 @@ permalink: /faq/encrypt-pdf-files.html
 
 ## Can I generate/load an encrypted file in PDF format?
 
-Yes. In v18.5, Dynaimc Web TWAIN supports the function of encrypting the generated PDF files.
+Yes. In v18.5, Dynaimc Web TWAIN supports the function of [`encrypting the generated PDF files`]({{site.indepth}}features/pdf.html#pdf-save-settings).
 
-Moreover, since v11.2+, loading password-protected PDFs has been supported by utilizing the [`ReaderOptions`]({{site.info}}api/Interfaces.html#readeroptions) interface along with the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) method.
+Moreover, loading password-protected PDFs has been supported by utilizing the [`ReaderOptions`]({{site.info}}api/Interfaces.html#readeroptions) interface along with the [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) method.

@@ -25,7 +25,7 @@ permalink: /info/schedule/Stable.html
 
 - [Generate the encrypted PDF files]({{site.indepth}}features/pdf.html#pdf-save-settings)
 
-  Supports the generation of encrypted PDF files.
+  Supports the generation of encrypted PDF files with password protection.
 
 ### New APIs
 
