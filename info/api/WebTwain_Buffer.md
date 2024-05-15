@@ -2577,7 +2577,7 @@ updateImage(imageId: string, blob: Blob): Promise <void>;
 
 `imageId`: Specify the image to be updated by its image id.
 
-`blob`: The blob of the new image. Only support the blob which contains single image page. Multi-pages Tiff and PDF are not supoported.
+`blob`: The blob of the new image. Only support the blob which contains single image page. Multi-pages Tiff and PDF are not supported.
 
 <!-- `metaData`: The additional data for the new image. Only available for RGBA image. Please refer to [`MetaData`]({{site.info}}api/Interfaces.html#metadata). -->
 

@@ -30,6 +30,8 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 7. You are visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+ (or any Chromium v94+ based browsers)
 
+8. You have added `Access-Control-Allow-Origin` setting in the `DSConfiguration.ini` file, but the request originates from a different domain and you didn't set [`IfCheckCORS`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifcheckcors) to `true` in `dynamsoft.webtwain.config.js` file. For more information, please refer to [this article]({{site.indepth}}deployment/service.html#access-control-allow-origin).
+
 #### The respective fixes are listed below
 
 1. Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have <a href="{{site.indepth}}deployment/service.html#related-files-and-folders" target="_blank">the correct files</a>.
@@ -47,3 +49,5 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 6. On your Linux client machine, visit https://127.0.0.1:18626 and https://127.0.0.1:18623 separately in Chrome and FireFox, manually add both certificates to the exception lists.
 
 7. See the solution <a href="{{site.faq}}http-insecure-websites-in-chromium-browser.html" target="_blank">here</a>
+
+8. Set [`IfCheckCORS`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifcheckcors) to `true` in `dynamsoft.webtwain.config.js` file.
