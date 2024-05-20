@@ -115,4 +115,6 @@ DWObject.IfShowFileDialog = true;
 DWObject.SaveAllAsPDF(' ', function() {}, function() {})
 ```
 
+When you set a password prior to generating a PDF file, that password becomes necessary each time you attempt to open the file thereafter. The password does not restrict the usage permissions of the PDF. The encryption algorithm utilized is AES256, ensuring robust security measures.
+
 Note: Only the core module license is required to use this method.
