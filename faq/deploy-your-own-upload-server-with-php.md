@@ -51,7 +51,7 @@ Please ensure your web server supports PHP.
 <pre><code>function Upload() {
   if (DWObject &amp;&amp; DWObject.HowManyImagesInBuffer &gt; 0) {
     //Path to the server-side script. You can adjust it according to the actual path of the upload server you deployed.
-    var strUrl = &quot;http://{server-path}/Upload/SaveToFile.php&quot;;
+    var strUrl = &quot;http://{server-path}/Sample/Upload/SaveToFile.php&quot;;
     var imgAry = [DWObject.CurrentImageIndexInBuffer];
     DWObject.HTTPUpload(
       strUrl, 
