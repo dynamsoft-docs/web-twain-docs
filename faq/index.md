@@ -200,6 +200,14 @@ permalink: /faq/
 <li><a href="{{site.faq}}use-blank-page-as-a-separator.html">How to use a blank page as a separator?</a></li>
 
 <li><a href="{{site.faq}}upload-multiple-files-at-a-time.html">How to upload multiple files at a time?</a></li>
+
+<li><a href="{{site.faq}}deploy-your-own-upload-server-with-asp.net.html">How to deploy your own upload server with ASP.NET?</a></li>
+
+<li><a href="{{site.faq}}deploy-your-own-upload-server-with-jsp.html">How to deploy your own upload server with JSP?</a></li>
+
+<li><a href="{{site.faq}}deploy-your-own-upload-server-with-node.js.html">How to deploy your own upload server with Node.js?</a></li>
+
+<li><a href="{{site.faq}}deploy-your-own-upload-server-with-php.html">How to deploy your own upload server with PHP?</a></li>
 </ol>
 
 ## Security
