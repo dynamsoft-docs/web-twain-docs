@@ -977,17 +977,21 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 
 <tr>
 <td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
+<td align="center">H5(Windows/TWAIN)</td>
+<td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">H5(macOS/eSCL)</td>
+<td align="center">H5(Linux/SANE)</td>
 </tr>
 
 <tr>
 <td align="center">not supported</td>
 <td align="center">v15.0+</td>
+<td align="center">v18.5+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
+<td align="center">v18.5+</td>
 <td align="center">v15.1+</td>
 </tr>
 
@@ -4143,25 +4147,27 @@ getCapabilities(
 
 <div class="availability">
 <table>
-
 <tr>
 <td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
+<td align="center">H5(Windows/TWAIN)</td>
+<td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">H5(macOS/eSCL)</td>
+<td align="center">H5(Linux/SANE)</td>
 <td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">not supported</td>
 <td align="center">v16.0+</td>
-<td align="center">v16.0+</td>
+<td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
+<td align="center">v16.0+</td>
+<td align="center">v18.2+</td>
 </tr>
-
 </table>
 </div>
 
@@ -4200,18 +4206,22 @@ Please refer to [`Capabilities`]({{site.info}}api/Interfaces.html#capabilities).
 
 <tr>
 <td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
+<td align="center">H5(Windows/TWAIN)</td>
+<td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">H5(macOS/eSCL)</td>
+<td align="center">H5(Linux/SANE)</td>
 <td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">not supported</td>
 <td align="center">v16.0+</td>
+<td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
 </tr>
@@ -4318,18 +4328,22 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 <tr>
 <td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
+<td align="center">H5(Windows/TWAIN)</td>
+<td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">H5(macOS/eSCL)</td>
+<td align="center">H5(Linux/SANE)</td>
 <td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
 </tr>
@@ -4374,21 +4388,28 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 <tr>
 <td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
+<td align="center">H5(Windows/TWAIN)</td>
+<td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">H5(macOS/eSCL)</td>
+<td align="center">H5(Linux/SANE)</td>
 <td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
+
+</table>
+</div>
 
 </table>
 </div>
@@ -4416,21 +4437,28 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 
 <tr>
 <td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
+<td align="center">H5(Windows/TWAIN)</td>
+<td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">H5(macOS/eSCL)</td>
+<td align="center">H5(Linux/SANE)</td>
 <td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
+<td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
+
+</table>
+</div>
 
 </table>
 </div>
