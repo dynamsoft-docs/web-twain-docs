@@ -4299,7 +4299,7 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 
 **Parameters**
 
-`deviceType`: The device type. Please refere to [`EnumDWT_DeviceType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
+`deviceType`: The device type. Please refer to [`EnumDWT_DeviceType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype).
 
 `refresh`: Default value is `false`.
 
