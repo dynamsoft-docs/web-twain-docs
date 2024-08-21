@@ -533,7 +533,7 @@ The method [`unbind()`]({{site.info}}api/WebTwain_Viewer.html#unbind) will dispo
 
 ## createThumbnailViewer()
 
-Generate a independent ThumbnailViewer object.
+Generate a independent `ThumbnailViewer` object. This `ThumbnailViewer` behaves in the same way as the default `{WebTwainObject}.Viewer`, and uses the same APIs.
 
 **Syntax**
 
@@ -577,13 +577,17 @@ createThumbnailViewer(
 
 **Example**
 
-> The example code shows 2 ways to use the API `createThumbnailViewer()`
+> The example code shows 2 ways to create a `ThumbnailViewer` and configure events for the new viewer.
 
 ```javascript
 // Use default settings
 var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.background = "rgb(0,0,255)";
 objThumbnailViewer.show();
+
+objThumbnailViewer.on("click",LeftClick);
+objThumbnailViewer.on("contextmenu",RightClick);
+objThumbnailViewer.on("pageRendered", PageRendered);
 ```
 
 ```javascript
@@ -609,8 +613,12 @@ var thumbnailViewerSettings = {
     selectedPageBackground: "rgb(199, 222, 252)"
 }​​​​​​​;
 
-var thumbnail = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
-thumbnail.show();
+var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
+objThumbnailViewer.show();
+
+objThumbnailViewer.on("click",LeftClick);
+objThumbnailViewer.on("contextmenu",RightClick);
+objThumbnailViewer.on("pageRendered", PageRendered);
 ```
 
 **Usage notes**
