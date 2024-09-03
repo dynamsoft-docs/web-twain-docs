@@ -413,3 +413,9 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}refund-policy.html">What's your refund policy?</a></li>
 </ol>
+
+## Annotation
+
+<ol>
+<li><a href="{{site.faq}}dwt-with-annotation.html">How can I add annotations to an image and then save/upload it?</a></li>
+</ol>

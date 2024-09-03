@@ -162,3 +162,5 @@ tree_list:
         path: /faq/#error-troubleshooting
       - name: Licensing and Purchase
         path: /faq/#licensing-and-purchase
+      - name: Annotation
+        path: /faq/#annotation

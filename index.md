@@ -78,3 +78,4 @@ permalink: /index.html
    - [Project Deployment and End-user Installation]({{site.faq}}#project-deployment-and-end-user-installation)
    - [Error Troubleshooting]({{site.faq}}#error-troubleshooting)
    - [Licensing and Purchase]({{site.faq}}#licensing-and-purchase)
+   - [Annotation]({{site.faq}}#annotation)
