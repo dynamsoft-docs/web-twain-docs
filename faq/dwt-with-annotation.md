@@ -114,7 +114,7 @@ Links to API Reference:
     - [`createDocument()`](https://www.dynamsoft.com/document-viewer/docs/api/class/documentmanager.html#createdocument)  
     - [`openDocument()`](https://www.dynamsoft.com/document-viewer/docs/api/class/editviewer.html#opendocument)  
 
-### 3.3 Create a Dynamic Web TWAIN Instance
+### 3.3 Create a Viewerless Dynamic Web TWAIN Instance
 ```javascript
 // Create Dynamic Web TWAIN object
 // Public trial license which is valid for 24 hours
