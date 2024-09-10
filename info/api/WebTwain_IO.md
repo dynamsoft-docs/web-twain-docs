@@ -853,8 +853,8 @@ DWObject.FTPUpload(
     '192.168.8.222', //The FTP Host
     0, // The index of the image
     'test.pdf', // The path & name of the file 
-    OnSuccess, // Callback in case of success
-    OnFailure // Callback in case of failure
+    onSuccess, // Callback in case of success
+    onFailure // Callback in case of failure
 );
 ```
 
