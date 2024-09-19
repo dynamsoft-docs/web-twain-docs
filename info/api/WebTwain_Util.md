@@ -299,7 +299,7 @@ Dynamsoft.FileUploader.Init(
   },
   function () {}
 );
-DWObject.GenerateURLForUploadData(
+DWTObject.GenerateURLForUploadData(
   [0, 1],
   EnumDWT_ImageType.IT_PDF,
   function (resultURL, newIndices, enumImageType) {

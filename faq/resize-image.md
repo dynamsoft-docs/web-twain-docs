@@ -19,7 +19,7 @@ Or you can leverage the negotiation capabilities functionality by following the 
 1. ask for the supported sizes of your device.
 
 ```javascript
-DWObject.getCapabilities(
+DWTObject.getCapabilities(
   function (result) {
     for (var i = 0; i < result.length; i++) {
       if (
@@ -39,7 +39,7 @@ DWObject.getCapabilities(
 2. set the page size to a size standard as needed.
 
 ```javascript
-DWObject.setCapabilities(
+DWTObject.setCapabilities(
   {
     exception: "ignore",
     capabilities: [

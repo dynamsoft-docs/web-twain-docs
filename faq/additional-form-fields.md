@@ -17,8 +17,8 @@ You can use <a href="{{site.info}}api/WebTwain_IO.html#sethttpformfield" target=
 
 ```javascript
 // Clear old fields before adding new ones
-DWObject.ClearAllHTTPFormField();
-DWObject.SetHTTPFormField("FileType", "Insurance Doc");
+DWTObject.ClearAllHTTPFormField();
+DWTObject.SetHTTPFormField("FileType", "Insurance Doc");
 ```
 
 You can check out this <a href="https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Upload-Them/DWT_Scan_Upload_Demo.html" target="_blank">demo project</a> for sending additional form fields when uploading the scanned document.
@@ -40,20 +40,20 @@ function uploadSeparateFiles(indices, type) {
     actionPage = "/upload.aspx";
   // path to the server-side script
   var url = protocol + window.location.hostname + ":" + port + actionPage;
-  if (DWObject) {
+  if (DWTObject) {
     var done = 0,
       count = indices.length;
     var toBlob = function (index) {
       var fieldName = "SampleFile_" + index;
       var fileName = fieldName + getExtension(type);
-      DWObject.ConvertToBlob(
+      DWTObject.ConvertToBlob(
         [index],
         type,
         function (result, _indices, type) {
-          DWObject.SetHTTPFormField(fieldName, result, fileName);
+          DWTObject.SetHTTPFormField(fieldName, result, fileName);
           done++;
           if (done === count) {
-            DWObject.HTTPUpload(
+            DWTObject.HTTPUpload(
               url,
               function () {
                 console.log("Success");

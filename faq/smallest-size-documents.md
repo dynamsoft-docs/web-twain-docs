@@ -33,8 +33,8 @@ There are a few things that you can try to reduce the size of a resulting file
         - If you want to save in PDF format (No PDF Rasterizer Addon license needed for this API),
   
         ```javascript
-        DWObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG});
-        //or set DWObject.Addon.PDF.Write.Setup({compression: 5}); which is equivalent.
+        DWTObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG});
+        //or set DWTObject.Addon.PDF.Write.Setup({compression: 5}); which is equivalent.
         ```
 
         ```html
@@ -45,8 +45,8 @@ There are a few things that you can try to reduce the size of a resulting file
         - If you want to save in TIF format,
   
         ```javascript
-        DWObject.TIFFCompressionType = Dynamsoft.DWT.EnumDWT_TIFFCompressionType.TIFF_JPEG;
-        //or set DWObject.TIFFCompressionType = 7 which is equivalent.
+        DWTObject.TIFFCompressionType = Dynamsoft.DWT.EnumDWT_TIFFCompressionType.TIFF_JPEG;
+        //or set DWTObject.TIFFCompressionType = 7 which is equivalent.
         ```
     
         - If you want to save in JPEG format, please jump to **Step 2** directly.
@@ -56,7 +56,7 @@ There are a few things that you can try to reduce the size of a resulting file
         - set the <a href="{{site.info}}api/WebTwain_IO.html#jpegquality" target="_blank">JPEGQuality</a> to a lower value, for example:
 
         ```javascript
-        DWObject.JPEGQuality = 20;
+        DWTObject.JPEGQuality = 20;
         ```
         
   **Note that black & white image cannot be saved in the JPEG format. To reduce the size, please convert the image to grayscale.**

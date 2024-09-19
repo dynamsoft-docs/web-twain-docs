@@ -25,13 +25,13 @@ A local scanner refers to a scanner that is plugged in the same desktop via USB 
 The following code shows one way to acquire the image via the local Dynamsoft Service.
 ``` javascript
 //Get the list of available TWAIN scanners
-let scannerList=await DWObject.GetDevicesAsync()
+let scannerList=await DWTObject.GetDevicesAsync()
 
 //Select the desired scanner from the list [selecting the first scanner in the list for this example]
-await DWObject.SelectDeviceAsync(scannerList[0])
+await DWTObject.SelectDeviceAsync(scannerList[0])
 
 //Acquire image (with configuration)
-await DWObject.AcquireImageAsync({Resolution:100,IfShowUI:false})
+await DWTObject.AcquireImageAsync({Resolution:100,IfShowUI:false})
 ```
 
 ### Scan From an eSCL Scanner
@@ -44,13 +44,13 @@ Many modern scanners and multi-functional printers (MFPs) support the eSCL proto
 The following code shows one way to acquire the image via the eSCL protocol.
 ``` javascript
 //Get the list of available eSCL scanners
-let esclDeviceList=await DWObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER)
+let esclDeviceList=await DWTObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER)
 
 //Select the desired scanner from the list
-await DWObject.SelectDeviceAsync(esclDeviceList[0])
+await DWTObject.SelectDeviceAsync(esclDeviceList[0])
 
 //Acquire image (with configuration)
-await DWObject.AcquireImageAsync({Resolution:100,IfShowUI:false})
+await DWTObject.AcquireImageAsync({Resolution:100,IfShowUI:false})
 ```
 
 ## Capture from cameras
@@ -68,22 +68,22 @@ The following code snippet shows how to use a camera through `DirectShow`.
 
 ``` javascript
 function PlayVideo(bShow) {
-    if (DWObject) {
-        DWObject.Addon.Webcam.StopVideo();
-        DWObject.Addon.Webcam.SelectSource("CAMERA-NAME");
-        DWObject.Addon.Webcam.PlayVideo(DWObject, 80, function() {});
+    if (DWTObject) {
+        DWTObject.Addon.Webcam.StopVideo();
+        DWTObject.Addon.Webcam.SelectSource("CAMERA-NAME");
+        DWTObject.Addon.Webcam.PlayVideo(DWTObject, 80, function() {});
     }
 }
 
 function CaptureImage() {
-    if (DWObject) {
-        DWObject.Addon.Webcam.SelectSource("CAMERA-NAME");
+    if (DWTObject) {
+        DWTObject.Addon.Webcam.SelectSource("CAMERA-NAME");
         var funCaptureImage = function() {
             setTimeout(function() {
-                DWObject.Addon.Webcam.StopVideo();
+                DWTObject.Addon.Webcam.StopVideo();
             }, 50);
         };
-        DWObject.Addon.Webcam.CaptureImage(funCaptureImage, funCaptureImage);
+        DWTObject.Addon.Webcam.CaptureImage(funCaptureImage, funCaptureImage);
     }
 }
 ```
@@ -107,11 +107,11 @@ var onSuccess = function() {
 var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
-DWObject.IfShowFileDialog = true;
+DWTObject.IfShowFileDialog = true;
 // PDF Rasterizer Addon is used here to ensure PDF support
-DWObject.Addon.PDF.SetResolution(200);
-DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
-DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
+DWTObject.Addon.PDF.SetResolution(200);
+DWTObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+DWTObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
 ```
 
 ### Open an existing file using its absolute path
@@ -125,10 +125,10 @@ var onSuccess = function() {
 var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
-DWObject.IfShowFileDialog = false;
+DWTObject.IfShowFileDialog = false;
 // PDF Addon is used here to ensure PDF support
-DWObject.Addon.PDF.SetResolution(200);
-DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+DWTObject.Addon.PDF.SetResolution(200);
+DWTObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
 /* "YOUR-FILE-PATH" - example path
  * Windows: 
  *   Local: "D:\\Files\\sample.pdf"
@@ -136,7 +136,7 @@ DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL
  * macOS: "/Applications/Images/sample.pdf"
  * Linux: "/home/userA/Files/sample.pdf"
  */
-DWObject.LoadImage("YOUR-FILE-PATH", onSuccess, onFailure);
+DWTObject.LoadImage("YOUR-FILE-PATH", onSuccess, onFailure);
 ```
 
 ### Drag and drop files onto the viewer area of a `WebTwain` instance
@@ -163,8 +163,8 @@ var onSuccess = function() {
 var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
-DWObject.HTTPPort = 300;
-DWObject.HTTPDownload("localhost", "/files/sample.tif", onSuccess, onFailure);
+DWTObject.HTTPPort = 300;
+DWTObject.HTTPDownload("localhost", "/files/sample.tif", onSuccess, onFailure);
 ```
 
 ##### The URL points to a server-side script
@@ -183,8 +183,8 @@ var onSuccess = function() {
 var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
-DWObject.HTTPPort = 300;
-DWObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
+DWTObject.HTTPPort = 300;
+DWTObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
 ```
 
 Server-side script
@@ -231,10 +231,10 @@ var onSuccess = function() {
 var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
-DWObject.FTPPort = 21;
-DWObject.FTPUserName = "FTPUser";
-DWObject.FTPPassword = "SomePassword";
-DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
+DWTObject.FTPPort = 21;
+DWTObject.FTPUserName = "FTPUser";
+DWTObject.FTPPassword = "SomePassword";
+DWTObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
 ```
 
 ### Load files in binary or base64 string format 
@@ -257,12 +257,12 @@ var onFailure = function(errorCode, errorString) {
  * come from anywhere.
  */
 function loadFileFromBinary() {
-    if (DWObject) {
-        DWObject.ConvertToBlob(
+    if (DWTObject) {
+        DWTObject.ConvertToBlob(
             [0],
             Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function(result) {
-                DWObject.LoadImageFromBinary(
+                DWTObject.LoadImageFromBinary(
                     result, onSuccess, onFailure);
             }, onFailure);
     }
@@ -276,12 +276,12 @@ function loadFileFromBinary() {
  * should NOT be included in the data to load.
  */
 function loadFileFromBase64() {
-    if (DWObject) {
-        DWObject.ConvertToBase64(
+    if (DWTObject) {
+        DWTObject.ConvertToBase64(
             [0],
             Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function(result) {
-                DWObject.LoadImageFromBase64Binary(
+                DWTObject.LoadImageFromBase64Binary(
                     result.getData(0, result.getLength()),
                     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
                     onSuccess, onFailure);
@@ -295,7 +295,7 @@ function loadFileFromBase64() {
 > Supported on [desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices) only.
 
 ``` javascript
-DWObject.LoadDibFromClipboard()
+DWTObject.LoadDibFromClipboard()
 ```
 
 ## Related KBs

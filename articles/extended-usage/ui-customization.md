@@ -5,7 +5,9 @@ title: Dynamic Web TWAIN SDK Features - UI Elements
 keywords: Dynamic Web TWAIN, Documentation, UI
 breadcrumbText: UI
 description: Dynamic Web TWAIN SDK Documentation UI Page
-permalink: /indepth/features/ui.html
+permalink: /extended-usage/ui-customization.html
+redirect_from:
+    - /indepth/features/ui.html
 ---
 
 # UI Elements
@@ -65,7 +67,7 @@ Both bars show up when uploading or downloading and can be hidden by setting  [ 
 For uploading or downloading, you can also build your own progress bar with the help of the built-in event [ `OnInternetTransferPercentage` ]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage). 
 
 ``` javascript
-DWObject.RegisterEvent('OnInternetTransferPercentage',
+DWTObject.RegisterEvent('OnInternetTransferPercentage',
     function(percentage) {
         console.log(percentage);
         // Use the percentage to build your own progress bar
@@ -84,7 +86,7 @@ If you have enabled the security dialogs, you may see the following dialog when 
 You can change the language with the method [ `SetLanguage()` ]({{site.info}}api/WebTwain_Util.html#setlanguage). The following sets the language to Spanish
 
 ``` javascript
-DWObject.SetLanguage(Dynamsoft.DWT.EnumDWT_Language.Spanish);
+DWTObject.SetLanguage(Dynamsoft.DWT.EnumDWT_Language.Spanish);
 ```
 
 ![UI-6]({{site.assets}}imgs/UI-6.png)
@@ -94,7 +96,7 @@ DWObject.SetLanguage(Dynamsoft.DWT.EnumDWT_Language.Spanish);
 `Dynamic Web TWAIN` has many built-in error messages as shown [here]({{site.info}}api/appendix.html#error-list). Each `ErrorString` has its own `ErrorCode` . To change the language of the message, you can read the `ErrorCode` and output the error string you have customized. For example
 
 ``` javascript
-if (DWObject.ErrorCode === -2359) {
+if (DWTObject.ErrorCode === -2359) {
     // ErrorString "The index is out of range."
     // To Spanish
     console.log("El índice está fuera de rango.")

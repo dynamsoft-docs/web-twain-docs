@@ -20,13 +20,13 @@ There are two ways to achieve this:
 * Set [IfUseTwainDSM]({{site.info}}api/WebTwain_Acquire.html#ifusetwaindsm) to `true`
 
 ``` javascript
-DWObject.IfUseTwainDSM = true;
+DWTObject.IfUseTwainDSM = true;
 ```
 
 * Filter sources before listing them
 
 ``` javascript
-var sources = DWObject.GetSourceNames();
+var sources = DWTObject.GetSourceNames();
 sources = sources.filter(source => !source.toLowerCase().includes('wia'));
 ```
 

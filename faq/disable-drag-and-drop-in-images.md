@@ -16,5 +16,5 @@ permalink: /faq/disable-drag-and-drop-in-images.html
 You can leverage the inbuilt API <a href="{{site.info}}api/WebTwain_Viewer.html#acceptdrop" target="_blank">acceptDrop</a> to disable the load functionality of the dropped images in the viewer.
 
 ```javascript
-DWObject.Viewer.acceptDrop = false;
+DWTObject.Viewer.acceptDrop = false;
 ```

@@ -54,7 +54,7 @@ First of all, you need to create a storage item by [`createLocalStorage()`]({{si
 var folderSettings = {
   password: "XXXXXXXX",
 }; // Specify the password of the created storage folder
-var storageItemUid = await DWObject.createLocalStorage(folderSettings);
+var storageItemUid = await DWTObject.createLocalStorage(folderSettings);
 ```
 
 Please ensure to set a strong password to enhance data security, especially in multi-user login scenarios.
@@ -69,7 +69,7 @@ The local directory of the created storage folder is under
 To save the specified image(s) to the storage folder, [`saveToLocalStorage()`]({{site.info}}api/WebTwain_IO.html#savetolocalstorage) method is required.
 
 ```javascript
-var bExist = await DWObject.localStorageExist(storageItemUid); // Determine whether the folder exists
+var bExist = await DWTObject.localStorageExist(storageItemUid); // Determine whether the folder exists
 
 if (bExist) {
   var saveImageSettings = {
@@ -77,7 +77,7 @@ if (bExist) {
     password: "XXXXXXXX",
     indices: [0,1], // The first two images in buffer
   };
-  await DWObject.saveToLocalStorage(saveImageSettings);
+  await DWTObject.saveToLocalStorage(saveImageSettings);
 }
 else {
   console.log("The storage folder does not exist.");
@@ -89,14 +89,14 @@ else {
 To load the encypted image caches into Dynamic Web TWAIN again, please use the method [`loadFromLocalStorage()`]({{site.info}}api/WebTwain_IO.html#loadfromlocalstorage).
 
 ```javascript
-var bExist = await DWObject.localStorageExist(storageItemUid); // Determine whether the folder exists
+var bExist = await DWTObject.localStorageExist(storageItemUid); // Determine whether the folder exists
 
 if (bExist) {
   var loadImageSettings = {
     uid: storageItemUid,
     password: "XXXXXXXX",
   };
-  await DWObject.loadFromLocalStorage(loadImageSettings);
+  await DWTObject.loadFromLocalStorage(loadImageSettings);
 }
 else {
   console.log("The storage folder does not exist.");
@@ -108,14 +108,14 @@ else {
 If you would like to remove the storage folder by programming, the method [`removeLocalStorage()`]({{site.info}}api/WebTwain_IO.html#removelocalstorage) can help.
 
 ```javascript
-var bExist = await DWObject.localStorageExist(storageItemUid); // Determine whether the folder exists
+var bExist = await DWTObject.localStorageExist(storageItemUid); // Determine whether the folder exists
 
 if (bExist) {
   var removeFolderSettings = {
     uid: storageItemUid,
     password: "XXXXXXXX",
   };
-  await DWObject.removeLocalStorage(removeFolderSettings);
+  await DWTObject.removeLocalStorage(removeFolderSettings);
 }
 else {
   console.log("The storage folder does not exist.");
@@ -134,26 +134,26 @@ else {
 
 ``` javascript
 /* Assuming there are 5 images in the buffer, the following code changes the 1st image to be the 3rd. The sequence changes to 12034 from 01234*/
-DWObject.MoveImage(0, 2);
+DWTObject.MoveImage(0, 2);
 ```
 
 * If you are looking to simply switch two images in the buffer, use [`SwitchImage()`]({{site.info}}api/WebTwain_Buffer.html#switchimage):
 
 ``` javascript
 // Switch the positions of the 1st and the 3rd images
-DWObject.SwitchImage(0, 2);
+DWTObject.SwitchImage(0, 2);
 ```
 
 * Lastly, you can use one of the following methods to remove one or multiple images from the buffer:
 
 ``` javascript
 // Removes a single image specified by index
-DWObject.RemoveImage(1);
+DWTObject.RemoveImage(1);
 //Removes all images in the buffer
-DWObject.RemoveAllImages();
+DWTObject.RemoveAllImages();
 // Removes the first 3 images from the buffer
-DWObject.SelectImages([0, 1, 2]);
-DWObject.RemoveAllSelectedImages();
+DWTObject.SelectImages([0, 1, 2]);
+DWTObject.RemoveAllSelectedImages();
 ```
 
 ## Tagging Images
@@ -162,16 +162,16 @@ DWObject.RemoveAllSelectedImages();
 
 ``` javascript
 /* Tags the first two scanned images with the classification "title" to indicate that they belong to the title section of the book being scanned. The 3 images after the first two belong to chapter 1 of the book so they were tagged correspondingly */
-DWObject.TagImages([0, 1], "title");
-DWObject.TagImages([2, 3, 4], "chapter1")
+DWTObject.TagImages([0, 1], "title");
+DWTObject.TagImages([2, 3, 4], "chapter1")
 ```
 
 If you are scanning in a new batch of documents and would like to put the same tag on all of them, you can do so using the [ `SetDefaultTag()` ]({{site.info}}api/WebTwain_Buffer.html#setdefaulttag) method.
 
 ``` javascript
 /* The next batch of documents are the medical records of patient123 so instead of tagging each document after they are scanned, tag them all as such. */
-DWObject.SetDefaultTag("patient123");
-DWObject.AcquireImage();
+DWTObject.SetDefaultTag("patient123");
+DWTObject.AcquireImage();
 ```
 
 To filter the images in the buffer by a tag, use [`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag). 

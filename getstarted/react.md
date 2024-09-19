@@ -69,7 +69,7 @@ export default class DWT extends React.Component {
     constructor(props) {
         super(props);
     }
-    DWObject = null;
+    DWTObject = null;
     containerId = 'dwtcontrolContainer';
     componentDidMount() {
         Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', () => {
@@ -86,13 +86,13 @@ export default class DWT extends React.Component {
         Dynamsoft.DWT.Load();
     }
     Dynamsoft_OnReady() {
-        this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
+        this.DWTObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
     }
     acquireImage() {
-        if (this.DWObject) {
-            this.DWObject.SelectSourceAsync()
+        if (this.DWTObject) {
+            this.DWTObject.SelectSourceAsync()
             .then(() => {
-                return this.DWObject.AcquireImageAsync({
+                return this.DWTObject.AcquireImageAsync({
                     IfCloseSourceAfterAcquire: true,
                 });
             })

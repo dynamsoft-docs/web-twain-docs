@@ -2011,7 +2011,7 @@ RegisterEvent('OnBitmapChanged',
 **Example**
 
 ```javascript
-DWObject.RegisterEvent(
+DWTObject.RegisterEvent(
   "OnBitmapChanged",
   function (updatedIndices, operationType, currentIndex) {
     console.log(updatedIndices);
@@ -2152,7 +2152,7 @@ GetTagListByIndex(index: number):string[]
 **Example**
 
 ```javascript
-DWObject.GetTagListByIndex(0);
+DWTObject.GetTagListByIndex(0);
 ```
 
 ---
@@ -2212,15 +2212,15 @@ CopyToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 **Example**
 
 ```typescript
-DWObject.CreateDocument("Document1");
-DWObject.CreateDocument("Document2");
-DWObject.OpenDocument("Document1");
-await DWObject.SelectSourceAsync();
-await DWObject.AcquireImageAsync({   //scan 5 Images
+DWTObject.CreateDocument("Document1");
+DWTObject.CreateDocument("Document2");
+DWTObject.OpenDocument("Document1");
+await DWTObject.SelectSourceAsync();
+await DWTObject.AcquireImageAsync({   //scan 5 Images
         IfCloseSourceAfterAcquire: true 
     });
-await DWObject.CopyToDocumentAsync("Document1", "Document2", [0,1]);
-DWObject.OpenDocument("Document2");
+await DWTObject.CopyToDocumentAsync("Document1", "Document2", [0,1]);
+DWTObject.OpenDocument("Document2");
 ```
 
 ---
@@ -2267,9 +2267,9 @@ CreateDocument(documentName:string):boolean;
 
 ```javascript
 //Save the scanned image(s) under 'Document1'.
-DWObject.CreateDocument("Document1");
-DWObject.OpenDocument("Document1"); //Need to call OpenDocument after CreateDocument.
-DWObject.AcquireImage(successCallback, failureCallback);
+DWTObject.CreateDocument("Document1");
+DWTObject.OpenDocument("Document1"); //Need to call OpenDocument after CreateDocument.
+DWTObject.AcquireImage(successCallback, failureCallback);
 function successCallback() {
   console.log("successful");
 }
@@ -2335,15 +2335,15 @@ MoveToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 **Example**
 
 ```typescript
-DWObject.CreateDocument("Document1");
-DWObject.CreateDocument("Document2");
-DWObject.OpenDocument("Document1");
-await DWObject.SelectSourceAsync();
-await DWObject.AcquireImageAsync({   //scan 5 Images
+DWTObject.CreateDocument("Document1");
+DWTObject.CreateDocument("Document2");
+DWTObject.OpenDocument("Document1");
+await DWTObject.SelectSourceAsync();
+await DWTObject.AcquireImageAsync({   //scan 5 Images
         IfCloseSourceAfterAcquire: true 
     });
-await DWObject.MoveToDocumentAsync("Document1", "Document2", [0,1]);
-DWObject.OpenDocument("Document2");
+await DWTObject.MoveToDocumentAsync("Document1", "Document2", [0,1]);
+DWTObject.OpenDocument("Document2");
 ```
 
 ---
@@ -2390,11 +2390,11 @@ OpenDocument(documentName:string):boolean;
 
 ```javascript
 //Save the scanned image(s) under 'Document2'.
-DWObject.CreateDocument("Document1");
-DWObject.CreateDocument("Document2");
-DWObject.CreateDocument("Document3");
-DWObject.OpenDocument("Document2"); //Need to call OpenDocument after CreateDocument.
-DWObject.AcquireImage(successCallback, failureCallback);
+DWTObject.CreateDocument("Document1");
+DWTObject.CreateDocument("Document2");
+DWTObject.CreateDocument("Document3");
+DWTObject.OpenDocument("Document2"); //Need to call OpenDocument after CreateDocument.
+DWTObject.AcquireImage(successCallback, failureCallback);
 function successCallback() {
   console.log("successful");
 }

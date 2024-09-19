@@ -21,7 +21,7 @@ You may see the following errors when you open your application. These errors ma
 - **Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'**
 
 ### Cause:
-Typically, an application uses `DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer')` to create the object at the target container. There are certain conditions where Dynamic Web TWAIN's initialization process will complete, but after initialization, the target container is not defined or remains null.  You will then see the error when trying to upload your files.
+Typically, an application uses `DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer')` to create the object at the target container. There are certain conditions where Dynamic Web TWAIN's initialization process will complete, but after initialization, the target container is not defined or remains null.  You will then see the error when trying to upload your files.
 
 ### Workaround:
 Please check if your container is created dynamically (especially if you are using dynamic frameworks). There are two ways to address the issue. 
@@ -34,11 +34,11 @@ Dynamsoft.DWT.CreateDWTObjectEx(
         WebTwainId: 'myDWT'
     },
     function(obj) {
-        DWObject = obj;
-        DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
-        DWObject.Viewer.height = 400;
-        DWObject.Viewer.width = 600;
-        DWObject.Viewer.show();
+        DWTObject = obj;
+        DWTObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
+        DWTObject.Viewer.height = 400;
+        DWTObject.Viewer.width = 600;
+        DWTObject.Viewer.show();
     },
     function(err) {
         console.log(err);

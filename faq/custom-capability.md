@@ -25,8 +25,8 @@ The steps are:
 1. Use <a href="{{site.info}}api/WebTwain_Acquire.html#getcapabilities" target="_blank">getCapabilities</a> to find the capability you want to set.
 
 ```javascript
-DWObject.OpenSource();
-DWObject.getCapabilities(
+DWTObject.OpenSource();
+DWTObject.getCapabilities(
   function () {
     console.log(arguments);
   },
@@ -41,7 +41,7 @@ DWObject.getCapabilities(
 2. Use <a href="{{site.info}}api/WebTwain_Acquire.html#setcapabilities" target="_blank">setCapabilities</a> to set the capability.
 
 ```javascript
-DWObject.setCapabilities(
+DWTObject.setCapabilities(
   {
     exception: "ignore",
     capabilities: [

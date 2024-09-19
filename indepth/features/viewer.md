@@ -42,18 +42,18 @@ If you want to further customize the viewer, you can use [ `Dynamsoft.DWT.Create
  You can then bind and customize the viewer before showing it with the APIs [ `bind()` ]({{site.info}}api/WebTwain_Viewer.html#bind) and [ `show()` ]({{site.info}}api/WebTwain_Viewer.html#show). For example, the following code shows a viewer with thumbnails
 
 ``` javascript
-var DWObject = null;
+var DWTObject = null;
 Dynamsoft.DWT.CreateDWTObjectEx({
         WebTwainId: 'dwtcontrol'
     },
     function(obj) {
-        DWObject = obj;
-        DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
-        DWObject.Viewer.height = 600;
-        DWObject.Viewer.width = 800;
-        var thumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+        DWTObject = obj;
+        DWTObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
+        DWTObject.Viewer.height = 600;
+        DWTObject.Viewer.width = 800;
+        var thumbnailViewer = DWTObject.Viewer.createThumbnailViewer();
         thumbnailViewer.show();
-        DWObject.Viewer.show();
+        DWTObject.Viewer.show();
     },
     function(err) {
         console.log(err);

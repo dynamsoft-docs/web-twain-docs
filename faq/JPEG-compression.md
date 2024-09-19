@@ -30,11 +30,11 @@ if ( /*If save in JPEG*/ ) {
 
     //Check whether the current image is B&W
     //1 is B&W, 8 is Gray, 24 is RGB
-    if (DWObject.GetImageBitDepth(DWObject.CurrentImageIndexInBuffer) == 1)
+    if (DWTObject.GetImageBitDepth(DWTObject.CurrentImageIndexInBuffer) == 1)
         //If so, convert the image to Gray
-        DWObject.ConvertToGrayScale(DWObject.CurrentImageIndexInBuffer);
+        DWTObject.ConvertToGrayScale(DWTObject.CurrentImageIndexInBuffer);
     //Save image in JPEG
-    DWObject.SaveAsJPEG("DynamicWebTWAIN.jpg", DWObject.CurrentImageIndexInBuffer);
+    DWTObject.SaveAsJPEG("DynamicWebTWAIN.jpg", DWTObject.CurrentImageIndexInBuffer);
 
 }
 ```

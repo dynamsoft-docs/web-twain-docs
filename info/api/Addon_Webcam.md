@@ -194,7 +194,7 @@ Start to play the video stream from the current camera.
 
 ```typescript
 PlayVideo(
-    DWObject: WebTwain,
+    DWTObject: WebTwain,
     quality: number,
     frameDidShow?: function () {}
 ): boolean;
@@ -202,7 +202,7 @@ PlayVideo(
 
 **Parameters**
 
-`DWObject`: Specify a WebTwain instance to show the video.
+`DWTObject`: Specify a WebTwain instance to show the video.
 
 `quality`: Specify the quality of the video.
 
@@ -805,7 +805,7 @@ SetResolution(resolution: string): boolean;
 **Example**
 
 ```javascript
-DWObject.Addon.Webcam.SetResolution("640 x 480");
+DWTObject.Addon.Webcam.SetResolution("640 x 480");
 ```
 
 ---

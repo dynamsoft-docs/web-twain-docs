@@ -61,11 +61,11 @@ Please ensure that Node.js is installed. The recommended version is v20.13.1.
 </li>
 </ol>
 <pre><code>function Upload() {
-  if (DWObject &amp;&amp; DWObject.HowManyImagesInBuffer &gt; 0) {
+  if (DWTObject &amp;&amp; DWTObject.HowManyImagesInBuffer &gt; 0) {
     //Path to the server-side script. You can adjust it according to the actual path of the upload server you deployed.
     var strUrl = &quot;http://localhost:2020/Upload&quot;;
-    var imgAry = [DWObject.CurrentImageIndexInBuffer];
-    DWObject.HTTPUpload(
+    var imgAry = [DWTObject.CurrentImageIndexInBuffer];
+    DWTObject.HTTPUpload(
       strUrl, 
       imgAry, 
       Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,

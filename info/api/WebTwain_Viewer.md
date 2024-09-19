@@ -68,17 +68,17 @@ bind(element: HTMLDivElement | HTMLElement) : boolean;
 **Example**
 
 ```javascript
-var DWObject;
+var DWTObject;
 Dynamsoft.DWT.CreateDWTObjectEx(
     {
         WebTwainId: "dwtControl"
     },
     function (obj) {
-        DWObject = obj;
-        DWObject.Viewer.bind("dwtcontrolContainer");
-        DWObject.Viewer.width=600;
-        DWObject.Viewer.height=800;
-        DWObject.Viewer.show();    
+        DWTObject = obj;
+        DWTObject.Viewer.bind("dwtcontrolContainer");
+        DWTObject.Viewer.width=600;
+        DWTObject.Viewer.height=800;
+        DWTObject.Viewer.show();    
     }, 
     function (err) {
         console.log(err);
@@ -152,7 +152,7 @@ clearSelectedAreas(): boolean;
 **Example**
 
 ```javascript
-DWObject.Viewer.clearSelectedAreas();
+DWTObject.Viewer.clearSelectedAreas();
 ```
 
 ---
@@ -212,7 +212,7 @@ createCustomElement(
 ```javascript
 var myElement = document.createElement("div");
 myElement.style = "width:100px;height:200px;background:red";
-var customElement = DWObject.Viewer.createCustomElement(
+var customElement = DWTObject.Viewer.createCustomElement(
   myElement,
   "right",
   false
@@ -285,13 +285,13 @@ createImageEditor(
 >
 ```javascript
 // Use default settings
-var imageEditor = DWObject.Viewer.createImageEditor();
+var imageEditor = DWTObject.Viewer.createImageEditor();
 imageEditor.zoomOrigin = {x:"center", y:"center"};
 imageEditor.show();
 ```
 ```javascript
 // Use default settings
-var imageEditor = DWObject.Viewer.createImageEditor();
+var imageEditor = DWTObject.Viewer.createImageEditor();
 imageEditor.show();
 ```
 
@@ -410,7 +410,7 @@ var editorSettings = {
   },
 };
 //Create the editor
-var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
+var imageEditor = DWTObject.Viewer.createImageEditor(editorSettings);
 imageEditor.show();
 ```
 ```javascript
@@ -517,7 +517,7 @@ var editorSettings = {
   workMode:Dynamsoft.DWT.EnumDWT_WorkMode.balance,
 };
 //Create the editor 
-var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
+var imageEditor = DWTObject.Viewer.createImageEditor(editorSettings);
 imageEditor.show();
 ```
 
@@ -581,7 +581,7 @@ createThumbnailViewer(
 
 ```javascript
 // Use default settings
-var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.background = "rgb(0,0,255)";
 objThumbnailViewer.show();
 
@@ -613,7 +613,7 @@ var thumbnailViewerSettings = {
     selectedPageBackground: "rgb(199, 222, 252)"
 }​​​​​​​;
 
-var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
+var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
 objThumbnailViewer.show();
 
 objThumbnailViewer.on("click",LeftClick);
@@ -687,7 +687,7 @@ first():number;
 **Example**
 
 ```javascript
-DWObject.Viewer.first();
+DWTObject.Viewer.first();
 ```
 
 ---
@@ -735,7 +735,7 @@ fitWindow(
 **Example**
 
 ```javascript
-DWObject.Viewer.fitWindow();
+DWTObject.Viewer.fitWindow();
 ```
 
 **Usage notes**
@@ -794,7 +794,7 @@ gotoPage(
 **Example**
 
 ```javascript
-DWObject.Viewer.gotoPage(0);
+DWTObject.Viewer.gotoPage(0);
 ```
 
 ---
@@ -836,7 +836,7 @@ hide(): boolean;
 **Example**
 
 ```javascript
-DWObject.Viewer.hide();
+DWTObject.Viewer.hide();
 ```
 
 ---
@@ -878,7 +878,7 @@ last():number;
 **Example**
 
 ```javascript
-DWObject.Viewer.last();
+DWTObject.Viewer.last();
 ```
 
 ---
@@ -920,8 +920,8 @@ next(): number;
 **Example**
 
 ```javascript
-DWObject.SelectImages([3]); //Select the 4th page.
-var currentIndex = DWObject.Viewer.next(); // return 4 which represents the 5th page.
+DWTObject.SelectImages([3]); //Select the 4th page.
+var currentIndex = DWTObject.Viewer.next(); // return 4 which represents the 5th page.
 ```
 
 ---
@@ -963,8 +963,8 @@ previous(): number;
 **Example**
 
 ```javascript
-DWObject.SelectImages([3]); //Select the 4th page.
-var currentIndex = DWObject.Viewer.previous(); // return 2 which represents the 3rd page.
+DWTObject.SelectImages([3]); //Select the 4th page.
+var currentIndex = DWTObject.Viewer.previous(); // return 2 which represents the 3rd page.
 ```
 
 ---
@@ -1006,11 +1006,11 @@ render(): boolean;
 **Example**
 
 ```javascript
-DWObject.Viewer.on("pageRendered", function (index) {
+DWTObject.Viewer.on("pageRendered", function (index) {
   console.log(index);
 });
 
-DWObject.Viewer.render(); //It will trigger the pageRendered event
+DWTObject.Viewer.render(); //It will trigger the pageRendered event
 ```
 
 ---
@@ -1065,7 +1065,7 @@ Use this method to fine-tune the buttons in the viewer with CSS.
 **Example**
 
 ``` javascript
-DWObject.Viewer.setButtonClass("crop", "CropClass");
+DWTObject.Viewer.setButtonClass("crop", "CropClass");
 ```
 
 ---
@@ -1119,7 +1119,7 @@ This method only works when [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cur
 **Example**
 
 ```javascript
-DWObject.Viewer.setSelectedAreas([
+DWTObject.Viewer.setSelectedAreas([
   {
     left: 0,
     top: 0,
@@ -1188,7 +1188,7 @@ Setting the view mode as -1 by -1 is equivalent to setting [`singlePageMode`]({{
 **Example**
 
 ```javascript
-DWObject.Viewer.setViewMode(2, 2);
+DWTObject.Viewer.setViewMode(2, 2);
 ```
 
 ---
@@ -1230,7 +1230,7 @@ show(): boolean;
 **Example**
 
 ```javascript
-DWObject.Viewer.show();
+DWTObject.Viewer.show();
 ```
 
 ---
@@ -1276,7 +1276,7 @@ Replace the previous `UnbindViewer` method.
 **Example**
 
 ```javascript
-DWObject.Viewer.unbind();
+DWTObject.Viewer.unbind();
 ```
 
 ---
@@ -1318,7 +1318,7 @@ acceptDrop: boolean;
  **Example**
 
 ```javascript
-DWObject.Viewer.acceptDrop = true;
+DWTObject.Viewer.acceptDrop = true;
 ```
 
 ---
@@ -1362,7 +1362,7 @@ This API only works if the view mode of the viewer is set to -1 by -1.
 **Example**
 
 ```javascript
-DWObject.Viewer.allowSlide = true;
+DWTObject.Viewer.allowSlide = true;
 ```
 
 ---
@@ -1402,9 +1402,9 @@ allowPageDragging: boolean;
 **Example**
 
 ```javascript
-DWObject.Viewer.setViewMode(2,2);
-DWObject.Viewer.cursor = "pointer";
-DWObject.Viewer.allowPageDragging = false; //Disable drag&drop.
+DWTObject.Viewer.setViewMode(2,2);
+DWTObject.Viewer.cursor = "pointer";
+DWTObject.Viewer.allowPageDragging = false; //Disable drag&drop.
 ```
 
 ---
@@ -1450,7 +1450,7 @@ Replace the previous `BackgroundColor` method. Now you can specify the backgourn
 **Example**
 
 ```javascript
-DWObject.Viewer.background = "rgb(255, 255, 255)";
+DWTObject.Viewer.background = "rgb(255, 255, 255)";
 ```
 
 ---
@@ -1496,7 +1496,7 @@ The default value is "1px solid rgb(204, 204, 204)". Now you can specify the bor
 **Example**
 
 ```javascript
-DWObject.Viewer.border = "2px solid rgb(204, 204, 204)";
+DWTObject.Viewer.border = "2px solid rgb(204, 204, 204)";
 ```
 
 ---
@@ -1551,7 +1551,7 @@ If there are selected areas on the page, changing the `cursor` property will cle
 **Example**
 
 ```javascript
-DWObject.Viewer.cursor = "crosshair";
+DWTObject.Viewer.cursor = "crosshair";
 ```
 
 ---
@@ -1599,9 +1599,9 @@ When reading the property, the value is always in pixels no matter what value wa
 **Example**
 
 ```javascript
-DWObject.Viewer.height = 350;
-DWObject.Viewer.height = "350px";
-DWObject.Viewer.height = "100%";
+DWTObject.Viewer.height = 350;
+DWTObject.Viewer.height = "350px";
+DWTObject.Viewer.height = "100%";
 ```
 
 ---
@@ -1643,7 +1643,7 @@ readonly idPostfix: string;
 **Example**
 
 ```javascript
-var myViewerIdPostfix = DWObject.Viewer.idPostfix;
+var myViewerIdPostfix = DWTObject.Viewer.idPostfix;
 ```
 
 ---
@@ -1685,7 +1685,7 @@ ifAutoScroll: string;
 **Example**
 
 ```javascript
-DWObject.Viewer.ifAutoScroll = false;
+DWTObject.Viewer.ifAutoScroll = false;
 ```
 
 ---
@@ -1726,7 +1726,7 @@ innerBorder: string;
 **Example**
 
 ```javascript
-DWObject.Viewer.innerBorder = "1px solid rgb(204, 204, 204)";
+DWTObject.Viewer.innerBorder = "1px solid rgb(204, 204, 204)";
 ```
 
 **Usage notes**
@@ -1776,7 +1776,7 @@ The page margin is only effective when the view mode is not -1 \* -1 (in other w
 **Example**
 
 ```javascript
-DWObject.Viewer.pageMargin = 10;
+DWTObject.Viewer.pageMargin = 10;
 ```
 
 ---
@@ -1827,7 +1827,7 @@ The default value is "rgba(0, 0, 0, 1)".
 **Example**
 
 ```javascript
-DWObject.Viewer.selectedAreaBorderColor = "rgba(0, 0, 0, 1)";
+DWTObject.Viewer.selectedAreaBorderColor = "rgba(0, 0, 0, 1)";
 ```
 
 ---
@@ -1873,7 +1873,7 @@ The default value is "rgb(199, 222, 252)". You can specify the backgournd by CSS
 **Example**
 
 ```javascript
-DWObject.Viewer.selectedPageBackground = "rgb(255, 0, 0)";
+DWTObject.Viewer.selectedPageBackground = "rgb(255, 0, 0)";
 ```
 
 ---
@@ -1921,7 +1921,7 @@ The default value is "1px solid rgb(125, 162, 206)". Now you can specify the bor
 **Example**
 
 ```javascript
-DWObject.Viewer.selectedPageBorder = "3px solid rgb(125,162,206)";
+DWTObject.Viewer.selectedPageBorder = "3px solid rgb(125,162,206)";
 ```
 
 ---
@@ -1967,7 +1967,7 @@ This API is only effective when drawing manually (it won't work if the selection
 **Example**
 
 ```javascript
-DWObject.Viewer.selectionRectAspectRatio = 0.5;
+DWTObject.Viewer.selectionRectAspectRatio = 0.5;
 ```
 
 ---
@@ -2014,14 +2014,14 @@ The default value is `false`. If the thumbnail viewer is not shown, setting `sin
 
 ```javascript
 // Use single page mode in the main viewer
-DWObject.Viewer.singlePageMode = true;
+DWTObject.Viewer.singlePageMode = true;
 ```
 
 ```javascript
 // Use single page mode in the thumnail viewer
-var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.show();
-DWObject.Viewer.singlePageMode = true;
+DWTObject.Viewer.singlePageMode = true;
 ```
 
 ---
@@ -2078,7 +2078,7 @@ let styleSettings = {
     handleColor: "rgba(252, 92, 255, 1)",
 }
 
-DWObject.Viewer.updateSelectionBoxStyle(styleSettings);
+DWTObject.Viewer.updateSelectionBoxStyle(styleSettings);
 ```
 
 **Usage Notes**
@@ -2129,9 +2129,9 @@ When reading the property, the value is always in pixels no matter what value wa
 **Example**
 
 ```javascript
-DWObject.Viewer.width = 270;
-DWObject.Viewer.width = "270px";
-DWObject.Viewer.width = "100%";
+DWTObject.Viewer.width = 270;
+DWTObject.Viewer.width = "270px";
+DWTObject.Viewer.width = "100%";
 ```
 
 ---
@@ -2177,7 +2177,7 @@ The zoom factor is only effective when the view mode is -1 \* -1. Allowed values
 **Example**
 
 ```javascript
-DWObject.Viewer.zoom = 2.0;
+DWTObject.Viewer.zoom = 2.0;
 ```
 
 ---
@@ -2223,7 +2223,7 @@ When set to true, the index in the upper left corner of the viewer will be selec
 **Example**
 
 ```javascript
-DWObject.Viewer.autoChangeIndex = true;
+DWTObject.Viewer.autoChangeIndex = true;
 ```
 
 ---
@@ -2352,12 +2352,12 @@ Please refer to [`EnumDWT_SelectionMode`]({{site.info}}api/Dynamsoft_Enum.html#d
 **Example**
 
 ```javascript
-DWObject.Viewer.setViewMode(2,2);
-DWObject.Viewer.cursor = "pointer";
-DWObject.Viewer.updateCheckboxStyle({
+DWTObject.Viewer.setViewMode(2,2);
+DWTObject.Viewer.cursor = "pointer";
+DWTObject.Viewer.updateCheckboxStyle({
     visibility:"visible",
 });
-DWObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
+DWTObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
 ```
 
 ---
@@ -2409,7 +2409,7 @@ The default value is `{x:"center", y:"center"}`, which means the zoom origin is 
 **Example**
 
 ```javascript
-DWObject.Viewer.zoomOrigin = {x:"left", y:"top"}; // Set the zoom origin to top left corner.
+DWTObject.Viewer.zoomOrigin = {x:"left", y:"top"}; // Set the zoom origin to top left corner.
 ```
 
 ---
@@ -2469,43 +2469,43 @@ The events `click`, `dbclick`, `mousemove`, `pageAreaSelected`, and `pageAreaUns
 **Example**
 
 ```javascript
-DWObject.Viewer.on("click", function (dwtEvent, domEvent) {
+DWTObject.Viewer.on("click", function (dwtEvent, domEvent) {
   console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on("dblclick", function (dwtEvent, domEvent) {
+DWTObject.Viewer.on("dblclick", function (dwtEvent, domEvent) {
   console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on("contextmenu", function (dwtEvent, domEvent) {
+DWTObject.Viewer.on("contextmenu", function (dwtEvent, domEvent) {
   console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on("mousemove", function (dwtEvent, domEvent) {
+DWTObject.Viewer.on("mousemove", function (dwtEvent, domEvent) {
   console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on("mousedown", function (dwtEvent, domEvent) {
+DWTObject.Viewer.on("mousedown", function (dwtEvent, domEvent) {
   console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on("mouseup", function (dwtEvent, domEvent) {
+DWTObject.Viewer.on("mouseup", function (dwtEvent, domEvent) {
   console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on("mouseout", function (dwtEvent, domEvent) {
+DWTObject.Viewer.on("mouseout", function (dwtEvent, domEvent) {
   console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on("mouseover", function (dwtEvent, domEvent) {
+DWTObject.Viewer.on("mouseover", function (dwtEvent, domEvent) {
   console.log(dwtEvent, domEvent);
 });
 
-DWObject.Viewer.on("keydown", function (keyboardEvent) {
+DWTObject.Viewer.on("keydown", function (keyboardEvent) {
   console.log(keyboardEvent);
 });
 
-DWObject.Viewer.on("keyup", function (keyboardEvent) {
+DWTObject.Viewer.on("keyup", function (keyboardEvent) {
   console.log(keyboardEvent);
 });
 ```
@@ -2556,7 +2556,7 @@ off(
 **Example**
 
 ```javascript
-DWObject.Viewer.off("pageAreaSelected");
+DWTObject.Viewer.off("pageAreaSelected");
 ```
 
 **Usage notes**
@@ -2611,11 +2611,11 @@ on('pageAreaSelected',
 **Example**
 
 ```javascript
-DWObject.Viewer.on("pageAreaSelected", function (sImageIndex, rect) {
+DWTObject.Viewer.on("pageAreaSelected", function (sImageIndex, rect) {
   console.log(sImageIndex);
 });
 
-DWObject.Viewer.off("pageAreaSelected");
+DWTObject.Viewer.off("pageAreaSelected");
 ```
 
 ---
@@ -2663,7 +2663,7 @@ on('pageAreaUnselected',
 **Example**
 
 ```javascript
-DWObject.Viewer.on("pageAreaUnselected", function (sImageIndex) {
+DWTObject.Viewer.on("pageAreaUnselected", function (sImageIndex) {
   console.log(
     "The selected areas on the page with index " +
       sImageIndex +
@@ -2671,7 +2671,7 @@ DWObject.Viewer.on("pageAreaUnselected", function (sImageIndex) {
   );
 });
 
-DWObject.Viewer.off("pageAreaUnselected");
+DWTObject.Viewer.off("pageAreaUnselected");
 ```
 
 ---
@@ -2719,10 +2719,10 @@ on('pageRendered',
 **Example**
 
 ```javascript
-DWObject.Viewer.on("pageRendered", function (index) {
+DWTObject.Viewer.on("pageRendered", function (index) {
   console.log(index);
 });
-DWObject.Viewer.render(); //It will trigger the pageRendered event
+DWTObject.Viewer.render(); //It will trigger the pageRendered event
 ```
 
 ---
@@ -2772,10 +2772,10 @@ on('resize',
 **Example**
 
 ```javascript
-DWObject.Viewer.on("resize", function (width, height) {
+DWTObject.Viewer.on("resize", function (width, height) {
   console.log(width, height);
 });
-DWObject.Viewer.width = 100;
+DWTObject.Viewer.width = 100;
 ```
 
 ---
@@ -2797,7 +2797,7 @@ on('topPageChanged',
 **Example**
 
 ``` javascript
-DWObject.Viewer.on("topPageChanged", function(index) {
+DWTObject.Viewer.on("topPageChanged", function(index) {
     console.log(index);
 });
 ```

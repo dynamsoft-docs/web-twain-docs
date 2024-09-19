@@ -87,14 +87,14 @@ You can learn more detail about the feature via <a href="https://www.dynamsoft.c
   ```
 
   ```javascript
-  var DWObject;
+  var DWTObject;
   Dynamsoft.DWT.Containers = [
     { ContainerId: "dwtcontrolContainer", Width: "585px", Height: "513px" },
   ];
   Dynamsoft.DWT.ProductKey = "YOUR-PRODUCT-KEY";
   Dynamsoft.DWT.UseLocalService = false; //Create the `WebTwain` instance in WASM mode as it doesn't need to scan documents
   function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
   }
   ```
 
@@ -127,7 +127,7 @@ You can learn more detail about the feature via <a href="https://www.dynamsoft.c
   }
   ```
 
-  > We transfer the scanned documents to the second `WebTwain` instance, `DWObject`, in the event `OnPostTransferAsync`.
+  > We transfer the scanned documents to the second `WebTwain` instance, `DWTObject`, in the event `OnPostTransferAsync`.
 
   ```javascript
   DWServiceObject.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
@@ -135,7 +135,7 @@ You can learn more detail about the feature via <a href="https://www.dynamsoft.c
       [DWServiceObject.ImageIDToIndex(outputInfo.imageId)],
       Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
       function (result, indices, type) {
-        DWObject.LoadImageFromBinary(
+        DWTObject.LoadImageFromBinary(
           result,
           function () {
             console.log("LoadImageFromBinary success");
@@ -166,7 +166,7 @@ The following is the complete code, note that we are referencing the library fro
 <input type="button" value="Scan" onclick="AcquireImage();" />
 <div id="dwtcontrolContainer"></div>
 <script type="text/javascript">
-  var DWObject;
+  var DWTObject;
   window.onload = function () {
     Dynamsoft.DWT.Containers = [
       { ContainerId: "dwtcontrolContainer", Width: "585px", Height: "513px" },
@@ -177,7 +177,7 @@ The following is the complete code, note that we are referencing the library fro
     Dynamsoft.DWT.Load();
   };
   function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
     createDWTForScan();
   }
   var host = "192.168.8.221",
@@ -214,7 +214,7 @@ The following is the complete code, note that we are referencing the library fro
               [DWServiceObject.ImageIDToIndex(outputInfo.imageId)],
               Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
               function (result, indices, type) {
-                DWObject.LoadImageFromBinary(
+                DWTObject.LoadImageFromBinary(
                   result,
                   function () {
                     console.log("LoadImageFromBinary success");

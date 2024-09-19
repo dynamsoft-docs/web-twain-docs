@@ -101,7 +101,7 @@ permalink: /info/schedule/Stable.html
 ### MacOS Service Hotfix
 - Due to changes introduced with ICA drivers, Dynamic Web TWAIN may exhibit strange behaviour while scanning. This release updates the Dynamsoft Service for MacOS to address these issues. See [this article]({{site.faq}}macos-sonoma-distorted-scans.html) for more details.
 
-### DWObject process optimization
+### DWTObject process optimization
 - Fixed an issue where if the Web TWAIN object was deleted from context mid scan, the scanning queue would not terminate, leaving any future requests being left pending in queue.
 
 ## 18.4 (09/26/2023)
@@ -745,7 +745,7 @@ No changes in version 16.1.
 * Added method `EnableSourceUI()` to enable TWAIN configuration without scanning.
 * Added method `SelectImages()` to select one or multiple images programmatically. This method replaces the old APIs `SetSelectedImageIndex()` and `SelectedImagesCount` .
 * Added property `SelectedImagesIndices` to return the indices of selected images. This property replaces the old API `GetSelectedImageIndex()` .
-* Added Viewer-specific APIs: `setViewMode()` ,      `updateUISettings()` ,      `setButtonClass()` ,      `setSelectedImageArea()` ,      `zoomIn()` ,      `zoomOut()` ,      `bindCustomElement()` ,      `showCustomElement()` ,      `hideCustomElement()` ,      `toggleCustomElement()` . These methods should be called like this: `DWObject.Viewer.zoomIn()` .
+* Added Viewer-specific APIs: `setViewMode()` ,      `updateUISettings()` ,      `setButtonClass()` ,      `setSelectedImageArea()` ,      `zoomIn()` ,      `zoomOut()` ,      `bindCustomElement()` ,      `showCustomElement()` ,      `hideCustomElement()` ,      `toggleCustomElement()` . These methods should be called like this: `DWTObject.Viewer.zoomIn()` .
 
 ### Updated Add-on Features
 

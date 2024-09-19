@@ -52,7 +52,7 @@ function downloadOCRB(bDownloadDLL) {
     var strOCRPath = Dynamsoft.DWT.ResourcesPath + '/addon/OCRx64.zip',
         strOCRLangPath = Dynamsoft.DWT.ResourcesPath + '/addon/OCRBasicLanguages/English.zip';
     if (bDownloadDLL) {
-        DWObject.Addon.OCR.Download(
+        DWTObject.Addon.OCR.Download(
             strOCRPath,
             function() {
                 /*console.log('OCR dll is installed');*/
@@ -63,7 +63,7 @@ function downloadOCRB(bDownloadDLL) {
             }
         );
     } else {
-        DWObject.Addon.OCR.DownloadLangData(
+        DWTObject.Addon.OCR.DownloadLangData(
             strOCRLangPath,
             function() {},
             function(errorCode, errorString) {
@@ -87,17 +87,17 @@ Once installed, you can start using the addon. Check out the following code snip
 
 ``` javascript
 function DoOCR() {
-    if (DWObject) {
-        if (DWObject.HowManyImagesInBuffer == 0) {
+    if (DWTObject) {
+        if (DWTObject.HowManyImagesInBuffer == 0) {
             alert("Please scan or load an image first.");
             return;
         }
         if (Dynamsoft.DWT.EnumDWT_OCROutputFormat === undefined)
             Dynamsoft.DWT.EnumDWT_OCROutputFormat = EnumDWT_OCROutputFormat;
-        DWObject.Addon.OCR.SetLanguage('eng');
-        DWObject.Addon.OCR.SetOutputFormat(Dynamsoft.DWT.EnumDWT_OCROutputFormat.OCROF_TEXT);
-        DWObject.Addon.OCR.Recognize(
-            DWObject.CurrentImageIndexInBuffer,
+        DWTObject.Addon.OCR.SetLanguage('eng');
+        DWTObject.Addon.OCR.SetOutputFormat(Dynamsoft.DWT.EnumDWT_OCROutputFormat.OCROF_TEXT);
+        DWTObject.Addon.OCR.Recognize(
+            DWTObject.CurrentImageIndexInBuffer,
             function(sImageIndex, result) {
                 if (result == null)
                     return null;
@@ -150,7 +150,7 @@ To include this addon is to reference the necessary JavaScript file `dynamsoft.w
 ``` javascript
 function downloadOCRPro() {
     var strOCRPath = Dynamsoft.DWT.ResourcesPath + '/addon/OCRProx64.zip';
-    DWObject.Addon.OCRPro.Download(
+    DWTObject.Addon.OCRPro.Download(
         strOCRPath,
         function() {},
         function(errorCode, errorString) {
@@ -173,8 +173,8 @@ Once installed, you can start using the addon. Check out the following code snip
 
 ``` javascript
 function DoOCR() {
-    if (DWObject) {
-        if (DWObject.HowManyImagesInBuffer == 0) {
+    if (DWTObject) {
+        if (DWTObject.HowManyImagesInBuffer == 0) {
             alert("Please scan or load an image first.");
             return;
         }
@@ -182,8 +182,8 @@ function DoOCR() {
         settings.Languages = "eng";
         settings.OutputFormat = "TXTS";
         //settings.LicenseChecker = "LicenseChecker.aspx";
-        DWObject.Addon.OCRPro.Recognize(
-            DWObject.CurrentImageIndexInBuffer,
+        DWTObject.Addon.OCRPro.Recognize(
+            DWTObject.CurrentImageIndexInBuffer,
             function(sImageIndex, result) {
                 if (result == null)
                     return null;
@@ -461,14 +461,14 @@ The following code shows how to upload the file to be read using `Dynamic Web TW
 
 ``` javascript
 function DoOCR(index) {
-    if (DWObject) {
+    if (DWTObject) {
         // `url` is the target URL to receive the HTTP request.
         var url = CurrentPath + "upload";
-        DWObject.ClearAllHTTPFormField();
-        DWObject.SetHTTPFormField("ProductKey", DWObject.ProductKey);
-        DWObject.SetHTTPFormField("OutputFormat", OCROutputFormat[document.getElementById("ddlOCROutputFormat").selectedIndex].val);
-        DWObject.SetHTTPFormField("InputLanguage", OCRLanguages[document.getElementById("ddlLanguages").selectedIndex].val);
-        DWObject.HTTPUpload(
+        DWTObject.ClearAllHTTPFormField();
+        DWTObject.SetHTTPFormField("ProductKey", DWTObject.ProductKey);
+        DWTObject.SetHTTPFormField("OutputFormat", OCROutputFormat[document.getElementById("ddlOCROutputFormat").selectedIndex].val);
+        DWTObject.SetHTTPFormField("InputLanguage", OCRLanguages[document.getElementById("ddlLanguages").selectedIndex].val);
+        DWTObject.HTTPUpload(
             url,
             [index],
             Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,

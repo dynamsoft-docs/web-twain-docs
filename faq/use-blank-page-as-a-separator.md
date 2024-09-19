@@ -23,29 +23,29 @@ In order to do this we will scan in all the sheets, then use <a href="{{site.inf
 
 ```javascript
 function Dynamsoft_OnReady() { 
-    DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer' 
-    if (DWObject) { 
-        DWObject.IfShowUI = false;
-        DWObject.IfAutoDiscardBlankpages = false;
-        DWObject.RegisterEvent('OnPostAllTransfers', CheckBlankPage); //Register the OnPostAllTransfers event that will be called after all scanning is complete 
+    DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer' 
+    if (DWTObject) { 
+        DWTObject.IfShowUI = false;
+        DWTObject.IfAutoDiscardBlankpages = false;
+        DWTObject.RegisterEvent('OnPostAllTransfers', CheckBlankPage); //Register the OnPostAllTransfers event that will be called after all scanning is complete 
     } 
 }
 
 function AcquireImage() {
-    if (DWObject) {
-        DWObject.SelectSource(function () {					
+    if (DWTObject) {
+        DWTObject.SelectSource(function () {					
             var OnAcquireImageSuccess = function () {
-                DWObject.CloseSource();
+                DWTObject.CloseSource();
             };
             
             var OnAcquireImageFailure = function (ec, es) {
-                DWObject.CloseSource();
+                DWTObject.CloseSource();
                 alert(es);
             };
 
-            DWObject.OpenSource();
-            DWObject.IfDisableSourceAfterAcquire = false;	// Scanner source will be disabled/closed automatically after the scan. 
-            DWObject.AcquireImage(OnAcquireImageSuccess, OnAcquireImageFailure);
+            DWTObject.OpenSource();
+            DWTObject.IfDisableSourceAfterAcquire = false;	// Scanner source will be disabled/closed automatically after the scan. 
+            DWTObject.AcquireImage(OnAcquireImageSuccess, OnAcquireImageFailure);
         }, function () {
             console.log('SelectSource failed!');
         });
@@ -61,11 +61,11 @@ function OnFailure(errorCode, errorString) {
 }
 
 function CheckBlankPage() { //Function for checking a blank page, called when OnPostAllTransfers is triggered
-    if (DWObject) { //Ensure there is a DWObject
+    if (DWTObject) { //Ensure there is a DWTObject
         var startindex = 0; // Assume it starts from the first page in the buffer.
-        for (var i = 0; i < DWObject.HowManyImagesInBuffer; i++) { //Go through each image in the buffer.
-            if (DWObject.IsBlankImageExpress(i)) {
-                DWObject.RemoveImage(i); // remove the blank page from the buffer.
+        for (var i = 0; i < DWTObject.HowManyImagesInBuffer; i++) { //Go through each image in the buffer.
+            if (DWTObject.IsBlankImageExpress(i)) {
+                DWTObject.RemoveImage(i); // remove the blank page from the buffer.
                 if (i != 0) {
                     var imageRecord = [];
                     i--; //decrement i for the removed image
@@ -76,14 +76,14 @@ function CheckBlankPage() { //Function for checking a blank page, called when On
                     }
 
                     if (selectedCount > 0) { //save images as long as there are some in the selection
-                        DWObject.SelectImages(imageRecord);
-                        DWObject.IfShowFileDialog = true;
-                        DWObject.SaveSelectedImagesAsMultiPagePDF("C:\\....", OnSuccess, OnFailure); //PLEASE CHANGE THIS FILE PATH (The first parameter)
+                        DWTObject.SelectImages(imageRecord);
+                        DWTObject.IfShowFileDialog = true;
+                        DWTObject.SaveSelectedImagesAsMultiPagePDF("C:\\....", OnSuccess, OnFailure); //PLEASE CHANGE THIS FILE PATH (The first parameter)
                     }
 
                     startindex = i + 1; //set the start index for next search 1 higher than current page
                 }
-            } else if (i == DWObject.HowManyImagesInBuffer - 1) { //the last few images are not blank
+            } else if (i == DWTObject.HowManyImagesInBuffer - 1) { //the last few images are not blank
                 var selectedCount = i - startindex + 1; // set how many images are selected
                 var imageRecord = [];
 
@@ -92,9 +92,9 @@ function CheckBlankPage() { //Function for checking a blank page, called when On
                 }
 
                 if (selectedCount > 0) { //save images as long as there are some in the selection
-                    DWObject.SelectImages(imageRecord);
-                    DWObject.IfShowFileDialog = true;
-                    DWObject.SaveSelectedImagesAsMultiPagePDF("C:\\...", OnSuccess, OnFailure); //PLEASE CHANGE THIS FILE PATH (The first parameter)
+                    DWTObject.SelectImages(imageRecord);
+                    DWTObject.IfShowFileDialog = true;
+                    DWTObject.SaveSelectedImagesAsMultiPagePDF("C:\\...", OnSuccess, OnFailure); //PLEASE CHANGE THIS FILE PATH (The first parameter)
                 }
             }
         }
@@ -108,10 +108,10 @@ If your application is having a hard time detecting blank pages(there is some ar
 
 ```javascript
 function CheckBlankPage(){ //Function for checking a blank page, called when OnPostAllTransfers is triggered 
-    if(DWObject){//Ensure there is a DWObject 
-        for(var i = 0; i < DWObject.HowManyImagesInBuffer;i++){//Go through each image in the buffer. 
-            if(DWObject.IsBlankImageExpress(i)){}//Make Blank Image run, but do not use the result 
-            if(DWObject.BlankImageCurrentStdDev < 15.0){//set a standard deviation for the program to use
+    if(DWTObject){//Ensure there is a DWTObject 
+        for(var i = 0; i < DWTObject.HowManyImagesInBuffer;i++){//Go through each image in the buffer. 
+            if(DWTObject.IsBlankImageExpress(i)){}//Make Blank Image run, but do not use the result 
+            if(DWTObject.BlankImageCurrentStdDev < 15.0){//set a standard deviation for the program to use
                 //......
             } 
         } 

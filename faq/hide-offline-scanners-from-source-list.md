@@ -18,7 +18,7 @@ Generally, the modern scanner drivers have the functionality to auto-hide themse
 If your requirement is to hide some specific devices (e.g. hide all Epson scanners) from the source list, this could be achieved by using the below example:
 
 ```javascript
-var sources = DWObject.GetSourceNames();
+var sources = DWTObject.GetSourceNames();
 for (var i = 0; i < sources.length; i++) {
   if (sources[i].toLowerCase().indexOf("epson") != -1) {
     sources.splice(i, 1);

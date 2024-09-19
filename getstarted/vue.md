@@ -122,8 +122,8 @@ export default {
      * In this callback we do some initialization.
      */
     Dynamsoft_OnReady() {
-      this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
-      this.DWObject.GetDevicesAsync()
+      this.DWTObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
+      this.DWTObject.GetDevicesAsync()
         .then((deviceList) => {
           this.sourceList = deviceList;
         })
@@ -135,14 +135,14 @@ export default {
      * Acquire images from scanners or cameras or local files
      */
     acquireImage() {
-      if (!this.DWObject) {
+      if (!this.DWTObject) {
         alert("dwt init fail");
         return;
       }
  
-        this.DWObject.SelectDeviceAsync(this.sourceList[this.selectedIndex])
+        this.DWTObject.SelectDeviceAsync(this.sourceList[this.selectedIndex])
           .then(() => {
-            return this.DWObject.AcquireImageAsync({
+            return this.DWTObject.AcquireImageAsync({
                 IfCloseSourceAfterAcquire: true 
             });
           })
@@ -154,19 +154,19 @@ export default {
      * Open local images.
      */
     openImage() {
-      if (!this.DWObject) {
+      if (!this.DWTObject) {
         alert("dwt init fail");
         return;
       }
-      this.DWObject.IfShowFileDialog = true;
+      this.DWTObject.IfShowFileDialog = true;
       /**
        * Note:
        * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed seperately
        */
-      this.DWObject.Addon.PDF.SetConvertMode(
+      this.DWTObject.Addon.PDF.SetConvertMode(
         Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL
       );
-      this.DWObject.LoadImageEx(
+      this.DWTObject.LoadImageEx(
         "",
         Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL,
         () => {
@@ -264,7 +264,7 @@ import Dynamsoft from "dwt";
 import { onMounted, onUnmounted, ref } from "vue";
 let selectedIndex = ref(0);
 let sourceList=ref([]);
-let DWObject;
+let DWTObject;
 const containerId = "dwtcontrolContainer";
 onMounted(() => {
   /**
@@ -290,8 +290,8 @@ onUnmounted(()=>{
     Dynamsoft.DWT.Unload();
 })
 function Dynamsoft_OnReady() {
-  DWObject = Dynamsoft.DWT.GetWebTwain(containerId);
-  DWObject.GetDevicesAsync()
+  DWTObject = Dynamsoft.DWT.GetWebTwain(containerId);
+  DWTObject.GetDevicesAsync()
     .then((deviceList) => {
       sourceList.value = deviceList;
     })
@@ -303,9 +303,9 @@ function Dynamsoft_OnReady() {
  * Acquire images from scanners
  */
 function acquireImage() {
-    DWObject.SelectDeviceAsync(sourceList.value[selectedIndex.value])
+    DWTObject.SelectDeviceAsync(sourceList.value[selectedIndex.value])
       .then(() => {
-        return DWObject.AcquireImageAsync({IfCloseSourceAfterAcquire:true});
+        return DWTObject.AcquireImageAsync({IfCloseSourceAfterAcquire:true});
       })
       .catch((e) => {
         console.error(e);
@@ -316,13 +316,13 @@ function acquireImage() {
  * Open local images.
  */
 function openImage() {
-  DWObject.IfShowFileDialog = true;
+  DWTObject.IfShowFileDialog = true;
   /**
    * Note:
    * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed seperately
    */
-  DWObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
-  DWObject.LoadImageEx(
+  DWTObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+  DWTObject.LoadImageEx(
     "",
     Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL,
     () => {

@@ -1,11 +1,13 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: TWAIN Scanners, ICA Scanners, SANE Scanners, and Cameras
+title: Imaging Hardware
 keywords: Dynamic Web TWAIN, Documentation, TWAIN, ICA, SANE, DirectShow, Webcam, MediaDevices Hardware
-breadcrumbText: Hardware
+breadcrumbText: Imaging Hardware
 description: Dynamic Web TWAIN supports image capture from TWAIN Scanners, ICA Scanners, SANE Scanners, DirectShow Cameras, and MediaDevices Cameras.
-permalink: /getstarted/hardware.html
+permalink: /introduction/imaging-hardware.html
+redirect_from:
+    - /getstarted/hardware.html
 ---
 
 # Imaging Hardware 

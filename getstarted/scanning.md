@@ -58,7 +58,7 @@ DWT has a built in event that, by default, triggers `Dynamsoft_OnReady()` when t
 
 ```js
 function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }
 ```
 
@@ -76,9 +76,9 @@ The core functionality of DWT is to acquire images from a scanner. Since you hav
 
 ```js
 function AcquireImage() {
-    if (DWObject) {
-        DWObject.SelectSourceAsync().then(function () {
-            return DWObject.AcquireImageAsync({ 
+    if (DWTObject) {
+        DWTObject.SelectSourceAsync().then(function () {
+            return DWTObject.AcquireImageAsync({ 
                 IfCloseSourceAfterAcquire: true 
             });
         }).catch(function (exp) {
@@ -113,16 +113,16 @@ At this point, your HelloWorld code should look like this:
     <div id="dwtcontrolContainer"></div>
 
     <script type="text/javascript">
-        var DWObject;
+        var DWTObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+            DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
         }
 
         function AcquireImage() {
-            if (DWObject) {
-                DWObject.SelectSourceAsync().then(function () {
-                    return DWObject.AcquireImageAsync({ 
+            if (DWTObject) {
+                DWTObject.SelectSourceAsync().then(function () {
+                    return DWTObject.AcquireImageAsync({ 
                         IfCloseSourceAfterAcquire: true 
                     });
                 }).catch(function (exp) {

@@ -280,7 +280,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
 **Example**
 
 ```javascript
-DWObject.Addon.PDF.SetReaderOptions({
+DWTObject.Addon.PDF.SetReaderOptions({
     convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
     renderOptions: {
         renderAnnotations: false,
@@ -434,7 +434,7 @@ Write.Setup(settings: PDFWSettings): boolean;
 **Example**
 
 ```javascript
-DWObject.Addon.PDF.Write.Setup({
+DWTObject.Addon.PDF.Write.Setup({
     author: "Dynamsoft",
     compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG,
     pageType: Dynamsoft.DWT.EnumPDF_Page.Page_A4,
@@ -449,7 +449,7 @@ DWObject.Addon.PDF.Write.Setup({
     quality: 90,
     });
 
-DWObject.SaveAllAsPDF("DynamicWebTWAIN.pdf", OnSuccess, OnFailure);
+DWTObject.SaveAllAsPDF("DynamicWebTWAIN.pdf", OnSuccess, OnFailure);
 
 function OnSuccess() {
     console.log('successful');

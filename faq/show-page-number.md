@@ -16,7 +16,7 @@ permalink: /faq/show-page-number.html
 You can set the <a href="{{site.info}}api/WebTwain_Viewer.html#showpagenumber" target="_blank">showPageNumber</a> API to true to show the page number. 
 
 ```javascript
-DWObject.Viewer.showPageNumber = true;
+DWTObject.Viewer.showPageNumber = true;
 ```
 
 **Note**: When <a href="{{site.info}}api/WebTwain_Viewer.html#setviewmode" target="_blank">setViewMode</a> is set to -1 by -1 or <a href="{{site.info}}api/WebTwain_Viewer.html#singlepagemode" target="_blank">singlePageMode</a> is true then this api will not work.

@@ -18,11 +18,11 @@ Yes. You can use <a href="{{site.info}}api/WebTwain_Acquire.html#iffeederloaded"
 Code Example:
 
 ```javascript
-DWObject.SelectSource();
-DWObject.OpenSource();
-if(DWObject.IfPaperDetectable)
-  if(DWObject.IfFeederLoaded)
-    DWObject.AcquireImage();
+DWTObject.SelectSource();
+DWTObject.OpenSource();
+if(DWTObject.IfPaperDetectable)
+  if(DWTObject.IfFeederLoaded)
+    DWTObject.AcquireImage();
   else
     alert("There is no paper in the feeder.");
 ...

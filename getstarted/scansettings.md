@@ -24,9 +24,9 @@ Add `IfShowUI: false` to the JSON in `AcquireImageAsync()` in `AcquireImage()`.
 
 ```js
 function AcquireImage() {
-    if (DWObject) {
-        DWObject.SelectSourceAsync().then(function () {
-            return DWObject.AcquireImageAsync({ 
+    if (DWTObject) {
+        DWTObject.SelectSourceAsync().then(function () {
+            return DWTObject.AcquireImageAsync({ 
                 IfCloseSourceAfterAcquire: true,
                 IfShowUI: false,
             });
@@ -52,9 +52,9 @@ Add `PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY` and `Resolution:150` 
 
 ```js
 function AcquireImage() {
-    if (DWObject) {
-        DWObject.SelectSourceAsync().then(function () {
-            return DWObject.AcquireImageAsync({ 
+    if (DWTObject) {
+        DWTObject.SelectSourceAsync().then(function () {
+            return DWTObject.AcquireImageAsync({ 
                 IfCloseSourceAfterAcquire: true,
                 IfShowUI: false,
                 PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
@@ -96,16 +96,16 @@ Links to API Reference:
     <div id="dwtcontrolContainer"></div>
 
     <script type="text/javascript">
-        var DWObject;
+        var DWTObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+            DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
         }
 
         function AcquireImage() {
-            if (DWObject) {
-                DWObject.SelectSourceAsync().then(function () {
-                    return DWObject.AcquireImageAsync({ 
+            if (DWTObject) {
+                DWTObject.SelectSourceAsync().then(function () {
+                    return DWTObject.AcquireImageAsync({ 
                         IfCloseSourceAfterAcquire: true,
                         IfShowUI: false,
                         PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
@@ -118,10 +118,10 @@ Links to API Reference:
         }
 
         function Upload() {
-            if (DWObject && DWObject.HowManyImagesInBuffer > 0) {
+            if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
                 var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
-                var imgAry = [DWObject.CurrentImageIndexInBuffer];
-                DWObject.HTTPUpload(strUrl, imgAry, Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
+                var imgAry = [DWTObject.CurrentImageIndexInBuffer];
+                DWTObject.HTTPUpload(strUrl, imgAry, Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
                     Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, "WebTWAINImage.png", onUploadSuccess, onUploadFailure);
             } else {
                 alert("There is no image in buffer.");

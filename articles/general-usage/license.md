@@ -6,7 +6,9 @@ title: Dynamic Web TWAIN SDK License
 keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: License
 description: Dynamic Web TWAIN SDK Documentation License Page
-permalink: /about/license.html
+permalink: /general-usage/license.html
+redirect_from:
+   - /about/license.html
 ---
 
 # License

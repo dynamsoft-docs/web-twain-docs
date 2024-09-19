@@ -21,19 +21,19 @@ If the TWAIN driver of your device supports discarding blank pages, you can use 
 2. If you don't want to show the user interface of the source, you can set [ `IfAutoDiscardBlankpages` ]({{site.info}}api/WebTwain_Acquire.html#ifautodiscardblankpages) to true or negotiate the ICAP_AUTODISCARDBLANKPAGES capability to discard blank pages automatically. Please NOTE that this property or capability only works if the scanner itself supports the feature (on the hardware level).
 
 ```javascript
-DWObject.SelectSource();
-DWObject.OpenSource;
-DWObject.IfShowUI = false;
+DWTObject.SelectSource();
+DWTObject.OpenSource;
+DWTObject.IfShowUI = false;
 //*Use the property
-DWObject.IfAutoDiscardBlankpages = true;
+DWTObject.IfAutoDiscardBlankpages = true;
 //*Use capability negotiation
-DWObject.Capability = Dynamsoft.DWT.EnumDWT_Cap.ICAP_AUTODISCARDBLANKPAGES;
-DWObject.CapType = Dynamsoft.DWT.EnumDWT_CapType.TWON_ONEVALUE;
-DWObject.CapValue = -1; //Auto
-if (DWObject.CapSet) {
+DWTObject.Capability = Dynamsoft.DWT.EnumDWT_Cap.ICAP_AUTODISCARDBLANKPAGES;
+DWTObject.CapType = Dynamsoft.DWT.EnumDWT_CapType.TWON_ONEVALUE;
+DWTObject.CapValue = -1; //Auto
+if (DWTObject.CapSet) {
   alert("Successful!");
 }
-DWObject.AcquireImage();
+DWTObject.AcquireImage();
 ```
 
 ### Method Two
@@ -41,10 +41,10 @@ DWObject.AcquireImage();
 If the scanner itself doesn't support discarding blank pages, you can also use the [ `IsBlankImageExpress` ]({{site.info}}api/WebTwain_Buffer.html#isblankimageexpress) method to do this as a workaround. To detect and discard blank pages automatically, you can do it in the [ `OnPostTransfer` ]({{site.info}}api/WebTwain_Acquire.html#onposttransfer) event which fires after each transfer.
 
 ```javascript
-function DWObject_OnPostTransfer() {
-  DWObject.BlankImageMaxStdDev = 20;
-  if (DWObject.IsBlankImageExpress(DWObject.CurrentImageIndexInBuffer)) {
-    DWObject.RemoveImage(DWObject.CurrentImageIndexInBuffer);
+function DWTObject_OnPostTransfer() {
+  DWTObject.BlankImageMaxStdDev = 20;
+  if (DWTObject.IsBlankImageExpress(DWTObject.CurrentImageIndexInBuffer)) {
+    DWTObject.RemoveImage(DWTObject.CurrentImageIndexInBuffer);
   }
 }
 ```

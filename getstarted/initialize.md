@@ -53,7 +53,7 @@ DWT has a built in event that, by default, triggers `Dynamsoft_OnReady()` when t
 
 ```js
 function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }
 ```
 
@@ -82,10 +82,10 @@ DWT's default behaviour is to initalizae the DWT environment as soon as the appl
     <div id="dwtcontrolContainer"></div>
 
     <script type="text/javascript">
-        var DWObject;
+        var DWTObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+            DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
         }
 
     </script>

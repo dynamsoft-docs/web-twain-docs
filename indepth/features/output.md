@@ -33,8 +33,8 @@ function upload(indices, type) {
     // path to the server-side script
     var url = protocol + window.location.hostname + ":" + port + actionPage;
     var fileName = "SampleFile" + getExtension(type);
-    if (DWObject) {
-        DWObject.HTTPUpload(
+    if (DWTObject) {
+        DWTObject.HTTPUpload(
             url,
             indices,
             type,
@@ -139,8 +139,8 @@ Dynamsoft.FileUploader.Init('', function(obj) {
 );
 
 function useUploader(indices, type) {
-    if (DWObject) {
-        DWObject.GenerateURLForUploadData(indices, type, function(url, indices, iImageType) {
+    if (DWTObject) {
+        DWTObject.GenerateURLForUploadData(indices, type, function(url, indices, iImageType) {
             // Create a Job
             var job = dsUploadManager.CreateJob();
             // Configure the Job
@@ -168,7 +168,7 @@ In some cases, you might already have an upload logic in your application and ju
 
 ``` javascript
 function uploadThroughAJAX(indices, type) {
-    DWObject.ConvertToBlob(
+    DWTObject.ConvertToBlob(
         indices,
         type,
         function(result, _indices, type) {
@@ -237,10 +237,10 @@ function requestresult() {
 FTP is a lot simpler than HTTP. A simple example:
 
 ``` javascript
-DWObject.FTPUserName = 'test';
-DWObject.FTPPort = 21;
-DWObject.FTPPassword = 'test';
-DWObject.FTPUpload(
+DWTObject.FTPUserName = 'test';
+DWTObject.FTPPort = 21;
+DWTObject.FTPPassword = 'test';
+DWTObject.FTPUpload(
     '192.168.8.222', //The FTP Host
     0, // The index of the image
     'test.pdf', // The path & name of the file 
@@ -281,9 +281,9 @@ DWObject.FTPUpload(
 You can set the [ `IfShowFileDialog` ]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) property to `true` , which will show the open/save file dialog whenever you save an image(s) within the `Dynamic Web TWAIN` buffer
 
 ``` javascript
-DWObject.IfShowFileDialog = true;
+DWTObject.IfShowFileDialog = true;
 // The path is selected in the dialog, therefore we only need the file name
-DWObject.SaveAllAsPDF("Sample.pdf",
+DWTObject.SaveAllAsPDF("Sample.pdf",
     function() {
         console.log('Successful!');
     },
@@ -300,8 +300,8 @@ If you don't want to show any dialog and you know for sure where you want the fi
 > When using an absolute path, you must make sure the current user has the proper permission to save to that path. Otherwise the save will fail.
 
 ``` javascript
-DWObject.IfShowFileDialog = false;
-DWObject.SaveAllAsPDF("D:\\Sample.pdf",
+DWTObject.IfShowFileDialog = false;
+DWTObject.SaveAllAsPDF("D:\\Sample.pdf",
     function() {
         console.log('Successful!');
     },
@@ -316,14 +316,14 @@ DWObject.SaveAllAsPDF("D:\\Sample.pdf",
 If you want the user to choose a file path once and then save multiple images to that location, you can do so via the [ `OnGetFilePath` ]({{site.info}}api/WebTwain_IO.html#ongetfilepath) event.
 
 ``` javascript
-DWObject.RegisterEvent("OnGetFilePath", (isSave, filesCount, index, directory, _fn) => {
+DWTObject.RegisterEvent("OnGetFilePath", (isSave, filesCount, index, directory, _fn) => {
     if (directory === "" && _fn === "") {
         console.log("User cancelled the operation.")
     } else {
         var path = directory + "\\" + _fn.substr(0, _fn.lastIndexOf("."));
-        DWObject.IfShowFileDialog = false;
-        for (var i = 1; i < DWObject.HowManyImagesInBuffer; i++) {
-            DWObject.SaveAsJPEG(path + "-" + i.toString() + ".jpg", i,
+        DWTObject.IfShowFileDialog = false;
+        for (var i = 1; i < DWTObject.HowManyImagesInBuffer; i++) {
+            DWTObject.SaveAsJPEG(path + "-" + i.toString() + ".jpg", i,
                 function() {
                     console.log('Successful!');
                 },
@@ -334,8 +334,8 @@ DWObject.RegisterEvent("OnGetFilePath", (isSave, filesCount, index, directory, _
         }
     }
 });
-DWObject.IfShowFileDialog = true;
-DWObject.SaveAsJPEG("Sample.jpg", 0,
+DWTObject.IfShowFileDialog = true;
+DWTObject.SaveAsJPEG("Sample.jpg", 0,
     function() {
         console.log('Successful!');
     },
@@ -354,7 +354,7 @@ In some cases, you want to process the data yourself and want to extract it from
 To do this, use the method [ `ConvertToBlob()` ]({{site.info}}api/WebTwain_IO.html#ConvertToBlob) which has been mentioned several times above. The following is a simple example
 
 ``` javascript
-DWObject.ConvertToBlob(
+DWTObject.ConvertToBlob(
     [0, 1, 2],
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
@@ -371,7 +371,7 @@ DWObject.ConvertToBlob(
 To do this, use the method [ `ConvertToBase64()` ]({{site.info}}api/WebTwain_IO.html#converttobase64)
 
 ``` javascript
-DWObject.ConvertToBase64(
+DWTObject.ConvertToBase64(
     [0, 1, 2],
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function(result, indices, type) {
