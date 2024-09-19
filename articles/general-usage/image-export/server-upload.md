@@ -226,6 +226,7 @@ Check out how to use the Uploader in the following code snippets
     <head>
         <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
         <script src="Resources/dynamsoft.webtwain.config.js"></script>
+        <script type="text/javascript" src="Resources/addon/dynamsoft.upload.js"></script>
     </head>
 
     <body>

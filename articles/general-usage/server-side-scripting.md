@@ -16,7 +16,7 @@ redirect_from:
 
 ## How to process uploaded files
 
-As mentioned in [how to upload]({{site.indepth}}features/output.html#upload), `Dynamic Web TWAIN` sends an HTTP POST request to the server when doing an upload. The file in the POST Form has the name `RemoteFile` by default. If you wish to change that, you can use [ `HttpFieldNameOfUploadedImage` ]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage). 
+As mentioned in our [image upload guide]({{site.general-usage}}image-export/server-upload.html), `Dynamic Web TWAIN` sends an HTTP POST request to the server when doing an upload. The file in the POST Form has the name `RemoteFile` by default. If you wish to change that, you can use [ `HttpFieldNameOfUploadedImage` ]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage). 
 
 The following assumes the default `RemoteFile` is used and that [extra Form fields]({{site.indepth}}features/output.html#can-i-change-the-fields-of-the-http-form) might accompany the file.
 

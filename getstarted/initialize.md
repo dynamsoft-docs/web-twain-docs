@@ -5,7 +5,7 @@ title: Dynamic Web TWAIN SDK HelloWorld - Initialization
 keywords: Dynamic Web TWAIN, Documentation, Hello World, script, import
 breadcrumbText: Hello World
 description: Dynamic Web TWAIN SDK HelloWorld - Initialization
-permalink: /getstarted/initialize.html
+#permalink: /getstarted/initialize.html
 ---
 
 # Initializing the Environment

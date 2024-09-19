@@ -18,7 +18,7 @@ The DWT image buffer handles data using the `DIB` format, which take up a lot of
 
 The disk caching feature is enabled by default, but can be disabled by setting [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) to `false` .
 
-You can also set how much memory `Dynamic Web TWAIN` can use before images start to be cached. By default, **800MB** is used. You can change it using the property [`BufferMemoryLimit`]({{site.api}}WebTwain_Buffer.html#buffermemorylimit). We may also begin caching once reaching a certain number of images within the buffer, which is controlled by [`MaxImagesInBuffer`]({{site.api}}WebTwain_Buffer.html#maximagesinbuffer).
+You can also set how much memory `Dynamic Web TWAIN` can use before images start to be cached. By default, **800MB** is used. You can change it using the property [`BufferMemoryLimit`]({{site.api}}WebTwain_Buffer.html#buffermemorylimit).
 
 > Note: All cached data is encrypted and can only be accessed by `Dynamic Web TWAIN`. When `Dynamic Web TWAIN` is unloaded (like when the browser tab refreshes or closes), the cached data is destroyed and removed from the disk automatically.
 

@@ -85,7 +85,7 @@ On **Linux**, instead of double clicking, the downloaded installer needs to be r
   sudo rpm -ivh DynamsoftServiceSetup.rpm
   ```
 
-Once the installation is done, the users can click the orange sentance 'click here to verify completion' or refresh the page to start using Dynamic Web TWAIN.
+Once the installation is done, the users can click the orange sentence 'click here to verify completion' or refresh the page to start using Dynamic Web TWAIN.
 
 ![Initialization]({{site.assets}}imgs/Initialization-2.png)
 

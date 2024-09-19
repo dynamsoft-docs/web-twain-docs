@@ -22,27 +22,29 @@ Images scanned by a `WebTwain` instance are stored inside the `WebTwain`'s image
 
 The first step in managing the buffer is to examine its state. Images in the buffer can be identified both with its index (which may change over time), or by its image ID, which is immutable once an image enters the buffer. These buffer state querying APIs are typically used in conjunction with other buffer APIS, such as image reordering and image tagging, which we will come to discuss.
 
-* [`DWTObject.HowManyImagesInBuffer`]({{site.api}}WebTwain_Buffer.html#howmanyimagesinbuffer) holds the number of images in the buffer of the `WebTwain` instance.
+- [`DWTObject.HowManyImagesInBuffer`]({{site.api}}WebTwain_Buffer.html#howmanyimagesinbuffer) holds the number of images in the buffer of the `WebTwain` instance.
 
-* [`DWTObject.CurrentImageIndexInBuffer`]({{site.api}}WebTwain_Buffer.html#currentimageindexinbuffer) returns the index of the currently active image (which is also the one being displayed by the `Viewer`). This property can also be used to **set** the active image by setting it to a different index.
+- [`MaxImagesInBuffer`]({{site.api}}WebTwain_Buffer.html#maximagesinbuffer) controls the maximum number of images allowed within the buffer. The default value is 32767.
 
-* [`IndexToImageID(imageIndex)`]({{site.api}}WebTwain_Buffer.html#indextoimageid) and [ `ImageIDToIndex(imageID)` ]({{site.api}}WebTwain_Buffer.html#imageidtoindex) can get the image ID (a string) of an image at a given position in the buffer index (a number), and vice versa.
+- [`DWTObject.CurrentImageIndexInBuffer`]({{site.api}}WebTwain_Buffer.html#currentimageindexinbuffer) returns the index of the currently active image (which is also the one being displayed by the `Viewer`). This property can also be used to **set** the active image by setting it to a different index.
 
-* Images in the buffer also have an internal URL with which they can be referenced (in [desktop browsers only]({{site.getstarted}}platform.html#browsers-on-desktop-devices)). This comes in two flavors:
-  * [`GetImageURL(imageIndex)`]({{site.api}}WebTwain_Buffer.html#getimageurl) retrieves the URL of the image at the specified index using the `https://` scheme. This is useful to display images outside the `WebTwain` `Viewer`.
-  * [`GetImagePartURL(imageIndex)`]({{site.api}}WebTwain_Buffer.html#getimageparturl) retrieves the URL of the image at the specified index, but using the `dwt://` scheme, which can only be used by other DWT APIs.
+- [`IndexToImageID(imageIndex)`]({{site.api}}WebTwain_Buffer.html#indextoimageid) and [ `ImageIDToIndex(imageID)` ]({{site.api}}WebTwain_Buffer.html#imageidtoindex) can get the image ID (a string) of an image at a given position in the buffer index (a number), and vice versa.
 
-* [`GetSkewAngle(imageIndex)`]({{site.api}}WebTwain_Buffer.html#getskewangle) estimates the skew angle of scanned documents in degrees. This can be used to de-skew scanned images, which may be useful for last minute touch-ups. (see image rotation in our [image editing guide]({{site.general-usage}}image-processing/image-editing.html#example---rotating-images))
+- Images in the buffer also have an internal URL with which they can be referenced (in [desktop browsers only]({{site.getstarted}}platform.html#browsers-on-desktop-devices)). This comes in two flavors:
+  - [`GetImageURL(imageIndex)`]({{site.api}}WebTwain_Buffer.html#getimageurl) retrieves the URL of the image at the specified index using the `https://` scheme. This is useful to display images outside the `WebTwain` `Viewer`.
+  - [`GetImagePartURL(imageIndex)`]({{site.api}}WebTwain_Buffer.html#getimageparturl) retrieves the URL of the image at the specified index, but using the `dwt://` scheme, which can only be used by other DWT APIs.
 
-* [`GetSkewAngleEx(imageIndex, leftmost, topmost, rightmost, bottommost)`]({{site.api}}WebTwain_Buffer.html#getskewangleex) calculates the skew angle of a rectangle (specified by its outermost pixel coordinates) within the image. This feature is only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
+- [`GetSkewAngle(imageIndex)`]({{site.api}}WebTwain_Buffer.html#getskewangle) estimates the skew angle of scanned documents in degrees. This can be used to de-skew scanned images, which may be useful for last minute touch-ups. (see image rotation in our [image editing guide]({{site.general-usage}}image-processing/image-editing.html#example---rotating-images))
+
+- [`GetSkewAngleEx(imageIndex, leftmost, topmost, rightmost, bottommost)`]({{site.api}}WebTwain_Buffer.html#getskewangleex) calculates the skew angle of a rectangle (specified by its outermost pixel coordinates) within the image. This feature is only supported in [desktop browsers]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
 
 Some buffer management APIs work on images that have been "selected", for example, calculating the disk space required by selected images. The user may also select images through the `Viewer` interface, which also visually indicates selected images. The selection APIs are described below:
 
-* [`SelectImages(indexArray)`]({{site.api}}WebTwain_Buffer.html#selectimages) selects images using an array of image indices. Note that there is no dedicated API for selecting a single image, so we use the form `SelectImages([singleImageIndex])` instead.
+- [`SelectImages(indexArray)`]({{site.api}}WebTwain_Buffer.html#selectimages) selects images using an array of image indices. Note that there is no dedicated API for selecting a single image, so we use the form `SelectImages([singleImageIndex])` instead.
 
-* [`SelectAllImages()`]({{site.api}}WebTwain_Buffer.html#selectallimages) selects all the images in the buffer.
+- [`SelectAllImages()`]({{site.api}}WebTwain_Buffer.html#selectallimages) selects all the images in the buffer.
 
-* [`SelectedImagesIndices`]({{site.api}}WebTwain_Buffer.html#selectedimagesindices) is a read-only array containing the indices of the currently selected images.
+- [`SelectedImagesIndices`]({{site.api}}WebTwain_Buffer.html#selectedimagesindices) is a read-only array containing the indices of the currently selected images.
 
 ## Reordering Images
 
