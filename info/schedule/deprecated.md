@@ -73,12 +73,12 @@ Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT
 
 ### Util
 
-* Deprecated Method: DWObject.SetProductKeyAsync
-* Deprecated Property: DWObject.ProductKey
+* Deprecated Method: DWTObject.SetProductKeyAsync
+* Deprecated Property: DWTObject.ProductKey
 
 ### Scan
 
-* Deprecated Method: DWObject.GetDeviceType
+* Deprecated Method: DWTObject.GetDeviceType
 
 ## 17.3
 
@@ -224,10 +224,10 @@ Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT
 
 ``` javascript
   /* Set the size of the viewer */
-  DWObject.Viewer.height = 800;
-  DWObject.Viewer.width = 600;
+  DWTObject.Viewer.height = 800;
+  DWTObject.Viewer.width = 600;
   /* Create a thumbnail viewer, note that this viewer can be hidden or disposed */
-  var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
+  var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
   objThumbnailViewer.show();
   //objThumbnailViewer.hide();
   //objThumbnailViewer.dispose();
@@ -244,7 +244,7 @@ Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT
 
 ``` javascript
   /* The image editor is now created on the fly and can be hidden or disposed */
-  var objImageEditor = DWObject.Viewer.createImageEditor(editorSettings);
+  var objImageEditor = DWTObject.Viewer.createImageEditor(editorSettings);
   objImageEditor.show();
   objImageEditor.hide();
   objImageEditor.dispose();
@@ -258,7 +258,7 @@ Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT
   As already mentioned, these four methods are removed and the alternative implementation is shown in the code below
 
 ``` javascript
-  var objCustomElement = DWObject.Viewer.createCustomElement(document.getElementById("divCustomElement"));
+  var objCustomElement = DWTObject.Viewer.createCustomElement(document.getElementById("divCustomElement"));
   objCustomElement.show();
   objCustomElement.hide();
   objCustomElement.dispose();

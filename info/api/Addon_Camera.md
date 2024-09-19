@@ -85,7 +85,7 @@ interface DeviceInfo{
 **Example**
 
 ```javascript
-DWObject.Addon.Camera.getSourceList();
+DWTObject.Addon.Camera.getSourceList();
 ```
 
 ---

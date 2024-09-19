@@ -15,6 +15,6 @@ permalink: /faq/convert-color-image-to-grayscale.html
 
 Yes, you can convert the color of an image easily by using the below methods:
 
-- <a href="{{site.info}}api/WebTwain_Edit.html#converttobw" target="_blank">DWObject.ConvertToBW()</a> // Converts the specified image to a black-and-white image
+- <a href="{{site.info}}api/WebTwain_Edit.html#converttobw" target="_blank">DWTObject.ConvertToBW()</a> // Converts the specified image to a black-and-white image
 
-- <a href="{{site.info}}api/WebTwain_Edit.html#converttograyscale" target="_blank">DWObject.ConvertToGrayScale()</a> // Converts the specified image to a grayscale image
+- <a href="{{site.info}}api/WebTwain_Edit.html#converttograyscale" target="_blank">DWTObject.ConvertToGrayScale()</a> // Converts the specified image to a grayscale image

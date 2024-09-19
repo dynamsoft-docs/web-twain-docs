@@ -5,7 +5,9 @@ title: Dynamic Web TWAIN SDK Deployment - Server Deployment
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Server
 breadcrumbText: Server Deployment
 description: Dynamic Web TWAIN SDK Documentation Server Deployment Page
-permalink: /indepth/deployment/server.html
+permalink: /general-usage/server-deployment.html
+redirect_from:
+    - /indepth/deployment/server.html
 ---
 
 # Deploy your application on the server

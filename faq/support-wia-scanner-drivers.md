@@ -32,10 +32,10 @@ To compatible with both TWAIN and WIA 2.0,
 ### Example Code
 
 ```javascript
-DWObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.TWAINSCANNER|Dynamsoft.DWT.EnumDWT_DeviceType.WIASCANNER).then((deviceList)=>{
-  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+DWTObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.TWAINSCANNER|Dynamsoft.DWT.EnumDWT_DeviceType.WIASCANNER).then((deviceList)=>{
+  return DWTObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({}) 
+    return DWTObject.AcquireImageAsync({}) 
 }).catch((e)=>{
     console.error(e)
 })

@@ -1,71 +1,125 @@
 tree_list:
   - name: Introduction
-    path: /about/
+    path: /introduction/index.html
     childList:
       - name: System Requirements
-        path: /getstarted/platform.html      
+        path: /introduction/system-requirements.html
       - name: Imaging Hardware
-        path: /getstarted/hardware.html
-      - name: File Types
-        path: /getstarted/filetype.html
-  - name: DEVELOPMENT
+        path: /introduction/imaging-hardware.html
+      - name: Supported File Formats
+        path: /introduction/supported-file-formats.html
+
+  - name: Developer Guide
     isCategory: true
-  - name: HelloWorld
-    path: /getstarted/helloworld.html
+
+  - name: Hello World
+    path: /hello-world/index.html
     childList:
-      # - name: Introduction
-        # path: /getstarted/helloworld.html
-      # - name: Initializing the Environment
-      #   path: /getstarted/initialize.html
-      - name: Scanning an Image
-        path: /getstarted/scanning.html
+      - name: Scanning Images
+        path: /hello-world/scanning.html
       - name: Uploading Images to the Server
-        path: /getstarted/uploading.html
-      - name: Setting Scan Parameters
-        path: /getstarted/scansettings.html
-        # path: /indepth/features/input.html
+        path: /hello-world/uploading.html
+      - name: Specifying Scan Settings
+        path: /hello-world/scan-settings.html
       - name: Editing Images
-        path: /getstarted/editing.html
-      # - name: Uploading and Saving Images
-      #   path: /indepth/features/output.html
-      # - name: Deploying the Application
-      #   path: /indepth/deployment/server.html      
-  - name: User Guide
-    path: /getstarted/
+        path: /hello-world/editing.html
+
+  - name: General Usage Guide
+    path: /general-usage/index.html
     childList:
-      # - name: HelloWorld 
-      #   path: /getstarted/helloworld.html
+      - name: Loading Library Resources
+        path: /general-usage/resource-loading.html
       - name: License
-        path: /about/license.html
-      - name: Set up Dynamsoft Service 
-        path: /indepth/deployment/service.html
-      - name: Deploy to Server
-        path: /indepth/deployment/server.html
-      - name: Explore Features
-        path: /indepth/features/
+        path: /general-usage/license.html
+      - name: Initializing DWT
+        path: /general-usage/initialization.html
+      - name: Importing Images
+        path: /general-usage/image-import/index.html
         childList:
-          - name: DWT Initialization 
-            path: /indepth/features/initialize.html
-          - name: Input Options
-            path: /indepth/features/input.html
-          - name: Viewer Setting
-            path: /indepth/features/viewer.html
-          - name: Image Editing
-            path: /indepth/features/edit.html
-          - name: UI Customization
-            path: /indepth/features/ui.html
-          - name: Output Options
-            path: /indepth/features/output.html
-          - name: Image Buffer Management
-            path: /indepth/features/buffer.html
-          - name: Barcode Recognition
-            path: /indepth/features/barcode.html
-          - name: PDF Handling
-            path: /indepth/features/pdf.html 
-          - name: PDF Compressor (Beta) 
-            path: /indepth/features/pdfc.html 
-          - name: Remote Scan
-            path: https://www.dynamsoft.com/remote-scan/docs/introduction/
+        - name: Acquiring Images from Scanners
+          path: /general-usage/image-import/scanner-image-acquisition.html
+        - name: Loading Documents from Files
+          path: /general-usage/image-import/file-import.html
+      - name: Configuring the Viewer
+        path: /general-usage/viewer-configuration.html
+      - name: Processing Images
+        path: /general-usage/image-processing/index.html
+        childList:
+        - name: Managing the Image Buffer
+          path: /general-usage/image-processing/buffer-management.html
+        - name: Editing Images
+          path: /general-usage/image-processing/image-editing.html
+      - name: Exporting Images
+        path: /general-usage/image-export/index.html
+        childList:
+        - name: Uploading to the Web Server
+          path: /general-usage/image-export/server-upload.html
+        - name: Exporting Locally
+          path: /general-usage/image-export/local-export.html
+      - name: Server-Side Scripting
+        path: /general-usage/server-side-scripting.html
+      - name: Deploying to the Server
+        path: /general-usage/server-deployment.html
+  - name: Extended Usage Guide
+    path: /extended-usage/index.html
+    childList:
+    - name: Advanced DWT Initialization
+      path: /extended-usage/advanced-initialization.html
+    - name: Configuring System Messages
+      path: /extended-usage/system-message-configuration.html
+    - name: Set Up the Dynamsoft Service 
+      path: /extended-usage/dynamsoft-service-configuration.html
+    - name: UI Customization
+      path: /extended-usage/ui-customization.html
+    - name: Barcode Recognition
+      path: /extended-usage/barcode-processing.html
+    - name: PDF Handling
+      path: /extended-usage/pdf-processing.html
+    - name: PDF Compressor (Beta) 
+      path: /extended-usage/pdf-compression.html
+    - name: Buffer Caching
+      path: /extended-usage/buffer-caching.html
+    - name: Remote Scan
+      path: https://www.dynamsoft.com/remote-scan/docs/introduction/
+
+  # - name: Existing section
+  #   isCategory: true
+  # - name: User Guide
+  #   path: /getstarted/
+  #   childList:
+  #     # - name: HelloWorld 
+  #     #   path: /getstarted/helloworld.html
+  #     - name: License
+  #       path: /about/license.html
+  #     - name: Set up Dynamsoft Service 
+  #       path: /indepth/deployment/service.html
+  #     - name: Deploy to Server
+  #       path: /indepth/deployment/server.html
+  #     - name: Explore Features
+  #       path: /indepth/features/
+  #       childList:
+  #         - name: DWT Initialization 
+  #           path: /indepth/features/initialize.html
+  #         - name: Input Options
+  #           path: /indepth/features/input.html
+  #         - name: Viewer Setting
+  #           path: /indepth/features/viewer.html
+  #         - name: Image Editing
+  #           path: /indepth/features/edit.html
+  #         - name: UI Customization
+  #           path: /indepth/features/ui.html
+  #         - name: Output Options
+  #           path: /indepth/features/output.html
+  #         - name: Image Buffer Management
+  #           path: /indepth/features/buffer.html
+  #         - name: Barcode Recognition
+  #           path: /indepth/features/barcode.html
+  #         - name: PDF Handling
+  #           path: /indepth/features/pdf.html 
+  #         - name: PDF Compressor (Beta) 
+  #           path: /indepth/features/pdfc.html 
+  #         - name: Remote Scan
+  #           path: https://www.dynamsoft.com/remote-scan/docs/introduction/
   - name: Samples and Demos
     childList:
       - name: Use Web TWAIN in Angular
@@ -119,7 +173,7 @@ tree_list:
         path: /info/api/appendix.html
       # - name: Interface
       #   path: /info/api/interface.html
-  - name: USEFUL RESOURCES
+  - name: Useful Resources
     isCategory: true
   - name: Release Notes
     path: /info/schedule/

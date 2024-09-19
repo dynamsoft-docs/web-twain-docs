@@ -5,8 +5,10 @@ title: Dynamic Web TWAIN SDK Features - Initialization
 keywords: Dynamic Web TWAIN, Documentation, Initialization 
 breadcrumbText: Initialization
 description: Dynamic Web TWAIN SDK Documentation Initialization Page
-permalink: /indepth/features/initialize.html
+#permalink: /indepth/features/initialize.html
 ---
+
+<!--Old preview article never deployed, probably not needed-->
 
 # Initialize
 Initializing Dynamic Web TWAIN takes a few simple steps, as you can see in the [Getting Started]({{site.getstarted}}helloworld.html) chapter. The following guide will dive deeper into the process how Dynamic Web TWAIN is intialized once the web page loads.
@@ -61,7 +63,7 @@ Snippet 1:
 
 ``` javascript
 Dynamsoft.DWT.OnWebTwainReady = function() {
-    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }
 ```
 
@@ -70,7 +72,7 @@ Snippet 2:
 ``` javascript
 Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', Dynamsoft_OnReady);
 function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }
 ```
 
@@ -96,7 +98,7 @@ This method manually creates a `WebTwain` instance with a default built-in viewe
  */
 CreateDWTObject(
     ContainerId: string, 
-    successCallBack: (DWObject: WebTwain) => void,
+    successCallBack: (DWTObject: WebTwain) => void,
     failureCallBack: ({code: number, message: string}) => void
 ): void;
 
@@ -105,7 +107,7 @@ CreateDWTObject(
     host: string, 
     port: string | number, 
     portSSL: string | number, 
-    successCallBack: (DWObject: WebTwain) => void,
+    successCallBack: (DWTObject: WebTwain) => void,
     failureCallBack: ({code: number, message: string}) => void
 ): void;
 ```
@@ -138,7 +140,7 @@ This method manually creates a `WebTwain` instance without a default built-in vi
 */
 CreateDWTObjectEx(
     dwtInitialConfig: DWTInitialConfig,
-    successCallBack: (DWObject: WebTwain) => void,
+    successCallBack: (DWTObject: WebTwain) => void,
     failureCallBack: ({code: number, message: string}) => void
 ): void;
 ```
@@ -163,16 +165,16 @@ The following would be equivalent to using [Load](#dynamsoftdwtload) with the co
 The created instance doesn't have a built-in viewer. You can instead use the method [`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind) to add a viewer.
 
 ``` javascript
-var DWObject = null;
+var DWTObject = null;
 Dynamsoft.DWT.CreateDWTObjectEx({
         WebTwainId: 'dwtcontrol'
     },
     function(obj) {
-        DWObject = obj;
-        DWObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
-        DWObject.Viewer.height = 600;
-        DWObject.Viewer.width = 800;
-        DWObject.Viewer.show();
+        DWTObject = obj;
+        DWTObject.Viewer.bind(document.getElementById('dwtcontrolContainer'));
+        DWTObject.Viewer.height = 600;
+        DWTObject.Viewer.width = 800;
+        DWTObject.Viewer.show();
     },
     function(err) {
         console.log(err);

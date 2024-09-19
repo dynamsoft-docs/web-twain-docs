@@ -25,8 +25,8 @@ You can use the methods [ConvertToBlob]({{site.info}}api/WebTwain_IO.html#conver
 ```javascript
 function UploadAsJPG() {
     var count = 0;
-    DWObject.ClearAllHTTPFormField();
-    DWObject.SetHTTPFormField("UploadedImagesCount",DWObject.HowManyImagesInBuffer);
+    DWTObject.ClearAllHTTPFormField();
+    DWTObject.SetHTTPFormField("UploadedImagesCount",DWTObject.HowManyImagesInBuffer);
 
     function asyncFailureFunc(errorCode, errorString) {
         alert("ErrorCode: " + errorCode + "\r" + "ErrorString:" + errorString);
@@ -41,16 +41,16 @@ function UploadAsJPG() {
     }
 
     var convertImage = function (_index) {
-        DWObject.ConvertToBlob(
+        DWTObject.ConvertToBlob(
             [_index], 
             Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
             function (result) {
-                DWObject.SetHTTPFormField('image_' + _index, result, 'JPG_image_' + _index);
+                DWTObject.SetHTTPFormField('image_' + _index, result, 'JPG_image_' + _index);
                 count++;
-                if (count < DWObject.HowManyImagesInBuffer) {
+                if (count < DWTObject.HowManyImagesInBuffer) {
                     convertImage(count);
                 } else {
-                    DWObject.HTTPUpload("http://localhost:90/saveUploadedJPG.aspx", onEmptyResponse, onServerReturnedSomething);// Please replace the URL with yours.
+                    DWTObject.HTTPUpload("http://localhost:90/saveUploadedJPG.aspx", onEmptyResponse, onServerReturnedSomething);// Please replace the URL with yours.
                 }
             }, 
             asyncFailureFunc

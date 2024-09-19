@@ -6,16 +6,16 @@ title: Dynamic Web TWAIN SDK Deployment - Dynamsoft Service
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamsoft Service
 breadcrumbText: Dynamsoft Service
 description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
-permalink: /indepth/deployment/service.html
+permalink: /extended-usage/dynamsoft-service-configuration.html
+redirect_from:
+  - /indepth/deployment/service.html
 ---
 
-# Dynamsoft Service 
+# Dynamsoft Service
 
 > This article is meant exclusively for the Desktop Service Edition of Dynamic Web TWAIN.
 
-## What is Dynamsoft Service
-
-Dynamsoft Service is the core piece of Dynamic Web TWAIN when running in Service mode. It handles the communication between hardware (scanner, webcam, etc.) and browser, manages the image buffer, and coordinates data between different modules. 
+The Dynamsoft Service is the core piece of Dynamic Web TWAIN when running in Service mode. It handles the communication between hardware (scanner, webcam, etc.) and browser, manages the image buffer, and coordinates data between different modules.
 
 ### IP and ports
 
@@ -85,7 +85,7 @@ On **Linux**, instead of double clicking, the downloaded installer needs to be r
   sudo rpm -ivh DynamsoftServiceSetup.rpm
   ```
 
-Once the installation is done, the users can click the orange sentance 'click here to verify completion' or refresh the page to start using Dynamic Web TWAIN.
+Once the installation is done, the users can click the orange sentence 'click here to verify completion' or refresh the page to start using Dynamic Web TWAIN.
 
 ![Initialization]({{site.assets}}imgs/Initialization-2.png)
 

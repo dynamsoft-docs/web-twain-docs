@@ -42,7 +42,7 @@ The below code shows how to scan a document from scanners on desktop and invoke 
 
 ``` javascript
 function AcquireImage() {
-   if (DWObject) {
+   if (DWTObject) {
      if (Dynamsoft.Lib.env.bMobile) {
 	   var showVideoConfigs = {
 		scannerViewer:{
@@ -55,9 +55,9 @@ function AcquireImage() {
 		}
 	    };
            
-	    if(!DWObject.UseLocalService) {
+	    if(!DWTObject.UseLocalService) {
         // invoke the camera module for mobile capture
-		DWObject.Addon.Camera.scanDocument(showVideoConfigs).then(
+		DWTObject.Addon.Camera.scanDocument(showVideoConfigs).then(
 			function(){
 				console.log("OK");
 			}, 
@@ -67,10 +67,10 @@ function AcquireImage() {
 	    } 
        }
        else {
-            DWObject.SelectSource(
+            DWTObject.SelectSource(
                 function() {
-                    DWObject.OpenSource();
-                    DWObject.AcquireImage();
+                    DWTObject.OpenSource();
+                    DWTObject.AcquireImage();
                 },
                 function() {
                     console.log("SelectSource failed!");

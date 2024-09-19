@@ -17,7 +17,7 @@ Image editor can be easily integrated by using the code sample provided below.
 
 ```javascript
 // The below command will use the default settings in which it shows all buttons in toolbar and also takes up entire screen.
-var imageEditor = DWObject.Viewer.createImageEditor();
+var imageEditor = DWTObject.Viewer.createImageEditor();
 imageEditor.show();
 ```
 

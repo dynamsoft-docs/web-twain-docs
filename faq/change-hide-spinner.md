@@ -17,4 +17,4 @@ You can change/hide the loading bar which is shown during document scanning. The
 
 <br />
 
-***Note: there is an known issue in v17.3, if you cannot hide the loading bar with the above method, please refer to this [link]({{site.faq}}unable-hide-loading-bar.html).***
+> Note: there is a known issue in v17.3, if you cannot hide the loading bar with the above method, please refer to this [link]({{site.faq}}unable-hide-loading-bar.html).

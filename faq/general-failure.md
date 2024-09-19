@@ -27,10 +27,10 @@ You can reset the existing connections of the source by calling <a href="{{site.
 
 ```javascript
 function AcquireImage() {
-  DWObject.CloseSource();
-  DWObject.CloseSourceManager();
-  DWObject.SelectSource();
-  DWObject.OpenSource();
-  DWObject.AcquireImage();
+  DWTObject.CloseSource();
+  DWTObject.CloseSourceManager();
+  DWTObject.SelectSource();
+  DWTObject.OpenSource();
+  DWTObject.AcquireImage();
 }
 ```

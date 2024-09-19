@@ -116,7 +116,9 @@ permalink: /info/api/WebTwain_Acquire.html
 
 ## AcquireImage()
 
-Start image acquisition.
+Request a scan, then store to the image buffer of the WebTwain instance upon completion of the scan.
+<!--Possibly some other descriptions, no need to add for now-->
+By default, the scans are displayed from the `dwtcontrolContainer` container.
 
 **Syntax**
 
@@ -197,52 +199,52 @@ var deviceConfiguration = {
 };
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   alert(errorString);
 }
 
 function AcquireImage1() {
-  DWObject.SelectSource(function () {
-    DWObject.OpenSource();
-    DWObject.IfShowUI = false;
-    DWObject.PixelType = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB;
-    DWObject.Resolution = 300;
-    DWObject.IfFeederEnabled = true;
-    DWObject.IfDuplexEnabled = false;
-    DWObject.IfDisableSourceAfterAcquire = true;
-    DWObject.AcquireImage();
+  DWTObject.SelectSource(function () {
+    DWTObject.OpenSource();
+    DWTObject.IfShowUI = false;
+    DWTObject.PixelType = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB;
+    DWTObject.Resolution = 300;
+    DWTObject.IfFeederEnabled = true;
+    DWTObject.IfDuplexEnabled = false;
+    DWTObject.IfDisableSourceAfterAcquire = true;
+    DWTObject.AcquireImage();
   }, failureCallback);
 }
 
 function AcquireImage2() {
-  DWObject.SelectSource(function () {
-    DWObject.OpenSource();
-    DWObject.AcquireImage(deviceConfiguration);
+  DWTObject.SelectSource(function () {
+    DWTObject.OpenSource();
+    DWTObject.AcquireImage(deviceConfiguration);
   }, failureCallback);
 }
 
 function AcquireImage3() {
-  DWObject.SelectSource(function () {
-    DWObject.OpenSource();
-    DWObject.IfShowUI = false;
-    DWObject.PixelType = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB;
-    DWObject.Resolution = 300;
-    DWObject.IfFeederEnabled = true;
-    DWObject.IfDuplexEnabled = false;
-    DWObject.IfDisableSourceAfterAcquire = true;
-    DWObject.AcquireImage(successCallback, failureCallback);
+  DWTObject.SelectSource(function () {
+    DWTObject.OpenSource();
+    DWTObject.IfShowUI = false;
+    DWTObject.PixelType = Dynamsoft.DWT.EnumDWT_PixelType.TWPT_RGB;
+    DWTObject.Resolution = 300;
+    DWTObject.IfFeederEnabled = true;
+    DWTObject.IfDuplexEnabled = false;
+    DWTObject.IfDisableSourceAfterAcquire = true;
+    DWTObject.AcquireImage(successCallback, failureCallback);
   }, failureCallback);
 }
 
 function AcquireImage4() {
-  DWObject.SelectSource(function () {
-    DWObject.OpenSource();
-    DWObject.AcquireImage(
+  DWTObject.SelectSource(function () {
+    DWTObject.OpenSource();
+    DWTObject.AcquireImage(
       deviceConfiguration,
       successCallback,
       failureCallback
@@ -291,17 +293,17 @@ CloseSource(): boolean;
 
 ```javascript
 // Close the scanner source in the success/failure callback after all images are acquired. In this case, the source can be freed and used by others.
-DWObject.OpenSource();
-DWObject.AcquireImage(successCallback,failureCallback);
+DWTObject.OpenSource();
+DWTObject.AcquireImage(successCallback,failureCallback);
 
 function successCallback() {
   console.log("successful");
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
 }
 
 function failureCallback(errorCode, errorString) {
   alert(errorString);
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
 }
 ```
 
@@ -513,18 +515,18 @@ OpenSource(): boolean;
 **Example**
 
 ```javascript
-DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
-DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
-DWObject.OpenSource();
-DWObject.AcquireImage(successCallback, failureCallback);
+DWTObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWTObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
+DWTObject.OpenSource();
+DWTObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   alert(errorString);
 }
 ```
@@ -612,7 +614,7 @@ GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 **Example**
 
 ```javascript
-DWObject.GetSourceNames(); // return a list of scanner sources such as ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWTObject.GetSourceNames(); // return a list of scanner sources such as ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
 ```
 
 ---
@@ -713,10 +715,10 @@ SelectSource(
 **Example**
 
 ```javascript
-DWObject.SelectSource(
+DWTObject.SelectSource(
   function () {
-    DWObject.OpenSource();
-    DWObject.AcquireImage(successCallback, failureCallback);
+    DWTObject.OpenSource();
+    DWTObject.AcquireImage(successCallback, failureCallback);
   },
   function (errorCode, errorString) {
     console.log(errorString);
@@ -724,12 +726,12 @@ DWObject.SelectSource(
 );
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log(errorString);
 }
 
@@ -779,10 +781,10 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 **Example**
 
 ```javascript
-DWObject.SelectSourceAsync()
+DWTObject.SelectSourceAsync()
   .then(function (sourceIndex) {
     console.log(sourceIndex);
-    return DWObject.AcquireImageAsync({
+    return DWTObject.AcquireImageAsync({
       IfCloseSourceAfterAcquire: true,
     });
   })
@@ -834,18 +836,18 @@ SelectSourceByIndex(index: number): boolean;
 **Example**
 
 ```javascript
-DWObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
-DWObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
-DWObject.OpenSource();
-DWObject.AcquireImage(successCallback, failureCallback);
+DWTObject.GetSourceNames(); // for example ['PaperStream IP fi-7300NX Net', 'TWAIN2 FreeImage Software Scanner']
+DWTObject.SelectSourceByIndex(0); // choose scanner with the name "PaperStream IP fi-7300NX Net"
+DWTObject.OpenSource();
+DWTObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log(errorString);
 }
 ```
@@ -893,12 +895,12 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 **Example**
 
 ```javascript
-DWObject.SelectSourceByIndexAsync(0)
+DWTObject.SelectSourceByIndexAsync(0)
   .then(() => {
-    return DWObject.OpenSourceAsync();
+    return DWTObject.OpenSourceAsync();
   })
   .then(() => {
-    return DWObject.AcquireImageAsync({
+    return DWTObject.AcquireImageAsync({
       IfCloseSourceAfterAcquire: true,
     });
   });
@@ -947,10 +949,10 @@ SetOpenSourceTimeout(duration: number): boolean;
 **Example**
 
 ```javascript
-DWObject.SelectSource(function () {
-  DWObject.SetOpenSourceTimeout(3000); // stop the opening process if the source cannot be opened within 3000 ms.
-  DWObject.OpenSource();
-  DWObject.AcquireImage();
+DWTObject.SelectSource(function () {
+  DWTObject.SetOpenSourceTimeout(3000); // stop the opening process if the source cannot be opened within 3000 ms.
+  DWTObject.OpenSource();
+  DWTObject.AcquireImage();
 });
 ```
 
@@ -1080,7 +1082,7 @@ CloseSourceManager(): boolean;
 **Example**
 
 ```javascript
-DWObject.CloseSourceManager();
+DWTObject.CloseSourceManager();
 ```
 
 ---
@@ -1247,7 +1249,7 @@ Typically, the data source data file is set by the method [`SetCustomDSData()`](
 
 ```javascript
 // Please note, the API only works for TWAIN driver.
-DWObject.GetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
+DWTObject.GetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
 ```
 
 ---
@@ -1294,7 +1296,7 @@ Typically, the data source data file is set by the method [`SetCustomDSDataEx()`
 
 ```javascript
 // Please note, the API only works for TWAIN driver.
-DWObject.GetCustomDSDataEx(); // Return a base64 string
+DWTObject.GetCustomDSDataEx(); // Return a base64 string
 ```
 
 ---
@@ -1340,8 +1342,8 @@ GetSourceNameItems(index: number): string;
 **Example**
 
 ```javascript
-DWObject.GetSourceNames(); // [scanner 1, scanner 2, scanner 3...]
-DWObject.GetSourceNameItems(0); // return the name of scanner 1
+DWTObject.GetSourceNames(); // [scanner 1, scanner 2, scanner 3...]
+DWTObject.GetSourceNameItems(0); // return the name of scanner 1
 ```
 
 ---
@@ -1387,7 +1389,7 @@ If application identification needs to be set, it should be set before this API.
 **Example**
 
 ```javascript
-DWObject.OpenSourceManager(); 
+DWTObject.OpenSourceManager(); 
 ```
 
 ---
@@ -1557,7 +1559,7 @@ Typically, the data source data file is created by the method [`GetCustomDSData(
 
 ```javascript
 // Please note, the API only works for TWAIN driver.
-DWObject.SetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
+DWTObject.SetCustomDSData("C:\\Users\\UserName\\Desktop\\ProfileName");
 ```
 
 ---
@@ -1606,7 +1608,7 @@ Typically the data source data string is created by the method [`GetCustomDSData
 
 ```javascript
 // Please note, the API only works for TWAIN driver.
-DWObject.SetCustomDSData("the base64 string of your profile");
+DWTObject.SetCustomDSData("the base64 string of your profile");
 ```
 
 ---
@@ -1669,27 +1671,27 @@ Check out the available formats [`Dynamsoft.DWT.EnumDWT_FileFormat`]({{site.info
 **Example**
 
 ```javascript
-DWObject.OpenSource();
-DWObject.TransferMode = Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE;
-if (DWObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
+DWTObject.OpenSource();
+DWTObject.TransferMode = Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE;
+if (DWTObject.TransferMode === Dynamsoft.DWT.EnumDWT_TransferMode.TWSX_FILE) {
     if (
-        DWObject.SetFileXferInfo(
+        DWTObject.SetFileXferInfo(
             "C:\\Temp\\WebTWAIN<%06d>.bmp",
             Dynamsoft.DWT.EnumDWT_FileFormat.TWFF_BMP
         )
     ) {
-          DWObject.IfShowUI = true;
-          DWObject.AcquireImage(successCallback, failureCallback);
+          DWTObject.IfShowUI = true;
+          DWTObject.AcquireImage(successCallback, failureCallback);
     }
 }
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log(errorString);
 }
 ```
@@ -1762,20 +1764,20 @@ The TWAIN Working Group has suggested the following behavior
 **Example**
 
 ```javascript
-DWObject.SelectSource();
-DWObject.OpenSource();
-DWObject.IfShowUI = false;
-DWObject.Unit = Dynamsoft.DWT.EnumDWT_UnitType.TWUN_PIXELS;
-DWObject.SetImageLayout(50, 50, 100, 100);
-DWObject.AcquireImage(successCallback, failureCallback);
+DWTObject.SelectSource();
+DWTObject.OpenSource();
+DWTObject.IfShowUI = false;
+DWTObject.Unit = Dynamsoft.DWT.EnumDWT_UnitType.TWUN_PIXELS;
+DWTObject.SetImageLayout(50, 50, 100, 100);
+DWTObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log(errorString);
 }
 ```
@@ -1909,17 +1911,17 @@ This property only makes sense when `IfShowUI` is set to `true` .
 **Example**
 
 ```javascript
-DWObject.OpenSource();
-DWObject.IfDisableSourceAfterAcquire = true; // Close the scanner UI after images acquired.
-DWObject.IfShowUI = true;
-DWObject.AcquireImage(successCallback,failureCallback);
+DWTObject.OpenSource();
+DWTObject.IfDisableSourceAfterAcquire = true; // Close the scanner UI after images acquired.
+DWTObject.IfShowUI = true;
+DWTObject.AcquireImage(successCallback,failureCallback);
 
 function successCallback() {
-    DWObject.CloseSource();
+    DWTObject.CloseSource();
 }
 
 function failureCallback(errorCode, errorString) {
-    DWObject.CloseSource();
+    DWTObject.CloseSource();
 }
 ```
 
@@ -1968,21 +1970,21 @@ Not all scanners support duplex scanning. To confirm, check the user manual of t
 **Example**
 
 ```javascript
-DWObject.OpenSource();
+DWTObject.OpenSource();
 
-if (DWObject.Duplex != 0) { // Note: DWObject.Duplex doesn't support Linux.
-    DWObject.IfDuplexEnabled = true;
+if (DWTObject.Duplex != 0) { // Note: DWTObject.Duplex doesn't support Linux.
+    DWTObject.IfDuplexEnabled = true;
 }
 
-DWObject.AcquireImage(successCallback, failureCallback);
+DWTObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log(errorString);
 }
 ```
@@ -2032,17 +2034,17 @@ If the property is set to `true` , the data source will try acquiring images fro
 **Example**
 
 ```javascript
-DWObject.OpenSource();
-DWObject.IfFeederEnabled = true;
-DWObject.AcquireImage(successCallback, failureCallback);
+DWTObject.OpenSource();
+DWTObject.IfFeederEnabled = true;
+DWTObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log(errorString);
 }
 ```
@@ -2091,17 +2093,17 @@ It's recommended to use this API after [`OpenSource()`]({{site.info}}api/WebTwai
 **Example**
 
 ```javascript
-DWObject.OpenSource();
-DWObject.IfShowUI = true; // display the scanner UI before acquiring image
-DWObject.AcquireImage(successCallback, failureCallback);
+DWTObject.OpenSource();
+DWTObject.IfShowUI = true; // display the scanner UI before acquiring image
+DWTObject.AcquireImage(successCallback, failureCallback);
 
 function successCallback() {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log("successful");
 }
 
 function failureCallback(errorCode, errorString) {
-  DWObject.CloseSource();
+  DWTObject.CloseSource();
   console.log(errorString);
 }
 ```
@@ -3884,7 +3886,7 @@ This event fires after all pages in the document feeder have been scanned and tr
 **Example**
 
 ```javascript
-DWObject.RegisterEvent("OnPostAllTransfers", function () {
+DWTObject.RegisterEvent("OnPostAllTransfers", function () {
   console.log("All images are transferred.");
 });
 ```
@@ -3928,7 +3930,7 @@ RegisterEvent("OnPostTransfer", function () {});
 **Example**
 
 ```javascript
-DWObject.RegisterEvent("OnPostTransfer", function () {
+DWTObject.RegisterEvent("OnPostTransfer", function () {
   console.log("An image has been scanned");
 });
 ```
@@ -3979,7 +3981,7 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 **Example**
 
 ```javascript
-DWObject.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
+DWTObject.RegisterEvent("OnPostTransferAsync", function (outputInfo) {
   console.log("The image ID is " + outputInfo.imageId);
 });
 ```
@@ -4238,10 +4240,10 @@ Pay attention to the argument you set to the overall parameter `exception` and t
 **Example**
 
 ```javascript
-DWObject.SelectSourceByIndex(0);
-DWObject.IfShowUI = false;
-DWObject.OpenSource();
-DWObject.setCapabilities(
+DWTObject.SelectSourceByIndex(0);
+DWTObject.IfShowUI = false;
+DWTObject.OpenSource();
+DWTObject.setCapabilities(
   {
     exception: "ignore",
     capabilities: [
@@ -4261,25 +4263,25 @@ DWObject.setCapabilities(
     ],
   },
   function (successData) {
-    DWObject.AcquireImage(
+    DWTObject.AcquireImage(
       function () {
-        DWObject.CloseSource();
+        DWTObject.CloseSource();
       },
       function () {
-        DWObject.CloseSource();
-        console.log(DWObject.ErrorString);
+        DWTObject.CloseSource();
+        console.log(DWTObject.ErrorString);
       }
     );
   },
   function (errorData) {
     console.error(errorData);
-    DWObject.AcquireImage(
+    DWTObject.AcquireImage(
       function () {
-        DWObject.CloseSource();
+        DWTObject.CloseSource();
       },
       function () {
-        DWObject.CloseSource();
-        console.log(DWObject.ErrorString);
+        DWTObject.CloseSource();
+        console.log(DWTObject.ErrorString);
       }
     );
   }
@@ -4310,10 +4312,10 @@ GetDevicesAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number, refresh?
 **Example**
 
 ```javascript
-DWObject.GetDevicesAsync().then((deviceList)=>{
-  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+DWTObject.GetDevicesAsync().then((deviceList)=>{
+  return DWTObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({
+    return DWTObject.AcquireImageAsync({
       IfCloseSourceAfterAcquire: true,
     }) 
 }).catch((e)=>{
@@ -4366,10 +4368,10 @@ SelectDeviceAsync(device: Device): Promise< boolean>;
 **Example**
 
 ```javascript
-DWObject.GetDevicesAsync().then((deviceList)=>{
-  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+DWTObject.GetDevicesAsync().then((deviceList)=>{
+  return DWTObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({
+    return DWTObject.AcquireImageAsync({
       IfCloseSourceAfterAcquire: true,
     }) 
 }).catch((e)=>{
@@ -4418,7 +4420,9 @@ DWObject.GetDevicesAsync().then((deviceList)=>{
 
 ## AcquireImageAsync()
 
-Scan documents into another DWObject control. eSCL is not supported.
+Request a scan, then store to the image buffer of the WebTwain instance upon completion of the scan.
+<!--Possibly some other descriptions, no need to add for now-->
+By default, the scans are displayed from the `dwtcontrolContainer` container.
 
 **Syntax**
 
@@ -4466,10 +4470,10 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 **Example**
 
 ```javascript
-DWObject.GetDevicesAsync().then((deviceList)=>{
-  return DWObject.SelectDeviceAsync(deviceList[0])  //Select the first device
+DWTObject.GetDevicesAsync().then((deviceList)=>{
+  return DWTObject.SelectDeviceAsync(deviceList[0])  //Select the first device
 }).then(()=>{
-    return DWObject.AcquireImageAsync({
+    return DWTObject.AcquireImageAsync({
       IfCloseSourceAfterAcquire: true,
     }) 
 }).catch((e)=>{

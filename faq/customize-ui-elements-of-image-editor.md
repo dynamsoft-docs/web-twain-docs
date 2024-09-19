@@ -183,6 +183,6 @@ var editorSettings = {
   },
 };
 
-var imageEditor = DWObject.Viewer.createImageEditor(editorSettings);
+var imageEditor = DWTObject.Viewer.createImageEditor(editorSettings);
 imageEditor.show();
 ```

@@ -1,14 +1,16 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN SDK File Types
-keywords: Dynamic Web TWAIN, Documentation, File Types
-breadcrumbText: File Types
+title: Dynamic Web TWAIN SDK Supported File Formats
+keywords: Dynamic Web TWAIN, Documentation, File Types, File Formats
+breadcrumbText: Supported File Formats
 description: Dynamic Web TWAIN SDK Documentation File Types Page
-permalink: /getstarted/filetype.html
+permalink: /introduction/supported-file-formats.html
+redirect_from:
+    - /getstarted/filetype.html
 ---
 
-# File Types
+# Supported File Formats
 
 Dynamic Web TWAIN supports the following file types:
 

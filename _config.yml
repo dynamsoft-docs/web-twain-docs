@@ -2,7 +2,9 @@ repositoryUrl: https://github.com/dynamsoft-docs/web-twain-docs/blob/master
 firstLevelUrl: /web-twain/docs
 repository: dynamsoft-docs/web-twain-docs
 docFullPath: https://www.dynamsoft.com/web-twain/docs
+#docFullPath: https://demo3.dynamsoft.com:808/dwt-harry/web-twain/docs # Preview URL
 productUrl: https://www.dynamsoft.com/web-twain/overview/
+#productUrl: https://demo3.dynamsoft.com:808/dwt-harry/web-twain/overview/ # Preview URL
 productName: Dynamic Web TWAIN
 docHomePage: /web-twain/docs/
 dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
@@ -17,6 +19,12 @@ getstarted: /web-twain/docs/getstarted/
 indepth: /web-twain/docs/indepth/
 info: /web-twain/docs/info/
 faq: /web-twain/docs/faq/
+
+introduction: /web-twain/docs/introduction/
+hello-world: /web-twain/docs/hello-world/
+general-usage: /web-twain/docs/general-usage/
+extended-usage: /web-twain/docs/extended-usage/
+api: /web-twain/docs/info/api/
 
 dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
 dbr_logo: /web-twain/docs/assets/img-icon/dbr-logo.png

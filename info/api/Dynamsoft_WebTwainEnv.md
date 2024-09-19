@@ -92,12 +92,12 @@ interface Dynamsoft.DWT {
         host?: string, 
         port?: string | number, 
         portSSL?: string | number, 
-        asyncSuccessFunc: function (DWObject: WebTwain) {}, 
+        asyncSuccessFunc: function (DWTObject: WebTwain) {}, 
         asyncFailureFunc: function (errorString: string) {}
     ): void;
     CreateDWTObjectEx(
         dwtInitialConfig: DWTInitialConfig,                 
-        asyncSuccessFunc: (DWObject: WebTwain) => {},                   
+        asyncSuccessFunc: (DWTObject: WebTwain) => {},                   
         asyncFailureFunc: (errorString: string) => {}
     ): void;
     DeleteDWTObject(Id?: string): boolean;
@@ -176,7 +176,7 @@ Creates a new `WebTwain` instance that listens to the specified host & ports. An
 ```typescript
 CreateDWTObject(
     ContainerId: string, 
-    successCallBack: (DWObject: WebTwain) => void,
+    successCallBack: (DWTObject: WebTwain) => void,
     failureCallBack: ({code: number, message: string}) => void
 ): void;
 
@@ -185,7 +185,7 @@ CreateDWTObject(
     host: string, 
     port: string | number, 
     portSSL: string | number, 
-    successCallBack: (DWObject: WebTwain) => void,
+    successCallBack: (DWTObject: WebTwain) => void,
     failureCallBack: ({code: number, message: string}) => void
 ): void;
 ```
@@ -201,7 +201,7 @@ CreateDWTObject(
 `portSSL`: Specify the SSL port. Default value: `18623`
 
 `successCallback`: A callback function that is executed if the request succeeds.
-- `DWObject`: The `WebTwain` instance.
+- `DWTObject`: The `WebTwain` instance.
 
 `failureCallback`: A callback function that is executed if the request fails.
 - `errorString`: The error string.
@@ -233,12 +233,12 @@ CreateDWTObject(
 **Example**
 
 ```typescript
-var DWObject;
+var DWTObject;
 Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18622, 18623,
     function (DWTObject) { 
-        DWObject = DWTObject;
-        DWObject.SelectSourceAsync().then(function () {
-        DWObject.AcquireImageAsync({ 
+        DWTObject = DWTObject;
+        DWTObject.SelectSourceAsync().then(function () {
+        DWTObject.AcquireImageAsync({ 
             IfCloseSourceAfterAcquire: true 
         });
     }).catch(function (exp) {
@@ -251,12 +251,12 @@ Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18622, 18623,
 OR
 
 ```typescript
-var DWObject;
+var DWTObject;
 Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',
         function (DWTObject) { 
-            DWObject = DWTObject;
-            DWObject.SelectSourceAsync().then(function () {
-            DWObject.AcquireImageAsync({ 
+            DWTObject = DWTObject;
+            DWTObject.SelectSourceAsync().then(function () {
+            DWTObject.AcquireImageAsync({ 
                 IfCloseSourceAfterAcquire: true 
             });
         }).catch(function (exp) {
@@ -277,7 +277,7 @@ Creates a new UI-less `WebTwain` instance. This instance will be uniquely identi
 ```typescript
 CreateDWTObjectEx(
   dwtInitialConfig: DWTInitialConfig, 
-  successCallBack: (DWObject: WebTwain) => void, 
+  successCallBack: (DWTObject: WebTwain) => void, 
   failureCallBack: ({code: number, message: string}) => void
 ): void;
 ```
@@ -287,7 +287,7 @@ CreateDWTObjectEx(
 `dwtInitialConfig`: Specify the initial configuration of the instance. Please refer to [`DWTInitialConfig`]({{site.info}}api/Interfaces.html#DWTInitialConfig).
 
 `successCallback`: A callback function that is executed if the request succeeds.
-- `DWObject`: The `WebTwain` instance.
+- `DWTObject`: The `WebTwain` instance.
 
 `failureCallback`: A callback function that is executed if the request fails.
 - `code`: The error code.
@@ -320,15 +320,15 @@ CreateDWTObjectEx(
 **Example**
 
 ```typescript
-var DWObject;
+var DWTObject;
 Dynamsoft.DWT.CreateDWTObjectEx({
       WebTwainId: 'dwtId',
   },function (DWTObject) {
-      DWObject = DWTObject;
-      DWObject.Viewer.bind("dwtcontrolContainer");
-      DWObject.Viewer.show();
-      DWObject.SelectSourceAsync().then(function () {
-              DWObject.AcquireImageAsync({ 
+      DWTObject = DWTObject;
+      DWTObject.Viewer.bind("dwtcontrolContainer");
+      DWTObject.Viewer.show();
+      DWTObject.SelectSourceAsync().then(function () {
+              DWTObject.AcquireImageAsync({ 
                   IfCloseSourceAfterAcquire: true 
               });
           }).catch(function (exp) {
@@ -428,9 +428,9 @@ GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
 **Example**
 
 ```javascript
-var DWObject;
+var DWTObject;
 function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+    DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
 }
 ```
 
@@ -540,7 +540,7 @@ Dynamsoft.DWT.RegisterEvent('OnWebTwainReady',
 );
  
 function Dynamsoft_OnReady() {
-DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
 }
  
 Dynamsoft.DWT.RegisterEvent("OnWebTwainError", function (error) {
@@ -1247,10 +1247,10 @@ Dynamsoft.DWT.RegisterEvent('OnWebTwainReady',
   Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
 ); 
 
-var DWObject;
+var DWTObject;
 
 function Dynamsoft_OnReady() {
-  DWObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+  DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
 }
 ```
 

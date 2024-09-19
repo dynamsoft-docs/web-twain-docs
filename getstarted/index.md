@@ -5,7 +5,7 @@ title: Dynamic Web TWAIN SDK GetStarted
 keywords: Dynamic Web TWAIN, Documentation, GetStarted
 breadcrumbText: GetStarted
 description: Dynamic Web TWAIN SDK Documentation GetStarted Page
-permalink: /getstarted/
+#permalink: /getstarted/
 ---
 
 # Getting Started

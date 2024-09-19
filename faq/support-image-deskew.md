@@ -22,8 +22,8 @@ Generally, there are two ways to automatically deskew an image.
 There is a standard TWAIN capability called `ICAP_AUTOMATICDESKEW` which, when enabled, does the deskewing of all scanned images automatically. If your scanner supports this capability, you can enable the functionality through `Dynamic Web TWAIN` using the API <a href="{{site.info}}api/WebTwain_Acquire.html#ifautomaticdeskew" target="_blank">IfAutomaticDeskew</a>
 
 ``` javascript
-DWObject.OpenSource();
-DWObject.IfAutomaticDeskew = true;
+DWTObject.OpenSource();
+DWTObject.IfAutomaticDeskew = true;
 ```
 
 ### Use Dynamic Web TWAIN to deskew an image as it is scanned
@@ -32,11 +32,11 @@ DWObject.IfAutomaticDeskew = true;
 
 ``` javascript
 function deskew(index) {
-    DWObject.GetSkewAngle(
+    DWTObject.GetSkewAngle(
         index,
         function(angle) {
             console.log("skew angle: " + angle);
-            DWObject.Rotate(index, angle, true,
+            DWTObject.Rotate(index, angle, true,
                 function() {
                     console.log("Successfully deskewed an image!");
                 },
@@ -50,7 +50,7 @@ function deskew(index) {
         }
     );
 }
-DWObject.RegisterEvent("OnPostTransferAsync", function(info) {
-    deskew(DWObject.ImageIDToIndex(info.imageId));
+DWTObject.RegisterEvent("OnPostTransferAsync", function(info) {
+    deskew(DWTObject.ImageIDToIndex(info.imageId));
 });
 ```

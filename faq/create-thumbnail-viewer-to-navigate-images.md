@@ -17,7 +17,7 @@ You can create a thumbnail viewer by using the API <a href="{{site.info}}api/Web
 
 ```javascript
 // Use default settings
-var objThumbnailViewer = DWObject.Viewer.createThumbnailViewer();
+var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.background = "rgb(0,0,255)";
 objThumbnailViewer.show();
 
@@ -44,6 +44,6 @@ var thumbnailViewerSettings = {
   selectedPageBackground: "rgb(199, 222, 252)",
 };
 
-var thumbnail = DWObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
+var thumbnail = DWTObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
 thumbnail.show();
 ```

@@ -32,14 +32,14 @@ When attempting to upload images using any of the HTTPUpload\*\*\* methods the u
 
     ```javascript
     var strHTTPServer = location.hostname;
-    DWObject.HTTPPort = location.port == "" ? 80 : location.port;
+    DWTObject.HTTPPort = location.port == "" ? 80 : location.port;
     ```
 
     - If you have set [IfSSL]({{site.info}}api/WebTwain_IO.html#ifssl) to true, you must set a secure port for the HTTPPort property. For example,
 
     ```javascript
-    DWObject.IfSSL = true;
-    DWObject.HTTPPort = 443;
+    DWTObject.IfSSL = true;
+    DWTObject.HTTPPort = 443;
     ```
 
     > For example: If the URL for the scan page is "http://localhost:3253/....", you should set the port to 3253.

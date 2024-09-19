@@ -5,7 +5,9 @@ title: Dynamic Web TWAIN SDK Features - Handle PDF
 keywords: Dynamic Web TWAIN, Documentation, Handle PDF
 breadcrumbText: Handle PDF
 description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
-permalink: /indepth/features/pdf.html
+permalink: /extended-usage/pdf-processing.html
+redirect_from:
+    - /indepth/features/pdf.html
 ---
 
 # PDF Handling 
@@ -14,7 +16,7 @@ PDFs are widely used in many and various industries, and presently are the only 
 
 ## Environment
 
-* Supported on [Desktop]({{site.getstarted}}platform.html#browsers-on-desktop-devices).
+* Supported on [Desktop]({{site.introduction}}system-requirements.html).
 
 ## Including the PDF addon 
 
@@ -47,15 +49,15 @@ var onSuccess = function() {
 var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
-DWObject.IfShowFileDialog = true;
+DWTObject.IfShowFileDialog = true;
 // PDF Addon is used here to ensure text-based PDF support
-DWObject.Addon.PDF.SetReaderOptions({
+DWTObject.Addon.PDF.SetReaderOptions({
     convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
     renderOptions:{
         renderAnnotations: true;
     }
 });
-DWObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
+DWTObject.LoadImageEx("", Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL, onSuccess, onFailure);
 ```
 
 The method [ `SetReaderOptions()` ]({{site.info}}api/Addon_PDF.html#setreaderoptions) configures how a PDF will be rasterized when being loaded into Dynamic Web TWAIN.
@@ -75,7 +77,7 @@ The method [ `SetReaderOptions()` ]({{site.info}}api/Addon_PDF.html#setreaderopt
 However, some advanced features are only possible with the help of the PDF addon. At present, that means configuring the resulting file(s) with the API [ `Write.Setup()` ]({{site.info}}api/Addon_PDF.html#writesetup) as shown below
 
 ``` javascript
-DWObject.Addon.PDF.Write.Setup({
+DWTObject.Addon.PDF.Write.Setup({
     author: "Dynamsoft-Support-Team",
     compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JP2000,
     pageType:Dynamsoft.DWT.EnumPDF_Page_A4,
@@ -89,14 +91,14 @@ DWObject.Addon.PDF.Write.Setup({
     version: 1.5,
     quality: 80
 });
-DWObject.IfShowFileDialog = true;
-DWObject.SaveAllAsPDF(' ', function() {}, function() {})
+DWTObject.IfShowFileDialog = true;
+DWTObject.SaveAllAsPDF(' ', function() {}, function() {})
 ```
 
 From version 18.5, `Dynamic Web TWAIN` supports the generation of encrypted PDF files. For example,
 
 ``` javascript
-DWObject.Addon.PDF.Write.Setup({
+DWTObject.Addon.PDF.Write.Setup({
     author: "Dynamsoft-Support-Team",
     compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JP2000,
     pageType:Dynamsoft.DWT.EnumPDF_Page_A4,
@@ -111,8 +113,8 @@ DWObject.Addon.PDF.Write.Setup({
     quality: 80,
     password: "dwtpassword"
 });
-DWObject.IfShowFileDialog = true;
-DWObject.SaveAllAsPDF(' ', function() {}, function() {})
+DWTObject.IfShowFileDialog = true;
+DWTObject.SaveAllAsPDF(' ', function() {}, function() {})
 ```
 
 When you set a password prior to generating a PDF file, that password becomes necessary each time you attempt to open the file thereafter. The password does not restrict the usage permissions of the PDF. The encryption algorithm utilized is AES256, ensuring robust security measures.

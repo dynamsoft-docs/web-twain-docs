@@ -19,7 +19,7 @@ Example:
 
 ```javascript
 // display 6 images at a time in 2 columns and 3 rows
-DWObject.Viewer.setViewMode(2, 3);
+DWTObject.Viewer.setViewMode(2, 3);
 ```
 
 ![Show multiple images]({{site.assets}}imgs/show-multiple-Images.png)

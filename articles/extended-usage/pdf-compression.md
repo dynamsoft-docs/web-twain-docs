@@ -5,7 +5,9 @@ title: Dynamic Web TWAIN SDK Features - PDF Compressor (Beta)
 keywords: Dynamic Web TWAIN, Documentation, PDF Compressor
 breadcrumbText: PDF Compressor (Beta)
 description: Dynamic Web TWAIN SDK Documentation PDF Compressor
-permalink: /indepth/features/pdfc.html
+permalink: /extended-usage/pdf-compression.html
+redirect_from:
+  - /indepth/features/pdfc.html
 ---
 
 # PDF Compressor (Beta)
@@ -40,13 +42,13 @@ To preview this feature, please see <a href="https://demo.dynamsoft.com/Samples/
 **Code snippet**
 
 ```typescript
-DWObject.Addon.PDF.Write.Setup({
+DWTObject.Addon.PDF.Write.Setup({
   docCompressor: {
     enabled: true, //Enable PDF Compressor
   },
 });
 //Save PDF file to local disk
-DWObject.SaveAllAsPDF(
+DWTObject.SaveAllAsPDF(
   "testmrc.pdf", //File Name
   function () {
     console.log("successful.");

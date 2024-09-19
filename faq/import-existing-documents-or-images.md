@@ -24,9 +24,9 @@ var onSuccess = function() {
 var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
-DWObject.IfShowFileDialog = true;
+DWTObject.IfShowFileDialog = true;
 // PDF Rasterizer Addon is used here to ensure text-based PDF support
-DWObject.Addon.PDF.SetReaderOptions({
+DWTObject.Addon.PDF.SetReaderOptions({
     convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
     renderOptions:{
         renderAnnotations: true,
@@ -34,5 +34,5 @@ DWObject.Addon.PDF.SetReaderOptions({
     }
 });
 
-DWObject.LoadImage();
+DWTObject.LoadImage();
 ```

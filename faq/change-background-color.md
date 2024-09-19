@@ -15,6 +15,6 @@ permalink: /faq/change-background-color.html
 
 You can change the background color of the image viewer according to your requirements and even put an image in the background.
 
-Example: DWObject.Viewer.background = 'rgb(255, 255, 255)'
+Example: DWTObject.Viewer.background = 'rgb(255, 255, 255)'
 
 Read more on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background" target="_blank">background shorthand CSS</a>.

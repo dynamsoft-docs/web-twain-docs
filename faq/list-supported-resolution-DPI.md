@@ -20,8 +20,8 @@ Steps:
 - Step-1: Use <a href="{{site.info}}api/WebTwain_Acquire.html#getcapabilities" target="_blank">getCapabilities</a> to get all capabilities of the current data source,
 
 ```javascript
-DWObject.OpenSource();
-DWObject.getCapabilities(
+DWTObject.OpenSource();
+DWTObject.getCapabilities(
   function () {
     console.log(arguments);
   },
@@ -38,8 +38,8 @@ and then find the capability corresponding to the resolution. Normally, it is ca
 - Step-2: Call the following code to get all the resolutions supported by the scanner.
 
 ```javascript
-DWObject.OpenSource();
-DWObject.getCapabilities(
+DWTObject.OpenSource();
+DWTObject.getCapabilities(
   function (result) {
     for (var i = 0; i < result.length; i++) {
       if (result[i].capability.value === Dynamsoft.DWT.EnumDWT_Cap.ICAP_XRESOLUTION) {

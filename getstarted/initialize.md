@@ -5,7 +5,7 @@ title: Dynamic Web TWAIN SDK HelloWorld - Initialization
 keywords: Dynamic Web TWAIN, Documentation, Hello World, script, import
 breadcrumbText: Hello World
 description: Dynamic Web TWAIN SDK HelloWorld - Initialization
-permalink: /getstarted/initialize.html
+#permalink: /getstarted/initialize.html
 ---
 
 # Initializing the Environment
@@ -53,7 +53,7 @@ DWT has a built in event that, by default, triggers `Dynamsoft_OnReady()` when t
 
 ```js
 function Dynamsoft_OnReady() {
-    DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }
 ```
 
@@ -82,10 +82,10 @@ DWT's default behaviour is to initalizae the DWT environment as soon as the appl
     <div id="dwtcontrolContainer"></div>
 
     <script type="text/javascript">
-        var DWObject;
+        var DWTObject;
 
         function Dynamsoft_OnReady() {
-            DWObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+            DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
         }
 
     </script>

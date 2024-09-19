@@ -28,14 +28,14 @@ The problem may occur when the source is **not** disabled completely after a tra
 
 ```javascript
 function btnScan_onclick() {
-  DWObject.RegisterEvent("OnPostAllTransfers", function () {
-    DWObject.CloseSource();
+  DWTObject.RegisterEvent("OnPostAllTransfers", function () {
+    DWTObject.CloseSource();
   });
-  DWObject.SelectSource();
-  DWObject.CloseSource(); //close source before open
-  DWObject.OpenSource();
-  DWObject.IfDisableSourceAfterAcquire = true; //close the scanner UI after acquiring
-  DWObject.AcquireImage();
+  DWTObject.SelectSource();
+  DWTObject.CloseSource(); //close source before open
+  DWTObject.OpenSource();
+  DWTObject.IfDisableSourceAfterAcquire = true; //close the scanner UI after acquiring
+  DWTObject.AcquireImage();
 }
 ```
 

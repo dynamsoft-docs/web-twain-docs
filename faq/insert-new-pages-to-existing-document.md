@@ -23,15 +23,15 @@ The following code snippet shows how it can be done.
 
 ```javascript
 function acquireToIndex(index) {
-  DWObject.IfAppendImage = false;
-  DWObject.CurrentImageIndexInBuffer = index;
-  DWObject.RegisterEvent("OnPostTransfer", function () {
-    DWObject.CurrentImageIndexInBuffer++;
+  DWTObject.IfAppendImage = false;
+  DWTObject.CurrentImageIndexInBuffer = index;
+  DWTObject.RegisterEvent("OnPostTransfer", function () {
+    DWTObject.CurrentImageIndexInBuffer++;
   });
-  DWObject.RegisterEvent("OnPostAllTransfers", function () {
-    DWObject.IfAppendImage = true;
+  DWTObject.RegisterEvent("OnPostAllTransfers", function () {
+    DWTObject.IfAppendImage = true;
   });
-  DWObject.AcquireImage();
+  DWTObject.AcquireImage();
 }
 ```
 
@@ -39,12 +39,12 @@ function acquireToIndex(index) {
 
 ```javascript
 function loadToIndex(index) {
-  var oldCount = DWObject.HowManyImagesInBuffer;
-  DWObject.RegisterEvent("OnPostLoad", function () {
-    var newCount = DWObject.HowManyImagesInBuffer;
+  var oldCount = DWTObject.HowManyImagesInBuffer;
+  DWTObject.RegisterEvent("OnPostLoad", function () {
+    var newCount = DWTObject.HowManyImagesInBuffer;
     for (var j = 0; j < newCount - oldCount; j++)
-      DWObject.MoveImage(oldCount + j, index + j);
+      DWTObject.MoveImage(oldCount + j, index + j);
   });
-  DWObject.LoadImageEx("", 5);
+  DWTObject.LoadImageEx("", 5);
 }
 ```

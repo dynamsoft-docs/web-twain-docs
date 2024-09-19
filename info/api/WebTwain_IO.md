@@ -183,7 +183,7 @@ LoadImage(
 **Example**
 
 ```javascript
-DWObject.LoadImage(
+DWTObject.LoadImage(
     "C:\\test\\DWT.jpg",
     function () {
         console.log("success");
@@ -262,9 +262,9 @@ You can set [`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledia
 **Example**
 
 ```javascript
-DWObject.IfShowFileDialog = true; //"Open File" dialog will be opened.
+DWTObject.IfShowFileDialog = true; //"Open File" dialog will be opened.
 
-DWObject.LoadImageEx(
+DWTObject.LoadImageEx(
     "", //file name can be empty if "Open File" dialog is called.
     Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
     function () {
@@ -277,9 +277,9 @@ DWObject.LoadImageEx(
 ```
 
 ```javascript
-DWObject.IfShowFileDialog = false; //Default value is true.
+DWTObject.IfShowFileDialog = false; //Default value is true.
 
-DWObject.LoadImageEx(
+DWTObject.LoadImageEx(
     "C:\\test\\DWT.jpg",
     Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
     function () {
@@ -363,11 +363,11 @@ You may leverage [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#convert
 **Example**
 
 ```javascript
-DWObject.ConvertToBase64(
+DWTObject.ConvertToBase64(
     [0, 1, 2],
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function (result, indices, type) {
-        DWObject.LoadImageFromBase64Binary(
+        DWTObject.LoadImageFromBase64Binary(
             result.getData(0, result.getLength()),
             Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
             function () {
@@ -448,11 +448,11 @@ You may leverage [`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#convertto
 **Example**
 
 ```javascript
-DWObject.ConvertToBlob(
+DWTObject.ConvertToBlob(
     [0, 1, 2],
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function (result, indices, type) {
-        DWObject.LoadImageFromBinary(
+        DWTObject.LoadImageFromBinary(
             result,
             function () {
                 console.log("success");
@@ -590,7 +590,7 @@ RegisterEvent(
 **Example**
 
 ```javascript
-DWObject.RegisterEvent('OnGetFilePath', function(isSave, filesCount, index, directory, filename) {
+DWTObject.RegisterEvent('OnGetFilePath', function(isSave, filesCount, index, directory, filename) {
     alert("isSave:" + isSave + " fileCount: " +  filesCount + " index: " +  index + " directory: " +  directory + "\\" +  filename);
 });
 ```
@@ -645,7 +645,7 @@ RegisterEvent(
 **Example**
 
 ```javascript
-DWObject.RegisterEvent("OnPostLoad", function (path, name, type) {
+DWTObject.RegisterEvent("OnPostLoad", function (path, name, type) {
     alert(path + "\\" + name);
 });
 ```
@@ -773,10 +773,10 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 
-DWObject.FTPPort = 21;
-DWObject.FTPUserName = "FTPUser";
-DWObject.FTPPassword = "SomePassword";
-DWObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
+DWTObject.FTPPort = 21;
+DWTObject.FTPUserName = "FTPUser";
+DWTObject.FTPPassword = "SomePassword";
+DWTObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
 ```
 
 ---
@@ -846,10 +846,10 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 
-DWObject.FTPUserName = 'test';
-DWObject.FTPPort = 21;
-DWObject.FTPPassword = 'test';
-DWObject.FTPUpload(
+DWTObject.FTPUserName = 'test';
+DWTObject.FTPPort = 21;
+DWTObject.FTPPassword = 'test';
+DWTObject.FTPUpload(
     '192.168.8.222', //The FTP Host
     0, // The index of the image
     'test.pdf', // The path & name of the file 
@@ -1369,8 +1369,8 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 
-DWObject.HTTPPort = 300;
-DWObject.HTTPDownload("localhost", "/files/sample.tif", onSuccess, onFailure);
+DWTObject.HTTPPort = 300;
+DWTObject.HTTPDownload("localhost", "/files/sample.tif", onSuccess, onFailure);
 ```
 
 **Remark**
@@ -1457,8 +1457,8 @@ var onFailure = function(errorCode, errorString) {
     console.log(errorString);
 };
 
-DWObject.HTTPPort = 300;
-DWObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
+DWTObject.HTTPPort = 300;
+DWTObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
 ```
 
 **Remark**
@@ -1608,7 +1608,7 @@ If you want to use this method to upload / download files through HTTPS, please 
 **Example**
 
 ```javascript
-DWObject.HTTPUpload(
+DWTObject.HTTPUpload(
     'https://www.dynamsoft.com/SaveToFile.aspx', 
     [0,1],  
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, 
@@ -1766,15 +1766,15 @@ var CurrentPathName = unescape(location.pathname);
 var CurrentPath = CurrentPathName.substring(0, CurrentPathName.lastIndexOf("/") + 1);
 var strActionPage = CurrentPath + "SaveToFile.aspx";
 
-DWObject.IfSSL = false; // Set whether SSL is used
-DWObject.HTTPPort = location.port == "" ? 100 : location.port;
+DWTObject.IfSSL = false; // Set whether SSL is used
+DWTObject.HTTPPort = location.port == "" ? 100 : location.port;
 
 var Digital = new Date();
 var uploadfilename = Digital.getMilliseconds();
 
-DWObject.HTTPUploadThroughPost(
+DWTObject.HTTPUploadThroughPost(
     strHTTPServer,
-    DWObject.CurrentImageIndexInBuffer,
+    DWTObject.CurrentImageIndexInBuffer,
     strActionPage,
     uploadfilename + ".jpg",
     function () {
@@ -2482,7 +2482,7 @@ ConvertToBase64(
 **Example**
 
 ```javascript
-DWObject.ConvertToBase64(
+DWTObject.ConvertToBase64(
     [0, 1, 2],
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function (result, indices, type) {
@@ -2553,7 +2553,7 @@ ConvertToBlob(
 **Example**
 
 ```javascript
-DWObject.ConvertToBlob(
+DWTObject.ConvertToBlob(
     [0, 1, 2],
     Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
     function (result, indices, type) {
@@ -3393,9 +3393,9 @@ To make sure you don't included unwanted tags, call [`ClearTiffCustomTag()`]({{s
 **Example**
 
 ```javascript
-DWObject.ClearTiffCustomTag();
-DWObject.SetTiffCustomTag(700, "Created By DWT", false);
-DWObject.SaveAsTIFF("C:\\DWT.tiff", 0);
+DWTObject.ClearTiffCustomTag();
+DWTObject.SetTiffCustomTag(700, "Created By DWT", false);
+DWTObject.SaveAsTIFF("C:\\DWT.tiff", 0);
 ```
 
 ---
@@ -3777,7 +3777,7 @@ This method will trigger [`OnGetFilePath`]({{site.info}}api/WebTwain_IO.html#ong
 **Example**
 
 ```javascript
-DWObject.RegisterEvent(
+DWTObject.RegisterEvent(
     "OnGetFilePath",
     function (isSave, filesCount, index, directory, fileName) {
         alert(" directory: " + directory + "\\" + fileName);
@@ -3785,7 +3785,7 @@ DWObject.RegisterEvent(
 );
 
 //On macOS
-DWObject.ShowFileDialog(
+DWTObject.ShowFileDialog(
     false,
     "TIF,TIFF,JPG,JPEG,PNG,PDF",
     0,
@@ -3797,7 +3797,7 @@ DWObject.ShowFileDialog(
 );
 
 //On Windows
-DWObject.ShowFileDialog(
+DWTObject.ShowFileDialog(
     false,
     "BMP,TIF,JPG,PNG,PDF|*.bmp;*.tif;*.png;*.jpg;*.pdf;*.tiff;*.jpeg",
     0,

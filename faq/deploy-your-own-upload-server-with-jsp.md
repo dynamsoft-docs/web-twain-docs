@@ -49,11 +49,11 @@ Please ensure your web server that has the Java Development Kit (JDK) installed 
 </li>
 </ol>
 <pre><code>function Upload() {
-    if (DWObject &amp;&amp; DWObject.HowManyImagesInBuffer &gt; 0) {
+    if (DWTObject &amp;&amp; DWTObject.HowManyImagesInBuffer &gt; 0) {
       //Path to the server-side script. You can adjust it according to the actual path of the upload server you deployed.
       var strUrl = &quot;http://{server-path}/Sample/Upload/SaveToFile.jsp&quot;;
-      var imgAry = [DWObject.CurrentImageIndexInBuffer];
-      DWObject.HTTPUpload(
+      var imgAry = [DWTObject.CurrentImageIndexInBuffer];
+      DWTObject.HTTPUpload(
         strUrl, 
         imgAry, 
         Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,

@@ -39,7 +39,7 @@ interface Device  {
 
 ## DeviceObject.acquireImage()
 
-Scan documents into another DWObject control. Supports eSCL scanners and all other scanners with limited capabilities.
+Scan documents into another DWTObject control. Supports eSCL scanners and all other scanners with limited capabilities.
 
 **Syntax**
 
@@ -65,7 +65,7 @@ interface DeviceConfiguration {
 
 `deviceConfiguration`: The device configuration
 
-`sendTo`: The DWObject control to scan into
+`sendTo`: The DWTObject control to scan into
 
 **Availability**
 <div class="availability">
@@ -93,8 +93,8 @@ interface DeviceConfiguration {
 **Example**
 
 ```javascript
-DWObject.GetDevicesAsync().then((deviceList)=>{
-  return deviceList[0].acquireImage({},DWObject)  
+DWTObject.GetDevicesAsync().then((deviceList)=>{
+  return deviceList[0].acquireImage({},DWTObject)  
 }).then((result)=>{
     console.log(result)
 }).catch((e)=>{

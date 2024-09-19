@@ -5,7 +5,9 @@ title: Dynamic Web TWAIN SDK Features - Read Barcode
 keywords: Dynamic Web TWAIN, Documentation, Read Barcode
 breadcrumbText: Read Barcode
 description: Dynamic Web TWAIN SDK Documentation Read Barcode Page
-permalink: /indepth/features/barcode.html
+permalink: /extended-usage/barcode-processing.html
+redirect_from: 
+    - /indepth/features/barcode.html
 ---
 
 # Barcode Reader
@@ -38,15 +40,15 @@ Now that the add-on has been referenced, we can call [`decode()`]({{site.info}}a
 
 ``` javascript
 function readBarcodes(imageIndex) {
-    if (DWObject) {
-        DWObject.Addon.BarcodeReader.decode(imageIndex)
+    if (DWTObject) {
+        DWTObject.Addon.BarcodeReader.decode(imageIndex)
             .then(function(textResults) {
                 console.log(textResults)
             }, function(error) {
                 console.log(error)
             });
     } else {
-        console.log('DWObject is not initialized yet');
+        console.log('DWTObject is not initialized yet');
     }
 }
 ```
@@ -55,10 +57,10 @@ Note that the barcode reading does take a bit of time, so it'll help to add an i
 
 ``` javascript
 function readBarcodes(imageIndex) {
-    if (DWObject) {
+    if (DWTObject) {
         // Add an indicator
         Dynamsoft.DWT.OnWebTwainPreExecute();
-        DWObject.Addon.BarcodeReader.decode(imageIndex)
+        DWTObject.Addon.BarcodeReader.decode(imageIndex)
             .then(function(textResults) {
                 // Remove the indicator
                 Dynamsoft.DWT.OnWebTwainPostExecute();
@@ -69,7 +71,7 @@ function readBarcodes(imageIndex) {
                 console.log(error)
             });
     } else {
-        console.log('DWObject is not initialized yet');
+        console.log('DWTObject is not initialized yet');
     }
 }
 ```
@@ -80,7 +82,7 @@ Check the structure of the resulting object [here]({{site.info}}api/Addon_Barcod
 
 ``` javascript
 Dynamsoft.DWT.OnWebTwainPreExecute();
-DWObject.Addon.BarcodeReader.decode(imageIndex)
+DWTObject.Addon.BarcodeReader.decode(imageIndex)
     .then(function(textResults) {
         // Remove the indicator
         Dynamsoft.DWT.OnWebTwainPostExecute();
@@ -107,17 +109,17 @@ By default, the add-on will read all the supported barcode types from the image.
 If your license only covers a subset of the full list or you want to read specific barcode types, you can use `barcodeFormatIds` and `barcodeFormatIds2` to specify the barcode format(s). For example, to enable only 1D barcode reading, you can use the following code snippet:
 
 ``` javascript
-DWObject.Addon.BarcodeReader.getRuntimeSettings()
+DWTObject.Addon.BarcodeReader.getRuntimeSettings()
     .then(function(runtimeSettings) {
         runtimeSettings.barcodeFormatIds = Dynamsoft.DBR.EnumBarcodeFormat.BF_ONED;
-        return DWObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
+        return DWTObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
     }, function(error) {
         console.log(error);
     })
     .then(function(runtimeSettings) {
         // Add an indicator
         Dynamsoft.DWT.OnWebTwainPreExecute();
-        return DWObject.Addon.BarcodeReader.decode(imageIndex);
+        return DWTObject.Addon.BarcodeReader.decode(imageIndex);
     }, function(error) {
         console.log(error);
     })
@@ -141,7 +143,7 @@ By default, the add-on will read as many barcodes as it can. To increase the rec
 ``` javascript
 // No matter how many barcodes are on the image, stop reading as soon as one barcode is found
 runtimeSettings.expectedBarcodesCount = 1;
-DWObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
+DWTObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
 ```
 
 ### Specify a scan Region
@@ -155,7 +157,7 @@ runtimeSettings.region.regionBottom = 75;
 runtimeSettings.region.regionLeft = 25;
 runtimeSettings.region.regionRight = 75;
 runtimeSettings.region.regionMeasuredByPercentage = 1;
-DWObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
+DWTObject.Addon.BarcodeReader.updateRuntimeSettings(runtimeSettings);
 ```
 
 ### Set the runtime settings using JSON
@@ -231,9 +233,9 @@ For a JSON object like `settings` above, you should make it a string first as sh
 
 ``` javascript
 var JSONString = JSON.stringify(settings);
-DWObject.Addon.BarcodeReader.initRuntimeSettingsWithString(JSONString)
+DWTObject.Addon.BarcodeReader.initRuntimeSettingsWithString(JSONString)
 .then(function(){
-    return DWObject.Addon.BarcodeReader.decode(imageIndex);
+    return DWTObject.Addon.BarcodeReader.decode(imageIndex);
 },function(error) {
     console.log(error)
 })
@@ -274,7 +276,7 @@ If you are not sure how to change the `RuntimeSettings` , the add-on also comes 
 To use one of these modes, simply call `updateRuntimeSettings()`
 
 ``` javascript
-DWObject.Addon.BarcodeReader.updateRuntimeSettings('coverage').then( /*---*/ );
+DWTObject.Addon.BarcodeReader.updateRuntimeSettings('coverage').then( /*---*/ );
 ```
 
 [Try](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Read-Barcode/ReadBarcode.html) or [download](https://www.dynamsoft.com/handle-sample?demoSampleId=66&type=2&productId=1000001&link=https%3a%2f%2fdownload2.dynamsoft.com%2fSamples%2fDWT%2fScan-Documents-and-Read-Barcode.zip) an official demo.
@@ -299,7 +301,7 @@ var aryIndices = [],
 j;
 
 function ReadBarcode(index) {
-    DWObject.Addon.BarcodeReader.decode(index)
+    DWTObject.Addon.BarcodeReader.decode(index)
         .then(function(results) {
                 ProcssedImagesCount++;
                 if (results.length === 0) {
@@ -320,7 +322,7 @@ function ReadBarcode(index) {
                     }
                 } else {
                     console.log('barcode found on image index ' + index);
-                    if (ProcssedImagesCount === DWObject.HowManyImagesInBuffer) {
+                    if (ProcssedImagesCount === DWTObject.HowManyImagesInBuffer) {
                         //If it is the last image, no need to set this flag to true nor create a new document
                         bBarcodeFound = false;
                     } else {
@@ -332,7 +334,7 @@ function ReadBarcode(index) {
                             aryIndices.push([]);
                     }
                 }
-                if (ProcssedImagesCount === DWObject.HowManyImagesInBuffer) {
+                if (ProcssedImagesCount === DWTObject.HowManyImagesInBuffer) {
                     // Print out the indice arrays, each array represents a document
                     console.log(aryIndices);
                     aryIndices = [];
@@ -364,7 +366,7 @@ var aryIndices = {
 function ReadBarcode(index) {
     var j,
         bBarcodeFound = false;
-    DWObject.Addon.BarcodeReader.decode(index).then(function(results) {
+    DWTObject.Addon.BarcodeReader.decode(index).then(function(results) {
             ProcssedImagesCount++;
             if (results.length === 0) {
                 console.log('no barcode found on image index ' + index);
@@ -400,7 +402,7 @@ function ReadBarcode(index) {
                     aryIndices[barcodeOnThisImage[j]] = [index];
                 }
             }
-            if (ProcssedImagesCount === DWObject.HowManyImagesInBuffer) {
+            if (ProcssedImagesCount === DWTObject.HowManyImagesInBuffer) {
                 ProcssedImagesCount = 0;
                 var aryTemp = [];
                 Dynamsoft.Lib.each(aryIndices, function(value, key) {

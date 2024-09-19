@@ -102,9 +102,9 @@ import { WebTwain } from 'dwt/dist/types/WebTwain';
 ```
 
 ``` typescript
-DWObject: WebTwain | any = null;
+DWTObject: WebTwain | any = null;
 Dynamsoft_OnReady() {
-    this.DWObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
+    this.DWTObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
 }
 ```
 
@@ -112,10 +112,10 @@ Dynamsoft_OnReady() {
 
 ``` typescript
 acquireImage() {
-    if (this.DWObject) {
-        this.DWObject.SelectSourceAsync()
+    if (this.DWTObject) {
+        this.DWTObject.SelectSourceAsync()
         .then(() => {
-            return this.DWObject.AcquireImageAsync({
+            return this.DWTObject.AcquireImageAsync({
                 IfCloseSourceAfterAcquire: true,
             });
         })
