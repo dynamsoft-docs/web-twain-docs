@@ -4464,9 +4464,6 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 </table>
 </div>
 
-</table>
-</div>
-
 **Example**
 
 ```javascript
