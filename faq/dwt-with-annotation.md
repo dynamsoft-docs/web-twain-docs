@@ -119,9 +119,9 @@ Links to API Reference:
 // Create Dynamic Web TWAIN object
 // Public trial license which is valid for 24 hours
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
-Dynamsoft.DWT.UseDefaultViewer = false;	
-Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
 Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+Dynamsoft.DWT.UseDefaultViewer = false;
+Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
 
 let DWObject;
 // Create a Dynamic Web TWAIN instance without the built-in viewer
@@ -294,7 +294,8 @@ let DWObject, editViewer, ddvDoc;
     // Dynamsoft Document Viewer
     // Public trial license which is valid for 24 hours
     // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
-    Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+    let license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+    Dynamsoft.DDV.Core.license = license;
     Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
     await Dynamsoft.DDV.Core.init(); 
 
@@ -315,11 +316,10 @@ let DWObject, editViewer, ddvDoc;
     editViewer.openDocument(ddvDoc.uid);
 
     // Create Dynamic Web TWAIN object
-    // Public trial license which is valid for 24 hours
-    // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
+    Dynamsoft.DWT.ProductKey = license;
     Dynamsoft.DWT.UseDefaultViewer = false;
     Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
-    Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+
     // Create a Dynamic Web TWAIN instance without the built-in viewer
     Dynamsoft.DWT.CreateDWTObjectEx({
         WebTwainId: "dwtId",
