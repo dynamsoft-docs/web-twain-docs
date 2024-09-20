@@ -72,7 +72,7 @@ Define the following elements:
 ```javascript
 // Dynamsoft Document Viewer
 // Public trial license which is valid for 24 hours
-// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=mwc
+// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
 await Dynamsoft.DDV.Core.init(); 
@@ -118,7 +118,7 @@ Links to API Reference:
 ```javascript
 // Create Dynamic Web TWAIN object
 // Public trial license which is valid for 24 hours
-// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwt
+// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
 Dynamsoft.DWT.UseDefaultViewer = false;	
 Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
 Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
@@ -293,7 +293,7 @@ let DWObject, editViewer, ddvDoc;
 (async function(){
     // Dynamsoft Document Viewer
     // Public trial license which is valid for 24 hours
-    // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=mwc
+    // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
     Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
     Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
     await Dynamsoft.DDV.Core.init(); 
@@ -316,7 +316,7 @@ let DWObject, editViewer, ddvDoc;
 
     // Create Dynamic Web TWAIN object
     // Public trial license which is valid for 24 hours
-    // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwt
+    // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
     Dynamsoft.DWT.UseDefaultViewer = false;
     Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
     Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
