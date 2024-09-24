@@ -599,7 +599,7 @@ DWTObject.RegisterEvent('OnGetFilePath', function(isSave, filesCount, index, dir
 
 ## OnPostLoad
 
-This event is triggered when a file from a local directory has been loaded into the control.
+This event triggers upon returning from [`LoadImage()`]({{site.api}}WebTwain_IO.html#loadimage) or [`LoadImageEx()`]({{site.api}}WebTwain_IO.html#loadimageex), regardless of whether they succeed or not.
 
 **Syntax**
 
