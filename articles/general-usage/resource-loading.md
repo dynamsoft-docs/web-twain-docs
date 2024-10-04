@@ -46,24 +46,24 @@ Though these core resource files do not contain add-ons, we may load add-on reso
 
 ## Loading from CDN
 
-> Note: The resources obtained from the CDNs contain the property `Dynamsoft.DWT.AutoLoad = false`, whereas the same property in the resources obtained from the official SDK has the value `true`. This property controls initialization behavior; read our [initialization guide]({{site.extended-usage}}advanced-initialization.html) to learn more.
-
 The most straight-forward method of loading resources is to fetch them from CDNs. (Both CDNs provide identical files) DWT resource files are hosted on [jsDelivr](https://jsdelivr.com/) and [UNPKG](https://unpkg.com/). Unlike our official SDK package, the CDNs require the user to supply a license key. See our [licensing page]({{site.general-usage}}license.html) for more details, and request a trial license [here](https://www.dynamsoft.com/customer/license/trialLicense/?product=dwt).
+
+The resources obtained from the package managers differ slightly from the ones found in the official SDK package, in that it has the property `Dynamsoft.DWT.AutoLoad = false`, whereas it is `true` in the official SDK package. This property controls initialization behavior; read our [initialization guide]({{site.extended-usage}}advanced-initialization.html) to learn more.
 
 Simply create a `script` element like so:
 
-### Loading from [UNPKG](https://unpkg.com/dwt@latest/dist/dynamsoft.webtwain.min.js)
+### Loading from [UNPKG](https://unpkg.com/dwt@18.5.0/dist/dynamsoft.webtwain.min.js)
 
 ```html
 <html>
     <head>
         <!-- Load resources from UNPKG CDN -->
-        <script src="https://unpkg.com/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
+        <script src="https://unpkg.com/dwt@18.5.0/dist/dynamsoft.webtwain.min.js"></script>
     </head>
 
     <body>
         <script>
-            Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@latest/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@18.5.0/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
         </script>
     </body>
@@ -75,20 +75,20 @@ APIs used:
 - [`Dynamsoft.DWT.ResourcesPath`]({{site.api}}Dynamsoft_WebTwainEnv.html#resourcespath)
 - [`Dynamsoft.DWT.ProductKey`]({{site.api}}Dynamsoft_WebTwainEnv.html#productkey)
 
-### Loading from [jsDelivr](https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js)
+### Loading from [jsDelivr](https://cdn.jsdelivr.net/npm/dwt@18.5.0/dist/dynamsoft.webtwain.min.js)
 
-> Note: jsDelivr currently has problems delivering the Dynamsoft Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/DynamsoftServiceSetup.msi`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UKPKG is currently unaffected. For information about the Dynamsoft Service, learn more [here]({{site.extended-usage}}dynamsoft-service-configuration.html).
+Note that jsDelivr currently has problems delivering the Dynamsoft Service installer (`https://cdn.jsdelivr.net/npm/dwt@18.5.0/dist/dist/`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UKPKG is currently unaffected. For information about the Dynamsoft Service, learn more [here]({{site.extended-usage}}dynamsoft-service-configuration.html).
 
 ```html
 <html>
     <head>
         <!-- Load resources from jsDelivr CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dwt@18.5.0/dist/dynamsoft.webtwain.min.js"></script>
     </head>
 
     <body>
         <script>
-            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@18.5.0/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
         </script>
     </body>
@@ -106,7 +106,7 @@ APIs used:
 
 ## Loading from Package Managers
 
-> Note: The resources obtained from the package managers contain the property `Dynamsoft.DWT.AutoLoad = false`, whereas the same property in the resources obtained from the official SDK has the value `true`. This property controls initialization behavior; read our [initialization guide]({{site.extended-usage}}advanced-initialization.html) to learn more. Just like the CDNs, the package managers require the users to supply a license key. See our [licensing page]({{site.general-usage}}license.html) for more details, and request a trial license [here](https://www.dynamsoft.com/customer/license/trialLicense/?product=dwt).
+The resources obtained from the package managers differ slightly from the ones found in the official SDK package, in that it has the property `Dynamsoft.DWT.AutoLoad = false`, whereas it is `true` in the official SDK package. This property controls initialization behavior; read our [initialization guide]({{site.extended-usage}}advanced-initialization.html) to learn more. Just like the CDNs, the package managers require the users to supply a license key. See our [licensing page]({{site.general-usage}}license.html) for more details, and request a trial license [here](https://www.dynamsoft.com/customer/license/trialLicense/?product=dwt).
 
 The DWT package is hosted on both `npm` and `yarn` (both packages are identical), and the installation commands are as follows:
 

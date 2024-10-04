@@ -46,6 +46,8 @@ Open `angular.json` and add the following lines to `"build"/"options"/"assets"` 
 }
 ```
 
+We can get these resource files in a few different ways. See our [resource loading guide]({{site.general-usage}}resource-loading.html) to see how to load resource files from our official SDK, CDNs, or package managers.
+
 ## Start to implement
 
 ### Generate a component

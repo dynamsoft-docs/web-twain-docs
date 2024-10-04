@@ -51,6 +51,8 @@ Open `package.json` and change `scripts` like this:
 
 > Note: The change ensures the static files required to run `DWT` are copied over to the built project.
 
+We can get these resource files in a few different ways. See our [resource loading guide]({{site.general-usage}}resource-loading.html) to see how to load resource files from our official SDK, CDNs, or package managers.
+
 ## Implementation
 
 ### Generate a Component
