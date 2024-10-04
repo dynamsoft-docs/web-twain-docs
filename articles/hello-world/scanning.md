@@ -23,8 +23,8 @@ To start off, create the Hello World web application and load DWT into the envir
 Create a `HelloWorld.html` file anywhere and copy the `Resources` folder to the same location. You can typically find the `Resources` folder inside the following locations depending on your platform:
 
 - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`
-- Linux: Within the decompressed file `Dynamic Web TWAIN SDK {Version Number}\`
-- MacOS: `Applications\Dynamic Web TWAIN SDK {Version Number}\`
+- Linux: Within the decompressed file `Dynamic Web TWAIN SDK {Version Number}/`
+- MacOS: `Applications/Dynamsoft/Dynamic Web TWAIN SDK {Version Number}/`
 
 ### Include the DWT Scripts
 
