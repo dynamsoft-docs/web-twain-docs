@@ -15,15 +15,15 @@ permalink: /info/schedule/Stable.html
 
 ### New features
 
-- [Save the encrypted image caches in local Dynamsoft Service folder]({{site.indepth}}features/buffer.html#save-the-encrypted-image-caches-in-local-dynamsoft-service-folder)
+- [Save the encrypted image caches in local Dynamsoft Service folder]({{site.extended-usage}}buffer-caching.html#save-the-encrypted-image-caches-in-local-dynamsoft-service-folder)
   
   In certain scenarios, there may be requirements to store encrypted image caches on a local disk for temporary data storage or backup purposes. Dynamic Web TWAIN introduces a new feature that facilitates developers in securely storing image caches in encrypted form within the Dynamsoft Service folder.
 
-- [Access-Control-Allow-Origin for Dynamsoft Service]({{site.indepth}}deployment/service.html#access-control-allow-origin)
+- [Access-Control-Allow-Origin for Dynamsoft Service]({{site.extended-usage}}dynamsoft-service-configuration.html#access-control-allow-origin)
 
   A new security feature configures Dynamsoft Service to respond only to requests from specified origins.
 
-- [Generate the encrypted PDF files]({{site.indepth}}features/pdf.html#pdf-save-settings)
+- [Generate the encrypted PDF files]({{site.extended-usage}}pdf-processing.html#pdf-save-settings)
 
   Supports the generation of encrypted PDF files with password protection.
 
