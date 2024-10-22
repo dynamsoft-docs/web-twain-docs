@@ -11,6 +11,30 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 18.5.1 (10/22/2024)
+
+### Improvements 
+
+- Enhanced product security.   
+- Updated third-party libraries to enhance security.   
+- Enhanced compatibility with the HTTP Content-Security-Policy style-src directive. 
+- Improved scanner compatibility. 
+- Improved the internal algorithms of the IsBlankImageAsync API. 
+- Added a configuration to file-saving APIs that allows specifying whether to automatically create directories when the provided path does not exist. This option is enabled by default, and preserves existing behavior. 
+
+### Bug fixes 
+
+- Fixed an issue where removing localStorage causes additional unexpected deletions under certain conditions. 
+- Fixed an issue where FTP upload APIs fail to respond for large file uploads. 
+- Fixed an issue where HTTP upload APIs do not return a response to server errors. 
+- Fixed a sequence issue when saving TIFF files under certain conditions. 
+- Reverted to the previous version of the ChangeBitDepth API algorithm when converting images to black and white. 
+- Fixed an issue where save-related APIs do not enter their failure callbacks upon failing to save under certain conditions. 
+- Fixed an issue where the file selection dialog fails to load files from manually entered file names 
+- Fixed an issue where right clicking on a selection of multiple images in the viewer de-selects all but one image. 
+- Fixed an issue where the print API prints two images on the same page under certain conditions. 
+
+
 ## 18.5 (05/14/2024)
 
 ### New features
