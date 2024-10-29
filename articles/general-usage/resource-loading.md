@@ -12,6 +12,12 @@ permalink: /general-usage/resource-loading.html
 
 Before using the **Dynamic Web TWAIN SDK** (DWT), the web application must first load its resource files. These resource files may be gathered from three locations, with slightly different characteristics. DWT provides **core resources** (i.e. core functionality) that load directly into the web application. This in turn loads **supporting resources**, which include add-ons, css, and more - read about them in detail [here]({{site.faq}}what-are-the-resources-files.html).
 
+## Note on File Size
+
+The installers for the [Dynamsoft Service]({{site.extended-usage}}dynamsoft-service-configuration.html) are numerous and take up a lot of disk space. We may save disk space by removing unused installers for unused platforms/architectures if called for, whether for deployment or for development environments.
+
+The official SDK installers store the installers under the `/dist` directory, and the package managers/CDNs keep them under `/dist/dist`. For example, if the web application does not support end users on Linux-based platforms, we may elect to remove `DynamsoftServiceSetup.deb`, `DynamsoftServiceSetup.rpm`, etc.
+
 ## Loading from Official SDK Package
 
 The official [DWT installer](https://www.dynamsoft.com/web-twain/downloads) installs the SDK with a 30-day free trial (license key included), and contains the resource scripts, along with SDK documentation, and samples. This method is useful for developers to quickly evaluate the SDK. The resource files may be obtained from the following locations after installation:

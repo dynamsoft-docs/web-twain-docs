@@ -16,7 +16,9 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 If too many end-users access the same scanning application using the same communication port, it can slow down server response and increase wait time.
 
-To optimize user experience within the Citrix environment, Dynamsoft offers the enhanced mode which distributes end-users among different ports. For more information, please check here: <a href="https://www.dynamsoft.com/blog/insights/document-scanning-within-citrix/" target="_blank">Optimized Document Scanning Within Citrix Remote Desktop</a>
+To optimize user experience within the Citrix environment, Dynamsoft offers **enhanced mode** which distributes end-users among different ports. For more information, please check here: <a href="https://www.dynamsoft.com/blog/insights/document-scanning-within-citrix/" target="_blank">Optimized Document Scanning Within Citrix Remote Desktop</a>
+
+**Note**: enabling enhanced mode requires license key modifications. Please contact our [support team]({{site.about}}getsupport.html) to use enhanced mode functionalities.
 
 To configure the enhanced mode, please follow the steps below:
 

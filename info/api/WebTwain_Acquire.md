@@ -4163,7 +4163,7 @@ getCapabilities(
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
-<td align="center">v16.0+</td>
+<td align="center">not supported</td>
 <td align="center">v18.2+</td>
 </tr>
 </table>
@@ -4220,7 +4220,7 @@ Please refer to [`Capabilities`]({{site.info}}api/Interfaces.html#capabilities).
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
-<td align="center">v16.0+</td>
+<td align="center">not supported</td>
 <td align="center">v18.2+</td>
 </tr>
 

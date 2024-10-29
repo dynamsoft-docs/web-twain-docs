@@ -783,20 +783,6 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | Resize | 7 |
 | Move | 8 |
 
-## `Dynamsoft.DWT.EnumDWT_Language`
-
-| Label | Value|
-|:-|:-|
-| English | 0 |
-| French | 1 |
-| Arabic | 2 |
-| Spanish | 3 |
-| Portuguese | 4 |
-| German | 5 |
-| Italian | 6 |
-| Russian | 7 |
-| Chinese | 8 |
-
 {% comment %}
 ## `Dynamsoft.DWT.EnumDWT_InitMsg`
 

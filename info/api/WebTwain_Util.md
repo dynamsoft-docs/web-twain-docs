@@ -21,10 +21,9 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Methods**
 
-|                                                                        |
-| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [`isUsingActiveX()`](#isusingactivex) |[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)                   | [`SetLanguage()`](#setlanguage)     |
-| [`GenerateURLForUploadData()`](#generateurlforuploaddata) |
+|                                       |
+| :------------------------------------ | :---------------------------------- | --------------------------------------- |
+| [`isUsingActiveX()`](#isusingactivex) | [`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent) | [`GenerateURLForUploadData()`](#generateurlforuploaddata) |
 
 **Properties**
 
@@ -178,52 +177,6 @@ UnregisterEvent(name: string, callback?: (...arg: any[]) => void): boolean;
 
 </table>
 </div>
-
----
-
-## SetLanguage()
-
-Set the language for the authorization dialogs.
-
-**Syntax**
-
-```typescript
-SetLanguage(
-    language: Dynamsoft.DWT.EnumDWT_Language | number
-): boolean;
-```
-
-**Parameters**
-
-`language`: Specify the language. Please refer to [`EnumDWT_Language`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_language).
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">not supported </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
-<td align="center">v13.0+ </td>
-</tr>
-
-</table>
-</div>
-
-**Usage notes**
-
-The language set with this method is only for the built-in security dialogs which show up when the user tries to access a scanner, a camera or a local file.
 
 ---
 
