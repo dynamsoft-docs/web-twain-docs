@@ -18,7 +18,7 @@ Generally speaking, most UI elements are configured in the file **dynamsoft.webt
 
 ## Installation Dialog
 
-![UI 1]({{site.assets}}imgs/UI-1.png)
+![UI 1]({{site.assets}}imgs/Initialization-1.png)
 
 This dialog comes up when using `Dynamic Web TWAIN` scanner module under one of the following conditions:
 
@@ -76,20 +76,6 @@ DWTObject.RegisterEvent('OnInternetTransferPercentage',
 ```
 
 ## Language
-
-### Security Dialog
-
-If you have enabled the security dialogs, you may see the following dialog when you try to scan
-
-![UI-5]({{site.assets}}imgs/UI-5.png)
-
-You can change the language with the method [ `SetLanguage()` ]({{site.info}}api/WebTwain_Util.html#setlanguage). The following sets the language to Spanish
-
-``` javascript
-DWTObject.SetLanguage(Dynamsoft.DWT.EnumDWT_Language.Spanish);
-```
-
-![UI-6]({{site.assets}}imgs/UI-6.png)
 
 ### Error Messages
 

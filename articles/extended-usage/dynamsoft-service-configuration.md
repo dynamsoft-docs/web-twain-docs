@@ -11,7 +11,7 @@ redirect_from:
   - /indepth/deployment/service.html
 ---
 
-# Dynamsoft Service
+# Configuring the Dynamsoft Service
 
 > This article is meant exclusively for the Desktop Service Edition of Dynamic Web TWAIN.
 

@@ -51,7 +51,9 @@ Beginning with Dynamic Web TWAIN v16.0, the Dynamsoft Service is backward compat
 
 ## Update `dwt` package
 
-If your application uses a framework or library like Angular, React, Vue, etc. and uses the `dwt` package, you can just install the new version of Dynamic Web TWAIN to replace the old one and update the types definition as well. For example:
+If your application uses a framework or library like Angular, React, Vue, etc. and uses the `dwt` package, you can just install the new version of Dynamic Web TWAIN to replace the old one. For example:
+
+> Note: the `@types/dwt` package is no longer used, and types are now included within the `dwt` package itself as of [version 17.0]({{site.info}}schedule/stable.html#17004202021).
 
 For npm:
 
@@ -59,16 +61,8 @@ For npm:
 npm install dwt
 ```
 
-``` cmd
-npm install @types/dwt
-```
-
 For Yarn:
 
 ``` cmd
 yarn add dwt
-```
-
-``` cmd
-yarn add @types/dwt
 ```

@@ -5,6 +5,7 @@ title: How to enable mobile capture
 keywords: Dynamic Web TWAIN, Documentation, Mobile Web Capture
 breadcrumbText: Mobile Web Capture
 description: Dynamic Web TWAIN SDK Documentation Mobile Web Capture Page
+ignore: true
 ---
 
 <div class="blockquote-warning"></div>

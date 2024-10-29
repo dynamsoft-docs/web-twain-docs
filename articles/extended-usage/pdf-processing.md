@@ -10,7 +10,7 @@ redirect_from:
     - /indepth/features/pdf.html
 ---
 
-# PDF Handling 
+# Processing PDFs
 
 PDFs are widely used in many and various industries, and presently are the only non-image file type that `Dynamic Web TWAIN` supports. In this next section, we will address all the input and output operations that allow the user to properly handle PDF files.
 
