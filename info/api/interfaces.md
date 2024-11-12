@@ -1730,8 +1730,8 @@ interface PDFWSettings {
 }
 ```
 
-- [`EnumDWT_PDFCompressionType`]({{site.info}}api/Dynamsoft_Enum.html#enumdwt_pdfcompressiontype.html) 
-- [`EnumPDF_Page`]({{site.info}}api/Dynamsoft_Enum.html#enumpdf_page.html)
+- [`EnumDWT_PDFCompressionType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pdfcompressiontype) 
+- [`EnumPDF_Page`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumpdf_page)
 
 
 ## Webcam
