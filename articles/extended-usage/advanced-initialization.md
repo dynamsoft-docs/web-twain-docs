@@ -115,7 +115,7 @@ Some use cases call for instantiating `WebTwain` objects on demand. To do this, 
         <script>
             var DWTObject; // Use this to store the WebTwain object after retrieval
 
-            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/dwt@latest/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
 
             // Configure the WebTwain instance created when calling Dynamsoft.DWT.Load()
@@ -183,13 +183,13 @@ The previous two methods relied on listening to the `OnWebTwainReady` event to g
         <script>
             var DWTObject; // Use this to store the WebTwain object after retrieval
 
-            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/dwt@latest/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
 
             // Create WebTwain instance
             function instantiate() {
                 Dynamsoft.DWT.CreateDWTObject(
-                    'dwtControlContainer'
+                    'dwtcontrolContainer'
                     , function (object) {
                         DWTObject = object;
                     }, function (exp) {
@@ -248,7 +248,7 @@ The other instantiation methods all create a `Viewer` component in the `WebTwain
         <script>
             var DWTObject; // Use this to store the WebTwain object after retrieval
 
-            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/dwt@latest/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
 
             // Create WebTwain instance without a Viewer

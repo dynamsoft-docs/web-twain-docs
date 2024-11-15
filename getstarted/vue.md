@@ -94,7 +94,7 @@ export default {
   },
   data() {
     return {
-      containerId: "dwtControlContainer",
+      containerId: "dwtcontrolContainer",
       sourceList: [],
       selectedIndex: 0,
     };
