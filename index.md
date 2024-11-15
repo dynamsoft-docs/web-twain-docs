@@ -27,11 +27,9 @@ permalink: /index.html
 ### [General Usage Guide]({{site.genera-usage}}index.html)
 
 - [Loading Library Resources]({{site.general-usage}}resource-loading.html)
-- [License]({{site.general-usage}}initialization.html)
-- [Initializing DWT]({{site.general-usage}}license.html)
-- [Importing Images]({{site.general-usage}}image-import/index.html)
-  - [Acquiring Images from Scanners]({{site.general-usage}}image-import/scanner-image-acquisition.html)
-  - [Loading Documents from Files]({{site.general-usage}}image-import/file-import.html)
+- [Configuring License Keys]({{site.general-usage}}license.html)
+- [Initializing DWT]({{site.general-usage}}initialization.html)
+- [Acquiring Images from Scanners]({{site.general-usage}}scanner-image-acquisition.html)
 - [Configuring the Viewer]({{site.general-usage}}viewer-configuration.html)
 - [Processing Images]({{site.general-usage}}image-processing/index.html)
   - [Managing the Image Buffer]({{site.general-usage}}image-processing/buffer-management.html)
@@ -45,6 +43,7 @@ permalink: /index.html
 ### [Extended Usage Guide]({{site.extended-usage}}index.html)
 
 - [Advanced DWT Initialization]({{site.extended-usage}}advanced-initialization.html)
+- [Loading Documents from Files]({{site.extended-usage}}file-import.html)
 - [Configuring System Messages]({{site.extended-usage}}system-message-configuration.html)
 - [Set Up the Dynamsoft Service]({{site.extended-usage}}dynamsoft-service-configuration.html)
 - [UI Customization]({{site.extended-usage}}ui-customization.html)

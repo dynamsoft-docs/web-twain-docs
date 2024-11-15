@@ -29,17 +29,12 @@ tree_list:
     childList:
       - name: Loading Library Resources
         path: /general-usage/resource-loading.html
-      - name: License
+      - name: Configuring License Keys
         path: /general-usage/license.html
       - name: Initializing DWT
         path: /general-usage/initialization.html
-      - name: Importing Images
-        path: /general-usage/image-import/index.html
-        childList:
-        - name: Acquiring Images from Scanners
-          path: /general-usage/image-import/scanner-image-acquisition.html
-        - name: Loading Documents from Files
-          path: /general-usage/image-import/file-import.html
+      - name: Acquiring Images from Scanners
+        path: /general-usage/scanner-image-acquisition.html
       - name: Configuring the Viewer
         path: /general-usage/viewer-configuration.html
       - name: Processing Images
@@ -65,6 +60,8 @@ tree_list:
     childList:
     - name: Advanced DWT Initialization
       path: /extended-usage/advanced-initialization.html
+    - name: Loading Documents from Files
+      path: /extended-usage/file-import.html
     - name: Configuring System Messages
       path: /extended-usage/system-message-configuration.html
     - name: Set Up the Dynamsoft Service 

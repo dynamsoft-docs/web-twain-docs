@@ -5,7 +5,7 @@ title: Dynamic Web TWAIN SDK Basics - Loading Documents from Files
 keywords: Dynamic Web TWAIN, Documentation, development, guide, development guide, basic, basic guide, importing images, image import, importing documents, documents, document import
 breadcrumbText: Loading Documents from Files
 description: Dynamic Web TWAIN SDK General Usage Guide - Loading Documents from Files
-permalink: /general-usage/image-import/file-import.html
+permalink: /extended-usage/file-import.html
 ---
 
 # Loading Documents from Files

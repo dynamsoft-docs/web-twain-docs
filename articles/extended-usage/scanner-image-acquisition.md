@@ -5,7 +5,7 @@ title: Dynamic Web TWAIN SDK Basics - Acquiring Images from Scanners
 keywords: Dynamic Web TWAIN, Documentation, development, guide, development guide, basic, basic guide, importing images, image import, imaging devices, selecting imaging devices, scanners, scanning, image acquisition
 breadcrumbText: Acquiring Images from Scanners
 description: Dynamic Web TWAIN SDK General Usage Guide - Acquiring Images from Scanners
-permalink: /general-usage/image-import/scanner-image-acquisition.html
+permalink: /general-usage/scanner-image-acquisition.html
 redirect_from:
     - /indepth/features/input.html
 ---
@@ -13,6 +13,8 @@ redirect_from:
 # Acquiring Images from Scanners
 
 > Prerequisite: [DWT Initialization]({{site.general-usage}}initialization.html)
+
+DWT can import images in a few different ways, the most common which is to acquire images from image sources, which are scanners and other imaging hardware. (We can also load image files, both from the local file system and over the network, as explained [here]({{site.general-usage}}image-import/file-import.html))
 
 After the web application has initialized DWT and instantiated a `WebTwain` object, the `WebTwain` object can perform image acquisition, which is a term that includes scanning and file input. We will first go over scanning in this section. Note that we also provide an add-on for webcam-based scanning, which you can learn more about [here]({{site.api}}Addon_Webcam.html).
 

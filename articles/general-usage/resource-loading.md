@@ -58,18 +58,18 @@ The resources obtained from the package managers differ slightly from the ones f
 
 Simply create a `script` element like so:
 
-### Loading from [UNPKG](https://unpkg.com/dwt@18.5.0/dist/dynamsoft.webtwain.min.js)
+### Loading from [UNPKG](https://unpkg.com/dwt@latest/dist/dynamsoft.webtwain.min.js)
 
 ```html
 <html>
     <head>
         <!-- Load resources from UNPKG CDN -->
-        <script src="https://unpkg.com/dwt@18.5.0/dist/dynamsoft.webtwain.min.js"></script>
+        <script src="https://unpkg.com/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
     </head>
 
     <body>
         <script>
-            Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@18.5.0/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@latest/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
         </script>
     </body>
@@ -81,20 +81,20 @@ APIs used:
 - [`Dynamsoft.DWT.ResourcesPath`]({{site.api}}Dynamsoft_WebTwainEnv.html#resourcespath)
 - [`Dynamsoft.DWT.ProductKey`]({{site.api}}Dynamsoft_WebTwainEnv.html#productkey)
 
-### Loading from [jsDelivr](https://cdn.jsdelivr.net/npm/dwt@18.5.0/dist/dynamsoft.webtwain.min.js)
+### Loading from [jsDelivr](https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js)
 
-Note that jsDelivr currently has problems delivering the Dynamsoft Service installer (`https://cdn.jsdelivr.net/npm/dwt@18.5.0/dist/dist/`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UKPKG is currently unaffected. For information about the Dynamsoft Service, learn more [here]({{site.extended-usage}}dynamsoft-service-configuration.html).
+Note that jsDelivr currently has problems delivering the Dynamsoft Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UKPKG is currently unaffected. For information about the Dynamsoft Service, learn more [here]({{site.extended-usage}}dynamsoft-service-configuration.html).
 
 ```html
 <html>
     <head>
         <!-- Load resources from jsDelivr CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/dwt@18.5.0/dist/dynamsoft.webtwain.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
     </head>
 
     <body>
         <script>
-            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@18.5.0/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
         </script>
     </body>
