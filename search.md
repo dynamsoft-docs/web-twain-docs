@@ -1,8 +1,8 @@
 ---
-layout: search-page
-title: Dynamic Web Twain SDK Documentation Search
-keywords: Dynamic Web Twain SDK Documentation Search
+layout: search-layout
+title: How Dynamic Web TWAIN Scanner Works?
+description: Dynamic Web Twain SDK Documentation Search
 breadcrumbText: HomePage
+h1: Dynamsoft Web TWAIN Document Search
 permalink: /search.html
-cx: 2849fa1c545c59689
 ---
