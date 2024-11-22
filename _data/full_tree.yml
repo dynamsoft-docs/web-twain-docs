@@ -72,8 +72,8 @@ tree_list:
       path: /extended-usage/barcode-processing.html
     - name: PDF Handling
       path: /extended-usage/pdf-processing.html
-    - name: PDF Compressor (Beta) 
-      path: /extended-usage/pdf-compression.html
+    #- name: PDF Compressor (Beta) 
+    #  path: /extended-usage/pdf-compression.html
     - name: Buffer Caching
       path: /extended-usage/buffer-caching.html
     - name: Remote Scan

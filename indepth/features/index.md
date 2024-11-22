@@ -52,6 +52,6 @@ This section covers how to implement the key capabilities of Dynamic Web TWAIN (
 
   Learn about how to use Remote Scan.
 
-* [PDF Compressor (Beta)]({{site.indepth}}features/pdfc.html)
+<!--* [PDF Compressor (Beta)]({{site.indepth}}features/pdfc.html)
 
-  Learn about PDF Compressor.
+  Learn about PDF Compressor.-->
