@@ -49,7 +49,7 @@ permalink: /index.html
 - [UI Customization]({{site.extended-usage}}ui-customization.html)
 - [Barcode Recognition]({{site.extended-usage}}barcode-processing.html)
 - [PDF Handling]({{site.extended-usage}}pdf-processing.html)
-- [PDF Compressor (Beta)]({{site.extended-usage}}pdf-compression.html)
+<!--- [PDF Compressor (Beta)]({{site.extended-usage}}pdf-compression.html)-->
 - [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)
 - [Configuring System Messages]({{site.extended-usage}}system-message-configuration.html)
 
