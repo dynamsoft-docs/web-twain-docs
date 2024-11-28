@@ -6,8 +6,7 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: Acquiring Images from Scanners
 description: Dynamic Web TWAIN SDK General Usage Guide - Acquiring Images from Scanners
 permalink: /general-usage/scanner-image-acquisition.html
-redirect_from:
-    - /indepth/features/input.html
+redirect_from: /indepth/features/input.html
 ---
 
 # Acquiring Images from Scanners

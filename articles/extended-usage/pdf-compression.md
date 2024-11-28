@@ -6,8 +6,7 @@ keywords: Dynamic Web TWAIN, Documentation, PDF Compressor
 breadcrumbText: PDF Compressor (Beta)
 description: Dynamic Web TWAIN SDK Documentation PDF Compressor
 permalink: /extended-usage/pdf-compression.html
-redirect_from:
-  - /indepth/features/pdfc.html
+redirect_from: /indepth/features/pdfc.html
 ---
 
 # PDF Compressor (Beta)

@@ -6,6 +6,7 @@ keywords: Dynamic Web TWAIN, Documentation, save, output, export, web, download,
 breadcrumbText: Exporting Locally
 description: Dynamic Web TWAIN SDK Documentation Local Export
 permalink: /general-usage/image-export/local-export.html
+redirect_from: /indepth/features/output.html#save
 ---
 
 # Exporting Locally

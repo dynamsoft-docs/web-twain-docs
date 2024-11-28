@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, extended guide, advanced, advanced guide
 breadcrumbText: Dynamic Web TWAIN SDK Extended Usage Guide
 description: Advanced Initialization
 permalink: /extended-usage/index.html
+redirect_from: /indepth/features/
 ---
 
 # Extended Usage Guide

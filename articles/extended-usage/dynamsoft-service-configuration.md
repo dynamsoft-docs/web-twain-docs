@@ -7,8 +7,7 @@ keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamsoft Service
 breadcrumbText: Dynamsoft Service
 description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 permalink: /extended-usage/dynamsoft-service-configuration.html
-redirect_from:
-  - /indepth/deployment/service.html
+redirect_from: /indepth/deployment/service.html
 ---
 
 # Configuring the Dynamsoft Service

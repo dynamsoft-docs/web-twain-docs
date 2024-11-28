@@ -6,8 +6,7 @@ keywords: Dynamic Web TWAIN, Documentation, UI
 breadcrumbText: UI
 description: Dynamic Web TWAIN SDK Documentation UI Page
 permalink: /extended-usage/ui-customization.html
-redirect_from:
-    - /indepth/features/ui.html
+redirect_from: /indepth/features/ui.html
 ---
 
 # UI Elements

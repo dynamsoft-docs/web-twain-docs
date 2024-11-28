@@ -6,8 +6,8 @@ keywords: Dynamic Web TWAIN, Documentation, Hello World, scanning, helloworld
 breadcrumbText: Scanning Images
 description: Dynamic Web TWAIN SDK HelloWorld - Scanning Images
 permalink: /hello-world/scanning.html
-redirect_from:
-    - /getstarted/scanning.html
+redirect_from: /getstarted/scanning.html
+
 ---
 
 # Scanning Images
