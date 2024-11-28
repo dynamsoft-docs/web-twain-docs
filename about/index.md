@@ -27,9 +27,8 @@ For more info, please check out <a href="{{site.info}}schedule/stable.html" targ
 
 DWT makes the following tasks easy
 
-* [Scanning documents from scanners]({{site.indepth}}features/input.html#scan)
-* [Taking pictures from cameras]({{site.indepth}}features/input.html#capture)
-* [Loading or downloading existing documents]({{site.indepth}}features/input.html#load)
+* [Scanning documents from scanners]({{site.hello-world}}scanning.html)
+* [Loading or downloading existing documents]({{site.extended-usage}}file-import.html)
 * [Editing images]({{site.indepth}}features/edit.html)
 * [Saving documents locally]({{site.indepth}}features/output.html#save)
 * [Uploading documents to the server]({{site.indepth}}features/output.html#upload)
