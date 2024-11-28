@@ -6,6 +6,8 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: Editing Images
 description: Dynamic Web TWAIN SDK General Usage Guide - Image Editing
 permalink: /general-usage/image-processing/image-editing.html
+redirect_from: /indepth/features/edit.html
+
 ---
 
 # Editing Images

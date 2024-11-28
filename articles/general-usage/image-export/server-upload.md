@@ -6,6 +6,7 @@ keywords: Dynamic Web TWAIN, Documentation, upload, output, web, server, web ser
 breadcrumbText: Uploading to Web Server
 description: Dynamic Web TWAIN SDK Documentation Output Page
 permalink: /general-usage/image-export/server-upload.html
+redirect_from: /indepth/features/output.html
 ---
 
 # Uploading Images to the Web Server

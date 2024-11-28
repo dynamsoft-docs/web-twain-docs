@@ -6,6 +6,8 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: Loading Library Resources
 description: Dynamic Web TWAIN SDK General Usage Guide - Loading Library Resources
 permalink: /general-usage/resource-loading.html
+redirect_from: /indepth/features/initialize.html
+
 ---
 
 # Loading Library Resources

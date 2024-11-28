@@ -6,6 +6,7 @@ keywords: Dynamic Web TWAIN, extended guide, advanced, advanced initialization, 
 breadcrumbText: Advanced DWT Initialization
 description: Advanced DWT Initialization
 permalink: /extended-usage/advanced-initialization.html
+redirect_from: /indepth/features/initialize.html
 ---
 
 # Advanced DWT Initialization
