@@ -125,7 +125,7 @@ APIs used:
 				if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
 					var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
 					var imgAry = [DWTObject.CurrentImageIndexInBuffer];
-					DWTObject.HTTPupload(
+					DWTObject.HTTPUpload(
 						strUrl,
 						imgAry,
 						Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,

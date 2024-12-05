@@ -36,7 +36,7 @@ function upload() {
     if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
         var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
         var imgAry = [DWTObject.CurrentImageIndexInBuffer];
-        DWTObject.HTTPupload(
+        DWTObject.HTTPUpload(
             strUrl, 
             imgAry, 
             Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
@@ -65,7 +65,7 @@ APIs used:
 
 - [`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer){:target="_blank" rel="noreferrer noopener"}
 - [`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer){:target="_blank" rel="noreferrer noopener"}
-- [`HTTPupload()`]({{site.info}}api/WebTwain_IO.html#httpupload){:target="_blank" rel="noreferrer noopener"}
+- [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload){:target="_blank" rel="noreferrer noopener"}
 - [`Dynamsoft.DWT.EnumDWT_ImageType`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_imagetype){:target="_blank" rel="noreferrer noopener"}
 - [`Dynamsoft.DWT.EnumDWT_UploadDataFormat`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_uploaddataformat){:target="_blank" rel="noreferrer noopener"}
 
@@ -113,7 +113,7 @@ Following this guide, your `HelloWorld.html` should look similar to this:
                 if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
                     var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
                     var imgAry = [DWTObject.CurrentImageIndexInBuffer];
-                    DWTObject.HTTPupload(
+                    DWTObject.HTTPUpload(
                         strUrl, 
                         imgAry, 
                         Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
