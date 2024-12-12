@@ -63,7 +63,7 @@ The method [ `SetReaderOptions()` ]({{site.info}}api/Addon_PDF.html#setreaderopt
 
 #### Other methods
 
-* [ `GetReaderOptions()` ]({{site.info}}api/Addon_PDF.html#getreaderoptions): This method returns the current [`ReaderOptions`]({{site.info}}/api/interfaces.html#readeroptions).
+* [ `GetReaderOptions()` ]({{site.info}}api/Addon_PDF.html#getreaderoptions): This method returns the current [`ReaderOptions`]({{site.info}}api/interfaces.html#readeroptions).
 
 ## Output as PDF
 

@@ -23,7 +23,7 @@ permalink: /info/api/Addon_BarcodeReader.html
 
 ## decode()
 
-Read an image in the buffer and try to locate and decode barcode(s) on it. Please refer to [`TextResult`]({{site.info}}/api/interfaces.html#textresult).
+Read an image in the buffer and try to locate and decode barcode(s) on it. Please refer to [`TextResult`]({{site.info}}api/interfaces.html#textresult).
 
 **Syntax**
 

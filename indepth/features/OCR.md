@@ -123,7 +123,7 @@ function DoOCR() {
 > The following four methods are only effective when the output format is PDF.
 
 * [ `GetIfUseDetectedFont()` ]({{site.info}}api/Addon_OCR.html#getifusedetectedfont) & [ `SetIfUseDetectedFont()` ]({{site.info}}api/Addon_OCR.html#setifusedetectedfont): Whether to use detected fonts in the resulting PDF.
-* [ `GetUnicodeFontName()` ]({{site.info}}api/Addon_OCR.html#getunicodefontname) & [ `SetUnicodeFontName()` ](({{site.info}}api/Addon_OCR.html#setunicodefontname)): Returns or sets the font to use.
+* [ `GetUnicodeFontName()` ]({{site.info}}api/Addon_OCR.html#getunicodefontname) & [ `SetUnicodeFontName()` ]({{site.info}}api/Addon_OCR.html#setunicodefontname): Returns or sets the font to use.
 
 ##### Online demo for OCRB
 

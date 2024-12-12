@@ -65,7 +65,7 @@ Please refer to [`EnumDWT_ConvertMode`]({{site.info}}api/Dynamsoft_Enum.html#dyn
 ---
 ## GetReaderOptions()
 
-Returns the current PDF reader options. Please refer to [`ReaderOptions`]({{site.info}}/api/interfaces.html#readeroptions).
+Returns the current PDF reader options. Please refer to [`ReaderOptions`]({{site.info}}api/interfaces.html#readeroptions).
 
 **Syntax**
 
@@ -246,7 +246,7 @@ SetReaderOptions(options: ReaderOptions): boolean;
 ```
 
 **Parameters**
-`options`: Please see the [`ReaderOptions`]({{site.info}}/api/interfaces.html#readeroptions) interface.
+`options`: Please see the [`ReaderOptions`]({{site.info}}api/interfaces.html#readeroptions) interface.
 
 **Availability**
 
@@ -403,7 +403,7 @@ Write.Setup(settings: PDFWSettings): boolean;
 
 **Parameters**
 
-`settings`: Configures how the PDF is generated. Please refer to [`PDFWSettings`]({{site.info}}/api/interfaces.html#pdfwsettings).
+`settings`: Configures how the PDF is generated. Please refer to [`PDFWSettings`]({{site.info}}api/interfaces.html#pdfwsettings).
 
 **Availability**
 

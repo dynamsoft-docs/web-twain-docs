@@ -6,7 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: Loading Documents from Files
 description: Dynamic Web TWAIN SDK General Usage Guide - Loading Documents from Files
 permalink: /extended-usage/file-import.html
-redirect_from: /indepth/features/input.html#load-files
 ---
 
 # Loading Documents from Files

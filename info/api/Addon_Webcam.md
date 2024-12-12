@@ -314,7 +314,7 @@ When you close the camera, the video stream will stop at the last frame.
 
 ## GetCameraControlPropertySetting()
 
-Return information about the specified camera property. Please refer to [`CameraControlProperty`]({{site.info}}/api/interfaces.html#cameracontrolproperty).
+Return information about the specified camera property. Please refer to [`CameraControlProperty`]({{site.info}}api/interfaces.html#cameracontrolproperty).
 
 **Syntax**
 
@@ -356,7 +356,7 @@ GetCameraControlPropertySetting(
 
 ## GetCameraControlPropertyMoreSetting()
 
-Return detailed information about the specified camera property. Please refer to [`CameraControlPropertyExtra`]({{site.info}}/api/interfaces.html#cameracontrolpropertyextra).
+Return detailed information about the specified camera property. Please refer to [`CameraControlPropertyExtra`]({{site.info}}api/interfaces.html#cameracontrolpropertyextra).
 
 **Syntax**
 
@@ -446,7 +446,7 @@ SetCameraControlPropertySetting(
 
 ## GetVideoPropertySetting()
 
-Return information about the specified video property. Please refer to [`VideoControlProperty`]({{site.info}}/api/interfaces.html#videocontrolproperty).
+Return information about the specified video property. Please refer to [`VideoControlProperty`]({{site.info}}api/interfaces.html#videocontrolproperty).
 
 **Syntax**
 
@@ -488,7 +488,7 @@ GetVideoPropertySetting(
 
 ## GetVideoPropertyMoreSetting()
 
-Return detailed information about the specified video property. Please refer to [`VideoControlPropertyExtra`]({{site.info}}/api/interfaces.html#videocontrolpropertyextra).
+Return detailed information about the specified video property. Please refer to [`VideoControlPropertyExtra`]({{site.info}}api/interfaces.html#videocontrolpropertyextra).
 
 **Syntax**
 
@@ -578,7 +578,7 @@ SetVideoPropertySetting(
 
 ## GetFrameRate()
 
-Return the frame rates supported by the current camera. Please refer to [`FrameRate`]({{site.info}}/api/interfaces.html#framerate).
+Return the frame rates supported by the current camera. Please refer to [`FrameRate`]({{site.info}}api/interfaces.html#framerate).
 
 **Syntax**
 
@@ -614,7 +614,7 @@ GetFrameRate(): FrameRate;
 
 ## GetMediaType()
 
-Return the media types supported by the current camera. Please refer to [`MediaType`]({{site.info}}/api/interfaces.html#mediatype).
+Return the media types supported by the current camera. Please refer to [`MediaType`]({{site.info}}api/interfaces.html#mediatype).
 
 **Syntax**
 
@@ -650,7 +650,7 @@ GetMediaType(): MediaType;
 
 ## GetResolution()
 
-Return the resolutions supported by the current camera. Please refer to [`Resolution`]({{site.info}}/api/interfaces.html#resolution).
+Return the resolutions supported by the current camera. Please refer to [`Resolution`]({{site.info}}api/interfaces.html#resolution).
 
 **Syntax**
 
