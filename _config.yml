@@ -7,6 +7,7 @@ productUrl: https://www.dynamsoft.com/web-twain/overview/
 #productUrl: https://demo3.dynamsoft.com:808/dwt-harry/web-twain/overview/ # Preview URL
 productName: Dynamic Web TWAIN
 docHomePage: /web-twain/docs/
+searchIndexName: Crawler-DWT-Docs-New
 
 dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
 dwt_logo: /web-twain/docs/assets/img-icon/dwt-logo.png
