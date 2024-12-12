@@ -83,7 +83,7 @@ Make sure that this `div` exists in the DOM. The `WebTwain` instance also uses t
 
 ## Retrieving the `WebTwain` Object
 
-It is important to access the `WebTwain` object only after it has been instantiated. We can do this by registering the [`OnWebTwainReady`]({{site.api}}/Dynamsoft_WebTwainEnv.html#onwebtwainready) event, then invoking [`GetWebTwain()`]({{site.api}}Dynamsoft_WebTwainEnv.html#getwebtwain) in the callback function. This ensures that we do not try to access the `WebTwain` object before it is instantiated. Once we can access the `WebTwain` object, we can proceed to use powerful features within DWT.
+It is important to access the `WebTwain` object only after it has been instantiated. We can do this by registering the [`OnWebTwainReady`]({{site.api}}Dynamsoft_WebTwainEnv.html#onwebtwainready) event, then invoking [`GetWebTwain()`]({{site.api}}Dynamsoft_WebTwainEnv.html#getwebtwain) in the callback function. This ensures that we do not try to access the `WebTwain` object before it is instantiated. Once we can access the `WebTwain` object, we can proceed to use powerful features within DWT.
 
 ## Further Reading
 
