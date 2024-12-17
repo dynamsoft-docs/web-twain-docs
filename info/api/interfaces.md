@@ -26,12 +26,8 @@ needGenerateH3Content: true
 interface DWTInitialConfig {
     WebTwainId: string;
     Host ? : string; // Default value: "127.0.0.1"
-    Port ? : string | number; // Default value: 18622
-    PortSSL ? : string | number; // Default value: 18623
 }
 ```
-
-- `Host`, `Port`, `PortSSL`: These three optional parameters must be set at the same time.
 
 ### Container
 
