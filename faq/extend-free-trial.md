@@ -13,9 +13,6 @@ permalink: /faq/extend-free-trial.html
 
 ## How can I extend my free trial?
 
-You can extend your trial license by logging into the <a href="https://www.dynamsoft.com/customer/index" target="_blank">customer portal</a> and going to the <a href="https://www.dynamsoft.com/customer/license/trialLicense" target="_blank">trial license center</a>. The customer portal allows you to extend your trial for maximum two times with each extension limited to 15 days.
+You can extend your trial license for free on <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dwt" target="_blank">the license page</a>. Each extension is valid for up to 15 days, with a maximum of two extensions allowed.
 
 If you need longer period of trial license, please send your project requirement and timeline to <a href="mailto:support@dynamsoft.com" >support@dynamsoft.com</a>. You can also contact our support team via the <a href="https://www.dynamsoft.com/company/contact/" target="_blank">online chat service</a> available on our website.
-
-
-
