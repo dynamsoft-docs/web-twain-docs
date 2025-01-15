@@ -35,9 +35,9 @@ permalink: /faq/general-troubleshooting-steps.html
     }
     ```
 
-3. Reproduce the issue (If the time span of the log is greater than 3 days, please create a txt file to indicate the date when the issue occurred)
+3. Perform a hard refresh (Ctrl + F5) on the application web page and attempt to reproduce the issue. To expedite issue identification, we would greatly appreciate it if you could create a txt file that records the time when the issue occurred and place the file in the same log folder.
 
-4. Zip the log files and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
+4. Zip the log folder and share with [Dynamsoft Support Team]({{site.about}}getsupport.html) via email.
   - On Windows, the log files are in `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`
   - On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`
   - On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_{versionnumber}/log`
