@@ -284,7 +284,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html">What does the Dynamsoft Service do on the end-user machine?</a></li>
 
-<li><a href="{{site.faq}}admin-right-needed-to-install.html">Are admin right required to install the end-user component?</a></li>
+<li><a href="{{site.faq}}admin-privileges-needed-to-install.html">Are admin privileges required to install the end-user component?</a></li>
 
 <li><a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html">Can I install Dynamsoft Service silently?</a></li>
 

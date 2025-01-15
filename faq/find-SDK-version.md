@@ -17,7 +17,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 ### Introduction
 
-Due to Dynamic Web TWAIN being a long-standing and popular product among enterprises, customers who have integrated Dynamic Web TWAIN may be using various versions. To provide better technical support, customers will need to provide the SDK version number they are using to help Dynamsoft understand the situation more accurately. This article will outline several methods to assist users in finding the current SDK version they are using.
+Due to Dynamic Web TWAIN being a long-standing and popular product among enterprises, customers who have integrated Dynamic Web TWAIN may be using various versions. To provide better technical support, customers will need to provide the SDK version number they are using to help support team understand the situation more accurately. This article will outline several methods to assist users in finding the current SDK version they are using.
 
 
 ### Resolution

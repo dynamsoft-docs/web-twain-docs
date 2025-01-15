@@ -75,4 +75,6 @@ plugins:
   - jekyll-readme-index
   - jekyll-seo-tag
 
-url: "https://www.dynamsoft.com" # sitemap root
+#url: "https://www.dynamsoft.com" # sitemap root
+#url: "https://officecn.dynamsoft.com:808/" # sitemap root
+url: "" # sitemap root

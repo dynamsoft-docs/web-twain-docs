@@ -14,3 +14,6 @@ permalink: /faq/hide-image-viewer.html
 ## Can I hide the Dynamsoft image viewer and use my own image viewer?
 
 If you want to use your own viewer, you can use [`Dynamsoft.DWT.CreateDWTObjectEx()`]({{site.extended-usage}}advanced-initialization.html#creating-headless-webtwain-instances) to create a `WebTwain` instance that does not come with a viewer. You can also unbind and destroy the viewer of an existing `WebTwain` instance with the [`unbind()`]({{site.api}}WebTwain_Viewer.html#unbind) API.
+
+<div class="blockquote-important"></div>
+> Prior to using CreateDWTObjectEx(), please disable the [AutoLoad]({{site.api}}Dynamsoft_WebTwainEnv.html#autoload) feature. Additionally, avoid calling any [Load]({{site.api}}Dynamsoft_WebTwainEnv.html#load) methods either before or after using CreateDWTObjectEx(). This ensures proper functionality and prevents potential conflicts during the initialization.

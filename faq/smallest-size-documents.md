@@ -25,38 +25,30 @@ There are a few things that you can try to reduce the size of a resulting file
 
 - [Optional] If the resulting file is in the JPEG format (.jpg) or is a TIF or PDF that is encoded by the JPEG standard, you can set <a href="{{site.info}}api/WebTwain_IO.html#jpegquality" target="_blank">JPEGQuality</a> to a lower value.
 
-    Before setting the JPEGQuality, set the compression type to the JPEG standard as outlined below.
+    - Save in PDF format (No PDF Rasterizer Addon license is required for this API),
 
-    Before saving the file,
+    ```javascript
+    DWTObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG, quality: 20});
+    //or set DWTObject.Addon.PDF.Write.Setup({compression: 5, quality: 20}); which is equivalent.
+    ```
 
-    - Step 1:
-        - If you want to save in PDF format (No PDF Rasterizer Addon license needed for this API),
-  
-        ```javascript
-        DWTObject.Addon.PDF.Write.Setup({compression: Dynamsoft.DWT.EnumDWT_PDFCompressionType.PDF_JPEG});
-        //or set DWTObject.Addon.PDF.Write.Setup({compression: 5}); which is equivalent.
-        ```
+    ```html
+    <!--Note: if you are using this method, you need to include dynamsoft.webtwain.addon.pdf.js file into the program. For example:-->
+    <script type="text/javascript" src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"> </script>
+    ```
 
-        ```html
-        <!--Note: if you are using this method, you need to include dynamsoft.webtwain.addon.pdf.js file into the program. For example:-->
-        <script type="text/javascript" src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"> </script>
-        ```
-  
-        - If you want to save in TIF format,
-  
-        ```javascript
-        DWTObject.TIFFCompressionType = Dynamsoft.DWT.EnumDWT_TIFFCompressionType.TIFF_JPEG;
-        //or set DWTObject.TIFFCompressionType = 7 which is equivalent.
-        ```
-    
-        - If you want to save in JPEG format, please jump to **Step 2** directly.
-  
+    - Save in TIF format,
 
-    - Step 2: 
-        - set the <a href="{{site.info}}api/WebTwain_IO.html#jpegquality" target="_blank">JPEGQuality</a> to a lower value, for example:
+    ```javascript
+    DWTObject.TIFFCompressionType = Dynamsoft.DWT.EnumDWT_TIFFCompressionType.TIFF_JPEG;
+    //or set DWTObject.TIFFCompressionType = 7 which is equivalent.
+    DWTObject.JPEGQuality = 20;
+    ```
 
-        ```javascript
-        DWTObject.JPEGQuality = 20;
-        ```
+    - Save in JPEG format.
+
+    ```javascript
+    DWTObject.JPEGQuality = 20;
+    ```
         
   **Note that black & white image cannot be saved in the JPEG format. To reduce the size, please convert the image to grayscale.**
