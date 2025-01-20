@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN SDK Features - Initialization
 keywords: Dynamic Web TWAIN, Documentation, Initialization 
 breadcrumbText: Initialization
 description: Dynamic Web TWAIN SDK Documentation Initialization Page
+ignore: true
 #permalink: /indepth/features/initialize.html
 ---
 
