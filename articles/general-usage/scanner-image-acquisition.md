@@ -88,8 +88,8 @@ Finally, `AcquireImageAsync()` closes the data source after completing the scan,
 
 ```JS
 function AcquireImage() {
-	if (DWTObject) {
-		DWTObject.SelectSourceAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER)
+    if (DWTObject) {
+        DWTObject.SelectSourceAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER)
         .then(function () {
             return DWTObject.AcquireImageAsync({
                 IfCloseSourceAfterAcquire: true,
@@ -98,7 +98,7 @@ function AcquireImage() {
         .catch(function (exp) {
             alert(exp.message);
         });
-	}
+    }
 }
 ```
 
@@ -114,8 +114,8 @@ Modifying the previous `AcquireImage()` function results in this:
 
 ```JS
 function AcquireImage() {
-	if (DWTObject) {
-		DWTObject.SelectSourceAsync()
+    if (DWTObject) {
+        DWTObject.SelectSourceAsync()
         .then(function () {
             return DWTObject.AcquireImageAsync({
                 IfShowUI: false,
@@ -127,7 +127,7 @@ function AcquireImage() {
         .catch(function (exp) {
             alert(exp.message);
         });
-	}
+    }
 }
 ```
 
