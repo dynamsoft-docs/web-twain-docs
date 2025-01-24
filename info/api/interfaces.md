@@ -86,8 +86,8 @@ interface Device{
 
 ```typescript
 interface ServiceInfo {
-	server: string;
-	attrs?: any;
+    server: string;
+    attrs?: any;
 }
 ```
 

@@ -31,20 +31,20 @@ Add all three properties in the JSON argument passed to `AcquireImageAsync()`:
 
 ```js
 function AcquireImage() {
-	if (DWTObject) {
-		DWTObject.SelectSourceAsync()
-			.then(function () {
-				return DWTObject.AcquireImageAsync({
-					IfCloseSourceAfterAcquire: true,
-					IfShowUI: false,
-					PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
-					Resolution: 150,
-				});
-			})
-			.catch(function (exp) {
-				alert(exp.message);
-			});
-	}
+    if (DWTObject) {
+        DWTObject.SelectSourceAsync()
+            .then(function () {
+                return DWTObject.AcquireImageAsync({
+                    IfCloseSourceAfterAcquire: true,
+                    IfShowUI: false,
+                    PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
+                    Resolution: 150,
+                });
+            })
+            .catch(function (exp) {
+                alert(exp.message);
+            });
+    }
 }
 ```
 
@@ -52,67 +52,67 @@ function AcquireImage() {
 
 ```html
 <html>
-	<head>
-		<script src="Resources/dynamsoft.webtwain.initiate.js"></script>
-		<script src="Resources/dynamsoft.webtwain.config.js"></script>
-	</head>
+    <head>
+        <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+        <script src="Resources/dynamsoft.webtwain.config.js"></script>
+    </head>
 
-	<body>
-		<input type="button" value="Scan" onclick="AcquireImage();" />
-		<input type="button" value="upload" onclick="upload();" />
-		<div id="dwtcontrolContainer"></div>
+    <body>
+        <input type="button" value="Scan" onclick="AcquireImage();" />
+        <input type="button" value="upload" onclick="upload();" />
+        <div id="dwtcontrolContainer"></div>
 
-		<script type="text/javascript">
-			var DWTObject;
+        <script type="text/javascript">
+            var DWTObject;
 
-			Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
-				DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-			});
+            Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
+                DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+            });
 
-			function AcquireImage() {
-				if (DWTObject) {
-					DWTObject.SelectSourceAsync()
-						.then(function () {
-							return DWTObject.AcquireImageAsync({
-								IfCloseSourceAfterAcquire: true,
-								IfShowUI: false,
-								PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
-								Resolution: 150,
-							});
-						})
-						.catch(function (exp) {
-							alert(exp.message);
-						});
-				}
-			}
+            function AcquireImage() {
+                if (DWTObject) {
+                    DWTObject.SelectSourceAsync()
+                        .then(function () {
+                            return DWTObject.AcquireImageAsync({
+                                IfCloseSourceAfterAcquire: true,
+                                IfShowUI: false,
+                                PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
+                                Resolution: 150,
+                            });
+                        })
+                        .catch(function (exp) {
+                            alert(exp.message);
+                        });
+                }
+            }
 
-			function upload() {
-				if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
-					var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
-					var imgAry = [DWTObject.CurrentImageIndexInBuffer];
-					DWTObject.HTTPUpload(
-						strUrl,
-						imgAry,
-						Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
-						Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
-						"WebTWAINImage.png",
-						onUploadSuccess,
-						onUploadFailure,
-					);
-				} else {
-					alert("There is no image in buffer.");
-				}
-			}
+            function upload() {
+                if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
+                    var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
+                    var imgAry = [DWTObject.CurrentImageIndexInBuffer];
+                    DWTObject.HTTPUpload(
+                        strUrl,
+                        imgAry,
+                        Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
+                        Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
+                        "WebTWAINImage.png",
+                        onUploadSuccess,
+                        onUploadFailure,
+                    );
+                } else {
+                    alert("There is no image in buffer.");
+                }
+            }
 
-			function onUploadSuccess() {
-				alert("Upload successful");
-			}
+            function onUploadSuccess() {
+                alert("Upload successful");
+            }
 
-			function onUploadFailure(errorCode, errorString, sHttpResponse) {
-				alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
-			}
-		</script>
-	</body>
+            function onUploadFailure(errorCode, errorString, sHttpResponse) {
+                alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
+            }
+        </script>
+    </body>
 </html>
 ```
 

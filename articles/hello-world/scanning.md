@@ -53,11 +53,11 @@ Include the following in the `head` element of `HelloWorld.html`:
 
 ```html
 <script type="text/javascript">
-	var DWTObject;
+    var DWTObject;
 
-	Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
-		DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-	});
+    Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
+        DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+    });
 </script>
 ```
 
@@ -79,17 +79,17 @@ Define the following function to handle scans, and add it in the `script` elemen
 
 ```JS
 function AcquireImage() {
-	if (DWTObject) {
-		DWTObject.SelectSourceAsync().then(
-			function () {
-				return DWTObject.AcquireImageAsync(
-					{ IfCloseSourceAfterAcquire: true }
-				);
-			}
-		).catch(function (exp) {
-			alert(exp.message);
-		});
-	}
+    if (DWTObject) {
+        DWTObject.SelectSourceAsync().then(
+            function () {
+                return DWTObject.AcquireImageAsync(
+                    { IfCloseSourceAfterAcquire: true }
+                );
+            }
+        ).catch(function (exp) {
+            alert(exp.message);
+        });
+    }
 }
 ```
 
@@ -99,37 +99,37 @@ At this point, `HelloWorld.html` should look like this:
 
 ```html
 <html>
-	<head>
-		<script src="Resources/dynamsoft.webtwain.initiate.js"></script>
-		<script src="Resources/dynamsoft.webtwain.config.js"></script>
-	</head>
+    <head>
+        <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+        <script src="Resources/dynamsoft.webtwain.config.js"></script>
+    </head>
 
-	<body>
-		<input type="button" value="Scan" onclick="AcquireImage();" />
-		<div id="dwtcontrolContainer"></div>
+    <body>
+        <input type="button" value="Scan" onclick="AcquireImage();" />
+        <div id="dwtcontrolContainer"></div>
 
-		<script type="text/javascript">
-			var DWTObject;
+        <script type="text/javascript">
+            var DWTObject;
 
-			Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
-				DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-			});
+            Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
+                DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+            });
 
-			function AcquireImage() {
-				if (DWTObject) {
-					DWTObject.SelectSourceAsync()
-						.then(function () {
-							return DWTObject.AcquireImageAsync({
-								IfCloseSourceAfterAcquire: true,
-							});
-						})
-						.catch(function (exp) {
-							alert(exp.message);
-						});
-				}
-			}
-		</script>
-	</body>
+            function AcquireImage() {
+                if (DWTObject) {
+                    DWTObject.SelectSourceAsync()
+                        .then(function () {
+                            return DWTObject.AcquireImageAsync({
+                                IfCloseSourceAfterAcquire: true,
+                            });
+                        })
+                        .catch(function (exp) {
+                            alert(exp.message);
+                        });
+                }
+            }
+        </script>
+    </body>
 </html>
 ```
 

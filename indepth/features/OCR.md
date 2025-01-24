@@ -542,17 +542,17 @@ ocr.setOCRTessDataPath(strTessDataPath);
 // Do OCR
 byte[] result = ocr.ocrImage(aryImageBuffer, refaryRetResultDetails);
 if(result.length > 0) {
-	if(fileExtention == ".pdf"){
-		response.getWriter().write("|#|" + strOCRResultFileName);
-	} else {
-		response.reset(); 
-		response.setContentType("text/plain");
-		response.setHeader("Content-disposition", "attachment; filename=\"" + strOCRResultFileName + "\"");
-		// Write file to response.
-		OutputStream output = response.getOutputStream();
-		output.write(result);
-		output.close();
-	}
+    if(fileExtention == ".pdf"){
+        response.getWriter().write("|#|" + strOCRResultFileName);
+    } else {
+        response.reset(); 
+        response.setContentType("text/plain");
+        response.setHeader("Content-disposition", "attachment; filename=\"" + strOCRResultFileName + "\"");
+        // Write file to response.
+        OutputStream output = response.getOutputStream();
+        output.write(result);
+        output.close();
+    }
 }
 // Write the result on the server too (not necessary, just for future reference)
 outResult = new FileOutputStream(new File(path, strOCRResultFileName));

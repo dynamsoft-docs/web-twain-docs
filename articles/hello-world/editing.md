@@ -27,9 +27,9 @@ Add this line in the `HelloWorld.html` body to create a color mode conversion bu
 
 ```html
 <input
-	type="button"
-	value="Convert to binary image"
-	onclick="binarizeImage();"
+    type="button"
+    value="Convert to binary image"
+    onclick="binarizeImage();"
 />
 ```
 
@@ -37,7 +37,7 @@ Then, define `binarizeImage()` in the `script` element:
 
 ```js
 function binarizeImage() {
-	DWTObject.ConvertToBW(DWTObject.CurrentImageIndexInBuffer);
+    DWTObject.ConvertToBW(DWTObject.CurrentImageIndexInBuffer);
 }
 ```
 
@@ -59,10 +59,10 @@ Define the rotation functions in the `script` element:
 
 ```js
 function rotateCW() {
-	DWTObject.RotateRight(DWTObject.CurrentImageIndexInBuffer);
+    DWTObject.RotateRight(DWTObject.CurrentImageIndexInBuffer);
 }
 function rotateCCW() {
-	DWTObject.RotateLeft(DWTObject.CurrentImageIndexInBuffer);
+    DWTObject.RotateLeft(DWTObject.CurrentImageIndexInBuffer);
 }
 ```
 
@@ -76,90 +76,90 @@ APIs used:
 
 ```html
 <html>
-	<head>
-		<script src="Resources/dynamsoft.webtwain.initiate.js"></script>
-		<script src="Resources/dynamsoft.webtwain.config.js"></script>
-	</head>
+    <head>
+        <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+        <script src="Resources/dynamsoft.webtwain.config.js"></script>
+    </head>
 
-	<body>
-		<input type="button" value="Scan" onclick="AcquireImage();" />
-		<input type="button" value="upload" onclick="upload();" />
-		<div id="dwtcontrolContainer"></div>
-		<input
-			type="button"
-			value="Convert to binary image"
-			onclick="binarizeImage();"
-		/>
-		<input type="button" value="Rotate clockwise" onclick="rotateCW();" />
-		<input
-			type="button"
-			value="Rotate counter-clockwise"
-			onclick="rotateCCW();"
-		/>
+    <body>
+        <input type="button" value="Scan" onclick="AcquireImage();" />
+        <input type="button" value="upload" onclick="upload();" />
+        <div id="dwtcontrolContainer"></div>
+        <input
+            type="button"
+            value="Convert to binary image"
+            onclick="binarizeImage();"
+        />
+        <input type="button" value="Rotate clockwise" onclick="rotateCW();" />
+        <input
+            type="button"
+            value="Rotate counter-clockwise"
+            onclick="rotateCCW();"
+        />
 
-		<script type="text/javascript">
-			var DWTObject;
+        <script type="text/javascript">
+            var DWTObject;
 
-			Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
-				DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
-			});
+            Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
+                DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
+            });
 
-			function AcquireImage() {
-				if (DWTObject) {
-					DWTObject.SelectSourceAsync()
-						.then(function () {
-							return DWTObject.AcquireImageAsync({
-								IfCloseSourceAfterAcquire: true,
-								IfShowUI: false,
-								PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
-								Resolution: 150,
-							});
-						})
-						.catch(function (exp) {
-							alert(exp.message);
-						});
-				}
-			}
+            function AcquireImage() {
+                if (DWTObject) {
+                    DWTObject.SelectSourceAsync()
+                        .then(function () {
+                            return DWTObject.AcquireImageAsync({
+                                IfCloseSourceAfterAcquire: true,
+                                IfShowUI: false,
+                                PixelType: Dynamsoft.DWT.EnumDWT_PixelType.TWPT_GRAY,
+                                Resolution: 150,
+                            });
+                        })
+                        .catch(function (exp) {
+                            alert(exp.message);
+                        });
+                }
+            }
 
-			function upload() {
-				if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
-					var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
-					var imgAry = [DWTObject.CurrentImageIndexInBuffer];
-					DWTObject.HTTPUpload(
-						strUrl,
-						imgAry,
-						Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
-						Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
-						"WebTWAINImage.png",
-						onUploadSuccess,
-						onUploadFailure
-					);
-				} else {
-					alert("There is no image in buffer.");
-				}
-			}
+            function upload() {
+                if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
+                    var strUrl = "https://demo.dynamsoft.com/sample-uploads/";
+                    var imgAry = [DWTObject.CurrentImageIndexInBuffer];
+                    DWTObject.HTTPUpload(
+                        strUrl,
+                        imgAry,
+                        Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
+                        Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
+                        "WebTWAINImage.png",
+                        onUploadSuccess,
+                        onUploadFailure
+                    );
+                } else {
+                    alert("There is no image in buffer.");
+                }
+            }
 
-			function onUploadSuccess() {
-				alert("Upload successful");
-			}
+            function onUploadSuccess() {
+                alert("Upload successful");
+            }
 
-			function onUploadFailure(errorCode, errorString, sHttpResponse) {
-				alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
-			}
+            function onUploadFailure(errorCode, errorString, sHttpResponse) {
+                alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
+            }
 
-			function binarizeImage() {
-				DWTObject.ConvertToBW(DWTObject.CurrentImageIndexInBuffer);
-			}
+            function binarizeImage() {
+                DWTObject.ConvertToBW(DWTObject.CurrentImageIndexInBuffer);
+            }
 
-			function rotateCW() {
-				DWTObject.RotateRight(DWTObject.CurrentImageIndexInBuffer);
-			}
+            function rotateCW() {
+                DWTObject.RotateRight(DWTObject.CurrentImageIndexInBuffer);
+            }
 
-			function rotateCCW() {
-				DWTObject.RotateLeft(DWTObject.CurrentImageIndexInBuffer);
-			}
-		</script>
-	</body>
+            function rotateCCW() {
+                DWTObject.RotateLeft(DWTObject.CurrentImageIndexInBuffer);
+            }
+        </script>
+    </body>
 </html>
 ```
 
