@@ -2,22 +2,21 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How can I resize all images to meet a certain size standard (e.g. A4 size)?
-keywords: Dynamic Web TWAIN, Image Editing, resize image, A4
-breadcrumbText: How can I resize all images to meet a certain size standard (e.g. A4 size)?
-description: How can I resize all images to meet a certain size standard (e.g. A4 size)?
-permalink: /faq/resize-image.html
+title: How can I configure all scanned images to conform to a specific size standard (e.g., A4)?
+keywords: Dynamic Web TWAIN, Image Editing, page size, A4
+breadcrumbText: How can I configure all scanned images to conform to a specific size standard (e.g., A4)?
+description: How can I configure all scanned images to conform to a specific size standard (e.g., A4)?
+permalink: /faq/set-page-size.html
 ---
 
 # Image Editing
 
-## How can I resize all images to meet a certain size standard (e.g. A4 size)?
+## How can I configure all scanned images to conform to a specific size standard (e.g., A4)?
 
 Simply, you can use <a href="{{site.info}}api/WebTwain_Acquire.html#pagesize" target="_blank">PageSize</a> to set the page size to be used when acquiring images.
 Or you can leverage the negotiation capabilities functionality by following the steps mentioned below.
 
 1. ask for the supported sizes of your device.
-
 ```javascript
 DWTObject.getCapabilities(
   function (result) {
@@ -37,7 +36,6 @@ DWTObject.getCapabilities(
 ```
 
 2. set the page size to a size standard as needed.
-
 ```javascript
 DWTObject.setCapabilities(
   {
