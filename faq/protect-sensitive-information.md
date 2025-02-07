@@ -13,6 +13,6 @@ permalink: /faq/protect-sensitive-information.html
 
 ## Can I protect sensitive information of an image from being seen?
 
-No, currently this functionality is not available, but our development team is working on an <a href="{{site.info}}schedule/proposed.html#add-annotations" target="_blank">annotation</a> feature which can be used to protect sensitive information.
+If you need to modify an image by concealing certain areas permanently, you can use the <a href="{{site.info}}api/WebTwain_Edit.html#erase" target="_blank">erase()</a> method. This method is particularly useful when the requirement involves replacing a rectangular region within the image with a solid white block.
 
-Another Use Case: If you want to modify the image and not only hide some parts of the image, then you can try using the <a href="{{site.indepth}}features/edit.html#cutting-cropping-and-copying" target="_blank">erase()</a> method. So, if the request is to replace a rectangle area of an image with a specific color block, then erase() can help achieve that.
+On the other hand, if you prefer a customizable and removable layer to temporarily conceal particular content, our newly developed Annotation feature is just what you need. For comprehensive details about this feature, please click on the following link: <a href="{{site.faq}}dwt-with-annotation.html">How can I add annotations to an image and then save/upload it?</a>

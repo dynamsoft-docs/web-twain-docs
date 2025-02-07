@@ -141,7 +141,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}support-image-deskew.html">Do you support image deskew?</a></li>
 
-<li><a href="{{site.faq}}resize-image.html">How can I resize all images to meet a certain size standard (e.g. A4 size)</a></li>
+<li><a href="{{site.faq}}set-page-size.html">How can I configure all scanned images to conform to a specific size standard (e.g., A4)?</a></li>
 
 <li><a href="{{site.faq}}add-annotation-to-image.html">Can I add annotation to an image (e.g. add watermark or text)?</a></li>
 
