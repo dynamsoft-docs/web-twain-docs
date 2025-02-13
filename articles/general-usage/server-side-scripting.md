@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Development, Server Scripts
 breadcrumbText: Server Scripts
 description: Dynamic Web TWAIN SDK Documentation Server Scripts Page
 permalink: /general-usage/server-side-scripting.html
-redirect_from:
-    - /indepth/development/Server-script.html
 ---
 
 # Server-side Scripting

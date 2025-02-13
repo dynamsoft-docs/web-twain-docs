@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Hello World, editing, helloworld
 breadcrumbText: Uploading documents
 description: Dynamic Web TWAIN SDK HelloWorld - Editing Images
 permalink: /hello-world/editing.html
-redirect_from:
-    - /getstarted/editing.html
 ---
 
 # Editing Images
@@ -35,7 +33,7 @@ Add this line in the `HelloWorld.html` body to create a color mode conversion bu
 
 Then, define `binarizeImage()` in the `script` element:
 
-```js
+```javascript
 function binarizeImage() {
     DWTObject.ConvertToBW(DWTObject.CurrentImageIndexInBuffer);
 }
@@ -57,7 +55,7 @@ Add two buttons for 90 degree clockwise and anti-clockwise image rotation:
 
 Define the rotation functions in the `script` element:
 
-```js
+```javascript
 function rotateCW() {
     DWTObject.RotateRight(DWTObject.CurrentImageIndexInBuffer);
 }

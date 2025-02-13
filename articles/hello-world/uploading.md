@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Hello World, upload, helloworld
 breadcrumbText: Uploading documents
 description: Dynamic Web TWAIN SDK Documentation - Uploading Images to the Server
 permalink: /hello-world/uploading.html
-redirect_from:
-    - /getstarted/uploading.html
 ---
 
 # Uploading Images to the Server
@@ -31,7 +29,7 @@ Insert this line in the `<body>` element of `HelloWorld.html` to create a button
 
 Here we define an upload function, as well as its helpers. Insert the following javascript in the existing `<script>` in `HelloWorld.html`:
 
-```JS
+```javascript
 function upload() {
     if (DWTObject && DWTObject.HowManyImagesInBuffer > 0) {
         var strUrl = "https://demo.dynamsoft.com/sample-uploads/";

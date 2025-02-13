@@ -7,7 +7,6 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: General usage guide
 description: Dynamic Web TWAIN SDK General Usage Guide
 permalink: /general-usage/index.html
-redirect_from: /getstarted/
 ---
 
 # General Usage Guide

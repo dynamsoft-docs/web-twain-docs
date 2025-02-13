@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: DWT Viewer Configuration
 description: Dynamic Web TWAIN SDK General Usage Guide - Customizing the Viewer
 permalink: /general-usage/viewer-configuration.html
-redirect_from:
-    - /indepth/features/viewer.html
 ---
 
 # Configuring the Viewer
@@ -26,7 +24,7 @@ The default `WebTwain` instance automatically creates its own `Viewer` instance 
 
 ##### Relevant Snippet from `dynamsoft.webtwain.config.js`
 
-```JS
+```javascript
 Dynamsoft.DWT.Containers = [{
     ContainerId: 'customDivID', // New default div id
     Width: '800px', // New initial Viewer pixel width
@@ -94,7 +92,7 @@ To further customize a `Viewer`, we create a `WebTwain` instance that does not h
 
 ##### Relevant Snippet from `dynamsoft.webtwain.config.js`
 
-```JS
+```javascript
 Dynamsoft.DWT.Containers = []
 Dynamsoft.DWT.AutoLoad = false;
 ```

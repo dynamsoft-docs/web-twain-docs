@@ -6,7 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Handle PDF
 breadcrumbText: Handle PDF
 description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
 permalink: /extended-usage/pdf-processing.html
-redirect_from: /indepth/features/pdf.html
 ---
 
 # Processing PDFs

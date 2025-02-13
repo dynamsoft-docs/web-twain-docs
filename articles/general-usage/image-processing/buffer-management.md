@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: Managing the Image Buffer
 description: Dynamic Web TWAIN SDK General Usage Guide - Managing the Image Buffer
 permalink: /general-usage/image-processing/buffer-management.html
-redirect_from:
-    - /indepth/features/buffer.html
 ---
 
 # Managing the Image Buffer
@@ -153,19 +151,19 @@ DWT can tag images for custom grouping, sorting, and other data management tasks
 
 For example, we may tag individual images with the "title" tag to identify title pages with [TagImages()]({{site.api}}WebTwain_Buffer.html#tagimages), like so:
 
-```JS
+```javascript
 DWTObject.TagImages([0, 1], "title");
 ```
 
 This applies the tag to the first and second images in the buffer (zero-indexed). If image indices are not known ahead of time, it's also useful to apply the tag to the currently displayed image in the viewer, via the [`CurrentImageIndexInBuffer`]({{site.api}}WebTwain_Buffer.html#currentimageindexinbuffer) property. This allows the user to tag the image upon inspection.
 
-```JS
+```javascript
 DWTObject.TagImages([DWTObject.CurrentImageInBuffer], "title");
 ```
 
 Rather than applying tags to existing images, it is possible to tag images as they enter the buffer via [SetDefaultTag()]({{site.api}}WebTwain_Buffer.html#setdefaulttag). By changing the default tag in reaction to application state, the web application can create rich image tagging logic:
 
-```JS
+```javascript
 DWTObject.SetDefaultTag("title");
 ```
 
@@ -175,13 +173,13 @@ Every image entering the buffer after this will automatically receive this tag.
 
 Tags are only useful if they can be interacted with. Once images have been tagged, we can filter them by their tags. For example, a user may need to display only the title pages for preview purposes. Once title pages have been tagged (either as they were scanned or after the fact), we can use [FilterImagesByTag()]({{site.api}}WebTwain_Buffer.html#filterimagesbytag) to selectively display just the title pages:
 
-```JS
+```javascript
 DWTObject.FilterImagesByTag("title");
 ```
 
 Once the user finishes with the preview, DWT can revert to displaying all images by clearing the filter with [ClearFilter()]({{site.api}}WebTwain_Buffer.html#clearfilter):
 
-```JS
+```javascript
 DWTObject.ClearFilter();
 ```
 
@@ -254,13 +252,13 @@ APIs used:
 
 Documents are another way to organize images within the image buffer. We may create multiple documents to group images, but unlike tags, images can each only belong to one document. Documents also preserve image order. First, we create a document with [CreateDocument()]({{site.api}}WebTwain_Buffer.html#createdocument):
 
-```JS
+```javascript
 DWTObject.CreateDocument("documentName");
 ```
 
 To add images into the document, we first open the document with [OpenDocument()]({{site.api}}WebTwain_Buffer.html#opendocument), and specifying the document by name:
 
-```JS
+```javascript
 DWTObject.OpenDocument("documentName");
 ```
 
@@ -268,7 +266,7 @@ Subsequently, all images entering the buffer will belong to this document. Only 
 
 We may also move images after they have entered documents, for example, to copy images from one document to another with [CopyToDocumentAsync()]({{site.api}}WebTwain_Buffer.html#coppytodocumentasync):
 
-```JS
+```javascript
 DWTObject.CopyToDocumentAsync("sourceDocumentName", "destinationDocumentName", sourceIndices, targetIndex)
 ```
 
@@ -311,7 +309,7 @@ The image buffer provides event callbacks which can be used to customize buffer 
 
 - [`OnBufferChanged`]({{site.api}}WebTwain_Buffer.html#onbufferchanged) triggers whenever the state of the buffer changes. The details on how the buffer changes are provided in [`BufferChangeInfo`]({{site.api}}Interfaces.html#bufferchangeinfo):
 
-```JS
+```javascript
 DWTObject.RegisterEvent('OnBufferChanged',
     function (bufferChangeInfo: BufferChangeInfo) {
     }
@@ -327,7 +325,7 @@ DWTObject.RegisterEvent('OnBufferChanged',
 
 * [`OnTopImageInTheViewChanged`]({{site.api}}WebTwain_Buffer.html#ontopimageintheviewchanged) triggers when the first image visible in the `Viewer` changes. (The viewer may be configured to show more than one image at a time, see the [`Viewer` guide]({{site.general-usage}}viewer-configuration.html) for details).
 
-```JS
+```javascript
 DWTObject.RegisterEvent(
     'OnBitmapChanged',
     function(

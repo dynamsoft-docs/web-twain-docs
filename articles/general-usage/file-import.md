@@ -92,7 +92,7 @@ We first enable file selection dialogue with the [`IfShowFileDialog`]({{site.api
 
 [`LoadImage()`]({{site.api}}WebTwain_IO.html#loadimage), works similarly to `LoadImageEx()`, but it does not specify an image file format:
 
-```JS
+```javascript
 DWTObject.LoadImage(
     "", // File path empty while file selection dialog is enabled
     function () { console.log("Successfully loaded file"); },

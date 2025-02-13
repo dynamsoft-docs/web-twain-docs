@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Hello World, upload, helloworld
 breadcrumbText: Scan settings
 description: Dynamic Web TWAIN SDK HelloWorld - Specifying Scan Settings
 permalink: /hello-world/scan-settings.html
-redirect_from:
-    - /getstarted/scansettings.html
 ---
 
 # Specifying Scan Settings
@@ -29,7 +27,7 @@ The `AcquireImagesAsync()` API accepts scan setting arguments in a JSON format (
 
 Add all three properties in the JSON argument passed to `AcquireImageAsync()`:
 
-```js
+```javascript
 function AcquireImage() {
     if (DWTObject) {
         DWTObject.SelectSourceAsync()

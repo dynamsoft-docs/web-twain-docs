@@ -316,6 +316,8 @@ permalink: /faq/
 <li><a href="{{site.faq}}service-is-blocked.html">The scanner's UI or the system's file dialog does not open when scanning</a></li>
 
 <li><a href="{{site.faq}}find-SDK-version.html">How do I know which SDK version I am using?</a></li>
+
+<li><a href="{{site.faq}}download-service-only.html">Where can I download the Dynamsoft Service installers only?</a></li>
 </ol>
 
 ## Error Troubleshooting
@@ -378,7 +380,9 @@ permalink: /faq/
 <li><a href="{{site.faq}}error-message-user-cancelled-the-operation.html">Error Message - User cancelled the operation</a></li>
 
 <li><a href="{{site.faq}}the-loading-bar-keeps-spinning-when-capture-the-image-with-iphone.html">The loading bar keeps spinning when capture the image with iPhone.</a></li>
- </ol>
+
+<li><a href="{{site.faq}}debug-on-online-demo.html">How to debug on Dynamic Web TWAIN online demo?</a></li>
+</ol>
 
 ## Licensing and Purchase
 

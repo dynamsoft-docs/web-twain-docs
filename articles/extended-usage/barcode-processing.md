@@ -6,7 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Read Barcode
 breadcrumbText: Read Barcode
 description: Dynamic Web TWAIN SDK Documentation Read Barcode Page
 permalink: /extended-usage/barcode-processing.html
-redirect_from: /indepth/features/barcode.html
 ---
 
 # Barcode Reader

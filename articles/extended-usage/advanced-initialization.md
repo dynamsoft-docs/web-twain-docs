@@ -6,7 +6,6 @@ keywords: Dynamic Web TWAIN, extended guide, advanced, advanced initialization, 
 breadcrumbText: Advanced DWT Initialization
 description: Advanced DWT Initialization
 permalink: /extended-usage/advanced-initialization.html
-redirect_from: /indepth/features/initialize.html
 ---
 
 # Advanced DWT Initialization
@@ -219,7 +218,7 @@ This method creates a `WebTwain` instance, and makes it available through the su
 
 `Dynamsoft.DWT.CreateDWTObject()` can also set network configurations with an overloaded method like so:
 
-```JS
+```javascript
 CreateDWTObject(
     ContainerId: string, 
     host: string, 
