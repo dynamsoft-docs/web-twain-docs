@@ -7,7 +7,6 @@ keywords: Dynamic Web TWAIN, UI Customization, display language, language, messa
 breadcrumbText: Configuring System Messages
 description: Configuring System Messages
 permalink: /extended-usage/system-message-configuration.html
-redirect_from: /indepth/features/ui.html
 ---
 
 # Configuring System Messages

@@ -6,7 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: Acquiring Images from Scanners
 description: Dynamic Web TWAIN SDK General Usage Guide - Acquiring Images from Scanners
 permalink: /general-usage/scanner-image-acquisition.html
-redirect_from: /indepth/features/input.html
 ---
 
 # Acquiring Images from Scanners
@@ -86,7 +85,7 @@ Finally, `AcquireImageAsync()` closes the data source after completing the scan,
 
 `SelectSourceAsync()` can take an [`EnumDWT_DeviceType`]({{site.api}}Dynamsoft_Enum.html#dynamsoftdwtenumdwt_devicetype) argument to specify data sources using particular scanning protocols, and show only those data sources in the source selection UI. This may be useful in an internal use scenario where there is knowledge about the scanner hardware being used with DWT. For example, to show only eSCL data sources, we use the `Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER` enum like so:
 
-```JS
+```javascript
 function AcquireImage() {
     if (DWTObject) {
         DWTObject.SelectSourceAsync(Dynamsoft.DWT.EnumDWT_DeviceType.ESCLSCANNER)
@@ -112,7 +111,7 @@ Many use cases require a pre-specified set of scanning options (such as, but not
 
 Modifying the previous `AcquireImage()` function results in this:
 
-```JS
+```javascript
 function AcquireImage() {
     if (DWTObject) {
         DWTObject.SelectSourceAsync()

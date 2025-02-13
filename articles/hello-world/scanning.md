@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Hello World, scanning, helloworld
 breadcrumbText: Scanning Images
 description: Dynamic Web TWAIN SDK HelloWorld - Scanning Images
 permalink: /hello-world/scanning.html
-redirect_from: /getstarted/scanning.html
-
 ---
 
 # Scanning Images
@@ -77,7 +75,7 @@ Add this element in the HTML body to create a scanning button:
 
 Define the following function to handle scans, and add it in the `script` element created during initialization:
 
-```JS
+```javascript
 function AcquireImage() {
     if (DWTObject) {
         DWTObject.SelectSourceAsync().then(

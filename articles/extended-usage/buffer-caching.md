@@ -6,7 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamsoft Service, cachi
 breadcrumbText: Dynamsoft Service
 description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
 permalink: /extended-usage/buffer-caching.html
-redirect_from: /indepth/features/buffer.html
 ---
 
 # Buffer Caching

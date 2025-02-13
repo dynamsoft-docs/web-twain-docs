@@ -7,8 +7,6 @@ keywords: Dynamic Web TWAIN, Documentation, upload, output, web, server, web ser
 breadcrumbText: Exporting Images
 description: Dynamic Web TWAIN SDK Image Export Documentation
 permalink: /general-usage/image-export/index.html
-redirect_from:
-    - /indepth/features/output.html
 ---
 
 # Exporting Images

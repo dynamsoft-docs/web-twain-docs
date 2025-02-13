@@ -7,8 +7,6 @@ keywords: Dynamic Web TWAIN, Documentation, License
 breadcrumbText: License
 description: Dynamic Web TWAIN SDK Documentation License Page
 permalink: /general-usage/license.html
-redirect_from:
-   - /about/license.html
 ---
 
 # Using License Keys

@@ -7,8 +7,6 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: Processing Images
 description: Dynamic Web TWAIN SDK General Usage Guide - Processing Images
 permalink: /general-usage/image-processing/index.html
-redirect_from:
-    - /indepth/features/edit.html
 ---
 
 # Processing Images

@@ -7,7 +7,6 @@ keywords: Dynamic Web TWAIN, TWAIN, About, Documentation
 breadcrumbText: Dynamic Web TWAIN Intro
 description: Dynamic Web TWAIN SDK Documentation. This will help you integrate document scanning into your app, no matter whether you are building a workflow from scratch or optimizing an existing workflow.
 permalink: /introduction/index.html
-redirect_from: /about/
 ---
 
 <!-- Preamble

@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, Hello World, upload, helloworld
 breadcrumbText: Scan settings
 description: Dynamic Web TWAIN SDK HelloWorld
 permalink: /hello-world/index.html
-redirect_from:
-    - /getstarted/helloworld.html
 ---
 # Hello World
 

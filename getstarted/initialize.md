@@ -51,7 +51,7 @@ DWT has a built in event that, by default, triggers `Dynamsoft_OnReady()` when t
 
 <!-- DWT has a built in event `OnWebTwainReady` that fires and, by default, triggers `Dynamsoft_OnReady()` when the DWT Resources are loaded into browser memory. You can use this event to initialize the DWT object. -->
 
-```js
+```javascript
 function Dynamsoft_OnReady() {
     DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
 }

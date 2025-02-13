@@ -6,8 +6,6 @@ keywords: Dynamic Web TWAIN, Documentation, development, guide, development guid
 breadcrumbText: DWT Initialization
 description: Dynamic Web TWAIN SDK General Usage Guide - Initializing DWT
 permalink: /general-usage/initialization.html
-redirect_from:
-    - /indepth/features/initialize.html
 ---
 
 # Initializing DWT

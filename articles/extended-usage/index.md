@@ -5,9 +5,8 @@ needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN SDK Extended Usage Guide
 keywords: Dynamic Web TWAIN, extended guide, advanced, advanced guide
 breadcrumbText: Dynamic Web TWAIN SDK Extended Usage Guide
-description: Advanced Initialization
+description: Extended Usage
 permalink: /extended-usage/index.html
-redirect_from: /indepth/features/
 ---
 
 # Extended Usage Guide
