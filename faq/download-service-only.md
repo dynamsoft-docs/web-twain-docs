@@ -18,7 +18,7 @@ Typically, we recommend that developers retrieve the Dynamsoft Service Installer
 
 Let's use Windows as an illustration. After installing the SDK package, you can locate all the Dynamsoft Service installers for various operating systems in the directory "C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 18.5.1\Resources\dist".[[Download the SDK](https://www.dynamsoft.com/web-twain/downloads/)]
 
-However, considering that more and more enterprise users are using the Dynamic Web TWAIN SDK, it would be a hassle for end users to obtain the Dynamsoft Service installer by downloading the SDK if they are unable to acquire the installers from the developer for some reasons. Therefore, you can use the following trick to download the desired Service installers.
+However, considering that more and more enterprise users are using the Dynamic Web TWAIN SDK, it would be a hassle for end users to obtain the Dynamsoft Service installer by downloading the SDK if they are unable to acquire the installers from the developer for some reasons. Therefore, you can use the following strategy to download the desired Service installers.
 
 **Step 1:**
 Visit the CDN site: [https://www.unpkg.com/browse/dwt/dist/dist/](https://www.unpkg.com/browse/dwt/dist/dist/).
