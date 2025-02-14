@@ -14,24 +14,34 @@ permalink: /indepth/development/react.html
 
 ## Preparation
 
-Make sure you have [node](https://nodejs.org/) and [yarn](https://yarnpkg.com/cli/install) installed. `node 14.4.0` and `yarn 1.22.4` are used in the example below.
+Make sure you have [node](https://nodejs.org/) installed. `node 20.18.2` is used in the example below.
 
 ## Create the Sample Project
 
-### Create a Bootstrapped Raw React Application
+### Create a React project using Vite:
 
 ``` cmd
-npx create-react-app dwt-react
+npm create vite@latest dwt-react --template react
 ```
 
-### **cd** to the root directory of the application and install the `dwt` and `ncp` package
+After running this, you will need to select the following options:
+- Select a framework: React
+- Select a variant: JavaScript
+
+### Navigate to the project folder:
 
 ``` cmd
-yarn add dwt
+cd dwt-react
+```
+
+### Install dependencies and the required packages for DWT and NCP:
+
+``` cmd
+npm install
 ```
 
 ``` cmd
-yarn add ncp
+npm install dwt ncp
 ```
 
 > `ncp` is used to copy static resources files.
@@ -42,10 +52,11 @@ Open `package.json` and change `scripts` like this:
 
 ``` json
 "scripts": {
-    "start": "ncp node_modules/dwt/dist public/dwt-resources && react-scripts start",
-    "build": "react-scripts build && ncp node_modules/dwt/dist build/dwt-resources",
-    "test": "ncp node_modules/dwt/dist public/dwt-resources && react-scripts test",
-    "eject": "react-scripts eject"
+   "copy-resources": "ncp node_modules/dwt/dist public/dwt-resources",
+    "dev": "npm run copy-resources && vite",
+    "build": "npm run copy-resources && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
 },
 ```
 
@@ -57,60 +68,58 @@ We can get these resource files in a few different ways. See our [resource loadi
 
 ### Generate a Component
 
-Under `/src/`, create a new JavaScript file and name it `dwt.js`.
+Under `/src/`, create a new JavaScript file and name it `dwt.jsx`.
 
 ### Edit the Component
 
-* Copy the following to the newly created `dwt.js`.
+* Copy the following to the newly created `dwt.jsx`.
 
 ``` typescript
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Dynamsoft from 'dwt';
 
-export default class DWT extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    DWTObject = null;
-    containerId = 'dwtcontrolContainer';
-    componentDidMount() {
+function DWT() {
+    const containerId = 'dwtcontrolContainer';
+    const dwtObject = useRef(null);
+
+    useEffect(() => {
         Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', () => {
-            this.Dynamsoft_OnReady()
+            dwtObject.current = Dynamsoft.DWT.GetWebTwain(containerId);
         });
+        
         Dynamsoft.DWT.ProductKey = 'YOUR-PRODUCT-KEY';
         Dynamsoft.DWT.ResourcesPath = "/dwt-resources";
         Dynamsoft.DWT.Containers = [{
             WebTwainId: 'dwtObject',
-            ContainerId: this.containerId,
+            ContainerId: containerId,
             Width: '300px',
             Height: '400px'
         }];
+        
         Dynamsoft.DWT.Load();
-    }
-    Dynamsoft_OnReady() {
-        this.DWTObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
-    }
-    acquireImage() {
-        if (this.DWTObject) {
-            this.DWTObject.SelectSourceAsync()
-            .then(() => {
-                return this.DWTObject.AcquireImageAsync({
-                    IfCloseSourceAfterAcquire: true,
-                });
-            })
-            .catch((exp) => {
-                console.error(exp.message);
+    }, []);
+
+    const acquireImage = () => {
+        if (dwtObject.current) {
+            dwtObject.current.SelectSourceAsync()
+            .then(() => dwtObject.current.AcquireImageAsync({
+                IfCloseSourceAfterAcquire: true,
+            }))
+            .catch((error) => {
+                console.error(error.message);
             });
         }
-    }
-    render() {
-        return (<>
-            <button onClick = {() => this.acquireImage()} > Scan </button> 
-            <div id = {this.containerId}> </div> 
-            </>
-        );
-    }
-}
+    };
+
+    return (
+        <>
+            <button onClick={acquireImage}>Scan</button>
+            <div id={containerId}></div>
+        </>
+    );
+};
+
+export default DWT;
 ```
 
 > Note:
@@ -119,7 +128,7 @@ export default class DWT extends React.Component {
 > * `ProductKey` must be set to a valid trial or full key.
 > * `ResourcesPath` points to the location of the static files mentioned in [Configure the project](#configure-the-project).
 
-### Add the Component to `App.js`
+### Add the Component to `App.jsx`
 
 ``` javascript
 import React from 'react';
@@ -127,16 +136,19 @@ import './App.css';
 import DWT from './dwt';
 
 function App() {
-    return ( < DWT /> );
+    return <DWT />;
 }
 
 export default App;
 ```
 
+### remove default styles
+Clear the contents of the src/App.css and src/index.css files.
+
 ### Run the Application
 
 ``` cmd
-yarn start
+npm run dev
 ```
 
 > Note: If you have installed `DWT` and have configured a valid `ProductKey`, you will have a working page to scan documents from your scanner now. Otherwise, you should see instructions on the page that guide you to install the library. [More info>>]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service)
