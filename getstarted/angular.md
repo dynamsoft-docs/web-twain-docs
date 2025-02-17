@@ -16,7 +16,7 @@ permalink: /indepth/development/angular.html
 
 ## Preparation
 
-Make sure you have [node](https://nodejs.org/) and [Angular CLI](https://cli.angular.io/) installed. `node 14.4.0` and `Angular CLI 9.1.12` are used in the example below.
+Make sure you have [node](https://nodejs.org/) and [Angular CLI](https://cli.angular.io/) installed. `node 22.14.0` and `Angular CLI 19.1.7` are used in the example below.
 
 ## Create the sample project
 
@@ -121,7 +121,7 @@ acquireImage() {
                 IfCloseSourceAfterAcquire: true,
             });
         })
-        .catch((exp) => {
+        .catch((exp:any) => {
             console.error(exp.message);
         });
     }
@@ -136,7 +136,104 @@ Edit the file `app.component.html` to contain nothing but the following
 <app-dwt></app-dwt>
 ```
 
-* Try running the project.
+* Add the component to `app.component.ts` .
+
+``` typescript
+import { DwtComponent } from "./dwt/dwt.component";
+```
+
+``` typescript
+imports: [RouterOutlet, DwtComponent],
+```
+
+### Review the Complete Code
+
+* `dwt.component.html`
+
+``` html
+<button (click)="acquireImage()">Acquire Images</button>
+<div id="dwtcontrolContainer"></div>
+```
+
+*  `dwt.component.ts`
+
+``` typescript
+import { Component } from '@angular/core';
+import Dynamsoft from 'dwt';
+import { WebTwain } from 'dwt/dist/types/WebTwain';
+
+@Component({
+  selector: 'app-dwt',
+  imports: [],
+  templateUrl: './dwt.component.html',
+  styleUrl: './dwt.component.css'
+})
+export class DwtComponent {
+  containerId = "dwtcontrolContainer";
+  ngOnInit(): void {
+    Dynamsoft.DWT.Containers = [{
+      WebTwainId: 'dwtObject',
+      ContainerId: this.containerId,
+      Width: '300px',
+      Height: '400px'
+    }];
+    Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', () => {
+      this.Dynamsoft_OnReady();
+    });
+    Dynamsoft.DWT.ProductKey = 'YOUR-PRODUCT-KEY';
+    Dynamsoft.DWT.ResourcesPath = 'assets/dwt-resources';
+    Dynamsoft.DWT.Load();
+  }
+
+  DWTObject: WebTwain | any = null;
+  Dynamsoft_OnReady() {
+    this.DWTObject = Dynamsoft.DWT.GetWebTwain(this.containerId);
+  }
+  acquireImage() {
+    if (this.DWTObject) {
+      this.DWTObject.SelectSourceAsync()
+        .then(() => {
+          return this.DWTObject.AcquireImageAsync({
+            IfCloseSourceAfterAcquire: true,
+          });
+        })
+        .catch((exp: any) => {
+          console.error(exp.message);
+        });
+    }
+  }
+}
+```
+> Note:
+> * `ProductKey` must be set to a valid trial or full key.
+
+*  `app.component.html` 
+
+``` html
+<style></style>
+<app-dwt></app-dwt>
+<router-outlet />
+```
+
+*  `app.component.ts` 
+
+``` typescript
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { DwtComponent } from "./dwt/dwt.component";
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, DwtComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'dwt-angular';
+}
+```
+
+## Try running the project.
 
 ``` cmd
 ng serve -o
