@@ -43,10 +43,10 @@ DWTObject.getCapabilities(
   function (result) {
     for (var i = 0; i < result.length; i++) {
       if (result[i].capability.value === Dynamsoft.DWT.EnumDWT_Cap.ICAP_XRESOLUTION) {
-        if (result[i].conType.label === 'TWON_ENUMERATION') { // If the capability's Vaule Type is Enumeration
+        if (result[i].conType.label === 'TWON_ENUMERATION') { // If the capability's Value Type is Enumeration
             dpi = result[i].values;
             console.log(dpi); // The list of supported resolution.
-        } else if (result[i].conType.label === 'TWON_RANGE') { // If the capability's Vaule Type is Range
+        } else if (result[i].conType.label === 'TWON_RANGE') { // If the capability's Value Type is Range
             max = result[i].maxValue;
             min = result[i].minValue;
             step = result[i].stepSize;

@@ -16,8 +16,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Methods**
 
-|                                                 |
-| :---------------------------------------------- | :-------------------------------------- | ----------------------------------------------- | --------------------------------------------------- |
+
 | [`Crop()`](#crop)                               | [`CropToClipboard()`](#croptoclipboard) | [`CutFrameToClipboard()`](#cutframetoclipboard) | [`CutToClipboard()`](#cuttoclipboard)               |
 | [`CopyToClipboard()`](#copytoclipboard)         | [`Erase()`](#erase)                     | [`Flip()`](#flip)                               | [`Mirror()`](#mirror)                               |
 | [`Rotate()`](#rotate)                           | [`RotateEx()`](#rotateex)               | [`RotateLeft()`](#rotateleft)                   | [`RotateRight()`](#rotateright)                     |
@@ -65,8 +64,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Properties**
 
-|                                               |
-| :-------------------------------------------- |
+
 | [`BackgroundFillColor`](#backgroundfillcolor) |
 
 ## ChangeBitDepth()

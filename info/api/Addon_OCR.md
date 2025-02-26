@@ -16,8 +16,7 @@ For Server Side OCR, check out [Server-Side OCR](#server-side).
 
 **Methods**
 
-|                                               |
-| :-------------------------------------------- | :-------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+
 | [`Download()`](#download)                     | [`DownloadLangData()`](#downloadlangdata)     | [`IsModuleInstalled()`](#ismoduleinstalled)                                     | [`SetLanguage()`](#setlanguage)                                                 |
 | [`SetOutputFormat()`](#setoutputformat)       | [`SetPageSetMode()`](#setpagesetmode)         | [`GetIfUseDetectedFont()`](#getifusedetectedfont)                               | [`SetIfUseDetectedFont()`](#setifusedetectedfont)                               |
 | [`GetUnicodeFontName()`](#getunicodefontname) | [`SetUnicodeFontName()`](#setunicodefontname) | [`GetMinFontSizeforMoreAccurateResult()`](#getminfontsizeformoreaccurateresult) | [`SetMinFontSizeforMoreAccurateResult()`](#setminfontsizeformoreaccurateresult) |

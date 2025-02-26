@@ -24,16 +24,14 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Input Methods**
 
-|                                                   |                                                         |                                                             |                                                 |
-| ------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------- |
+
 | [`LoadImage()`](#loadimage)                       | [`LoadImageEx()`](#loadimageex)                         | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary) |
 | [`LoadDibFromClipboard()`](#loaddibfromclipboard) | [`FTPDownload()`](#ftpdownload)                         | [`FTPDownloadEx()`](#ftpdownloadex)                         | [`HTTPDownload()`](#httpdownload)               |
 | [`HTTPDownloadEx()`](#httpdownloadex)             | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost) | [`loadFromLocalStorage()`](#loadfromlocalstorage)           |
 
 **Output Methods**
 
-|                                                                                         |                                                                           |                                                                                 |
-| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+
 | [`ConvertToBase64()`](#converttobase64)                                                 | [`ConvertToBlob()`](#converttoblob)                                       | [`FTPUpload()`](#ftpupload)                                                     |
 | [`FTPUploadEx()`](#ftpuploadex)                                                         | [`FTPUploadAllAsMultiPageTIFF()`](#ftpuploadallasmultipagetiff)           | [`FTPUploadAllAsPDF()`](#ftpuploadallaspdf)                                     |
 | [`FTPUploadAsMultiPagePDF()`](#ftpuploadasmultipagepdf)                                 | [`FTPUploadAsMultiPageTIFF()`](#ftpuploadasmultipagetiff)                 | [`HTTPUpload()`](#httpupload)                                                   |
@@ -49,16 +47,14 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Other Methods**
 
-|                                               |                                           |                                                     |                                           |
-| --------------------------------------------- | ----------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
+
 | [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield) |
 | [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) | [`ShowFileDialog()`](#showfiledialog)               | [`Print()`](#print)                       |
 | [`PrintEx()`](#printex)                       | [`createLocalStorage()`](#createlocalstorage) | [`localStorageExist()`](#localstorageexist)     | [`removeLocalStorage()`](#removelocalstorage) |
 
 **Properties**
 
-|                                                                 |                                                                               |                                             |                                                     |
-| --------------------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------- |
+
 | [`FTPPassword`](#ftppassword)                                   | [`FTPPort`](#ftpport)                                                         | [`FTPUserName`](#ftpusername)               | [`IfPASVMode`](#ifpasvmode)                         |
 | [`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)                                                       | [`IfSSL`](#ifssl)                           | [`HTTPPostResponseString`](#httppostresponsestring) |
 | [`IfShowFileDialog`](#ifshowfiledialog)                         | [`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       |
@@ -66,8 +62,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Events**
 
-|                                   |                             |                                                                 |
-| --------------------------------- | --------------------------- | --------------------------------------------------------------- |
+
 | [`OnGetFilePath`](#ongetfilepath) | [`OnPostLoad`](#onpostload) | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
 
 
@@ -81,15 +76,13 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Input Methods**
 
-|                                                   |                                                         |                                                             |                                                 |
-| ------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------- |
+
 | [`LoadImageEx()`](#loadimageex)                   | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary)         |[`LoadDibFromClipboard()`](#loaddibfromclipboard)|               
 | [`HTTPDownload()`](#httpdownload)                 |[`HTTPDownloadEx()`](#httpdownloadex)                    | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)     | [`loadFromLocalStorage()`](#loadfromlocalstorage)|      
 
 **Output Methods**
 
-|                                                              |                                                              |                                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+
 | [`ConvertToBase64()`](#converttobase64)                      | [`ConvertToBlob()`](#converttoblob)                          | [`HTTPUpload()`](#httpupload)                                |
 | [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)        | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)          | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)      |
 | [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf) | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
@@ -101,24 +94,21 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Other Methods**
 
-|                                               |                                           |                                                     |                                           |
-| --------------------------------------------- | ----------------------------------------- | --------------------------------------------------- | ----------------------------------------- |
+
 | [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield) |
 | [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) |  [`Print()`](#print)                       |[`PrintEx()`](#printex)                       |
 | [`createLocalStorage()`](#createlocalstorage) | [`localStorageExist()`](#localstorageexist)     | [`removeLocalStorage()`](#removelocalstorage) |
 
 **Properties**
 
-|                                                                 |
-| :-------------------------------------------------------------- | :---------------------------------------------------------------------------- | ------------------------------------------- | --------------------------------------------------- |
+
 | [`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)                                                       | [`IfSSL`](#ifssl)                           | [`HTTPPostResponseString`](#httppostresponsestring) |
 |[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       | [`IfTiffMultiPage`](#iftiffmultipage)                           |
 | [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) |                    
 
 **Events**
 
-|                                   |                             |                                                                 |
-| --------------------------------- | --------------------------- | --------------------------------------------------------------- |
+
 |  [`OnPostLoad`](#onpostload)      | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
 
 <div class="multi-panel-end"></div>

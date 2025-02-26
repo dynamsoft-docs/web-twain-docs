@@ -24,8 +24,7 @@ permalink: /info/api/WebTwain_Acquire.html
 
 **Methods**
 
-|                                                   |                                                 |                                                           |                                             |
-| ------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------- | ------------------------------------------- |
+
 | [`GetSourceNameItems()`](#getsourcenameitems)     | [`GetSourceNames()`](#getsourcenames)           | [`GetSourceNamesAsync()`](#getsourcenamesasync)           | [`SelectSource()`](#selectsource)           |
 | [`SelectSourceAsync()`](#selectsourceasync)       | [`SelectSourceByIndex()`](#selectsourcebyindex) | [`SelectSourceByIndexAsync()`](#selectsourcebyindexasync) | [`OpenSource()`](#opensource)               |
 | [`OpenSourceAsync()`](#opensourceasync)           | [`EnableSourceUI()`](#enablesourceui)           | [`EnableSource()`](#enablesource)                         | [`AcquireImage()`](#acquireimage)           |
@@ -35,15 +34,13 @@ permalink: /info/api/WebTwain_Acquire.html
 
 **Properties**
 
-|                                           |                                                              |                                       |                                       |
-| ----------------------------------------- | ------------------------------------------------------------ | ------------------------------------- | ------------------------------------- |
+
 | [`CurrentSourceName`](#currentsourcename) | [`IfDisableSourceAfterAcquire`](#ifdisablesourceafteracquire) | [`IfDuplexEnabled`](#ifduplexenabled) | [`IfFeederEnabled`](#iffeederenabled) |
 | [`PageSize`](#pagesize)                   | [`PixelType`](#pixeltype)                                    | [`Resolution`](#resolution)           | [`SourceCount`](#sourcecount)         |
 
 **Events**
 
-|                                             |                                     |                                               |                                           |
-| ------------------------------------------- | ----------------------------------- | --------------------------------------------- | ----------------------------------------- |
+
 | [`OnPostAllTransfers`](#onpostalltransfers) | [`OnPostTransfer`](#onposttransfer) | [`OnPostTransferAsync`](#onposttransferasync) | [`OnPreAllTransfers`](#onprealltransfers) |
 | [`OnPreTransfer`](#onpretransfer)           |                                     |                                               |                                           |
 
@@ -53,16 +50,14 @@ permalink: /info/api/WebTwain_Acquire.html
 
 **Methods**
 
-|                                         |                                         |
-| --------------------------------------- | --------------------------------------- |
+
 | [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
 
 **3. The following APIs are compatible with TWAIN (mostly Windows, but also possibly macOS)** 
 
 **Methods**
 
-|                                             |                                                       |                                                             |                                                         |
-| ------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------- |
+
 | [`OpenSourceManager()`](#opensourcemanager) | [`OpenSourceManagerAsync()`](#opensourcemanagerasync) | [`CloseSourceManager()`](#closesourcemanager)               | [`CloseSourceManagerAsync()`](#closesourcemanagerasync) |
 | [`GetCustomDSData()`](#getcustomdsdata)     | [`GetCustomDSDataEx()`](#getcustomdsdataex)           | [`CancelAllPendingTransfers()`](#cancelallpendingtransfers) | [`FeedPage()`](#feedpage)                               |
 | [`ResetImageLayout()`](#resetimagelayout)   | [`RewindPage()`](#rewindpage)                         | [`SetCustomDSData()`](#setcustomdsdata)                     | [`SetCustomDSDataEx()`](#setcustomdsdataex)             |
@@ -71,8 +66,7 @@ permalink: /info/api/WebTwain_Acquire.html
 
 **Properties**
 
-|                                                     |                                                             |                                                     |                                                           |
-| --------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------- |
+
 | [`BitDepth`](#bitdepth)                             | [`Brightness`](#brightness)                                 | [`Contrast`](#contrast)                             | [`DataSourceStatus`](#datasourcestatus)                   |
 | [`DefaultSourceName`](#defaultsourcename)           | [`Duplex`](#duplex)                                         | [`IfAutoBright`](#ifautobright)                     | [`IfAutoDiscardBlankpages`](#ifautodiscardblankpages)     |
 | [`IfAutoFeed`](#ifautofeed)                         | [`IfAutomaticBorderDetection`](#ifautomaticborderdetection) | [`IfAutomaticDeskew`](#ifautomaticdeskew)           | [`IfAutoScan`](#ifautoscan)                               |
@@ -85,8 +79,7 @@ permalink: /info/api/WebTwain_Acquire.html
 
 **Events**
 
-|                                       |
-| ------------------------------------- |
+
 | [`OnSourceUIClose`](#onsourceuiclose) |
 
 <div class="multi-panel-end">
@@ -97,16 +90,14 @@ permalink: /info/api/WebTwain_Acquire.html
 
 **Methods**
 
-|                                             |                                           |                                         |                                             |
-| ------------------------------------------- | ----------------------------------------- | --------------------------------------- | ------------------------------------------- |
+
 | [`SelectSourceAsync()`](#selectsourceasync) | [`CloseSourceAsync()`](#closesourceasync) | [`GetDevicesAsync()`](#getdevicesasync) | [`SelectDeviceAsync()`](#selectdeviceasync) |
 | [`AcquireImageAsync()`](#acquireimageasync) | [`getCapabilities()`](#getcapabilities)   | [`setCapabilities()`](#setcapabilities) |                                             |
 
 
 **Events**
 
-|                                       |
-| ------------------------------------- |
+
 | [`OnPostTransferAsync`](#onposttransferasync)  |
 
 <div class="multi-panel-end"></div>

@@ -16,8 +16,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Methods**
 
-|                                                 |                                                         |                                                                     |                                                     |
-| ----------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------- |
+
 | [`ClearImageTags()`](#clearimagetags)           | [`RenameTag()`](#renametag)                             | [`RemoveTag()`](#removetag)                                         | [`GetTagList()`](#gettaglist)                       |
 | [`FilterImagesByTag()`](#filterimagesbytag)     | [`ClearFilter()`](#clearfilter)                         | [`SetDefaultTag()`](#setdefaulttag)                                 | [`TagImages()`](#tagimages)                         |
 | [`GetImageBitDepth()`](#getimagebitdepth)       | [`GetImageSize()`](#getimagesize)                       | [`GetImageSizeWithSpecifiedType()`](#getimagesizewithspecifiedtype) | [`GetSelectedImagesSize()`](#getselectedimagessize) |
@@ -38,16 +37,14 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Properties**
 
-|                                                           |                                                   |                                               |                                                   |
-| --------------------------------------------------------- | ------------------------------------------------- | --------------------------------------------- | ------------------------------------------------- |
+
 | [`BlankImageCurrentStdDev`](#blankimagecurrentstddev)     | [`BlankImageMaxStdDev`](#blankimagemaxstddev)     | [`BlankImageThreshold`](#blankimagethreshold) | [`BufferMemoryLimit`](#buffermemorylimit)         |
 | [`CurrentImageIndexInBuffer`](#currentimageindexinbuffer) | [`HowManyImagesInBuffer`](#howmanyimagesinbuffer) | [`IfAllowLocalCache`](#ifallowlocalcache)     | [`SelectedImagesIndices`](#selectedimagesindices) |
 | [`MaxImagesInBuffer`](#maximagesinbuffer)                 |
 
 **Events**
 
-|                                       |                                       |                                                           |                                                             |
-| ------------------------------------- | ------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------- |
+
 | [`OnBufferChanged`](#onbufferchanged) | [`OnBitmapChanged`](#onbitmapchanged) | [`OnIndexChangeDragDropDone`](#onindexchangedragdropdone) | [`OnTopImageInTheViewChanged`](#ontopimageintheviewchanged) |
 | [`OnDiskExceedLimit`](#ondiskexceedlimit) |
 
