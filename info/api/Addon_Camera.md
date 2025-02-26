@@ -23,8 +23,7 @@ Check out [MediaDevices Cameras]({{site.indepth}}features/input.html#use-mediade
 
 **Methods**
 
-|                                     |
-| :---------------------------------- | :---------------------------------- | ------------------------------------------------- | --------------------------------- |
+
 | [`getSourceList()`](#getsourcelist) | [`selectSource()`](#selectsource)   | [`getCurrentSource()`](#getcurrentsource)         | [`closeSource()`](#closesource)   |
 | [`getResolution()`](#getresolution) | [`setResolution()`](#setresolution) | [`getCurrentResolution()`](#getcurrentresolution) | [`play()`](#play)                 |
 | [`pause()`](#pause)                 | [`resume()`](#resume)               | [`stop()`](#stop)                                 | [`getStatus()`](#getstatus)       |
@@ -33,8 +32,7 @@ Check out [MediaDevices Cameras]({{site.indepth}}features/input.html#use-mediade
 
 **Events**
 
-|                                   |
-| :-------------------------------- | :-------------------------- | 
+
 | [`video-closed`](#video-closed) | [`video-error`](#video-error) | 
 
 ---

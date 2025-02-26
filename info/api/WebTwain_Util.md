@@ -21,14 +21,12 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Methods**
 
-|                                       |
-| :------------------------------------ | :---------------------------------- | --------------------------------------- |
+
 | [`isUsingActiveX()`](#isusingactivex) | [`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent) | [`GenerateURLForUploadData()`](#generateurlforuploaddata) |
 
 **Properties**
 
-|                                       |
-| :------------------------------------ | :---------------------------- | ----------------------------- | ------------------------------- |
+
 | [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
 | [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
 
@@ -40,15 +38,13 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Methods**
 
-|                                                                        |
-| :--------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+
 | [`isUsingActiveX()`](#isusingactivex) |[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)|
 |[`GenerateURLForUploadData()`](#generateurlforuploaddata)|
 
 **Properties**
 
-|                                       |
-| :------------------------------------ | :---------------------------- | ----------------------------- | ------------------------------- |
+
 | [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
 | [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
 

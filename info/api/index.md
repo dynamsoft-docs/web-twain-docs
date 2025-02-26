@@ -37,8 +37,7 @@ permalink: /info/api/
 
 ### Methods
 
-|                                       |                                           |                                       |                                    |
-|---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
+
 | [`CreateDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject) | [`CreateDWTobjectEx()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex) | [`DeleteDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#deletedwtobject) | [`GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain)      |
 | [`Load()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)                       | [`RegisterEvent()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#registerevent)         | [`Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload)                   | |
 
@@ -47,8 +46,7 @@ permalink: /info/api/
 
 ### Properties
 
-|                                         |                                                     |                                                            |                                 |
-|-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
+
 | [`Autoload`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#autoload)   | [`Containers`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#containers)  | [`CustomizableDisplayInfo`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#customizabledisplayinfo)   | [`DeviceFriendlyName`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#devicefriendlyname)   |
 | [`Host`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#host)  | [`IfAddMD5InUploadHeader`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifuseactivexforie10plus)   |
 | [`JSVersion`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#jsversion)     | [`ProductKey`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#productkey)     | [`ResourcesPath`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath)      | [`ServiceInstallerLocation`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#serviceinstallerlocation) | 
@@ -57,8 +55,7 @@ permalink: /info/api/
 
 ### Events
 
-|                                       |                                       |                             |                            |
-|---------------------------------------|---------------------------------------|-----------------------------|----------------------------|
+
 | [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready) | [`OnWebTwainError`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) | [`OnWebTwainPostExecute`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainpostexecute) | [`OnWebTwainPreExecute`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainpreexecute) | 
 
 ## Buffer
@@ -68,8 +65,7 @@ permalink: /info/api/
 <!--* [`GetImageBitDepthAsync()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
 
 
-|                                         |                                                     |                                                            |                                 |
-|-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
+
 |[`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) | [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) |[`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag) |[`GetTagList()`]({{site.info}}api/WebTwain_Buffer.html#gettaglist) |
 |[`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag)|[`ClearFilter()`]({{site.info}}api/WebTwain_Buffer.html#clearfilter) | [`SetDefaultTag()`]({{site.info}}api/WebTwain_Buffer.html#setdefaulttag) | [`TagImages()`]({{site.info}}api/WebTwain_Buffer.html#tagimages)| 
 |[`GetImageBitDepth()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepth)| [`GetImageSize()`]({{site.info}}api/WebTwain_Buffer.html#getimagesize)| [`GetImageSizeWithSpecifiedType()`]({{site.info}}api/WebTwain_Buffer.html#getimagesizewithspecifiedtype)|[`GetSelectedImagesSize()`]({{site.info}}api/WebTwain_Buffer.html#getselectedimagessize) |
@@ -126,8 +122,7 @@ permalink: /info/api/
 
 ### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagecurrentstddev) |[`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) |[`BlankImageThreshold`]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold)| [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit)|
 |[`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer) |[`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)| [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) | [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)|
 |[`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer)|
@@ -146,8 +141,7 @@ permalink: /info/api/
 
 ### Events
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged) |[`OnBitmapChanged`]({{site.info}}api/WebTwain_Buffer.html#onbitmapchanged) | [`OnIndexChangeDragDropDone`]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone)| [`OnTopImageInTheViewChanged`]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged)|
 | [`OnDiskExceedLimit`]({{site.info}}api/WebTwain_Buffer.html#ondiskexceedlimit) |
 
@@ -155,8 +149,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`Crop()`]({{site.info}}api/WebTwain_Edit.html#crop)|[`CropToClipboard()`]({{site.info}}api/WebTwain_Edit.html#croptoclipboard)| [`CutFrameToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cutframetoclipboard) |[`CutToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cuttoclipboard)|
 |[`CopyToClipboard()`]({{site.info}}api/WebTwain_Edit.html#copytoclipboard) |[`Erase()`]({{site.info}}api/WebTwain_Edit.html#erase) |[`Flip()`]({{site.info}}api/WebTwain_Edit.html#flip)|[`Mirror()`]({{site.info}}api/WebTwain_Edit.html#mirror)|
 | [`Rotate()`]({{site.info}}api/WebTwain_Edit.html#rotate) |[`RotateEx()`]({{site.info}}api/WebTwain_Edit.html#rotateex)| [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft) | [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright)|
@@ -194,8 +187,7 @@ permalink: /info/api/
 
 ### Properties
 
-| |
-|:-|
+
 |[`BackgroundFillColor`]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor) |
 
 <!--
@@ -205,8 +197,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-| :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
+
 | [`GetSourceNameItems()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenameitems)     | [`GetSourceNames()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenames)       | [`GetSourceNamesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getsourcenamesasync) | [`SelectSource()`]({{site.info}}api/WebTwain_Acquire.html#selectsource)                 |
 | [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync) | [`SelectSourceByIndex()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindex) | [`SelectSourceByIndexAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourcebyindexasync) | [`SetOpenSourceTimeout()`]({{site.info}}api/WebTwain_Acquire.html#setopensourcetimeout) |
 | [`OpenSource()`]({{site.info}}api/WebTwain_Acquire.html#opensource)               | [`OpenSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourceasync)         | [`EnableSourceUI()`]({{site.info}}api/WebTwain_Acquire.html#enablesourceui)                     | [`EnableSource()`]({{site.info}}api/WebTwain_Acquire.html#enablesource)                 |
@@ -238,8 +229,7 @@ permalink: /info/api/
 
 ### Properties
 
-| | |
-|:-|:-|
+
 |[`CurrentSourceName`]({{site.info}}api/WebTwain_Acquire.html#currentsourcename) |[`IfDisableSourceAfterAcquire`]({{site.info}}api/WebTwain_Acquire.html#ifdisablesourceafteracquire) |[`IfDuplexEnabled`]({{site.info}}api/WebTwain_Acquire.html#ifduplexenabled) |[`IfFeederEnabled`]({{site.info}}api/WebTwain_Acquire.html#iffeederenabled)|
 | [`PageSize`]({{site.info}}api/WebTwain_Acquire.html#pagesize) |[`PixelType`]({{site.info}}api/WebTwain_Acquire.html#pixeltype) |[`Resolution`]({{site.info}}api/WebTwain_Acquire.html#resolution) |[`SourceCount`]({{site.info}}api/WebTwain_Acquire.html#sourcecount)|
 
@@ -256,8 +246,7 @@ permalink: /info/api/
 -->
 ### Events
 
-| | |
-|:-|:-|
+
 |[`OnPostAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onpostalltransfers) | [`OnPostTransfer`]({{site.info}}api/WebTwain_Acquire.html#onposttransfer)| [`OnPostTransferAsync`]({{site.info}}api/WebTwain_Acquire.html#onposttransferasync) | 
 |[`OnPreAllTransfers`]({{site.info}}api/WebTwain_Acquire.html#onprealltransfers)|[`OnPreTransfer`]({{site.info}}api/WebTwain_Acquire.html#onpretransfer)|
 
@@ -272,16 +261,14 @@ permalink: /info/api/
 
 ### Methods
 
-| | |
-|:-|:-|
+
 |[`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) | [`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#setcapabilities)|
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`OpenSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanager)| [`OpenSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#opensourcemanagerasync) | [`CloseSourceManager()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanager) | [`CloseSourceManagerAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourcemanagerasync)|
 | [`GetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdata)| [`GetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#getcustomdsdataex) | [`CancelAllPendingTransfers()`]({{site.info}}api/WebTwain_Acquire.html#cancelallpendingtransfers) | [`FeedPage()`]({{site.info}}api/WebTwain_Acquire.html#feedpage) |
 |[`ResetImageLayout()`]({{site.info}}api/WebTwain_Acquire.html#resetimagelayout) | [`RewindPage()`]({{site.info}}api/WebTwain_Acquire.html#rewindpage)| [`SetCustomDSData()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdata) | [`SetCustomDSDataEx()`]({{site.info}}api/WebTwain_Acquire.html#setcustomdsdataex)|
@@ -289,8 +276,7 @@ permalink: /info/api/
 
 ### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`BitDepth`]({{site.info}}api/WebTwain_Acquire.html#bitdepth) | [`Brightness`]({{site.info}}api/WebTwain_Acquire.html#brightness)|[`Contrast`]({{site.info}}api/WebTwain_Acquire.html#contrast) | [`DataSourceStatus`]({{site.info}}api/WebTwain_Acquire.html#datasourcestatus)| 
 |[`DefaultSourceName`]({{site.info}}api/WebTwain_Acquire.html#defaultsourcename) | [`Duplex`]({{site.info}}api/WebTwain_Acquire.html#duplex)| [`IfAutoBright`]({{site.info}}api/WebTwain_Acquire.html#ifautobright) | [`IfAutoDiscardBlankpages`]({{site.info}}api/WebTwain_Acquire.html#ifautodiscardblankpages)|
 |[`IfAutoFeed`]({{site.info}}api/WebTwain_Acquire.html#ifautofeed) | [`IfAutomaticBorderDetection`]({{site.info}}api/WebTwain_Acquire.html#ifautomaticborderdetection)|[`IfAutomaticDeskew`]({{site.info}}api/WebTwain_Acquire.html#ifautomaticdeskew) |[`IfAutoScan`]({{site.info}}api/WebTwain_Acquire.html#ifautoscan)|
@@ -339,8 +325,7 @@ permalink: /info/api/
 -->
 ### Events
 
-| |
-|:-|
+
 | [`OnSourceUIClose`]({{site.info}}api/WebTwain_Acquire.html#onsourceuiclose) |
 
 ## Input/Output
@@ -349,8 +334,7 @@ permalink: /info/api/
 
 #### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`LoadImage()`]({{site.info}}api/WebTwain_IO.html#loadimage)| [`LoadImageEx()`]({{site.info}}api/WebTwain_IO.html#loadimageex)|[`LoadImageFromBase64Binary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary)| [`LoadImageFromBinary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary)|
 |[`LoadDibFromClipboard()`]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboard)| [`FTPDownload()`]({{site.info}}api/WebTwain_IO.html#ftpdownload)| [`FTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#ftpdownloadex)| [`HTTPDownload()`]({{site.info}}api/WebTwain_IO.html#httpdownload)|
 | [`HTTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#httpdownloadex)|[`HTTPDownloadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost)|[`loadFromLocalStorage()`]({{site.info}}api/WebTwain_IO.html#loadfromlocalstorage) | 
@@ -373,8 +357,7 @@ permalink: /info/api/
 
 #### Methods
 
-| | | |
-|:-|:-|:-|
+
 | [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64)|[`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob)|[`FTPUpload()`]({{site.info}}api/WebTwain_IO.html#ftpupload)|
 |[`FTPUploadEx()`]({{site.info}}api/WebTwain_IO.html#ftpuploadex)|[`FTPUploadAllAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallasmultipagetiff)|[`FTPUploadAllAsPDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadallaspdf)|
 |[`FTPUploadAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagepdf)| [`FTPUploadAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#ftpuploadasmultipagetiff)|[`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload)| 
@@ -417,8 +400,7 @@ permalink: /info/api/
 
 #### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`ClearTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#cleartiffcustomtag) |[`SetTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#settiffcustomtag)|[`ClearAllHTTPFormField()`]({{site.info}}api/WebTwain_IO.html#clearallhttpformfield) |[`SetHTTPFormField()`]({{site.info}}api/WebTwain_IO.html#sethttpformfield)| 
 | [`SetHTTPHeader()`]({{site.info}}api/WebTwain_IO.html#sethttpheader)| [`SetUploadSegment()`]({{site.info}}api/WebTwain_IO.html#setuploadsegment)|[`ShowFileDialog()`]({{site.info}}api/WebTwain_IO.html#showfiledialog) | [`Print()`]({{site.info}}api/WebTwain_IO.html#print)|
 |[`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex)| [`createLocalStorage()`]({{site.info}}api/WebTwain_IO.html#createlocalstorage) | [`localStorageExist()`]({{site.info}}api/WebTwain_IO.html#localstorageexist) |[`removeLocalStorage()`]({{site.info}}api/WebTwain_IO.html#removelocalstorage) |
@@ -437,8 +419,7 @@ permalink: /info/api/
 
 #### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`FTPPassword`]({{site.info}}api/WebTwain_IO.html#ftppassword) |[`FTPPort`]({{site.info}}api/WebTwain_IO.html#ftpport)| [`FTPUserName`]({{site.info}}api/WebTwain_IO.html#ftpusername) |[`IfPASVMode`]({{site.info}}api/WebTwain_IO.html#ifpasvmode)|
 |[`HttpFieldNameOfUploadedImage`]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage) | [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport)|[`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl)  |[`HTTPPostResponseString`]({{site.info}}api/WebTwain_IO.html#httppostresponsestring)|
 |[`IfShowFileDialog`]({{site.info}}api/WebTwain_IO.html#ifshowfiledialog) |[`IfShowCancelDialogWhenImageTransfer`]({{site.info}}api/WebTwain_IO.html#ifshowcanceldialogwhenimagetransfer)| [`IfShowProgressBar`]({{site.info}}api/WebTwain_IO.html#ifshowprogressbar)  | [`JPEGQuality`]({{site.info}}api/WebTwain_IO.html#jpegquality)|
@@ -464,8 +445,7 @@ permalink: /info/api/
 
 #### Events
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`OnGetFilePath`]({{site.info}}api/WebTwain_IO.html#ongetfilepath)|[`OnPostLoad`]({{site.info}}api/WebTwain_IO.html#onpostload)| [`OnInternetTransferPercentage`]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage)|
 
 <!--
@@ -477,8 +457,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`isUsingActiveX()`]({{site.info}}api/WebTwain_Util.html#isusingactivex) |[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent) | [`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata) |
 
 <!--
@@ -490,8 +469,7 @@ permalink: /info/api/
 
 ### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode)| [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring) | [`LogLevel`]({{site.info}}api/WebTwain_Util.html#loglevel)| [`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer)|
 |[`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily)| [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname)| [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo)| |
 
@@ -511,8 +489,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)| [`clearSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#clearselectedareas)| [`createCustomElement()`]({{site.info}}api/WebTwain_Viewer.html#createcustomelement)| [`createImageEditor()`]({{site.info}}api/WebTwain_Viewer.html#createimageeditor)|
 | [`createThumbnailViewer()`]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer)| [`first()`]({{site.info}}api/WebTwain_Viewer.html#first)|[`fitWindow()`]({{site.info}}api/WebTwain_Viewer.html#fitwindow)|[`gotoPage()`]({{site.info}}api/WebTwain_Viewer.html#gotopage)|
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
@@ -545,8 +522,7 @@ permalink: /info/api/
 
 ### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)| [`allowSlide`]({{site.info}}api/WebTwain_Viewer.html#allowslide)| [`allowPageDragging`]({{site.info}}api/WebTwain_Viewer.html#allowpagedragging)|[`background`]({{site.info}}api/WebTwain_Viewer.html#background)|
 |[`border`]({{site.info}}api/WebTwain_Viewer.html#border) | [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cursor)| [`height`]({{site.info}}api/WebTwain_Viewer.html#height)|[`idPostfix`]({{site.info}}api/WebTwain_Viewer.html#idpostfix)|
 |[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|
@@ -579,8 +555,6 @@ permalink: /info/api/
 
 ### Events
 
-| | | | |
-|:-|:-|:-|:-|
 |[`click`]({{site.info}}api/WebTwain_Viewer.html#click)| [`contextmenu`]({{site.info}}api/WebTwain_Viewer.html#contextmenu)| [`dblclick`]({{site.info}}api/WebTwain_Viewer.html#dblclick)|[`mousemove`]({{site.info}}api/WebTwain_Viewer.html#mousemove)|
 | [`mousedown`]({{site.info}}api/WebTwain_Viewer.html#mousedown)| [`mouseup`]({{site.info}}api/WebTwain_Viewer.html#mouseup)| [`mouseout`]({{site.info}}api/WebTwain_Viewer.html#mouseout)|[`mouseover`]({{site.info}}api/WebTwain_Viewer.html#mouseover)|
 |[`keydown`]({{site.info}}api/WebTwain_Viewer.html#keydown)| [`keyup`]({{site.info}}api/WebTwain_Viewer.html#keyup)|[`pageAreaSelected`]({{site.info}}api/WebTwain_Viewer.html#pageareaselected)| [`pageAreaUnselected`]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected)|
@@ -611,8 +585,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`decode()`]({{site.info}}api/Addon_BarcodeReader.html#decode)| [`getRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#getruntimesettings)|[`updateRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#updateruntimesettings)|
 |[`resetRuntimeSettings()`]({{site.info}}api/Addon_BarcodeReader.html#resetruntimesettings)| [`initRuntimeSettingsWithString()`]({{site.info}}api/Addon_BarcodeReader.html#initruntimesettingswithstring)|
 
@@ -629,8 +602,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`GetConvertMode()`]({{site.info}}api/Addon_PDF.html#getconvertmode)| [`IsModuleInstalled()`]({{site.info}}api/Addon_PDF.html#ismoduleinstalled) | [`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)| [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)|
 |[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)| [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions)|
 | [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions)|
@@ -650,8 +622,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`CaptureImage()`]({{site.info}}api/Addon_Webcam.html#captureimage) | [`CloseSource()`]({{site.info}}api/Addon_Webcam.html#closesource)| [`GetCameraControlPropertySetting()`]({{site.info}}api/Addon_Webcam.html#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`]({{site.info}}api/Addon_Webcam.html#getcameracontrolpropertymoresetting)|
 |[`GetVideoPropertySetting()`]({{site.info}}api/Addon_Webcam.html#getvideopropertysetting)|[`GetVideoPropertyMoreSetting()`]({{site.info}}api/Addon_Webcam.html#getvideopropertymoresetting)| [`SetCameraControlPropertySetting()`]({{site.info}}api/Addon_Webcam.html#setcameracontrolpropertysetting)| [`SetVideoPropertySetting()`]({{site.info}}api/Addon_Webcam.html#setvideopropertysetting)|
 |[`GetFrameRate()`]({{site.info}}api/Addon_Webcam.html#getframerate) | [`SetFrameRate()`]({{site.info}}api/Addon_Webcam.html#setframerate)| [`GetMediaType()`]({{site.info}}api/Addon_Webcam.html#getmediatype) | [`SetMediaType()`]({{site.info}}api/Addon_Webcam.html#setmediatype)|
@@ -663,8 +634,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`Init()`]({{site.info}}api/Dynamsoft_FileUploader.html#init)|[`CreateJob()`]({{site.info}}api/Dynamsoft_FileUploader.html#createjob)|[`Run()`]({{site.info}}api/Dynamsoft_FileUploader.html#run) | [`Cancel()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancel)|
 |[`CancelAllUpload()`]({{site.info}}api/Dynamsoft_FileUploader.html#cancelallupload)|
 
@@ -692,8 +662,7 @@ permalink: /info/api/
 
 ### Methods
 
-|                                       |                                           |                                       |                                    |
-|---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
+
 | [`CreateDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobject) | [`CreateDWTobjectEx()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#createdwtobjectex) | [`DeleteDWTObject()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#deletedwtobject) | [`GetWebTwain()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#getwebtwain)      |
 | [`Load()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#load)                       | [`RegisterEvent()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#registerevent)         | [`Unload()`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#unload)                   |        |
 
@@ -702,8 +671,7 @@ permalink: /info/api/
 
 ### Properties
 
-|                                         |                                                     |                                                            |                                 |
-|-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
+
 | [`Autoload`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#autoload)   | [`Containers`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#containers)  | [`CustomizableDisplayInfo`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#customizabledisplayinfo)   | [`DeviceFriendlyName`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#devicefriendlyname)   |
 | [`Host`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#host)  | [`IfAddMD5InUploadHeader`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifuseactivexforie10plus)   |
 | [`JSVersion`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#jsversion)     | [`ProductKey`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#productkey)     | [`ResourcesPath`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath)      | [`ServiceInstallerLocation`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#serviceinstallerlocation) | 
@@ -712,8 +680,7 @@ permalink: /info/api/
 
 ### Events
 
-|                                       |                                       |                             |                            |
-|---------------------------------------|---------------------------------------|-----------------------------|----------------------------|
+
 | [`OnWebTwainReady`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainready) | [`OnWebTwainError`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainerror) | [`OnWebTwainPostExecute`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainpostexecute) | [`OnWebTwainPreExecute`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#onwebtwainpreexecute) | 
 
 ## Buffer
@@ -723,8 +690,7 @@ permalink: /info/api/
 <!--* [`GetImageBitDepthAsync()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepthasync)-->
 
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`ClearImageTags()`]({{site.info}}api/WebTwain_Buffer.html#clearimagetags) | [`RenameTag()`]({{site.info}}api/WebTwain_Buffer.html#renametag) |[`RemoveTag()`]({{site.info}}api/WebTwain_Buffer.html#removetag) |[`GetTagList()`]({{site.info}}api/WebTwain_Buffer.html#gettaglist) |
 |[`FilterImagesByTag()`]({{site.info}}api/WebTwain_Buffer.html#filterimagesbytag)|[`ClearFilter()`]({{site.info}}api/WebTwain_Buffer.html#clearfilter) | [`SetDefaultTag()`]({{site.info}}api/WebTwain_Buffer.html#setdefaulttag) | [`TagImages()`]({{site.info}}api/WebTwain_Buffer.html#tagimages)| 
 |[`GetImageBitDepth()`]({{site.info}}api/WebTwain_Buffer.html#getimagebitdepth)| [`GetImageSize()`]({{site.info}}api/WebTwain_Buffer.html#getimagesize)| [`GetImageSizeWithSpecifiedType()`]({{site.info}}api/WebTwain_Buffer.html#getimagesizewithspecifiedtype)|[`GetSelectedImagesSize()`]({{site.info}}api/WebTwain_Buffer.html#getselectedimagessize) |
@@ -781,8 +747,7 @@ permalink: /info/api/
 
 ### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`BlankImageCurrentStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagecurrentstddev) |[`BlankImageMaxStdDev`]({{site.info}}api/WebTwain_Buffer.html#blankimagemaxstddev) |[`BlankImageThreshold`]({{site.info}}api/WebTwain_Buffer.html#blankimagethreshold)| [`BufferMemoryLimit`]({{site.info}}api/WebTwain_Buffer.html#buffermemorylimit)|
 |[`CurrentImageIndexInBuffer`]({{site.info}}api/WebTwain_Buffer.html#currentimageindexinbuffer) |[`HowManyImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#howmanyimagesinbuffer)| [`IfAllowLocalCache`]({{site.info}}api/WebTwain_Buffer.html#ifallowlocalcache) | [`SelectedImagesIndices`]({{site.info}}api/WebTwain_Buffer.html#selectedimagesindices)|
 |[`MaxImagesInBuffer`]({{site.info}}api/WebTwain_Buffer.html#maximagesinbuffer)|
@@ -801,8 +766,7 @@ permalink: /info/api/
 
 ### Events
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`OnBufferChanged`]({{site.info}}api/WebTwain_Buffer.html#onbufferchanged) |[`OnBitmapChanged`]({{site.info}}api/WebTwain_Buffer.html#onbitmapchanged) | [`OnIndexChangeDragDropDone`]({{site.info}}api/WebTwain_Buffer.html#onindexchangedragdropdone)| [`OnTopImageInTheViewChanged`]({{site.info}}api/WebTwain_Buffer.html#ontopimageintheviewchanged)|
 | [`OnDiskExceedLimit`]({{site.info}}api/WebTwain_Buffer.html#ondiskexceedlimit) |
 
@@ -810,8 +774,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`Crop()`]({{site.info}}api/WebTwain_Edit.html#crop)|[`CropToClipboard()`]({{site.info}}api/WebTwain_Edit.html#croptoclipboard)| [`CutFrameToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cutframetoclipboard) |[`CutToClipboard()`]({{site.info}}api/WebTwain_Edit.html#cuttoclipboard)|
 |[`CopyToClipboard()`]({{site.info}}api/WebTwain_Edit.html#copytoclipboard) |[`Erase()`]({{site.info}}api/WebTwain_Edit.html#erase) |[`Flip()`]({{site.info}}api/WebTwain_Edit.html#flip)|[`Mirror()`]({{site.info}}api/WebTwain_Edit.html#mirror)|
 | [`Rotate()`]({{site.info}}api/WebTwain_Edit.html#rotate) |[`RotateEx()`]({{site.info}}api/WebTwain_Edit.html#rotateex)| [`RotateLeft()`]({{site.info}}api/WebTwain_Edit.html#rotateleft) | [`RotateRight()`]({{site.info}}api/WebTwain_Edit.html#rotateright)|
@@ -849,8 +812,7 @@ permalink: /info/api/
 
 ### Properties
 
-| |
-|:-|
+
 |[`BackgroundFillColor`]({{site.info}}api/WebTwain_Edit.html#backgroundfillcolor) |
 
 <!--
@@ -860,15 +822,14 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-| :------------------------------------------------ | :------------------------------------------ | ----------------------------------------------- | --------------------------------------------------------- |
+
+
 | [`SelectSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectsourceasync)  | [`CloseSourceAsync()`]({{site.info}}api/WebTwain_Acquire.html#closesourceasync)  | [`GetDevicesAsync()`]({{site.info}}api/WebTwain_Acquire.html#getdevicesasync)   | [`SelectDeviceAsync()`]({{site.info}}api/WebTwain_Acquire.html#selectdeviceasync)                   |
 | [`AcquireImageAsync()`]({{site.info}}api/WebTwain_Acquire.html#acquireimageasync)   |[`getCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#getcapabilities) | [`setCapabilities()`]({{site.info}}api/WebTwain_Acquire.html#setcapabilities) |
 
 ### Events
 
-| |
-|:-|
+
 | [`OnPostTransferAsync`]({{site.info}}api/WebTwain_Acquire.html#onposttransferasync) | 
 
 
@@ -878,8 +839,7 @@ permalink: /info/api/
 
 #### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`LoadImageEx()`]({{site.info}}api/WebTwain_IO.html#loadimageex)                         | [`LoadImageFromBase64Binary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombase64binary) | [`LoadImageFromBinary()`]({{site.info}}api/WebTwain_IO.html#loadimagefrombinary) |[`LoadDibFromClipboard()`]({{site.info}}api/WebTwain_IO.html#loaddibfromclipboard) |               
 | [`HTTPDownload()`]({{site.info}}api/WebTwain_IO.html#httpdownload)               |[`HTTPDownloadEx()`]({{site.info}}api/WebTwain_IO.html#httpdownloadex)             | [`HTTPDownloadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpdownloadthroughpost) | [`loadFromLocalStorage()`]({{site.info}}api/WebTwain_IO.html#loadfromlocalstorage) | 
 
@@ -901,8 +861,7 @@ permalink: /info/api/
 
 #### Methods
 
-| | | | 
-|:-|:-|:-|
+
 | [`ConvertToBase64()`]({{site.info}}api/WebTwain_IO.html#converttobase64) | [`ConvertToBlob()`]({{site.info}}api/WebTwain_IO.html#converttoblob) | [`HTTPUpload()`]({{site.info}}api/WebTwain_IO.html#httpupload) |
 | [`HTTPUploadThroughPutEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughputex)  | [`HTTPUploadThroughPost()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpost)  | [`HTTPUploadThroughPostEx()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostex)  |
 | [`HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadallthroughpostaspdf)       | [`HTTPUploadThroughPostAsMultiPagePDF()`]({{site.info}}api/WebTwain_IO.html#httpuploadthroughpostasmultipagepdf) |
@@ -943,8 +902,7 @@ permalink: /info/api/
 
 #### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`ClearTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#cleartiffcustomtag) | [`SetTiffCustomTag()`]({{site.info}}api/WebTwain_IO.html#settiffcustomtag) | [`ClearAllHTTPFormField()`]({{site.info}}api/WebTwain_IO.html#clearallhttpformfield) | [`SetHTTPFormField()`]({{site.info}}api/WebTwain_IO.html#sethttpformfield) |
 | [`SetHTTPHeader()`]({{site.info}}api/WebTwain_IO.html#sethttpheader)           | [`SetUploadSegment()`]({{site.info}}api/WebTwain_IO.html#setuploadsegment) |  [`Print()`]({{site.info}}api/WebTwain_IO.html#print)                       |[`PrintEx()`]({{site.info}}api/WebTwain_IO.html#printex)                       |
 |[`createLocalStorage()`]({{site.info}}api/WebTwain_IO.html#createlocalstorage) | [`localStorageExist()`]({{site.info}}api/WebTwain_IO.html#localstorageexist) |[`removeLocalStorage()`]({{site.info}}api/WebTwain_IO.html#removelocalstorage) |
@@ -963,8 +921,7 @@ permalink: /info/api/
 
 #### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`HttpFieldNameOfUploadedImage`]({{site.info}}api/WebTwain_IO.html#httpfieldnameofuploadedimage) | [`HTTPPort`]({{site.info}}api/WebTwain_IO.html#httpport)                                                       | [`IfSSL`]({{site.info}}api/WebTwain_IO.html#ifssl)                           | [`HTTPPostResponseString`]({{site.info}}api/WebTwain_IO.html#httppostresponsestring) |
 |[`IfShowCancelDialogWhenImageTransfer`]({{site.info}}api/WebTwain_IO.html#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`]({{site.info}}api/WebTwain_IO.html#ifshowprogressbar)   | [`JPEGQuality`]({{site.info}}api/WebTwain_IO.html#jpegquality)                       | [`IfTiffMultiPage`]({{site.info}}api/WebTwain_IO.html#iftiffmultipage)                           |
 | [`TIFFCompressionType`]({{site.info}}api/WebTwain_IO.html#tiffcompressiontype)                                 | [`MaxUploadImageSize`]({{site.info}}api/WebTwain_IO.html#maxuploadimagesize) |
@@ -989,8 +946,7 @@ permalink: /info/api/
 
 #### Events
 
-| | |
-|:-|:-|
+
 |[`OnPostLoad`]({{site.info}}api/WebTwain_IO.html#onpostload)| [`OnInternetTransferPercentage`]({{site.info}}api/WebTwain_IO.html#oninternettransferpercentage)|
 
 <!--
@@ -1002,8 +958,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 | [`isUsingActiveX()`]({{site.info}}api/WebTwain_Util.html#isusingactivex) |[`RegisterEvent()`]({{site.info}}api/WebTwain_Util.html#registerevent) | [`UnregisterEvent()`]({{site.info}}api/WebTwain_Util.html#unregisterevent) |[`GenerateURLForUploadData()`]({{site.info}}api/WebTwain_Util.html#generateurlforuploaddata)|
 
 <!--
@@ -1015,8 +970,7 @@ permalink: /info/api/
 
 ### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode)| [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring) | [`LogLevel`]({{site.info}}api/WebTwain_Util.html#loglevel)| [`Manufacturer`]({{site.info}}api/WebTwain_Util.html#manufacturer)|
 |[`ProductFamily`]({{site.info}}api/WebTwain_Util.html#productfamily)| [`ProductName`]({{site.info}}api/WebTwain_Util.html#productname)| [`VersionInfo`]({{site.info}}api/WebTwain_Util.html#versioninfo)| |
 
@@ -1036,8 +990,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`bind()`]({{site.info}}api/WebTwain_Viewer.html#bind)| [`clearSelectedAreas()`]({{site.info}}api/WebTwain_Viewer.html#clearselectedareas)| [`createCustomElement()`]({{site.info}}api/WebTwain_Viewer.html#createcustomelement)| [`createImageEditor()`]({{site.info}}api/WebTwain_Viewer.html#createimageeditor)|
 | [`createThumbnailViewer()`]({{site.info}}api/WebTwain_Viewer.html#createthumbnailviewer)| [`first()`]({{site.info}}api/WebTwain_Viewer.html#first)|[`fitWindow()`]({{site.info}}api/WebTwain_Viewer.html#fitwindow)|[`gotoPage()`]({{site.info}}api/WebTwain_Viewer.html#gotopage)|
 | [`hide()`]({{site.info}}api/WebTwain_Viewer.html#hide)| [`last()`]({{site.info}}api/WebTwain_Viewer.html#last)| [`next()`]({{site.info}}api/WebTwain_Viewer.html#next)|[`off()`]({{site.info}}api/WebTwain_Viewer.html#off)|
@@ -1070,8 +1023,7 @@ permalink: /info/api/
 
 ### Properties
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`acceptDrop`]({{site.info}}api/WebTwain_Viewer.html#acceptdrop)| [`allowSlide`]({{site.info}}api/WebTwain_Viewer.html#allowslide)| [`allowPageDragging`]({{site.info}}api/WebTwain_Viewer.html#allowpagedragging)|[`background`]({{site.info}}api/WebTwain_Viewer.html#background)|
 |[`border`]({{site.info}}api/WebTwain_Viewer.html#border) | [`cursor`]({{site.info}}api/WebTwain_Viewer.html#cursor)| [`height`]({{site.info}}api/WebTwain_Viewer.html#height)|[`idPostfix`]({{site.info}}api/WebTwain_Viewer.html#idpostfix)|
 |[`ifAutoScroll`]({{site.info}}api/WebTwain_Viewer.html#ifautoscroll)|[`innerBorder`]({{site.info}}api/WebTwain_Viewer.html#innerBorder)| [`pageMargin`]({{site.info}}api/WebTwain_Viewer.html#pagemargin)|[`selectedAreaBorderColor`]({{site.info}}api/WebTwain_Viewer.html#selectedareabordercolor)|
@@ -1104,8 +1056,7 @@ permalink: /info/api/
 
 ### Events
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`click`]({{site.info}}api/WebTwain_Viewer.html#click)| [`contextmenu`]({{site.info}}api/WebTwain_Viewer.html#contextmenu)| [`dblclick`]({{site.info}}api/WebTwain_Viewer.html#dblclick)|[`mousemove`]({{site.info}}api/WebTwain_Viewer.html#mousemove)|
 | [`mousedown`]({{site.info}}api/WebTwain_Viewer.html#mousedown)| [`mouseup`]({{site.info}}api/WebTwain_Viewer.html#mouseup)| [`mouseout`]({{site.info}}api/WebTwain_Viewer.html#mouseout)|[`mouseover`]({{site.info}}api/WebTwain_Viewer.html#mouseover)|
 |[`keydown`]({{site.info}}api/WebTwain_Viewer.html#keydown)| [`keyup`]({{site.info}}api/WebTwain_Viewer.html#keyup)|[`pageAreaSelected`]({{site.info}}api/WebTwain_Viewer.html#pageareaselected)| [`pageAreaUnselected`]({{site.info}}api/WebTwain_Viewer.html#pageareaunselected)|
@@ -1136,8 +1087,7 @@ permalink: /info/api/
 
 ### Methods
 
-| | | | |
-|:-|:-|:-|:-|
+
 |[`GetConvertMode()`]({{site.info}}api/Addon_PDF.html#getconvertmode)| [`IsModuleInstalled()`]({{site.info}}api/Addon_PDF.html#ismoduleinstalled) | [`IsTextBasedPDF()`]({{site.info}}api/Addon_PDF.html#istextbasedpdf)| [`SetConvertMode()`]({{site.info}}api/Addon_PDF.html#setconvertmode)|
 |[`SetPassword()`]({{site.info}}api/Addon_PDF.html#setpassword)|[`SetResolution()`]({{site.info}}api/Addon_PDF.html#setresolution)|[`Write.Setup()`]({{site.info}}api/Addon_PDF.html#writesetup)| [`GetReaderOptions()`]({{site.info}}api/Addon_PDF.html#getreaderoptions) |
 | [`SetReaderOptions()`]({{site.info}}api/Addon_PDF.html#setreaderoptions) |

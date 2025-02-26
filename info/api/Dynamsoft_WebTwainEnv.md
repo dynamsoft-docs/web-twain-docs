@@ -13,8 +13,7 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 **Methods**
 
-|                                       |                                           |                                       |                                    |
-|---------------------------------------|-------------------------------------------|---------------------------------------|------------------------------------|
+
 | [`CreateDWTObject()`](#createdwtobject) | [`CreateDWTobjectEx()`](#createdwtobjectex) | [`DeleteDWTObject()`](#deletedwtobject) | [`GetWebTwain()`](#getwebtwain)      |
 | [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   |        |
 
@@ -22,8 +21,7 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 **Properties**
 
-|                                         |                                                     |                                                            |                                 |
-|-----------------------------------------|-----------------------------------------------------|------------------------------------------------------------|---------------------------------|
+
 | [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
 | [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
 | [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |
@@ -32,8 +30,7 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 **Events**
 
-|                                       |                                       |                             |                            |
-|---------------------------------------|---------------------------------------|-----------------------------|----------------------------|
+
 | [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`](#onwebtwainpostexecute) | [`OnWebTwainPreExecute`](#onwebtwainpreexecute) | 
 
 

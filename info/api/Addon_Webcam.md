@@ -14,8 +14,7 @@ permalink: /info/api/Addon_Webcam.html
 
 **Methods**
 
-|                                                         |
-| :------------------------------------------------------ | :-------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+
 | [`CaptureImage()`](#captureimage)                       | [`OpenSource()`](#opensource)                                 | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) |
 | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) | [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) |
 | [`SetVideoPropertySetting()`](#setvideopropertysetting)                         | [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       |

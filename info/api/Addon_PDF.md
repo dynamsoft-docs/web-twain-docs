@@ -14,8 +14,7 @@ permalink: /info/api/Addon_PDF.html
 
 **Methods**
 
-|                                       |
-| :------------------------------------ | :------------------------------------------ | ------------------------------------- | ------------------------------------- |
+
 | [`GetConvertMode()`](#getconvertmode) | [`GetReaderOptions()`](#getreaderoptions) | [`IsModuleInstalled()`](#ismoduleinstalled) | [`IsTextBasedPDF()`](#istextbasedpdf) |
 | [`SetConvertMode()`](#setconvertmode) | [`SetPassword()`](#setpassword)       | [`SetResolution()`](#setresolution)         | [`Write.Setup()`](#writesetup)        |
 | [`SetReaderOptions()`](#setreaderoptions) |

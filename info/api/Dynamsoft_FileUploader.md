@@ -85,8 +85,7 @@ The FileUploader library is installed with Dynamsoft Service by default, therefo
 
 **Methods**
 
-|                       |
-| :-------------------- | :-------------------------------------- | --------------------------------------------------------- |
+
 |  [`CreateJob()`](#createjob)  |  [`Run()`](#run)  |   [`Cancel()`](#cancel) |
 | [`CancelAllUpload()`](#cancelallupload) | | |
 

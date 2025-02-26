@@ -17,8 +17,7 @@ needGenerateH3Content: true
 
 **Methods**
 
-| |
-| :-------------------------------------------------- | :-------------------------------------------- | ----------------------------------------------- | ------------------------------------------- |
+
 | [`bind()`](#bind) | [`clearSelectedAreas()`](#clearselectedareas) | [`createCustomElement()`](#createcustomelement) | [`createImageEditor()`](#createimageeditor) |
 | [`createThumbnailViewer()`](#createthumbnailviewer) | [`first()`](#first) | [`fitWindow()`](#fitwindow) | [`gotoPage()`](#gotopage) |
 | [`hide()`](#hide) | [`last()`](#last) | [`next()`](#next) | [`off()`](#off) |
@@ -28,8 +27,7 @@ needGenerateH3Content: true
 
 **Properties**
 
-| |
-| :------------------------------------------ | :------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------- |
+
 | [`acceptDrop`](#acceptdrop) | [`allowSlide`](#allowslide) | [`allowPageDragging`](#allowpagedragging) | [`autoChangeIndex`](#autochangeindex)|
 | [`background`](#background)| [`border`](#border) | [`cursor`](#cursor) | [`height`](#height) |
 | [`idPostfix`](#idpostfix) | [`ifAutoScroll`](#ifautoscroll) | [`innerBorder`](#innerborder) | [`pageMargin`](#pagemargin) |
@@ -41,12 +39,10 @@ needGenerateH3Content: true
 
 **Events**
 
-| |
-| :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
+
 | [`on()`](#on) | [`off()`](#off) |
 
-| |
-| :------------------------------ | :---------------------------- | --------------------------------------- | ------------------------------------------- |
+
 | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected)| [`pageRendered`](#pagerendered) | [`resize`](#resize) |
 
 ---
