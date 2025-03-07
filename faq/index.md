@@ -387,8 +387,6 @@ permalink: /faq/
 ## Licensing and Purchase
 
 <ol>
-<li><a href="{{site.faq}}difference-in-service-and-webassembly-editions.html">What's the difference between the Desktop Service Edition and WebAssembly Edition?</a></li>
-
 <li><a href="{{site.faq}}is-internet-connectivity-required.html">Is internet connectivity required to use all licenses?</a></li>
 
 <li><a href="{{site.faq}}does-per-server-allow-unlimited.html">Does the per-server license allow unlimited number of client devices and end users?</a></li>

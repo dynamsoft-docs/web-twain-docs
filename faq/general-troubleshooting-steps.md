@@ -42,4 +42,4 @@ permalink: /faq/general-troubleshooting-steps.html
   - On macOS, the log files are in `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`
   - On Linux, the log files are in `/opt/dynamsoft/DynamsoftServicex64_{versionnumber}/log`
 
-5. Set log level back to the default value (0) to disable the debugger mode, otherwise the operation speed will be affected.
+5. **Please remember to either remove the "LogLevel" entry from the "DSConfiguration.ini" file or set `DWTObject.LogLevel` back to its default value (0) to disable the debugger mode**. Otherwise the operation speed will be affected.
