@@ -1100,7 +1100,7 @@ interface ThumbnailViewer {
      * Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      * number in pixels, string in percentage
      */
-    margin: number | string;
+    pageMargin: number | string;
     /**
      * Set the background of the entire thumbnail viewer. The default value is white.
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
