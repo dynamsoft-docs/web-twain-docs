@@ -1,43 +1,43 @@
 repositoryUrl: https://github.com/dynamsoft-docs/web-twain-docs/blob/master
-firstLevelUrl: /web-twain/docs
+firstLevelUrl: /web-twain/docs-archive/v18.5.1
 repository: dynamsoft-docs/web-twain-docs
-docFullPath: https://www.dynamsoft.com/web-twain/docs
-#docFullPath: https://demo3.dynamsoft.com:808/dwt-harry/web-twain/docs # Preview URL
+docFullPath: https://www.dynamsoft.com/web-twain/docs-archive/v18.5.1
+#docFullPath: https://demo3.dynamsoft.com:808/dwt-harry/web-twain/docs-archive/v18.5.1 # Preview URL
 productUrl: https://www.dynamsoft.com/web-twain/overview/
 #productUrl: https://demo3.dynamsoft.com:808/dwt-harry/web-twain/overview/ # Preview URL
 productName: Dynamic Web TWAIN
-docHomePage: /web-twain/docs/
+docHomePage: /web-twain/docs-archive/v18.5.1/
 searchIndexName: Crawler-DWT-Docs-New
 
-dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
-dwt_logo: /web-twain/docs/assets/img-icon/dwt-logo.png
-edit_icon: /web-twain/docs/assets/img-icon/edit-icon.png
+dynamsoft_logo: /web-twain/docs-archive/v18.5.1/assets/img-icon/dynamsoft-logo.png
+dwt_logo: /web-twain/docs-archive/v18.5.1/assets/img-icon/dwt-logo.png
+edit_icon: /web-twain/docs-archive/v18.5.1/assets/img-icon/edit-icon.png
 
-assets: /web-twain/docs/assets/
-_includes: /web-twain/docs/_includes/
-_layouts: /web-twain/docs/_layouts/
-about: /web-twain/docs/about/
-getstarted: /web-twain/docs/getstarted/
-indepth: /web-twain/docs/indepth/
-info: /web-twain/docs/info/
-faq: /web-twain/docs/faq/
+assets: /web-twain/docs-archive/v18.5.1/assets/
+_includes: /web-twain/docs-archive/v18.5.1/_includes/
+_layouts: /web-twain/docs-archive/v18.5.1/_layouts/
+about: /web-twain/docs-archive/v18.5.1/about/
+getstarted: /web-twain/docs-archive/v18.5.1/getstarted/
+indepth: /web-twain/docs-archive/v18.5.1/indepth/
+info: /web-twain/docs-archive/v18.5.1/info/
+faq: /web-twain/docs-archive/v18.5.1/faq/
 
-introduction: /web-twain/docs/introduction/
-hello-world: /web-twain/docs/hello-world/
-general-usage: /web-twain/docs/general-usage/
-extended-usage: /web-twain/docs/extended-usage/
-api: /web-twain/docs/info/api/
+introduction: /web-twain/docs-archive/v18.5.1/introduction/
+hello-world: /web-twain/docs-archive/v18.5.1/hello-world/
+general-usage: /web-twain/docs-archive/v18.5.1/general-usage/
+extended-usage: /web-twain/docs-archive/v18.5.1/extended-usage/
+api: /web-twain/docs-archive/v18.5.1/info/api/
 
-dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
-dbr_logo: /web-twain/docs/assets/img-icon/dbr-logo.png
-edit_icon: /web-twain/docs/assets/img-icon/edit-icon.png
-smile_icon: /web-twain/docs/assets/img-icon/icon-smile.png
-sad_icon: /web-twain/docs/assets/img-icon/icon-sad.png
-dbr_icon: /web-twain/docs/assets/img-icon/icon-dbr.svg
-dwt_icon: /web-twain/docs/assets/img-icon/icon-dwt.svg
-dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
+dynamsoft_logo: /web-twain/docs-archive/v18.5.1/assets/img-icon/dynamsoft-logo.png
+dbr_logo: /web-twain/docs-archive/v18.5.1/assets/img-icon/dbr-logo.png
+edit_icon: /web-twain/docs-archive/v18.5.1/assets/img-icon/edit-icon.png
+smile_icon: /web-twain/docs-archive/v18.5.1/assets/img-icon/icon-smile.png
+sad_icon: /web-twain/docs-archive/v18.5.1/assets/img-icon/icon-sad.png
+dbr_icon: /web-twain/docs-archive/v18.5.1/assets/img-icon/icon-dbr.svg
+dwt_icon: /web-twain/docs-archive/v18.5.1/assets/img-icon/icon-dwt.svg
+dnt_icon: /web-twain/docs-archive/v18.5.1/assets/img-icon/icon-dnt.svg
 
-baseurl: /web-twain/docs/
+baseurl: /web-twain/docs-archive/v18.5.1/
 
 useVersionTreeV2: true
 
