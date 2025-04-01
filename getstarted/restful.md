@@ -11,7 +11,7 @@ permalink: /indepth/development/restful.html
 # Dynamic Web TWAIN's RESTful API
 
 ## Overview
-Dynamic Web TWAIN (DWT) 18.4 brings forward a new RESTful API allowing developers a new avenue to access scanners across platforms and languages. This allows the Dynamsoft Service installed on the scanner host (local or server), to be accessed by desktop, mobile, and server-side applications.
+Dynamic Web TWAIN (DWT) 18.4 brings forward a new RESTful API allowing developers a new avenue to access scanners across platforms and languages. This allows the Dynamic Web TWAIN Service installed on the scanner host (local or server), to be accessed by desktop, mobile, and server-side applications.
 
 ## Sample Implementations
 - [Node.js](https://github.com/yushulx/dynamsoft-service-REST-API)
@@ -21,13 +21,13 @@ Dynamic Web TWAIN (DWT) 18.4 brings forward a new RESTful API allowing developer
 - [.NET](https://github.com/yushulx/dotnet-twain-wia-sane-scanner)
 
 ## Prerequisites
-- The Dynamsoft Service must be installed on the scanner host machine, whether it be a remote PC, server, or local workstation.
+- The Dynamic Web TWAIN Service must be installed on the scanner host machine, whether it be a remote PC, server, or local workstation.
 
 ## Points to consider
 - Using the RESTful API will return pure images as a stream and will not make use of the Dynamic Web TWAIN Viewer. You may instantiate a Viewer in your web application and load the images into the Viewer if you wish.
 
 ## REST API Structure
-By default, the REST API's host address is set to http://127.0.0.1:18622. This refers back to the local machine. To allow the host machine's scanner to be accesed over the network, the Dynamsoft Service on the host machine will need to be configured to allow incoming connections.
+By default, the REST API's host address is set to http://127.0.0.1:18622. This refers back to the local machine. To allow the host machine's scanner to be accesed over the network, the Dynamic Web TWAIN Service on the host machine will need to be configured to allow incoming connections.
 
 | Method | Endpoint	| Description | Parameters | Response |
 |:-|:-|:-|:-|:-|

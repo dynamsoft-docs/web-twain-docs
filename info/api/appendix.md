@@ -55,12 +55,12 @@ permalink: /info/api/appendix.html
 |-2000 | Can not initiate the internet session |
 |-2001 | HTTP request error |
 |-2002 | HTTP server error |
-|-2003 | HTTP process error |
+|-2003 | HTTP process: Description (Status Code) |
 |-2004 | FTP download file is too large |
 |-2007 | The system is busy, some operations are not completed. Please try later |
 |-2137 | Cross-Origin Resource Sharing (CORS) policy is blocking the access. Please contact the Administrator to configure 'Access-Control-Allow-Origin'.|
-|-2207 | The dynamsoft service installed on your computer is outdated and no longer works with the JavaScript code on the website |
-|-2208 | The connection with the local dynamsoft service encountered a problem and has been reset |
+|-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website |
+|-2208 | The connection with the local Dynamic Web TWAIN Service encountered a problem and has been reset |
 |-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
 |-2300 | Http upload error: the HTTP Server cannot empty |
 |-2301 | Network error |
@@ -70,7 +70,7 @@ permalink: /info/api/appendix.html
 |-2305 | User cancelled the operation |
 |-2306 | Upload Error: the upload file cannot be empty |
 |-2307 | The width or height you entered is invalid |
-|-2308 | The Dynamsoft Service has been stopped |
+|-2308 | The Dynamic Web TWAIN Service has been stopped |
 |-2309 | The LocalFile is emtpy in the Function |
 |-2310 | The Enumerations is out of range |
 |-2311 | The RemoteFile is emtpy in Barcode Download Function |
@@ -91,8 +91,8 @@ permalink: /info/api/appendix.html
 |-2328 | The current product key does not support Firefox, please contact the site administrator |
 |-2329 | The current product key does not support IE, please contact the site administrator |
 |-2330 | The current product key does not support Edge, please contact the site administrator |
-|-2331 | The current product key is a trial version key but your local dynamsoft service is in full version, please uninstall your local version first and access this page again to install the correct version. If the issue persists, please contact the site administrator |
-|-2332 | The current product key is a full version key but your local dynamsoft service is in trial version, please uninstall your local version first and access this page again to install the correct version. If the issue persists, please contact the site administrator |
+|-2331 | The current product key is a trial version key but your local Dynamic Web TWAIN Service is in full version, please uninstall your local version first and access this page again to install the correct version. If the issue persists, please contact the site administrator |
+|-2332 | The current product key is a full version key but your local Dynamic Web TWAIN Service is in trial version, please uninstall your local version first and access this page again to install the correct version. If the issue persists, please contact the site administrator |
 |-2333 | The current product key is missing the core license, please contact the site administrator |
 |-2334 | The current product key does not include a license for reading 1D barcode, please contact the site administrator |
 |-2335 | The current product key does not include a license for reading QRcode barcode, please contact the site administrator |
@@ -129,16 +129,15 @@ permalink: /info/api/appendix.html
 |-2395 | The module for Dynamic Web TWAIN failed to download.|
 |-2399 | Invalid imageId.|
 |-2612 | The devices must be an Array. |
-|-2614 | The Dynamsoft Service has been restarted. |
+|-2614 | The Dynamic Web TWAIN Service has been restarted. |
 |-2615 | User cancelled the operation. |
 |-2616 | Invalid image format type. |
-|-2617 | ShareImages is only supported on Android devices. |
 |-2618 | Only single index selection is allowed when enumImageType is set to BMP, JPG or PNG. |
 |-2619 | Only single index selection is allowed when enumImageFormatType is set to url. |
 |-2621 | Dynamsoft.DWT.Containers was not set. |
 |-2622 | Please do not set enumImageType to "IT_MULTIPAGE_PDF", "IT_MULTIPAGE_TIF" or "IT_ALL". |
-|-2800 | Please make sure the Dynamsoft Service has been installed. |
-|-2801 | Invalid response data was returned from the Dynamsoft Service. |
+|-2800 | Please make sure the Dynamic Web TWAIN Service has been installed. |
+|-2801 | Invalid response data was returned from the Dynamic Web TWAIN Service. |
 |-2802 | The file dynamsoft.webtwain.config.js timed out while loading. |
 |-2803 | Loading the WebTwain JavaScript source files has failed. |
 |-2804 | Loading the WebTwain css files has failed. |
@@ -150,14 +149,14 @@ permalink: /info/api/appendix.html
 |-2814 | Error: The Dynamic Web TWAIN module is not installed. |
 |-2815 | Error: Duplicate ContainerId detected while creating a Dynamic Web TWAIN object. |
 |-2817 | The Connection from the insecure (HTTP) web page failed for HTST. |
-|-2818 | The Dynamsoft Service SSL certificate has expired. |
-|-2819 | The Dynamsoft Service SSL certificate is invalid. |
-|-2820 | The Connection from the insecure (HTTP) web page to the local "Dynamsoft Service" failed! |
+|-2818 | The Dynamic Web TWAIN Service SSL certificate has expired. |
+|-2819 | The Dynamic Web TWAIN Service SSL certificate is invalid. |
+|-2820 | The Connection from the insecure (HTTP) web page to the local "Dynamic Web TWAIN Service" failed! |
 |-2821 | The Dynamsoft Servie is not ready, please try again later. |
 |-2822 | The WebTwain JavaScript lts.js load failed. |
 |-2823 | The http url redirected. |
-|-2824 | The Connection from the web page failed. Please make sure the Dynamsoft Service is running. |
-|-2825 | Failed to setup the Default Dynamsoft Service. |
+|-2824 | The Connection from the web page failed. Please make sure the Dynamic Web TWAIN Service is running. |
+|-2825 | Failed to setup the Default Dynamic Web TWAIN Service. |
 |-2827 | Failed to get Machine ID. |
 |-2828 | Invalid PDF Convert Mode Value. |
 |-2829 | The type of the PDF password must be a string. |
@@ -189,7 +188,7 @@ permalink: /info/api/appendix.html
 |-2905 | This API is not supported on the current operating system. Please contact your system administrator. |
 |<= -3000 | See ErrorString property for details |
 
-<!-- |-2826 | Failed to connect the Dynamsoft Service on [' + name + ']. | -->
+<!-- |-2826 | Failed to connect the Dynamic Web TWAIN Service on [' + name + ']. | -->
 
 
 ## Dynamsoft License Server Error List 

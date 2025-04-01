@@ -1330,15 +1330,37 @@ interface ThumbnailViewerSettings {
 
 ```typescript
 interface ThumbnailViewerEvent {
-    // The index of the current page.
+    // The index of the current document page.
     index: number;
-    // The x-coordinate of the browser page.
+    // The mouse's x coordinate in the thumbnail image container relative to the top-left of the web page.
     pageX: number;
-    // The y-coordinate of the browser page.
+    // The  mouse's y coordinate in the thumbnail image container relative to the top-left of the web page.
     pageY: number;
+    // The width of the thumbnail image container.
+    pageWidth: number;
+    // The height of the thumbnail image container.
+    pageHeight: number;
+    // The corresponding x coordinate in the original image.
+    imageX: number;
+    // The corresponding y coordinate in the original image.
+    imageY: number;
+    // The thumbnail image container's relative position.
+    position: {
+        // The x coordinate relative to the container of the viewer.
+        containerOffsetX: number;
+        // The y coordinate relative to the container of the viewer.
+        containerOffsetY: number;
+        // The x coordinate relative to the canvas.
+        canvasOffsetX: number;
+        // The y coordinate relative to the canvas.
+        canvasOffsetY: number;
+    }
 };
 ```
 
+You can check out the following image for better understanding.
+
+![thumbnail viewer event](/assets/imgs/thumbnail-viewer-event.jpg)
 
 
 ### ViewMode
@@ -1645,7 +1667,10 @@ interface ReaderOptions {
          */
         renderGrayscale?: boolean;
     }
-
+    /**
+     * Set whether to preserve original file size when saving an unedited PDF. Default value: false.
+     */
+    preserveUnmodifiedOnSave?: boolean;  
 }
 
 ```

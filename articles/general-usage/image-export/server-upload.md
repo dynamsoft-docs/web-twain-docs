@@ -208,7 +208,7 @@ DWT provides other HTTP upload APIs, for example, to better handle multi-page fi
 
 ## `FileUploader`
 
-The `FileUploader` is a special feature that uploads files using the Dynamsoft Service, rather than directly from the web application. This is useful for uploading large amounts of data which may otherwise degrade browser performance. Here is a quick run-down of its operation:
+The `FileUploader` is a special feature that uploads files using the Dynamic Web TWAIN Service, rather than directly from the web application. This is useful for uploading large amounts of data which may otherwise degrade browser performance. Here is a quick run-down of its operation:
 
 1. `Dynamic Web TWAIN` will prepare the file to upload with the method [ `GenerateURLForUploadData()` ]({{site.api}}WebTwain_Util.html#generateurlforuploaddata)
 2. Create a File Uploader instance with the method [ `Init()` ]({{site.api}}Dynamsoft_FileUploader.html#init)

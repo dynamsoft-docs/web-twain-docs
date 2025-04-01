@@ -194,9 +194,6 @@ npm run dev
 
 If you have installed `DWT` and have configured a valid `ProductKey`, you should now have a working page to scan documents from your scanner. If not, please refer to [this page]({{site.indepth}}features/initialize.html#installation-of-the-dynamsoft-service) which explains how the library is initialized or contact us for further assistance.
 
-#### On mobile
-
-For Android, the scanners that support eSCL can be used.
 
 ## Official Samples
 

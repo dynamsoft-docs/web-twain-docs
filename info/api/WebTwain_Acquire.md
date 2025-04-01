@@ -13,13 +13,6 @@ permalink: /info/api/WebTwain_Acquire.html
 
 > The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn more about creating `WebTwain` instances [here]({{site.general-usage}}initialization.html).
 
-<div class="multi-panel-switching-prefix"></div>
-
-- [Desktop Service](#desktop) 
-- [Android Service](#android) 
-
-<div class="multi-panel-start"></div>
-
 **1. The following APIs are compatible with TWAIN, ICA, and SANE (Windows, macOS and Linux)** 
 
 **Methods**
@@ -82,27 +75,6 @@ permalink: /info/api/WebTwain_Acquire.html
 
 | [`OnSourceUIClose`](#onsourceuiclose) |
 
-<div class="multi-panel-end">
-
-</div><div class="multi-panel-start"></div>
-
->Note: The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
-
-**Methods**
-
-
-| [`SelectSourceAsync()`](#selectsourceasync) | [`CloseSourceAsync()`](#closesourceasync) | [`GetDevicesAsync()`](#getdevicesasync) | [`SelectDeviceAsync()`](#selectdeviceasync) |
-| [`AcquireImageAsync()`](#acquireimageasync) | [`getCapabilities()`](#getcapabilities)   | [`setCapabilities()`](#setcapabilities) |                                             |
-
-
-**Events**
-
-
-| [`OnPostTransferAsync`](#onposttransferasync)  |
-
-<div class="multi-panel-end"></div>
-
-
 ---
 
 ## AcquireImage()
@@ -153,7 +125,6 @@ AcquireImage(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -161,7 +132,6 @@ AcquireImage(
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -262,7 +232,6 @@ CloseSource(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -270,7 +239,6 @@ CloseSource(): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -316,21 +284,17 @@ CloseSourceAsync(): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -354,7 +318,6 @@ DisableSource(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -362,7 +325,6 @@ DisableSource(): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -394,7 +356,6 @@ EnableSource(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -402,7 +363,6 @@ EnableSource(): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -445,7 +405,6 @@ EnableSourceUI(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -453,7 +412,6 @@ EnableSourceUI(
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
@@ -485,7 +443,6 @@ OpenSource(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -493,7 +450,6 @@ OpenSource(): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -540,7 +496,6 @@ OpenSourceAsync(): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -548,7 +503,6 @@ OpenSourceAsync(): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
@@ -584,7 +538,6 @@ GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -592,7 +545,6 @@ GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v15.3+</td>
 <td align="center">v15.3+</td>
 <td align="center">v15.3+</td>
@@ -630,7 +582,6 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -638,7 +589,6 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 </tr>
 
 <tr>
-<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
@@ -680,7 +630,6 @@ SelectSource(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -688,7 +637,6 @@ SelectSource(
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -749,12 +697,10 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -762,8 +708,6 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">v16.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -806,7 +750,6 @@ SelectSourceByIndex(index: number): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -814,7 +757,6 @@ SelectSourceByIndex(index: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -865,7 +807,6 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -873,7 +814,6 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
@@ -919,7 +859,6 @@ SetOpenSourceTimeout(duration: number): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -927,7 +866,6 @@ SetOpenSourceTimeout(duration: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -969,7 +907,6 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows/TWAIN)</td>
 <td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
@@ -979,7 +916,6 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v15.0+</td>
 <td align="center">v18.5+</td>
 <td align="center">v15.1+</td>
@@ -1012,7 +948,6 @@ CancelAllPendingTransfers(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1020,7 +955,6 @@ CancelAllPendingTransfers(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1052,7 +986,6 @@ CloseSourceManager(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1060,7 +993,6 @@ CloseSourceManager(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1094,7 +1026,6 @@ CloseSourceManagerAsync(): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1102,7 +1033,6 @@ CloseSourceManagerAsync(): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
@@ -1130,7 +1060,6 @@ CloseWorkingProcess(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1138,7 +1067,6 @@ CloseWorkingProcess(): boolean;
 </tr>
 
 <tr>
-<td align="center">v11.2+</td>
 <td align="center">v11.2+</td>
 <td align="center">v11.2+</td>
 <td align="center">v11.2+</td>
@@ -1170,7 +1098,6 @@ FeedPage(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1178,7 +1105,6 @@ FeedPage(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1214,7 +1140,6 @@ GetCustomDSData(fileName: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1222,7 +1147,6 @@ GetCustomDSData(fileName: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1261,7 +1185,6 @@ GetCustomDSDataEx(): string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1269,7 +1192,6 @@ GetCustomDSDataEx(): string;
 </tr>
 
 <tr>
-<td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1312,7 +1234,6 @@ GetSourceNameItems(index: number): string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1320,7 +1241,6 @@ GetSourceNameItems(index: number): string;
 </tr>
 
 <tr>
-<td align="center">v7.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1355,7 +1275,6 @@ OpenSourceManager(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1363,7 +1282,6 @@ OpenSourceManager(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1400,7 +1318,6 @@ OpenSourceManagerAsync(): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1408,7 +1325,6 @@ OpenSourceManagerAsync(): Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">v18.0+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
@@ -1440,7 +1356,6 @@ ResetImageLayout(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1448,7 +1363,6 @@ ResetImageLayout(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1480,7 +1394,6 @@ RewindPage(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1488,7 +1401,6 @@ RewindPage(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1524,7 +1436,6 @@ SetCustomDSData(fileName: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1532,7 +1443,6 @@ SetCustomDSData(fileName: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1575,7 +1485,6 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1583,7 +1492,6 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1629,7 +1537,6 @@ SetFileXferInfo(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1637,7 +1544,6 @@ SetFileXferInfo(
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v17.0+</td>
@@ -1720,7 +1626,6 @@ SetImageLayout(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1728,7 +1633,6 @@ SetImageLayout(
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1791,7 +1695,6 @@ BitDepth: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1799,7 +1702,6 @@ BitDepth: number;
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -1833,7 +1735,6 @@ IfAppendImage: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1841,7 +1742,6 @@ IfAppendImage: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.1+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1877,7 +1777,6 @@ IfDisableSourceAfterAcquire: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1885,7 +1784,6 @@ IfDisableSourceAfterAcquire: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1930,7 +1828,6 @@ IfDuplexEnabled: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1938,7 +1835,6 @@ IfDuplexEnabled: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1994,7 +1890,6 @@ IfFeederEnabled: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2002,7 +1897,6 @@ IfFeederEnabled: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -2053,7 +1947,6 @@ IfShowUI: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2061,7 +1954,6 @@ IfShowUI: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2113,7 +2005,6 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2121,7 +2012,6 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -2168,7 +2058,6 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2176,7 +2065,6 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -2210,7 +2098,6 @@ Please refer to [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynam
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2218,7 +2105,6 @@ Please refer to [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynam
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -2250,7 +2136,6 @@ Resolution: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2258,7 +2143,6 @@ Resolution: number;
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -2290,7 +2174,6 @@ readonly SourceCount: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2298,7 +2181,6 @@ readonly SourceCount: number;
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -2326,7 +2208,6 @@ BlankImageThreshold: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2334,7 +2215,6 @@ BlankImageThreshold: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
@@ -2366,7 +2246,6 @@ Brightness: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2374,7 +2253,6 @@ Brightness: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2408,7 +2286,6 @@ Contrast: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2416,7 +2293,6 @@ Contrast: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2450,7 +2326,6 @@ readonly CurrentSourceName: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2458,7 +2333,6 @@ readonly CurrentSourceName: string;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -2490,7 +2364,6 @@ DataSourceStatus: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2498,7 +2371,6 @@ DataSourceStatus: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -2535,7 +2407,6 @@ DefaultSourceName: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2543,7 +2414,6 @@ DefaultSourceName: string;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2571,7 +2441,6 @@ readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2579,7 +2448,6 @@ readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2619,7 +2487,6 @@ IfAutoBright: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2627,7 +2494,6 @@ IfAutoBright: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2655,7 +2521,6 @@ IfAutoDiscardBlankpages: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2663,7 +2528,6 @@ IfAutoDiscardBlankpages: boolean;
 </tr>
 
 <tr>
-<td align="center">v7.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2697,7 +2561,6 @@ IfAutoFeed: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2705,7 +2568,6 @@ IfAutoFeed: boolean;
 </tr>
 
 <tr>
-<td align="center">v7.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2737,7 +2599,6 @@ IfAutomaticBorderDetection: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2745,7 +2606,6 @@ IfAutomaticBorderDetection: boolean;
 </tr>
 
 <tr>
-<td align="center">v7.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2779,7 +2639,6 @@ IfAutomaticDeskew: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2787,7 +2646,6 @@ IfAutomaticDeskew: boolean;
 </tr>
 
 <tr>
-<td align="center">v7.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2819,7 +2677,6 @@ IfAutoScan: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2827,7 +2684,6 @@ IfAutoScan: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2861,7 +2717,6 @@ readonly IfFeederLoaded: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2869,7 +2724,6 @@ readonly IfFeederLoaded: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2901,7 +2755,6 @@ readonly IfPaperDetectable: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2909,7 +2762,6 @@ readonly IfPaperDetectable: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2940,7 +2792,6 @@ IfShowIndicator: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2948,7 +2799,6 @@ IfShowIndicator: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -2982,7 +2832,6 @@ readonly IfUIControllable: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2990,7 +2839,6 @@ readonly IfUIControllable: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -3022,7 +2870,6 @@ IfUseTwainDSM: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3030,7 +2877,6 @@ IfUseTwainDSM: boolean;
 </tr>
 
 <tr>
-<td align="center">v6.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -3062,7 +2908,6 @@ readonly ImageLayoutFrameBottom: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3070,7 +2915,6 @@ readonly ImageLayoutFrameBottom: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3098,7 +2942,6 @@ readonly ImageLayoutFrameLeft: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3106,7 +2949,6 @@ readonly ImageLayoutFrameLeft: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3134,7 +2976,6 @@ readonly ImageLayoutFrameNumber: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3142,7 +2983,6 @@ readonly ImageLayoutFrameNumber: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3177,7 +3017,6 @@ readonly ImageLayoutFrameRight: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3185,7 +3024,6 @@ readonly ImageLayoutFrameRight: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3213,7 +3051,6 @@ readonly ImageLayoutFrameTop: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3221,7 +3058,6 @@ readonly ImageLayoutFrameTop: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3249,7 +3085,6 @@ readonly ImageLayoutDocumentNumber: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3257,7 +3092,6 @@ readonly ImageLayoutDocumentNumber: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3285,7 +3119,6 @@ readonly ImageLayoutPageNumber: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3293,7 +3126,6 @@ readonly ImageLayoutPageNumber: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3321,7 +3153,6 @@ readonly ImageBitsPerPixel: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3329,7 +3160,6 @@ readonly ImageBitsPerPixel: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3357,7 +3187,6 @@ readonly ImageLength: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3365,7 +3194,6 @@ readonly ImageLength: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3392,7 +3220,6 @@ readonly ImageWidth: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3400,7 +3227,6 @@ readonly ImageWidth: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3427,7 +3253,6 @@ readonly ImageXResolution: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3435,7 +3260,6 @@ readonly ImageXResolution: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3463,7 +3287,6 @@ readonly ImageYResolution: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3471,7 +3294,6 @@ readonly ImageYResolution: number;
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3501,7 +3323,6 @@ Please refer to [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynam
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3509,7 +3330,6 @@ Please refer to [`EnumDWT_PixelType`]({{site.info}}api/Dynamsoft_Enum.html#dynam
 </tr>
 
 <tr>
-<td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
 <td align="center">all versions</td>
@@ -3537,7 +3357,6 @@ readonly MagData: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3545,7 +3364,6 @@ readonly MagData: string;
 </tr>
 
 <tr>
-<td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
@@ -3575,7 +3393,6 @@ Please refer to [`EnumDWT_MagType`]({{site.info}}api/Dynamsoft_Enum.html#dynamso
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3583,7 +3400,6 @@ Please refer to [`EnumDWT_MagType`]({{site.info}}api/Dynamsoft_Enum.html#dynamso
 </tr>
 
 <tr>
-<td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
 <td align="center">v8.0+</td>
@@ -3619,7 +3435,6 @@ readonly PendingXfers: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3627,7 +3442,6 @@ readonly PendingXfers: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -3661,7 +3475,6 @@ PixelFlavor: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3669,7 +3482,6 @@ PixelFlavor: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -3706,7 +3518,6 @@ Please refer to [`EnumDWT_TransferMode`]({{site.info}}api/Dynamsoft_Enum.html#dy
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3714,7 +3525,6 @@ Please refer to [`EnumDWT_TransferMode`]({{site.info}}api/Dynamsoft_Enum.html#dy
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">not supported</td>
 <td align="center">v11.0+</td>
@@ -3758,7 +3568,6 @@ Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3766,7 +3575,6 @@ Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -3808,7 +3616,6 @@ XferCount: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3816,7 +3623,6 @@ XferCount: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -3848,7 +3654,6 @@ RegisterEvent("OnPostAllTransfers", function () {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3856,7 +3661,6 @@ RegisterEvent("OnPostAllTransfers", function () {});
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -3896,7 +3700,6 @@ RegisterEvent("OnPostTransfer", function () {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3904,7 +3707,6 @@ RegisterEvent("OnPostTransfer", function () {});
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -3944,21 +3746,17 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v15.0+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3991,7 +3789,6 @@ RegisterEvent("OnPreAllTransfers", function () {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3999,7 +3796,6 @@ RegisterEvent("OnPreAllTransfers", function () {});
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -4038,7 +3834,6 @@ RegisterEvent('OnPreTransfer',function(){...});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4046,7 +3841,6 @@ RegisterEvent('OnPreTransfer',function(){...});
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -4082,7 +3876,6 @@ RegisterEvent("OnSourceUIClose", function () {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4090,7 +3883,6 @@ RegisterEvent("OnSourceUIClose", function () {});
 </tr>
 
 <tr>
-<td align="center">v8.0.1+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">not supported</td>
@@ -4137,25 +3929,21 @@ getCapabilities(
 <div class="availability">
 <table>
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows/TWAIN)</td>
 <td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(macOS/eSCL)</td>
 <td align="center">H5(Linux/SANE)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">not supported</td>
-<td align="center">v18.2+</td>
 </tr>
 </table>
 </div>
@@ -4194,25 +3982,21 @@ Please refer to [`Capabilities`]({{site.info}}api/Interfaces.html#capabilities).
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows/TWAIN)</td>
 <td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(macOS/eSCL)</td>
 <td align="center">H5(Linux/SANE)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">not supported</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4318,25 +4102,21 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows/TWAIN)</td>
 <td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(macOS/eSCL)</td>
 <td align="center">H5(Linux/SANE)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4378,25 +4158,21 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows/TWAIN)</td>
 <td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(macOS/eSCL)</td>
 <td align="center">H5(Linux/SANE)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4426,25 +4202,21 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows/TWAIN)</td>
 <td align="center">H5(Windows/WIA)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(macOS/eSCL)</td>
 <td align="center">H5(Linux/SANE)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v18.0+</td>
-<td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>

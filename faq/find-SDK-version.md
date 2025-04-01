@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title:  How do I know which SDK version I am using?
-keywords: Dynamic Web TWAIN, Dynamsoft Service, SDK version
+keywords: Dynamic Web TWAIN, Dynamic Web TWAIN Service, SDK version
 breadcrumbText:  How do I know which SDK version I am using?
 description:  How do I know which SDK version I am using?
 permalink: /faq/find-SDK-version.html
@@ -38,12 +38,12 @@ Due to Dynamic Web TWAIN being a long-standing and popular product among enterpr
     > For versions prior to 17.0, you can obtain the current SDK version by executing the code "`Dynamosft.WebTwainEnv.JSVersion`"
 
 * Method 3
-    > Let's take Windows as a example, to find the version of Dynamsoft Service on Windows, you can follow these steps:
+    > Let's take Windows as a example, to find the version of Dynamic Web TWAIN Service (also called "Dynamsoft Service") on Windows, you can follow these steps:
 
     > 1. Open the Control Panel.
     > 2. In the Control Panel, click on the "Uninstall a Program" option.
-    > 3. Look for "Dynamsoft Service" in the list of installed programs.
-    > 4. The version of Dynamsoft Service should be displayed in the program list.
+    > 3. Look for "Dynamic Web TWAIN Service" in the list of installed programs.
+    > 4. The version of Dynamic Web TWAIN Service should be displayed in the program list.
     <br>
     ![panel]({{site.assets}}imgs/panel.png)
 

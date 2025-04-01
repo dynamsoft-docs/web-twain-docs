@@ -71,7 +71,6 @@ interface DeviceConfiguration {
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -79,7 +78,6 @@ interface DeviceConfiguration {
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>

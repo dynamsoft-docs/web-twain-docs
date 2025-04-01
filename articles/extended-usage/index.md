@@ -17,7 +17,7 @@ This set of guides builds on the fundamental features covered in the standard us
 
 - [Advanced DWT Initialization]({{site.extended-usage}}advanced-initialization.html)
 - [Configuring System Messages]({{site.extended-usage}}system-message-configuration.html)
-- [Set Up the Dynamsoft Service]({{site.extended-usage}}dynamsoft-service-configuration.html)
+- [Set Up the Dynamic Web TWAIN Service]({{site.extended-usage}}dynamsoft-service-configuration.html)
 - [UI Customization]({{site.extended-usage}}ui-customization.html)
 - [Barcode Recognition]({{site.extended-usage}}barcode-processing.html)
 - [PDF Handling]({{site.extended-usage}}pdf-processing.html)

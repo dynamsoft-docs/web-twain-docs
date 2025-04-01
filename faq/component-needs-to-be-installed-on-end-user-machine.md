@@ -14,10 +14,10 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 # Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?
 
-For the <a href="{{site.indepth}}features/initialize.html#desktop-service-edition" target="_blank">Desktop Service Edition</a>, the Dynamsoft Service needs to be installed on end-user machines. By default end-users will be prompted to install Dynamsoft Service when they access your application for the first time.
+For the <a href="{{site.indepth}}features/initialize.html#desktop-service-edition" target="_blank">Desktop Service Edition</a>, the Dynamic Web TWAIN Service (also called "Dynamsoft Service") needs to be installed on end-user machines. By default end-users will be prompted to install Dynamic Web TWAIN Service when they access your application for the first time.
 
-When you upgrade Dynamic Web TWAIN, you may also need a reinstallation of Dynamsoft Service on the client-side. For more information, please refer to <a href="{{site.indepth}}development/upgrade.html#update-dynamsoft-service-on-the-client-side" target="_blank">Update Dynamsoft Service on the Client-side</a>.
+When you upgrade Dynamic Web TWAIN, you may also need a reinstallation of Dynamic Web TWAIN Service on the client-side. For more information, please refer to <a href="{{site.indepth}}development/upgrade.html#update-dynamsoft-service-on-the-client-side" target="_blank">Update Dynamic Web TWAIN Service on the Client-side</a>.
 
-If you do not want to install anything, there are two options.
-1. You can choose the WebAssembly Edition, but please note that the WebAssembly Edition does not support physical document scanners.
-2. You can enable Remote Scan, which scans documents from remote scanners connected to host machines. No installation is required on the client machine. Please check <a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">here</a> for more information on how remote scan works and how to enable it.
+If you do not want to install anything, there is an option.
+
+You can enable Remote Scan, which scans documents from remote scanners connected to host machines. No installation is required on the client machine. Please check <a href="{{site.faq}}how-to-enable-remote-scan.html" target="_blank">here</a> for more information on how remote scan works and how to enable it.

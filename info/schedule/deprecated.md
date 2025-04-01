@@ -37,6 +37,15 @@ The prompts are one-time, once you accept the "risk", the software will install 
 
 The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419). -->
 
+## 19.0
+
+### Global
+
+* Deprecated Property: Dynamsoft.DWT.IfUseActiveXForIE10Plus
+
+### Util
+* Deprecated Method: DWTObject.isUsingActiveX
+
 ## 18.4
 
 ### PDF Rasterizer

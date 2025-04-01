@@ -40,19 +40,15 @@ decode(index: number): Promise<TextResult[]> ;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(macOS)</td>
 <td align="center">H5(Linux)</td>
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
 </tr>
 
 </table>
@@ -77,19 +73,15 @@ getRuntimeSettings(template?: string): Promise<RuntimeSettings> ;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(macOS)</td>
 <td align="center">H5(Linux)</td>
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
 </tr>
 
 </table>
@@ -117,19 +109,15 @@ updateRuntimeSettings(settings: RuntimeSettings): Promise<RuntimeSettings> ;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(macOS)</td>
 <td align="center">H5(Linux)</td>
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
 </tr>
 
 </table>
@@ -173,19 +161,15 @@ resetRuntimeSettings(): Promise<RuntimeSettings> ;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(macOS)</td>
 <td align="center">H5(Linux)</td>
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.1+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
 </tr>
 
 </table>
@@ -219,19 +203,15 @@ Please refer to [`RuntimeSettings`]({{site.info}}api/Interfaces.html#runtimesett
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(macOS)</td>
 <td align="center">H5(Linux)</td>
 </tr>
 
 <tr>
 <td align="center">v16.0+ </td>
-<td align="center">v16.0+ </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
-<td align="center">not supported </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
 </tr>
 
 </table>

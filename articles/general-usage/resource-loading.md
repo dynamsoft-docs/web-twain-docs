@@ -14,9 +14,9 @@ Before using the **Dynamic Web TWAIN SDK** (DWT), the web application must first
 
 ## Note on File Size
 
-The installers for the [Dynamsoft Service]({{site.extended-usage}}dynamsoft-service-configuration.html) are numerous and take up a lot of disk space. We may save disk space by removing unused installers for unused platforms/architectures if called for, whether for deployment or for development environments.
+The installers for the [Dynamic Web TWAIN Service]({{site.extended-usage}}dynamsoft-service-configuration.html) are numerous and take up a lot of disk space. We may save disk space by removing unused installers for unused platforms/architectures if called for, whether for deployment or for development environments.
 
-The official SDK installers store the installers under the `/dist` directory, and the package managers/CDNs keep them under `/dist/dist`. For example, if the web application does not support end users on Linux-based platforms, we may elect to remove `DynamsoftServiceSetup.deb`, `DynamsoftServiceSetup.rpm`, etc.
+The official SDK installers store the installers under the `/dist` directory, and the package managers/CDNs keep them under `/dist/dist`. For example, if the web application does not support end users on Linux-based platforms, we may elect to remove `DynamicWebTWAINServiceSetup.deb`, `DynamicWebTWAINServiceSetup.rpm`, etc.
 
 ## Loading from Official SDK Package
 
@@ -83,7 +83,7 @@ APIs used:
 
 ### Loading from [jsDelivr](https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js)
 
-Note that jsDelivr currently has problems delivering the Dynamsoft Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UKPKG is currently unaffected. For information about the Dynamsoft Service, learn more [here]({{site.extended-usage}}dynamsoft-service-configuration.html).
+Note that jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UKPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here]({{site.extended-usage}}dynamsoft-service-configuration.html).
 
 ```html
 <html>
@@ -126,24 +126,12 @@ npm install dwt
 yarn add dwt
 ```
 
-Both of these package managers provide the resources as both a plain JavaScript file or as an ECMAScript module. `dynamsoft.webtwain.min.js` is plain JavaScript, which operates in the same way as the resources acquired from the [CDNs](#loading-from-cdn). On the other hand, the package managers also provide `dynamsoft.webtwain.min.mjs`, which is a ECMAScript module containing core DWT resources, also including add-ons. Either package manager provides the same files. The same licensing restrictions apply with using add-on functionality as with the files [loaded from CDN](#loading-from-cdn). This may be loaded as plain JavaScript, or as an ECMAScript module:
-
-### Loading as Plain JavaScript
+The package managers provide dynamsoft.webtwain.min.mjs, which is an ECMAScript module containing core DWT resources, including add-on functionality. The files provided are the same regardless of the package manager used. The licensing restrictions for using add-on functionality are the same as those for files loaded from the CDN. This file is loaded as an ECMAScript module:
 
 ```html
-<html>
-    <head>
-        <!-- Load resources -->
-        <script src="./node_modules/dwt/dist/dynamsoft.webtwain.min.js"></script>
-    </head>
-    
-    <body>
-        <script>
-            Dynamsoft.DWT.ResourcesPath = "./node_modules/dwt/dist/"; // Load supporting resources from here
-            Dynamsoft.DWT.ProductKey = ""; // Add product key here
-        </script>
-    </body>
-</html>
+import Dynamsoft from 'dwt';
+Dynamsoft.DWT.ResourcesPath = "your-resources-path"; // Load supporting resources from here
+Dynamsoft.DWT.ProductKey = "your-product-key";
 ```
 
 APIs used:
@@ -151,26 +139,9 @@ APIs used:
 - [`Dynamsoft.DWT.ResourcesPath`]({{site.api}}Dynamsoft_WebTwainEnv.html#resourcespath)
 - [`Dynamsoft.DWT.ProductKey`]({{site.api}}Dynamsoft_WebTwainEnv.html#productkey)
 
-### Loading as ECMAScript Module
+### Official Sample
+Check out the following sample project:
 
-> Note: To avoid confusion, we suggest renaming the default `node_modules` directory, or moving the `dwt` package to a different location for self-hosting, as the `node_modules` is reserved for Node.js dependencies.
-
-```html
-<html>
-    <head>
-    </head>
-
-    <body>
-        <script type="module">
-            import Dynamsoft from 'dwt';
-            Dynamsoft.DWT.ResourcesPath = "./node_modules/dwt/dist/"; // Load supporting resources from here
-            Dynamsoft.DWT.ProductKey = ""; // Add product key here
-        </script>
-    </body>
-</html>
-```
-
-APIs used:
-
-- [`Dynamsoft.DWT.ResourcesPath`]({{site.api}}Dynamsoft_WebTwainEnv.html#resourcespath)
-- [`Dynamsoft.DWT.ProductKey`]({{site.api}}Dynamsoft_WebTwainEnv.html#productkey)
+* [dwt-angular-advanced](https://github.com/dynamsoft-dwt/dwt-angular-advanced)
+* [dwt-react-advanced](https://github.com/Dynamsoft/web-twain-react-advanced)
+* [dwt-vue](https://github.com/Dynamsoft/web-twain-vue-advanced)

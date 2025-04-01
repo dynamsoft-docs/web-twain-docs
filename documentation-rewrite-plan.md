@@ -107,9 +107,9 @@
 - Unclear about purpose/inclusion in previous draft
 - KB [Imaging Devices](#imaging-devices)
 
-#### [Configuring the Dynamsoft Service]()
+#### [Configuring the Dynamic Web TWAIN Service]()
 - End user installation, port configuration, origin access control, etc.
-- KB [The Dynamsoft Service](#the-dynamsoft-service)
+- KB [The Dynamic Web TWAIN Service](#the-dynamsoft-service)
 
 #### [Configuring the Editor]()
 - KB [Image Manipulation](#image-manipulation)
@@ -209,21 +209,21 @@
 - Details about runtime behavior
 - Rename, too similar to name of guide
 
-#### [The Dynamsoft Service]()
+#### [The Dynamic Web TWAIN Service]()
 - May need to talk about the whole data flow behind DWT here
 - Link to TWAIN specification for further reading
     ##### [The `FileUploader`]()
-    - High performance file uploading through the Dynamsoft Service
+    - High performance file uploading through the Dynamic Web TWAIN Service
     ##### [Enhanced Mode]()
     - Should mention/contrast against Service mode (typical behavior)
 
 #### [The `WebTwain` Object]()
-- Describe its relationship with the Dynamsoft Service
+- Describe its relationship with the Dynamic Web TWAIN Service
     ##### [The `WebTwain` `Viewer`]()
     - General UI behavior, could be put under `WebTwain`
 
 #### [Imaging Devices]()
-- Describe device acquisition, connection to the Dynamsoft Service, device driver, device interface, etc.
+- Describe device acquisition, connection to the Dynamic Web TWAIN Service, device driver, device interface, etc.
 
 #### [Image Manipulation]()
 - Includes image editing, markup, colors, compression, etc.
@@ -235,7 +235,7 @@
 - May be split into inbound data, outbound data, buffered data, and cached data
 
 #### [Networking Features]()
-- Connection between server and web app, web app and dynamsoft service, dynamsoft service and data sources, dynamsoft service and server
+- Connection between server and web app, web app and Dynamic Web TWAIN Service, Dynamic Web TWAIN Service and data sources, Dynamic Web TWAIN Service and server
 
 #### [Licensing]()
 - In-depth explanation of license types and behaviors

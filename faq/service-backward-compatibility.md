@@ -24,12 +24,24 @@ From 16.x, the latest service within the major version supports all previous ver
 > Note: There is a known issue for the 17.2 and 17.2.x services. Please use the 17.3 service if you are using 17.x as your latest service.
 
 ### Instructions for setting up cross major version support
-1. Install the _older_ version of Dynamsoft Service.
-2. Copy the .dll files from C:\Windows\SysWOW64\Dynamsoft\DynamsoftService64_{version number}\ to a temporary location. For the list of .dll files you are required to copy, please refer to the list below.
-3. Install the _newer_ version of the Dynamsoft Service.
-4. Copy the .dll files from your temporary location into the _new_ DynamsoftService folder.
+1. Install the _older_ version of Dynamic Web TWAIN Service (also called "Dynamsoft Service").
+2. Copy the .dll files from `C:\Windows\SysWOW64\Dynamsoft\DynamsoftService64_{version number}\` to a temporary location. For the list of .dll files you are required to copy, please refer to the list below.
+3. Install the _newer_ version of the Dynamic Web TWAIN Service.
+4. Copy the .dll files from your temporary location into the _new_ Dynamic Web TWAIN Service folder (from v19.0+, the target path is `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}`).
 
 ### List of required .dll files
+**Version 18.x**
+```javascript
+dwt_18.5.1.0828.dll
+DynamicImagex64.dll
+DynamicPdfCorex64_11.5.3.0828.dll
+DynamicPdfRx64_11.5.3.0828.dll
+DWASManager_18500312.dll
+DeviceManager_18510828.dll
+UploadModule_1.8.5.0828.dll
+dbrx64_9.6.1.0312.dll
+```
+
 **Version 17.x**
 ```javascript
 dwt_17.3.0.0531.dll

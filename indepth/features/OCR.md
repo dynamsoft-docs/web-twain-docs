@@ -269,7 +269,7 @@ The resources of `OCRPro` can be downloaded [here](https://tst.dynamsoft.com/pub
 
 #### Install OCRPro on the Server
 
-`OCRPro` must be used with `Dynamsoft Service` . If the service is not installed yet, install it first. Check out [How to install Dynamsoft Service]({{site.indepth}}deployment/service.html#how-to-install-dwt). Once the service is installed, unzip the resources downloaded in the previous step and put all the files in the service directory which is typically located at `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16` .
+`OCRPro` must be used with `Dynamic Web TWAIN Service` . If the service is not installed yet, install it first. Check out [How to install Dynamic Web TWAIN Service]({{site.indepth}}deployment/service.html#how-to-install-dwt). Once the service is installed, unzip the resources downloaded in the previous step and put all the files in the service directory which is typically located at `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_16` .
 
 #### Use OCRPro on the Server
 

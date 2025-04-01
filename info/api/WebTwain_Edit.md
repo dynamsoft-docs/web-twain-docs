@@ -12,8 +12,6 @@ permalink: /info/api/WebTwain_Edit.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
-> All APIs on this page support Android Service from version 18.2.
-
 **Methods**
 
 
@@ -94,21 +92,17 @@ ChangeBitDepth(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -169,21 +163,17 @@ ChangeImageSize(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -244,21 +234,17 @@ SetDPI(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v8.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -304,21 +290,17 @@ ConvertToBW(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -357,21 +339,17 @@ ConvertToGrayScale(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v10.0+</td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -432,21 +410,17 @@ Invert(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
 <td align="center">v15.3+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -493,21 +467,17 @@ SetImageWidth(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
 <td align="center">v10.0+ </td>
-<td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -550,21 +520,17 @@ Flip(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -625,21 +591,17 @@ Mirror(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -699,21 +661,17 @@ RotateLeft(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -773,21 +731,17 @@ RotateRight(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -855,21 +809,17 @@ Rotate(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -946,21 +896,17 @@ RotateEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v7.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1019,21 +965,17 @@ Crop(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1092,21 +1034,17 @@ Erase(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1134,21 +1072,17 @@ CopyToClipboard(index: number): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1192,21 +1126,17 @@ CutToClipboard(index: number): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1248,21 +1178,17 @@ CropToClipboard(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1304,21 +1230,17 @@ CutFrameToClipboard(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1347,21 +1269,17 @@ BackgroundFillColor: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v12.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1398,21 +1316,17 @@ ChangeBrightnessAsync(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1445,21 +1359,17 @@ ChangeContrastAsnyc(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>

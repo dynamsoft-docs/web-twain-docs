@@ -75,7 +75,7 @@ Dynamsoft.DWT.ResourcesPath = "New folder/Resources";
 
 #### Relocate the folder holding the client installer files
 
-As of DWT 18.4, you can now relocate the folder that houses the DynamsoftService installer files to a location outside of the Resources folder.
+As of DWT 18.4, you can now relocate the folder that houses the Dynamic Web TWAIN Service(formerly known as Dynamsoft Service) installer files to a location outside of the Resources folder.
 
 The below example relocates the Resources folder to a projectfiles folder in the same project, and refers externally to find the client installer files.
 

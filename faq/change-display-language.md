@@ -43,7 +43,7 @@ Dynamsoft.DWT.CustomizableDisplayInfo = {
   // launch
   generalMessages: {
     checkingDWTVersion: "Checking WebTwain version ...",
-    updatingDService: "Dynamsoft Service is updating ...",
+    updatingDService: "Dynamic Web TWAIN Service is updating ...",
     downloadingDWTModule: "Downloading the Dynamic Web TWAIN module.",
     refreshNeeded: "Please REFRESH your browser.",
     downloadNeeded: "Please download and install the Dynamic Web TWAIN.",
@@ -131,6 +131,6 @@ Dynamsoft.DWT.CustomizableDisplayInfo = {
 };
 ```
 
-For the Dynamsoft Service installation message below, you can customize the display language by searching for `Dynamsoft._show_install_dialog` in dynamsoft.webtwain.install.js, and changing the display language accordingly.
+For the Dynamic Web TWAIN Service (also called "Dynamsoft Service") installation message below, you can customize the display language by searching for `Dynamsoft._show_install_dialog` in dynamsoft.webtwain.install.js, and changing the display language accordingly.
 
 ![install dialog]({{site.assets}}imgs/Initialization-1.png)

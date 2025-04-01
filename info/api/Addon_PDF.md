@@ -15,7 +15,7 @@ permalink: /info/api/Addon_PDF.html
 **Methods**
 
 
-| [`GetConvertMode()`](#getconvertmode) | [`GetReaderOptions()`](#getreaderoptions) | [`IsModuleInstalled()`](#ismoduleinstalled) | [`IsTextBasedPDF()`](#istextbasedpdf) |
+| [`GetConvertMode()`](#getconvertmode) | [`GetReaderOptions()`](#getreaderoptions) | [`IsModuleInstalled()`](#ismoduleinstalled)| [`IsRasterizationRequired()`](#israsterizationrequired) | [`IsTextBasedPDF()`](#istextbasedpdf) |
 | [`SetConvertMode()`](#setconvertmode) | [`SetPassword()`](#setpassword)       | [`SetResolution()`](#setresolution)         | [`Write.Setup()`](#writesetup)        |
 | [`SetReaderOptions()`](#setreaderoptions) |
 
@@ -41,21 +41,17 @@ Please refer to [`EnumDWT_ConvertMode`]({{site.info}}api/Dynamsoft_Enum.html#dyn
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -78,17 +74,13 @@ GetReaderOptions(): ReaderOptions;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
@@ -116,12 +108,10 @@ IsModuleInstalled(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -129,8 +119,40 @@ IsModuleInstalled(): boolean;
 <td align="center">v14.1+ </td>
 <td align="center">v14.1+ </td>
 <td align="center">v14.1+ </td>
-<td align="center">v14.1+ </td>
-<td align="center">v18.2+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
+## IsRasterizationRequired()
+
+Return whether a local PDF file needs rasterization. If each PDF page contains only one image, return `false`. Otherwise, return `true`.
+
+**Syntax**
+
+```typescript
+IsRasterizationRequired(path: string): boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
 </tr>
 
 </table>
@@ -158,12 +180,10 @@ IsTextBasedPDF(path: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -171,8 +191,6 @@ IsTextBasedPDF(path: string): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -203,12 +221,10 @@ SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -216,8 +232,6 @@ SetConvertMode(mode: Dynamsoft.DWT.EnumDWT_ConvertMode | number): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -253,17 +267,13 @@ SetReaderOptions(options: ReaderOptions): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
-<td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
@@ -276,17 +286,28 @@ SetReaderOptions(options: ReaderOptions): boolean;
 **Usage Notes**
 Use this method before you import a PDF into the viewer with methods such as <a href="{{site.info}}api/WebTwain_IO.html#loadimage" target="_blank">`LoadImage()`</a> , <a href="{{site.info}}api/WebTwain_IO.html#httpdownload" target="_blank">`HTTPDownload()`</a> and <a href="{{site.info}}api/WebTwain_IO.html#ftpdownload" target="_blank">`FTPDownload()`</a>.
 
-**Example**
+**Examples**
 
-```javascript
-DWTObject.Addon.PDF.SetReaderOptions({
-    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
-    renderOptions: {
-        renderAnnotations: false,
-        renderGrayscale: true,
-    }
-});
-```
+1. Render the PDF file to grayscale images without annotations.
+
+   ```javascript
+   DWTObject.Addon.PDF.SetReaderOptions({
+       convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
+       renderOptions: {
+           renderAnnotations: false,
+           renderGrayscale: true,
+       }
+   });
+   ```
+
+2. Render the PDF file to images, but when saving, preserve the original data if the content of a page is not modified.
+
+   ```javascript
+   DWTObject.Addon.PDF.SetReaderOptions({
+       convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
+       preserveUnmodifiedOnSave: true
+   });
+   ```
 
 ---
 
@@ -313,12 +334,10 @@ SetPassword(password: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -326,8 +345,6 @@ SetPassword(password: string): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -362,12 +379,10 @@ SetResolution(resolution: number): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
@@ -375,8 +390,6 @@ SetResolution(resolution: number): boolean;
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
 <td align="center">v11.2+ </td>
-<td align="center">v11.2+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -410,21 +423,17 @@ Write.Setup(settings: PDFWSettings): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v15.0+ </td>
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
