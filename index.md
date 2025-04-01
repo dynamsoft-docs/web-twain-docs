@@ -45,8 +45,9 @@ permalink: /index.html
 - [Advanced DWT Initialization]({{site.extended-usage}}advanced-initialization.html)
 - [Loading Documents from Files]({{site.extended-usage}}file-import.html)
 - [Configuring System Messages]({{site.extended-usage}}system-message-configuration.html)
-- [Set Up the Dynamsoft Service]({{site.extended-usage}}dynamsoft-service-configuration.html)
+- [Set Up the Dynamic Web TWAIN Service]({{site.extended-usage}}dynamsoft-service-configuration.html)
 - [UI Customization]({{site.extended-usage}}ui-customization.html)
+- [Using the DWT RESTful API]({{site.extended-usage}}restful-api.html)
 - [Barcode Recognition]({{site.extended-usage}}barcode-processing.html)
 - [PDF Handling]({{site.extended-usage}}pdf-processing.html)
 <!--- [PDF Compressor (Beta)]({{site.extended-usage}}pdf-compression.html)-->
@@ -96,7 +97,7 @@ permalink: /index.html
 
    - [HelloWorld]({{site.getstarted}}helloworld.html)
    - [Deploy to Server]({{site.indepth}}deployment/server.html)
-   - [Set up Dynamsoft Service]({{site.indepth}}deployment/service.html)
+   - [Set up Dynamic Web TWAIN Service]({{site.indepth}}deployment/service.html)
    - [Use Web TWAIN in Angular]({{site.indepth}}development/angular.html)
    - [Use Web TWAIN in React]({{site.indepth}}development/react.html)
    - [Use Web TWAIN in Vue]({{site.indepth}}development/vue.html)

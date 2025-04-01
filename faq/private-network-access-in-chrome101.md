@@ -26,7 +26,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 ### Symptom
 
- In Chrome 101 at the earliest, when visiting a website that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be prompted repeatedly to download and install the Dynamsoft Service.
+ In Chrome 101 at the earliest, when visiting a website that has Dynamic Web TWAIN SDK v17.2 or older integrated into the application, you may see the following **error message** in the browser console. For the end users of your website, they may be prompted repeatedly to download and install the Dynamic Web TWAIN Service (also called "Dynamsoft Service").
 
 NOTE that the same issue will also occur in any browser based on **Chromium 101+**, such as Microsoft Edge 101.
 
@@ -49,7 +49,7 @@ To mitigate these risks, Chrome will require non-public subresources to opt-into
 
 As a part of the Private Network Access (PNA) specification, Chrome is deprecating direct access to private network endpoints from public websites. In Chrome 101 at the earliest, Chrome will enforce explicit permission from private network endpoints before requests from public websites can be allowed. According to Google, "this will begin only if and when compatibility data indicates that the change is safe enough and we've outreached directly when necessary." More details can be found at <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">https://developer.chrome.com/blog/private-network-access-preflight/</a>.
 
-Dynamic Web TWAIN utilizes a local service named 'Dynamsoft Service' to support document scanning from physical scanners. Your web scanning page needs to make requests to localhost or 127.0.0.1 to communicate with the local service. In Chrome 101, the connection from your public website to the private network (i.e. localhost/127.0.0.1) will be blocked.
+Dynamic Web TWAIN utilizes a local service named 'Dynamic Web TWAIN Service' to support document scanning from physical scanners. Your web scanning page needs to make requests to localhost or 127.0.0.1 to communicate with the local service. In Chrome 101, the connection from your public website to the private network (i.e. localhost/127.0.0.1) will be blocked.
 
 ### Resolution
 
@@ -59,7 +59,7 @@ To avoid this potential issue, you can apply one of the following solutions:
 
    In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. You can test the latest version with our <a href="https://www.dynamsoft.com/web-twain/downloads/" target="_blank">free trial</a> and when you are ready to upgrade, please contact <a href="mailto:sales@dynamsoft.com" target="_blank">sales@dynamsoft.com</a> to request the upgrade.
 
-   Please note that once upgraded, the Dynamosft Service on all client machines also need to be updated. You may consider <a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html#can-i-install-dynamsoft-service-silently" target="_blank">installing Dynamsoft Service silently</a>.
+   Please note that once upgraded, the Dynamic Web TWAIN Service on all client machines also need to be updated. You may consider <a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html#can-i-install-dynamsoft-service-silently" target="_blank">installing Dynamic Web TWAIN Service silently</a>.
 
 2. Disable Private Network Access checks using enterprise policies
 

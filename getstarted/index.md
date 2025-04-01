@@ -13,7 +13,7 @@ ignore: true
 
 - [Hello World tutorial]({{site.getstarted}}Helloworld.html): follow this tutorial to create your first web-based document scanning application
 - [Deploy to your server]({{site.indepth}}deployment/server.html): how to deploy Dynamic Web TWAIN to server
-- [Set up the service]({{site.indepth}}deployment/service.html): how to set up Dynamsoft service if needed
+- [Set up the service]({{site.indepth}}deployment/service.html): how to set up Dynamic Web TWAIN Service if needed
 - Use Web TWAIN in a framework
   - [Use Web TWAIN in Angular]({{site.indepth}}development/angular.html)
   - [Use Web TWAIN in React]({{site.indepth}}development/react.html)

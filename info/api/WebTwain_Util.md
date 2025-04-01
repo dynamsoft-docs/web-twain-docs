@@ -12,79 +12,17 @@ permalink: /info/api/WebTwain_Util.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
-<div class="multi-panel-switching-prefix"></div>
-
-- [Desktop Service](#desktop) 
-- [Android Service](#android) 
-
-<div class="multi-panel-start"></div>
-
 **Methods**
 
 
-| [`isUsingActiveX()`](#isusingactivex) | [`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent) | [`GenerateURLForUploadData()`](#generateurlforuploaddata) |
+| [`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent) | [`GenerateURLForUploadData()`](#generateurlforuploaddata) |
 
 **Properties**
 
 
-| [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
+| [`ErrorCode`](#errorcode)  | [`ErrorCause`](#errorcause)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
 | [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
 
-<div class="multi-panel-end">
-
-</div><div class="multi-panel-start"></div>
-
->The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
-
-**Methods**
-
-
-| [`isUsingActiveX()`](#isusingactivex) |[`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent)|
-|[`GenerateURLForUploadData()`](#generateurlforuploaddata)|
-
-**Properties**
-
-
-| [`ErrorCode`](#errorcode)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
-| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
-
-<div class="multi-panel-end"></div>
-
----
-
-## isUsingActiveX
-
-Return whether the WebTwain object is running the ActiveX edition.
-
-**Syntax**
-
-```typescript
-isUsingActiveX(): boolean;
-```
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-<td align="center">all versions </td>
-</tr>
-
-</table>
-</div>
 
 ---
 
@@ -110,7 +48,6 @@ RegisterEvent(name: string, callback: (...arg: any[]) => void): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -118,7 +55,6 @@ RegisterEvent(name: string, callback: (...arg: any[]) => void): boolean;
 </tr>
 
 <tr>
-<td align="center">v9.2+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -156,7 +92,6 @@ UnregisterEvent(name: string, callback?: (...arg: any[]) => void): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -164,7 +99,6 @@ UnregisterEvent(name: string, callback?: (...arg: any[]) => void): boolean;
 </tr>
 
 <tr>
-<td align="center">v9.2+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -219,7 +153,6 @@ GenerateURLForUploadData(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -227,7 +160,6 @@ GenerateURLForUploadData(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v14.0+ </td>
 <td align="center">v15.1+ </td>
 <td align="center">v15.1+ </td>
@@ -283,7 +215,6 @@ readonly ErrorCode: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -291,7 +222,6 @@ readonly ErrorCode: number;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -304,6 +234,40 @@ readonly ErrorCode: number;
 **Usage notes**
 
 The [`ErrorCode`]({{site.info}}api/WebTwain_Util.html#errorcode) and [`ErrorString`]({{site.info}}api/WebTwain_Util.html#errorstring) always reflect the result of the last API call. So make sure you read them in time.
+
+---
+
+## ErrorCause
+
+Return the error cause from the operating system.
+
+**Syntax**
+
+```typescript
+readonly ErrorCause: null | {code: number, message: string};
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
+</tr>
+
+</table>
+</div>
 
 ---
 
@@ -323,7 +287,6 @@ readonly ErrorString: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -331,7 +294,6 @@ readonly ErrorString: string;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -363,7 +325,6 @@ LogLevel: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -371,7 +332,6 @@ LogLevel: number;
 </tr>
 
 <tr>
-<td align="center">v6.3+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -384,9 +344,9 @@ LogLevel: number;
 **Usage notes**
 
 The logs for the Dynamic Web TWAIN library are saved in the directory:
-  - Windows `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\log` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`
-  - macOS, `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`
-  - Linux: `/opt/dynamsoft/DynamsoftService/log`
+  - Windows `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\log`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\log`) or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\Dynamic Web TWAIN Service\log`(version 18.5.1 and earlier `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`)
+  - macOS, `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > log`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`)
+  - Linux:  `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/log`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/log`)
 
 By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines. Please set it back to 0 if you don't need to record log as it will slow down the speed.
 
@@ -408,7 +368,6 @@ readonly Manufacturer: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -416,7 +375,6 @@ readonly Manufacturer: string;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -448,7 +406,6 @@ readonly ProductFamily: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -456,7 +413,6 @@ readonly ProductFamily: string;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -488,7 +444,6 @@ readonly ProductName: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -496,7 +451,6 @@ readonly ProductName: string;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -528,7 +482,6 @@ readonly VersionInfo: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -536,7 +489,6 @@ readonly VersionInfo: string;
 </tr>
 
 <tr>
-<td align="center">v1.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>

@@ -20,9 +20,9 @@ Generally speaking, most UI elements are configured in the file **dynamsoft.webt
 
 This dialog comes up when using `Dynamic Web TWAIN` scanner module under one of the following conditions:
 
-* The Dynamsoft Service is not installed
-* The Dynamsoft Service is not running
-* A failure to connect to the Dynamsoft Service
+* The Dynamic Web TWAIN Service is not installed
+* The Dynamic Web TWAIN Service is not running
+* A failure to connect to the Dynamic Web TWAIN Service
 
 If needing to disable the default dialog or come up with your own install dialog, you can make changes to `Dynamsoft._show_install_dialog()` in the **dynamsoft.webtwain.install.js** file.
 ## Indicators

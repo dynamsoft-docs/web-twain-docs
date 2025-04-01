@@ -46,7 +46,6 @@ Init(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -54,7 +53,6 @@ Init(
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -79,7 +77,7 @@ Dynamsoft.FileUploader.Init(
 
 **Usage notes**
 
-The FileUploader library is installed with Dynamsoft Service by default, therefore, `URL` can be left empty "".
+The FileUploader library is installed with Dynamic Web TWAIN Service by default, therefore, `URL` can be left empty "".
 
 ## UploadManager
 
@@ -108,7 +106,6 @@ Please refer to [`Job`](#job).
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -116,7 +113,6 @@ Please refer to [`Job`](#job).
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -146,7 +142,6 @@ Run(job: Job): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -154,7 +149,6 @@ Run(job: Job): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -184,7 +178,6 @@ Cancel(job: Job): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -192,7 +185,6 @@ Cancel(job: Job): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -218,7 +210,6 @@ CancelAllUpload(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -226,7 +217,6 @@ CancelAllUpload(): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -294,7 +284,6 @@ BlockSize: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -302,7 +291,6 @@ BlockSize: number;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -328,7 +316,6 @@ FileName: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -336,7 +323,6 @@ FileName: string;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -362,7 +348,6 @@ FormField: FormField;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -370,7 +355,6 @@ FormField: FormField;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -406,7 +390,6 @@ HttpHeader: object;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -414,7 +397,6 @@ HttpHeader: object;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -444,7 +426,6 @@ readonly HttpVersion: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -452,7 +433,6 @@ readonly HttpVersion: string;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -478,7 +458,6 @@ ServerUrl: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -486,7 +465,6 @@ ServerUrl: string;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -513,7 +491,6 @@ SourceValue: SourceValue;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -521,7 +498,6 @@ SourceValue: SourceValue;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -557,7 +533,6 @@ ThreadNum: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -565,7 +540,6 @@ ThreadNum: number;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -591,7 +565,6 @@ readonly Version: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -599,7 +572,6 @@ readonly Version: number;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -634,7 +606,6 @@ OnUploadTransferPercentage: (
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -642,7 +613,6 @@ OnUploadTransferPercentage: (
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -681,7 +651,6 @@ OnRunSuccess: (job: Job) => void;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -689,7 +658,6 @@ OnRunSuccess: (job: Job) => void;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -736,7 +704,6 @@ OnRunFailure: (
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -744,7 +711,6 @@ OnRunFailure: (
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>

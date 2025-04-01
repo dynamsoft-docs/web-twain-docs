@@ -11,6 +11,47 @@ permalink: /info/schedule/Stable.html
 
 # Stable Releases
 
+## 19.0 (04/01/2025) 
+
+### New Features 
+
+- **Greatly expanded support for the [RESTful Dynamic Web TWAIN Service]({{ site.extended-usage }}restful-api.html).**
+- **PDF Handling**:
+  - Added new PDF Rasterizer Add-On API [`preserveUnmodifiedOnSave`]({{ site.api }}Addon_PDF.html#setreaderoptions) to preserve the size of text-based PDFs when loading and re-saving without modifying the pages with DWT.
+  - Added new PDF Rasterizer Add-On API [`IsRasterizationRequired()`]({{ site.api }}Addon_PDF.html#israsterizationrequired). This API returns true if the PDF Rasterizer Add-On is needed to process the PDF. Note that this requires a license for the PDF Rasterizer Add-On.
+- **Cross-platform support**: Added macOS and Linux platform support for DWT Barcode Reader Add-On version 9.6.
+- **Error messages**: Added more informative error messages with the new [`ErrorCause`]({{ site.api }}WebTwain_Util.html#errorcause) API.
+- **Keyboard accessibility**: Added Tab key keyboard navigation in the DWT `Viewer`. The browser now shows a focus outline on the `Viewer` upon tabbing into the `Viewer`, which can be disabled with the new [`{WebTwainObject}.Viewer.disableFocusOutline`]({{ site.api }}WebTwain_Viewer.html#disablefocusoutline) API. (`true`/disabled by default)
+
+### Improvements
+
+- **Security enhancements**: updated third-party libraries to enhance security.
+- **Image rasterization logic**: when both [`ReaderOptions.renderOptions.maxWidth/ ReaderOptions.renderOptions.maxHeight and resolution`]({{ site.api }}Addon_PDF.html#setreaderoptions) are set, if the dimensions of the rendered image exceed the maximum width and height, use the resolution applied during the image rendering process rather than the set resolution. 
+- **New Dynamic Web TWAIN Service installation path for Windows**: moved installation out of `SysWOW64` and `System32` on Windows to prevent rare false positive antivirus scans.
+  - New 64-bit system-wide installations: `C:\Program Files\Dynamsoft (x86)\Dynamic Web TWAIN Service 19`
+  - New 32-bit system-wide installation location: `C:\Program Files\Dynamsoft\Dynamic Web TWAIN Service 19`
+- Changed `ErrorString` messages associated with `ErrorCode -2003` for `HTTPUpload`-related APIs to include HTTP codes in the form of `HTTP process: {message}({HTTP status code})`, e.g. `HTTP process: OK(200)`. This change applies to `ErrorString` for the following APIs:
+
+  - [`{WebTwainObject}.HTTPUpload()`]({{ site.api }}WebTwain_IO.html#httpupload)
+  - [`{WebTwainObject}.HTTPUploadThroughPost()`]({{ site.api }}WebTwain_IO.html#httpuploadthroughpost)
+  - [`{WebTwainObject}.HTTPUploadThroughPostEx()`]({{ site.api }}WebTwain_IO.html#httpuploadthroughpostex)
+  - [`{WebTwainObject}.HTTPUploadAllThroughPostAsMultiPageTIFF()`]({{ site.api }}WebTwain_IO.html#httpuploadallthroughpostasmultipagetiff)
+  - [`{WebTwainObject}.HTTPUploadAllThroughPostAsPDF()`]({{ site.api }}WebTwain_IO.html#httpuploadallthroughpostaspdf)
+  - [`{WebTwainObject}.HTTPUploadThroughPostAsMultiPagePDF()`]({{ site.api }}WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)
+  - [`{WebTwainObject}.HTTPUploadThroughPostAsMultiPageTIFF()`]({{ site.api }}WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)
+
+### Removed Features
+
+- **Dropped support for the PDF Compressor Add-On.**
+- **Dropped out-of-the-box support for ActiveX.**
+- **Dropped support for 32-bit macOS**: now only supporting macOS versions 10.15 and higher.
+- **Discontinued Android support.**
+
+### Big Fixes
+
+- Fixed a CORS request blocked error which also triggers a prompt to install the Dynamic Web TWAIN Service.
+- Fixed Vite runtime errors caused by polyfills and resource path misconfiguration.
+
 ## 18.5.1 (10/22/2024)
 
 ### Improvements 

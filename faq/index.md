@@ -234,7 +234,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}hipaa-compliant.html">Is the Dynamic Web TWAIN SDK HIPAA compliant?</a></li>
 
-<li><a href="{{site.faq}}change-dynamsoft-service-certificate.html">How can I change the certificate of the Dynamsoft Service?</a></li>
+<li><a href="{{site.faq}}change-dynamsoft-service-certificate.html">How can I change the certificate of the Dynamic Web TWAIN Service?</a></li>
 </ol>
 
 ## Addon
@@ -259,12 +259,6 @@ permalink: /faq/
 <li><a href="{{site.faq}}speed-up-barcode-reading-process.html">Is there any way to speed up the barcode reading process?</a></li>
 
 <li><a href="{{site.faq}}webcam-supported-by-webcam-capture-addon.html">What types of webcams does the Webcam Capture addon support</a></li>
-
-<li><a href="{{site.faq}}use-webassembly-to-support-webcam.html">Can I use the WebAssembly Edition of SDK to support webcams instead of using the Webcam Capture addon for Desktop Service Edition?</a></li>
-
-<li><a href="{{site.faq}}camera-play-and-showvideo.html">What is the difference between Camera.play and Camera.showVideo?</a></li>
-
-<li><a href="{{site.faq}}difference-between-camera-and-webcam.html">What is the difference between WebTwain.Addon.Camera and WebTwain.Addon.Webcam?</a></li>
 </ol>
 
 ## Project Deployment and End-user Installation
@@ -282,19 +276,19 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}component-needs-to-be-installed-on-end-user-machine.html">Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?</a></li>
 
-<li><a href="{{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html">What does the Dynamsoft Service do on the end-user machine?</a></li>
+<li><a href="{{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html">What does the Dynamic Web TWAIN Service do on the end-user machine?</a></li>
 
 <li><a href="{{site.faq}}admin-privileges-needed-to-install.html">Are admin privileges required to install the end-user component?</a></li>
 
-<li><a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html">Can I install Dynamsoft Service silently?</a></li>
+<li><a href="{{site.faq}}can-i-install-dynamsoft-service-silently.html">Can I install Dynamic Web TWAIN Service silently?</a></li>
 
 <li><a href="{{site.faq}}deploy-to-all-users.html">Is there an easy way to deploy the end-user components to all users?</a></li>
 
-<li><a href="{{site.faq}}how-to-uninstall-dynamsoft-service.html">How to uninstall Dynamsoft Service?</a></li>
+<li><a href="{{site.faq}}how-to-uninstall-dynamsoft-service.html">How to uninstall Dynamic Web TWAIN Service?</a></li>
 
-<li><a href="{{site.faq}}service-prompting-to-install-repeatedly.html">I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?</a></li>
+<li><a href="{{site.faq}}service-prompting-to-install-repeatedly.html">I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?</a></li>
 
-<li><a href="{{site.faq}}service-installation-issue.html">Dynamsoft Service installation and uninstallation issue</a></li>
+<li><a href="{{site.faq}}service-installation-issue.html">Dynamic Web TWAIN Service installation and uninstallation issue</a></li>
 
 <li><a href="{{site.faq}}service-backward-compatibility.html">Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?</a></li>
 
@@ -317,7 +311,7 @@ permalink: /faq/
 
 <li><a href="{{site.faq}}find-SDK-version.html">How do I know which SDK version I am using?</a></li>
 
-<li><a href="{{site.faq}}download-service-only.html">Where can I download the Dynamsoft Service installers only?</a></li>
+<li><a href="{{site.faq}}download-service-only.html">Where can I download the Dynamic Web TWAIN Service installers only?</a></li>
 </ol>
 
 ## Error Troubleshooting

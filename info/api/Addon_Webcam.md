@@ -49,7 +49,6 @@ CaptureImage(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -57,7 +56,6 @@ CaptureImage(
 </tr>
 
 <tr>
-<td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -85,7 +83,6 @@ GetSourceList(): string[];
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -93,7 +90,6 @@ GetSourceList(): string[];
 </tr>
 
 <tr>
-<td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -125,7 +121,6 @@ SelectSource(name: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -133,7 +128,6 @@ SelectSource(name: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -165,7 +159,6 @@ When you close the camera, the video stream will stop at the last frame.
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -173,7 +166,6 @@ When you close the camera, the video stream will stop at the last frame.
 </tr>
 
 <tr>
-<td align="center">v10.2+ </td>
 <td align="center">v10.2+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -213,7 +205,6 @@ PlayVideo(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -221,7 +212,6 @@ PlayVideo(
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -249,7 +239,6 @@ PauseVideo(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -257,7 +246,6 @@ PauseVideo(): boolean;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -285,7 +273,6 @@ StopVideo(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -293,7 +280,6 @@ StopVideo(): boolean;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -333,7 +319,6 @@ GetCameraControlPropertySetting(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -341,7 +326,6 @@ GetCameraControlPropertySetting(
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -375,7 +359,6 @@ GetCameraControlPropertyMoreSetting(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -383,7 +366,6 @@ GetCameraControlPropertyMoreSetting(
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -423,7 +405,6 @@ SetCameraControlPropertySetting(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -431,7 +412,6 @@ SetCameraControlPropertySetting(
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -465,7 +445,6 @@ GetVideoPropertySetting(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -473,7 +452,6 @@ GetVideoPropertySetting(
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -507,7 +485,6 @@ GetVideoPropertyMoreSetting(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -515,7 +492,6 @@ GetVideoPropertyMoreSetting(
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -555,7 +531,6 @@ SetVideoPropertySetting(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -563,7 +538,6 @@ SetVideoPropertySetting(
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -591,7 +565,6 @@ GetFrameRate(): FrameRate;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -599,7 +572,6 @@ GetFrameRate(): FrameRate;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v14.3.1+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -627,7 +599,6 @@ GetMediaType(): MediaType;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -635,7 +606,6 @@ GetMediaType(): MediaType;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -663,7 +633,6 @@ GetResolution(): Resolution;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -671,7 +640,6 @@ GetResolution(): Resolution;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -703,7 +671,6 @@ SetFrameRate(rate: number): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -711,7 +678,6 @@ SetFrameRate(rate: number): boolean;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -743,7 +709,6 @@ SetMediaType(type: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -751,7 +716,6 @@ SetMediaType(type: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -783,7 +747,6 @@ SetResolution(resolution: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -791,7 +754,6 @@ SetResolution(resolution: string): boolean;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -831,7 +793,6 @@ SetVideoRotateMode(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -839,7 +800,6 @@ SetVideoRotateMode(
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -867,7 +827,6 @@ GetFrameURL(): string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -875,7 +834,6 @@ GetFrameURL(): string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v14.3.1+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>
@@ -903,7 +861,6 @@ GetFramePartURL(): string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -911,7 +868,6 @@ GetFramePartURL(): string;
 </tr>
 
 <tr>
-<td align="center">v14.3.1+ </td>
 <td align="center">v14.3.1+ </td>
 <td align="center">not supported </td>
 <td align="center">not supported </td>

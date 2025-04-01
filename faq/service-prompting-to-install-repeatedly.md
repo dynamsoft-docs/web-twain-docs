@@ -2,23 +2,23 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?
+title: I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, install, repeatedly
-breadcrumbText: I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?
-description: I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?
+breadcrumbText: I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?
+description: I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?
 permalink: /faq/service-prompting-to-install-repeatedly.html
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
 https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-# I have installed the Dynamsoft Service on an end-user machine but still got asked to install it repeatedly. Why?
+# I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?
 
 #### There are a few possible causes
 
-1. The Dynamsoft Service is not installed properly.
+1. The Dynamic Web TWAIN Service (also called "Dynamsoft Service") is not installed properly.
 
-2. The Dynamsoft Service is installed correctly but not started.
+2. The Dynamic Web TWAIN Service is installed correctly but not started.
 
 3. The requests sent to the Service are redirected because you are using a proxy server on IE.
 
@@ -34,9 +34,9 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 #### The respective fixes are listed below
 
-1. Check the path `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have <a href="{{site.indepth}}deployment/service.html#related-files-and-folders" target="_blank">the correct files</a>.
+1. Check the path `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}` (for v19.0+) or `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have <a href="{{site.indepth}}deployment/service.html#related-files-and-folders" target="_blank">the correct files</a>.
 
-2. Check `Local Services` and make sure the Dynamsoft Service is listed and Running.
+2. Check `Local Services` and make sure the Dynamic Web TWAIN Service is listed and Running.
 
 3. On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`, uncheck 'Include all sites that bypass the proxy server'  
    ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1]({{site.assets}}imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1.png)

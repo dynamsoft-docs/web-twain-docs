@@ -45,7 +45,7 @@ Once the main JS files are loaded in, the initialization process moves to load a
 
 The following files which can be found in the **Resources** folder are required:
 
-- `dynamsoft.webtwain.install.js`: used to configure the dialogs which show up when the Dynamsoft Service is not installed or needs upgrade, etc. This file is automatically loaded when the code in `dynamsoft.webtwain.initiate.js` executes.
+- `dynamsoft.webtwain.install.js`: used to configure the dialogs which show up when the Dynamic Web TWAIN Service is not installed or needs upgrade, etc. This file is automatically loaded when the code in `dynamsoft.webtwain.initiate.js` executes.
 - `src/dynamsoft.viewer.js`, `src/dynamsoft.viewer.css`, `src/dynamsoft.webtwain.css`: used to build the viewer component of Dynamic Web TWAIN, as well as define the CSS of the other UI elements of the library.
 
 ## Creating the WebTwain instance

@@ -64,16 +64,16 @@ tree_list:
       path: /extended-usage/file-import.html
     - name: Configuring System Messages
       path: /extended-usage/system-message-configuration.html
-    - name: Set Up the Dynamsoft Service 
+    - name: Set Up the Dynamic Web TWAIN Service 
       path: /extended-usage/dynamsoft-service-configuration.html
     - name: UI Customization
       path: /extended-usage/ui-customization.html
+    - name: Using the DWT RESTful API
+      path: /extended-usage/restful-api.html
     - name: Barcode Recognition
       path: /extended-usage/barcode-processing.html
     - name: PDF Handling
       path: /extended-usage/pdf-processing.html
-    #- name: PDF Compressor (Beta) 
-    #  path: /extended-usage/pdf-compression.html
     - name: Buffer Caching
       path: /extended-usage/buffer-caching.html
     - name: Remote Scan
@@ -88,7 +88,7 @@ tree_list:
   #     #   path: /getstarted/helloworld.html
   #     - name: License
   #       path: /about/license.html
-  #     - name: Set up Dynamsoft Service 
+  #     - name: Set up Dynamic Web TWAIN Service 
   #       path: /indepth/deployment/service.html
   #     - name: Deploy to Server
   #       path: /indepth/deployment/server.html

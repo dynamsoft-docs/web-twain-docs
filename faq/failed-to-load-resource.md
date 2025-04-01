@@ -15,11 +15,11 @@ permalink: /faq/failed-to-load-resource.html
 
 ### Symptom 
 
-You get an error message that says **"Failed to load resource: net::ERR_CERT_DATE_INVALID https://local.dynamsoft.com:18623/f/VersionInfo?ts=XXXXXXXXXXXX"**. And the browser keeps asking to install the Dynamsoft Service. 
+You get an error message that says **"Failed to load resource: net::ERR_CERT_DATE_INVALID https://local.dynamsoft.com:18623/f/VersionInfo?ts=XXXXXXXXXXXX"**. And the browser keeps asking to install the Dynamic Web TWAIN Service (also called "Dynamsoft Service"). 
 
 ### Cause 
 
-By default, “127.0.0.1” is used for service connection. "127.0.0.1" uses a self-signed certificate because it is an internal IP address, if your environment requires high level security, self-signed certificates may not be accepted. Moreover, Android OS or Chrome OS does not accept connection between browsers and Dynamsoft Service via "127.0.0.1".
+By default, “127.0.0.1” is used for service connection. "127.0.0.1" uses a self-signed certificate because it is an internal IP address, if your environment requires high level security, self-signed certificates may not be accepted. Moreover, Android OS or Chrome OS does not accept connection between browsers and Dynamic Web TWAIN Service via "127.0.0.1".
 
 
 In the case that you have used our expired certificate - local.dynamsoft.com, you will need to update to the latest VeriSign’ed certificate. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>January 9th, 2023</font> and the latest certificate will expire on <font color=red>December 8th, 2023</font>
@@ -40,9 +40,9 @@ In the case that you have used our expired certificate - local.dynamsoft.com, yo
   1. (**<u>Recommended</u>**) Revert back to the self-signed certificate for "127.0.0.1". Dynamsoft understands the importance of [information security](https://www.dynamsoft.com/Products/Dynamsoft_Security_Whitepaper.pdf) and are committed to remaining one of the most security-compliant companies in the industry. Starting from April 9,2021, Dynamsoft becomes ISO 27001 certified. Although a self-sign certificate is being used all connections are limited to the device itself (127.0.0.1) which ensures security in most cases.
 
   2. If you have to use "local.dynamsoft.com", the following methods can be taken:
-        - Method 1 (**<u>Recommended</u>**). Take advantage of the new feature -- **Remote Scan** which released in v18.0. With Remote Scan, you can limit the number of Dynamsoft Service Installations to a minimum. For more details, please refer to [What is Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/).
+        - Method 1 (**<u>Recommended</u>**). Take advantage of the new feature -- **Remote Scan** which released in v18.0. With Remote Scan, you can limit the number of Dynamic Web TWAIN Service Installations to a minimum. For more details, please refer to [What is Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/).
         
-        - Method 2. If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under **`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64)\cert`**. Then restart Dynamsoft Service.
+        - Method 2. If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under **`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64_{version number})\cert`** (from v19.0+, the path is `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}\cert`). Then restart Dynamic Web TWAIN Service.
             > Note: the new certificate from Dynamsoft will expire on <font color=red>December 8th, 2023</font>. This means you must update the certificate again after this certificate expires.
 
         - Method 3. <a href="{{site.about}}getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side. Please specify the exact service version build number found from the version your client currently has installed.

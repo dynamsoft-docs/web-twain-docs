@@ -13,13 +13,6 @@ permalink: /info/api/WebTwain_IO.html
 
 The properties and methods on this page live in the namespace {WebTwainObject}. {WebTwainObject} denotes the `WebTwain` instance. Learn about [how to create a web twain object]({{site.indepth}}features/initialize.html#creating-the-webtwain-instance).
 
-<div class="multi-panel-switching-prefix"></div>
-
-- [Desktop Service](#desktop) 
-- [Android Service](#android) 
-
-<div class="multi-panel-start"></div>
-
 **Methods**
 
 **Input Methods**
@@ -65,54 +58,6 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 | [`OnGetFilePath`](#ongetfilepath) | [`OnPostLoad`](#onpostload) | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
 
-
-<div class="multi-panel-end">
-
-</div><div class="multi-panel-start"></div>
-
->The Android Service Edition only supports a subset of the APIs available in the Desktop Service Edition. For the APIs that are compatible with both editions, the usage remains the same. To learn how to use the APIs, please refer to the documentation for the Desktop Service Edition.
-
-**Methods**
-
-**Input Methods**
-
-
-| [`LoadImageEx()`](#loadimageex)                   | [`LoadImageFromBase64Binary()`](#loadimagefrombase64binary) | [`LoadImageFromBinary()`](#loadimagefrombinary)         |[`LoadDibFromClipboard()`](#loaddibfromclipboard)|               
-| [`HTTPDownload()`](#httpdownload)                 |[`HTTPDownloadEx()`](#httpdownloadex)                    | [`HTTPDownloadThroughPost()`](#httpdownloadthroughpost)     | [`loadFromLocalStorage()`](#loadfromlocalstorage)|      
-
-**Output Methods**
-
-
-| [`ConvertToBase64()`](#converttobase64)                      | [`ConvertToBlob()`](#converttoblob)                          | [`HTTPUpload()`](#httpupload)                                |
-| [`HTTPUploadThroughPutEx()`](#httpuploadthroughputex)        | [`HTTPUploadThroughPost()`](#httpuploadthroughpost)          | [`HTTPUploadThroughPostEx()`](#httpuploadthroughpostex)      |
-| [`HTTPUploadAllThroughPostAsMultiPageTIFF()`](#httpuploadallthroughpostasmultipagetiff) | [`HTTPUploadAllThroughPostAsPDF()`](#httpuploadallthroughpostaspdf) | [`HTTPUploadThroughPostAsMultiPagePDF()`](#httpuploadthroughpostasmultipagepdf) |
-| [`HTTPUploadThroughPostAsMultiPageTIFF()`](#httpuploadthroughpostasmultipagetiff) | [`SaveAsBMP()`](#saveasbmp)                                  | [`SaveAsJPEG()`](#saveasjpeg)                                |
-| [`SaveAsPDF()`](#saveaspdf)                                  | [`SaveAsPNG()`](#saveaspng)                                  | [`SaveAsTIFF()`](#saveastiff)                                |
-| [`SaveSelectedImagesAsMultiPagePDF()`](#saveselectedimagesasmultipagepdf) | [`SaveSelectedImagesAsMultiPageTIFF()`](#saveselectedimagesasmultipagetiff) | [`SaveAllAsMultiPageTIFF()`](#saveallasmultipagetiff)        |
-| [`SaveAllAsPDF()`](#saveallaspdf)                            | [`ShareImages()`](#shareimages)                              | [`OutputSelectedAreaAsync()`](#outputselectedareaasync)      |
-| [`httpUploadBlob()`](#httpuploadblob)                        |  [`saveToLocalStorage()`](#savetolocalstorage)                             | 
-
-**Other Methods**
-
-
-| [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield) |
-| [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) |  [`Print()`](#print)                       |[`PrintEx()`](#printex)                       |
-| [`createLocalStorage()`](#createlocalstorage) | [`localStorageExist()`](#localstorageexist)     | [`removeLocalStorage()`](#removelocalstorage) |
-
-**Properties**
-
-
-| [`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)                                                       | [`IfSSL`](#ifssl)                           | [`HTTPPostResponseString`](#httppostresponsestring) |
-|[`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       | [`IfTiffMultiPage`](#iftiffmultipage)                           |
-| [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) |                    
-
-**Events**
-
-
-|  [`OnPostLoad`](#onpostload)      | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
-
-<div class="multi-panel-end"></div>
-
 ---
 
 ## LoadImage()  
@@ -150,21 +95,17 @@ LoadImage(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -225,21 +166,17 @@ LoadImageEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -326,21 +263,17 @@ LoadImageFromBase64Binary(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -411,21 +344,17 @@ LoadImageFromBinary(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -494,21 +423,17 @@ LoadDibFromClipboard(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.1+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -559,7 +484,6 @@ RegisterEvent(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -567,7 +491,6 @@ RegisterEvent(
 </tr>
 
 <tr>
-<td align="center">v8.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
@@ -614,7 +537,6 @@ RegisterEvent(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -622,7 +544,6 @@ RegisterEvent(
 </tr>
 
 <tr>
-<td align="center">v6.3+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
@@ -675,7 +596,6 @@ FTPDownload(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -683,7 +603,6 @@ FTPDownload(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -731,7 +650,6 @@ FTPDownloadEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -739,7 +657,6 @@ FTPDownloadEx(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -807,7 +724,6 @@ FTPUpload(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -815,7 +731,6 @@ FTPUpload(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -889,7 +804,6 @@ FTPUploadEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -897,7 +811,6 @@ FTPUploadEx(
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
@@ -942,7 +855,6 @@ FTPUploadAllAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -950,7 +862,6 @@ FTPUploadAllAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -995,7 +906,6 @@ FTPUploadAllAsPDF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1003,7 +913,6 @@ FTPUploadAllAsPDF(
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
 <td align="center">v4.0+ </td>
@@ -1047,7 +956,6 @@ FTPUploadAsMultiPagePDF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1055,7 +963,6 @@ FTPUploadAsMultiPagePDF(
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -1101,7 +1008,6 @@ FTPUploadAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1109,7 +1015,6 @@ FTPUploadAsMultiPageTIFF(
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -1137,7 +1042,6 @@ FTPUserName: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1145,7 +1049,6 @@ FTPUserName: string;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1173,7 +1076,6 @@ FTPPassword: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1181,7 +1083,6 @@ FTPPassword: string;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1209,7 +1110,6 @@ FTPPort: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1217,7 +1117,6 @@ FTPPort: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
@@ -1245,7 +1144,6 @@ IfPASVMode: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1253,7 +1151,6 @@ IfPASVMode: boolean;
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
 <td align="center">v6.0+ </td>
@@ -1325,12 +1222,10 @@ HTTPDownload(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1338,8 +1233,6 @@ HTTPDownload(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v4.0+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -1405,12 +1298,10 @@ HTTPDownloadEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1418,8 +1309,6 @@ HTTPDownloadEx(
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
 <td align="center">v5.0+ </td>
-<td align="center">v5.0+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1494,21 +1383,17 @@ HTTPDownloadThroughPost(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -1571,21 +1456,17 @@ HTTPUpload(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v18.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -1662,12 +1543,10 @@ HTTPUploadThroughPutEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1675,8 +1554,6 @@ HTTPUploadThroughPutEx(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">v5.0+</td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1724,12 +1601,10 @@ HTTPUploadThroughPost(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1737,8 +1612,6 @@ HTTPUploadThroughPost(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v4.0+</td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1824,12 +1697,10 @@ HTTPUploadThroughPostEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1837,8 +1708,6 @@ HTTPUploadThroughPostEx(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">v5.0+</td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1890,12 +1759,10 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1903,8 +1770,6 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
 <td align="center">v4.0+</td>
-<td align="center">v4.0+</td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -1956,12 +1821,10 @@ HTTPUploadAllThroughPostAsPDF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -1969,8 +1832,6 @@ HTTPUploadAllThroughPostAsPDF(
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
-<td align="center">v5.0+</td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -2022,12 +1883,10 @@ HTTPUploadThroughPostAsMultiPagePDF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2035,8 +1894,6 @@ HTTPUploadThroughPostAsMultiPagePDF(
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
-<td align="center">v6.0+</td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -2088,12 +1945,10 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -2101,8 +1956,6 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
-<td align="center">v6.0+</td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -2166,7 +2019,6 @@ httpUploadBlob(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2174,7 +2026,6 @@ httpUploadBlob(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v18.5+ </td>
 <td align="center">v18.5+ </td>
 <td align="center">v18.5+ </td>
@@ -2207,7 +2058,6 @@ HttpFieldNameOfUploadedImage: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2215,7 +2065,6 @@ HttpFieldNameOfUploadedImage: string;
 </tr>
 
 <tr>
-<td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
 <td align="center">v6.0+</td>
@@ -2243,7 +2092,6 @@ HTTPPort: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2251,7 +2099,6 @@ HTTPPort: number;
 </tr>
 
 <tr>
-<td align="center">v4.2.1+</td>
 <td align="center">v4.2.1+</td>
 <td align="center">v4.2.1+</td>
 <td align="center">v4.2.1+</td>
@@ -2279,7 +2126,6 @@ IfSSL: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2287,7 +2133,6 @@ IfSSL: boolean;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
@@ -2315,7 +2160,6 @@ readonly HTTPPostResponseString: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2323,7 +2167,6 @@ readonly HTTPPostResponseString: string;
 </tr>
 
 <tr>
-<td align="center">v3.0.3+</td>
 <td align="center">v3.0.3+</td>
 <td align="center">v3.0.3+</td>
 <td align="center">v3.0.3+</td>
@@ -2351,7 +2194,6 @@ MaxUploadImageSize: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2359,7 +2201,6 @@ MaxUploadImageSize: number;
 </tr>
 
 <tr>
-<td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
 <td align="center">v5.2+</td>
@@ -2391,7 +2232,6 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2399,7 +2239,6 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 </tr>
 
 <tr>
-<td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
@@ -2447,7 +2286,6 @@ ConvertToBase64(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2455,7 +2293,6 @@ ConvertToBase64(
 </tr>
 
 <tr>
-<td align="center">v18.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
@@ -2522,7 +2359,6 @@ ConvertToBlob(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2530,7 +2366,6 @@ ConvertToBlob(
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v13.0+</td>
 <td align="center">v13.0+</td>
 <td align="center">v13.0+</td>
@@ -2592,17 +2427,13 @@ OutputSelectedAreaAsync(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">N/A</td>
-<td align="center">v18.4+</td>
 <td align="center">v18.4+</td>
 <td align="center">v18.4+</td>
 <td align="center">v18.4+</td>
@@ -2653,21 +2484,17 @@ SaveAsBMP(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2718,21 +2545,17 @@ SaveAsJPEG(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2783,21 +2606,17 @@ SaveAsPDF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2850,21 +2669,17 @@ SaveAsPNG(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2903,21 +2718,17 @@ SaveAsTIFF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -2976,21 +2787,17 @@ SaveAllAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v4.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3039,21 +2846,17 @@ SaveAllAsPDF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v5.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3102,21 +2905,17 @@ SaveSelectedImagesAsMultiPagePDF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3165,21 +2964,17 @@ SaveSelectedImagesAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3220,7 +3015,6 @@ saveBlob(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3228,7 +3022,6 @@ saveBlob(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v18.5+ </td>
 <td align="center">v18.5+ </td>
 <td align="center">v18.5+ </td>
@@ -3241,54 +3034,6 @@ saveBlob(
 **Usage notes**
 
 Supported blob type: `image/jpeg`, `image/png`, `image/bmp`, `image/tiff`, `application/pdf`, `image/jpg`, `image/tif`.
-
-
-
----
-
-## ShareImages()
-
-Shares images using Android's built in share functionality. 
-
-**Syntax**
-```javascript
-ShareImages(
-    fileName: string,
-    indices: number[],
-    type: Dynamsoft.DWT.EnumDWT_ImageType
-): Promise< void>; 
-```
-If `indicies` is an array, the behavour is dependant on `type`:
-
- - If type is set to PDF or TIFF, a single multi-page file is shared
-
- - If any other type is set, mutiple single page files will be shared in the format of filename1.filetype, filename2.filetype, etc.
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
-</tr>
-
-<tr>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">not supported</td>
-<td align="center">v18.2+</td>
-</tr>
-
-</table>
-</div>
 
 ---
 
@@ -3308,7 +3053,6 @@ ClearTiffCustomTag(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3316,7 +3060,6 @@ ClearTiffCustomTag(): boolean;
 </tr>
 
 <tr>
-<td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
@@ -3356,7 +3099,6 @@ SetTiffCustomTag(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3364,7 +3106,6 @@ SetTiffCustomTag(
 </tr>
 
 <tr>
-<td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
@@ -3406,7 +3147,6 @@ ClearAllHTTPFormField(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3414,7 +3154,6 @@ ClearAllHTTPFormField(): boolean;
 </tr>
 
 <tr>
-<td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
@@ -3462,7 +3201,6 @@ SetHTTPFormField(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3470,7 +3208,6 @@ SetHTTPFormField(
 </tr>
 
 <tr>
-<td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
 <td align="center">v5.0+</td>
@@ -3507,7 +3244,6 @@ SetHTTPHeader(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3515,7 +3251,6 @@ SetHTTPHeader(
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
@@ -3552,7 +3287,6 @@ SetUploadSegment(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3560,7 +3294,6 @@ SetUploadSegment(
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v12.1+</td>
 <td align="center">v12.1+</td>
 <td align="center">v12.1+</td>
@@ -3576,8 +3309,6 @@ SetUploadSegment(
 
 Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory. 
 
-**_Note:_** This does not affect the Android Service edition. The dialog will always show not matter what `IfShowFileDialog` is set to.
-
 **Syntax**
 
 ```javascript
@@ -3590,21 +3321,17 @@ IfShowFileDialog: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v6.2+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -3632,12 +3359,10 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
@@ -3645,8 +3370,6 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
 <td align="center">v5.2+ </td>
-<td align="center">v5.2+ </td>
-<td align="center">v18.2+ </td>
 </tr>
 
 </table>
@@ -3673,21 +3396,17 @@ IfShowProgressBar: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android Service</td>
 </tr>
 
 <tr>
-<td align="center">v8.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v12.1+</td>
-<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -3738,7 +3457,6 @@ ShowFileDialog(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3746,7 +3464,6 @@ ShowFileDialog(
 </tr>
 
 <tr>
-<td align="center">v8.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
@@ -3821,7 +3538,6 @@ Print(useOSPrintWindow?: boolean): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3829,7 +3545,6 @@ Print(useOSPrintWindow?: boolean): boolean;
 </tr>
 
 <tr>
-<td align="center">v6.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -3865,7 +3580,6 @@ PrintEx(indices: number[]): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3873,7 +3587,6 @@ PrintEx(indices: number[]): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported  </td>
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+ </td>
@@ -3915,7 +3628,6 @@ A Promise object which will be resolved with the uid string which will be used a
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3923,7 +3635,6 @@ A Promise object which will be resolved with the uid string which will be used a
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
@@ -3937,9 +3648,9 @@ A Promise object which will be resolved with the uid string which will be used a
 
 - If `password` is not specified, the returned `uid` string will be set as the password of the storage folder.
 - The local directory of the created storage folder is under 
-  - Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`
-  - macOS: `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`
-  - Linux: `/opt/dynamsoft/DynamsoftService/storage`
+  - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\storage`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`)
+  - macOS: `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > storage`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`)
+  - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/storage`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/storage`)
 - The creation will not be successful, if the remaining disk space is less than 
 
   | System      | Remaining Disk Space |
@@ -3949,7 +3660,6 @@ A Promise object which will be resolved with the uid string which will be used a
   | macOS 32bit | < 1.2GB              |
   | macOS 64bit | < 4GB                |
   | Linux       | < 4GB                |
-  | Android     | < 100MB              |
 
 ---
 
@@ -3973,7 +3683,6 @@ localStorageExist(uid: string):Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -3981,7 +3690,6 @@ localStorageExist(uid: string):Promise<boolean>;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
@@ -4028,7 +3736,6 @@ A Promise object which will be resolved with the array of image ids which are sa
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4036,7 +3743,6 @@ A Promise object which will be resolved with the array of image ids which are sa
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
@@ -4058,7 +3764,6 @@ A Promise object which will be resolved with the array of image ids which are sa
   | macOS 32bit | < 1.2GB              |
   | macOS 64bit | < 4GB                |
   | Linux       | < 4GB                |
-  | Android     | < 100MB              |
 
 ---
 
@@ -4093,7 +3798,6 @@ A Promise object which will be resolved with the array of object which contains 
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4101,7 +3805,6 @@ A Promise object which will be resolved with the array of object which contains 
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
@@ -4140,7 +3843,6 @@ removeLocalStorage(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4148,7 +3850,6 @@ removeLocalStorage(
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
@@ -4176,7 +3877,6 @@ JPEGQuality: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4184,7 +3884,6 @@ JPEGQuality: number;
 </tr>
 
 <tr>
-<td align="center">v5.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -4218,7 +3917,6 @@ IfTiffMultiPage: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4226,7 +3924,6 @@ IfTiffMultiPage: boolean;
 </tr>
 
 <tr>
-<td align="center">v3.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -4262,7 +3959,6 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4270,7 +3966,6 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 </tr>
 
 <tr>
-<td align="center">v4.0+ </td>
 <td align="center">v10.0+ </td>
 <td align="center">v11.0+ </td>
 <td align="center">v11.0+ </td>
@@ -4308,7 +4003,6 @@ IfSortBySelectionOrder: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -4316,7 +4010,6 @@ IfSortBySelectionOrder: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v18.5+ </td>
 <td align="center">v18.5+ </td>
 <td align="center">v18.5+ </td>

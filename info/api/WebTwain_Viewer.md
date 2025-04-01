@@ -13,8 +13,6 @@ needGenerateH3Content: true
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
-> All APIs on this page support Android Service from version 18.2.
-
 **Methods**
 
 
@@ -29,7 +27,7 @@ needGenerateH3Content: true
 
 
 | [`acceptDrop`](#acceptdrop) | [`allowSlide`](#allowslide) | [`allowPageDragging`](#allowpagedragging) | [`autoChangeIndex`](#autochangeindex)|
-| [`background`](#background)| [`border`](#border) | [`cursor`](#cursor) | [`height`](#height) |
+| [`background`](#background)| [`border`](#border) | [`cursor`](#cursor) | [`disableFocusOutline`](#disablefocusoutline)  | [`height`](#height) |
 | [`idPostfix`](#idpostfix) | [`ifAutoScroll`](#ifautoscroll) | [`innerBorder`](#innerborder) | [`pageMargin`](#pagemargin) |
 | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | 
 | [`selectionMode`](#selectionmode) | [`singlePageMode`](#singlepagemode) | [`width`](#width) | [`zoom`](#zoom) |
@@ -87,7 +85,6 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -95,7 +92,6 @@ Dynamsoft.DWT.CreateDWTObjectEx(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
 <td align="center">v17.2+ </td>
@@ -127,7 +123,6 @@ clearSelectedAreas(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -135,7 +130,6 @@ clearSelectedAreas(): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -185,7 +179,6 @@ createCustomElement(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -193,7 +186,6 @@ createCustomElement(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -252,7 +244,6 @@ createImageEditor(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -260,7 +251,6 @@ createImageEditor(
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -553,7 +543,6 @@ createThumbnailViewer(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -561,7 +550,6 @@ createThumbnailViewer(
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -662,7 +650,6 @@ first():number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -670,7 +657,6 @@ first():number;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -710,7 +696,6 @@ fitWindow(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -718,7 +703,6 @@ fitWindow(
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -769,7 +753,6 @@ gotoPage(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -777,7 +760,6 @@ gotoPage(
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -811,7 +793,6 @@ hide(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -819,7 +800,6 @@ hide(): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -853,7 +833,6 @@ last():number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -861,7 +840,6 @@ last():number;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -895,7 +873,6 @@ next(): number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -903,7 +880,6 @@ next(): number;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -938,7 +914,6 @@ previous(): number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -946,7 +921,6 @@ previous(): number;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -981,7 +955,6 @@ render(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -989,7 +962,6 @@ render(): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1036,7 +1008,6 @@ setButtonClass(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1044,7 +1015,6 @@ setButtonClass(
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.0+ </td>
 <td align="center">v16.0+ </td>
 <td align="center">v16.0+ </td>
@@ -1088,7 +1058,6 @@ setSelectedAreas(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1096,7 +1065,6 @@ setSelectedAreas(
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1158,7 +1126,6 @@ setViewMode(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1166,7 +1133,6 @@ setViewMode(
 </tr>
 
 <tr>
-<td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
 <td align="center">v16.1+ </td>
@@ -1205,7 +1171,6 @@ show(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1213,7 +1178,6 @@ show(): boolean;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1247,7 +1211,6 @@ unbind(): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1255,7 +1218,6 @@ unbind(): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1293,7 +1255,6 @@ acceptDrop: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1301,7 +1262,6 @@ acceptDrop: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1333,7 +1293,6 @@ allowSlide: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1341,7 +1300,6 @@ allowSlide: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1377,7 +1335,6 @@ allowPageDragging: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1385,7 +1342,6 @@ allowPageDragging: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
@@ -1421,7 +1377,6 @@ background: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1429,7 +1384,6 @@ background: string;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1467,7 +1421,6 @@ border: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1475,7 +1428,6 @@ border: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1513,7 +1465,6 @@ cursor: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1521,7 +1472,6 @@ cursor: string;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1552,6 +1502,40 @@ DWTObject.Viewer.cursor = "crosshair";
 
 ---
 
+## disableFocusOutline
+
+Control whether the viewer removes the focus border after selecting with the Tab key - defaults to `true` to remove the focus border.
+
+**Syntax**
+
+```typescript
+disableFocusOutline: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
+<td align="center">v19.0+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
 ## height
 
 Return or set the height of the viewer.
@@ -1568,7 +1552,6 @@ height: number | string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1576,7 +1559,6 @@ height: number | string;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1618,7 +1600,6 @@ readonly idPostfix: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1626,7 +1607,6 @@ readonly idPostfix: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1660,7 +1640,6 @@ ifAutoScroll: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1668,7 +1647,6 @@ ifAutoScroll: string;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1701,7 +1679,6 @@ innerBorder: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1709,7 +1686,6 @@ innerBorder: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1747,7 +1723,6 @@ pageMargin: number | string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1755,7 +1730,6 @@ pageMargin: number | string;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1798,7 +1772,6 @@ selectedAreaBorderColor: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1806,7 +1779,6 @@ selectedAreaBorderColor: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1844,7 +1816,6 @@ selectedPageBackground: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1852,7 +1823,6 @@ selectedPageBackground: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1890,7 +1860,6 @@ selectedPageBorder: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1898,7 +1867,6 @@ selectedPageBorder: string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1938,7 +1906,6 @@ selectionRectAspectRatio: number | string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1946,7 +1913,6 @@ selectionRectAspectRatio: number | string;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -1984,7 +1950,6 @@ singlePageMode: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1992,7 +1957,6 @@ singlePageMode: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2042,17 +2006,13 @@ updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): 
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
 <td align="center">H5(Linux)</td>
-<td align="center">Android</td>
 </tr>
 
 <tr>
-<td align="center">N/A </td>
-<td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
 <td align="center">v18.4+ </td>
@@ -2098,7 +2058,6 @@ width: number | string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2106,7 +2065,6 @@ width: number | string;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2148,7 +2106,6 @@ zoom: number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2156,7 +2113,6 @@ zoom: number;
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2194,7 +2150,6 @@ autoChangeIndex: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2202,7 +2157,6 @@ autoChangeIndex: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v17.0+ </td>
 <td align="center">v17.0+</td>
 <td align="center">v17.0+</td>
@@ -2244,7 +2198,6 @@ updateCheckboxStyle(checkboxSettings?: CheckboxSettings): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2252,7 +2205,6 @@ updateCheckboxStyle(checkboxSettings?: CheckboxSettings): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
@@ -2284,7 +2236,6 @@ updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2292,7 +2243,6 @@ updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
 <td align="center">v17.3+ </td>
@@ -2321,7 +2271,6 @@ selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2329,7 +2278,6 @@ selectionMode: Dynamsoft.DWT.EnumDWT_SelectionMode | number;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v17.3+</td>
 <td align="center">v17.3+</td>
 <td align="center">v17.3+</td>
@@ -2380,7 +2328,6 @@ zoomOrigin: {x: string; y: string;};
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2388,7 +2335,6 @@ zoomOrigin: {x: string; y: string;};
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.3+</td>
 <td align="center">v18.3+</td>
 <td align="center">v18.3+</td>
@@ -2439,7 +2385,7 @@ on(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
+
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2447,7 +2393,6 @@ on(
 </tr>
 
 <tr>
-<td align="center">v16.2+ (partially supported) </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2460,7 +2405,6 @@ on(
 **Usage notes**
 
 The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on desktop browsers.
-The events `click`, `dbclick`, `mousemove`, `pageAreaSelected`, and `pageAreaUnselected` are supported in ActiveX.
 
 **Example**
 
@@ -2531,7 +2475,6 @@ off(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2539,7 +2482,6 @@ off(
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2586,7 +2528,6 @@ on('pageAreaSelected',
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2594,7 +2535,6 @@ on('pageAreaSelected',
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2638,7 +2578,6 @@ on('pageAreaUnselected',
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2646,7 +2585,6 @@ on('pageAreaUnselected',
 </tr>
 
 <tr>
-<td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2694,7 +2632,6 @@ on('pageRendered',
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2702,7 +2639,6 @@ on('pageRendered',
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
@@ -2747,7 +2683,6 @@ on('resize',
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -2755,7 +2690,6 @@ on('resize',
 </tr>
 
 <tr>
-<td align="center">not supported </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>
 <td align="center">v16.2+ </td>

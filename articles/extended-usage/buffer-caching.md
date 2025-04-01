@@ -2,15 +2,15 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN SDK Guide - Buffer Caching
-keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamsoft Service, caching, buffer,
-breadcrumbText: Dynamsoft Service
-description: Dynamic Web TWAIN SDK Documentation Dynamsoft Service Page
+keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamic Web TWAIN Service, caching, buffer,
+breadcrumbText: Dynamic Web TWAIN Service
+description: Dynamic Web TWAIN SDK Documentation Dynamic Web TWAIN Service Page
 permalink: /extended-usage/buffer-caching.html
 ---
 
 # Buffer Caching
 
-The DWT image buffer is controlled by the Dynamsoft Service. The Dynamsoft Service can run in either 32-bit mode or 64-bit mode. Before DWT version 15.0, the service ran in 32-bit mode by default. This meant it could not address more than 2GB of physical memory. <!--We introduced the 64-bit version of the service in DWT version 14.0. -->Starting in version 15.0, the Dynamsoft Service runs as 64-bit by default on 64-bit operating systems, which removes the 2GB memory limit. To limit memory usage, DWT can cache data to disk to free up memory.
+The DWT image buffer is controlled by the Dynamic Web TWAIN Service(formerly known as Dynamsoft Service). The Dynamic Web TWAIN Service can run in either 32-bit mode or 64-bit mode. Before DWT version 15.0, the service ran in 32-bit mode by default. This meant it could not address more than 2GB of physical memory. <!--We introduced the 64-bit version of the service in DWT version 14.0. -->Starting in version 15.0, the Dynamic Web TWAIN Service runs as 64-bit by default on 64-bit operating systems, which removes the 2GB memory limit. To limit memory usage, DWT can cache data to disk to free up memory.
 
 ## Disk Caching
 
@@ -24,17 +24,17 @@ You can also set how much memory `Dynamic Web TWAIN` can use before images start
 
 Although you can scan and load as many images as you like, you may want to handle them in smaller volumes when doing further processing. For example, when dealing with extremely large volumes, you should not try to upload or save the images all at once as that would be too time consuming and prone to errors.
 
-## Save the encrypted image caches in local Dynamsoft Service folder
+## Save the encrypted image caches in local Dynamic Web TWAIN Service folder
 
 In certain scenarios, there may be requirements to store encrypted image caches on a local disk for temporary data storage or backup purposes. For instance, when scanning a large batch of documents, accidentally closing the web page can result in the loss of scanned data, necessitating scanning the documents again. This issue can be mitigated by backing up the data before closing the page.
 
-Starting from version 18.5, Dynamic Web TWAIN introduces a new feature that facilitates developers in securely storing image caches in encrypted form within the Dynamsoft Service folder. This feature offers several advantages:
+Starting from version 18.5, Dynamic Web TWAIN introduces a new feature that facilitates developers in securely storing image caches in encrypted form within the Dynamic Web TWAIN Service(formerly known as Dynamsoft Service) folder. This feature offers several advantages:
 
 - Data is stored securely in encrypted form.
 - The speed of storing data locally and loading it back into the Dynamic Web TWAIN buffer is fast.
 - The stored data remains intact even when the `WebTwain` instance is destroyed.
 
-> Note: Since the storage folder is located within the Dynamsoft Service directory, the stored data will be lost if Dynamsoft Service is uninstalled. Upgrading the Dynamsoft Service will not affect the storage folder.
+> Note: Since the storage folder is located within the Dynamic Web TWAIN Service directory, the stored data will be lost if Dynamic Web TWAIN Service is uninstalled. Upgrading the Dynamic Web TWAIN Service will not affect the storage folder.
 
 ### Create a storage folder
 
@@ -50,9 +50,9 @@ var storageItemUid = await DWTObject.createLocalStorage(folderSettings);
 Please ensure to set a strong password to enhance data security, especially in multi-user login scenarios.
 
 The local directory of the created storage folder is under 
-  - Windows: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`
-  - macOS: `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`
-  - Linux: `/opt/dynamsoft/DynamsoftService/storage`
+  - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\storage`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`)
+  - macOS: `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > storage`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`)
+  - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/storage`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/storage`)
 
 **Save image caches**
 

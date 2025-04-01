@@ -11,7 +11,7 @@ permalink: /extended-usage/system-message-configuration.html
 
 # Configuring System Messages
 
-DWT provides various system messages during all parts of runtime. Some of these messages are errors which are useful for debugging/reporting purposes, such as indicating that the [Dynamsoft Service]({{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html) has not been installed on end user's system. Other messages provide information directly to the end user, such as labelling the image source selection prompt overlay (scanner selection).
+DWT provides various system messages during all parts of runtime. Some of these messages are errors which are useful for debugging/reporting purposes, such as indicating that the [Dynamic Web TWAIN Service]({{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html) has not been installed on end user's system. Other messages provide information directly to the end user, such as labelling the image source selection prompt overlay (scanner selection).
 
 These system messages are configurable. Notably, we recommend changing these system messages for the purposes of translating the default English messages to other localizations.
 
@@ -47,7 +47,7 @@ Dynamsoft.DWT.CustomizableDisplayInfo = {
   // launch
   generalMessages: {
     checkingDWTVersion: "Checking WebTwain version ...",
-    updatingDService: "Dynamsoft Service is updating ...",
+    updatingDService: "Dynamic Web TWAIN Service is updating ...",
     downloadingDWTModule: "Downloading the Dynamic Web TWAIN module.",
     refreshNeeded: "Please REFRESH your browser.",
     downloadNeeded: "Please download and install the Dynamic Web TWAIN.",
@@ -144,8 +144,8 @@ The messages are grouped into categories:
 
 ## Configuring the `_show_install_dialog()` Function
 
-The `Dynamsoft._show_install_dialog()` function defined in the `dynamsoft.webtwain.install.js` resource file generates the [Dynamsoft Service]({{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html) installation dialog box, pictured here:
+The `Dynamsoft._show_install_dialog()` function defined in the `dynamsoft.webtwain.install.js` resource file generates the [Dynamic Web TWAIN Service]({{site.faq}}what-does-dynamsoft-service-do-on-end-user-machine.html) installation dialog box, pictured here:
 
 ![install dialog]({{site.assets}}imgs/Initialization-1.png)
 
-As the dialog box contains instructions for installing the Dynamsoft Service, consider altering the message strings for localization purposes. Generally we discourage directly modifying the resource files, but this dialogue function contains styling and messaging which may be tailored the web application itself. Try not to alter the platform detection logic too greatly, as this may interfere with the Dynamsoft Service installation procedure. Please contact the [support team]({{site.about}}getsupport.html) for any further questions.
+As the dialog box contains instructions for installing the Dynamic Web TWAIN Service, consider altering the message strings for localization purposes. Generally we discourage directly modifying the resource files, but this dialogue function contains styling and messaging which may be tailored the web application itself. Try not to alter the platform detection logic too greatly, as this may interfere with the Dynamic Web TWAIN Service installation procedure. Please contact the [support team]({{site.about}}getsupport.html) for any further questions.

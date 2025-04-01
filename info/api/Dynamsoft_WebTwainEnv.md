@@ -23,9 +23,9 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 
 
 | [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
-| [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`IfUseActiveXForIE10Plus`](#ifuseactivexforie10plus)   |
-| [`JSVersion`](#jsversion)     | [`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |
-| [`UseDefaultViewer`](#usedefaultviewer) | [`IfCheckCORS`](#ifcheckcors)   |                      |
+| [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`JSVersion`](#jsversion)     | 
+|[`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |[`UseDefaultViewer`](#usedefaultviewer) | 
+| [`IfCheckCORS`](#ifcheckcors)   |                      |
 
 
 **Events**
@@ -209,7 +209,6 @@ CreateDWTObject(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -217,7 +216,6 @@ CreateDWTObject(
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
@@ -296,7 +294,6 @@ CreateDWTObjectEx(
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -304,7 +301,6 @@ CreateDWTObjectEx(
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
@@ -364,7 +360,6 @@ DeleteDWTObject(Id: string): boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -372,7 +367,6 @@ DeleteDWTObject(Id: string): boolean;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
 <td align="center">v12.0+</td>
@@ -404,7 +398,6 @@ GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -412,7 +405,6 @@ GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
 </tr>
 
 <tr>
-<td align="center">v10.1+</td>
 <td align="center">v10.1+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -459,7 +451,6 @@ Load(): Promise<void>;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -467,7 +458,6 @@ Load(): Promise<void>;
 </tr>
 
 <tr>
-<td align="center">v10.2+</td>
 <td align="center">v10.2+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -511,7 +501,6 @@ Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -519,7 +508,6 @@ Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>
 </tr>
 
 <tr>
-<td align="center">v1.0+</td>
 <td align="center">v10.0+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -554,7 +542,7 @@ Dynamsoft.DWT.RegisterEvent("OnWebTwainPreExecute", function () {
 
 ## Unload()
 
-Destroys all `WebTwain` instances and cuts off the connection to the Dynamsoft Service.
+Destroys all `WebTwain` instances and cuts off the connection to the Dynamic Web TWAIN Service.
 
 **Syntax**
 
@@ -568,7 +556,6 @@ Unload(): void;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -576,7 +563,6 @@ Unload(): void;
 </tr>
 
 <tr>
-<td align="center">v10.2+</td>
 <td align="center">v10.2+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -668,7 +654,6 @@ AutoLoad: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -676,7 +661,6 @@ AutoLoad: boolean;
 </tr>
 
 <tr>
-<td align="center">v10.2+</td>
 <td align="center">v10.2+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -710,7 +694,6 @@ Please refer to [`Container`]({{site.info}}api/Interfaces.html#Container).
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -718,7 +701,6 @@ Please refer to [`Container`]({{site.info}}api/Interfaces.html#Container).
 </tr>
 
 <tr>
-<td align="center">v10.1+</td>
 <td align="center">v10.1+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -748,7 +730,6 @@ Please refer to [`DisplayInfo`]({{site.info}}api/Interfaces.html#DisplayInfo).
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -756,7 +737,6 @@ Please refer to [`DisplayInfo`]({{site.info}}api/Interfaces.html#DisplayInfo).
 </tr>
 
 <tr>
-<td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
@@ -784,7 +764,6 @@ DeviceFriendlyName: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -792,7 +771,6 @@ DeviceFriendlyName: string;
 </tr>
 
 <tr>
-<td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
@@ -806,7 +784,7 @@ DeviceFriendlyName: string;
 
 ## Host
 
-Specify the target address for the local Dynamsoft Service.
+Specify the target address for the local Dynamic Web TWAIN Service.
 
 **Syntax**
 
@@ -820,7 +798,6 @@ Host: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -828,7 +805,6 @@ Host: string;
 </tr>
 
 <tr>
-<td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
@@ -860,7 +836,6 @@ IfAddMD5InUploadHeader: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -868,7 +843,6 @@ IfAddMD5InUploadHeader: boolean;
 </tr>
 
 <tr>
-<td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -900,7 +874,6 @@ IfConfineMaskWithinTheViewer: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -908,7 +881,6 @@ IfConfineMaskWithinTheViewer: boolean;
 </tr>
 
 <tr>
-<td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
 <td align="center">v14.0+</td>
@@ -921,48 +893,6 @@ IfConfineMaskWithinTheViewer: boolean;
 **Usage Notes**
 
 Default Value: `false`.
-
----
-
-## IfUseActiveXforIE10Plus
-
-This property specifies whether Dynamic Web TWAIN will be loaded using HTML5 or ActiveX when loaded in Internet Explorer 10+. 
-
-**Syntax**
-
-```typescript
-IfUseActiveXForIE10Plus: boolean;
-```
-
-**Availability**
-
-<div class="availability">
-<table>
-
-<tr>
-<td align="center">ActiveX</td>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
-</tr>
-
-<tr>
-<td align="center">v10.3+</td>
-<td align="center">v10.3+</td>
-<td align="center">v11.0+</td>
-<td align="center">v11.0+</td>
-<td align="center">v12.1+</td>
-</tr>
-
-</table>
-</div>
-
-**Usage Notes**
-
-- Default value: `false`. 
-- If set to `true`, ActiveX will be used, else HTML5 will be used.
-- This property needs to be set before Dynamic Web TWAIN loads.
 
 ---
 
@@ -982,7 +912,6 @@ readonly JSVersion: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -990,7 +919,6 @@ readonly JSVersion: string;
 </tr>
 
 <tr>
-<td align="center">v13.1+</td>
 <td align="center">v13.1+</td>
 <td align="center">v13.1+</td>
 <td align="center">v13.1+</td>
@@ -1018,7 +946,6 @@ ProductKey: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1026,7 +953,6 @@ ProductKey: string;
 </tr>
 
 <tr>
-<td align="center">v10.1+</td>
 <td align="center">v10.1+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1066,7 +992,6 @@ ResourcesPath: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1074,7 +999,6 @@ ResourcesPath: string;
 </tr>
 
 <tr>
-<td align="center">v10.1+</td>
 <td align="center">v10.1+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1088,7 +1012,7 @@ ResourcesPath: string;
 
 ## ServiceInstallerLocation
 
-Sets or returns where the path to the Dynamsoft Service installers are hosted.
+Sets or returns where the path to the Dynamic Web TWAIN Service installers are hosted.
 
 **Syntax**
 
@@ -1102,7 +1026,6 @@ ServiceInstallerLocation: string;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1110,7 +1033,6 @@ ServiceInstallerLocation: string;
 </tr>
 
 <tr>
-<td align="center">v18.4+</td>
 <td align="center">v18.4+</td>
 <td align="center">v18.4+</td>
 <td align="center">v18.4+</td>
@@ -1138,7 +1060,6 @@ UseDefaultViewer: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1146,7 +1067,6 @@ UseDefaultViewer: boolean;
 </tr>
 
 <tr>
-<td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
 <td align="center">v16.2+</td>
@@ -1178,7 +1098,6 @@ IfCheckCORS: boolean;
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1186,7 +1105,6 @@ IfCheckCORS: boolean;
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
 <td align="center">v18.5+</td>
@@ -1200,7 +1118,7 @@ IfCheckCORS: boolean;
 
 - Default value: `false`.
 - When set to `true`, if encountering a CORS issue, it will detect the issue more specifically and return the corresponding CORS error.
-- When set to `false`, if encountering a CORS issue, it will solely detect that the Dynamsoft Service is not connected and prompt a service installation window.
+- When set to `false`, if encountering a CORS issue, it will solely detect that the Dynamic Web TWAIN Service is not connected and prompt a service installation window.
 
 ---
 
@@ -1220,7 +1138,6 @@ RegisterEvent("OnWebTwainReady", function () {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1228,7 +1145,6 @@ RegisterEvent("OnWebTwainReady", function () {});
 </tr>
 
 <tr>
-<td align="center">v10.1+</td>
 <td align="center">v10.1+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1269,7 +1185,6 @@ RegisterEvent("OnWebTwainError", function () {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1277,7 +1192,6 @@ RegisterEvent("OnWebTwainError", function () {});
 </tr>
 
 <tr>
-<td align="center">v18.2+</td>
 <td align="center">v18.2+</td>
 <td align="center">v18.2+</td>
 <td align="center">v18.2+</td>
@@ -1325,7 +1239,6 @@ RegisterEvent("OnWebTwainPostExecute", function () {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1333,7 +1246,6 @@ RegisterEvent("OnWebTwainPostExecute", function () {});
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v10.3+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>
@@ -1365,7 +1277,6 @@ RegisterEvent("OnWebTwainPreExecute", function () {});
 <table>
 
 <tr>
-<td align="center">ActiveX</td>
 <td align="center">H5(Windows)</td>
 <td align="center">H5(macOS/TWAIN)</td>
 <td align="center">H5(macOS/ICA)</td>
@@ -1373,7 +1284,6 @@ RegisterEvent("OnWebTwainPreExecute", function () {});
 </tr>
 
 <tr>
-<td align="center">not supported</td>
 <td align="center">v10.3+</td>
 <td align="center">v11.0+</td>
 <td align="center">v11.0+</td>

@@ -22,8 +22,31 @@ To optimize user experience within the Citrix environment, Dynamsoft offers **en
 
 To configure the enhanced mode, please follow the steps below:
 
+<div class="multi-panel-switching-prefix"></div>
+
+- [v19.0+](#19plus)
+- [Versions below 19.0](#19min)
+
+<div class="multi-panel-start"></div>
+
+1. Stop Dynamic Web TWAIN Service
+2. Set EnableEnhancedMode=TRUE in DSConfiguration.ini which is under `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}`
+3. Set Dynamsoft.DWT.IfCheckDCP=true in dynamsoft.webtwain.config.js 
+4. Restart Dynamic Web TWAIN Service
+
+***In this case, initializing the DWT object dynamically is not supported.***
+
+<strong>How to check if Enhanced mode is running</strong>
+
+1. user_config.ini which is under `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}` will list the ports that each user is listening on.
+2. In Network, the DWT port included in the request URL should be 17000 and so on, not 18622 anymore
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
 1. Stop Dynamsoft Service
-2. Set EnableEnhancedMode=TRUE in DSConfiguration.ini which is under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17`
+2. Set EnableEnhancedMode=TRUE in DSConfiguration.ini which is under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}`
 3. Set Dynamsoft.DWT.IfCheckDCP=true in dynamsoft.webtwain.config.js 
 4. Restart Dynamsoft Service
 
@@ -31,5 +54,9 @@ To configure the enhanced mode, please follow the steps below:
 
 <strong>How to check if Enhanced mode is running</strong>
 
-1. user_config.ini which is under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_17` will list the ports that each user is listening on.
+1. user_config.ini which is under `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}` will list the ports that each user is listening on.
 2. In Network, the DWT port included in the request URL should be 17000 and so on, not 18622 anymore
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>

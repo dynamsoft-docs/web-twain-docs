@@ -16,7 +16,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 ### Symptom
 
-Visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+, you may get prompted to download and install the Dynamsoft Service repeatedly.
+Visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+, you may get prompted to download and install the Dynamic Web TWAIN Service (also called "Dynamsoft Service") repeatedly.
 The same issue is also seen in Microsoft Edge 94.0.992.31 - as it uses the same Chromium version 94 as the latest Chrome browser.
 
 In the browser console, you may see the following **error message**
@@ -32,9 +32,9 @@ However, the same issue doesn't exist in Chrome v93 and earlier version or other
 
 Google introduced a new security feature from Chrome v94 to block any requests to private networks from insecure public websites. More detail can be found at [https://developer.chrome.com/blog/private-network-access-update/](https://developer.chrome.com/blog/private-network-access-update/)
 
-Dynamic Web TWAIN utilizes a local service - called 'Dynamsoft Service' to support document scanning from physical scanners. Therefore, your web scan page would need to make requests to localhost or 127.0.0.1 to communicate with the local service. However, if your website is hosted under HTTP, by using or upgrading to Chrome v94, the connection from your insecure public website to the private network (i.e., localhost/127.0.0.1) is blocked.
+Dynamic Web TWAIN utilizes a local service - called 'Dynamic Web TWAIN Service' to support document scanning from physical scanners. Therefore, your web scan page would need to make requests to localhost or 127.0.0.1 to communicate with the local service. However, if your website is hosted under HTTP, by using or upgrading to Chrome v94, the connection from your insecure public website to the private network (i.e., localhost/127.0.0.1) is blocked.
 
-If the web page couldn't connect to the Dynamsoft Service successfully, its default behavior is to prompt the dialog to install the service. That's why your end users would see the dialog appearing repeatedly.
+If the web page couldn't connect to the Dynamic Web TWAIN Service successfully, its default behavior is to prompt the dialog to install the service. That's why your end users would see the dialog appearing repeatedly.
 
 ### Resolution
 
