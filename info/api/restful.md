@@ -120,7 +120,7 @@ Update specified server settings. Some settings require administrator privileges
 
 | Name     | Location | Type          | Required | Restrictions                                                            | Description                                                                                   |
 | -------- | -------- | ------------- | -------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-|body|body|[`ServerSettingsInput`](#serversettingsinput)| no |none|
+|logLevel|body|[`ServerSettingsInput`](#serversettingsinput)| no |none|
 
 #### Request Example
 
@@ -2172,8 +2172,6 @@ We also return websocket protocol info. but not list.
 
 ```
 
-page info
-
 #### Attributes
 
 |Name|Type|Required|Restrictions|Description|
@@ -2193,8 +2191,6 @@ page info
 }
 
 ```
-
-document info
 
 #### Attributes
 
