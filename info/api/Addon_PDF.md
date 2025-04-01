@@ -305,7 +305,7 @@ Use this method before you import a PDF into the viewer with methods such as <a 
    ```javascript
    DWTObject.Addon.PDF.SetReaderOptions({
        convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
-       preserveUnmodifiedOnSave: true
+       preserveUnmodifiedOnSave: true //only available for v19.0+
    });
    ```
 

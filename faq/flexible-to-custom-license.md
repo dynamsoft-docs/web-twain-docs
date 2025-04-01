@@ -13,4 +13,4 @@ permalink: /faq/flexible-to-custom-license.html
 
 ## Are you flexible to discuss custom licensing models?
 
-Yes. We understand our standard options may not cover your need, so we are very flexible with different licensing metrics to best serve your business. Please submit your request via <a href="https://www.dynamsoft.com/store/dynamic-web-twain/" target="_blank">this form</a> or directly <a href="https://www.dynamsoft.com/contact/" target="_blank">contact us</a>.
+Yes. We understand our standard options may not cover your need, so we are very flexible with different licensing metrics to best serve your business. Please submit your request via <a href="" target="_blank">this form</a> or directly <a href="" target="_blank">contact us</a>.

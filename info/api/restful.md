@@ -793,7 +793,7 @@ fetch(url, requestOptions)
 
 |HTTP Status Code |Meaning|Description|Data Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation.|capability list|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation.|[`CapabilityDetails`]({{ site.api }}Interfaces.html#capabilitydetails)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad request, e.g. parameter is invalid.|[`Error`](#error)|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|The provided job UID is invalid.|[`Error`](#error)|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
@@ -1819,24 +1819,13 @@ Create a new document process to read a barcode on a scanned page.
 
 Barcode scanning requires a valid Barcode Reader Add-On license. Blank page detection is only supported on Windows.
 
-> Body Parameters
-
-```json
-{
-  "settings": {
-    "minBlockHeight": 20,
-    "maxBlockHeight": 30
-  },
-  "source": "https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282"
-}
-```
-
 #### Parameters
 
 |Name|Location|Type|Required|Restrictions|Description|
 |---|---|---|---|---|---|
 |`X-DICS-LICENSE-KEY`|header|`string`| yes | none |A DWT license key with the Barcode Reader and RESTful API module. Contact our [sales team](https://www.dynamsoft.com/company/contact/) for a full license, or get a [30-day free trial](https://www.dynamsoft.com/web-twain/downloads/).|
-|`body`|body|[`CreateProcessOptions`](#createprocessoptions)| no |none|
+|`source`|body|`string`| yes |Scan job URL |Image source URL from the scan job, e.g. `https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282`.|
+|`settings`|body|`string`| Valid barcode reading template JSON - see [`RuntimeSettings`]({{ site.api }}Interfaces.html#runtimesettings) for more details |no| Barcode reader template settings. Defaults to the `BestCoverage` setting by default. The basic settings are `BestCoverage`, `BestSpeed`, and `Balance`. Read the Barcode Reader Add-On guide for details on [basic settings]({{ site.extended-usage }}barcode-processing.html#built-in-modes) and advanced [scanning templates]({{ site.extended-usage }}barcode-processing.html#set-the-runtime-settings-using-json).|
 
 #### Request Example:
 
@@ -1931,23 +1920,12 @@ Create a new document process to check if a scanned page is blank.
 
 Blank page detection is **only supported on Windows**.
 
-> Body Parameters
-
-```json
-{
-  "settings": {
-    "minBlockHeight": 20,
-    "maxBlockHeight": 30
-  },
-  "source": "https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282"
-}
-```
-
 #### Parameters
 
 |Name|Location|Type|Required|Restrictions|Description|
 |---|---|---|---|---|---|
 |`source`|body|`string`| yes |Scan job URL |Image source URL from the scan job, e.g. `https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282`.|
+|`settings`|body|[`CheckBlankSettings`](#checkblanksettings)| no |none |Maximum and minimum blemish pixel height detection thresholds.|
 
 #### Request Example:
 
@@ -1962,6 +1940,10 @@ let myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
 let raw = JSON.stringify({
+  settings: {
+    "minBlockHeight": 20,
+    "maxBlockHeight": 30
+  },
   source: 'https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282',
   });
 
@@ -2270,26 +2252,6 @@ Currently, only return log level.
 |---|---|---|---|---|
 |`password`|`string`|false|none|length <= 32 characters |The password of the document (32 characters max).|
 
-### `CreateProcessOptions`
-
-```json
-{
-  "settings": {
-    "minBlockHeight": 20,
-    "maxBlockHeight": 30
-  },
-  "source": "https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282"
-}
-
-```
-
-#### Attributes
-
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|`settings`|`object`|no| - `coverage`: high reading accuracy<br/> - `speed`: high reading speed<br/> - `balance`: balance between `coverage` and `speed`<br/> - JSON: custom scanning template |Barcode reader template settings. Defaults to the `coverage` setting by default. The basic settings are `coverage`, `speed`, and `balance`. Read the Barcode Reader Add-On guide for details on [basic settings]({{ site.extended-usage }}barcode-processing.html#built-in-modes) and advanced [scanning templates]({{ site.extended-usage }}barcode-processing.html#set-the-runtime-settings-using-json).|
-|`source`|`string`|true|Image source URL from the scan job, e.g. `https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282`.||
-
 ### `VersionInfo`
 
 ```json
@@ -2306,6 +2268,23 @@ Currently, only return log level.
 |---|---|---|---|---|
 |`version`|`string`|false|none|server api version.|
 |`compatible`|`boolean`|false|none|server is compatible with the client.|
+
+### `CheckBlankSettings`
+
+```json
+"settings": {
+  "minBlockHeight": 20,
+  "maxBlockHeight": 30
+}
+
+```
+
+#### Attributes
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|`minBlockHeight`|`number`|true|0 < `minBlockHeight` <= `maxBlockHeight`|Minimum blemish pixel height detection threshold.|
+|`maxBlockHeight`|`number`|true|`minBlockHeight` <= `maxBlockHeight`|Maximum blemish pixel height detection threshold.|
 
 ### `ScannerJobStatus`
 

@@ -18,7 +18,6 @@ With the widespread application of the Dynamic Web TWAIN SDK in the market, more
 **Step 1:**
 
 Visit Dynamic Web TWAIN Online Demo: [https://demo.dynamsoft.com/web-twain/](https://demo.dynamsoft.com/web-twain/)
-Open your web browser console (f12 or right clicking and inspecting) and navigate to the console tab. From here we can make calls directly into the browser.
 
 **Step 2:**
 

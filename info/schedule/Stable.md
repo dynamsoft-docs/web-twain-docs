@@ -17,7 +17,7 @@ permalink: /info/schedule/Stable.html
 
 - **Greatly expanded support for the [RESTful Dynamic Web TWAIN Service]({{ site.extended-usage }}restful-api.html).**
 - **PDF Handling**:
-  - Added new PDF Rasterizer Add-On API [`preserveUnmodifiedOnSave`]({{ site.api }}Addon_PDF.html#setreaderoptions) to preserve the size of text-based PDFs when loading and re-saving without modifying the pages with DWT.
+  - Added new PDF Rasterizer Add-On API [`preserveUnmodifiedOnSave`]({{ site.api }}interfaces.html#readeroptions) to preserve the size of unmodified PDF pages when saving.
   - Added new PDF Rasterizer Add-On API [`IsRasterizationRequired()`]({{ site.api }}Addon_PDF.html#israsterizationrequired). This API returns true if the PDF Rasterizer Add-On is needed to process the PDF. Note that this requires a license for the PDF Rasterizer Add-On.
 - **Cross-platform support**: Added macOS and Linux platform support for DWT Barcode Reader Add-On version 9.6.
 - **Error messages**: Added more informative error messages with the new [`ErrorCause`]({{ site.api }}WebTwain_Util.html#errorcause) API.
@@ -26,9 +26,9 @@ permalink: /info/schedule/Stable.html
 ### Improvements
 
 - **Security enhancements**: updated third-party libraries to enhance security.
-- **Image rasterization logic**: when both [`ReaderOptions.renderOptions.maxWidth/ ReaderOptions.renderOptions.maxHeight and resolution`]({{ site.api }}Addon_PDF.html#setreaderoptions) are set, if the dimensions of the rendered image exceed the maximum width and height, use the resolution applied during the image rendering process rather than the set resolution. 
+- **Image rasterization logic**: when both [`ReaderOptions.renderOptions.maxWidth/ ReaderOptions.renderOptions.maxHeight and resolution`]({{ site.api }}interfaces.html/setreaderoptions) are set, if the dimensions of the rendered image exceed the maximum width and height, use the resolution applied during the image rendering process rather than the set resolution. 
 - **New Dynamic Web TWAIN Service installation path for Windows**: moved installation out of `SysWOW64` and `System32` on Windows to prevent rare false positive antivirus scans.
-  - New 64-bit system-wide installations: `C:\Program Files\Dynamsoft (x86)\Dynamic Web TWAIN Service 19`
+  - New 64-bit system-wide installations: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service 19`
   - New 32-bit system-wide installation location: `C:\Program Files\Dynamsoft\Dynamic Web TWAIN Service 19`
 - Changed `ErrorString` messages associated with `ErrorCode -2003` for `HTTPUpload`-related APIs to include HTTP codes in the form of `HTTP process: {message}({HTTP status code})`, e.g. `HTTP process: OK(200)`. This change applies to `ErrorString` for the following APIs:
 
@@ -39,6 +39,9 @@ permalink: /info/schedule/Stable.html
   - [`{WebTwainObject}.HTTPUploadAllThroughPostAsPDF()`]({{ site.api }}WebTwain_IO.html#httpuploadallthroughpostaspdf)
   - [`{WebTwainObject}.HTTPUploadThroughPostAsMultiPagePDF()`]({{ site.api }}WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)
   - [`{WebTwainObject}.HTTPUploadThroughPostAsMultiPageTIFF()`]({{ site.api }}WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)
+- **Enhance the customizability of thumbnail viewer**: add a position property to its [event]({{ site.api }}interfaces.html#thumbnailviewerevent) to facilitate the customization. For example, we can add a delete icon when the mouse is over it.
+
+   ![thumbnail viewer event](/assets/imgs/thumbnail-viewer-event-demo.jpg)
 
 ### Removed Features
 
