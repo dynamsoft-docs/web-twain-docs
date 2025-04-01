@@ -47,4 +47,4 @@ The **PNG** format supports lossless data compression. The same image may save b
 The **PDF** format is an advanced and popular file format that allows a variety of content. Because of the complexity of the format, it is impractical for a lightweight SDK such as `Dynamic Web TWAIN` to have full support for it. Instead, `Dynamic Web TWAIN` supports the format in two ways
 
 * `Dynamic Web TWAIN` can read and write a pure-image-based **PDF** file; 
-* `Dynamic Web TWAIN` can use its [PDF Rasterizer module]({{site.indepth}}features/pdf.html) to rasterize almost any **PDF** file and convert its visible content into images so as to "read" it.
+* `Dynamic Web TWAIN` can use its [PDF Rasterizer module]({{site.extended-usage}}pdf-processing.html) to rasterize almost any **PDF** file and convert its visible content into images so as to "read" it.

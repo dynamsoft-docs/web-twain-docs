@@ -26,7 +26,7 @@ permalink: /info/schedule/Stable.html
 ### Improvements
 
 - **Security enhancements**: updated third-party libraries to enhance security.
-- **Image rasterization logic**: when both [`ReaderOptions.renderOptions.maxWidth/ ReaderOptions.renderOptions.maxHeight and resolution`]({{ site.api }}interfaces.html/setreaderoptions) are set, if the dimensions of the rendered image exceed the maximum width and height, use the resolution applied during the image rendering process rather than the set resolution. 
+- **Image rasterization logic**: when both [`ReaderOptions.renderOptions.maxWidth/ ReaderOptions.renderOptions.maxHeight and resolution`]({{ site.api }}interfaces.html#readeroptions) are set, if the dimensions of the rendered image exceed the maximum width and height, use the resolution applied during the image rendering process rather than the set resolution. 
 - **New Dynamic Web TWAIN Service installation path for Windows**: moved installation out of `SysWOW64` and `System32` on Windows to prevent rare false positive antivirus scans.
   - New 64-bit system-wide installations: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service 19`
   - New 32-bit system-wide installation location: `C:\Program Files\Dynamsoft\Dynamic Web TWAIN Service 19`
