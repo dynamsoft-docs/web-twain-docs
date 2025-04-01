@@ -21,9 +21,9 @@ Here we present a comprehensive guide on how to develop a web application with s
 ## Table of Contents
 
 - [Loading Library Resources]({{site.general-usage}}resource-loading.html)
-- [License]({{site.general-usage}}initialization.html)
-- [Initializing DWT]({{site.general-usage}}license.html)
-- [Importing Images]({{site.general-usage}}image-import/index.html)
+- [License]({{site.general-usage}}license.html)
+- [Initializing DWT]({{site.general-usage}}initialization.html)
+- [Acquiring Images from Scanners]({{site.general-usage}}scanner-image-acquisition.html)
 - [Configuring the Viewer]({{site.general-usage}}viewer-configuration.html)
 - [Processing Images]({{site.general-usage}}image-processing/index.html)
 - [Exporting Images]({{site.general-usage}}image-export/index.html)
