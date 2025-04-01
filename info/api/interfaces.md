@@ -1668,7 +1668,7 @@ interface ReaderOptions {
         renderGrayscale?: boolean;
     }
     /**
-     * Set whether to preserve original file size when saving an unedited PDF. Default value: false.
+     * Set whether to preserve original file size when saving an unedited PDF whose pages were not modified under any raster operations. Default value: false.
      */
     preserveUnmodifiedOnSave?: boolean;  
 }
