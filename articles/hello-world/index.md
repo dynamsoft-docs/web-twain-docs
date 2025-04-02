@@ -21,4 +21,6 @@ The Hello World web app covers the following features:
 3. [Specifying Scan Settings]({{site.hello-world}}scan-settings.html)
 4. [Editing Images]({{site.hello-world}}editing.html)
 
+<a href="{{site.baseurl}}assets/HelloWorld-Code.zip" class="orangeBgBtn">Download the Code of the Hello World</a>
+
 > Note: JavaScript in this section follows ECMAScript 5 for backward-compatibility reasons. Please modify the code to use modern features if you are targeting modern environments.
