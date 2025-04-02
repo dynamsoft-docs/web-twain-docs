@@ -279,7 +279,7 @@ fetch(url, requestOptions)
 
 |HTTP Status Code |Meaning|Description|Data Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation.|[`[Scanner]`](#scanner)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation.|[`Scanner[]`](#scanner)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad request, e.g. parameter is invalid.|[`Error`](#error)|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
 
@@ -513,7 +513,7 @@ fetch(url, requestOptions)
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation.|[`ScannerJobInfo`](#scannerjobinfo)|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|The provided job UID is invalid.|[`Error`](#error)|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
-|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
+|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job was deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
 
 #### Response Examples
 
@@ -552,7 +552,7 @@ fetch(url, requestOptions)
 ```json
 {
   "code": -1034,
-  "message": "Job deleted.",
+  "message": "Job was deleted.",
   "statusCode": 410
 }
 ```
@@ -609,7 +609,7 @@ fetch(url, requestOptions)
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|The provided job UID is invalid.|[`Error`](#error)|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|Attempted to cancel non-pending or non-running job, or update a non-pending job to running.|[`Error`](#error)|
-|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
+|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job was deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
 
 <!--#### Responses Data Schema
 
@@ -674,7 +674,7 @@ HTTP Status Code **200**
 ```json
 {
   "code": -1034,
-  "message": "Job deleted.",
+  "message": "Job was deleted.",
   "statusCode": 410
 }
 ```
@@ -798,7 +798,7 @@ fetch(url, requestOptions)
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|The provided job UID is invalid.|[`Error`](#error)|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
 |409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|Cannot be called when job is not pending.|[`Error`](#error)|
-|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
+|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job was deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
 
 #### Response Examples
 
@@ -855,7 +855,7 @@ fetch(url, requestOptions)
 ```json
 {
   "code": -1034,
-  "message": "Job deleted.",
+  "message": "Job was deleted.",
   "statusCode": 410
 }
 ```
@@ -1015,7 +1015,7 @@ fetch(url, requestOptions)
 |204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|No more pages, scan done.|None|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|The provided job UID is invalid.|[`Error`](#error)|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
-|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|Inline|
+|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job was deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|Inline|
 
 #### Response Examples
 
@@ -1089,7 +1089,7 @@ fetch(url, requestOptions)
 ```json
 {
   "code": -1034,
-  "message": "Job deleted.",
+  "message": "Job was deleted.",
   "statusCode": 410
 }
 ```
@@ -1141,7 +1141,7 @@ fetch(url, requestOptions)
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad request, e.g. parameter is invalid.|[`Error`](#error)|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|The provided job UID is invalid.|[`Error`](#error)|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
-|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
+|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job was deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
 
 #### Response Examples
 
@@ -1182,7 +1182,7 @@ fetch(url, requestOptions)
 ```json
 {
   "code": -1034,
-  "message": "Job deleted.",
+  "message": "Job was deleted.",
   "statusCode": 410
 }
 ```
@@ -1861,7 +1861,7 @@ fetch(url, requestOptions)
 
 |HTTP Status Code |Meaning|Description|Data Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation.|[`OperationResult`](#operationresult)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation.|[`BarcodeResult[]`](#barcoderesult)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad request, e.g. parameter is invalid.|[`Error`](#error)|
 |403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|License is invalid.|[`Error`](#error)|
 |405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
@@ -1879,9 +1879,112 @@ HTTP Status Code **200**
 > 200 Response
 
 ```json
-{
-  "result": true
-}
+[
+  {
+    "BarcodeFormat": 2,
+    "BarcodeFormatString": "CODE_128",
+    "LocalizationResult": {
+      "ResultPoints": [
+        "723, 274",
+        "1021, 275",
+        "1021, 375",
+        "723, 374"
+      ],
+      "accompanyingTextBytes": [],
+      "angle": 0,
+      "barcodeFormat": 3147775,
+      "barcodeFormatString": "OneD",
+      "barcodeFormatString_2": "No Barcode Format in group 2",
+      "barcodeFormat_2": 0,
+      "confidence": 100,
+      "documentName": "{B683937D-B327-4488-A2C0-499760CB6BF0}",
+      "moduleSize": 2,
+      "pageNumber": 1,
+      "regionName": "",
+      "resultCoordinateType": 1,
+      "terminatePhase": 32,
+      "x1": 723,
+      "x2": 1021,
+      "x3": 1021,
+      "x4": 723,
+      "y1": 274,
+      "y2": 275,
+      "y3": 375,
+      "y4": 374
+    },
+    "barcodeBytes": [
+      67,
+      79,
+      68,
+      69,
+      49,
+      50,
+      56
+    ],
+    "barcodeFormat": 2,
+    "barcodeFormatString": "CODE_128",
+    "barcodeFormatString_2": "No Barcode Format in group 2",
+    "barcodeFormat_2": 0,
+    "barcodeText": "CODE128",
+    "detailedResult": {
+      "checkDigitBytes": [],
+      "moduleSize": 2,
+      "startCharsBytes": [],
+      "stopCharsBytes": []
+    },
+    "localizationResult": {
+      "ResultPoints": [
+        "723, 274",
+        "1021, 275",
+        "1021, 375",
+        "723, 374"
+      ],
+      "accompanyingTextBytes": [],
+      "angle": 0,
+      "barcodeFormat": 3147775,
+      "barcodeFormatString": "OneD",
+      "barcodeFormatString_2": "No Barcode Format in group 2",
+      "barcodeFormat_2": 0,
+      "confidence": 100,
+      "documentName": "{B683937D-B327-4488-A2C0-499760CB6BF0}",
+      "moduleSize": 2,
+      "pageNumber": 1,
+      "regionName": "",
+      "resultCoordinateType": 1,
+      "terminatePhase": 32,
+      "x1": 723,
+      "x2": 1021,
+      "x3": 1021,
+      "x4": 723,
+      "y1": 274,
+      "y2": 275,
+      "y3": 375,
+      "y4": 374
+    },
+    "results": [
+      {
+        "accompanyingTextBytes": [],
+        "barcodeFormat": 2,
+        "barcodeFormatString": "CODE_128",
+        "barcodeFormatString_2": "No Barcode Format in group 2",
+        "barcodeFormat_2": 0,
+        "bytes": [
+          67,
+          79,
+          68,
+          69,
+          49,
+          50,
+          56
+        ],
+        "clarity": -1,
+        "confidence": 100,
+        "deformation": 0,
+        "resultType": 0
+      }
+    ]
+  }
+]
 ```
 
 > 400 Response
@@ -2312,3 +2415,114 @@ Currently, only return log level.
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |`result`|`boolean`|true|none|is blank image or not|
+
+
+### `BarcodeResult`
+
+```json
+{
+    "BarcodeFormat": 2,
+    "BarcodeFormatString": "CODE_128",
+    "LocalizationResult": {
+      "ResultPoints": [
+        "723, 274",
+        "1021, 275",
+        "1021, 375",
+        "723, 374"
+      ],
+      "accompanyingTextBytes": [],
+      "angle": 0,
+      "barcodeFormat": 3147775,
+      "barcodeFormatString": "OneD",
+      "barcodeFormatString_2": "No Barcode Format in group 2",
+      "barcodeFormat_2": 0,
+      "confidence": 100,
+      "documentName": "{B683937D-B327-4488-A2C0-499760CB6BF0}",
+      "moduleSize": 2,
+      "pageNumber": 1,
+      "regionName": "",
+      "resultCoordinateType": 1,
+      "terminatePhase": 32,
+      "x1": 723,
+      "x2": 1021,
+      "x3": 1021,
+      "x4": 723,
+      "y1": 274,
+      "y2": 275,
+      "y3": 375,
+      "y4": 374
+    },
+    "barcodeBytes": [
+      67,
+      79,
+      68,
+      69,
+      49,
+      50,
+      56
+    ],
+    "barcodeFormat": 2,
+    "barcodeFormatString": "CODE_128",
+    "barcodeFormatString_2": "No Barcode Format in group 2",
+    "barcodeFormat_2": 0,
+    "barcodeText": "CODE128",
+    "detailedResult": {
+      "checkDigitBytes": [],
+      "moduleSize": 2,
+      "startCharsBytes": [],
+      "stopCharsBytes": []
+    },
+    "localizationResult": {
+      "ResultPoints": [
+        "723, 274",
+        "1021, 275",
+        "1021, 375",
+        "723, 374"
+      ],
+      "accompanyingTextBytes": [],
+      "angle": 0,
+      "barcodeFormat": 3147775,
+      "barcodeFormatString": "OneD",
+      "barcodeFormatString_2": "No Barcode Format in group 2",
+      "barcodeFormat_2": 0,
+      "confidence": 100,
+      "documentName": "{B683937D-B327-4488-A2C0-499760CB6BF0}",
+      "moduleSize": 2,
+      "pageNumber": 1,
+      "regionName": "",
+      "resultCoordinateType": 1,
+      "terminatePhase": 32,
+      "x1": 723,
+      "x2": 1021,
+      "x3": 1021,
+      "x4": 723,
+      "y1": 274,
+      "y2": 275,
+      "y3": 375,
+      "y4": 374
+    },
+    "results": [
+      {
+        "accompanyingTextBytes": [],
+        "barcodeFormat": 2,
+        "barcodeFormatString": "CODE_128",
+        "barcodeFormatString_2": "No Barcode Format in group 2",
+        "barcodeFormat_2": 0,
+        "bytes": [
+          67,
+          79,
+          68,
+          69,
+          49,
+          50,
+          56
+        ],
+        "clarity": -1,
+        "confidence": 100,
+        "deformation": 0,
+        "resultType": 0
+      }
+    ]
+  }
+
+```
