@@ -21,14 +21,15 @@ permalink: /info/schedule/Stable.html
   - Added new PDF Rasterizer Add-On API [`IsRasterizationRequired()`]({{ site.api }}Addon_PDF.html#israsterizationrequired). This API returns true if the PDF Rasterizer Add-On is needed to process the PDF. Note that this requires a license for the PDF Rasterizer Add-On.
 - **Cross-platform support**: Added macOS and Linux platform support for DWT Barcode Reader Add-On version 9.6.
 - **Error messages**: Added more informative error messages with the new [`ErrorCause`]({{ site.api }}WebTwain_Util.html#errorcause) API.
-- **Keyboard accessibility**: Added Tab key keyboard navigation in the DWT `Viewer`. The browser now shows a focus outline on the `Viewer` upon tabbing into the `Viewer`, which can be disabled with the new [`{WebTwainObject}.Viewer.disableFocusOutline`]({{ site.api }}WebTwain_Viewer.html#disablefocusoutline) API. (`true`/disabled by default)
+- **Keyboard accessibility**: Added Tab key keyboard navigation in the DWT `Viewer`. The browser now shows a focus outline on the `Viewer` upon tabbing into the `Viewer`, which can be disabled with the new [`{WebTwainObject}.Viewer.disableFocusOutline`]({{ site.api }}WebTwain_Viewer.html#disablefocusoutline) API. (this property is `true` by default, i.e. disables the outline)
 
 ### Improvements
 
 - **Security enhancements**: updated third-party libraries to enhance security.
-- **Image rasterization logic**: when both [`ReaderOptions.renderOptions.maxWidth/ ReaderOptions.renderOptions.maxHeight and resolution`]({{ site.api }}interfaces.html#readeroptions) are set, if the dimensions of the rendered image exceed the maximum width and height, use the resolution applied during the image rendering process rather than the set resolution. 
+- **Image rasterization logic**: when the `ReaderOptions.RenderOptions` properties [`ReaderOptions.renderOptions.maxWidth`, `maxHeight` and `resolution`]({{ site.api }}interfaces.html#readeroptions) are set, if the dimensions of the rendered image exceed the maximum width and height, use the resolution applied during the image rendering process rather than the set resolution.
+- **Renamed the Dynamsoft Service to Dynamic Web TWAIN Service**.
 - **New Dynamic Web TWAIN Service installation path for Windows**: moved installation out of `SysWOW64` and `System32` on Windows to prevent rare false positive antivirus scans.
-  - New 64-bit system-wide installations: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service 19`
+  - New 64-bit system-wide installation location: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service 19`
   - New 32-bit system-wide installation location: `C:\Program Files\Dynamsoft\Dynamic Web TWAIN Service 19`
 - Changed `ErrorString` messages associated with `ErrorCode -2003` for `HTTPUpload`-related APIs to include HTTP codes in the form of `HTTP process: {message}({HTTP status code})`, e.g. `HTTP process: OK(200)`. This change applies to `ErrorString` for the following APIs:
 
@@ -39,7 +40,7 @@ permalink: /info/schedule/Stable.html
   - [`{WebTwainObject}.HTTPUploadAllThroughPostAsPDF()`]({{ site.api }}WebTwain_IO.html#httpuploadallthroughpostaspdf)
   - [`{WebTwainObject}.HTTPUploadThroughPostAsMultiPagePDF()`]({{ site.api }}WebTwain_IO.html#httpuploadthroughpostasmultipagepdf)
   - [`{WebTwainObject}.HTTPUploadThroughPostAsMultiPageTIFF()`]({{ site.api }}WebTwain_IO.html#httpuploadthroughpostasmultipagetiff)
-- **Enhance the customizability of thumbnail viewer**: add a position property to its [event]({{ site.api }}interfaces.html#thumbnailviewerevent) to facilitate the customization. For example, we can add a delete icon when the mouse is over it.
+- **Thumbnail Viewer customization**: added a `position` property to the [`ThumbnailViewerEvent`]({{ site.api }}interfaces.html#thumbnailviewerevent) to facilitate further customizations, for example, displaying a delete icon when the mouse is hovering over a thumbnail.
 
    ![thumbnail viewer event](/assets/imgs/thumbnail-viewer-event-demo.jpg)
 
@@ -50,7 +51,7 @@ permalink: /info/schedule/Stable.html
 - **Dropped support for 32-bit macOS**: now only supporting macOS versions 10.15 and higher.
 - **Discontinued Android support.**
 
-### Big Fixes
+### Bug Fixes
 
 - Fixed a CORS request blocked error which also triggers a prompt to install the Dynamic Web TWAIN Service.
 - Fixed Vite runtime errors caused by polyfills and resource path misconfiguration.
