@@ -1677,7 +1677,10 @@ interface ReaderOptions {
 
 - [`EnumDWT_ConvertMode`]({{site.info}}api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_convertmode)
 
-
+> Note：Rendering Logic When Two or More of the Following Properties Are Specified — maxWidth, maxHeight, and resolution:
+- Calculates the target image dimensions based on the original PDF page size and the specified resolution (DPI).
+- When both maxWidth and maxHeight are set, the more restrictive constraint is applied to ensure the final image does not exceed either maximum.
+- If the calculated dimensions exceed the specified maxWidth or maxHeight, the page is scaled down proportionally to fit within those constraints while preserving the original aspect ratio. This results in a lower effective resolution.
 
 ### PDFWSettings
 

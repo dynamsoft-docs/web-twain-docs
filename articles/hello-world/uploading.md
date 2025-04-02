@@ -169,11 +169,11 @@ Once an image has been acquired, click the upload button.You should receive the 
 
 <!-- If you need a refresher on creating the base project, please review [initalizing the environment]({{site.getstarted}}initialize.html). -->
 
-You can review scanning an image with DWT [here]({{site.getstarted}}scanning.html).
+You can review scanning an image with DWT [here]({{site.hello-world}}scanning.html).
 
 # Next Article
 
-Now that HelloWorld can both scan and upload images, the next step is [specifying scan parameters]({{site.getstarted}}scansettings.html) to control image scanning methods directly through the API.
+Now that HelloWorld can both scan and upload images, the next step is [specifying scan parameters]({{site.hello-world}}scan-settings.html) to control image scanning methods directly through the API.
 
 <!--             // var url = Dynamsoft.Lib.detect.ssl ? "https://" : "http://";
             // url += location.hostname;

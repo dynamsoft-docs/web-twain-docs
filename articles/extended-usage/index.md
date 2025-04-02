@@ -16,6 +16,7 @@ This set of guides builds on the fundamental features covered in the standard us
 ## Table of Contents
 
 - [Advanced DWT Initialization]({{site.extended-usage}}advanced-initialization.html)
+- [Loading Documents from Files]({{site.extended-usage}}file-import.html)
 - [Configuring System Messages]({{site.extended-usage}}system-message-configuration.html)
 - [Set Up the Dynamic Web TWAIN Service]({{site.extended-usage}}dynamsoft-service-configuration.html)
 - [UI Customization]({{site.extended-usage}}ui-customization.html)
