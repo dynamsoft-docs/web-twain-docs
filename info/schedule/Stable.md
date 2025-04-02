@@ -18,15 +18,16 @@ permalink: /info/schedule/Stable.html
 - **Greatly expanded support for the [RESTful Dynamic Web TWAIN Service]({{ site.extended-usage }}restful-api.html).**
 - **PDF Handling**:
   - Added new PDF Rasterizer Add-On API [`preserveUnmodifiedOnSave`]({{ site.api }}interfaces.html#readeroptions) to preserve the size of unmodified PDF pages when saving.
-  - Added new PDF Rasterizer Add-On API [`IsRasterizationRequired()`]({{ site.api }}Addon_PDF.html#israsterizationrequired). This API returns true if the PDF Rasterizer Add-On is needed to process the PDF. Note that this requires a license for the PDF Rasterizer Add-On.
-- **Cross-platform support**: Added macOS and Linux platform support for DWT Barcode Reader Add-On version 9.6.
+  - Added new PDF Rasterizer Add-On API [`IsRasterizationRequired()`]({{ site.api }}Addon_PDF.html#israsterizationrequired). This API returns true if the PDF file contains content other than one image per page. Please note that while invoking this API does not require a license for the PDF Rasterizer Add-On, a license is required to perform actual rasterization of the PDF for viewing purposes.
+- **Cross-platform support**: Added macOS and Linux platform support for DWT Barcode Reader Add-On.
 - **Error messages**: Added more informative error messages with the new [`ErrorCause`]({{ site.api }}WebTwain_Util.html#errorcause) API.
 - **Keyboard accessibility**: Added Tab key keyboard navigation in the DWT `Viewer`. The browser now shows a focus outline on the `Viewer` upon tabbing into the `Viewer`, which can be disabled with the new [`{WebTwainObject}.Viewer.disableFocusOutline`]({{ site.api }}WebTwain_Viewer.html#disablefocusoutline) API. (this property is `true` by default, i.e. disables the outline)
 
 ### Improvements
 
 - **Security enhancements**: updated third-party libraries to enhance security.
-- **Image rasterization logic**: when the `ReaderOptions.RenderOptions` properties [`ReaderOptions.renderOptions.maxWidth`, `maxHeight` and `resolution`]({{ site.api }}interfaces.html#readeroptions) are set, if the dimensions of the rendered image exceed the maximum width and height, use the resolution applied during the image rendering process rather than the set resolution.
+- **Image rasterization logic**: The logic is optimized when two or all of the following properties are specified in [`ReaderOptions.RenderOptions`: `maxWidth`, `maxHeight`, and `resolution`]({{ site.api }}interfaces.html#readeroptions).
+
 - **Renamed the Dynamsoft Service to Dynamic Web TWAIN Service**.
 - **New Dynamic Web TWAIN Service installation path for Windows**: moved installation out of `SysWOW64` and `System32` on Windows to prevent rare false positive antivirus scans.
   - New 64-bit system-wide installation location: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service 19`
@@ -46,9 +47,9 @@ permalink: /info/schedule/Stable.html
 
 ### Removed Features
 
-- **Dropped support for the PDF Compressor Add-On.**
-- **Dropped out-of-the-box support for ActiveX.**
-- **Dropped support for 32-bit macOS**: now only supporting macOS versions 10.15 and higher.
+- **Discontinued support for the PDF Compressor Add-On.**
+- **Discontinued out-of-the-box support for ActiveX.**
+- **Discontinued support for 32-bit macOS**: now only supporting macOS versions 10.15 and higher.
 - **Discontinued Android support.**
 
 ### Bug Fixes

@@ -63,8 +63,6 @@ If you wish to use an absolute path to include the library, this is supported.
 <script src="https://www.dynamsoft.com/dwt/demo/Resources/dynamsoft.webtwain.config.js"></script>
 ```
 
-> Note: If you want to use the [Camera module]({{site.indepth}}features/Input.html#use-mediadevices-cameras), please make sure the absolute path stays in the same domain to avoid cross-origin issues.
-
 #### Change ResourcePath using a relative path
 
 If you do not wish to use an absolute path, you can [change the reference path]({{site.faq}}change-reference-path.html) to a relative path.

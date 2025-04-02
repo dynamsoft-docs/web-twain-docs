@@ -212,9 +212,9 @@ If you would like to review any of the previous steps, you can review:
 
 <!-- - [Initializing the environment]({{site.getstarted}}initialize.html) -->
 
-- [Scanning an image]({{site.getstarted}}scanning.html)
-- [Uploading images to the server]({{site.getstarted}}uploading.html)
-- [Setting scan parameters]({{site.getstarted}}scansettings.html)
+- [Scanning an image]({{site.hello-world}}scanning.html)
+- [Uploading images to the server]({{site.hello-world}}uploading.html)
+- [Setting scan parameters]({{site.hello-world}}scan-settings.html)
 
 # Next Article
 
@@ -223,6 +223,6 @@ Now that you had a chance to look at what DWT can do, you can learn about how to
 <!-- << Insert what goes next >> -->
 
 <!--
-- [Customizing your scan settings]({{site.getstarted}}scansettings.html)
+- [Customizing your scan settings]({{site.getstarted}}scan-settings.html)
 - [Review HelloWorld]({{site.getstarted}}helloworld.html)
 - [Review Uploading Documents]({{site.getstarted}}uploading.html) -->
