@@ -19,8 +19,8 @@ This set of guides builds on the fundamental features covered in the standard us
 - [Configuring System Messages]({{site.extended-usage}}system-message-configuration.html)
 - [Set Up the Dynamic Web TWAIN Service]({{site.extended-usage}}dynamsoft-service-configuration.html)
 - [UI Customization]({{site.extended-usage}}ui-customization.html)
+- [Using the DWT RESTful API]({{site.extended-usage}}restful-api.html)
 - [Barcode Recognition]({{site.extended-usage}}barcode-processing.html)
 - [PDF Handling]({{site.extended-usage}}pdf-processing.html)
-<!--- [PDF Compressor (Beta)]({{site.extended-usage}}pdf-compression.html)-->
 - [Buffer Caching]({{site.extended-usage}}buffer-caching.html)
 - [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)

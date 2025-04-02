@@ -10,9 +10,6 @@ permalink: /hello-world/scan-settings.html
 
 # Specifying Scan Settings
 
-<!-- <div class='blockquote-note'></div>
-> This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html). -->
-
 Some applications may require images to be scanned with particular scan settings, e.g. a prescribed image size, resolution, color, etc. It may be undesirable to alter these settings, so we may wish to issue these settings to the scanner directly, without alteration by end users. We will demonstrate this method by passing scan settings through the DWT API in the HelloWorld application.
 
 > Prerequisites: Hello World - Uploading Images to the Server
@@ -142,12 +139,12 @@ You should receive a grayscale image at 150 ppi:
 
 # Previous Articles
 
-<!-- If you need a refresher on setting up the base project, please review [initalizing the environment]({{site.getstarted}}initialize.html). -->
+<!-- If you need a refresher on setting up the base project, please review [initializing the environment]({{site.getstarted}}initialize.html). -->
 
-If you have yet to acquire the image from the scaner, please review [scanning an image]({{site.getstarted}}scanning.html).
+If you have yet to acquire the image from the scanner, please review [scanning an image]({{ site.hello-world }}scanning.html).
 
-If this scan is all that you need, you can review [uploading images to the server]({{site.getstarted}}uploading.html).
+If this scan is all that you need, you can review [uploading images to the server]({{ site.hello-world }}uploading.html).
 
 # Next Article
 
-The next and final step in our guide is [editing images]({{site.getstarted}}editing.html) after acquisition.
+The next and final step in our guide is [editing images]({{ site.hello-world }}editing.html) after acquisition.
