@@ -18,7 +18,7 @@ permalink: /general-usage/index.html
 
 Here we present a comprehensive guide on how to develop a web application with scanning capabilities using DWT.
 
-## Table of Contents
+### Table of Contents
 
 - [Loading Library Resources]({{site.general-usage}}resource-loading.html)
 - [License]({{site.general-usage}}license.html)
