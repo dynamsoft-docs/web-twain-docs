@@ -13,7 +13,7 @@ permalink: /extended-usage/index.html
 
 This set of guides builds on the fundamental features covered in the standard usage guide. Here we cover topics such as customizing features explained previously (user interface), extending existing features (various `WebTwain` instantiation methods), and exploring advanced features (using the `FileUploader`), and more.
 
-## Table of Contents
+### Table of Contents
 
 - [Advanced DWT Initialization]({{site.extended-usage}}advanced-initialization.html)
 - [Loading Documents from Files]({{site.extended-usage}}file-import.html)

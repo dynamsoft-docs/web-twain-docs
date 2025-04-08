@@ -13,7 +13,7 @@ permalink: /general-usage/image-processing/index.html
 
 DWT has a large host of image processing tools when using it as a web-based document viewer. These include powerful image editing APIs, combined with a comprehensive buffer management system. We may use the viewer to visualize changes in the buffer in real time. Read on to learn more about data handing and image editing.
 
-## Table of Contents
+### Table of Contents
 
 - [Managing the Image Buffer]({{site.general-usage}}image-processing/buffer-management.html)
 - [Editing Images]({{site.general-usage}}image-processing/image-editing.html)
