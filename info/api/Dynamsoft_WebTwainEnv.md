@@ -25,7 +25,7 @@ permalink: /info/api/Dynamsoft_WebTwainEnv.html
 | [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
 | [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`JSVersion`](#jsversion)     | 
 |[`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |[`UseDefaultViewer`](#usedefaultviewer) | 
-| [`IfCheckCORS`](#ifcheckcors)   |                      |
+| [`IfCheckCORS`](#ifcheckcors)   | [`IfAlwaysFocusOnPopupWindow`](#ifalwaysfocusonpopupwindow) |                      |
 
 
 **Events**
@@ -1119,6 +1119,48 @@ IfCheckCORS: boolean;
 - Default value: `false`.
 - When set to `true`, if encountering a CORS issue, it will detect the issue more specifically and return the corresponding CORS error.
 - When set to `false`, if encountering a CORS issue, it will solely detect that the Dynamic Web TWAIN Service is not connected and prompt a service installation window.
+
+---
+
+## IfAlwaysFocusOnPopupWindow
+
+Control whether the scanner-related UI and load/save UI are always displayed in the foreground.
+
+**Syntax**
+
+```typescript
+IfAlwaysFocusOnPopupWindow: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+<td align="center">v16.2+</td>
+</tr>
+
+</table>
+</div>
+
+**Usage Notes**
+
+- Default value: `true`.
+
+- When set to `true`, the scanner-related UI and load/save UI will always be displayed in the foreground.
+
+- When set to `false`, the scanner-related UI and load/save UI will initially be displayed in the foreground, but by switching focus, they can be moved to the background behind the browser page.
 
 ---
 

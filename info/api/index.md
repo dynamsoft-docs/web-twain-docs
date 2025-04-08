@@ -43,7 +43,7 @@ permalink: /info/api/
 | [`Autoload`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#autoload)   | [`Containers`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#containers)  | [`CustomizableDisplayInfo`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#customizabledisplayinfo)   | [`DeviceFriendlyName`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#devicefriendlyname)   |
 | [`Host`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#host)  | [`IfAddMD5InUploadHeader`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifconfinemaskwithintheviewer)   | [`JSVersion`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#jsversion)     |
 | [`ProductKey`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#productkey)     | [`ResourcesPath`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#resourcespath)      | [`ServiceInstallerLocation`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#serviceinstallerlocation) | [`UseDefaultViewer`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#usedefaultviewer) | 
-|[`IfCheckCORS`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifcheckcors)                 |                      |
+|[`IfCheckCORS`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifcheckcors)             | [`IfAlwaysFocusOnPopupWindow`]({{site.info}}api/Dynamsoft_WebTwainEnv.html#ifalwaysfocusonpopupwindow)    |                      |
 
 
 ### Events
