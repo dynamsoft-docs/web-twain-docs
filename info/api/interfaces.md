@@ -2079,6 +2079,7 @@ interface RuntimeSettings {
 
 - [`FurtherModes`]({{site.info}}api/Interfaces.html#furthermodes)
 - [`Region`]({{site.info}}api/Interfaces.html#region)
+- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interface/RuntimeSettings.html?ver=9.6.42) to view.
 
 ### FurtherModes
 
@@ -2102,6 +2103,8 @@ interface FurtherModes {
 }
 ```
 
+- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interface/furthermodes.html?ver=9.6.42) to view.
+
 ### Region
 
 **Syntax**
@@ -2115,6 +2118,7 @@ interface Region {
     regionTop: number;
 }
 ```
+- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interface/Region.html?ver=9.6.42) to view.
 
 ## FileUploader
 
