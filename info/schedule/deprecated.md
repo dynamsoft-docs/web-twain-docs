@@ -104,11 +104,15 @@ Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT
 * thumbnailViewer.showCheckbox
 * thumbnailViewer.showPageNumber
 
-### Camera Add-on
+### Camera Add-On
 
 > [Alternative] Use [scanDocument]({{site.info}}api/Addon_Camera.html#scandocument) instead.
 
 * Camera.showVideo()
+
+### OCR Add-On
+
+OCR Basic and OCR Pro client-side are deprecated.
 
 ## 17.0
 
@@ -132,7 +136,7 @@ Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT
 
 * Internet Explorer 8 is no longer supported.
 
-### Camera Add-on
+### Camera Add-On
 
 * New APIs in v16.2 replace old APIs in v16.1-, all old APIs are deleted.
 
