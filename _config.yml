@@ -41,6 +41,15 @@ baseurl: /web-twain/docs/
 
 useVersionTreeV2: true
 
+collections:
+  articles:
+    output: true
+    permalink: /:path:output_ext
+
+relative_links:
+  enabled:     true
+  collections: true
+
 webp:
   enabled: true
   # The quality of the webp conversion 0 to 100 (where 100 is least lossy)
