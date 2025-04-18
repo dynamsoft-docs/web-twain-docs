@@ -1,0 +1,19 @@
+---
+layout: default-layout
+noTitleIndex: true
+needAutoGenerateSidebar: true
+title: How can I change/hide the spinner which shows during document scanning?
+keywords: Dynamic Web TWAIN, UI Customization, hide spinner
+breadcrumbText: How can I change/hide the spinner which shows during document scanning?
+description: How can I change/hide the spinner which shows during document scanning?
+---
+
+# UI Customization
+
+## How can I change/hide the spinner which shows during document scanning?
+
+You can change/hide the loading bar which is shown during document scanning. The detailed steps can be found in <a href="/web-twain/docs/extended-usage/ui-customization.html#loading-bar-and-backdrop" target="_blank">this link</a>.
+
+<br />
+
+> Note: there is a known issue in v17.3, if you cannot hide the loading bar with the above method, please refer to this [link](/_articles/faq/unable-hide-loading-bar.md).
