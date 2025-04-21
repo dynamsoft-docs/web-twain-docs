@@ -179,17 +179,17 @@ Links to API Reference:
 
 ### Open the application in your browser
 
-![HelloWorldEdit]({{site.assets}}imgs/HelloWorldEdit.png)
+![HelloWorldEdit](/assets/imgs/HelloWorldEdit.png)
 
 ### Press the Scan button
 
-![HelloWorldEditBW1]({{site.assets}}imgs/HelloWorldEditBW1.png)
+![HelloWorldEditBW1](/assets/imgs/HelloWorldEditBW1.png)
 
 ### Convert the image to black and white
 
 Click the ConvertToBW button and the image will change to black and white:
 
-![HelloWorldEditBW2]({{site.assets}}imgs/HelloWorldEditBW2.png)
+![HelloWorldEditBW2](/assets/imgs/HelloWorldEditBW2.png)
 
 ### Rotate the image
 
@@ -197,11 +197,11 @@ Using the Rotate CW and Rotate CCW buttons, rotate the image.
 
 - Rotating the converted image once using the rotateCW button:
 
-![HelloWorldEditCW]({{site.assets}}imgs/HelloWorldEditrotateCW.png)
+![HelloWorldEditCW](/assets/imgs/HelloWorldEditrotateCW.png)
 
 - Rotating the converted image once using the rotateCCW button:
 
-![HelloWorldEditCCW]({{site.assets}}imgs/HelloWorldEditRotateCCW.png)
+![HelloWorldEditCCW](/assets/imgs/HelloWorldEditRotateCCW.png)
 
 Congratulations, you have completed the Hello World tutorial for DWT!
 

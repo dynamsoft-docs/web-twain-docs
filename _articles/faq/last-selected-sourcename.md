@@ -16,4 +16,4 @@ description: How can I set the last selected source as the default source for an
 
 Example:
 
-![default sourcename]({{site.assets}}imgs/default-sourcename.png)
+![default sourcename](/assets/imgs/default-sourcename.png)

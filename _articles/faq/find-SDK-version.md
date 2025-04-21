@@ -25,11 +25,11 @@ Due to Dynamic Web TWAIN being a long-standing and popular product among enterpr
 
     > If you are not using NPM to manage Dynamic Web TWAIN resources, you can try to find and open the "**dynamsoft.webtwain.config.js**" file in your project. At the very top of the file, you can see the version number noted by Dynamsoft in the comments.
     <br>
-    ![config_comment]({{site.assets}}imgs/config-comment.png)
+    ![config_comment](/assets/imgs/config-comment.png)
     
     > If you are using NPM to manage Dynamic Web TWAIN resources, you can try to find and open the "**dynamsoft.webtwain.min.js**" file in your project. At the very top of the file, you can see the version number noted by Dynamsoft in the comments.
     <br>
-    ![min_comment]({{site.assets}}imgs/min-comment.png)
+    ![min_comment](/assets/imgs/min-comment.png)
 
 * Method 2
     > For versions 17.0 and above, you can retrieve the current SDK version by running the code "`Dynamsoft.DWT.JSVersion`".
@@ -44,6 +44,6 @@ Due to Dynamic Web TWAIN being a long-standing and popular product among enterpr
     > 3. Look for "Dynamic Web TWAIN Service" in the list of installed programs.
     > 4. The version of Dynamic Web TWAIN Service should be displayed in the program list.
     <br>
-    ![panel]({{site.assets}}imgs/panel.png)
+    ![panel](/assets/imgs/panel.png)
 
 If you need further assistance, please contact [Dynamsoft Support](https://www.dynamsoft.com/contact/).

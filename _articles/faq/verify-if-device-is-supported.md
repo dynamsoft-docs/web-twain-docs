@@ -24,7 +24,7 @@ There are two ways to check if a physical document scanner is compatible:
 
 The fastest and most convenient way is to check using our <a href="https://demo.dynamsoft.com/web-twain/" target="_blank">online demo</a>, which is built based on the Dynamic Web TWAIN SDK. If your scanner shows in the source list and can scan documents properly, it means it works well with our SDK.
 
-![source check using demo]({{site.assets}}imgs/source-check-using-demo.png)
+![source check using demo](/assets/imgs/source-check-using-demo.png)
 
 <strong>2) Use Native Program to Verify</strong>
 
@@ -41,7 +41,7 @@ Use the tool called Twacker which is developed by the <a href="https://www.twain
    (Note: If your device is not listed, please check if the driver is installed. Or, try running Twacker as admin to see if it shows up.)
 4. Try scanning a document via Acquire...
 
-![source check using twacker]({{site.assets}}imgs/source-check-using-twacker.png)
+![source check using twacker](/assets/imgs/source-check-using-twacker.png)
 
 If scanning is successful without any errors, then your device should be TWAIN compliant. You can also try other commands to see how it works. If your scanner doesn't work with TWACKER, please check your scanner model online and make sure you have installed the (latest) TWAIN driver from its manufacturer.
 
@@ -51,16 +51,16 @@ Use the ImageCapture app (provided by Apple Inc.) to verify if a scanner is ICA 
 
 1. Find the Image Capture application
 
-   ![source check using mac]({{site.assets}}imgs/source-check-using-mac.png)
+   ![source check using mac](/assets/imgs/source-check-using-mac.png)
 
 2. Open the application
 3. Acquire an image and see how it works
 
-   ![source check using mac 2]({{site.assets}}imgs/source-check-using-mac-2.png)
+   ![source check using mac 2](/assets/imgs/source-check-using-mac-2.png)
 
 For more info, please check out the <a href="https://support.apple.com/en-ca/guide/image-capture/imgcp1004/mac" target="_blank">official guide</a>.
 
 ### For Linux
 
 Use the XSane app to verify if a scanner is SANE compatible on a Linux machine.
-Please check out the <a href="http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html" target="_blank">official guide</a> and <a href="{{site.assets}}docs/Scanning_with_XSane.pdf" target="_blank">this document</a> for more detail.
+Please check out the <a href="http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html" target="_blank">official guide</a> and <a href="/assets/docs/Scanning_with_XSane.pdf" target="_blank">this document</a> for more detail.

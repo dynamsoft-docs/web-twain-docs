@@ -12,7 +12,7 @@ description: How to test if your scanner supports ICA scanning on Mac OS
 
 ## How to test if your scanner supports ICA scanning on Mac OS?
 
-![Hardware-Scanners-Cameras-2]({{site.assets}}imgs/Hardware-Scanners-Cameras-2.png)
+![Hardware-Scanners-Cameras-2](/assets/imgs/Hardware-Scanners-Cameras-2.png)
 
 `ICA Scanners` refer to image scanners that have drivers designed in accordance with the [ImageCaptureCore Framework](https://developer.apple.com/documentation/imagecapturecore).
 
@@ -34,7 +34,7 @@ There are 3 ways to verify whether your scanner is ICA compliant.
 
   - Make sure the scanner driver shows up in the scanner list.
 
-![Hardware-Scanners-Cameras-5]({{site.assets}}imgs/Hardware-Scanners-Cameras-5.png)
+![Hardware-Scanners-Cameras-5](/assets/imgs/Hardware-Scanners-Cameras-5.png)
 
 - Try scanning to make sure it works correctly without any errors
 
@@ -42,15 +42,15 @@ There are 3 ways to verify whether your scanner is ICA compliant.
 
   - Find the Image Capture application
 
-![Hardware-Scanners-Cameras-12.png]({{site.assets}}imgs/Hardware-Scanners-Cameras-12.png)
+![Hardware-Scanners-Cameras-12.png](/assets/imgs/Hardware-Scanners-Cameras-12.png)
 
 - Open the application
 
-![Hardware-Scanners-Cameras-13.png]({{site.assets}}imgs/Hardware-Scanners-Cameras-13.png)
+![Hardware-Scanners-Cameras-13.png](/assets/imgs/Hardware-Scanners-Cameras-13.png)
 
 - Acquire an image and see how it works
 
-![Hardware-Scanners-Cameras-14.png]({{site.assets}}imgs/Hardware-Scanners-Cameras-14.png)
+![Hardware-Scanners-Cameras-14.png](/assets/imgs/Hardware-Scanners-Cameras-14.png)
 
 For more info, please check out the [official guide](https://support.apple.com/en-ca/guide/image-capture/imgcp1004/mac).
 

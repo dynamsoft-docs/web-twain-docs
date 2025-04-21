@@ -38,8 +38,8 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 2. Check `Local Services` and make sure the Dynamic Web TWAIN Service is listed and Running.
 
 3. On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`, uncheck 'Include all sites that bypass the proxy server'  
-   ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1]({{site.assets}}imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1.png)
-   ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2]({{site.assets}}imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2.png)
+   ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1](/assets/imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1.png)
+   ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2](/assets/imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2.png)
 
 4. Check your anti-virus software or any other software that can block local ports and make sure the ports 18622, 18623, 18625 and 18626 are not blocked.
 

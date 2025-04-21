@@ -27,8 +27,8 @@ For Windows users, please choose ".msi" installer
 For Mac users, please choose ".pkg" installer
 For Linux users, please choose ".rpm" or ".deb" installer accordingly
 
-![download_installer]({{site.assets}}imgs/download_msi_from_cdn.png)
+![download_installer](/assets/imgs/download_msi_from_cdn.png)
 
 **Step 3:**
 Click on the "View Raw" button, it will start to download the installer.
-![download_raw]({{site.assets}}imgs/download_view_raw.png)
+![download_raw](/assets/imgs/download_view_raw.png)

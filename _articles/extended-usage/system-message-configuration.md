@@ -145,6 +145,6 @@ The messages are grouped into categories:
 
 The `Dynamsoft._show_install_dialog()` function defined in the `dynamsoft.webtwain.install.js` resource file generates the [Dynamic Web TWAIN Service](/_articles/faq/what-does-dynamsoft-service-do-on-end-user-machine.md) installation dialog box, pictured here:
 
-![install dialog]({{site.assets}}imgs/Initialization-1.png)
+![install dialog](/assets/imgs/Initialization-1.png)
 
 As the dialog box contains instructions for installing the Dynamic Web TWAIN Service, consider altering the message strings for localization purposes. Generally we discourage directly modifying the resource files, but this dialogue function contains styling and messaging which may be tailored the web application itself. Try not to alter the platform detection logic too greatly, as this may interfere with the Dynamic Web TWAIN Service installation procedure. Please contact the [support team](/_articles/about/getsupport.md) for any further questions.

@@ -16,7 +16,7 @@ description: Error message – The current product key has expired on XXX, pleas
 
 You see the following pop-up
 
-![Product key expired]({{site.assets}}imgs/product-key-expired.png)
+![Product key expired](/assets/imgs/product-key-expired.png)
 
 ### Cause
 

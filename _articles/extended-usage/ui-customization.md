@@ -15,7 +15,7 @@ Generally speaking, most UI elements are configured in the file **dynamsoft.webt
 
 ## Installation Dialog
 
-![UI 1]({{site.assets}}imgs/Initialization-1.png)
+![UI 1](/assets/imgs/Initialization-1.png)
 
 This dialog comes up when using `Dynamic Web TWAIN` scanner module under one of the following conditions:
 
@@ -28,7 +28,7 @@ If needing to disable the default dialog or come up with your own install dialog
 
 ### Loading bar and backdrop
 
-![UI 2]({{site.assets}}imgs/UI-8.png)
+![UI 2](/assets/imgs/UI-8.png)
 
 This loading bar and backdrop shows up when creating a `WebTwain` instance or when you try to scan. The functions `Dynamsoft.DWT.OnWebTwainPreExecute()` and `Dynamsoft.DWT.OnWebTwainPostExecute()` are called before and after the process. You can customize the behavior like this
 
@@ -51,11 +51,11 @@ If you just want to change the loading bar, you can use the `Dynamsoft.DWT.Custo
 
 When `Dynamic Web TWAIN` performs a time-consuming task, it'll show a progress bar. This progress bar is either like this
 
-![UI-3]({{site.assets}}imgs/UI-7.png)
+![UI-3](/assets/imgs/UI-7.png)
 
 or like this (with a `Cancel` button)
 
-![UI-4]({{site.assets}}imgs/UI-9.png)
+![UI-4](/assets/imgs/UI-9.png)
 
 The 1st bar shows up when saving, loading or converting and can be hidden by setting [ `IfShowProgressBar` ](/_articles/info/api/WebTwain_IO.md#ifshowprogressbar) to `false` .
 

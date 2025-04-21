@@ -38,4 +38,5 @@ We also have an<!-- [knowledge base](../knowledge-base/) --> [API reference](/_a
     - Cache sanitization even upon unexpected shutdown of SDK
 
 ## [System Requirements](/_articles/introduction/system-requirements.md)
-DWT supports most major operating systems, browsers, and printers using standard drivers. Learn more about hardware requirements [here](/_articles/about/getsupport.md) for more information.
+
+DWT supports most major operating systems, browsers, and printers using standard drivers. Learn more about hardware requirements [here](/_articles/introduction/imaging-hardware.md). Other environments not officially listed may still support DWT, but Dynamsoft does not officially support these environments as they are not tested. If you have questions about unofficially supported environments, please contact our [support team](/_articles/about/getsupport.md) for more information.

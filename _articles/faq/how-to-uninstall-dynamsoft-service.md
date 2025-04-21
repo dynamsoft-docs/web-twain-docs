@@ -60,7 +60,7 @@ Run 'Command Prompt' as **administrator**, go to C:\WINDOWS\system32, then execu
 wmic product where name="Dynamsoft Service" call uninstall /nointeractive
 ```
 
-![How-to-uninstall-the-Dynamsoft-Service-without MSI-installer.png]({{site.assets}}imgs/How-to-uninstall-the-Dynamsoft-Service-without MSI-installer.png)
+![How-to-uninstall-the-Dynamsoft-Service-without MSI-installer.png](/assets/imgs/How-to-uninstall-the-Dynamsoft-Service-without MSI-installer.png)
 
 ### On macOS
 

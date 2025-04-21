@@ -547,9 +547,9 @@ breadcrumbText: API Reference
 
 ### Events
 
-|[`click`](/_articles/info/api/WebTwain_Viewer.md#click)| [`contextmenu`](/_articles/info/api/WebTwain_Viewer.md#contextmenu)| [`dblclick`](/_articles/info/api/WebTwain_Viewer.md#dblclick)|[`mousemove`](/_articles/info/api/WebTwain_Viewer.md#mousemove)|
-| [`mousedown`](/_articles/info/api/WebTwain_Viewer.md#mousedown)| [`mouseup`](/_articles/info/api/WebTwain_Viewer.md#mouseup)| [`mouseout`](/_articles/info/api/WebTwain_Viewer.md#mouseout)|[`mouseover`](/_articles/info/api/WebTwain_Viewer.md#mouseover)|
-|[`keydown`](/_articles/info/api/WebTwain_Viewer.md#keydown)| [`keyup`](/_articles/info/api/WebTwain_Viewer.md#keyup)|[`pageAreaSelected`](/_articles/info/api/WebTwain_Viewer.md#pageareaselected)| [`pageAreaUnselected`](/_articles/info/api/WebTwain_Viewer.md#pageareaunselected)|
+|[`click`](/_articles/info/api/WebTwain_Viewer.md#on)| [`contextmenu`](/_articles/info/api/WebTwain_Viewer.md#on)| [`dblclick`](/_articles/info/api/WebTwain_Viewer.md#on)|[`mousemove`](/_articles/info/api/WebTwain_Viewer.md#on)|
+| [`mousedown`](/_articles/info/api/WebTwain_Viewer.md#on)| [`mouseup`](/_articles/info/api/WebTwain_Viewer.md#on)| [`mouseout`](/_articles/info/api/WebTwain_Viewer.md#on)|[`mouseover`](/_articles/info/api/WebTwain_Viewer.md#on)|
+|[`keydown`](/_articles/info/api/WebTwain_Viewer.md#on)| [`keyup`](/_articles/info/api/WebTwain_Viewer.md#on)|[`pageAreaSelected`](/_articles/info/api/WebTwain_Viewer.md#pageareaselected)| [`pageAreaUnselected`](/_articles/info/api/WebTwain_Viewer.md#pageareaunselected)|
 |[`pageRendered`](/_articles/info/api/WebTwain_Viewer.md#pagerendered)| [`resize`](/_articles/info/api/WebTwain_Viewer.md#resize)|
 
 

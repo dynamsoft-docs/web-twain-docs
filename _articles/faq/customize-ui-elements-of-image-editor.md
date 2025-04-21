@@ -52,7 +52,7 @@ visibility: {
 
 You can see the print icon is hidden in the image below.
 
-![image]({{site.assets}}imgs/hideicon.png)
+![image](/assets/imgs/hideicon.png)
 
 ### Can I specify where and how big the Editor is?
 
@@ -75,7 +75,7 @@ innerBorder: '',
 background: "rgb(255, 255, 255)",
 ```
 
-![image]({{site.assets}}imgs/colorchange.png)
+![image](/assets/imgs/colorchange.png)
 
 Complete code is as below.
 
