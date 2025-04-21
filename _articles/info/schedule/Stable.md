@@ -137,7 +137,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 - Changed the design of the default Dynamsoft Service installation pop-up.
 
-  ![Installation changes]({{site.assets}}imgs/installation-changes.png)
+  ![Installation changes](/assets/imgs/installation-changes.png)
 
 - Changed the data type of `imageId` from `number` to `string`. The affected APIs are as follows: 
 

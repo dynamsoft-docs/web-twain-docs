@@ -18,6 +18,6 @@ description: How to test if your camera is MediaDevices compliant
 
   - Make sure the camera shows up in the device list
 
-![Hardware-Scanners-Cameras-11]({{site.assets}}imgs/Hardware-Scanners-Cameras-11.png)
+![Hardware-Scanners-Cameras-11](/assets/imgs/Hardware-Scanners-Cameras-11.png)
 
 - Try showing the video stream and capturing a frame to see if it works without any errors

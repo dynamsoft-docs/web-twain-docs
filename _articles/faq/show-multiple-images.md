@@ -21,4 +21,4 @@ Example:
 DWTObject.Viewer.setViewMode(2, 3);
 ```
 
-![Show multiple images]({{site.assets}}imgs/show-multiple-Images.png)
+![Show multiple images](/assets/imgs/show-multiple-Images.png)

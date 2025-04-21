@@ -32,7 +32,7 @@ DWTObject.getCapabilities(
 
 and then find the capability corresponding to the resolution. Normally, it is called ICAP_XRESOLUTION.
 
-![Capability Resolution]({{site.assets}}imgs/capability-resolution.png)
+![Capability Resolution](/assets/imgs/capability-resolution.png)
 
 - Step-2: Call the following code to get all the resolutions supported by the scanner.
 

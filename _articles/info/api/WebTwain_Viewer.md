@@ -36,11 +36,10 @@ needGenerateH3Content: true
 
 **Events**
 
-
-| [`on()`](#on) | [`off()`](#off) |
-
-
-| [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected)| [`pageRendered`](#pagerendered) | [`resize`](#resize) |
+| [`click`](#on)               | [`contextmenu`](#on) | [`dblclick`](#on)                 | [`mousemove`](#on)                   |
+| [`mousedown`](#on)       | [`mouseup`](#on)         | [`mouseout`](#on)                 | [`mouseover`](#on)                   |
+| [`keydown`](#on)           | [`keyup`](#on)             | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
+| [`pageRendered`](#pagerendered) | [`resize`](#resize)           |
 
 ---
 
@@ -1486,10 +1485,10 @@ The allowed values are:
 
 | Value       | Description                                                                                                                                                 |
 | :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `default`   | The shape is ![default]({{site.assets}}imgs/default.gif).                                                                                                   |
-| `crosshair` | The shape is ![crosshair]({{site.assets}}imgs/crosshair.gif)(default setting), you can select one or multiple area(s) on the page.                          |
-| `pointer`   | The shape is ![pointer]({{site.assets}}imgs/pointer.gif). If the displayed page is bigger than the viewer, the page can be moved.                           |
-| `zoom-in`   | The shape is ![zoom-in]({{site.assets}}imgs/zoom-in.gif), supports click the page to zoom in. Only works if the view mode of the viewer is set to -1 by -1. |
+| `default`   | The shape is ![default](/assets/imgs/default.gif).                                                                                                   |
+| `crosshair` | The shape is ![crosshair](/assets/imgs/crosshair.gif)(default setting), you can select one or multiple area(s) on the page.                          |
+| `pointer`   | The shape is ![pointer](/assets/imgs/pointer.gif). If the displayed page is bigger than the viewer, the page can be moved.                           |
+| `zoom-in`   | The shape is ![zoom-in](/assets/imgs/zoom-in.gif), supports click the page to zoom in. Only works if the view mode of the viewer is set to -1 by -1. |
 
 If there are selected areas on the page, changing the `cursor` property will clear them.
 
@@ -2372,7 +2371,7 @@ on(
 
 **Parameters**
 
-`eventName`: Specify the event. Value: click, contextmenu, dblclick, mousemove, mousedown, mouseup, mouseout, mouseover, keydown, keyup.
+`eventName`: Specify the event. Value: click, contextmenu, dblclick, mousemove, mousedown, mouseup, mouseout, mouseover, keydown, keyup, pageAreaSelected, pageAreaUnselected, pageRendered and resize.
 
 `callback`: Specify the callback.
 - `dwtEvent`: The viewer-specific event object. Please refer to [`ViewerEvent`](/_articles/info/api/interfaces.md#viewerevent) and <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent" target="_blank">`KeyboardEvent`</a>.

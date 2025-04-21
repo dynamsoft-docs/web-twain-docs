@@ -29,7 +29,7 @@ Please select your frontend language:
 
 This article assumes that you have downloaded and unzipped this sample: <a href="https://download2.dynamsoft.com/Samples/DWT_OnlineDemo/DynamicWebTWAIN-JavaScript.zip">DynamicWebTWAIN-JavaScript.zip</a>. After unzipping it, the directory structure is shown in the image below.
 
-![javascript.png]({{site.assets}}imgs/javascript.png)
+![javascript.png](/assets/imgs/javascript.png)
 
 <p>Note: The &quot;Sample&quot; directory mentioned in the steps below refers to the &quot;Sample&quot; directory shown in the image.</p>
 
@@ -88,7 +88,7 @@ For example, if you are using Tomcat 10.1.16, copy it to &quot;{Tomcat-installed
 
 This article assumes that you have downloaded and unzipped this sample: <a href="https://download2.dynamsoft.com/Samples/DWT_OnlineDemo/DynamicWebTWAIN-Angular.zip">DynamicWebTWAIN-Angular.zip</a>. After unzipping it, the directory structure is shown in the image below.
 
-![angular.png]({{site.assets}}imgs/angular.png)
+![angular.png](/assets/imgs/angular.png)
 
 <p>Note: The &quot;Sample&quot; directory mentioned in the steps below refers to the &quot;Sample&quot; directory shown in the image.</p>
 
@@ -168,7 +168,7 @@ For example, if you are using Tomcat 10.1.16, copy it to &quot;{Tomcat-installed
 
 This article assumes that you have downloaded and unzipped this sample: <a href="https://download2.dynamsoft.com/Samples/DWT_OnlineDemo/DynamicWebTWAIN-React-JavaScript.zip">DynamicWebTWAIN-React-JavaScript.zip</a>. After unzipping it, the directory structure is shown in the image below.
 
-![react.png]({{site.assets}}imgs/react.png)
+![react.png](/assets/imgs/react.png)
 
 <p>Note: The &quot;Sample&quot; directory mentioned in the steps below refers to the &quot;Sample&quot; directory shown in the image.</p>
 
@@ -248,7 +248,7 @@ For example, if you are using Tomcat 10.1.16, copy it to &quot;{Tomcat-installed
 
 This article assumes that you have downloaded and unzipped this sample: <a href="https://download2.dynamsoft.com/Samples/DWT_OnlineDemo/DynamicWebTWAIN-React-TypeScript.zip">DynamicWebTWAIN-React-TypeScript.zip</a>. After unzipping it, the directory structure is shown in the image below.
 
-![react-typescript.png]({{site.assets}}imgs/react-typescript.png)
+![react-typescript.png](/assets/imgs/react-typescript.png)
 
 <p>Note: The &quot;Sample&quot; directory mentioned in the steps below refers to the &quot;Sample&quot; directory shown in the image.</p>
 
@@ -328,7 +328,7 @@ For example, if you are using Tomcat 10.1.16, copy it to &quot;{Tomcat-installed
 
 This article assumes that you have downloaded and unzipped this sample: <a href="https://download2.dynamsoft.com/Samples/DWT_OnlineDemo/DynamicWebTWAIN-Vue-JavaScript.zip">DynamicWebTWAIN-Vue-JavaScript.zip</a>. After unzipping it, the directory structure is shown in the image below.
 
-![vue.png]({{site.assets}}imgs/vue.png)
+![vue.png](/assets/imgs/vue.png)
 
 <p>Note: The &quot;Sample&quot; directory mentioned in the steps below refers to the &quot;Sample&quot; directory shown in the image.</p>
 
@@ -408,7 +408,7 @@ For example, if you are using Tomcat 10.1.16, copy it to &quot;{Tomcat-installed
 
 This article assumes that you have downloaded and unzipped this sample: <a href="https://download2.dynamsoft.com/Samples/DWT_OnlineDemo/DynamicWebTWAIN-Vue-TypeScript.zip">DynamicWebTWAIN-Vue-TypeScript.zip</a>. After unzipping it, the directory structure is shown in the image below.
 
-![vue-typescript.png]({{site.assets}}imgs/vue-typescript.png)
+![vue-typescript.png](/assets/imgs/vue-typescript.png)
 
 <p>Note: The &quot;Sample&quot; directory mentioned in the steps below refers to the &quot;Sample&quot; directory shown in the image.</p>
 

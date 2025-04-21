@@ -60,4 +60,4 @@ If you need time to update your website, you may try one of the following workar
    see the steps below  
    Step 1: visit chrome://flags/#block-insecure-private-network-requests  
    Step 2: set 'Block insecure private network requests' to Disabled  
-   ![block-insecure-private-network-request]({{site.assets}}imgs/block-insecure-private-network-request.png)
+   ![block-insecure-private-network-request](/assets/imgs/block-insecure-private-network-request.png)

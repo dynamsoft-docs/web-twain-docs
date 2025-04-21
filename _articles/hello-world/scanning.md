@@ -145,7 +145,7 @@ APIs used:
 
 Simply double click on `HelloWorld.html` in your file viewer, or right click on the HTML file and select a browser to open it with. In your browser, you should see a page with a scan button and an empty preview box.
 
-![Build-the-Hello-World-Scan-Page-3]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-3.png)
+![Build-the-Hello-World-Scan-Page-3](/assets/imgs/Build-the-Hello-World-Scan-Page-3.png)
 
 > Note: if you see a license notice, please make sure you have a valid license. Open `dynamsoft.webtwain.config.js` and ensure that you have a license defined at `Dynamsoft.DWT.ProductKey`. If you need further assistance, please contact [Dynamsoft Support](https://www.dynamsoft.com/web-twain/docs/about/getsupport.html).
 
@@ -153,7 +153,7 @@ Simply double click on `HelloWorld.html` in your file viewer, or right click on 
 
 After pressing the Scan button, you will be presented with the Select Source dialog. Select your scanner and press the Select button.
 
-![Build-the-Hello-World-Scan-Page-4]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-4.png)
+![Build-the-Hello-World-Scan-Page-4](/assets/imgs/Build-the-Hello-World-Scan-Page-4.png)
 
 > Only TWAIN, WIA, ICA, or SANE compliant devices are listed in the Select Source dialog. If your connected scanner does not show up in the list, please confirm that the proper driver is installed. If you are using Windows and do not have a physical scanner on hand, you may install the TWAIN Virtual Scanner - a scanner simulator developed by the TWAIN Working Group for testing purposes. This guide uses the [TWAIN Virtual Scanner](/_articles/faq/download-virtual-scanner-for-testing.md) for reproducibility.
 
@@ -161,13 +161,13 @@ After pressing the Scan button, you will be presented with the Select Source dia
 
 You will be presented with your scanner's built-in interface after selecting the scanner. Initiate a scan from this dialog. Your scanner's interface may differ from the provided screenshot:
 
-![Build-the-Hello-World-Scan-Page-UI]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-UI.png)
+![Build-the-Hello-World-Scan-Page-UI](/assets/imgs/Build-the-Hello-World-Scan-Page-UI.png)
 
 ### View the Scanned Image
 
 After the scanner finishes scanning, the viewer will display the acquired images:
 
-![Build-the-Hello-World-Scan-Page-5]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-5.png)
+![Build-the-Hello-World-Scan-Page-5](/assets/imgs/Build-the-Hello-World-Scan-Page-5.png)
 
 You have just scanned an image using an image scanner controlled by a web application!
 

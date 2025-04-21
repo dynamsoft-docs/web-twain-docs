@@ -22,13 +22,13 @@ To comply with Windows security updates, we will deprecate SHA-1 signatures in a
 
 * When you try to install the Dynamsoft Service, you will get the following two error for "Unknown Publisher".
 
-![Deprecation-1]({{site.assets}}imgs/Deprecation-1.png)
+![Deprecation-1](/assets/imgs/Deprecation-1.png)
 
-![Deprecation-2]({{site.assets}}imgs/Deprecation-2.png)
+![Deprecation-2](/assets/imgs/Deprecation-2.png)
 
 * When you run the ActiveX Edition in IE, you will get a prompt to allow its execution.
 
-![Deprecation-3]({{site.assets}}imgs/Deprecation-3.png)
+![Deprecation-3](/assets/imgs/Deprecation-3.png)
 
 For more information, check out [Preparing for the deprecation of SHA-1 signatures](https://docs.microsoft.com/en-us/sysinternals/announce/sha1deprecation) from Microsoft.
 

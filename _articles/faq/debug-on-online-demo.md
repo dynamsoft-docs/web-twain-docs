@@ -22,7 +22,7 @@ Visit Dynamic Web TWAIN Online Demo: [https://demo.dynamsoft.com/web-twain/](htt
 
 Given that the demo is presented via the iframe element, to acquire the WebTwain instance, you need to make the following configurations.
 
-![image1]({{site.assets}}imgs/debug_on_online_demo.png)
+![image1](/assets/imgs/debug_on_online_demo.png)
 
 As an alternative, you can straightforwardly call the `top[0].DWTObject`.
 
@@ -30,10 +30,10 @@ As an alternative, you can straightforwardly call the `top[0].DWTObject`.
 
 You've now obtained the WebTwain instance.
 
-![image2]({{site.assets}}imgs/get_dwtobject_instance.png)
+![image2](/assets/imgs/get_dwtobject_instance.png)
 
 And you can test the API as much as you want. Let's take the [ConvertToBase64](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_IO.html#converttobase64) as an example. After you input the code into the console and press Enter to run this code snippet, it will convert the image at index 0 in the buffer (that is, the first image) into a Base64 string.
 
-![image3]({{site.assets}}imgs/console_code_test.png)
+![image3](/assets/imgs/console_code_test.png)
 
 Now that you've had the opportunity to preview how the DWT API operates in the web application, you can explore more features by reviewing the [API documentation]({{site.info}}api/). 

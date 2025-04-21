@@ -21,13 +21,13 @@ There are 3 ways to verify whether your scanner is SANE compliant.
   > If you haven't installed the SDK, a dialog will show up for you to download and install it.
 
   - Make sure the scanner driver shows up in the scanner list
-  ![Hardware-Scanners-Cameras-5]({{site.assets}}imgs/Hardware-Scanners-Cameras-5.png)
+  ![Hardware-Scanners-Cameras-5](/assets/imgs/Hardware-Scanners-Cameras-5.png)
   
   - Try scanning to make sure it works correctly without any errors
 
 
 * [Recommended] Try the scanner with the XSane app on Linux. Check out the [official guide](http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html)
    
-   > [More info>>]({{site.assets}}docs/Scanning_with_XSane.pdf)
+   > [More info>>](/assets/docs/Scanning_with_XSane.pdf)
 
 * Check out the [official list](http://www.sane-project.org/sane-backends-1.0.25.html) of supported scanners.

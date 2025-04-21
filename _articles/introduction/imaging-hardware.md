@@ -22,7 +22,7 @@ Dynamic Web TWAIN's main feature is interacting with imaging devices like scanne
 
 ## TWAIN Scanners
 
-![Hardware-Scanners-Cameras-1]({{site.assets}}imgs/Hardware-Scanners-Cameras-1.png)
+![Hardware-Scanners-Cameras-1](/assets/imgs/Hardware-Scanners-Cameras-1.png)
 
 `TWAIN Scanners` refer to image scanners and document scanners that have drivers following the TWAIN standard.
 
@@ -40,7 +40,7 @@ See more: <a href="/web-twain/docs/faq/how-to-use-TWACKER-to-check-if-your-devic
 
 ## ICA Scanners
 
-![Hardware-Scanners-Cameras-2]({{site.assets}}imgs/Hardware-Scanners-Cameras-2.png)
+![Hardware-Scanners-Cameras-2](/assets/imgs/Hardware-Scanners-Cameras-2.png)
 
 `ICA Scanners` refer to image scanners that have drivers designed in accordance with the [ImageCaptureCore Framework](https://developer.apple.com/documentation/imagecapturecore).
 
@@ -54,7 +54,7 @@ See more: <a href="/web-twain/docs/faq/how-to-test-if-your-scanner-supports-ICA-
 
 ## SANE Scanners
 
-![Hardware-Scanners-Cameras-3]({{site.assets}}imgs/Hardware-Scanners-Cameras-3.png)
+![Hardware-Scanners-Cameras-3](/assets/imgs/Hardware-Scanners-Cameras-3.png)
 
 `SANE Scanners` refer to image scanners that have drivers designed in accordance with the [SANE API](http://www.sane-project.org/).
 
@@ -70,7 +70,7 @@ See more: <a href="/web-twain/docs/faq/how-to-test-if-your-device-is-SANE-compli
 
 ## DirectShow Cameras
 
-![Hardware-Scanners-Cameras-4]({{site.assets}}imgs/Hardware-Scanners-Cameras-4.png)
+![Hardware-Scanners-Cameras-4](/assets/imgs/Hardware-Scanners-Cameras-4.png)
 
 `DirectShow Cameras` refer to the cameras which can be accessed via the [Microsoft DirectShow architecture](https://docs.microsoft.com/en-us/windows/win32/directshow/introduction-to-directshow). These cameras are either built into desktops / laptops or connected via USB.
 

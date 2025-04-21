@@ -48,15 +48,15 @@ Multiple origins:
 Access-Control-Allow-Origin=http://192.168.8.212, http://192.168.8.126:8033, https://www.dynamsoft.com
 ```
 
-![Access-Control-Allow-Origin]({{site.assets}}imgs/Access-Control-Allow-Origin.png)
+![Access-Control-Allow-Origin](/assets/imgs/Access-Control-Allow-Origin.png)
 
 After configuring the origins in the `DSConfiguration.ini` file, please set [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) to `true` in `dynamsoft.webtwain.config.js`. 
 
 When a request comes from a different origin, a CORS error message will be displayed, both in a pop-up and in the console.
 
-  ![CORS-error-popup]({{site.assets}}imgs/CORS-error-popup.png)
+  ![CORS-error-popup](/assets/imgs/CORS-error-popup.png)
 
-  ![CORS-error-console]({{site.assets}}imgs/CORS-error-console.png)
+  ![CORS-error-console](/assets/imgs/CORS-error-console.png)
 
 ## Installation of Dynamic Web TWAIN Service
 
@@ -64,7 +64,7 @@ On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK fo
 
 The prompt comes up when you try to [create a WebTwain instance](/_articles/extended-usage/advanced-initialization.md#instantiating-webtwain-without-onwebtwainready) in Service mode.
 
-![Initialization]({{site.assets}}imgs/Initialization-1.png)
+![Initialization](/assets/imgs/Initialization-1.png)
 
 On **Windows and macOS**, double click the downloaded installer to install the service. 
 
@@ -84,7 +84,7 @@ On **Linux**, instead of double clicking, the downloaded installer needs to be r
 
 Once the installation is done, the users can click the orange sentence 'click here to verify completion' or refresh the page to start using Dynamic Web TWAIN.
 
-![Initialization]({{site.assets}}imgs/Initialization-2.png)
+![Initialization](/assets/imgs/Initialization-2.png)
 
 ### Msg: Dynamic Web TWAIN Service is not installed / Dynamic Web TWAIN is not installed
 

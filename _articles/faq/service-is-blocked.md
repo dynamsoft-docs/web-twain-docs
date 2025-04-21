@@ -24,9 +24,9 @@ Dynamic Web TWAIN Service (also called "Dynamsoft Service") is installed success
 This can be due to permissions, firewall, or other programs (e.g. anti-virus) blocking connections to the Dynamic Web TWAIN Service.
 To determine if Dynamic Web TWAIN Service is blocked by another process, open Task Manager and go to the Details Tab.
 Typically, before opening the scan page, you will see three Dynamic Web TWAIN Service processes listed: two under SYSTEM and one under the user account.<br>
-![service blocked-1]({{site.assets}}imgs/service-blocked-1.png)<br>
+![service blocked-1](/assets/imgs/service-blocked-1.png)<br>
 When you open the scan page, two new processes are created under the user account.<br>
-![service blocked-2]({{site.assets}}imgs/service-blocked-2.png)<br>
+![service blocked-2](/assets/imgs/service-blocked-2.png)<br>
 If these two processes are not under the user account, we can confirm that Dynamic Web TWAIN Service is being blocked by another process.
 
 **Cause Two**
@@ -46,7 +46,7 @@ To determine which process is blocking Dynamic Web TWAIN Service, please follow 
 
 [xxxxx] indicates the connection process id, which will identify a process in Task Manager. This process should should typically be a browser process.
 
-![service blocked-3]({{site.assets}}imgs/service-blocked-3.png)
+![service blocked-3](/assets/imgs/service-blocked-3.png)
 
 However, if the identified PID is not a browser process as expected, the PID will typically be the process which is blocking Dynamic Web TWAIN Service.
 

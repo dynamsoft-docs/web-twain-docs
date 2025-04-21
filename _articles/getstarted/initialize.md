@@ -17,12 +17,12 @@ Create a `HelloWorld.html` anywhere and copy the `Resources` folder to the same 
 
 * Resources
 
-  ![Build-the-Hello-World-Scan-Page-1]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-1.png)
+  ![Build-the-Hello-World-Scan-Page-1](/assets/imgs/Build-the-Hello-World-Scan-Page-1.png)
 
 
 * The project
 
-  ![Build-the-Hello-World-Scan-Page-2]({{site.assets}}imgs/Build-the-Hello-World-Scan-Page-2.png)
+  ![Build-the-Hello-World-Scan-Page-2](/assets/imgs/Build-the-Hello-World-Scan-Page-2.png)
 
 
 ## Initialize the DWT environment
@@ -95,7 +95,7 @@ DWT's default behaviour is to initalizae the DWT environment as soon as the appl
 
 ## Run the application
 
-![HelloWorldInit]({{site.assets}}imgs/HelloWorldInit.png)
+![HelloWorldInit](/assets/imgs/HelloWorldInit.png)
 
 # Next article
 

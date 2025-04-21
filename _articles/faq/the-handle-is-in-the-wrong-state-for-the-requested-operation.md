@@ -16,7 +16,7 @@ description: The handle is in the wrong state for the requested operation
 
 When you upload images in Dynamic Web TWAIN's buffer, you may receive the following error messages returned by the ErrorString property:
 
-![Requested-Operation]({{site.assets}}imgs/Requested-Operation.png)
+![Requested-Operation](/assets/imgs/Requested-Operation.png)
 
 ### Cause
 
@@ -59,4 +59,4 @@ When you upload images in Dynamic Web TWAIN's buffer, you may receive the follow
 
 3. The problem may occur when you use "localhost" as the server name in the HTTP Upload method, when actually, you specified the address of your server using an IP address. In this case, please modify the server name to an available IP address in your code and then try again.
 
-    ![Default-Web-Site-Properties]({{site.assets}}imgs/Default-Web-Site-Properties.png)
+    ![Default-Web-Site-Properties](/assets/imgs/Default-Web-Site-Properties.png)

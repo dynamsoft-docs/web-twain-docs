@@ -20,7 +20,7 @@ description: How to test if your camera is DirectShow compliant
 
   - Make sure the camera shows up in the device list
 
-![Hardware-Scanners-Cameras-10]({{site.assets}}imgs/Hardware-Scanners-Cameras-10.png)
+![Hardware-Scanners-Cameras-10](/assets/imgs/Hardware-Scanners-Cameras-10.png)
 
 - Try showing the video stream and try capturing a frame to see if it works without any errors
 

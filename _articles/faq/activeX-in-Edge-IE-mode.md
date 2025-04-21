@@ -19,11 +19,11 @@ Microsoft is <a href="https://www.microsoft.com/en-us/edge/business/ie-mode" tar
 
 1. Update Edge Default Browser settings per the screenshot:
 
-    ![IE Mode 1]({{site.assets}}imgs/ieMode-1.png)
+    ![IE Mode 1](/assets/imgs/ieMode-1.png)
 
 2. Download and install <a href="https://www.microsoft.com/en-us/download/details.aspx?id=49974" target="_blank">Enterprise Mode Site List Manager</a> to <a href="https://docs.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/add-single-sites-to-enterprise-mode-site-list-using-the-version-2-enterprise-mode-tool" target="_blank">add</a> and <a href="https://docs.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/export-your-enterprise-mode-site-list-from-the-enterprise-mode-site-list-manager" target="_blank">export</a> a site list to a XML file.
 
-    ![IE Mode 2]({{site.assets}}imgs/ieMode-2.png)       
+    ![IE Mode 2](/assets/imgs/ieMode-2.png)       
 
 3. <a href="https://docs.microsoft.com/en-us/internet-explorer/ie11-deploy-guide/turn-on-enterprise-mode-and-use-a-site-list" target="_blank">Turn on Enterprise Mode using Group Policy</a>
 
