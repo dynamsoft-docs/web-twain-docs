@@ -49,7 +49,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 - **Discontinued support for the PDF Compressor Add-On.**
 - **Discontinued out-of-the-box support for ActiveX.**
 - **Discontinued support for 32-bit macOS**: now only supporting macOS versions 10.15 and higher.
-- **Discontinued Android support.**
+- **Discontinued support for Android**: use [Mobile Web Capture](https://www.dynamsoft.com/use-cases/mobile-web-capture-sdk/) instead.
 
 ### Bug Fixes
 

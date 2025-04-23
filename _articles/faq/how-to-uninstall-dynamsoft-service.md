@@ -35,13 +35,13 @@ wmic product where name="Dynamic Web TWAIN Service" call uninstall /nointeractiv
 
 ### On macOS
 
-* Run the file `Uninstall.pkg` . The file can be found in `Go > Applications > Dynamsoft > DynamicWebTWAINService > {installed version No.}`
-* Remove the folder `Go > Applications > Dynamsoft > DynamicWebTWAINService > {installed version No.}`
+* Run the file `Uninstall.pkg` . The file can be found in `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {version number}`
+* Remove the folder `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {version number}`
 
 ### On Linux
 
-* Run the file `uninstall.sh` . The file can be found in `opt/dynamsoft/DynamicWebTWAINService`
-* Remove the folder `opt/dynamsoft/DynamicWebTWAINService`
+* Run the file `uninstall.sh` . The file can be found in `opt/dynamsoft/Dynamic Web TWAIN Service {version number}`
+* Remove the folder `opt/dynamsoft/Dynamic Web TWAIN Service {version number}`
 
 <div class="multi-panel-end"></div>
 
