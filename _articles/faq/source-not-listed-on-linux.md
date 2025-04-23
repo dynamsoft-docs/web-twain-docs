@@ -44,17 +44,19 @@ usermod -aG wheel XXX ps:XXX is current username
 3. Run the following command
 ``` shell
 sudo rpm -i DynamicWebTWAINServiceSetup.rpm
+OR
+sudo dpkg -i DynamicWebTWAINServiceSetup.deb
 ```
 
 If the above does not resolve the issue, please follow the troubleshooting steps below.
 
-1. Has the process started?
+1. Run the command below and check whether the process (DynamsoftScanningMgr) has started.
 ``` shell
 ps aux | grep dynamsoft
 ```
 2. Does the below command list out the source?
 ``` shell
-bash /opt/dynamsoft/DynamicWebTWAINService/DynamsoftScanningMgr
+bash /opt/dynamsoft/DynamicWebTWAINService/DynamsoftScanning list
 ```
 3. Please check the logs here: /var/log/syslog
 
@@ -75,17 +77,19 @@ usermod -aG wheel XXX ps:XXX is current username
 3. Run the following command
 ``` shell
 sudo rpm -i DynamsoftServiceSetup.rpm
+OR
+sudo dpkg -i DynamsoftServiceSetup.deb
 ```
 
 If the above does not resolve the issue, please follow the troubleshooting steps below.
 
-1. Has the process started?
+1. Run the command below and check whether the process (DynamsoftScanningMgr) has started.
 ``` shell
 ps aux | grep dynamsoft
 ```
 2. Does the below command list out the source?
 ``` shell
-bash /opt/dynamsoft/DynamsoftService/DynamsoftScanningMgr
+bash /opt/dynamsoft/DynamsoftService/DynamsoftScanning list
 ```
 3. Please check the logs here: /var/log/syslog
 

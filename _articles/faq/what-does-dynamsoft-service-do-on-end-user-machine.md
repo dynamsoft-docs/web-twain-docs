@@ -35,13 +35,13 @@ By default, there are three Dynamic Web TWAIN Service processes running which us
 - Then there is a **monitor process** which is meant to monitor the main process and automatically start it in case it crashes. The monitor process starts like this:
 
   ``` cmd
-  C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}\DynamicWebTWAINService.exe -asmonitor Global\Dynamsoft_1.5.0_352325843_stop_service_event   Global\Dynamsoft_1.5.0_352325828_certcheck_event
+  C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}\DynamicWebTWAINService.exe -asmonitor XXX
   ```
 
 - The last always-running process is meant to **support the SSL certificate specifically for the Firefox browser**:
 
   ``` cmd
-  "-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service 19\dwt_19.0.0.0318.dll"
+  C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}\DynamicWebTWAINService.exe -certCheck XXX
   ```
 
 > Note: you may find another process named 'Dynamsoft Scanning New Module', which is a scan module. This process will start when you access an application integrated with Dynamic Web TWAIN, and will automatically stop when you close the application. 
@@ -71,32 +71,25 @@ There are multiple files and folders in the service directory. Taking Windows se
 
 ### Components
 
-These files are named with their version number. The following uses v16.1.1 as an example.
+These files are named with their version number. The following uses v19.0 as an example.
 
 * Core scanning module
-  + `dwt_16.1.0.0728.dll`
+  + `dwt_19.0.0.0318.dll`
   + `DSSCN2.exe`
   + `DSSCN2x64.exe`
   + `TWAINDSM.dll`
   + `TWAINDSMx64.dll`
 * Barcode Reader Addon
-  + `\x64\`
-  + `\x86\`
-  + `dbr_7.4.0.0428.dll`
-  + `dbrx64_7.4.0.0428.dll`
-* PDF Addon
-  + `DynamicPdfCore_11.0.0.0428.dll`
-  + `DynamicPdfCorex64_11.0.0.0428.dll`
-  + `DynamicPdfR_11.0.0.0428.dll` (for the PDF Rasterizer)
-  + `DynamicPdfRx64_11.0.0.0428.dll` (for the PDF Rasterizer)
+  + `\x64\DynamsoftBarcodeReaderx64_9.6.dll`
+  + `dbrx64_9.6.2.0318.dll`
+* PDF Addon & Imaging features
+  + `\x64\DynamsoftCorex64.dll`
+  + `\x64\DynamsoftImageProcessingx64.dll`
+  + `\x64\ImageProcessx64.dll`
 * Webcam Addon
-  + `DynamicWebcam_15.0.0.0625.dll`
   + `DynamicWebcamx64_15.0.0.0625.dll`
 * File Uploader
-  + `UploadModule_1.6.0.0428.dll`
-* Imaging features
-  + `DynamicImage.dll`
-  + `DynamicImagex64.dll`
+  + `UploadModule_1.9.0.0318.dll`
 
 ### Supporting files
 
@@ -104,8 +97,7 @@ These files are named with their version number. The following uses v16.1.1 as a
 * `legal.txt` : Legal notice.
 * `libcurl.dll` : The file transfer library.
 * For OpenSSL
-  + `libeay32.dll`
-  + `ssleay32.dll`
+  + `libssl-3-x64.dll`
 * `port.lock`
 
 
@@ -115,25 +107,6 @@ Dynamic Web TWAIN Service sets up a local HTTP service that accepts requests fro
 > NOTE
 >
 > These requests are handled by the JavaScript client of the library. Please do not try to make similar requests in your own code without consulting [Dynamsoft Support](/_articles/about/getsupport.md).
-
-#### Return availability
-
-- Request
-
-```
-https://127.0.0.1:18623/fa/VersionInfo?ts=1603161807908
-```
-
-- Response in case of success
-
-```json
-{
-  "id": "1",
-  "method": "VersionInfo",
-  "result": ["16, 1, 0, 0728", "", "64"],
-  "cmdId": ""
-}
-```
 
 #### Perform image removal
 
@@ -183,13 +156,13 @@ By default, there are three Dynamsoft Service processes running which use the sa
 - Then there is a **monitor process** which is meant to monitor the main process and automatically start it in case it crashes. The monitor process starts like this:
 
   ``` cmd
-  C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\DynamsoftService.exe -asmonitor Global\Dynamsoft_1.5.0_352325843_stop_service_event   Global\Dynamsoft_1.5.0_352325828_certcheck_event
+  C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}\DynamsoftService.exe -asmonitor XXX
   ```
 
 - The last always-running process is meant to **support the SSL certificate specifically for the Firefox browser**:
 
   ``` cmd
-  "-scan" "\\.\pipe\dynamsoftscan_15.0_70056_60" "0" "Global\ss352604281_61_70056" "0" "C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64\dwt_trial_15.0.0.0625.dll"
+  C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}\DynamsoftService.exe -certCheck XXX
   ```
 
 > Note: you may find another process named 'Dynamsoft Scanning New Module', which is a scan module. This process will start when you access an application integrated with Dynamic Web TWAIN, and will automatically stop when you close the application. 

@@ -204,6 +204,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 29.  [The loading bar keeps spinning when capture the image with iPhone.](/_articles/faq/the-loading-bar-keeps-spinning-when-capture-the-image-with-iphone.md)
 30.  [How to debug on Dynamic Web TWAIN online demo?](/_articles/faq/debug-on-online-demo.md)
 31.  [Dynamic Web TWAIN prompts the .deb installer for Windows](/_articles/faq/incorrect-installer-for-windowsARM64.md)
+32.  [Why am I unable to load the TIFF file into Dynamic Web TWAIN?](/_articles/faq/unable-to-load-4-bit-tiff.md)
 
 ## Licensing and Purchase
 

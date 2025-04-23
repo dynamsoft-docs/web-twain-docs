@@ -58,30 +58,30 @@ sudo rpm -i path/to/DynamicWebTWAINServiceSetup.rpm
 * Windows
 
 ``` shell
-msiexec  /i  "/path/to/DynamicWebTWAINServiceSetup.msi"   /qn
+msiexec  /i  "/path/to/DynamsoftServiceSetup.msi"   /qn
 ```
 
 * macOS
 
 ``` shell
 // Install
-sudo installer -pkg /path/to/DynamicWebTWAINServiceSetup.pkg -target /Applications
+sudo installer -pkg /path/to/DynamsoftServiceSetup.pkg -target /Applications
 // Stop service
-sudo launchctl unload /Library/LaunchAgents/com.dynamsoft.dynamicwebtwainservicex64.plist
+sudo launchctl unload /Library/LaunchAgents/com.dynamsoft.dynamsoftservicex64.plist
 // Start service
-launchctl load /Library/LaunchAgents/com.dynamsoft.dynamicwebtwainservicex64.plist
+launchctl load /Library/LaunchAgents/com.dynamsoft.dynamsoftservicex64.plist
 ```
 
 * Linux
 
 ``` shell
-sudo dpkg -i  /path/to/DynamicWebTWAINServiceSetup.deb
+sudo dpkg -i  /path/to/DynamsoftServiceSetup.deb
 ```
 
 or
 
 ``` shell
-sudo rpm -i path/to/DynamicWebTWAINServiceSetup.rpm
+sudo rpm -i path/to/DynamsoftServiceSetup.rpm
 ```
 
 <div class="multi-panel-end"></div>
