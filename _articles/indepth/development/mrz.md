@@ -13,6 +13,7 @@ One of the solutions that Dynamsoft offers is the [MRZ Scanner](https://www.dyna
 
 In this article, we will address how you can integrate the foundational products of the MRZ Scanner JavaScript Edition (Dynamsoft Label Recognizer, Dynamsoft Code Parser) with Dynamic Web TWAIN to implement the ability to read from static images without the need for a camera input.
 
+> [!NOTE]
 > You can download the [full sample code](https://github.com/Dynamsoft/mrz-scanner-javascript/tree/main/samples/dwt-mrz) from the Github repository of the MRZ Scanner Samples. Please use this sample as reference when building your own application.
 
 ## Initialization
@@ -41,7 +42,7 @@ The following is the full code needed to implement the basic functionalities of 
 </head>
 
 <body>
-	<input type="button" value="Scan" onclick="AcquireImage();" />
+    <input type="button" value="Scan" onclick="AcquireImage();" />
     <input type="button" value="Load" onclick="LoadImage();" />
     <input type="button" value="Read MRZ" onclick="readMRZ();" />
     <div id="dwtcontrolContainer" style="width: 350px; height: 380px;"></div>
@@ -53,13 +54,13 @@ The following is the full code needed to implement the basic functionalities of 
     ></div>
 
     <script type="text/javascript">
-		var DWTObject;
+        var DWTObject;
         var cvRouter;
 
-		Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
+        Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
             initializeMRZ();
-			DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
-		});
+            DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
+        });
 
         /* The objective of this function is to initialize the Capture Vision instance and apply the necessary settings for reading MRZ */
         async function initializeMRZ() {
@@ -81,15 +82,15 @@ The following is the full code needed to implement the basic functionalities of 
         }
 
         /* This function is used to acquire an image from a physical scanner using the DWT API */
-		function AcquireImage() {
+        function AcquireImage() {
             if (DWTObject) {
-				DWTObject.SelectSourceAsync().then(function(){
-					return DWTObject.AcquireImageAsync({
-					        IfCloseSourceAfterAcquire: true // Scanner source will be closed automatically after the scan.
-						});
-				}).catch(function (exp) {
-					alert(exp.message);
-				});
+                DWTObject.SelectSourceAsync().then(function(){
+                    return DWTObject.AcquireImageAsync({
+                            IfCloseSourceAfterAcquire: true // Scanner source will be closed automatically after the scan.
+                        });
+                }).catch(function (exp) {
+                    alert(exp.message);
+                });
             }
         }
 
@@ -100,7 +101,7 @@ The following is the full code needed to implement the basic functionalities of 
 
         function OnFailure(errorCode, errorString) {
             if(errorCode != -2326)
-			alert(errorString);
+            alert(errorString);
         }
 
         /* The fucntion that is triggered when the user clicks the "Load" button */
