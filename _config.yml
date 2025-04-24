@@ -28,6 +28,8 @@ general-usage: /web-twain/docs/general-usage/
 extended-usage: /web-twain/docs/extended-usage/
 api: /web-twain/docs/info/api/
 
+dcv: /capture-vision/docs/
+
 dynamsoft_logo: /web-twain/docs/assets/img-icon/dynamsoft-logo.png
 dbr_logo: /web-twain/docs/assets/img-icon/dbr-logo.png
 edit_icon: /web-twain/docs/assets/img-icon/edit-icon.png
