@@ -59,6 +59,7 @@ permalink: /index.html
 - [Use Web TWAIN in Angular]({{site.indepth}}development/angular.html)
 - [Use Web TWAIN in React]({{site.indepth}}development/react.html)
 - [Use Web TWAIN in Vue]({{site.indepth}}development/vue.html)
+- [Use Web TWAIN with the MRZ Scanner]({{site.indepth}}development/mrz.html)
 - [Code Gallery](https://www.dynamsoft.com/web-twain/resources/code-gallery/)
 
 ### [API Reference]({{site.api}}index.html)

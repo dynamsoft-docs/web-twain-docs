@@ -125,6 +125,8 @@ tree_list:
         path: /indepth/development/react.html
       - name: Use Web TWAIN in Vue
         path: /indepth/development/vue.html
+      - name: Use Web TWAIN with the MRZ Scanner
+        path: /indepth/development/mrz.html
       # - name: Use Web TWAIN in Vue 3
       #   path: /indepth/development/vue3.html
       # - name: Using Web TWAIN with REST API
