@@ -1646,7 +1646,7 @@ interface ReaderOptions {
     password?: string;  
     renderOptions?: {
         /**
-         * Controls whether or not annotations will be rendered. Only valid if convertMode is set to CM_RENDERALL or CM_AUTO with a valid PDF Rastierzer license. Default value: false.
+         * Controls whether or not annotations will be rendered. Only valid if convertMode is set to CM_RENDERALL or CM_AUTO with a valid PDF Rasterizer license. Default value: false.
          */
         renderAnnotations?: boolean;
         /**
