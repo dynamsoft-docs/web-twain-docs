@@ -41,7 +41,7 @@ Use the tool called Twacker which is developed by the <a href="https://www.twain
    (Note: If your device is not listed, please check if the driver is installed. Or, try running Twacker as admin to see if it shows up.)
 4. Try scanning a document via Acquire...
 
-![source check using twacker](/assets/imgs/source-check-using-twacker.png)
+![source check using Twacker](/assets/imgs/source-check-using-twacker.png)
 
 If scanning is successful without any errors, then your device should be TWAIN compliant. You can also try other commands to see how it works. If your scanner doesn't work with TWACKER, please check your scanner model online and make sure you have installed the (latest) TWAIN driver from its manufacturer.
 

@@ -12,4 +12,4 @@ description: What image editing operations does the Dynamic Web TWAIN SDK suppor
 
 ## What image editing operations does the Dynamic Web TWAIN SDK support?
 
-Dynamic Web TWAIN offers many image editing features to help give you the result you are looking for. All the image editing operations are explained in details <a href="/web-twain/docs/general-usage/image-processing/index.html#edit-options" target="_blank">here</a>.
+Dynamic Web TWAIN offers many image editing features to help give you the result you are looking for. All the image editing operations are explained in details [here](/_articles/docs/general-usage/image-processing/index.md#edit-options){:target="_blank"}.

@@ -66,8 +66,8 @@ A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client si
 * General error message improvements
 
 ### `11.3.0.1026` (01/20/2022)
-* Clarified error message when PDF Rasterizer licence is not present.
-* Added support for rendering annotiations. Please note that saving the image after rendering the annotiatons will flatten the annotations to the image.
+* Clarified error message when PDF Rasterizer license is not present.
+* Added support for rendering annotations. Please note that saving the image after rendering the annotations will flatten the annotations to the image.
 
 ### `11.2.0.0330` (06/15/2021)
 * Added support for ARM64 and MIPs64EL
@@ -127,10 +127,10 @@ A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client si
 A professional linear & 2D barcode reading library for recognizing barcode from any document captured from scanners, cameras or file systems.
 
 ### `9.6.20.307` (06/20/2023)
-* General algorithim improvements
+* General algorithm improvements
 
 ### `9.6.0.0328` (05/09/2023)
-* Improved decoding algorithims for EAN8 and QR Code
+* Improved decoding algorithms for EAN8 and QR Code
 
 ### `9.4.0.1025` (12/22/2022)
 * Added support for Pharmacode and Code 11
@@ -138,14 +138,14 @@ A professional linear & 2D barcode reading library for recognizing barcode from 
 * Improved decoding of warped/distorted linear barcodes
 
 ### `8.8.0.0531` (17.3 release date)
-* Added new localization mode `ONED_FAST_SCAN` to imrpove reading of linear barcodes
-* Improved confidence scoring algorithim for 2D barcodes
+* Added new localization mode `ONED_FAST_SCAN` to improve reading of linear barcodes
+* Improved confidence scoring algorithm for 2D barcodes
 
 ### `8.6.0.1026` (17.2 release date)
 * Added indicator for mirrored barcodes
 * Improved detection speed for dense QR Codes
 * Improved speed of border detection for DataMatrix codes
-* Improved confidence scoring algorithim for linear barcodes
+* Improved confidence scoring algorithm for linear barcodes
 
 ### `8.2.0.0525` (04/20/2021)
 
@@ -153,7 +153,7 @@ A professional linear & 2D barcode reading library for recognizing barcode from 
 * Improved the recognition accuracy for GS1 Databar.
 * Improved the localization robustness for QR Code.
 * Improved the localization for low quality 1D barcodes.
-* Improved the deblurring performance and recognition rate for DataMatrix.
+* Improved the de-blurring performance and recognition rate for DataMatrix.
 * Improved the recognition rate for Aztec.
 * Improved both the localization and decoding algorithms for Postal Codes
 

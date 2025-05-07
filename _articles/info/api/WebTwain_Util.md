@@ -111,7 +111,7 @@ UnregisterEvent(name: string, callback?: (...arg: any[]) => void): boolean;
 
 ## GenerateURLForUploadData()
 
-Generate a URL to be used by a [FileUpoader](/_articles/info/api/Dynamsoft_FileUploader.md) instance to fetch the data to upload.
+Generate a URL to be used by a [FileUploader](/_articles/info/api/Dynamsoft_FileUploader.md) instance to fetch the data to upload.
 
 **Syntax**
 
@@ -190,7 +190,7 @@ DWTObject.GenerateURLForUploadData(
     dsUploadManager.Run(jobtemp);
   },
   function (
-    erroCode,
+    errorCode,
     errorString
   ) {}
 );

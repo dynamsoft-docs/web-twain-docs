@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Error Message - Source has nothing to capture
-keywords: Dynamic Web TWAIN, Error Meaasge
+keywords: Dynamic Web TWAIN, Error Message
 breadcrumbText: Error Message - Source has nothing to capture
 description: Error Message - Source has nothing to capture
 ---

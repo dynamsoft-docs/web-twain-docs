@@ -166,7 +166,7 @@ Once an image has been acquired, click the upload button.You should receive the 
 
 # Previous Article
 
-<!-- If you need a refresher on creating the base project, please review [initalizing the environment]({{site.getstarted}}initialize.html). -->
+<!-- If you need a refresher on creating the base project, please review [initializing the environment]({{site.getstarted}}initialize.html). -->
 
 You can review scanning an image with DWT [here](/_articles/hello-world/scanning.md).
 

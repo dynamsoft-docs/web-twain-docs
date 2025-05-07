@@ -12,5 +12,5 @@ description: Can I print images from the viewer?
 
 ## Can I print images from the viewer?
 
-Yes, you can print the images from the viewer by exporting all image data in the buffer to a new browser window and use the browser's default feature to print images. This can be achieved by using the <a href="/web-twain/docs/info/api/WebTwain_IO.html#print" target="_blank">Print</a> API.
-Note: The Print API prints all the images on the viewer, you can use <a href="/web-twain/docs/info/api/WebTwain_IO.html#printex" target="_blank">PrintEx</a> to print only selected images.
+Yes, you can print the images from the viewer by exporting all image data in the buffer to a new browser window and use the browser's default feature to print images. This can be achieved by using the [Print](/_articles/info/api/WebTwain_IO.md#print){:target="_blank"} API.
+Note: The Print API prints all the images on the viewer, you can use [PrintEx](/_articles/info/api/WebTwain_IO.md#printex){:target="_blank"} to print only selected images.

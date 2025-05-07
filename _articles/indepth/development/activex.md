@@ -1,21 +1,21 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN SDK Development - About AcitveX
-keywords: Dynamic Web TWAIN, Documentation, Development, About AcitveX
-breadcrumbText: About AcitveX
-description: Dynamic Web TWAIN SDK Documentation About AcitveX Page
+title: Dynamic Web TWAIN SDK Development - About ActiveX
+keywords: Dynamic Web TWAIN, Documentation, Development, About ActiveX
+breadcrumbText: About ActiveX
+description: Dynamic Web TWAIN SDK Documentation About ActiveX Page
 ---
 
 # About ActiveX
 
-<span style="background-color:#f9f2f4; color:#c7254e">April 21, 2022: Microsoft is retiring Internet Explorer 11 on June 15, 2022. To support Dynamic Web TWAIN ActiveX, please refer to <a href="/web-twain/docs/faq/activeX-in-Edge-IE-mode.html" target="_blank">this article</a> to configure IE mode in Edge.</span>
+<span style="background-color:#f9f2f4; color:#c7254e">April 21, 2022: Microsoft is retiring Internet Explorer 11 on June 15, 2022. To support Dynamic Web TWAIN ActiveX, please refer to [this article](/_articles/docs/faq/activeX-in-Edge-IE-mode.md){:target="_blank"} to configure IE mode in Edge.</span>
 
 **ActiveX** is a software framework created by Microsoft widely used in Internet Explorer (IE). However, Microsoft has announced plans to end support for older browsers completely and has now deprecated this technology.
 
 ## Dynamic Web TWAIN & ActiveX
 
-Although `Dynamic Web TWAIN` is built upon modern technologies like `WebSocket` , `HTML5` , `WebAssemby` , it was born as one of many ActiveX controls in 2003. The ActiveX edition of `Dynamic Web TWAIN` continued to dominate for 11 years. ActveX is still part of `Dynamic Web TWAIN` though only used by a small number of customers who want to stick with IE 8 or 9.
+Although `Dynamic Web TWAIN` is built upon modern technologies like `WebSocket` , `HTML5` , `WebAssembly` , it was born as one of many ActiveX controls in 2003. The ActiveX edition of `Dynamic Web TWAIN` continued to dominate for 11 years. ActiveX is still part of `Dynamic Web TWAIN` though only used by a small number of customers who want to stick with IE 8 or 9.
 
 ## The Future of ActiveX
 
@@ -36,7 +36,7 @@ If you check our [release notes](/_articles/info/schedule/Stable.md), you can fi
 * It'll continue to be a part of the Windows edition
 * No new features will be added
 * If a major bug is found, Dynamsoft will fix it
-* If there is a major feature conflict between two editions, the preference is to upgrade the ActiveX version or tag its behaviour as deprecated
+* If there is a major feature conflict between two editions, the preference is to upgrade the ActiveX version or tag its behavior as deprecated
 
 We encourage customers who are still using the ActiveX edition of `Dynamic Web TWAIN` to consider moving to another edition as soon as possible.
 

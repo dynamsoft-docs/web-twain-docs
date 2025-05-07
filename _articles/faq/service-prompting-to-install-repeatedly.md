@@ -33,7 +33,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 #### The respective fixes are listed below
 
-1. Check the path `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}` (for v19.0+) or `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have <a href="/web-twain/docs/extended-usage/dynamsoft-service-configuration.html#related-files-and-folders" target="_blank">the correct files</a>.
+1. Check the path `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}` (for v19.0+) or `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have [the correct files](/_articles/docs/extended-usage/dynamsoft-service-configuration.md#related-files-and-folders){:target="_blank"}.
 
 2. Check `Local Services` and make sure the Dynamic Web TWAIN Service is listed and Running.
 
@@ -47,6 +47,6 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 6. On your Linux client machine, visit https://127.0.0.1:18626 and https://127.0.0.1:18623 separately in Chrome and FireFox, manually add both certificates to the exception lists.
 
-7. See the solution <a href="/web-twain/docs/faq/http-insecure-websites-in-chromium-browser.html" target="_blank">here</a>
+7. See the solution [here](/_articles/docs/faq/http-insecure-websites-in-chromium-browser.md){:target="_blank"}
 
 8. Set [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) to `true` in `dynamsoft.webtwain.config.js` file.

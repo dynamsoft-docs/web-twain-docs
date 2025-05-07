@@ -418,13 +418,13 @@ GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
 ```javascript
 var DWTObject;
 function Dynamsoft_OnReady() {
-    DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+    DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
 }
 ```
 
 **Usage Note**
 
-- If no parameter is provided, the first valid `WebTwain` instance is returnd.
+- If no parameter is provided, the first valid `WebTwain` instance is returned.
 
 ---
 
@@ -520,11 +520,11 @@ Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>
 
 ```javascript
 Dynamsoft.DWT.RegisterEvent('OnWebTwainReady',
- Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
+ Dynamsoft_OnReady //The typical function for initializing the environment once the resources have loaded
 );
  
 function Dynamsoft_OnReady() {
-DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
 }
  
 Dynamsoft.DWT.RegisterEvent("OnWebTwainError", function (error) {
@@ -749,7 +749,7 @@ Please refer to [`DisplayInfo`](/_articles/info/api/interfaces.md#DisplayInfo).
 
 ## DeviceFriendlyName
 
-This property allows you to specify a specified name to the client machine that will be used to identify the client machine when using Dynamsoft License Server. If this is not set, a randomly generated non-tracable UID will be generated.
+This property allows you to specify a specified name to the client machine that will be used to identify the client machine when using Dynamsoft License Server. If this is not set, a randomly generated non-traceable UID will be generated.
 
 **Syntax**
 
@@ -977,7 +977,7 @@ Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******';
 
 ## ResourcesPath
 
-Sets or returns where the path to the Dynamic Web TWAIN resource files are hosted.
+Sets or returns the path to the directory containing Dynamic Web TWAIN resource files are hosted.
 
 **Syntax**
 
@@ -1198,13 +1198,13 @@ RegisterEvent("OnWebTwainReady", function () {});
 **Example**
 ```javascript
 Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', 
-  Dynamsoft_OnReady //The typical function for initalizing the environment once the resources have loaded
+  Dynamsoft_OnReady //The typical function for initializing the environment once the resources have loaded
 ); 
 
 var DWTObject;
 
 function Dynamsoft_OnReady() {
-  DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
+  DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
 }
 ```
 
@@ -1262,9 +1262,9 @@ function Dynamsoft_OnError(error){
 
 This event triggers at the resolution of an asynchronous API.
 
-The default behaviour is to hide the mask and loading spinner triggered by `OnWebTwainPreExecute`.
+The default behavior is to hide the mask and loading spinner triggered by `OnWebTwainPreExecute`.
 
-You may override this function to implement your own post-excecute scenario. Please refer to this [article](/_articles/extended-usage/ui-customization.md#loading-bar-and-backdrop).
+You may override this function to implement your own post-execute scenario. Please refer to this [article](/_articles/extended-usage/ui-customization.md#loading-bar-and-backdrop).
 
 
 **Syntax**
@@ -1302,7 +1302,7 @@ RegisterEvent("OnWebTwainPostExecute", function () {});
 
 This event triggers at the beginning of an asynchronous API. 
 
-The default behaviour is to display a mask and a loading spinner.
+The default behavior is to display a mask and a loading spinner.
 
 You may override this function to either hide the default loading spinner, or define your own. Please refer to this [article](/_articles/extended-usage/ui-customization.md#loading-bar-and-backdrop).
 

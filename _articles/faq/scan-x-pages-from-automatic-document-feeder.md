@@ -12,4 +12,4 @@ description: Can I set my document scanner to scan x pages instead of all pages 
 
 ## Can I set my document scanner to scan x number of pages instead of all pages from the automatic document feeder (ADF)?
 
-Yes. You can use <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#xfercount" target="_blank">XferCount</a> to set the number of pages you'd like to scan from the feeder at a time. However, please note that the XferCount API is a hardware-dependent feature, so it only works properly if your scanner device supports it.
+Yes. You can use [XferCount](/_articles/info/api/WebTwain_Acquire.md#xfercount){:target="_blank"} to set the number of pages you'd like to scan from the feeder at a time. However, please note that the XferCount API is a hardware-dependent feature, so it only works properly if your scanner device supports it.

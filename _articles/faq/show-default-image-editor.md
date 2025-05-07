@@ -20,4 +20,4 @@ var imageEditor = DWTObject.Viewer.createImageEditor();
 imageEditor.show();
 ```
 
-If you are looking to customize the settings of the image editor before integrating it, you can change the properties mentioned on <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createimageeditor" target="_blank">this link</a>.
+If you are looking to customize the settings of the image editor before integrating it, you can change the properties mentioned on [this link](/_articles/info/api/WebTwain_Viewer.md#createimageeditor){:target="_blank"}.

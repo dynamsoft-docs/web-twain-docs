@@ -18,11 +18,11 @@ You are scanning in multiple documents with a blank page separating them and wou
 
 ### Solution
 
-In order to do this we will scan in all the sheets, then use <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#isblankimageexpress" target="_blank">IsBlankImageExpress</a> to detect whether or not it is blank. If the sheet is blank we will then remove it from the buffer and save the previous set of sheets. In order to accomplish this task we are going to use the event OnPostAllTransfers, which fires after all scans are complete in order to check whether or not any pages are blank.
+In order to do this we will scan in all the sheets, then use [IsBlankImageExpress](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress){:target="_blank"} to detect whether or not it is blank. If the sheet is blank we will then remove it from the buffer and save the previous set of sheets. In order to accomplish this task we are going to use the event OnPostAllTransfers, which fires after all scans are complete in order to check whether or not any pages are blank.
 
 ```javascript
 function Dynamsoft_OnReady() { 
-    DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer' 
+    DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer' 
     if (DWTObject) { 
         DWTObject.IfShowUI = false;
         DWTObject.IfAutoDiscardBlankpages = false;

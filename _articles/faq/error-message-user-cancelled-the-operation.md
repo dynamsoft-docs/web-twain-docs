@@ -18,7 +18,7 @@ You may encounter the error "user cancelled the operation" after successfully sc
 
 ### Cause
 
-1) The user manually terminated thte ongoing operation.
+1) The user manually terminated the ongoing operation.
 
 2) This is known to happen if you use a **WIA/WIATWAIN** driver instead of TWAIN driver. Our SDK is developed based upon the TWAIN protocol, therefore the performance in WIA driver cannot be guaranteed.
 

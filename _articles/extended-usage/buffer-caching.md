@@ -75,7 +75,7 @@ else {
 
 **Load image(s) from the storage folder**
 
-To load the encypted image caches into Dynamic Web TWAIN again, please use the method [`loadFromLocalStorage()`](/_articles/info/api/WebTwain_IO.md#loadfromlocalstorage).
+To load the encrypted image caches into Dynamic Web TWAIN again, please use the method [`loadFromLocalStorage()`](/_articles/info/api/WebTwain_IO.md#loadfromlocalstorage).
 
 ```javascript
 var bExist = await DWTObject.localStorageExist(storageItemUid); // Determine whether the folder exists

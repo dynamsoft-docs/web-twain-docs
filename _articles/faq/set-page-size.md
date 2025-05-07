@@ -12,7 +12,7 @@ description: How can I configure all scanned images to conform to a specific siz
 
 ## How can I configure all scanned images to conform to a specific size standard (e.g., A4)?
 
-Simply, you can use <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#pagesize" target="_blank">PageSize</a> to set the page size to be used when acquiring images.
+Simply, you can use [PageSize](/_articles/info/api/WebTwain_Acquire.md#pagesize){:target="_blank"} to set the page size to be used when acquiring images.
 Or you can leverage the negotiation capabilities functionality by following the steps mentioned below.
 
 1. ask for the supported sizes of your device.
@@ -56,4 +56,4 @@ DWTObject.setCapabilities(
 );
 ```
 
-A list of the values of various supported sizes can be found <a href="/web-twain/docs/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_capsupportedsizes" target="_blank">here</a>. You can use the value for the curValue property.
+A list of the values of various supported sizes can be found [here](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_capsupportedsizes){:target="_blank"}. You can use the value for the curValue property.

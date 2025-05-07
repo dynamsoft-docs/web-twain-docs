@@ -38,7 +38,7 @@ When you upload images in Dynamic Web TWAIN's buffer, you may receive the follow
     If you are using IIS:
 
     1. Start -> Run , type "InetMgr" to open IIS 7 Manager
-    2. {Your WebSite}->Feature View->ASP->Limites Properties
+    2. {Your WebSite}->Feature View->ASP->Limit Properties
     3. Set "Maximum Requesting Entity Body Limit" to a bigger value like "1000000"
     To set the max request entity allowed property:
     cscript adsutil.vbs set w3svc/AspMaxRequestEntityAllowed 1000000 (You can change the value by yourself.)

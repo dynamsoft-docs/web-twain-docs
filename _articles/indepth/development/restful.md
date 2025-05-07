@@ -26,7 +26,7 @@ Dynamic Web TWAIN (DWT) 18.4 brings forward a new RESTful API allowing developer
 - Using the RESTful API will return pure images as a stream and will not make use of the Dynamic Web TWAIN Viewer. You may instantiate a Viewer in your web application and load the images into the Viewer if you wish.
 
 ## REST API Structure
-By default, the REST API's host address is set to http://127.0.0.1:18622. This refers back to the local machine. To allow the host machine's scanner to be accesed over the network, the Dynamic Web TWAIN Service on the host machine will need to be configured to allow incoming connections.
+By default, the REST API's host address is set to http://127.0.0.1:18622. This refers back to the local machine. To allow the host machine's scanner to be accessed over the network, the Dynamic Web TWAIN Service on the host machine will need to be configured to allow incoming connections.
 
 | Method | Endpoint	| Description | Parameters | Response |
 |:-|:-|:-|:-|:-|
@@ -45,7 +45,7 @@ The general workflow to use the RESTful API is as follows:
 6. Set scan parameters
 7. Obtain a scan job via ScannerController
 8. Open the data stream to get the images from the host
-9. Take the images and display or maniuplate as necessary. 
+9. Take the images and display or manipulate as necessary. 
 
 ## Syntax
 

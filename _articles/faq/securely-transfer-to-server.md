@@ -16,12 +16,12 @@ Dynamic Web TWAIN supports downloading/uploading documents via HTTPS.
 
 To enable HTTPS,
 
-- Set <a href="/web-twain/docs/info/api/WebTwain_IO.html#ifssl" target="_blank">IfSSL</a> to true to turn on SSL in HTTP requests
+- Set [IfSSL](/_articles/info/api/WebTwain_IO.md#ifssl){:target="_blank"} to true to turn on SSL in HTTP requests
 
-- Set the SSL port with the API <a href="/web-twain/docs/info/api/WebTwain_IO.html#httpport" target="_blank">HTTPPort</a>
+- Set the SSL port with the API [HTTPPort](/_articles/info/api/WebTwain_IO.md#httpport){:target="_blank"}
 
 - Call the API <a href="/web-twain/docs/info/api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload to upload the documents
 
-To upload documents via HTTP/HTTPS, we recommend the API <a href="/web-twain/docs/general-usage/image-export/index.html#upload" target="_blank">here</a>.
+To upload documents via HTTP/HTTPS, we recommend the API [here](/_articles/docs/general-usage/image-export/index.md#upload){:target="_blank"}.
 
 > Note - that if you use this feature, you need to enable HTTPS on the server. For how to enable HTTPS, please check out the manual of your webserver.

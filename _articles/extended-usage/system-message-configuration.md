@@ -96,7 +96,7 @@ Dynamsoft.DWT.CustomizableDisplayInfo = {
       hand: "Hand Mode",
       rectselect: "Select Mode",
       zoom: "Click to Zoom In",
-      restore: "Restore Orginal Image",
+      restore: "Restore Original Image",
       save: "Save Changes",
       close: "Close the Editor",
       removeall: "Remove All Images",

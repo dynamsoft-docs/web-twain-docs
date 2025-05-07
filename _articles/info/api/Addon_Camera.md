@@ -735,7 +735,7 @@ interface ScannerViewer {
   maxDocuments?: number;       //The maximum number of documents for current scan
   enableBorderDetection?: boolean;  // Whether to enable border detection. The default value is true.
   fullScreen?: boolean;   //Whether to display the video in full screen. The default value is false.
-  polygonStyle?:{      //The sytle of the auto detect border.       
+  polygonStyle?:{      //The style of the auto detect border.       
     stroke?: string;    //default: "#fe8e14". Only supports #16 hexadecimal.
     strokeWidth?: string;  //default: "2px"
     dash?: string          //The allowed value are "solid" and "dashed", the default value is "solid".
@@ -789,11 +789,11 @@ interface ScannerViewer {
       enableTorch?: boolean //Whether to enable torch by default. Default：false.
   },
   funcConfirmExit?: (bExistImage: boolean) => Promise<boolean>;
-    //funcConfirmExit is the callback funtion,
+    //funcConfirmExit is the callback function,
     //Return Promise.resolve(true): End this capture without saving the image data.
     //Return Promise.resolve(false): Stay on the original viewer
   funcConfirmExitAfterSave?: (firedByDocumentEdit: boolean) => void
-    //funcConfirmExitAfterSave is the callback funtion
+    //funcConfirmExitAfterSave is the callback function
 },
 
 interface DocumentEditorSettings {
@@ -823,7 +823,7 @@ interface DocumentEditorSettings {
   remove?: { //Remove an image
     visibility?: string;   //Whether to display the remove icon. Values: "visible""hidden". Default: "visible".
     funcConfirmRemove?: () => Promise<boolean>; 
-      //funcConfirmRemove is the callback funtion
+      //funcConfirmRemove is the callback function
   };
   rotateLeft?: { 
     visibility?: string;   //Whether to display the rotate left icon. Values: "visible""hidden". Default: "visible".
@@ -852,12 +852,12 @@ interface DocumentEditorSettings {
   };
   cropViewer?: CropViewer;
   funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>;
-    //funcConfirmExit is the callback funtion.
+    //funcConfirmExit is the callback function.
     //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
     //Return Promise.resolve(EnumDWT_ConfirmExitType.SaveAndExit): Exit original viewer with saving the image data. 
     //Return Promise.resolve(EnumDWT_ConfirmExitType.Cancel): Stay on the original viewer
   funcConfirmExitAfterSave?: (firedByDocumentEdit: boolean) => void
-    //funcConfirmExitAfterSave is the callback funtion
+    //funcConfirmExitAfterSave is the callback function
 },
 
 interface CropViewer {
@@ -877,7 +877,7 @@ interface CropViewer {
     visibility?: string;   //Whether to display the automatic border detection icon. Values: "visible""hidden". Default: "visible".
   };
   funcConfirmExit?: (bChanged: boolean, previousViewerName: string) => Promise<Number>
-    //funcConfirmExit is the callback funtion.
+    //funcConfirmExit is the callback function.
     //Return Promise.resolve(EnumDWT_ConfirmExitType.Exit): Exit original viewer without saving the image data. 
     //Return Promise.resolve(EnumDWT_ConfirmExitType.SaveAndExit): Exit original viewer with saving the image data. 
     //Return Promise.resolve(EnumDWT_ConfirmExitType.Cancel): Stay on the original viewer
