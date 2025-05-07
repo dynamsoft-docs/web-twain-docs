@@ -147,7 +147,7 @@ breadcrumbText: API Reference
 | [`Rotate()`](/_articles/info/api/WebTwain_Edit.md#rotate) |[`RotateEx()`](/_articles/info/api/WebTwain_Edit.md#rotateex)| [`RotateLeft()`](/_articles/info/api/WebTwain_Edit.md#rotateleft) | [`RotateRight()`](/_articles/info/api/WebTwain_Edit.md#rotateright)|
 | [`ChangeBitDepth()`](/_articles/info/api/WebTwain_Edit.md#changebitdepth) | [`SetDPI()`](/_articles/info/api/WebTwain_Edit.md#setdpi)|[`ConvertToBW()`](/_articles/info/api/WebTwain_Edit.md#converttobw) |[`ConvertToGrayScale()`](/_articles/info/api/WebTwain_Edit.md#converttograyscale)|
 |[`ChangeImageSize()`](/_articles/info/api/WebTwain_Edit.md#changeimagesize) | [`Invert()`](/_articles/info/api/WebTwain_Edit.md#invert)|[`SetImageWidth()`](/_articles/info/api/WebTwain_Edit.md#setimagewidth)|[`ChangeBrightnessAsync()`](/_articles/info/api/WebTwain_Edit.md#changebrightnessasync)|
-|[`ChangeContrastAsync()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasnyc)|
+|[`ChangeContrastAsnyc()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasnyc)|
 
 <!--
 * [`Crop()`](/_articles/info/api/WebTwain_Edit.md#crop) 
