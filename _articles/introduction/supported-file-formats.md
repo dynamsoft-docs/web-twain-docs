@@ -19,7 +19,7 @@ Dynamic Web TWAIN supports the following file types:
 size = width * height * n/8; // where height and width are given in pixels
 ```
 
-For example, a US Letter sized paper scanned in 300 DPI and in colour has the size of (8.5 * 300) * (11 * 300) * 24 / 8 = 25, 245, 000 bytes which is close to 24 MB.
+For example, a US Letter sized paper scanned in 300 DPI and in color has the size of (8.5 * 300) * (11 * 300) * 24 / 8 = 25, 245, 000 bytes which is close to 24 MB.
 
 ## JPEG
 

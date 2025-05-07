@@ -14,24 +14,22 @@ needGenerateH3Content: true
 
 **Methods**
 
-
 | [`bind()`](#bind) | [`clearSelectedAreas()`](#clearselectedareas) | [`createCustomElement()`](#createcustomelement) | [`createImageEditor()`](#createimageeditor) |
 | [`createThumbnailViewer()`](#createthumbnailviewer) | [`first()`](#first) | [`fitWindow()`](#fitwindow) | [`gotoPage()`](#gotopage) |
-| [`hide()`](#hide) | [`last()`](#last) | [`next()`](#next) | [`off()`](#off) |
-| [`on()`](#on) | [`previous()`](#previous) | [`render()`](#render) | [`setButtonClass()`](#setbuttonclass) |
-| [`setSelectedAreas()`](#setselectedareas) | [`setViewMode()`](#setviewmode) | [`show()`](#show) | [`unbind()`](#unbind) | 
-| [`updateCheckboxStyle()`](#updatecheckboxstyle) | [`updatePageNumberStyle()`](#updatepagenumberstyle) | [`updateSelectionBoxStyle()`](#updateselectionboxstyle) |
+| [`getVisiblePagesInfo()`](#getvisiblepagesinfo) | [`hide()`](#hide) | [`last()`](#last) | [`next()`](#next) |
+| [`off()`](#off) | [`on()`](#on) | [`previous()`](#previous) | [`render()`](#render) |
+| [`setButtonClass()`](#setbuttonclass) | [`setSelectedAreas()`](#setselectedareas) | [`setViewMode()`](#setviewmode) | [`show()`](#show) |
+| [`unbind()`](#unbind) | [`updateCheckboxStyle()`](#updatecheckboxstyle) | [`updatePageNumberStyle()`](#updatepagenumberstyle) | [`updateSelectionBoxStyle()`](#updateselectionboxstyle) | 
+
 
 **Properties**
 
-
-| [`acceptDrop`](#acceptdrop) | [`allowSlide`](#allowslide) | [`allowPageDragging`](#allowpagedragging) | [`autoChangeIndex`](#autochangeindex)|
-| [`background`](#background)| [`border`](#border) | [`cursor`](#cursor) | [`disableFocusOutline`](#disablefocusoutline)  | [`height`](#height) |
-| [`idPostfix`](#idpostfix) | [`ifAutoScroll`](#ifautoscroll) | [`innerBorder`](#innerborder) | [`pageMargin`](#pagemargin) |
-| [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | 
-| [`selectionMode`](#selectionmode) | [`singlePageMode`](#singlepagemode) | [`width`](#width) | [`zoom`](#zoom) |
-| [`zoomOrigin`](#zoomorigin) |
-
+| [`acceptDrop`](#acceptdrop) | [`allowPageDragging`](#allowpagedragging) | [`allowSlide`](#allowslide) | [`autoChangeIndex`](#autochangeindex) |
+| [`background`](#background) | [`border`](#border) | [`cursor`](#cursor) | [`disableFocusOutline`](#disablefocusoutline) |
+| [`height`](#height) | [`idPostfix`](#idpostfix) | [`ifAutoScroll`](#ifautoscroll) | [`innerBorder`](#innerborder) |
+| [`pageMargin`](#pagemargin) | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder) |
+| [`selectionMode`](#selectionmode) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode) | [`width`](#width) |
+| [`zoom`](#zoom) | [`zoomOrigin`](#zoomorigin) |  |  | 
 
 
 **Events**
@@ -729,6 +727,42 @@ If no parameter is provided, it tries to fit the whole page within the viewer.
 
 ---
 
+## getVisiblePagesInfo()
+
+Return the information of visible pages. It is useful to add elements to document page images in the viewer.
+
+Please refer to [`VisiblePageInfo`](/_articles/info/api/interfaces.md#visiblepageinfo).
+
+**Syntax**
+
+```typescript
+getVisiblePagesInfo():VisiblePageInfo[];
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS/TWAIN)</td>
+<td align="center">H5(macOS/ICA)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v19.1+ </td>
+<td align="center">v19.1+ </td>
+<td align="center">v19.1+ </td>
+<td align="center">v19.1+ </td>
+</tr>
+
+</table>
+</div>
+
+---
+
 ## gotoPage()
 
 Show the specified page and return its index.
@@ -1393,7 +1427,7 @@ background: string;
 
 **Usage notes**
 
-Replace the previous `BackgroundColor` method. Now you can specify the backgournd by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
+Replace the previous `BackgroundColor` method. Now you can specify the background by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
 
 **Example**
 
@@ -1832,7 +1866,7 @@ selectedPageBackground: string;
 
 **Usage notes**
 
-The default value is "rgb(199, 222, 252)". You can specify the backgournd by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
+The default value is "rgb(199, 222, 252)". You can specify the background by CSS which may be a single color or even an image. Read more on the [background shorthand CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background).
 
 **Example**
 
@@ -1976,7 +2010,7 @@ DWTObject.Viewer.singlePageMode = true;
 ```
 
 ```javascript
-// Use single page mode in the thumnail viewer
+// Use single page mode in the thumbnail viewer
 var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.show();
 DWTObject.Viewer.singlePageMode = true;
@@ -2036,7 +2070,7 @@ DWTObject.Viewer.updateSelectionBoxStyle(styleSettings);
 ```
 
 **Usage Notes**
-If creating an `ImageEditor` object, the `Viewer` styling will be inherited by the `ImageEditor` on creation, but styles will be maintained seperately. That is to say that after creating the `ImageEditor`, changing one style will not affect the other.
+If creating an `ImageEditor` object, the `Viewer` styling will be inherited by the `ImageEditor` on creation, but styles will be maintained separately. That is to say that after creating the `ImageEditor`, changing one style will not affect the other.
 
 ---
 

@@ -13,7 +13,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 # How can I change the reference path to the Dynamsoft's resources in my project?
 
 This also applies if you see the following errors in browser console, please make sure that the ResourcesPath is set correctly in *dynamsoft.webtwain.config.js* (Step 3 Below).
->{"code": -2803, "message": "Loading the WebTwain JavaScipt source files failed."} <br>
+>{"code": -2803, "message": "Loading the WebTwain JavaScript source files failed."} <br>
 >{"code": -2804, "message": "Loading the WebTwain css files failed."}
 
 <strong>Scenario: </strong> For customers who are using Dynamic Web TWAIN, to change the location of the 'Resources' folder, or to rename it, please following the steps below:

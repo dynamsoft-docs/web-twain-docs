@@ -396,7 +396,7 @@ SetCameraControlPropertySetting(
 
 `value`: Specify the value.
 
-`auto`: Specify whether the propery should change automatically.
+`auto`: Specify whether the property should change automatically.
 
 **Availability**
 
@@ -522,7 +522,7 @@ SetVideoPropertySetting(
 
 `value`: Specify the value.
 
-`auto`: Specify whether the propery should change automatically.
+`auto`: Specify whether the property should change automatically.
 
 **Availability**
 
@@ -700,7 +700,7 @@ SetMediaType(type: string): boolean;
 
 **Parameters**
 
-`type`: Sepcify the media type.
+`type`: Specify the media type.
 
 **Availability**
 
@@ -878,6 +878,6 @@ GetFramePartURL(): string;
 
 **Usage notes**
 
-`GetFrameURL()` returns a public URL that can be used to access the frame directly by any applicatoin capable of HTTP requests that runs on the same machine. For example: `https://127.0.0.1:18623/dwt/dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481406860`.
+`GetFrameURL()` returns a public URL that can be used to access the frame directly by any application capable of HTTP requests that runs on the same machine. For example: `https://127.0.0.1:18623/dwt/dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481406860`.
 
 `GetFramePartURL()` returns an internal URL that only Dynamsoft libraries such as the Barcode Reader add-on can read. For example: `dwt://dwt_16000428/img?id=853407158&index=-1&width=-1&height=-1&webcam=80&t=1590481403659`.

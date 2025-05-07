@@ -39,7 +39,7 @@ The issue occurs when the allocated memory address exceeds the 32-bit limit. In 
 
 To determine which process is blocking Dynamic Web TWAIN Service, please follow the steps below.
 
-1. Collect <a href="/web-twain/docs/faq/general-troubleshooting-steps.html#how-to-enable-and-collect-verbose-log" target="_blank">verbose log</a>
+1. Collect [verbose log](/_articles/docs/faq/general-troubleshooting-steps.md#how-to-enable-and-collect-verbose-log){:target="_blank"}
 
 2. Open the file wts.log and search for the string "GetConnectionProcessID" to locate the line:
 *GetConnectionProcessID:: connection client 1960 process is xxxxx.*

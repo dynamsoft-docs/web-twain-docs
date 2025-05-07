@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Error message - The domain of your current site does not match the domain bound in the current product key, please contact the site administrator.
-keywords: Dynamic Web TWAIN, Error Troubleshooting, doamin, mismatch with product key
+keywords: Dynamic Web TWAIN, Error Troubleshooting, domain, mismatch with product key
 breadcrumbText: Error message - The domain of your current site does not match the domain bound in the current product key, please contact the site administrator.
 description: Error message - The domain of your current site does not match the domain bound in the current product key, please contact the site administrator.
 ---

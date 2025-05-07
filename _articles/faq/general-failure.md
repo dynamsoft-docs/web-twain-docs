@@ -22,7 +22,7 @@ The problem occurs when the source (scanner) is _not_ disabled completely after 
 
 - Resolution
 
-You can reset the existing connections of the source by calling <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#closesource" target="_blank">CloseSource</a> & <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#closesourcemanager" target="_blank">CloseSourceManager</a> to close the sources existing connections before calling <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#selectsource" target="_blank">SelectSource</a>.
+You can reset the existing connections of the source by calling [CloseSource](/_articles/info/api/WebTwain_Acquire.md#closesource){:target="_blank"} & [CloseSourceManager](/_articles/info/api/WebTwain_Acquire.md#closesourcemanager){:target="_blank"} to close the sources existing connections before calling [SelectSource](/_articles/info/api/WebTwain_Acquire.md#selectsource){:target="_blank"}.
 
 ```javascript
 function AcquireImage() {

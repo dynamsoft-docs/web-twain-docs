@@ -103,12 +103,12 @@ interface DeviceConfiguration {
     Resolution?: number; //Measured by dots per pixel (DPI)
     IfFeederEnabled?: boolean; //Whether to use the document feeder or the flatbed of the device
     IfDuplexEnabled?: boolean; //Whether to scan one side or both sides
-    IfDisableSourceAfterAcquire?: boolean; //Whether to close the built-in User Interface after aquisition. Only valid when {IfShowUI} is true.
+    IfDisableSourceAfterAcquire?: boolean; //Whether to close the built-in User Interface after acquisition. Only valid when {IfShowUI} is true.
     IfGetImageInfo?: boolean; //Whether to retrieve information about the image after it's transferred.
     IfGetExtImageInfo?: boolean; //Whether to retrieve extended information about the image after it's transferred.
     extendedImageInfoQueryLevel?: Dynamsoft.DWT.EnumDWT_ExtImageInfo | number; //How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
     SelectSourceByIndex?: number; //Specify a source by its index.
-    IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after aquisition. Default: false.
+    IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after acquisition. Default: false.
     PageSize?: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number; //Specify page size
 }
 ```
@@ -286,7 +286,7 @@ interface ScanSetup {
    */
   setupId?: string;
   /**
-   * Whether to ignore or fail the acquistion when an exception is raised. Set "ignore" or "fail".
+   * Whether to ignore or fail the acquisition when an exception is raised. Set "ignore" or "fail".
    */
   exception?: string;
   /**
@@ -835,7 +835,7 @@ interface ImageEditor {
      */
     dispose(): boolean;
     /**
-     * Set the selction box styling
+     * Set the selection box styling
      */
     updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): boolean;
     /**
@@ -1066,9 +1066,13 @@ interface ThumbnailViewer {
      */
     updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): void;
     /**
-     * Bind a listner to the specified event. You can bind one or multiple listeners to the same event.
+     * Return the information of visible pages. It is useful to add elements to document page images in the viewer.
+     */
+    getVisiblePagesInfo(): VisiblePageInfo[];
+    /**
+     * Bind a listener to the specified event. You can bind one or multiple listeners to the same event.
      * @param eventName Specify the event name.
-     * @param callback Specify the listner.
+     * @param callback Specify the listener.
      */
     on(eventName: string, callback: (event: ThumbnailViewerEvent | KeyboardEvent, domEvent?: MouseEvent) => void): void;
     /**
@@ -1131,7 +1135,7 @@ interface ThumbnailViewer {
      */
     autoChangeIndex: boolean;
     /**
-     * Return or set the background colour/image of the thumbnail viewer. The default value is white.
+     * Return or set the background color/image of the thumbnail viewer. The default value is white.
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      * Allow any CSS rules
      */
@@ -1176,7 +1180,8 @@ interface ThumbnailViewer {
 ```
 
 
-- [`ViewMode`](/_articles/info/api/interfaces.md#viewmode) 
+- [`ViewMode`](/_articles/info/api/interfaces.md#viewmode)
+- [`VisiblePageInfo`](/_articles/info/api/interfaces.md#visiblepageinfo)
 - [`CheckboxSettings`](/_articles/info/api/interfaces.md#checkboxsettings)
 - [`PageNumberSettings`](/_articles/info/api/interfaces.md#pagenumbersettings)
 - [`ThumbnailViewerEvent`](/_articles/info/api/interfaces.md#thumbnailviewerevent)
@@ -1333,7 +1338,7 @@ interface ThumbnailViewerEvent {
     index: number;
     // The mouse's x coordinate in the thumbnail image container relative to the top-left of the web page.
     pageX: number;
-    // The  mouse's y coordinate in the thumbnail image container relative to the top-left of the web page.
+    // The mouse's y coordinate in the thumbnail image container relative to the top-left of the web page.
     pageY: number;
     // The width of the thumbnail image container.
     pageWidth: number;
@@ -1384,6 +1389,53 @@ interface ViewMode {
 }
 ```
 
+### VisiblePageInfo
+
+**Syntax**
+
+```typescript
+/**
+* Info of a visible page.
+*/
+export interface VisiblePageInfo {
+    /**
+     * The index of the document page.
+     */
+    pageIndex: number;
+    /**
+     * Whether the mouse is hovering over the document page.
+     */
+    isHovered: boolean;
+    /**
+     * Whether the document page is selected.
+     */
+    isSelected: boolean;
+    /**
+     * The width of the document page image container.
+     */
+    pageWidth: number;
+    /**
+     * The height of the document page image container.
+     */
+    pageHeight: number;
+     /**
+     * The x coordinate relative to the canvas.
+     */
+    canvasOffsetX: number;
+    /**
+     * The y coordinate relative to the canvas.
+     */
+    canvasOffsetY: number;
+    /**
+     * The x coordinate relative to the container of the viewer.
+     */
+    containerOffsetX: number;
+    /**
+     * The y coordinate relative to the container of the viewer.
+     */
+    containerOffsetY: number;
+}
+```
 
 
 ### Area
@@ -1459,12 +1511,12 @@ interface PageNumberSettings {
 ### SelectionBoxStyleSettings
 ```typescript
 interface SelectionBoxStyleSettings { 
-    borderColor?: string; //Default: rgba(0,0,0,1). Selection box line segment colour in "rgba(r, g, b, a)"
+    borderColor?: string; //Default: rgba(0,0,0,1). Selection box line segment color in "rgba(r, g, b, a)"
     borderWidth?: number; //Default: 1. Unit: pixels. Width of individual pattern segments.
     lineDash?: [number,number]; //Default: [5,2]. Unit: pixels. Line spacing where x is shaded pixels and y is gap in pixels.
     handleWidth?: number; //Default: 9. Unit: pixels. Width of the selection box control handle.
     handleHeight?: number; //Default: 9. Unit: pixels. Height of the selection box control handle.
-    handleColor?: string; //Default: rgba(0,0,0,1). Selection box control handle colour in "rgba(r, g, b, a)"
+    handleColor?: string; //Default: rgba(0,0,0,1). Selection box control handle color in "rgba(r, g, b, a)"
 } 
 
 ```
@@ -1646,7 +1698,7 @@ interface ReaderOptions {
     password?: string;  
     renderOptions?: {
         /**
-         * Controls whether or not annotations will be rendered. Only valid if convertMode is set to CM_RENDERALL or CM_AUTO with a valid PDF Rastierzer license. Default value: false.
+         * Controls whether or not annotations will be rendered. Only valid if convertMode is set to CM_RENDERALL or CM_AUTO with a valid PDF Rasterizer license. Default value: false.
          */
         renderAnnotations?: boolean;
         /**
@@ -1772,7 +1824,7 @@ interface CameraControlProperty {
      */
     GetValue(): number;
     /**
-     * Return whether the property is set autmatically or not.
+     * Return whether the property is set automatically or not.
      */
     GetIfAuto(): boolean;
 }
@@ -1803,7 +1855,7 @@ interface CameraControlPropertyExtra {
      */
     GetSteppingDelta(): number;
     /**
-     * Return whether the property is set autmatically or not.
+     * Return whether the property is set automatically or not.
      */
     GetIfAuto(): boolean;
 }
@@ -1822,7 +1874,7 @@ interface VideoControlProperty {
      */
     GetValue(): number;
     /**
-     * Return whether the property is set autmatically or not.
+     * Return whether the property is set automatically or not.
      */
     GetIfAuto(): boolean;
 }
@@ -1853,7 +1905,7 @@ interface VideoControlPropertyExtra {
      */
     GetSteppingDelta(): number;
     /**
-     * Return whether the property is set autmatically or not.
+     * Return whether the property is set automatically or not.
      */
     GetIfAuto(): boolean;
 }
@@ -1946,7 +1998,7 @@ interface TextResult {
      */
     barcodeFormat: Dynamsoft.DBR.EnumBarcodeFormat | number;
     /**
-     * Extra barcde formats.
+     * Extra barcode formats.
      */
     barcodeFormat_2: Dynamsoft.DBR.EnumBarcodeFormat_2 | number;
     /**

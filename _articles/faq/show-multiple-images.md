@@ -12,7 +12,7 @@ description: How can I show multiple images at a time?
 
 ## How can I show multiple images at a time?
 
-You can use the <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#setviewmode" target="_blank">setViewMode</a> API to show multiple images at a time in the viewer.
+You can use the [setViewMode](/_articles/info/api/WebTwain_Viewer.md#setviewmode){:target="_blank"} API to show multiple images at a time in the viewer.
 
 Example:
 

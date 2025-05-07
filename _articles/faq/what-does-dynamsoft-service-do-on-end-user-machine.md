@@ -57,8 +57,8 @@ There are multiple files and folders in the service directory. Taking Windows se
 
 ### For the Service
 
-* `\cache\` : Data cached on the disk. Check out <a href="/web-twain/docs/extended-usage/buffer-caching.html#disk-caching" target="_blank">Disk Caching</a>.
-* `\cert\` : The certificates used for SSL connection. Check out <a href="/web-twain/docs/faq/change-dynamsoft-service-certificate.html" target="_blank">How to change the certificates</a>.
+* `\cache\` : Data cached on the disk. Check out [Disk Caching](/_articles/docs/extended-usage/buffer-caching.md#disk-caching){:target="_blank"}.
+* `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](/_articles/docs/faq/change-dynamsoft-service-certificate.md){:target="_blank"}.
 * `\dump\` : Dump files in case the service crashes.
 * `\log\` : Log files for debugging purposes.
 * `\upload\` : Temporary location for image data to be uploaded by the file uploader.
@@ -178,8 +178,8 @@ There are multiple files and folders in the service directory. Taking Windows se
 
 ### For the Service
 
-* `\cache\` : Data cached on the disk. Check out <a href="/web-twain/docs/extended-usage/buffer-caching.html#disk-caching" target="_blank">Disk Caching</a>.
-* `\cert\` : The certificates used for SSL connection. Check out <a href="/web-twain/docs/faq/change-dynamsoft-service-certificate.html" target="_blank">How to change the certificates</a>.
+* `\cache\` : Data cached on the disk. Check out [Disk Caching](/_articles/docs/extended-usage/buffer-caching.md#disk-caching){:target="_blank"}.
+* `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](/_articles/docs/faq/change-dynamsoft-service-certificate.md){:target="_blank"}.
 * `\dump\` : Dump files in case the service crashes.
 * `\log\` : Log files for debugging purposes.
 * `\upload\` : Temporary location for image data to be uploaded by the file uploader.
@@ -292,4 +292,4 @@ https://127.0.0.1:18623/dwt/dwt_16100728/img?id=414778098&index=5&width=585&heig
 
 <div class="multi-panel-switching-end"></div>
 
-For more information, please refer to <a href="/web-twain/docs/extended-usage/dynamsoft-service-configuration.html" target="_blank">Dynamic Web TWAIN Deployment - Dynamic Web TWAIN Service</a>.
+For more information, please refer to [Dynamic Web TWAIN Deployment - Dynamic Web TWAIN Service](/_articles/docs/extended-usage/dynamsoft-service-configuration.md){:target="_blank"}.

@@ -34,7 +34,7 @@ Due to Dynamic Web TWAIN being a long-standing and popular product among enterpr
 * Method 2
     > For versions 17.0 and above, you can retrieve the current SDK version by running the code "`Dynamsoft.DWT.JSVersion`".
 
-    > For versions prior to 17.0, you can obtain the current SDK version by executing the code "`Dynamosft.WebTwainEnv.JSVersion`"
+    > For versions prior to 17.0, you can obtain the current SDK version by executing the code "`Dynamsoft.WebTwainEnv.JSVersion`"
 
 * Method 3
     > Let's take Windows as a example, to find the version of Dynamic Web TWAIN Service (also called "Dynamsoft Service") on Windows, you can follow these steps:

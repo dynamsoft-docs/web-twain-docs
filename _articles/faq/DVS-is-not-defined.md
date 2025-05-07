@@ -16,4 +16,4 @@ You may see this error if the Dynamic Web TWAIN resources are deployed in a cust
 
 Please make sure the path to Resources folder is defined correctly and that you can find `\*.viewer.js` under the `{ResourcesPath}/src` folder. If `viewer.js` does not exist in the target directory, please verify that the Dynamic Web TWAIN resources are deployed correctly and all files have been deployed.
 
-Please refer to  <a href="/web-twain/docs/general-usage/server-deployment.html" target="_blank">Dynamic Web TWAIN Deployment - Server Deployment</a> for more details on server deployment
+Please refer to  [Dynamic Web TWAIN Deployment - Server Deployment](/_articles/docs/general-usage/server-deployment.md){:target="_blank"} for more details on server deployment

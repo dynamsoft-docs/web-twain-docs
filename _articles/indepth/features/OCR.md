@@ -9,7 +9,7 @@ ignore: true
 ---
 
 # OCR (Retired)
-> This page is only provided as a reference for clients with existing Dynamsoft OCR licences. New OCR licences are not available as Dynamsoft has ended the development of OCR modules.
+> This page is only provided as a reference for clients with existing Dynamsoft OCR licenses. New OCR licenses are not available as Dynamsoft has ended the development of OCR modules.
 
 Dynamsoft offers two OCR engines that can be used as add-ons for `Dynamic Web TWAIN` : OCR Basic ( `OCRB` for short) and OCR Professional ( `OCRPro` for short).
 
@@ -477,7 +477,7 @@ function DoOCR(index) {
             function() {
                 console.log('upload success with no returned info');
             },
-            // `OnOCRResultReturned` processes the returend OCR result
+            // `OnOCRResultReturned` processes the returned OCR result
             OnOCRResultReturned
         );
     }
@@ -534,7 +534,7 @@ String strTessDataPath = this.getServletContext().getRealPath("/") + "WEB-INF\\l
 // Define the response header
 response.setContentType("text/html;charset=utf-8");
 request.setCharacterEncoding("utf-8"); 
-String fileExtention = ".txt";
+String fileExtension = ".txt";
 // Create an OCRB instance
 DynamsoftOCRBasic ocr = new DynamsoftOCRBasic();
 ocr.setOCRDllPath(strDllPath);
@@ -542,7 +542,7 @@ ocr.setOCRTessDataPath(strTessDataPath);
 // Do OCR
 byte[] result = ocr.ocrImage(aryImageBuffer, refaryRetResultDetails);
 if(result.length > 0) {
-    if(fileExtention == ".pdf"){
+    if(fileExtension == ".pdf"){
         response.getWriter().write("|#|" + strOCRResultFileName);
     } else {
         response.reset(); 

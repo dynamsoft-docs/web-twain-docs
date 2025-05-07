@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Error message - The current product key does not support current OS for embed device, please contact the site administrator
-keywords: Dynamic Web TWAIN, Error Troubleshooting, does not support currrent OS
+keywords: Dynamic Web TWAIN, Error Troubleshooting, does not support current OS
 breadcrumbText: Error message - The current product key does not support current OS for embed device, please contact the site administrator
 description: Error message - The current product key does not support current OS for embed device, please contact the site administrator
 ---

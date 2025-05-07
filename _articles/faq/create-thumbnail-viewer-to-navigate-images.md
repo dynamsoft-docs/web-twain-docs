@@ -12,7 +12,7 @@ description: How can I create a thumbnail viewer to view images?
 
 ## How can I create a thumbnail viewer to view images?
 
-You can create a thumbnail viewer by using the API <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer()</a>. You can either use the default settings or customize the viewer as shown below:
+You can create a thumbnail viewer by using the API [createThumbnailViewer()](/_articles/info/api/WebTwain_Viewer.md#createthumbnailviewer){:target="_blank"}. You can either use the default settings or customize the viewer as shown below:
 
 ```javascript
 // Use default settings

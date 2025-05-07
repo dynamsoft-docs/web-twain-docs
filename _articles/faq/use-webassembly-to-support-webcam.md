@@ -16,6 +16,6 @@ Yes. The WebAssembly Edition does not require installation of the local Dynamsof
 
 > Note - that the WebAssembly Edition is not supported by the Internet Explorer browser.
 
-Also, not all Dynamic Web TWAIN features are fully available in the WebAssembly Edition. For more details, please check <a href="/web-twain/docs/indepth/development/upgrade.html#expand-your-application-to-mobile-platforms" target="_blank">here</a>.
+Also, not all Dynamic Web TWAIN features are fully available in the WebAssembly Edition. For more details, please check [here](/_articles/docs/indepth/development/upgrade.md#expand-your-application-to-mobile-platforms){:target="_blank"}.
 
 You will also need some advanced features of modern WASM browsers for the WebAssembly Edition. Please check <a href="{{site.getstarted}}platform.html#wasm-browsers" target="_blank">WASM browsers</a> for more information.

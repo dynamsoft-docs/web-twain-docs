@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed
-keywords: Dynamic Web TWAIN, Error Meaasge, connection failed, Dynamsoft Service, HTTP
+keywords: Dynamic Web TWAIN, Error Message, connection failed, Dynamsoft Service, HTTP
 breadcrumbText: Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed
 description: Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed
 ---
@@ -14,7 +14,7 @@ description: Error Message - The connection from the insecure (HTTP) web page to
 
 ### Symptom 
 
-On Windows 7 x86, Win7 64 Enterprise (or any older Windows OS), you get an error message that says **"The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed. To fix the issue, please update your website to HTTPS or refer to <a href="/web-twain/docs/faq/http-insecure-websites-in-chromium-browser.html" target="_blank">this article</a> for other workarounds"** even if you are accessing a secure (HTTPs) web page.
+On Windows 7 x86, Win7 64 Enterprise (or any older Windows OS), you get an error message that says **"The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed. To fix the issue, please update your website to HTTPS or refer to [this article](/_articles/docs/faq/http-insecure-websites-in-chromium-browser.md){:target="_blank"} for other workarounds"** even if you are accessing a secure (HTTPs) web page.
 
 And refresh the web page does not work. 
 

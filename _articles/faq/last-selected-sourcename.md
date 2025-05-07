@@ -12,7 +12,7 @@ description: How can I set the last selected source as the default source for an
 
 ## How can I set the last selected source as the default source for an end user?
 
-<a href="/web-twain/docs/info/api/WebTwain_Acquire.html#defaultsourcename" target="_blank">DefaultSourceName</a> is the API which you can use to leverage this functionality.
+[DefaultSourceName](/_articles/info/api/WebTwain_Acquire.md#defaultsourcename){:target="_blank"} is the API which you can use to leverage this functionality.
 
 Example:
 

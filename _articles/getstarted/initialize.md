@@ -63,7 +63,7 @@ Link to API Reference:
 
 <!-- **What is Dynamsoft_OnReady?**
 
-DWT's default behaviour is to initalizae the DWT environment as soon as the application has loaded the DWT scripts. Once the scripts have been completely loaded, `OnWebTwainReady` is automatically fired and will look for `Dynamsoft_OnReady()`. For more information please see the API description for the [`OnWebTwainReady`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#onwebtwainready){:target="_blank" rel="noreferrer noopener"}. -->
+DWT's default behavior is to initialize the DWT environment as soon as the application has loaded the DWT scripts. Once the scripts have been completely loaded, `OnWebTwainReady` is automatically fired and will look for `Dynamsoft_OnReady()`. For more information please see the API description for the [`OnWebTwainReady`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#onwebtwainready){:target="_blank" rel="noreferrer noopener"}. -->
 
 ### Review the Code
 
@@ -99,4 +99,4 @@ DWT's default behaviour is to initalizae the DWT environment as soon as the appl
 
 # Next article
 
-Now that the envrionment is loaded and ready to go, the next step will be [scanning an image]({{site.getstarted}}scanning.html).
+Now that the environment is loaded and ready to go, the next step will be [scanning an image]({{site.getstarted}}scanning.html).

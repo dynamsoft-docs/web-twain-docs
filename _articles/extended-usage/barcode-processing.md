@@ -332,7 +332,7 @@ function ReadBarcode(index) {
                     }
                 }
                 if (ProcssedImagesCount === DWTObject.HowManyImagesInBuffer) {
-                    // Print out the indice arrays, each array represents a document
+                    // Print out the index arrays, each array represents a document
                     console.log(aryIndices);
                     aryIndices = [];
                 } else

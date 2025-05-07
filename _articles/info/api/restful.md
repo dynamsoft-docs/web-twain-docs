@@ -345,7 +345,7 @@ After creating a scan job, the job either:
 
 | Name                    | Location | Type           | Required | Description                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------- | -------- | -------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `X-DICS-LICENSE-KEY`    | header   | `string`         | yes      | DWT license key with the RESTful API module - contact our [sales team](https://www.dynamsoft.com/company/contact/) for a full license, or get a [30-day free trial](https://www.dynamsoft.com/web-twain/downloads/).                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `DWT-PRODUCT-KEY`    | header   | `string`         | yes      | DWT license key with the RESTful API module - contact our [sales team](https://www.dynamsoft.com/company/contact/) for a full license, or get a [30-day free trial](https://www.dynamsoft.com/web-twain/downloads/).                                                                                                                                                                                                                                                                                                                                                                                                 |
 |`CreateScanJobOptions`|body|[`CreateScanJobOptions`](#createscanjoboptions)| no |none|
 
 #### Request Example
@@ -358,7 +358,7 @@ const pathSegments = ['device', 'scanners', 'jobs'];
 url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
 
 let myHeaders = new Headers();
-myHeaders.append("X-DICS-LICENSE-KEY", "YOUR_LICENSE_KEY_HERE");
+myHeaders.append("DWT-PRODUCT-KEY", "YOUR_LICENSE_KEY_HERE");
 myHeaders.append("Content-Type", "application/json");
 
 let raw = JSON.stringify({
@@ -1287,7 +1287,7 @@ This information consists of the `documentuid` and an array of page `uid`. If th
 |Name|Location|Type|Required|Restrictions|Description|
 |---|---|---|---|---|---|
 |`documentuid`|path|`string`| yes | none |The UID of the document.|
-|`X-DICS-DOC-PASSWORD`|header|`string`| no | length <= 32 characters |The password of the document (32 characters max).|
+|`DWT-DOC-PASSWORD`|header|`string`| no | length <= 32 characters |The password of the document (32 characters max).|
 
 #### Request Example
 
@@ -1300,7 +1300,7 @@ const pathSegments = ['storage', 'documents', documentuid];
 url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
 
 let myHeaders = new Headers();
-myHeaders.append("X-DICS-DOC-PASSWORD", "myPassword");
+myHeaders.append("DWT-DOC-PASSWORD", "myPassword");
 
 let requestOptions = {
    method: 'GET',
@@ -1403,7 +1403,7 @@ Delete a document stored in the working directory of the Dynamic Web TWAIN Servi
 |Name|Location|Type|Required|Restrictions|Description|
 |---|---|---|---|---|---|
 |`documentuid`|path|`string`| yes |none|The UID of the document.|
-|`X-DICS-DOC-PASSWORD`|header|`string`| no |length <= 32 characters|The password of the document (32 characters max).|
+|`DWT-DOC-PASSWORD`|header|`string`| no |length <= 32 characters|The password of the document (32 characters max).|
 
 #### Request Example
 
@@ -1416,7 +1416,7 @@ const pathSegments = ['storage', 'documents', documentuid];
 url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
 
 let myHeaders = new Headers();
-myHeaders.append("X-DICS-DOC-PASSWORD", "myPassword");
+myHeaders.append("DWT-DOC-PASSWORD", "myPassword");
 
 let requestOptions = {
    method: 'DELETE',
@@ -1507,8 +1507,8 @@ Get pages of a document stored in the working directory of the Dynamic Web TWAIN
 |`subject`|query|`string`| no | none |Default value `''` - subject.|
 |`title`|query|`string`| no | none |Default value `''` - title.|
 |`version`|query|`string`| no | none |Default value `1.5` - version.|
-|`password`|query|`string`| no | length <= 32 characters |Default value `''` - PDF file encryption password. The file is unencrypted by default. Note that this is distinct from the document password given by `X-DICS-DOC-PASSWORD`.|
-|`X-DICS-DOC-PASSWORD`|header|`string`| no | length <= 32 characters |The password of the document (32 characters max).|
+|`password`|query|`string`| no | length <= 32 characters |Default value `''` - PDF file encryption password. The file is unencrypted by default. Note that this is distinct from the document password given by `DWT-DOC-PASSWORD`.|
+|`DWT-DOC-PASSWORD`|header|`string`| no | length <= 32 characters |The password of the document (32 characters max).|
 
 #### Request Example
 
@@ -1521,7 +1521,7 @@ const pathSegments = ['storage', 'documents', documentuid];
 url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
 
 let myHeaders = new Headers();
-myHeaders.append("X-DICS-DOC-PASSWORD", "myPassword");
+myHeaders.append("DWT-DOC-PASSWORD", "myPassword");
 
 let raw = JSON.stringify({
   pages: '190817548d70,190817648270',
@@ -1607,7 +1607,7 @@ This API is used to insert scanned pages from a scan job to a document stored in
 |Name|Location|Type|Required|Restrictions|Description|
 |---|---|---|---|---|---|
 |`documentuid`|path|`string`| yes | none |The UID of the document.|
-|`X-DICS-DOC-PASSWORD`|header|`string`| no | length <= 32 characters |The password of the document (32 characters max).|
+|`DWT-DOC-PASSWORD`|header|`string`| no | length <= 32 characters |The password of the document (32 characters max).|
 |`insertPos`|body|`number`| no | `0` < `insertPos` <= document page count |The insertion index that the new pages will be inserted in front of, hence it must be a positive integer. If this is not set or is invalid, insert the pages at the end of the document.|
 |`source`|body|`string`| yes | Scan job URL |Image source URL from the scan job, e.g. `https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282`.|
 
@@ -1622,7 +1622,7 @@ const pathSegments = ['storage', 'documents', documentuid, 'pages'];
 url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
 
 let myHeaders = new Headers();
-myHeaders.append("X-DICS-DOC-PASSWORD", "myPassword");
+myHeaders.append("DWT-DOC-PASSWORD", "myPassword");
 
 let raw = JSON.stringify({
   insertPos: 1,
@@ -1730,7 +1730,7 @@ Delete a page in a stored document, provided its `documentuid` and page `uid`/in
 |---|---|---|---|---|---|
 |`documentuid`|path|`string`| yes | none |The UID of the document.|
 |`param`|path|`string`| yes | - None-negative integer less than page count: page index<br/> - valid page UID: page UID |UID of the page or 0-based page index.|
-|`X-DICS-DOC-PASSWORD`|header|`string`| no | length <= 32 characters |The password of the document (32 characters max).|
+|`DWT-DOC-PASSWORD`|header|`string`| no | length <= 32 characters |The password of the document (32 characters max).|
 
 #### Request Example:
 
@@ -1744,7 +1744,7 @@ const pathSegments = ['storage', 'documents', documentuid, 'pages', param];
 url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
 
 let myHeaders = new Headers();
-myHeaders.append("X-DICS-DOC-PASSWORD", "myPassword");
+myHeaders.append("DWT-DOC-PASSWORD", "myPassword");
 
 let requestOptions = {
    method: 'DELETE',
@@ -1822,7 +1822,7 @@ Barcode scanning requires a valid Barcode Reader Add-On license. Blank page dete
 
 |Name|Location|Type|Required|Restrictions|Description|
 |---|---|---|---|---|---|
-|`X-DICS-LICENSE-KEY`|header|`string`| yes | none |A DWT license key with the Barcode Reader and RESTful API module. Contact our [sales team](https://www.dynamsoft.com/company/contact/) for a full license, or get a [30-day free trial](https://www.dynamsoft.com/web-twain/downloads/).|
+|`DWT-PRODUCT-KEY`|header|`string`| yes | none |A DWT license key with the Barcode Reader and RESTful API module. Contact our [sales team](https://www.dynamsoft.com/company/contact/) for a full license, or get a [30-day free trial](https://www.dynamsoft.com/web-twain/downloads/).|
 |`source`|body|`string`| yes |Scan job URL |Image source URL from the scan job, e.g. `https://127.0.0.1:18623/api/device/scanners/jobs/dd40716d-48d1-4d32-89f7-1d53f9665d91/next-page?page=19522d0c5282`.|
 |`settings`|body|`string`| Valid barcode reading template JSON - see [`RuntimeSettings`](/_articles/info/api/interfaces.md#runtimesettings) for more details |no| Barcode reader template settings. Defaults to the `BestCoverage` setting by default. The basic settings are `BestCoverage`, `BestSpeed`, and `Balance`. Read the Barcode Reader Add-On guide for details on [basic settings](/_articles/extended-usage/barcode-processing.md#built-in-modes) and advanced [scanning templates](/_articles/extended-usage/barcode-processing.md#set-the-runtime-settings-using-json).|
 
@@ -1836,7 +1836,7 @@ const pathSegments = ['process', 'read-barcode'];
 url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
 
 let myHeaders = new Headers();
-myHeaders.append("X-DICS-LICENSE-KEY", "YOUR_LICENSE_KEY_HERE");
+myHeaders.append("DWT-PRODUCT-KEY", "YOUR_LICENSE_KEY_HERE");
 
 let raw = JSON.stringify({
   settings: '{"ImageParameter":{"Name":"BestSpeed","BarcodeFormatIds_2":["BF2_POSTALCODE","BF2_DOTCODE"],"DeblurLevel":3,"ExpectedBarcodesCount":512,"LocalizationModes":[{"Mode":"LM_SCAN_DIRECTLY"}],"TextFilterModes":[{"MinImageDimension":262144,"Mode":"TFM_GENERAL_CONTOUR"}]}}',

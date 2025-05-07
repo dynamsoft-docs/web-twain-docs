@@ -473,7 +473,7 @@ RegisterEvent(
 
 `index`: The index of the current image.
 
-`directory`: The parent directory of currently selected file(s), "\\\\" is not included. If the methed [`ShowFileDialog()`](/_articles/info/api/WebTwain_IO.md#showfiledialog) failed, the initial directory path set in the [`ShowFileDialog()`](/_articles/info/api/WebTwain_IO.md#showfiledialog) method is returned.
+`directory`: The parent directory of currently selected file(s), "\\\\" is not included. If the method [`ShowFileDialog()`](/_articles/info/api/WebTwain_IO.md#showfiledialog) failed, the initial directory path set in the [`ShowFileDialog()`](/_articles/info/api/WebTwain_IO.md#showfiledialog) method is returned.
 
 `fileName`: The current file name.
 
@@ -1741,7 +1741,7 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 
 `host`: The HTTP Host.
 
-`target`: The target wherethe request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script](/_articles/general-usage/server-side-scripting.md#how-to-process-uploaded-files).
+`target`: The target where the request is sent. For the sample code of Server Script, please refer to [Upload-Server-Script](/_articles/general-usage/server-side-scripting.md#how-to-process-uploaded-files).
 
 `fileName`: The file name.
 

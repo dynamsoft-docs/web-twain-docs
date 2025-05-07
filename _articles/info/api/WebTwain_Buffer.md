@@ -767,7 +767,7 @@ GetSkewAngleEx(
 
 **Usage notes**
 
-After you get the skew angle of an image, you can rotate it with the method [`Rotate()`](/_articles/info/api/WebTwain_Edit.md#rotate) to perform deskewing.
+After you get the skew angle of an image, you can rotate it with the method [`Rotate()`](/_articles/info/api/WebTwain_Edit.md#rotate) to perform de-skewing.
 
 ---
 

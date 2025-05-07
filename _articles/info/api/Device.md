@@ -50,12 +50,12 @@ interface DeviceConfiguration {
     Resolution?: number; //Measured by dots per pixel (DPI)
     IfFeederEnabled?: boolean; //Whether to use the document feeder or the flatbed of the device
     IfDuplexEnabled?: boolean; //Whether to scan one side or both sides
-    IfDisableSourceAfterAcquire?: boolean; //Whether to close the built-in User Interface after aquisition. Only valid when {IfShowUI} is true.
+    IfDisableSourceAfterAcquire?: boolean; //Whether to close the built-in User Interface after acquisition. Only valid when {IfShowUI} is true.
     IfGetImageInfo?: boolean; //Whether to retrieve information about the image after it's transferred.
     IfGetExtImageInfo?: boolean; //Whether to retrieve extended information about the image after it's transferred.
     extendedImageInfoQueryLevel?: Dynamsoft.DWT.EnumDWT_ExtImageInfo | number; //How much extended information is retrieved. Only valid when {IfGetExtImageInfo} is true.
     SelectSourceByIndex?: number; //Specify a source by its index.
-    IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after aquisition. Default: false.
+    IfCloseSourceAfterAcquire?: boolean; //Whether to close the data source after acquisition. Default: false.
 }
 ```
 

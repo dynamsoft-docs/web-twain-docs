@@ -14,7 +14,7 @@ description: Error message - You have exceeded the number of OCR attempts allowe
 
 ### Symptom
 
-When you use the OCRPro addon, you may receive this error message returned by the member method <a href="/web-twain/docs/info/api/Addon_OCR.html#recognizeselectedimages" target="_blank">GetErrorString()</a> of the OCRResult class.
+When you use the OCRPro addon, you may receive this error message returned by the member method [GetErrorString()](/_articles/info/api/Addon_OCR.md#recognizeselectedimages){:target="_blank"} of the OCRResult class.
 
 ### Cause
 

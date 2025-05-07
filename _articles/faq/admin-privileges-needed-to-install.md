@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Are admin privileges required to install the end-user component?
-keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, sdmin privileges, install
+keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, admin privileges, install
 breadcrumbText: Are admin privileges required to install the end-user component?
 description: Are admin privileges required to install the end-user component?
 ---

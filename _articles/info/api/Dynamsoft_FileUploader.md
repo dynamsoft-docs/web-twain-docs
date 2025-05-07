@@ -227,7 +227,7 @@ CancelAllUpload(): boolean;
 
 **Usage notes**
 
-[`Cancel()`](#cancel) or [`CancleAllUpload()`](#cancelallupload) should be called in the event [`OnUploadTransferPercentage`](#onuploadtransferpercentage).
+[`Cancel()`](#cancel) or [`CancelAllUpload()`](#cancelallupload) should be called in the event [`OnUploadTransferPercentage`](#onuploadtransferpercentage).
 
 **Example**
 

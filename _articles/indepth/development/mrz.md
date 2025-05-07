@@ -64,7 +64,7 @@ The following is the full code needed to implement the basic functionalities of 
 
         /* The objective of this function is to initialize the Capture Vision instance and apply the necessary settings for reading MRZ */
         async function initializeMRZ() {
-            // Inialize License Key
+            // Initialize License Key
             Dynamsoft.License.LicenseManager.initLicense("MRZ_LICENSE_KEY_HERE");
             
             // Load MRZ Resources
@@ -104,7 +104,7 @@ The following is the full code needed to implement the basic functionalities of 
             alert(errorString);
         }
 
-        /* The fucntion that is triggered when the user clicks the "Load" button */
+        /* The function that is triggered when the user clicks the "Load" button */
         function LoadImage() {
             if (DWTObject) {
                 DWTObject.IfShowFileDialog = true; // Open the system's file dialog to load image
@@ -257,7 +257,7 @@ function documentTypeLabel(codeType) {
 
 By completing the script with the code above, you can now go ahead and test the app that you just created. Please note that in order to properly function, the sample will need to be hosted on a server. 
 
-If you are using VS Code, a quick and easy way to serve the project is using the [Five Server VSCode extension](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server). Simply install the extension, open the `hello-world.html` file in the editor, and click "Go Live" in the bottom right corner of the editor. This will serve the application at `http://127.0.0.1:5500/hello-world.html`. Alternatively, you can also use IIS or Github Pages to quickly serve your application.
+If you are using VS Code, a quick and easy way to serve the project is using the [Live Server (Five Server) VSCode extension](https://marketplace.visualstudio.com/items?itemName=yandeu.five-server). Simply install the extension, open the `hello-world.html` file in the editor, and click "Go Live" in the bottom right corner of the editor. This will serve the application at `http://127.0.0.1:5500/hello-world.html`. Alternatively, you can also use IIS or Github Pages to quickly serve your application.
 
 ## Final Comments
 

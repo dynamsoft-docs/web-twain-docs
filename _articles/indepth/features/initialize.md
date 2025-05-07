@@ -11,7 +11,7 @@ ignore: true
 <!--Old preview article never deployed, probably not needed-->
 
 # Initialize
-Initializing Dynamic Web TWAIN takes a few simple steps, as you can see in the [Getting Started]({{site.getstarted}}helloworld.html) chapter. The following guide will dive deeper into the process how Dynamic Web TWAIN is intialized once the web page loads.
+Initializing Dynamic Web TWAIN takes a few simple steps, as you can see in the [Getting Started]({{site.getstarted}}helloworld.html) chapter. The following guide will dive deeper into the process how Dynamic Web TWAIN is initialized once the web page loads.
 
 ## Loading the Core JS Files
 

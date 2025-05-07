@@ -16,4 +16,4 @@ This is usually because the request to load our resources is returning a 404 err
 
 Please make sure the path to dwt-resources is correct and that you can find \*.viewer.js under the src folder. If it does not exist, please manually copy the Dynamic Web TWAIN resources to that folder.
 
-Please refer to this link for more details on server deployment <a href="/web-twain/docs/general-usage/server-deployment.html" target="_blank">Dynamic Web TWAIN Deployment - Server Deployment</a>.
+Please refer to this link for more details on server deployment [Dynamic Web TWAIN Deployment - Server Deployment](/_articles/docs/general-usage/server-deployment.md){:target="_blank"}.

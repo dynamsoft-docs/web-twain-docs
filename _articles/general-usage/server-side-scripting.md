@@ -257,7 +257,7 @@ $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } else {
-    // Check Database Existance
+    // Check Database Existence
     $db_selected = mysqli_select_db($conn, $dbname);
     if(!$db_selected) {
         // Create database
@@ -269,7 +269,7 @@ if ($conn->connect_error) {
         }			
     }
     mysqli_select_db($conn, $dbname);
-    // Check Table Existance
+    // Check Table Existence
     $sql_showtable = "SHOW TABLES LIKE '".$tablename."'";
     $rowcount = mysqli_num_rows($conn->query($sql_showtable));
     if ($rowcount > 0) {
@@ -412,7 +412,7 @@ The following packages are required
 The code to save the file to Oracle
 
 ``` java
-// Prepare credentials for connectiong to Oracle, here we use Oracle express (XE)
+// Prepare credentials for connecting to Oracle, here we use Oracle express (XE)
 String strDBUser = "dwtDB"; //database,schema name as well
 String strDBPassword = "NotRealPWD";
 String strDriverName = "oracle.jdbc.driver.OracleDriver";
@@ -574,7 +574,7 @@ String resourceName = Request["imageName"];
 String path = "/dwt";
 DateTime utc_start = utc.AddSeconds(-10); // 10 seconds before
 String start = utc_start.GetDateTimeFormats('s')[0].ToString() + ".0000000Z";
-DateTime utc_expires = utc.AddSeconds(1200);// 20 miniteus later
+DateTime utc_expires = utc.AddSeconds(1200);// 20 minutes later
 String expires = utc_expires.GetDateTimeFormats('s')[0].ToString() + ".0000000Z";
 // (2) generate signature
 String strToSign1 = "w";

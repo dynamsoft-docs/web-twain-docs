@@ -12,7 +12,7 @@ description: How can I change/hide the spinner which shows during document scann
 
 ## How can I change/hide the spinner which shows during document scanning?
 
-You can change/hide the loading bar which is shown during document scanning. The detailed steps can be found in <a href="/web-twain/docs/extended-usage/ui-customization.html#loading-bar-and-backdrop" target="_blank">this link</a>.
+You can change/hide the loading bar which is shown during document scanning. The detailed steps can be found in [this link](/_articles/docs/extended-usage/ui-customization.md#loading-bar-and-backdrop){:target="_blank"}.
 
 <br />
 

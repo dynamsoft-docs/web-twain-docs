@@ -165,7 +165,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 17.  [How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?](/_articles/faq/http-insecure-websites-in-chromium-browser.md)
 18.  [How to resolve Dynamic Web TWAIN issue in Chrome 101?](/_articles/faq/private-network-access-in-chrome101.md)
 19.  [Dynamic Web TWAIN – Content-Security-Policy violated](/_articles/faq/content-security-policy-violated.md)
-20.  [Scanner source is listed on XSane applicaton but not on my web application on Linux machines](/_articles/faq/source-not-listed-on-linux.md)
+20.  [Scanner source is listed on XSane application but not on my web application on Linux machines](/_articles/faq/source-not-listed-on-linux.md)
 21.  [How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode](/_articles/faq/activeX-in-Edge-IE-mode.md)
 22.  [The scanner's UI or the system's file dialog does not open when scanning](/_articles/faq/service-is-blocked.md)
 23.  [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md)

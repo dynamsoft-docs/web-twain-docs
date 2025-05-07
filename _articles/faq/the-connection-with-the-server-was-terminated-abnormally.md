@@ -61,5 +61,5 @@ When you upload images from Dynamic Web TWAIN's buffer, you may receive the foll
         Scenario #2: using ASP on IIS 7:
 
             1. Start -> Run , type InetMgr to open IIS 7 Manager
-            2. {Your WebSite} -> Feature View -> ASP -> Limites Properties
+            2. {Your WebSite} -> Feature View -> ASP -> Limit Properties
             3. Set a bigger value for Maximum Requesting Entity Body Limit, like "1000000"

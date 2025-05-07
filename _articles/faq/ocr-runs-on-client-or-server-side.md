@@ -16,4 +16,4 @@ OCR Basic is a light-weight OCR engine that works with the scanning module of Dy
 
 OCR Pro is a heavyweight OCR engine and is mostly deployed to the server side due to its size, but server-side OCR Pro is no longer supported since version 17.0. However, we provide OCR Pro client-side addon if that's desired. Note that client-side OCR Pro requires a trackable license. The traditional product key no longer works.
 
-For more information on OCR and how to use it, please check <a href="/web-twain/docs/indepth/features/OCR.html" target="_blank">here</a>.
+For more information on OCR and how to use it, please check [here](/_articles/docs/indepth/features/OCR.md){:target="_blank"}.

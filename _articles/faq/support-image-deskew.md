@@ -18,7 +18,7 @@ Generally, there are two ways to automatically deskew an image.
 
 > Applicable only to compatible <a href="{{site.getstarted}}hardware.html#twain-scanners" target="_blank">TWAIN scanners</a>
 
-There is a standard TWAIN capability called `ICAP_AUTOMATICDESKEW` which, when enabled, does the deskewing of all scanned images automatically. If your scanner supports this capability, you can enable the functionality through `Dynamic Web TWAIN` using the API <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#ifautomaticdeskew" target="_blank">IfAutomaticDeskew</a>
+There is a standard TWAIN capability called `ICAP_AUTOMATICDESKEW` which, when enabled, does the deskewing of all scanned images automatically. If your scanner supports this capability, you can enable the functionality through `Dynamic Web TWAIN` using the API [IfAutomaticDeskew](/_articles/info/api/WebTwain_Acquire.md#ifautomaticdeskew){:target="_blank"}
 
 ``` javascript
 DWTObject.OpenSource();
@@ -27,7 +27,7 @@ DWTObject.IfAutomaticDeskew = true;
 
 ### Use Dynamic Web TWAIN to deskew an image as it is scanned
 
-> The function `deskew()` below is applicable to all platforms. The event <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#onposttransferasync" target="_blank">OnPostTransferAsync</a> is only triggered during scanning
+> The function `deskew()` below is applicable to all platforms. The event [OnPostTransferAsync](/_articles/info/api/WebTwain_Acquire.md#onposttransferasync){:target="_blank"} is only triggered during scanning
 
 ``` javascript
 function deskew(index) {

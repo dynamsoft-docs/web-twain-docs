@@ -19,7 +19,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`Rotate()`](#rotate)                           | [`RotateEx()`](#rotateex)               | [`RotateLeft()`](#rotateleft)                   | [`RotateRight()`](#rotateright)                     |
 | [`ChangeBitDepth()`](#changebitdepth)           | [`SetDPI()`](#setdpi)                   | [`ConvertToBW()`](#converttobw)                 | [`ConvertToGrayScale()`](#converttograyscale)       |
 | [`ChangeImageSize()`](#changeimagesize)         | [`Invert()`](#invert)                   | [`SetImageWidth()`](#setimagewidth)             | [`ChangeBrightnessAsync()`](#changebrightnessasync) |
-| [`ChangeContrastAsnyc()`](#changecontrastasnyc) |
+| [`ChangeContrastAsync()`](#changecontrastasync) |
 
 <!--
 * [Crop()](#crop)
@@ -376,7 +376,7 @@ ConvertToGrayScaleAsync(
 
 ## Invert()
 
-Invert the colour of the pixels on the specified image.
+Invert the color of the pixels on the specified image.
 
 **Syntax**
 
@@ -1248,13 +1248,13 @@ CutFrameToClipboard(
 
 **Usage notes**
 
-The empty area resulted from the crop/erase/cut will be filled with the colour set with [`BackgroundFillColor`](#backgroundfillcolor).
+The empty area resulted from the crop/erase/cut will be filled with the color set with [`BackgroundFillColor`](#backgroundfillcolor).
 
 ---
 
 ## BackgroundFillColor
 
-Return or set the fill colour for the empty area on an image that has been cut/cropped/erased.
+Return or set the fill color for the empty area on an image that has been cut/cropped/erased.
 
 **Syntax**
 
@@ -1286,7 +1286,7 @@ BackgroundFillColor: number;
 
 **Usage notes**
 
-By default the colour is white (0xffffff). The byte-ordering of the 24-bit RGB value is **RRGGBB**. RR represents red, GG represents green and BB represents blue.
+By default the color is white (0xffffff). The byte-ordering of the 24-bit RGB value is **RRGGBB**. RR represents red, GG represents green and BB represents blue.
 
 ---
 
@@ -1333,14 +1333,14 @@ ChangeBrightnessAsync(
 
 ---
 
-## ChangeContrastAsnyc()
+## ChangeContrastAsync()
 
 Change the image contrast.
 
 **Syntax**
 
 ```typescript
-ChangeContrastAsnyc(
+ChangeContrastAsync(
     index: number, 
     value: number
 ): Promise<boolean>;

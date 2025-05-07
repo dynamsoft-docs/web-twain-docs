@@ -70,15 +70,15 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2306 | Upload Error: the upload file cannot be empty |
 |-2307 | The width or height you entered is invalid |
 |-2308 | The Dynamic Web TWAIN Service has been stopped |
-|-2309 | The LocalFile is emtpy in the Function |
+|-2309 | The LocalFile is empty in the Function |
 |-2310 | The Enumerations is out of range |
-|-2311 | The RemoteFile is emtpy in Barcode Download Function |
-|-2312 | The file length is emtpy |
+|-2311 | The RemoteFile is empty in Barcode Download Function |
+|-2312 | The file length is empty |
 |-2313 | The size of the images you are about to upload has exceeded the allowed size |
 |-2314 | The parameter cannot be empty |
 |-2315 | The Enumerations is out of range |
-|-2316 | The RemoteFile is emtpy in Webcam Download Function |
-|-2317 | The RemoteFile is emtpy in Pdf Download Function |
+|-2316 | The RemoteFile is empty in Webcam Download Function |
+|-2317 | The RemoteFile is empty in Pdf Download Function |
 |-2318 | Invalid destination file |
 |-2319 | Invalid source file |
 |-2320 | Invalid file |
@@ -141,7 +141,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2803 | Loading the WebTwain JavaScript source files has failed. |
 |-2804 | Loading the WebTwain css files has failed. |
 |-2805 | Error: The "WebTwainId" is not a string. |
-|-2806 | Error: The argument passed to the parameter "conatinerId" is not a string. |
+|-2806 | Error: The argument passed to the parameter "containerId" is not a string. |
 |-2807 | Error: The element specified by the id XXX doesn't exist. |
 |-2812 | Error: Duplicate ID detected while creating a Dynamic Web TWAIN object. |
 |-2813 | Error: The ID of the target DIV for the new DWT object is invalid. |
@@ -151,7 +151,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2818 | The Dynamic Web TWAIN Service SSL certificate has expired. |
 |-2819 | The Dynamic Web TWAIN Service SSL certificate is invalid. |
 |-2820 | The Connection from the insecure (HTTP) web page to the local "Dynamic Web TWAIN Service" failed! |
-|-2821 | The Dynamsoft Servie is not ready, please try again later. |
+|-2821 | The Dynamsoft Service is not ready, please try again later. |
 |-2822 | The WebTwain JavaScript lts.js load failed. |
 |-2823 | The http url redirected. |
 |-2824 | The Connection from the web page failed. Please make sure the Dynamic Web TWAIN Service is running. |
@@ -173,7 +173,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2845 | Only Blob of JPEG, PNG, BMP, TIFF and PDF image types can be uploaded.|
 |-2846 | The uid cannot be empty.|
 |-2847 | The uid is invalid.|
-|-2848 | The capabilitie value is out of range.|
+|-2848 | The capability value is out of range.|
 |-2849 | The password must not exceed 32 characters in length.|
 |-2850 | The password is not a string.|
 |-2851 | The password must not exceed 32 characters in length.|

@@ -10,6 +10,31 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.1 (05/07/2025) 
+
+### New Features
+
+Added a new method [`getVisiblePagesInfo()`](/_articles/info/api/WebTwain_Viewer.md#getvisiblepagesinfo) to return the information of visible pages in a viewer. It is useful to add custom elements.
+
+### Improvements
+
+- Added support for reading special TIFFs (e.g. 4-bit RGB interleaved, old-style JPEG compression) on Windows.
+- Added support for keeping the PDF forms when saving.
+- Updated the way of checking CSS file integrity from fetching to examining the effectiveness of CSS rules.
+- Updated the format of license expiry date to avoid misunderstanding.
+
+### Breaking Changes
+
+Updated the names of headers for the REST API.
+
+- `X-DICS-LICENSE-KEY` -> `DWT-PRODUCT-KEY`
+- `X-DICS-DOC-PASSWORD` -> `DWT-DOC-PASSWORD`
+
+### Bug Fixes
+
+- Fixed a bug that when `preserveUnmodifiedOnSave` is set to `true`, `CopyToDocumentAsync()` will fail.
+- Fixed a bug that the width and height set in percentage using the Web TWAIN object is not effective after resizing.
+
 ## 19.0 (04/01/2025) 
 
 ### New Features 
@@ -131,7 +156,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 - Added `modifyId` to the interface [`BufferChangeInfo`](/_articles/info/api/interfaces.md#bufferchangeinfo) for returning the `imageId` of the modified image when [`OnBufferChanged`](/_articles/info/api/WebTwain_Buffer.md#onbufferchanged) is triggered.
 - Added `password` to the interface [`PDFWSettings`](/_articles/info/api/interfaces.md#pdfwsettings) for configuring the password of the PDF file to save when [`Write.Setup()`](/_articles/info/api/Addon_PDF.md#writesetup) is called.
 - Added data type `Device` to the parameter `scanner` in the interface [`ScanSetup`](/_articles/info/api/interfaces.md#scansetup) for supporting the device object when [`startScan()`](/_articles/info/api/WebTwain_Acquire.md#startscan) is used.
-- Optimized the quality of the deskewed image in the built-in ImageEditor.
+- Optimized the quality of the de-skewed image in the built-in ImageEditor.
 
 ### Changes
 
@@ -168,7 +193,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ## 18.4.1 (10/24/2023)
 
 ### MacOS Service Hotfix
-- Due to changes introduced with ICA drivers, Dynamic Web TWAIN may exhibit strange behaviour while scanning. This release updates the Dynamsoft Service for MacOS to address these issues. See [this article](/_articles/faq/macos-sonoma-distorted-scans.md) for more details.
+- Due to changes introduced with ICA drivers, Dynamic Web TWAIN may exhibit strange behavior while scanning. This release updates the Dynamsoft Service for MacOS to address these issues. See [this article](/_articles/faq/macos-sonoma-distorted-scans.md) for more details.
 
 ### DWTObject process optimization
 - Fixed an issue where if the Web TWAIN object was deleted from context mid scan, the scanning queue would not terminate, leaving any future requests being left pending in queue.
@@ -205,7 +230,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 - Added functions [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions) and [`GetReaderOptions()`](/_articles/info/api/Addon_PDF.md#getreaderoptions) to utilize the new `ReaderOptions` interface.
 
 #### File Saving
-- Saving a Black and White JPG will now automatically convert the image to grayscale prior to saving. This is due to the limitation that JPGs do not allow black and white images.  Previously, Black and White images were not able to be saved to JPG without manually converting the colourspace prior.
+- Saving a Black and White JPG will now automatically convert the image to grayscale prior to saving. This is due to the limitation that JPGs do not allow black and white images.  Previously, Black and White images were not able to be saved to JPG without manually converting the color space prior.
 
 ### Bug Fixes
 - Fixed a bug where the Content-Type of ConvertToBlob was sometimes incorrectly reported in the response back from the Dynamsoft Service.
@@ -329,21 +354,21 @@ Plus Edition is a temporary edition as its enhanced features will be separated i
   [Get Dynamsoft Service in Google Play](https://play.google.com/store/apps/details?id=com.dynamsoft.mobilescan)
 
 ##### Scanner
-  - Added new method <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#getdevicesasync" target="_blank">GetDevicesAsync</a>.
-  - Added new method <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#selectdeviceasync" target="_blank">SelectDeviceAsync</a>.
-  - Added new method <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#acquireimageasync" target="_blank">AcquireImageAsync</a>.
-  - Added new optional parameter `deviceType` to the method <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#selectsourceasync" target="_blank">SelectSourceAsync</a>.
+  - Added new method [GetDevicesAsync](/_articles/info/api/WebTwain_Acquire.md#getdevicesasync){:target="_blank"}.
+  - Added new method [SelectDeviceAsync](/_articles/info/api/WebTwain_Acquire.md#selectdeviceasync){:target="_blank"}.
+  - Added new method [AcquireImageAsync](/_articles/info/api/WebTwain_Acquire.md#acquireimageasync){:target="_blank"}.
+  - Added new optional parameter `deviceType` to the method [SelectSourceAsync](/_articles/info/api/WebTwain_Acquire.md#selectsourceasync){:target="_blank"}.
 
 ##### Mobile Web Capture
   - Support turning on/off torch
-    - Added new method <a href="/web-twain/docs/info/api/Addon_Camera.html#turnontorch" target="_blank">turnOnTorch</a> and <a href="/web-twain/docs/info/api/Addon_Camera.html#turnofftorch" target="_blank">turnOffTorch</a>.
-    - Added new method <a href="/web-twain/docs/info/api/Addon_Camera.html#getcapabilities" target="_blank">getCapabilities</a>.
-    - Added new property `torch` to `ScannerViewer`. Refer to <a href="/web-twain/docs/info/api/Addon_Camera.html#scandocument" target="_blank">scanDocument</a>.
+    - Added new method [turnOnTorch](/_articles/info/api/Addon_Camera.md#turnontorch){:target="_blank"} and [turnOffTorch](/_articles/info/api/Addon_Camera.md#turnofftorch){:target="_blank"}.
+    - Added new method [getCapabilities](/_articles/info/api/Addon_Camera.md#getcapabilities){:target="_blank"}.
+    - Added new property `torch` to `ScannerViewer`. Refer to [scanDocument](/_articles/info/api/Addon_Camera.md#scandocument){:target="_blank"}.
 
 #### Improved Features
   - All license key types can now be specified with the API Dynamsoft.DWT.ProductKey.
-  - Added new property <a href="/web-twain/docs/info/api/Dynamsoft_WebTwainEnv.html" target="_blank">Dynamsoft.DWT.DeviceFriendlyName</a> which defines the specific device that consumes the license quota
-  -	Added new enumeration <a href="/web-twain/docs/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_extimageinfo" target="_blank">Dynamsoft.DWT.EnumDWT_ExtImageInfo</a>
+  - Added new property [Dynamsoft.DWT.DeviceFriendlyName](/_articles/info/api/Dynamsoft_WebTwainEnv.md){:target="_blank"} which defines the specific device that consumes the license quota
+  -	Added new enumeration [Dynamsoft.DWT.EnumDWT_ExtImageInfo](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_extimageinfo){:target="_blank"}
   -	Updated Barcode Reader add-on library to version 9.4. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/release-notes/js-9.html?ver=latest" target="_blank">Barcode Reader JavaScript SDK - 9.x</a>
 
 
@@ -358,14 +383,14 @@ Plus Edition is a temporary edition as its enhanced features will be separated i
 
 #### Changes to ActiveX Edition
   -	Added the following API supports for better compatibility with HTML5 Edition: 
-  <a href="/web-twain/docs/info/api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload</a>, 
-  <a href="/web-twain/docs/info/api/WebTwain_IO.html#converttobase64" target="_blank">ConvertToBase64</a>, 
-  <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#onbufferchanged" target="_blank">OnBufferChanged</a>, 
-  <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#closesourceasync" target="_blank">CloseSourceAsync</a>, 
-  <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#opensourceasync" target="_blank">OpenSourceAsync</a>, 
-  <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#getsourcenamesasync" target="_blank">GetSourceNamesAsync</a>, 
-  <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#closesourcemanagerasync" target="_blank">CloseSourceManagerAsync</a>, 
-  <a href="/web-twain/docs/info/api/WebTwain_Acquire.html#opensourcemanagerasync" target="_blank">OpenSourceManagerAsync</a>
+  [HTTPUpload](/_articles/info/api/WebTwain_IO.md#httpupload){:target="_blank"}, 
+  [ConvertToBase64](/_articles/info/api/WebTwain_IO.md#converttobase64){:target="_blank"}, 
+  [OnBufferChanged](/_articles/info/api/WebTwain_Buffer.md#onbufferchanged){:target="_blank"}, 
+  [CloseSourceAsync](/_articles/info/api/WebTwain_Acquire.md#closesourceasync){:target="_blank"}, 
+  [OpenSourceAsync](/_articles/info/api/WebTwain_Acquire.md#opensourceasync){:target="_blank"}, 
+  [GetSourceNamesAsync](/_articles/info/api/WebTwain_Acquire.md#getsourcenamesasync){:target="_blank"}, 
+  [CloseSourceManagerAsync](/_articles/info/api/WebTwain_Acquire.md#closesourcemanagerasync){:target="_blank"}, 
+  [OpenSourceManagerAsync](/_articles/info/api/WebTwain_Acquire.md#opensourcemanagerasync){:target="_blank"}
 
 ### Remote Scan
 Remote Document Scanning enables document scanning from all available Dynamsoft Services and eSCL scanners on the intranet through one proxy service, via any supported devices and browsers, without any software installation. Please refer to <a href="https://www.dynamsoft.com/remote-scan/docs/introduction/" target="_blank">this documentation</a> for more details.
@@ -373,7 +398,7 @@ Remote Document Scanning enables document scanning from all available Dynamsoft 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yMUmETWLDQ8" title="New Features in Dynamic Web TWAIN 18.0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Breaking Changes
-In 18.0+, if you call Dynamsoft.DWT.GetWebTwain against a non-existant ContainerID, you will get a null return. Previously, if you made the same call in the same situation, the WebTWAIN object would still initialize. To initiate the WebTWAIN object against a ContainerID, please use `GetWebTwain`. To utilize a viewer-less WebTWAIN object, please use [`CreateDWTObjectEx`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#createdwtobjectex)
+In 18.0+, if you call Dynamsoft.DWT.GetWebTwain against a non-existent ContainerID, you will get a null return. Previously, if you made the same call in the same situation, the WebTWAIN object would still initialize. To initiate the WebTWAIN object against a ContainerID, please use `GetWebTwain`. To utilize a viewer-less WebTWAIN object, please use [`CreateDWTObjectEx`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#createdwtobjectex)
 
 
 ## 17.3 (06/30/2022)
@@ -389,26 +414,26 @@ In 18.0+, if you call Dynamsoft.DWT.GetWebTwain against a non-existant Container
 See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scanner/" target="_blank">**live demo**</a>.
 
 #### Buffer
-- Added new method <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#renamedocument" target="_blank">RenameDocument</a>.
+- Added new method [RenameDocument](/_articles/info/api/WebTwain_Buffer.md#renamedocument){:target="_blank"}.
 -	Renamed methods
-    - CreateFile -> <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#createdocument" target="_blank">CreateDocument</a>
-    - OpenFile -> <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#opendocument" target="_blank">OpenDocument</a>
-    - GetCurrentFileName -> <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#getcurrentdocumentname" target="_blank">GetCurrentDocumentName</a>
-    -	RemoveFile -> <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#removedocument" target="_blank">RemoveDocument</a>
-    -	GetFileInfoList -> <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#getdocumentinfolist" target="_blank">GetDocumentInfoList</a>
-- Added new method <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#getrawdataasync" target="_blank">GetRawDataAsync</a>.
+    - CreateFile -> [CreateDocument](/_articles/info/api/WebTwain_Buffer.md#createdocument){:target="_blank"}
+    - OpenFile -> [OpenDocument](/_articles/info/api/WebTwain_Buffer.md#opendocument){:target="_blank"}
+    - GetCurrentFileName -> [GetCurrentDocumentName](/_articles/info/api/WebTwain_Buffer.md#getcurrentdocumentname){:target="_blank"}
+    -	RemoveFile -> [RemoveDocument](/_articles/info/api/WebTwain_Buffer.md#removedocument){:target="_blank"}
+    -	GetFileInfoList -> [GetDocumentInfoList](/_articles/info/api/WebTwain_Buffer.md#getdocumentinfolist){:target="_blank"}
+- Added new method [GetRawDataAsync](/_articles/info/api/WebTwain_Buffer.md#getrawdataasync){:target="_blank"}.
 
 #### Viewer
-- Added new method <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#updatecheckboxstyle" target="_blank">updateCheckboxStyle</a> to customize checkboxes. This method is also added to `ThumbnailViewer`. Refer to <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
-- Added new method <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#updatepagenumberstyle" target="_blank">updatePageNumberStyle</a> to customize page numbers. This method is also added to `ThumbnailViewer`. Refer to <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
-- Added new properties `checkbox` and `pageNumber` to `ThumbnailViewerSettings`. Refer to <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">createThumbnailViewer</a>.
-- Added a new parameter `documentConfiguration` to the method <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createtemplate" target="_blank">createTemplate</a>.
-- Added new method <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createdocumenteditor" target="_blank">createDocumentEditor</a>.
-- Added new property <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#selectionmode" target="_blank">selectionMode</a>.
-- Added new property <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#allowpagedragging" target="_blank">allowPageDragging</a>.
+- Added new method [updateCheckboxStyle](/_articles/info/api/WebTwain_Viewer.md#updatecheckboxstyle){:target="_blank"} to customize checkboxes. This method is also added to `ThumbnailViewer`. Refer to [createThumbnailViewer](/_articles/info/api/WebTwain_Viewer.md#createthumbnailviewer){:target="_blank"}.
+- Added new method [updatePageNumberStyle](/_articles/info/api/WebTwain_Viewer.md#updatepagenumberstyle){:target="_blank"} to customize page numbers. This method is also added to `ThumbnailViewer`. Refer to [createThumbnailViewer](/_articles/info/api/WebTwain_Viewer.md#createthumbnailviewer){:target="_blank"}.
+- Added new properties `checkbox` and `pageNumber` to `ThumbnailViewerSettings`. Refer to [createThumbnailViewer](/_articles/info/api/WebTwain_Viewer.md#createthumbnailviewer){:target="_blank"}.
+- Added a new parameter `documentConfiguration` to the method [createTemplate](/_articles/info/api/WebTwain_Viewer.md#createtemplate){:target="_blank"}.
+- Added new method [createDocumentEditor](/_articles/info/api/WebTwain_Viewer.md#createdocumenteditor){:target="_blank"}.
+- Added new property [selectionMode](/_articles/info/api/WebTwain_Viewer.md#selectionmode){:target="_blank"}.
+- Added new property [allowPageDragging](/_articles/info/api/WebTwain_Viewer.md#allowpagedragging){:target="_blank"}.
 
 ### Minor Improvements 
- - Modified <a href="/web-twain/docs/info/api/Dynamsoft_Enum.html#dynamsoftdwtenumdwt_pdfcompressiontype" target="_blank">Dynamsoft.DWT.EnumDWT_PDFCompressionType</a> from `PDF_JBig2` to `PDF_JBIG2`.
+ - Modified [Dynamsoft.DWT.EnumDWT_PDFCompressionType](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_pdfcompressiontype){:target="_blank"} from `PDF_JBig2` to `PDF_JBIG2`.
  - Made changes to support organizationID value for Dynamsoft.DWT.ProductKey.
  - Enabled license key validation for the correct version during initialization.
 
@@ -434,19 +459,19 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 ### Bug Fixes
 
- - Updated the file *dynamsoft.webtwain.initiate.js* to resolve a memory leak issue in v17.2.1 on Chrome 98+ when the <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#setviewmode" target="_blank">view mode</a> is set to (-1, -1) or if a <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createthumbnailviewer" target="_blank">thumbnail viewer</a> is used.
+ - Updated the file *dynamsoft.webtwain.initiate.js* to resolve a memory leak issue in v17.2.1 on Chrome 98+ when the [view mode](/_articles/info/api/WebTwain_Viewer.md#setviewmode){:target="_blank"} is set to (-1, -1) or if a [thumbnail viewer](/_articles/info/api/WebTwain_Viewer.md#createthumbnailviewer){:target="_blank"} is used.
 
 ## 17.2.1 (02/24/2022)
 
 ### Improved Features 
 
- - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more <a href="/web-twain/docs/faq/private-network-access-in-chrome101.html" target="_blank">here</a>. 
+ - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more [here](/_articles/docs/faq/private-network-access-in-chrome101.md){:target="_blank"}. 
  - For Chromium V84+, use userAgentData instead of userAgent in response to UserAgent String phasing out issue. 
 
 ### Bug Fixes
 
- - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more <a href="/web-twain/docs/faq/service-installation-issue.html" target="_blank">here</a>. 
- - [HTML5 on MacOS] Fixed a bug where the short key (set by <a href="/web-twain/docs/info/api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a>) did not work on macOS 12+.
+ - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more [here](/_articles/docs/faq/service-installation-issue.md){:target="_blank"}. 
+ - [HTML5 on MacOS] Fixed a bug where the short key (set by [organizationID](/_articles/info/api/Dynamsoft_WebTwainEnv.md#organizationid){:target="_blank"}) did not work on macOS 12+.
  - Fixed a bug where the mouse wheel did not work when the mouse was over the viewer.
  - [HTML5 on MacOS] Fixed a bug where buttons were not visible during Dynamic Web TWAIN/Dynamsoft Service installation when using dark mode.
 
@@ -456,29 +481,29 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 #### Buffer
  - Organize images in a set
-   - [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#createfile" target="_blank">`CreateFile()`</a>.
-   - [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#openfile" target="_blank">`OpenFile()`</a>.
-   - [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#removefile" target="_blank">`RemoveFile()`</a>.
-   - [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#getcurrentfilename" target="_blank">`GetCurrentFileName()`</a>.
-   - [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#getfileinfolist" target="_blank">`GetFileInfoList()`</a>.
- - [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Buffer.html#gettaglistbyindex" target="_blank">`GetTagListByIndex()`</a>.
+   - [HTML5 & WASM] Added new method [`CreateFile()`](/_articles/info/api/WebTwain_Buffer.md#createfile){:target="_blank"}.
+   - [HTML5 & WASM] Added new method [`OpenFile()`](/_articles/info/api/WebTwain_Buffer.md#openfile){:target="_blank"}.
+   - [HTML5 & WASM] Added new method [`RemoveFile()`](/_articles/info/api/WebTwain_Buffer.md#removefile){:target="_blank"}.
+   - [HTML5 & WASM] Added new method [`GetCurrentFileName()`](/_articles/info/api/WebTwain_Buffer.md#getcurrentfilename){:target="_blank"}.
+   - [HTML5 & WASM] Added new method [`GetFileInfoList()`](/_articles/info/api/WebTwain_Buffer.md#getfileinfolist){:target="_blank"}.
+ - [HTML5 & WASM] Added new method [`GetTagListByIndex()`](/_articles/info/api/WebTwain_Buffer.md#gettaglistbyindex){:target="_blank"}.
 
 #### Editor
 
-- [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Edit.html#changebrightnessasync" target="_blank">`ChangeBrightnessAsync()`</a>. 
-- [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Edit.html#changecontrastasnyc" target="_blank">`ChangeContrastAsnyc()`</a>.
+- [HTML5 & WASM] Added new method [`ChangeBrightnessAsync()`](/_articles/info/api/WebTwain_Edit.md#changebrightnessasync){:target="_blank"}. 
+- [HTML5 & WASM] Added new method [`ChangeContrastAsync()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasnyc){:target="_blank"}.
 
 #### Camera
-- [WASM] Added new method <a href="/web-twain/docs/info/api/Addon_Camera.html#scandocument" target="_blank">`scanDocument()`</a> to capture document(s).
+- [WASM] Added new method [`scanDocument()`](/_articles/info/api/Addon_Camera.md#scandocument){:target="_blank"} to capture document(s).
 
 #### Viewer
-- [HTML5 & WASM] Added new property <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#showcheckbox" target="_blank">`showCheckbox`</a>. 
-- [HTML5 & WASM] Added new method <a href="/web-twain/docs/info/api/WebTwain_Viewer.html#createtemplate" target="_blank">`createTemplate()`</a> to create document scanner template. 
+- [HTML5 & WASM] Added new property [`showCheckbox`](/_articles/info/api/WebTwain_Viewer.md#showcheckbox){:target="_blank"}. 
+- [HTML5 & WASM] Added new method [`createTemplate()`](/_articles/info/api/WebTwain_Viewer.md#createtemplate){:target="_blank"} to create document scanner template. 
 
 ### Improved Features 
 
 * Improved the <strong>mobile document capture</strong> in WASM mode. See more <a href="https://www.dynamsoft.com/web-twain/features/mobile-web-capture-sdk/" target="_blank">here</a>. 
-* Added `CM_RENDERALLWITHANNOTATION` convert mode to <a href="/web-twain/docs/info/api/Addon_PDF.html#setconvertmode" target="_blank">EnumDWT_ConvertMode</a> to support loading PDFs with annotations.
+* Added `CM_RENDERALLWITHANNOTATION` convert mode to [EnumDWT_ConvertMode](/_articles/info/api/Addon_PDF.md#setconvertmode){:target="_blank"} to support loading PDFs with annotations.
 * Modified DynamicImage.dll(DynamicImagex64.dll) to improve encoding and decoding mode of TIFF files.
 * Updated Barcode Reader library to version 8.6. Check out the release notes for <a href="https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html#860-08312021" target="_blank">Barcode Reader JavaScript SDK - 8.6</a>
 
@@ -495,7 +520,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * Updated DSSCN2.exe and DSSCN2x64.exe to optimize scanner compatibility.
 * Improved the performance for the Dynamsoft Service connection.
-* Improved <a href="/web-twain/docs/info/api/WebTwain_IO.html#loaddibfromclipboard" target="_blank">LoadDibFromClipboard</a> to make it more stable.
+* Improved [LoadDibFromClipboard](/_articles/info/api/WebTwain_IO.md#loaddibfromclipboard){:target="_blank"} to make it more stable.
 
 ### Bug Fixes
 
@@ -508,7 +533,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * Added support for ChromeOS. See more <a href="https://www.dynamsoft.com/codepool/chrome-os-web-document-scanning.html" target="_blank">here</a>
 
-*	Added property <a href="/web-twain/docs/info/api/Dynamsoft_WebTwainEnv.html#organizationid" target="_blank">organizationID</a> which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
+*	Added property [organizationID](/_articles/info/api/Dynamsoft_WebTwainEnv.md#organizationid){:target="_blank"} which can be used to fetch license(s) belonging to the specified organization from the License Tracking Server. With this property, the licensing of the library is smoother from trial to full and it is much easier to manage a license change without code updates.
 
 ### Improved Features 
 
@@ -561,7 +586,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * Updated Barcode Reader library to version 8.2.1. Check out release notes for [Barcode Reader JavaScript SDK - 8.2.1.](https://www.dynamsoft.com/barcode-reader/programming/javascript/release-notes/js-8.html#821-03292021)
 
-###  Changed Behaviours 
+###   Changed Behaviors  
 
 * The property Viewer.selectedAreaBorderColor now also applies to the selection box on the video opened by the method [`showVideo`](/_articles/info/api/Addon_Camera.md#showVideo).
 
@@ -648,13 +673,13 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 * The Barcode Reader add-on is upgraded from 7.4.0.0428 to 7.6.0.0112.
 * Improved the display quality of the viewer in single-image mode (-1 * -1).
 
-### Changed Behaviours
+### Changed Behaviors
 
 * When the view changes from single-image mode to multi-image mode, the cursor used to be changed to "hand" which means you can drag and drop images, in v16.2, the cursor will stay unchanged. In other words, if the cursor was "crosshair" in single-image mode, it'll continue to be "crosshair" in multi-image mode which means you can continue to draw rectangles on these images (NOTE that you can only draw on the *current* image). You can use the property [Viewer.cursor](/_articles/info/api/WebTwain_Viewer.md#cursor) to change the cursor in this case.
 
 * The properties [`Width`](/_articles/info/api/WebTwain_Viewer.md#width) and [`Height`](/_articles/info/api/WebTwain_Viewer.md#height) will always return the actual number of pixels even if you set them with a percentage like "50%".
 
-* The properties `BackgroundColor` and `SelectionImageBorderColor` will always return a string that represents the style (colour, border, etc.) even if you set them with numbers. For example,  `BackgroundColor` returns "#000032" if you set it to "50" and `SelectionImageBorderColor` returns "1px solid #000032" when you set it to "50". Also, these two properties are deprecated and should be replaced by [`Viewer.background`](/_articles/info/api/WebTwain_Viewer.md#background) and [`Viewer.selectedPageBorder`](/_articles/info/api/WebTwain_Viewer.md#selectedpageborder).
+* The properties `BackgroundColor` and `SelectionImageBorderColor` will always return a string that represents the style (color, border, etc.) even if you set them with numbers. For example,  `BackgroundColor` returns "#000032" if you set it to "50" and `SelectionImageBorderColor` returns "1px solid #000032" when you set it to "50". Also, these two properties are deprecated and should be replaced by [`Viewer.background`](/_articles/info/api/WebTwain_Viewer.md#background) and [`Viewer.selectedPageBorder`](/_articles/info/api/WebTwain_Viewer.md#selectedpageborder).
 
 * The properties `IfFitWindow` and `FitWindowType` are now write-only as their actual values may not be correct when you read them. As these properties are deprecated, use [`fitWindow()`](/_articles/info/api/WebTwain_Viewer.md#fitwindow) instead.
 
@@ -727,7 +752,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 ## `16.1.1` (08/13/2020)
 
-### Changed Behaviours
+### Changed Behaviors
 
 * Whether to load the `WASM` for the Camera module is now optional (used to be mandatory in `16.1` ) and is disabled by default.
 
@@ -769,7 +794,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 * Improved data transferring efficiency by using pointers instead of strings.
 * Improved performance by saving compiled WebAssembly code into the working process for later use.
 
-### Changed Behaviours
+### Changed Behaviors
 
 * This version is backward compatible with version 16.0. This means once you have installed the Dynamsoft Service for version 16.1, an application running version 16.0 also works without the need to install the Service for version 16.0.
 * The method `LoadImageEx()` now supports mobile platforms as well.
@@ -833,7 +858,7 @@ No changes in version 16.1.
 >  
 > These APIs must be called asynchronously in the WASM mode.
 
-### Changed Behaviours
+### Changed Behaviors
 
 * The methods `HTTPDownload()` and `HTTPDownloadEx()` no longer has the "Content-Type" header in their HTTP Get requests.
 * The method `GetSourceNames(true)` now returns more information which includes "DriverType" and "DeviceInfo".
@@ -1257,7 +1282,7 @@ No changes in version 16.1.
 * Fixed a bug where `MagData` doesn't work during scanning.
 * Fixed a bug with the Mac edition where TIFF files are loaded with inverted colors.
 * Fixed a bug where the event `OnPostLoad` gets triggered twice when loading a file.
-* Fixed a bug with the ActiveX where selecting an image area returns the wrong coordinates when the image is bigger than the viewer (scrollbars are shown).
+* Fixed a bug with the ActiveX where selecting an image area returns the wrong coordinates when the image is bigger than the viewer (scroll bars are shown).
 * Fixed a bug where `CurrentImageIndexInBuffer` and `HowManyImagesInBuffer` are not updated correctly when the method `LoadImagesFromBase64Binary()` is used.
 
 ## `11.3.2` (07/05/2016)
@@ -1626,7 +1651,7 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * Added multiple images selection.
 * Added saving images to a byte array.
 * Added loading an image from a byte array.
-* Added uploading multiple images as a multipage PDF/TIFF file.
+* Added uploading multiple images as a multi-page PDF/TIFF file.
 * Support setting board color for selected images.
 * Support FTP passive mode.
 * Support specifying the field name when uploading through HTTP POST.
@@ -1718,7 +1743,7 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 * `CutToClipboard()` method modified. It cuts the image of a specified index in buffer.
 * The behavior of `hDib` property changed. It returns the Handle of the DIB of a specified index in buffer.
 * The behavior of `Picture` property changed. It returns the `Picture` object of the image of a specified index in buffer.
-* `FTPUploadAsBMP()` ,      `FTPUploadAsJPEG()` ,      `FTPUploadAsTIFF()` methods replaced by `FTPUPload()` method.
+* `FTPUploadAsBMP()` ,      `FTPUploadAsJPEG()` ,      `FTPUploadAsTIFF()` methods replaced by `FTPUpload()` method.
 * `FTPDownloadBMP()` and `FTPDownloadJPEG()` methods replaced by `FTPDownload()` method.
 * `HTTPUploadAsBMPThroughPost()` ,      `HTTPUploadAsJPEGThroughPost()` and `HTTPUploadAsTIFFThroughPost()` methods replaced by `HTTPUploadThroughPost()` method.
 * `HTTPUploadAsBMPThroughPut()` ,      `HTTPUploadAsJPEGThroughPut()` and `HTTPUploadAsTIFFThroughPut()` methods replaced by `HTTPUploadThroughPut()` method.

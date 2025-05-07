@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Error Message - Failed to load resource
-keywords: Dynamic Web TWAIN, Error Meaasge, Failed to load resource, CERT INVALID
+keywords: Dynamic Web TWAIN, Error Message, Failed to load resource, CERT INVALID
 breadcrumbText: Error Message - Failed to load resource
 description: Error Message - Failed to load resource
 ---
@@ -21,7 +21,7 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 By default, “127.0.0.1” is used for service connection. "127.0.0.1" uses a self-signed certificate because it is an internal IP address, if your environment requires high level security, self-signed certificates may not be accepted. Moreover, Android OS or Chrome OS does not accept connection between browsers and Dynamic Web TWAIN Service via "127.0.0.1".
 
 
-In the case that you have used our expired certificate - local.dynamsoft.com, you will need to update to the latest VeriSign’ed certificate. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>January 9th, 2023</font> and the latest certificate will expire on <font color=red>December 8th, 2023</font>
+In the case that you have used our expired certificate - local.dynamsoft.com, you will need to update to the latest VeriSign’ed certificate. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2024 November 19th</font>, and the latest certificate will expire on <font color=red>2025 November 20th</font>.
 
 > ___Please note:___ _all official certificates issued by 3rd party come with an expiry date - generally one year. This means that each year the certificate will need to be updated if local.dynamsoft.com is used._
 
@@ -44,11 +44,11 @@ In the case that you have used our expired certificate - local.dynamsoft.com, yo
         - Method 2. If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under **`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64_{version number})\cert`** (from v19.0+, the path is `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}\cert`). Then restart Dynamic Web TWAIN Service.
             > Note: the new certificate from Dynamsoft will expire on <font color=red>December 8th, 2023</font>. This means you must update the certificate again after this certificate expires.
 
-        - Method 3. <a href="/web-twain/docs/about/getsupport.html" target="_blank">Contact Dynamsoft</a> for a new MSI for client-side. Please specify the exact service version build number found from the version your client currently has installed.
+        - Method 3. [Contact Dynamsoft](/_articles/docs/about/getsupport.md){:target="_blank"} for a new MSI for client-side. Please specify the exact service version build number found from the version your client currently has installed.
 
 <!--
 
-        - Method 4 (**<u>Convenience but not recommend</u>**). For v17.2 or higher versions, you can use the new API <a href="/web-twain/docs/info/api/Dynamsoft_WebTwainEnv.html#updatecert" target="_blank">UpdateCert</a> to automatically update the client side certificate before it expires. **Please go to dynamsoft.webtwain.install.js file in the Resource Folder and search the keyword "OnSSLCertInfo"**, add the following lines of code:
+        - Method 4 (**<u>Convenience but not recommend</u>**). For v17.2 or higher versions, you can use the new API [UpdateCert](/_articles/info/api/Dynamsoft_WebTwainEnv.md#updatecert){:target="_blank"} to automatically update the client side certificate before it expires. **Please go to dynamsoft.webtwain.install.js file in the Resource Folder and search the keyword "OnSSLCertInfo"**, add the following lines of code:
             ```javascript
             Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
                 if ((sslExpiredDate - new Date()) / 86400000 < 15) { // Automatically updates 15 days before expiration
@@ -83,7 +83,7 @@ cert_name=server.pem.ldsc
 key_name=server_key.pem.ldsc  
 ```
 
- 2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under <a href="/web-twain/docs/extended-usage/dynamsoft-service-configuration.html#for-the-service" target="_blank">cert</a> folder.
+ 2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under [cert](/_articles/docs/extended-usage/dynamsoft-service-configuration.md#for-the-service){:target="_blank"} folder.
 
 If you use your own certificate, put your own cert and key under the cert folder. 
 

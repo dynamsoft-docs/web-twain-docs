@@ -162,7 +162,7 @@ export default {
       this.DWTObject.IfShowFileDialog = true;
       /**
        * Note:
-       * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed seperately
+       * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed separately
        */
       this.DWTObject.Addon.PDF.SetConvertMode(
         Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL
@@ -322,7 +322,7 @@ function openImage() {
   DWTObject.IfShowFileDialog = true;
   /**
    * Note:
-   * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed seperately
+   * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed separately
    */
   DWTObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
   DWTObject.LoadImageEx(
