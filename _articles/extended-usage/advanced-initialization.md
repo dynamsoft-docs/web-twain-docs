@@ -13,7 +13,7 @@ description: Advanced DWT Initialization
 
 As presented in the standard [initialization guide](/_articles/general-usage/initialization.md), DWT instantiates a default `WebTwain` object in its default configuration. Here, we offer some alternative ways to instantiate `WebTwain` objects, as well as ways to alter the configuration of `WebTwain` objects.
 
-> Note: jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/DynamicWebTWAINServiceSetup.msi`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UNKPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
+> Note: jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/DynamicWebTWAINServiceSetup.msi`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UNPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
 
 ## Auto-Loading with CDN/Package Manager Resources
 
@@ -76,7 +76,7 @@ APIs used:
 
 Setting values for `Dynamsoft.DWT.AutoLoad` and `Dynamsoft.DWT.Containers` results in identical startup behavior for resources obtained from CDNs and package managers to resources obtained from the official SDK.
 
-> Note: jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/DynamicWebTWAINServiceSetup.msi`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UNKPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
+> Note: jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/DynamicWebTWAINServiceSetup.msi`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UNPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
 
 ## Configuring Default `WebTwain` Instances
 

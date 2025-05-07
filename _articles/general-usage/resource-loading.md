@@ -82,7 +82,7 @@ APIs used:
 
 ### Loading from [jsDelivr](https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js)
 
-Note that jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UNKPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
+Note that jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UNPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
 
 ```html
 <html>
