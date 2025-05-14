@@ -23,17 +23,17 @@ Added a new method [`getVisiblePagesInfo()`](/_articles/info/api/WebTwain_Viewer
 - Updated the way of checking CSS file integrity from fetching to examining the effectiveness of CSS rules.
 - Updated the format of license expiry date to avoid misunderstanding.
 
-### Breaking Changes
-
-Updated the names of headers for the REST API.
-
-- `X-DICS-LICENSE-KEY` -> `DWT-PRODUCT-KEY`
-- `X-DICS-DOC-PASSWORD` -> `DWT-DOC-PASSWORD`
-
 ### Bug Fixes
 
 - Fixed a bug that when `preserveUnmodifiedOnSave` is set to `true`, `CopyToDocumentAsync()` will fail.
 - Fixed a bug that the width and height set in percentage using the Web TWAIN object is not effective after resizing.
+
+### Other Changes
+
+Updated the names of headers for the REST API.
+
+- X-DICS-LICENSE-KEY -> DWT-PRODUCT-KEY
+- X-DICS-DOC-PASSWORD -> DWT-DOC-PASSWORD
 
 ## 19.0 (04/01/2025) 
 
@@ -465,12 +465,12 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 ### Improved Features 
 
- - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more [here](/_articles/docs/faq/private-network-access-in-chrome101.md){:target="_blank"}. 
+ - Made changes to handle <a href="https://developer.chrome.com/blog/private-network-access-preflight/" target="_blank">CORS preflight requests</a> sent by Chrome from V98. Learn more [here](/_articles/faq/private-network-access-in-chrome101.md){:target="_blank"}. 
  - For Chromium V84+, use userAgentData instead of userAgent in response to UserAgent String phasing out issue. 
 
 ### Bug Fixes
 
- - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more [here](/_articles/docs/faq/service-installation-issue.md){:target="_blank"}. 
+ - Fixed a bug where Dynamsoft Service installation/uninstallation failed due to the current user account does not match the user account under C:\Users{account}. Learn more [here](/_articles/faq/service-installation-issue.md){:target="_blank"}. 
  - [HTML5 on MacOS] Fixed a bug where the short key (set by [organizationID](/_articles/info/api/Dynamsoft_WebTwainEnv.md#organizationid){:target="_blank"}) did not work on macOS 12+.
  - Fixed a bug where the mouse wheel did not work when the mouse was over the viewer.
  - [HTML5 on MacOS] Fixed a bug where buttons were not visible during Dynamic Web TWAIN/Dynamsoft Service installation when using dark mode.

@@ -16,4 +16,4 @@ Dynamic Web TWAIN sends an HTTP POST request to the server when doing an upload.
 
 To change the default field name RemoteFile, you can use the API [HttpFieldNameOfUploadedImage](/_articles/info/api/WebTwain_IO.md#httpfieldnameofuploadedimage){:target="_blank"}.
 
-For Server-side Scripting examples, please check [this](/_articles/docs/general-usage/server-side-scripting.md){:target="_blank"}.
+For Server-side Scripting examples, please check [this](/_articles/general-usage/server-side-scripting.md){:target="_blank"}.

@@ -18,7 +18,7 @@ TWAIN is the most widely used protocol for physical document scanners. Almost al
 
 Prior to Dynamic Web TWAIN version 18.2, WIA drivers are not officially supported. But `WIA` devices can be used by `TWAIN` applications like `Dynamic Web TWAIN` through a `TWAIN compatibility layer`. This means `WIA` is not supported natively; therefore, when a device supports both `TWAIN` and `WIA`, `TWAIN` is the better option.
 
-As of Dynamic Web TWAIN version 18.2, we officially support WIA 2.0 drivers. To make sure your web application works with WIA scanner drivers, please refer to the article: [How do I support WIA scanner drivers in my application?](/_articles/docs/faq/support-wia-scanner-drivers.md){:target="_blank"}
+As of Dynamic Web TWAIN version 18.2, we officially support WIA 2.0 drivers. To make sure your web application works with WIA scanner drivers, please refer to the article: [How do I support WIA scanner drivers in my application?](/_articles/faq/support-wia-scanner-drivers.md){:target="_blank"}
 
 
 

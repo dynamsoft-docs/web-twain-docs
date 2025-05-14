@@ -16,11 +16,11 @@ There are a few things that you can try to reduce the size of a resulting file
 
 - Scan in grayscale or black & white instead of RGB;
 
-- Convert the images to grayscale or black & white before the save or upload call. Read more [here](/_articles/docs/general-usage/image-processing/index.md#working-with-pixels-and-bit-depth){:target="_blank"};
+- Convert the images to grayscale or black & white before the save or upload call. Read more [here](/_articles/general-usage/image-processing/index.md#working-with-pixels-and-bit-depth){:target="_blank"};
 
 - Scan in a lower resolution;
 
-- Convert the images to a lower resolution (DPI). Read more [here](/_articles/docs/general-usage/image-processing/index.md#working-with-pixels-and-bit-depth){:target="_blank"};
+- Convert the images to a lower resolution (DPI). Read more [here](/_articles/general-usage/image-processing/index.md#working-with-pixels-and-bit-depth){:target="_blank"};
 
 - [Optional] If the resulting file is in the JPEG format (.jpg) or is a TIF or PDF that is encoded by the JPEG standard, you can set [JPEGQuality](/_articles/info/api/WebTwain_IO.md#jpegquality){:target="_blank"} to a lower value.
 

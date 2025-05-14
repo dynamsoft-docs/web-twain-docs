@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation About ActiveX Page
 
 # About ActiveX
 
-<span style="background-color:#f9f2f4; color:#c7254e">April 21, 2022: Microsoft is retiring Internet Explorer 11 on June 15, 2022. To support Dynamic Web TWAIN ActiveX, please refer to [this article](/_articles/docs/faq/activeX-in-Edge-IE-mode.md){:target="_blank"} to configure IE mode in Edge.</span>
+<span style="background-color:#f9f2f4; color:#c7254e">April 21, 2022: Microsoft is retiring Internet Explorer 11 on June 15, 2022. To support Dynamic Web TWAIN ActiveX, please refer to [this article](/_articles/faq/activeX-in-Edge-IE-mode.md){:target="_blank"} to configure IE mode in Edge.</span>
 
 **ActiveX** is a software framework created by Microsoft widely used in Internet Explorer (IE). However, Microsoft has announced plans to end support for older browsers completely and has now deprecated this technology.
 
