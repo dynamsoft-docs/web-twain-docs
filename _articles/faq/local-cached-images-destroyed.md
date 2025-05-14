@@ -18,4 +18,4 @@ The disk caching feature is enabled by default and can be disabled by setting [I
 
 All cached data is encrypted, can only be accessed by Dynamic Web TWAIN, and is destroyed when Dynamic Web TWAIN is unloaded. If the SDK exits unexpectedly, all cached data will also be destroyed.
 
-For more information on buffer management and local caching, please check here: [Dynamic Web TWAIN Features - Buffer (dynamsoft.com)](/_articles/docs/extended-usage/buffer-caching.md){:target="_blank"}.
+For more information on buffer management and local caching, please check here: [Dynamic Web TWAIN Features - Buffer (dynamsoft.com)](/_articles/extended-usage/buffer-caching.md){:target="_blank"}.

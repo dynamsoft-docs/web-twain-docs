@@ -25,5 +25,5 @@ The trial product key has expired.
 ### Resolution
 
 Follow the instructions on that pop-up which are:
-1. Request a new trial product key <a href="https://www.dynamsoft.com/customer/license/trialLicense" target="_blank">here</a>. Refer to [this article](/_articles/docs/indepth/development/upgrade.md#update-the-license-key){:target="_blank"} to update the ProductKey
+1. Request a new trial product key <a href="https://www.dynamsoft.com/customer/license/trialLicense" target="_blank">here</a>. Refer to [this article](/_articles/indepth/development/upgrade.md#update-the-license-key){:target="_blank"} to update the ProductKey
 2. Do a hard refresh or clear cache in your browser to make sure the new ProductKey is used

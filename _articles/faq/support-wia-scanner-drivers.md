@@ -12,7 +12,7 @@ description: How can I support WIA scanner drivers in my application?
 
 ## How can I support WIA scanner drivers in my application?
 
-Prior to Dynamic Web TWAIN version 18.2, WIA drivers are not supported and TWAIN drivers are recommended. Please refer to [this article](/_articles/docs/faq/difference-between-Twain-and-wia.md){:target="_blank"} for the differences between WIA and TWAIN drivers.
+Prior to Dynamic Web TWAIN version 18.2, WIA drivers are not supported and TWAIN drivers are recommended. Please refer to [this article](/_articles/faq/difference-between-Twain-and-wia.md){:target="_blank"} for the differences between WIA and TWAIN drivers.
 
 As of Dynamic Web TWAIN version 18.2, we officially support WIA 2.0. By comparison, `WIA` can only control a very limited set of general capabilities of the device, while `TWAIN` can control all standard and even custom capabilities of the device. In addition, `WIA` has only two transfer modes (Memory, File), while `TWAIN` has three (Native, Memory, File).
 

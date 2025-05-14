@@ -12,4 +12,4 @@ description: How can I change/hide the UI of the progress bar when importing or 
 
 ## How can I change/hide the UI of the progress bar when importing or uploading images?
 
-To change/hide the progress bar shown during the import/upload process, please refer to [this article](/_articles/docs/extended-usage/ui-customization.md#progress-bar){:target="_blank"}.
+To change/hide the progress bar shown during the import/upload process, please refer to [this article](/_articles/extended-usage/ui-customization.md#progress-bar){:target="_blank"}.

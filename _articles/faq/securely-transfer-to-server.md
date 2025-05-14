@@ -22,6 +22,6 @@ To enable HTTPS,
 
 - Call the API <a href="/web-twain/docs/info/api/WebTwain_IO.html#httpupload" target="_blank">HTTPUpload to upload the documents
 
-To upload documents via HTTP/HTTPS, we recommend the API [here](/_articles/docs/general-usage/image-export/index.md#upload){:target="_blank"}.
+To upload documents via HTTP/HTTPS, we recommend the API [here](/_articles/general-usage/image-export/index.md#upload){:target="_blank"}.
 
 > Note - that if you use this feature, you need to enable HTTPS on the server. For how to enable HTTPS, please check out the manual of your webserver.

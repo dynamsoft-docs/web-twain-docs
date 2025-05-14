@@ -19,6 +19,6 @@ There are several runtime settings you can use to speed up the barcode reading p
 - Specify a scan Region
 - Use the built-in mode 'speed'
 
-For more details on runtime settings, please check [here](/_articles/docs/extended-usage/barcode-processing.md#runtime-settings){:target="_blank"}.
+For more details on runtime settings, please check [here](/_articles/extended-usage/barcode-processing.md#runtime-settings){:target="_blank"}.
 
 In addition, the size of the image generated during the scanning process also impacts the reading performance. You can check your scanning settings to balance the image qualify and size.

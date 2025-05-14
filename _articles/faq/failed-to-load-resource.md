@@ -44,7 +44,7 @@ In the case that you have used our expired certificate - local.dynamsoft.com, yo
         - Method 2. If you must fix the issue on a few client machines immediately, manually update the following cert files on the client-side machine. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under **`C:\Windows\SysWOW64\Dynamsoft\DynamsoftService(DynamsoftServicex64_{version number})\cert`** (from v19.0+, the path is `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}\cert`). Then restart Dynamic Web TWAIN Service.
             > Note: the new certificate from Dynamsoft will expire on <font color=red>December 8th, 2023</font>. This means you must update the certificate again after this certificate expires.
 
-        - Method 3. [Contact Dynamsoft](/_articles/docs/about/getsupport.md){:target="_blank"} for a new MSI for client-side. Please specify the exact service version build number found from the version your client currently has installed.
+        - Method 3. [Contact Dynamsoft](/_articles/about/getsupport.md){:target="_blank"} for a new MSI for client-side. Please specify the exact service version build number found from the version your client currently has installed.
 
 <!--
 
@@ -83,7 +83,7 @@ cert_name=server.pem.ldsc
 key_name=server_key.pem.ldsc  
 ```
 
- 2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under [cert](/_articles/docs/extended-usage/dynamsoft-service-configuration.md#for-the-service){:target="_blank"} folder.
+ 2) Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one under [cert](/_articles/extended-usage/dynamsoft-service-configuration.md#for-the-service){:target="_blank"} folder.
 
 If you use your own certificate, put your own cert and key under the cert folder. 
 

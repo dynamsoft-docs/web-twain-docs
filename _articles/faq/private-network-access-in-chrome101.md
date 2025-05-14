@@ -54,11 +54,11 @@ Dynamic Web TWAIN utilizes a local service named 'Dynamic Web TWAIN Service' to 
 
 To avoid this potential issue, you can apply one of the following solutions:
 
-1. [Upgrade](/_articles/docs/indepth/development/upgrade.md){:target="_blank"} Dynamic Web TWAIN SDK to **version 17.2.1** or later
+1. [Upgrade](/_articles/indepth/development/upgrade.md){:target="_blank"} Dynamic Web TWAIN SDK to **version 17.2.1** or later
 
    In version 17.2.1, we have made changes to handle preflight requests on our end to resolve the issue. You can test the latest version with our <a href="https://www.dynamsoft.com/web-twain/downloads/" target="_blank">free trial</a> and when you are ready to upgrade, please contact <a href="mailto:sales@dynamsoft.com" target="_blank">sales@dynamsoft.com</a> to request the upgrade.
 
-   Please note that once upgraded, the Dynamic Web TWAIN Service on all client machines also need to be updated. You may consider [installing Dynamic Web TWAIN Service silently](/_articles/docs/faq/can-i-install-dynamsoft-service-silently.md#can-i-install-dynamsoft-service-silently){:target="_blank"}.
+   Please note that once upgraded, the Dynamic Web TWAIN Service on all client machines also need to be updated. You may consider [installing Dynamic Web TWAIN Service silently](/_articles/faq/can-i-install-dynamsoft-service-silently.md#can-i-install-dynamsoft-service-silently){:target="_blank"}.
 
 2. Disable Private Network Access checks using enterprise policies
 

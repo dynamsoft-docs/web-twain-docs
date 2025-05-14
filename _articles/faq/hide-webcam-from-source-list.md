@@ -16,4 +16,4 @@ Many webcam devices may use WIA drivers. As explained in this article, WIA drive
 
 Please note that you would need to call [OpenSource](/_articles/info/api/WebTwain_Acquire.md#opensource){:target="_blank"} API to open a source before you can inspect its device type. If there are any offline devices in the source name list, this process would be interrupted.
 
-Another workaround is to exclude some sources by detecting certain keywords from the source name list. E.g. you can try to exclude any source names with 'camera' or 'webcam'. Please refer to this [FAQ](/_articles/docs/faq/hide-offline-scanners-from-source-list.md){:target="_blank"} for more details.
+Another workaround is to exclude some sources by detecting certain keywords from the source name list. E.g. you can try to exclude any source names with 'camera' or 'webcam'. Please refer to this [FAQ](/_articles/faq/hide-offline-scanners-from-source-list.md){:target="_blank"} for more details.
