@@ -12,4 +12,4 @@ description: Can I add annotation to an image (e.g. add watermark or text)?
 
 ## Can I add annotation to an image (e.g. add watermark or text)?
 
-This feature has been deprecated since v16.1. Dynamsoft will release an Annotation addon for the Dynamic Web TWAIN SDK and adding text overlay to an image will be supported by the Annotation addon once available. If you are interested, you can send an email to <a href="mailto:support@dynamsoft.com">support@dynamsoft.com</a> to receive an update on release news.
+In 2023, Dynamsoft introduced Dynamsoft Document Viewer, a feature-rich web-based document viewer that supports document annotation. When used in conjunction with Dynamic Web TWAIN, it enables users to annotate scanned documents seamlessly. For more information, please refer to: [Dynamic Web TWAIN with Annotations](https://www.dynamsoft.com/web-twain/docs/faq/dwt-with-annotation.html).

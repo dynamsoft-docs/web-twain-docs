@@ -33,7 +33,7 @@ vue create dwt-vue
 ### Navigate to the root directory of the application and install the `dwt` and `ncp` package
 
 ``` cmd
-yarn add dwt
+yarn add dwt@19.1.0
 ```
 
 ``` cmd
@@ -232,7 +232,7 @@ npm install
 ```
 
 ``` cmd
-npm install dwt
+npm install dwt@19.1.0
 ```
 
 ``` cmd

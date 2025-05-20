@@ -29,6 +29,14 @@ From 16.x, the latest service within the major version supports all previous ver
 4. Copy the .dll files from your temporary location into the _new_ Dynamic Web TWAIN Service folder (from v19.0+, the target path is `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}`).
 
 ### List of required .dll files
+
+<div class="multi-panel-switching-prefix"></div>
+
+- [v19.0+](#19plus)
+- [Versions below 19.0](#19min)
+
+<div class="multi-panel-start"></div>
+
 **Version 18.x**
 ```javascript
 dwt_18.5.1.0828.dll
@@ -40,6 +48,55 @@ DeviceManager_18510828.dll
 UploadModule_1.8.5.0828.dll
 dbrx64_9.6.1.0312.dll
 ```
+
+**Version 17.x**
+```javascript
+dwt_17.3.5.1212.dll
+DynamicImagex64.dll
+DynamicPdfCorex64_11.4.0.0531.dll
+DynamicPdfRx64_11.4.0.0531.dll
+DWASManager_17351212.dll
+DynamicSocket.dll
+libcrypto-1_1-x64.dll
+libssl-1_1-x64.dll
+UploadModule_1.7.2.1026.dll
+dbrx64_8.8.0.0531.dll
+x64
+```
+
+**Version 16.x**
+```javascript
+dwt_16.2.6.1212.dll
+DynamicImagex64.dll
+DynamicPdfCorex64_11.1.0.0112.dll
+DynamicPdfRx64_11.1.0.0112.dll
+DWASManager_16261212.dll
+DynamicSocket.dll
+libeay32.dll
+ssleay32.dll
+UploadModule_1.6.0.0428.dll
+dbrx64_7.6.0.0112.dll
+x64
+```
+
+**Version 15.x**
+```javascript
+dwt_15.3.4.1212.dll
+DynamicImagex64.dll
+DynamicPdfCorex64_10.3.3.0924.dll
+DynamicPdfRx64_10.3.3.0924.dll
+DWASManager_15341212.dll
+DynamicSocket.dll
+libeay32.dll
+ssleay32.dll
+UploadModule_1.4.0.0107.dll
+dbrx64_7.3.0.0107.dll
+x64
+```
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
 
 **Version 17.x**
 ```javascript
@@ -90,3 +147,7 @@ dwt_15.0.0.0625.dll
 DynamicPdfCorex64_10.3.1.0124.dll
 DynamicPdfRx64_10.3.1.0124.dll
 ```
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>

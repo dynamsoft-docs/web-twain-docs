@@ -14,7 +14,7 @@ description: Dynamic Web TWAIN SDK Documentation Dynamic Web TWAIN Service Page
 
 The Dynamic Web TWAIN Service is the core piece of Dynamic Web TWAIN when running in Service mode. It handles the communication between hardware (scanner, webcam, etc.) and browser, manages the image buffer, and coordinates data between different modules.
 
-### IP and ports
+## IP and ports
 
 The Dynamic Web TWAIN Service uses `localhost` and `18622` `18625` ports for HTTP connection and `18623` `18626` ports for HTTPS connection.  
 These ports can be configured in the `DSConfiguration.ini` file located in:
@@ -22,7 +22,7 @@ These ports can be configured in the `DSConfiguration.ini` file located in:
   - macOS: `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber}`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.}`)
   - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService`)
 
-### Access-Control-Allow-Origin
+## Access-Control-Allow-Origin
 
 For security purposes, you may want the Dynamic Web TWAIN Service to only respond to requests from specified origins. Starting from Dynamic Web TWAIN version 18.5, this can be achieved by adding `Access-Control-Allow-Origin` in the `DSConfiguration.ini` file.
 
@@ -86,9 +86,13 @@ Once the installation is done, the users can click the orange sentence 'click he
 
 ![Initialization](/assets/imgs/Initialization-2.png)
 
-### Msg: Dynamic Web TWAIN Service is not installed / Dynamic Web TWAIN is not installed
+## Msg: Dynamic Web TWAIN Service is not installed / Dynamic Web TWAIN is not installed
 
 If Dynamic Web TWAIN Service is not installed, users may receive the error 'The Dynamic Web TWAIN module is not installed' when accessing an application that uses Dynamic Web TWAIN. 
+
+## Msg: Dynamic Web TWAIN Service installed on your device is outdated
+
+If the service is installed but you are using a new version of the JavaScript library, you may encounter this message. You need to install a new version of the service or downgrade the JavaScript library.
 
 ## Related Resources:
 
