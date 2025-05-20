@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN SDK API Reference - OCRPro Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, OCRPro Addon APIs
 breadcrumbText: OCRPro Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference OCRPro Addon APIs Page
+ignore: true
 ---
 
 # `{WebTwainObject}.Addon.OCRPro`

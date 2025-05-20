@@ -4,7 +4,6 @@ title: Dynamic Web TWAIN SDK Documentation
 keywords: Dynamic Web TWAIN, TWAIN, documentation
 breadcrumbText: HomePage
 description: Dynamic Web TWAIN SDK Documentation Homepage
-permalink: /index.html
 ---
 
 # Dynamic Web TWAIN Documentation  

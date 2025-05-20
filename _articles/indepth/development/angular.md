@@ -28,7 +28,7 @@ ng new dwt-angular
 ### **cd** to the root directory of the application and install the dependencies
 
 ``` cmd
-npm install dwt
+npm install dwt@19.1.0
 ```
 
 ## Configure the project

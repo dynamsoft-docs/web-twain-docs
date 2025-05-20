@@ -5,6 +5,7 @@ title: Dynamic Web TWAIN SDK API Reference - Camera Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Camera Addon APIs
 breadcrumbText: Camera Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Camera Addon APIs Page
+ignore: true
 ---
 
 # `{WebTwainObject}.Addon.Camera`
