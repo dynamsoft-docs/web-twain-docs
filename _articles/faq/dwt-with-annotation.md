@@ -121,6 +121,7 @@ Links to API Reference:
 Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DWT.UseDefaultViewer = false;
 Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
+Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
 
 let DWObject;
 // Create a Dynamic Web TWAIN instance without the built-in viewer
@@ -318,6 +319,7 @@ let DWObject, editViewer, ddvDoc;
     Dynamsoft.DWT.ProductKey = license;
     Dynamsoft.DWT.UseDefaultViewer = false;
     Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
+    Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
 
     // Create a Dynamic Web TWAIN instance without the built-in viewer
     Dynamsoft.DWT.CreateDWTObjectEx({
