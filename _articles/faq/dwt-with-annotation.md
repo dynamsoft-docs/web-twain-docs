@@ -29,9 +29,9 @@ Deliver the SDK dependencies with either the [jsDelivr](https://jsdelivr.com/) o
 - jsDelivr
 
   ```html
-    // Dynamic Web TWAIN
+    <!--Dynamic Web TWAIN-->
     <script src="https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
-    // Dynamsoft Document Viewer
+    <!--Dynamsoft Document Viewer-->
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css">
   ```
@@ -39,9 +39,9 @@ Deliver the SDK dependencies with either the [jsDelivr](https://jsdelivr.com/) o
 - UNPKG
 
   ```html
-    // Dynamic Web TWAIN
+    <!--Dynamic Web TWAIN-->
     <script src="https://unpkg.com/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
-    // Dynamsoft Document Viewer
+    <!--Dynamsoft Document Viewer-->
     <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/dynamsoft-document-viewer@latest/dist/ddv.css">
   ```
@@ -121,6 +121,7 @@ Links to API Reference:
 Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DWT.UseDefaultViewer = false;
 Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
+// You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. You'd better host the installers in your own environment.
 Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
 
 let DWObject;
@@ -319,6 +320,7 @@ let DWObject, editViewer, ddvDoc;
     Dynamsoft.DWT.ProductKey = license;
     Dynamsoft.DWT.UseDefaultViewer = false;
     Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
+    // You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. You'd better host the installers in your own environment.
     Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
 
     // Create a Dynamic Web TWAIN instance without the built-in viewer
