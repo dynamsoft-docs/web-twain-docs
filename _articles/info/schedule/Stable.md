@@ -361,9 +361,9 @@ Plus Edition is a temporary edition as its enhanced features will be separated i
 
 ##### Mobile Web Capture
   - Support turning on/off torch
-    - Added new method [turnOnTorch](/_articles/info/api/Addon_Camera.md#turnontorch){:target="_blank"} and [turnOffTorch](/_articles/info/api/Addon_Camera.md#turnofftorch){:target="_blank"}.
-    - Added new method [getCapabilities](/_articles/info/api/Addon_Camera.md#getcapabilities){:target="_blank"}.
-    - Added new property `torch` to `ScannerViewer`. Refer to [scanDocument](/_articles/info/api/Addon_Camera.md#scandocument){:target="_blank"}.
+    - Added new method [turnOnTorch](https://www.dynamsoft.com/web-twain/docs-archive/v18.0/info/api/Addon_Camera.html#turnontorch){:target="_blank"} and [turnOffTorch](https://www.dynamsoft.com/web-twain/docs-archive/v18.0/info/api/Addon_Camera.html#turnofftorch){:target="_blank"}.
+    - Added new method [getCapabilities](https://www.dynamsoft.com/web-twain/docs-archive/v18.0/info/api/Addon_Camera.html#getcapabilities){:target="_blank"}.
+    - Added new property `torch` to `ScannerViewer`. Refer to [scanDocument](https://www.dynamsoft.com/web-twain/docs-archive/v18.0/info/api/Addon_Camera.html#scandocument){:target="_blank"}.
 
 #### Improved Features
   - All license key types can now be specified with the API Dynamsoft.DWT.ProductKey.
@@ -494,7 +494,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 - [HTML5 & WASM] Added new method [`ChangeContrastAsync()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasnyc){:target="_blank"}.
 
 #### Camera
-- [WASM] Added new method [`scanDocument()`](/_articles/info/api/Addon_Camera.md#scandocument){:target="_blank"} to capture document(s).
+- [WASM] Added new method [`scanDocument()`](https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Addon_Camera.html#scandocument){:target="_blank"} to capture document(s).
 
 #### Viewer
 - [HTML5 & WASM] Added new property [`showCheckbox`](/_articles/info/api/WebTwain_Viewer.md#showcheckbox){:target="_blank"}. 
@@ -588,7 +588,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 ###   Changed Behaviors  
 
-* The property Viewer.selectedAreaBorderColor now also applies to the selection box on the video opened by the method [`showVideo`](/_articles/info/api/Addon_Camera.md#showVideo).
+* The property Viewer.selectedAreaBorderColor now also applies to the selection box on the video opened by the method [`showVideo`](https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Addon_Camera-v17.1.1.html#showvideo).
 
 ### Breaking changes 
 
@@ -683,7 +683,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * The properties `IfFitWindow` and `FitWindowType` are now write-only as their actual values may not be correct when you read them. As these properties are deprecated, use [`fitWindow()`](/_articles/info/api/WebTwain_Viewer.md#fitwindow) instead.
 
-* Added a 3rd parameter `fill` to the method [`play()`](/_articles/info/api/Addon_Camera.md#play) which determines whether the video should fill the whole viewer and have a part of the video hidden. In v16.1.1-, the default behavior is to fill the whole viewer and in v16.2, it'll put the video within the viewer and possibly leave some margin.
+* Added a 3rd parameter `fill` to the method [`play()`](https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Addon_Camera-v17.1.1.html?ver=16.2&&cVer=true#play) which determines whether the video should fill the whole viewer and have a part of the video hidden. In v16.1.1-, the default behavior is to fill the whole viewer and in v16.2, it'll put the video within the viewer and possibly leave some margin.
 
 * On macOS, the default transfer mode for TWAIN drivers is changed from "native" to "memory".
 
@@ -699,7 +699,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 
 * The methods `showVideo()` and `closeVideo()` are moved from the interface `Viewer` to `Addon.Camera`.
 
-* The method [`showVideo()`](/_articles/info/api/Addon_Camera.md#showvideo) has added two more parameters `mode` and `fill` and the video starts in the new default `picture` mode. To get the old behavior, use the `document` mode.
+* The method [`showVideo()`](https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Addon_Camera-v17.1.1.html?ver=16.2&&cVer=true#showvideo) has added two more parameters `mode` and `fill` and the video starts in the new default `picture` mode. To get the old behavior, use the `document` mode.
 
 #### Deleted
 
