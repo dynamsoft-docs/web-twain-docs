@@ -327,12 +327,12 @@ FilterImagesByTag(tag: string): boolean;
 
 ## ClearFilter()
 
-Stop filtering images by tag. Return an array of UUID of images under the viewer.
+Stop filtering images by tag. 
 
 **Syntax**
 
 ```typescript
-ClearFilter(): number[];
+ClearFilter(): boolean;
 ```
 
 **Availability**
