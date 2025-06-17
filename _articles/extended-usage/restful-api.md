@@ -15,8 +15,8 @@ The RESTful API simply returns scanned documents as streams of image files to th
 
 Here is a collection of tutorials on creating sample applications that use the DWT RESTful API in various platforms and languages.
 
+- [.NET](https://github.com/Dynamsoft/Dynamic-Web-TWAIN-REST-dotnet)
 - [Node.js](https://www.dynamsoft.com/codepool/rest-api-node-document-scanning.html)
 - [Flutter](https://www.dynamsoft.com/codepool/flutter-twain-scanner-digitize-document.html)
 - [Java](https://www.dynamsoft.com/codepool/java-twain-document-scanning.html)
 - [Python](https://www.dynamsoft.com/codepool/python-twain-wia-sane-document-scanner.html)
-- [.NET](https://www.dynamsoft.com/codepool/dotnet-twain-wia-sane-document-scanner.html)
