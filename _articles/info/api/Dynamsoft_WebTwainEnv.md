@@ -165,7 +165,10 @@ Specify the class name of the DIV element that contains the loader bar. With thi
 
 ## CreateDWTObject()
 
-Creates a new `WebTwain` instance that listens to the specified host & ports. An UI element specified by the parameter `ContainerId` which is typically a <div> is required. The library will generate UI and bind it to this element.
+Creates a new `WebTwain` instance that listens to the specified host and ports. This instance requires a UI element specified by the `ContainerId` attribute, typically a `<div>`. The DWT library will generate UI and bind it to this element.
+
+> [!CAUTION]
+> Disable auto-loading a `WebTwain` instance when creating a `WebTwain` instance with `CreateDWTObject` by setting `Dynamsoft.DWT.AutoLoad = false` and `Dynamsoft.DWT.Containers = []` in the `dynamsoft.webtwain.config.js` file.
 
 **Syntax**
 
@@ -265,6 +268,9 @@ Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',
 ## CreateDWTObjectEx()
 
 Creates a new UI-less `WebTwain` instance. This instance will be uniquely identified by the parameter `WebTwainId`.
+
+> [!CAUTION]
+> Disable auto-loading a `WebTwain` instance when creating a `WebTwain` instance with `CreateDWTObject` by setting `Dynamsoft.DWT.AutoLoad = false` and `Dynamsoft.DWT.Containers = []` in the `dynamsoft.webtwain.config.js` file.
 
 **Syntax**
 
