@@ -3,14 +3,16 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN with Annotations
-keywords: Dynamic Web TWAIN, Annotation
+keywords: Dynamic Web TWAIN, Annotation, Dynamsoft Document Viewer, DWT, DDV
 breadcrumbText: Dynamic Web TWAIN with Annotations – Hello World
 description: Dynamic Web TWAIN with Annotations – Hello World
 ---
 
 # Dynamic Web TWAIN with Annotations – Hello World
 
-The Dynamic Web TWAIN library (DWT) is a software development kit (SDK) specifically designed to integrate efficient document scanning workflows into various web applications. The Dynamsoft Document Viewer (DDV) is a versatile web document viewer with support for document annotations. In this guide, we explain how to use DDV in place of the built-in DWT viewer to enable annotations and provide a superior viewer experience.
+Dynamsoft's **Dynamic Web TWAIN (DWT)** is a software development kit (SDK) designed to integrate efficient document scanning workflows into web applications. **Dynamsoft Document Viewer (DDV)** is a versatile web document viewer with support for document annotations. In this guide, we explain how to **use DDV in place of DWT's built-in viewer** to enable **annotations** and provide a superior viewer experience.
+
+In this sample, we create a **headless** DWT instance to scan images, and then pass the result to DDV to view, edit, annotate, etc. We then use DWT to save the result - **along with any edits and annotations** - to a file, or upload to the server.
 
 ![Flow chart for Dynamic Web TWAIN with Annotations – Hello World](/assets/imgs/dwt-with-ddv.jpg)
 
@@ -20,7 +22,7 @@ The Dynamic Web TWAIN library (DWT) is a software development kit (SDK) specific
 
 Use the SDK by including the packages below:
 - Dynamic Web TWAIN: provides scanning, saving, and uploading functionalities.
-- Dynamsoft Document Viewer: provides improved document viewer and annotation functionalities
+- Dynamsoft Document Viewer: provides improved document viewer and annotation functionalities.
 
 ### 1.1 Deliver Dependencies via CDN
 
@@ -30,20 +32,20 @@ Deliver the SDK dependencies with either the [jsDelivr](https://jsdelivr.com/) o
 
   ```html
     <!--Dynamic Web TWAIN-->
-    <script src="https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dwt@19.1.0/dist/dynamsoft.webtwain.min.js"></script>
     <!--Dynamsoft Document Viewer-->
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css">
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
   ```
 
 - UNPKG
 
   ```html
     <!--Dynamic Web TWAIN-->
-    <script src="https://unpkg.com/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
+    <script src="https://unpkg.com/dwt@19.1.0/dist/dynamsoft.webtwain.min.js"></script>
     <!--Dynamsoft Document Viewer-->
-    <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/dynamsoft-document-viewer@latest/dist/ddv.css">
+    <script src="https://unpkg.com/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
   ```
 
 ## 2. Define HTML Elements
@@ -60,7 +62,7 @@ Define the following elements:
 
     ```html
     <input type="button" value="Scan" onclick="AcquireImage();" />
-    <input type="button" value="Save PDF" onclick="SavePDFs();" />
+    <input type="button" value="Save PDF" onclick="SavePDF();" />
     <input type="button" value="Upload" onclick="Upload();" />
     ```
 
@@ -73,20 +75,17 @@ Define the following elements:
 // Public trial license which is valid for 24 hours
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/engine";
 await Dynamsoft.DDV.Core.init(); 
 ```
 
 ### 3.2 Create the Edit Viewer
 
 ```javascript
-// Enable image filtering
-Dynamsoft.DDV.setProcessingHandler("imageFilter", new Dynamsoft.DDV.ImageFilter());
 // Create a Dynamsoft Document Viewer Edit Viewer to display and edit documents scanned with Dynamic Web TWAIN
 let editViewer;
 editViewer = new Dynamsoft.DDV.EditViewer({
     container: "container",
-    uiConfig: Dynamsoft.DDV.getDefaultUiConfig("editViewer", {includeAnnotationSet: true}),
 });
 
 // Create a Dynamsoft Document Viewer document to contain and display images scanned by Dynamic Web TWAIN
@@ -105,10 +104,9 @@ Links to related documentation:
 - [`Edit Viewer`](https://www.dynamsoft.com/document-viewer/docs/features/viewers/editviewer.html)  
 - [`How to configure your desired uiconfig`](https://www.dynamsoft.com/document-viewer/docs/ui/customize/index.html)
 
-Links to API Reference:
+API Reference
 
-- Dynamsoft Document Viewer:
-    - [`setProcessingHandler()`](https://www.dynamsoft.com/document-viewer/docs/api/namespace/ddv.html#static-setprocessinghandler)  
+- Dynamsoft Document Viewer: 
     - [`Dynamsoft.DDV.EditViewer`](https://www.dynamsoft.com/document-viewer/docs/api/class/editviewer.html#editviewer)  
     - [`createDocument()`](https://www.dynamsoft.com/document-viewer/docs/api/class/documentmanager.html#createdocument)  
     - [`openDocument()`](https://www.dynamsoft.com/document-viewer/docs/api/class/editviewer.html#opendocument)  
@@ -120,7 +118,7 @@ Links to API Reference:
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
 Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DWT.UseDefaultViewer = false;
-Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
+Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.1.0/dist";
 // You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. You'd better host the installers in your own environment.
 Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
 
@@ -136,7 +134,7 @@ Dynamsoft.DWT.CreateDWTObjectEx({
 );
 ```
 
-Links to API Reference:
+API Reference
 -  Dynamic Web TWAIN:
     - [`CreateDWTObjectEx()`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#createdwtobjectex)  
 
@@ -144,9 +142,9 @@ Links to API Reference:
 
 ### 4.1 Add Simple Scanning Functionality
 
-Use the Dynamic Web TWAIN instance for scanning. After scan completion, import the scanned data into DDV for viewing, editing, and annotating.
+Use the Dynamic Web TWAIN instance for scanning. Upon scan completion, import the scanned data into DDV for viewing, editing, and annotating.
 
-#### 4.1.1 Register the OnPostTransferAsync Event
+#### 4.1.1 Register the `OnPostTransferAsync` Event
 
 ```javascript
 //Register the OnPostTransferAsync event in the success callback function of CreateDWTObjectEx.
@@ -181,7 +179,7 @@ function Dynamsoft_OnPostTransferAsync(outputInfo){
 }
 ```
 
-Links to API Reference:
+API Reference
 
 - Dynamic Web TWAIN:
     - [`OnPostTransferAsync`](/_articles/info/api/WebTwain_Acquire.md#onposttransferasync)
@@ -206,20 +204,20 @@ function AcquireImage() {
 }
 ```
 
-Links to API Reference:
+API Reference
 - Dynamic Web TWAIN:
     - [`SelectSourceAsync()`](/_articles/info/api/WebTwain_Acquire.md#selectsourceasync)
     - [`AcquireImageAsync()`](/_articles/info/api/WebTwain_Acquire.md#acquireimageasync)
 
-### 4.2 Add  PDF Saving to Local Functionality
+### 4.2 Add PDF Saving to Local Functionality
 
-Use the Dynamsoft Document Viewer saveToPdf API to convert the scanned document to a PDF Blob, then use the Dynamic Web TWAIN saveBlob API to export the document to local as a PDF.
+Use `saveToPdf()` from **DDV** to convert the scanned document to a PDF Blob, then use `saveBlob` from **DWT** to export the document to local as a PDF.
 
 ```javascript
 const pdfSettings = {
    saveAnnotation: "annotation"  
 };
-function SavePDFs(){
+function SavePDF(){
     editViewer.currentDocument.saveToPdf(pdfSettings).then(function(blob){
         DWObject.IfShowFileDialog = true;
         DWObject.saveBlob("WebTWAINImage.pdf", blob).then(function () {
@@ -231,7 +229,7 @@ function SavePDFs(){
 }
 ```
 
-Links to API Reference:
+API Reference
 - Dynamic Web TWAIN:
     - [`IfShowFileDialog`](/_articles/info/api/WebTwain_IO.md#ifshowfiledialog)
     - [`saveBlob()`](/_articles/info/api/WebTwain_IO.md#saveblob)
@@ -240,7 +238,7 @@ Links to API Reference:
 
 ### 4.3 Add Server Upload Functionality
 
-Use  the Dynamsoft Document Viewer saveToPdf API to convert the scanned document to a PDF Blob, then use the Dynamic Web TWAIN httpUploadBlob API to upload the document to the server as a PDF.
+Use the `saveToPdf()` API from **DDV** to convert the scanned document to a PDF Blob, then use the `httpUploadBlob()` API from **DWT** to upload the document to the server as a PDF.
 ```javascript
 // Can be discarded if already defined previously
 const pdfSettings = {
@@ -266,7 +264,7 @@ function Upload(){
 Links to related documentation:
 - [`Uploading Images to the Server`](https://www.dynamsoft.com/web-twain/docs/getstarted/uploading.html)
 
-Links to API Reference:
+API Reference
 - Dynamic Web TWAIN:
     - [`httpUploadBlob()`](/_articles/info/api/WebTwain_IO.md#httpuploadblob)
 - Dynamsoft Document Viewer:
@@ -279,14 +277,14 @@ Links to API Reference:
 <html>
 <head>
     <title>HelloWorld</title>
-    <script src=" https://cdn.jsdelivr.net/npm/dwt@latest/dist/dynamsoft.webtwain.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css ">
+    <script src=" https://cdn.jsdelivr.net/npm/dwt@19.1.0/dist/dynamsoft.webtwain.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
 </head>
 <body>
-    <input type="button" value="Scan" onclick="AcquireImage();" />
-    <input type="button" value="Save PDF" onclick="SavePDFs();" />
-    <input type="button" value="Upload" onclick="Upload();" /> <br/>
+    <button onclick="AcquireImage();">Scan</button>
+    <button onclick="SavePDF();">Save PDF</button>
+    <button onclick="Upload();">Upload</button>
     <div id="container" style="height:580px; width: 1000px;"></div>
 </body>
 <script type="text/javascript">
@@ -297,15 +295,12 @@ let DWObject, editViewer, ddvDoc;
     // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
     let license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
     Dynamsoft.DDV.Core.license = license;
-    Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
+    Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/engine";
     await Dynamsoft.DDV.Core.init(); 
 
-    // Enable image filtering
-    Dynamsoft.DDV.setProcessingHandler("imageFilter", new Dynamsoft.DDV.ImageFilter());
     // Create a Dynamsoft Document Viewer Edit Viewer to display and edit documents scanned with Dynamic Web TWAIN
     editViewer = new Dynamsoft.DDV.EditViewer({
-        container: "container",
-        uiConfig: Dynamsoft.DDV.getDefaultUiConfig("editViewer", {includeAnnotationSet: true})
+        container: "container"
     });
 
     // Create a Dynamsoft Document Viewer document to contain and display images scanned by Dynamic Web TWAIN
@@ -319,7 +314,7 @@ let DWObject, editViewer, ddvDoc;
     // Create Dynamic Web TWAIN object
     Dynamsoft.DWT.ProductKey = license;
     Dynamsoft.DWT.UseDefaultViewer = false;
-    Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist";
+    Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.1.0/dist";
     // You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. You'd better host the installers in your own environment.
     Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
 
@@ -370,7 +365,7 @@ const pdfSettings = {
    saveAnnotation: "annotation"  
 };
 
-function SavePDFs(){
+function SavePDF(){
     editViewer.currentDocument.saveToPdf(pdfSettings).then(function(blob){
         DWObject.IfShowFileDialog = true;
         DWObject.saveBlob("WebTWAINImage.pdf", blob).then(function () {

@@ -1968,6 +1968,8 @@ when the property is set to `true`, the data source displays its user interface 
 
 It is recommended to use this API after [`OpenSource()`](/_articles/info/api/WebTwain_Acquire.md#opensource) is called.
 
+Setting `IfShowUI` is also effective for the new [`AcquireImageAsync`](#acquireimageasync) method. But it is recommended to use the [`DeviceConfiguration`](/_articles/info/api/interfaces.md#deviceconfiguration) parameter of the method.
+
 **Example**
 
 ```javascript
@@ -4193,7 +4195,7 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 
 **Parameters**
 
-`deviceConfiguration`: The device configuration. Please refer to [`DeviceConfiguration`](/_articles/info/api/interfaces.md#DeviceConfiguration).
+`deviceConfiguration`: The device configuration. Please refer to [`DeviceConfiguration`](/_articles/info/api/interfaces.md#deviceconfiguration).
 
 **Availability**
 

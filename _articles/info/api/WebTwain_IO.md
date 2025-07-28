@@ -2307,6 +2307,8 @@ ConvertToBase64(
 
 **Example**
 
+Convert the first three images in the buffer to `base64`, and print to the browser console.
+
 ```javascript
 DWTObject.ConvertToBase64(
     [0, 1, 2],
@@ -2318,6 +2320,24 @@ DWTObject.ConvertToBase64(
         console.log(errorString);
     }
 );
+```
+
+Convert all the images in the buffer to a `base64` PDF, and print the `base64` string to the browser console.
+
+```javascript
+// Index array of all images in buffer in ascending order
+bufferIndices = Array.from({ length: DWTObject.HowManyImagesInBuffer },
+    (value, index) => index);
+
+DWTObject.ConvertToBase64(
+    bufferIndices,
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, // Encode image as PDF
+    (base64Result, indices) => {
+        console.log(base64Result.getData(0, base64Result.getLength())));
+    },
+    (errorCode, errorString) => {
+        console.log(errorString);
+})
 ```
 
 ---
@@ -2443,6 +2463,25 @@ OutputSelectedAreaAsync(
 </div>
 
 ---
+
+**Example**
+
+Output the square portion of page index 0 in the buffer with its top left corner at pixel coordinates (50, 50), with height and width 100. Pass it to the console as a `base64` string, and also load it back into the WebTwain buffer as a separate page.
+
+```js
+DWTObject.OutputSelectedAreaAsync(
+    0,
+    { x: 50, y: 50, width: 100, height: 100 },
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
+    Dynamsoft.DWT.EnumDWT_ImageFormatType.Base64,
+).then((base64) => {
+    console.log(base64);
+    DWTObject.LoadImageFromBase64Binary(
+        base64,
+        Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
+    );
+});
+```
 
 ## SaveAsBMP()
 
