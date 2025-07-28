@@ -1473,7 +1473,7 @@ SelectionRectAspectRatio: number;
 
 ## BlankImageCurrentStdDev
 
-Return the deviation of the pixels in the current image.
+Return the deviation of the pixels of the image on which black image detection was last called. This property is only valid after calling [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress) or [`IsBlankImage()`](/_articles/info/api/WebTwain_Buffer.md#isblankimage). `BlankImageCurrentStdDev` **does not apply to [`IsBlankImageAsync()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageasync)** - it uses its own detection parameters.
 
 **Syntax**
 
@@ -1503,16 +1503,11 @@ readonly BlankImageCurrentStdDev: number;
 </table>
 </div>
 
-
-**Usage notes**
-
-This property is only valid after [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress) or [`IsBlankImage()`](/_articles/info/api/WebTwain_Buffer.md#isblankimage) is called.
-
 ---
 
 ## BlankImageMaxStdDev
 
-Return or set the maximum deviation of the pixels in an image which is used to determine whether the image is blank.
+Return or set the maximum deviation of the pixels in an image which is used to determine whether the image is blank. The value of this property applies on subsequent calls of [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress) or [`IsBlankImage()`](/_articles/info/api/WebTwain_Buffer.md#isblankimage). `BlankImageCurrentStdDev` **does not apply to [`IsBlankImageAsync()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageasync)** - it uses its own detection parameters.
 
 **Syntax**
 
@@ -1544,15 +1539,13 @@ BlankImageMaxStdDev: number;
 
 **Usage notes**
 
-[0, 100] is the interval of allowed values, inclusive. 0 gives a single-color image. The default value is 1.
-
-This property is only valid before [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress) is called.
+[0, 100] is the interval of allowed values, inclusive. For example, a value of 0 detects markings on any image with more than one color. The default value is 1.
 
 ---
 
 ## BlankImageThreshold
 
-Returns or sets the dividing line between black and white.
+Return or set the dividing line between black and white for subsequent calls to [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress) or [`IsBlankImage()`](/_articles/info/api/WebTwain_Buffer.md#isblankimage). `BlankImageCurrentStdDev` **does not apply to [`IsBlankImageAsync()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageasync)** - it uses its own detection parameters.
 
 **Syntax**
 
@@ -1585,7 +1578,6 @@ BlankImageThreshold: number;
 **Usage notes**
 
 [0, 255] is the interval of allowed values, inclusive. The default value is 128.
-This property is only valid before [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress) is called.
 
 ---
 
@@ -1632,7 +1624,7 @@ All cached data is encrypted and can only be read by Dynamic Web TWAIN and it wi
 
 ## IsBlankImage()
 
-Check whether the specified image is blank.
+Check whether the specified image is blank based on the standard deviation in pixels.
 
 **Syntax**
 
@@ -1669,9 +1661,16 @@ IsBlankImage(index: number): boolean;
 ---
 
 
+**Usage Notes**
+
+See also:
+- [`BlankImageCurrentStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagecurrentstddev)
+- [`BlankImageMaxStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagemaxstddev)
+- [`BlankImageThreshold()`](/_articles/info/api/WebTwain_Buffer.md#blankimagethreshold)
+
 ## IsBlankImageAsync()
 
-Check whether the specified image is blank.
+Check whether the specified image is blank based on connected blocks.
 
 **Syntax**
 
@@ -1688,9 +1687,9 @@ IsBlankImageAsync(index: number,
 
 `index`: Specify the image in buffer to be analyzed.
 
-`minBlockHeight`: Minimum height of mark to be detected. Default value: 20
+`minBlockHeight`: Minimum height of the blocks to be detected. Default value: 20.
 
-`maxBlockHeight`: Maximum height of mark to be detected. Default value: 30
+`maxBlockHeight`: Maximum height of the blocks to be detected. Default value: 30.
 
 **Availability**
 
@@ -1715,15 +1714,19 @@ IsBlankImageAsync(index: number,
 </div>
 
 **Usage Notes**
-This API uses a different algorithm than the one used in [`IsBlankImage()`](/_articles/info/api/WebTwain_Buffer.md#isblankimage) and [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress), which allows you to judge a page as not blank if it has marks within a defined size. If the mark on the page satisfies the comparison parameters, then the page will be deemed not blank.
 
-Example: The mark on the page is 11 pixels tall, `minBlockHeight` is set to 9 pixels and `maxBlockHeight` is set to 13 pixels, the page will be marked as not blank.
+This API employs a different algorithm than the one used in [`IsBlankImage()`](/_articles/info/api/WebTwain_Buffer.md#isblankimage) and [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress). It utilizes the connected blocks method to determine whether a page contains text or graphics.
+
+You can specify `minBlockHeight` and `maxBlockHeight` based on character height. In most cases, these values do not require adjustment.
+
+> [!NOTE]
+> `IsBlankImageAsync()` **is not** related to [`BlankImageCurrentStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagecurrentstddev), [`BlankImageMaxStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagemaxstddev), or [`BlankImageThreshold()`](/_articles/info/api/WebTwain_Buffer.md#blankimagethreshold).
 
 ---
 
 ## IsBlankImageExpress()
 
-Check whether the specified image is blank.
+Check whether the specified image is blank based on the standard deviation in pixels.
 
 **Syntax**
 

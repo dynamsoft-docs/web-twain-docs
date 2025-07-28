@@ -11,7 +11,7 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 ## Where to get Dynamic Web TWAIN
 
-* <a href="https://www.dynamsoft.com/Downloads/WebTWAIN_Download.aspx" target="_blank">Official installer</a> 
+* <a href="https://www.dynamsoft.com/web-twain/downloads/" target="_blank">Official installer</a> 
 
 > This official package is meant for developers to evaluate the SDK. When the package is installed, you get all the resource files, documentation, and samples. A 30-day free trial is included when evaluating our SDK.
 
@@ -25,11 +25,11 @@ description: Dynamic Web TWAIN SDK Documentation Resources Page
 
 ## Sample code
 
-* <a href="https://www.dynamsoft.com/Downloads/WebTWAIN-Sample-Download.aspx" target="_blank">Official samples</a> 
+* <a href="https://www.dynamsoft.com/web-twain/resources/code-gallery/" target="_blank">Official samples</a> 
 
 > We have many prebuilt samples to demonstrate common user scenarios. All samples contain the resource files required in your application. If a sample is hosted on the Dynamsoft website (not Github), then the sample comes with a 30-day free trial license as well. Otherwise, you can [get a trial license](#how-do-i-get-a-trial-license).
 
-* <a href="https://github.com/dynamsoft-dwt" target="_blank">Github repo</a>
+* <a href="https://github.com/dynamsoft/web-twain-samples" target="_blank">Github repo</a>
 
 > In our repository, we've shared many samples and other projects related to `Dynamic Web TWAIN` . Some of which may be experimental. To try out these samples, a [trial license](#how-do-i-get-a-trial-license) is required.
 
@@ -39,11 +39,11 @@ Please visit our <a href="https://www.dynamsoft.com/customer/license/trialLicens
 
 ## Online Demo
 
-* <a href="https://demo.dynamsoft.com/dwt/online_demo_scan.aspx" target="_blank">Official Demo - See Dynamic Web TWAIN in action</a>
+* <a href="https://demo.dynamsoft.com/web-twain/" target="_blank">Official Demo - See Dynamic Web TWAIN in action</a>
 
 ## Useful Links
 
-* <a href="https://www.dynamsoft.com/Secure/imaging-web-application-buyit.aspx#" target="_blank">Price / Online Store</a>
+* <a href="https://www.dynamsoft.com/store/dynamic-web-twain/" target="_blank">Price / Online Store</a>
 * <a href="https://www.youtube.com/user/Dynamsoft" target="_blank">Online Videos</a>
 
 ## Blogs 

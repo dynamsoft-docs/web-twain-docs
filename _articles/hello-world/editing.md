@@ -9,14 +9,10 @@ description: Dynamic Web TWAIN SDK HelloWorld - Editing Images
 
 # Editing Images
 
-<!--
-<div class='blockquote-note'></div>
-> This article is part of our HelloWorld series. If you have not already reviewed HelloWorld, please start [here]({{site.getstarted}}helloworld.html). -->
+>[!TIP]
+> Prerequisites: Hello World - Specifying Scan Settings
 
 DWT offers a number of image manipulation features used after image acquisition and before uploading or exporting. These include but are not limited to rotation, cropping, and resizing. In this example, we will demonstrate image color mode conversion and image rotation in HelloWorld.
-
-> Prerequisites: Hello World - Specifying Scan Settings
-<!-- For the quick guide on available APIs, please see [ImageEditing](/_articles/general-usage/image-processing/index.md){:target="_blank" rel="noreferrer noopener"} -->
 
 ## Add Image Binarization
 
@@ -179,17 +175,17 @@ Links to API Reference:
 
 ### Open the application in your browser
 
-![HelloWorldEdit](/assets/imgs/HelloWorldEdit.png)
+![Initial state of the Hello World Edit sample](/assets/imgs/HelloWorldEdit.png)
 
 ### Press the Scan button
 
-![HelloWorldEditBW1](/assets/imgs/HelloWorldEditBW1.png)
+![Hello World Edit sample with an image scanned from the TWAIN Virtual Scanner](/assets/imgs/HelloWorldEditBW1.png)
 
 ### Convert the image to black and white
 
 Click the ConvertToBW button and the image will change to black and white:
 
-![HelloWorldEditBW2](/assets/imgs/HelloWorldEditBW2.png)
+![Hello World Edit sample with previous image binarized](/assets/imgs/HelloWorldEditBW2.png)
 
 ### Rotate the image
 
@@ -197,19 +193,17 @@ Using the Rotate CW and Rotate CCW buttons, rotate the image.
 
 - Rotating the converted image once using the rotateCW button:
 
-![HelloWorldEditCW](/assets/imgs/HelloWorldEditrotateCW.png)
+![HelloWorldEditCW button](/assets/imgs/HelloWorldEditRotateCW.png)
 
 - Rotating the converted image once using the rotateCCW button:
 
-![HelloWorldEditCCW](/assets/imgs/HelloWorldEditRotateCCW.png)
+![Hello World Edit sample with previously binarized image rotated counter-clockwise](/assets/imgs/HelloWorldEditRotateCCW.png)
 
 Congratulations, you have completed the Hello World tutorial for DWT!
 
 # Previous Articles
 
 If you would like to review any of the previous steps, you can review:
-
-<!-- - [Initializing the environment]({{site.getstarted}}initialize.html) -->
 
 - [Scanning an image](/_articles/hello-world/scanning.md)
 - [Uploading images to the server](/_articles/hello-world/uploading.md)
@@ -218,10 +212,3 @@ If you would like to review any of the previous steps, you can review:
 # Next Article
 
 Now that you had a chance to look at what DWT can do, you can learn about how to use DWT in your web application in detail with our [general developer guide](/_articles/general-usage/index.md).
-
-<!-- << Insert what goes next >> -->
-
-<!--
-- [Customizing your scan settings]({{site.getstarted}}scan-settings.html)
-- [Review HelloWorld]({{site.getstarted}}helloworld.html)
-- [Review Uploading Documents]({{site.getstarted}}uploading.html) -->
