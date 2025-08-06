@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN SDK – Content-Security-Policy violated
 keywords: Dynamic Web TWAIN, Content-Security-Policy
 breadcrumbText: Dynamic Web TWAIN – Content-Security-Policy violated
 description: Dynamic Web TWAIN – Content-Security-Policy violated
+date: 2022-02-18 10:38:17 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

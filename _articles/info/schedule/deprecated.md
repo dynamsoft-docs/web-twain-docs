@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN SDK Documentation Deprecated Features Page
 ---
 
 # All Deprecated Features & APIs
-<div class="blockquote-note"></div>
+> [!NOTE]
 > All deprecated APIs are considered unsupported as of the version they are deprecated. They may be removed at any time with no further notice.
 
 <!-- ## Planned

@@ -39,9 +39,8 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Other Methods**
 
-
-| [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield) |
-| [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) | [`ShowFileDialog()`](#showfiledialog)               | [`Print()`](#print)                       |
+| [`ClearTiffCustomTag()`](#cleartiffcustomtag) | [`SetTiffCustomTag()`](#settiffcustomtag) | [`ClearAllHTTPFormField()`](#clearallhttpformfield) | [`SetHTTPFormField()`](#sethttpformfield)     |
+| [`SetHTTPHeader()`](#sethttpheader)           | [`SetUploadSegment()`](#setuploadsegment) | [`ShowFileDialog()`](#showfiledialog)               | [`Print()`](#print)                           |
 | [`PrintEx()`](#printex)                       | [`createLocalStorage()`](#createlocalstorage) | [`localStorageExist()`](#localstorageexist)     | [`removeLocalStorage()`](#removelocalstorage) |
 
 **Properties**
@@ -50,18 +49,17 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`FTPPassword`](#ftppassword)                                   | [`FTPPort`](#ftpport)                                                         | [`FTPUserName`](#ftpusername)               | [`IfPASVMode`](#ifpasvmode)                         |
 | [`HttpFieldNameOfUploadedImage`](#httpfieldnameofuploadedimage) | [`HTTPPort`](#httpport)                                                       | [`IfSSL`](#ifssl)                           | [`HTTPPostResponseString`](#httppostresponsestring) |
 | [`IfShowFileDialog`](#ifshowfiledialog)                         | [`IfShowCancelDialogWhenImageTransfer`](#ifshowcanceldialogwhenimagetransfer) | [`IfShowProgressBar`](#ifshowprogressbar)   | [`JPEGQuality`](#jpegquality)                       |
-| [`IfTiffMultiPage`](#iftiffmultipage)                           | [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) | [`IfSortBySelectionOrder`](#ifsortbyselectionorder)   |                 
+| [`IfTiffMultiPage`](#iftiffmultipage)                           | [`TIFFCompressionType`](#tiffcompressiontype)                                 | [`MaxUploadImageSize`](#maxuploadimagesize) | [`IfSortBySelectionOrder`](#ifsortbyselectionorder) |
 
 **Events**
-
 
 | [`OnGetFilePath`](#ongetfilepath) | [`OnPostLoad`](#onpostload) | [`OnInternetTransferPercentage`](#oninternettransferpercentage) |
 
 ---
 
-## LoadImage()  
+## LoadImage()
 
-Load image(s) specified by its absolute path.  
+Load image(s) specified by its absolute path.
 
 **Syntax**
 
@@ -70,7 +68,7 @@ LoadImage(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 LoadImage(
     fileName: string,
     successCallback: () => void,
@@ -78,17 +76,18 @@ LoadImage(
 ): void;
 ```
 
-**Parameters**  
+**Parameters**
 
 `fileName`: The path of the image to load.
 
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
-**Availability**  
+**Availability**
 
 <div class="availability">
 <table>
@@ -120,13 +119,13 @@ DWTObject.LoadImage(
     },
     function (errorCode, errorString) {
         console.log(errorString);
-    }
+    },
 );
 ```
 
 ---
 
-## LoadImageEx()  
+## LoadImageEx()
 
 Load image(s) specified by its absolute path.
 
@@ -138,7 +137,7 @@ LoadImageEx(
     type: Dynamsoft.DWT.EnumDWT_ImageType | number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 LoadImageEx(
     fileName: string,
     type: Dynamsoft.DWT.EnumDWT_ImageType | number,
@@ -156,10 +155,11 @@ LoadImageEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
-**Availability**  
+**Availability**
 
 <div class="availability">
 <table>
@@ -198,7 +198,7 @@ DWTObject.LoadImageEx(
     },
     function (errorCode, errorString) {
         console.log(errorString);
-    }
+    },
 );
 ```
 
@@ -213,7 +213,7 @@ DWTObject.LoadImageEx(
     },
     function (errorCode, errorString) {
         console.log(errorString);
-    }
+    },
 );
 ```
 
@@ -235,7 +235,7 @@ LoadImageFromBase64Binary(
     imageType: Dynamsoft.DWT.EnumDWT_ImageType
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 LoadImageFromBase64Binary(
     imageData: string,
     imageType: Dynamsoft.DWT.EnumDWT_ImageType,
@@ -251,8 +251,9 @@ LoadImageFromBase64Binary(
 `imageType`: The format of the image. Please refer to [`EnumDWT_ImageType`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
- 
+
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -297,12 +298,12 @@ DWTObject.ConvertToBase64(
             },
             function (errorCode, errorString) {
                 console.log(errorString);
-            }
+            },
         );
     },
     function (errorCode, errorString) {
         console.log(errorString);
-    }
+    },
 );
 ```
 
@@ -333,9 +334,9 @@ LoadImageFromBinary(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
-
 
 **Availability**
 
@@ -377,12 +378,12 @@ DWTObject.ConvertToBlob(
             },
             function (errorCode, errorString) {
                 console.log(errorString);
-            }
+            },
         );
     },
     function (errorCode, errorString) {
         console.log(errorString);
-    }
+    },
 );
 ```
 
@@ -401,7 +402,7 @@ Load an image from the system clipboard. The image must be in DIB format.
 ```javascript
 LoadDibFromClipboard(): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 LoadDibFromClipboard(
     successCallback: () => void,
     failureCallback: (errorCode: number, errorString: string) => void
@@ -413,6 +414,7 @@ LoadDibFromClipboard(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -502,8 +504,19 @@ RegisterEvent(
 **Example**
 
 ```javascript
-DWTObject.RegisterEvent('OnGetFilePath', function(isSave, filesCount, index, directory, filename) {
-    alert("isSave:" + isSave + " fileCount: " +  filesCount + " index: " +  index + " directory: " +  directory + "\\" +  filename);
+DWTObject.RegisterEvent("OnGetFilePath", function (isSave, filesCount, index, directory, filename) {
+    alert(
+        "isSave:" +
+            isSave +
+            " fileCount: " +
+            filesCount +
+            " index: " +
+            index +
+            " directory: " +
+            directory +
+            "\\" +
+            filename,
+    );
 });
 ```
 
@@ -586,6 +599,7 @@ FTPDownload(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -640,6 +654,7 @@ FTPDownloadEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -668,21 +683,27 @@ FTPDownloadEx(
 **Example**
 
 ```javascript
-/* The sample file path is: 
+/* The sample file path is:
  * "ftp://192.168.8.20/files/sample.pdf"
  */
-var onSuccess = function() {
+var onSuccess = function () {
     console.log("Downloaded a file successfully!");
 };
 
-var onFailure = function(errorCode, errorString) {
+var onFailure = function (errorCode, errorString) {
     console.log(errorString);
 };
 
 DWTObject.FTPPort = 21;
 DWTObject.FTPUserName = "FTPUser";
 DWTObject.FTPPassword = "SomePassword";
-DWTObject.FTPDownloadEx("192.168.8.20", "/files/sample.pdf", Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, onSuccess, onFailure);
+DWTObject.FTPDownloadEx(
+    "192.168.8.20",
+    "/files/sample.pdf",
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+    onSuccess,
+    onFailure,
+);
 ```
 
 ---
@@ -714,6 +735,7 @@ FTPUpload(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -742,23 +764,23 @@ FTPUpload(
 **Example**
 
 ```javascript
-var onSuccess = function() {
+var onSuccess = function () {
     console.log("Uploaded a file successfully!");
 };
 
-var onFailure = function(errorCode, errorString) {
+var onFailure = function (errorCode, errorString) {
     console.log(errorString);
 };
 
-DWTObject.FTPUserName = 'test';
+DWTObject.FTPUserName = "test";
 DWTObject.FTPPort = 21;
-DWTObject.FTPPassword = 'test';
+DWTObject.FTPPassword = "test";
 DWTObject.FTPUpload(
-    '192.168.8.222', //The FTP Host
+    "192.168.8.222", //The FTP Host
     0, // The index of the image
-    'test.pdf', // The path & name of the file 
+    "test.pdf", // The path & name of the file
     onSuccess, // Callback in case of success
-    onFailure // Callback in case of failure
+    onFailure, // Callback in case of failure
 );
 ```
 
@@ -794,6 +816,7 @@ FTPUploadEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -845,6 +868,7 @@ FTPUploadAllAsMultiPageTIFF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -896,6 +920,7 @@ FTPUploadAllAsPDF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -947,10 +972,12 @@ FTPUploadAsMultiPagePDF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -998,6 +1025,7 @@ FTPUploadAsMultiPageTIFF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -1156,7 +1184,6 @@ IfPASVMode: boolean;
 <td align="center">v6.0+ </td>
 </tr>
 
-
 </table>
 </div>
 
@@ -1212,6 +1239,7 @@ HTTPDownload(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -1240,14 +1268,14 @@ HTTPDownload(
 **Example**
 
 ```javascript
-/* The sample file path is: 
+/* The sample file path is:
  * "http://localhost:300/files/sample.tif"
  */
-var onSuccess = function() {
+var onSuccess = function () {
     console.log("Downloaded a file successfully!");
 };
 
-var onFailure = function(errorCode, errorString) {
+var onFailure = function (errorCode, errorString) {
     console.log(errorString);
 };
 
@@ -1288,6 +1316,7 @@ HTTPDownloadEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -1324,19 +1353,25 @@ In this example, the URL points to a server-side script.
 The server-side script can be written in any language and in any logic as long as it returns a file. Please refer to [Download-Server-Script](/_articles/general-usage/server-side-scripting.md#download-a-file).
 
 ```javascript
-/* The sample file path is: 
+/* The sample file path is:
  * "http://localhost:300/files/sample.tif"
  */
-var onSuccess = function() {
+var onSuccess = function () {
     console.log("Downloaded a file successfully!");
 };
 
-var onFailure = function(errorCode, errorString) {
+var onFailure = function (errorCode, errorString) {
     console.log(errorString);
 };
 
 DWTObject.HTTPPort = 300;
-DWTObject.HTTPDownloadEx("localhost", "/getFile.aspx", Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF, onSuccess, onFailure);
+DWTObject.HTTPDownloadEx(
+    "localhost",
+    "/getFile.aspx",
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_TIF,
+    onSuccess,
+    onFailure,
+);
 ```
 
 **Remark**
@@ -1372,6 +1407,7 @@ HTTPDownloadThroughPost(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 - `response`: The response from your server.
@@ -1417,6 +1453,7 @@ HTTPUpload(
     onServerReturnedSomething: (errorCode: number, errorString: string, response: string) => void
 ): void;
 ```
+
 ```javascript
 HTTPUpload(
     URL: string,
@@ -1438,13 +1475,17 @@ HTTPUpload(
 
 `dataFormat`: Whether to upload the file as binary or a base64 string. Please refer to [`EnumDWT_UploadDataFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_uploaddataformat).
 
-`fileName`: The file name. If `fileName` specifies the extension of the file additionally, 
- - if the extension is not the same as the format of the file which is specified by `type`, the extra extension will be added to the file name. For example, `fileName` is set to `"test.jpg"`, and `type` is `Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF`, the final file name would be `test.jpg.pdf` and the file format is PDF.
- - if the extension is the same as the format of the file which is specified by `type`, the file name equals to the string which is specified by `fileName`. For example, `fileName` is set to `"test.pdf"`, and `type` is `Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF`, the final file name would be `test.pdf` and the file format is PDF.
+`fileName`: The file name. Additionally, if `fileName` specifies the extension of the file,
+
+- If the extension is not the same as the format of the file which is specified by `type`, the extra extension will be added to the file name.
+    - e.g. if `fileName` is set to `"test.jpg"`, and `type` is `Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF`, then the final file name would be `test.jpg.pdf` and the file format would be PDF.
+- If the extension is the same as the format of the file which is specified by `type`, the file name equals to the string which is specified by `fileName`.
+    - e.g. if `fileName` is set to `"test.pdf"`, and `type` is `Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF`, then the final file name would be `test.pdf` and the file format would be PDF.
 
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+
 - `errorCode` The error code.
 - `errorString` The error string.
 - `response` The response string.
@@ -1479,17 +1520,17 @@ If you want to use this method to upload / download files through HTTPS, please 
 
 ```javascript
 DWTObject.HTTPUpload(
-    'https://www.dynamsoft.com/SaveToFile.aspx', 
-    [0,1],  
-    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF, 
-    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary, 
-    'test.pdf', 
-    OnEmptyResponse, 
-    OnServerReturnedSomething
+    "https://www.dynamsoft.com/SaveToFile.aspx",
+    [0, 1],
+    Dynamsoft.DWT.EnumDWT_ImageType.IT_PDF,
+    Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
+    "test.pdf",
+    OnEmptyResponse,
+    OnServerReturnedSomething,
 );
 
 function OnEmptyResponse() {
-    console.log('Success');
+    console.log("Success");
 }
 
 function OnServerReturnedSomething(errCode, errString, responseStr) {
@@ -1533,6 +1574,7 @@ HTTPUploadThroughPutEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -1590,6 +1632,7 @@ HTTPUploadThroughPost(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 - `response`: The response string.
@@ -1642,9 +1685,9 @@ DWTObject.HTTPUploadThroughPost(
     function () {
         console.log("Empty response");
     },
-    function (errorCode,errorString,response) {
+    function (errorCode, errorString, response) {
         console.log(response);
-    }
+    },
 );
 ```
 
@@ -1686,6 +1729,7 @@ HTTPUploadThroughPostEx(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 - `response`: The response string.
@@ -1748,6 +1792,7 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 - `response`: The response string.
@@ -1810,6 +1855,7 @@ HTTPUploadAllThroughPostAsPDF(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 - `response`: The response string.
@@ -1872,6 +1918,7 @@ HTTPUploadThroughPostAsMultiPagePDF(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 - `response`: The response string.
@@ -1934,6 +1981,7 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
 `onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 - `response`: The response string.
@@ -1978,8 +2026,8 @@ httpUploadBlob(
     blobData: Blob,
     fileName: string,
     optionConfig?:{
-      responseType?: Dynamsoft.DWT.EnumDWT_ResponseType, 
-      formFields?:{ 
+      responseType?: Dynamsoft.DWT.EnumDWT_ResponseType,
+      formFields?:{
         name: string,
         value: Blob | string,
         fileName?: string
@@ -1998,15 +2046,19 @@ httpUploadBlob(
 
 `blobData`: The blob data of the image to upload.
 
-`fileName`: The file name. If `fileName` specifies the extension of the file additionally, 
- - if the extension is not the same as the blob type, the extra extension will be added to the file name. For example, `fileName` is set to `"test.jpg"`, and blob type is `application/pdf`, the final file name would be `test.jpg.pdf` and the file format is PDF.
- - if the extension is the same as the blob type, the file name equals to the string which is specified by `fileName`. For example, `fileName` is set to `"test.pdf"`, and blob type is `application/pdf`, the final file name would be `test.pdf` and the file format is PDF.
+`fileName`: The file name. Additionally, if `fileName` specifies the extension of the file,
+
+- If the extension is not the same as the blob type, the extra extension will be added to the file name.
+    - e.g. if `fileName` is set to `"test.jpg"`, and blob type is `application/pdf`, then the final file name would be `test.jpg.pdf` and the file format would be PDF.
+- If the extension is the same as the blob type, the file name equals to the string which is specified by `fileName`.
+    - e.g. if `fileName` is set to `"test.pdf"`, and blob type is `application/pdf`, then the final file name would be `test.pdf` and the file format would be PDF.
 
 `optionConfig`:
+
 - `responseType`: The response type. Please refer to [`EnumDWT_ResponseType`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_responsetype).
 - `formFields`: The fields to the HTTP Post Form.
     - `name`: The name of field.
-    - `value`: The value of field. 
+    - `value`: The value of field.
     - `fileName`: Specify the file name, if `value` is `Blob`.
 - `headers`: The headers to the HTTP Post Form.
     - `name`: The name of header.
@@ -2037,7 +2089,6 @@ httpUploadBlob(
 **Usage notes**
 
 Supported blob type: `image/jpeg`, `image/png`, `image/bmp`, `image/tiff`, `application/pdf`, `image/jpg`, `image/tif`.
-
 
 ---
 
@@ -2271,11 +2322,13 @@ ConvertToBase64(
 `type`: The file type. Please refer to [`EnumDWT_ImageType`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
+
 - `result`: The resulting base64 string. Please refer to [`Base64Result`](/_articles/info/api/interfaces.md#base64result).
 - `indices`: The indices of the converted images.
 - `type`: The file type.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2318,7 +2371,7 @@ DWTObject.ConvertToBase64(
     },
     function (errorCode, errorString) {
         console.log(errorString);
-    }
+    },
 );
 ```
 
@@ -2364,11 +2417,13 @@ ConvertToBlob(
 `type`: The file type. Please refer to [`EnumDWT_ImageType`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
+
 - `result`: The resulting blob.
 - `indices`: The indices of the converted images.
 - `type`: The file type.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2405,11 +2460,12 @@ DWTObject.ConvertToBlob(
     },
     function (errorCode, errorString) {
         console.log(errorString);
-    }
+    },
 );
 ```
 
 ---
+
 ## OutputSelectedAreaAsync()
 
 Copy selected area to Blob or base64.
@@ -2462,8 +2518,6 @@ OutputSelectedAreaAsync(
 </table>
 </div>
 
----
-
 **Example**
 
 Output the square portion of page index 0 in the buffer with its top left corner at pixel coordinates (50, 50), with height and width 100. Pass it to the console as a `base64` string, and also load it back into the WebTwain buffer as a separate page.
@@ -2476,12 +2530,11 @@ DWTObject.OutputSelectedAreaAsync(
     Dynamsoft.DWT.EnumDWT_ImageFormatType.Base64,
 ).then((base64) => {
     console.log(base64);
-    DWTObject.LoadImageFromBase64Binary(
-        base64,
-        Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
-    );
+    DWTObject.LoadImageFromBase64Binary(base64, Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG);
 });
 ```
+
+---
 
 ## SaveAsBMP()
 
@@ -2495,7 +2548,7 @@ SaveAsBMP(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveAsBMP(
     fileName: string,
     index: number,
@@ -2513,6 +2566,7 @@ SaveAsBMP(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2556,7 +2610,7 @@ SaveAsJPEG(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveAsJPEG(
     fileName: string,
     index: number,
@@ -2574,6 +2628,7 @@ SaveAsJPEG(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2617,7 +2672,7 @@ SaveAsPDF(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveAsPDF(
     fileName: string,
     index: number,
@@ -2635,6 +2690,7 @@ SaveAsPDF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2680,7 +2736,7 @@ SaveAsPNG(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveAsPNG(
     fileName: string,
     index: number,
@@ -2698,6 +2754,7 @@ SaveAsPNG(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2741,7 +2798,7 @@ SaveAsTIFF(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveAsTIFF(
     fileName: string,
     index: number,
@@ -2781,6 +2838,7 @@ SaveAsTIFF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2801,7 +2859,7 @@ SaveAllAsMultiPageTIFF(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveAllAsMultiPageTIFF(
     fileName: string,
     successCallback: () => void,
@@ -2816,6 +2874,7 @@ SaveAllAsMultiPageTIFF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode` The error code.
 - `errorString` The error string.
 
@@ -2860,7 +2919,7 @@ SaveAllAsPDF(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveAllAsPDF(
     fileName: string,
     successCallback: () => void,
@@ -2875,6 +2934,7 @@ SaveAllAsPDF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2919,7 +2979,7 @@ SaveSelectedImagesAsMultiPagePDF(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveSelectedImagesAsMultiPagePDF(
     fileName: string,
     successCallback: () => void,
@@ -2934,6 +2994,7 @@ SaveSelectedImagesAsMultiPagePDF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -2978,7 +3039,7 @@ SaveSelectedImagesAsMultiPageTIFF(
     fileName: string
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SaveSelectedImagesAsMultiPageTIFF(
     fileName: string,
     successCallback: () => void,
@@ -2993,6 +3054,7 @@ SaveSelectedImagesAsMultiPageTIFF(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -3041,9 +3103,12 @@ saveBlob(
 
 **Parameters**
 
-`fileName`: The file name. If `fileName` specifies the extension of the file additionally, 
- - if the extension is not the same as the blob type, the extra extension will be added to the file name. For example, `fileName` is set to `"test.jpg"`, and blob type is `application/pdf`, the final file name would be `test.jpg.pdf` and the file format is PDF.
- - if the extension is the same as the blob type, the file name equals to the string which is specified by `fileName`. For example, `fileName` is set to `"test.pdf"`, and blob type is `application/pdf`, the final file name would be `test.pdf` and the file format is PDF.
+`fileName`: The file name. Additionally, if `fileName` specifies the extension of the file,
+
+- If the extension is not the same as the blob type, the extra extension will be added to the file name.
+    - e.g. if `fileName` is set to `"test.jpg"`, and blob type is `application/pdf`, then the final file name would be `test.jpg.pdf` and the file format would be PDF.
+- If the extension is the same as the blob type, the file name equals to the string which is specified by `fileName`.
+    - e.g. if `fileName` is set to `"test.pdf"`, and blob type is `application/pdf`, then the final file name would be `test.pdf` and the file format would be PDF.
 
 `blobData`: The blob data of the image to save.
 
@@ -3215,6 +3280,7 @@ SetHTTPFormField(
     value: string
 ): boolean;
 ```
+
 ```javascript
 SetHTTPFormField(
     name: string,
@@ -3345,7 +3411,7 @@ SetUploadSegment(
 
 ## IfShowFileDialog
 
-Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory. 
+Return or set whether to show open/save file dialog when saving images in the buffer or loading images from a local directory.
 
 **Syntax**
 
@@ -3420,6 +3486,7 @@ This API is only valid if [`IfShowProgressBar`](/_articles/info/api/WebTwain_IO.
 ---
 
 ## IfShowProgressBar
+
 Return or set whether the progress bar will be displayed during any encoding, decoding, or transfer activities.
 
 **Syntax**
@@ -3475,7 +3542,7 @@ ShowFileDialog(
 
 `isSave`: Whether to show a save-file dialog or an open-file dialog.
 
-`filter`: The filter pattern like "JPG or *.jpg".
+`filter`: The filter pattern like `JPG` or `*.jpg`.
 
 `filterIndex`: The order of the filter. Normally, just put 0.
 
@@ -3522,12 +3589,9 @@ This method will trigger [`OnGetFilePath`](/_articles/info/api/WebTwain_IO.md#on
 **Example**
 
 ```javascript
-DWTObject.RegisterEvent(
-    "OnGetFilePath",
-    function (isSave, filesCount, index, directory, fileName) {
-        alert(" directory: " + directory + "\\" + fileName);
-    }
-);
+DWTObject.RegisterEvent("OnGetFilePath", function (isSave, filesCount, index, directory, fileName) {
+    alert(" directory: " + directory + "\\" + fileName);
+});
 
 //On macOS
 DWTObject.ShowFileDialog(
@@ -3538,7 +3602,7 @@ DWTObject.ShowFileDialog(
     "",
     true,
     false,
-    0
+    0,
 );
 
 //On Windows
@@ -3550,7 +3614,7 @@ DWTObject.ShowFileDialog(
     "",
     true,
     false,
-    0
+    0,
 );
 ```
 
@@ -3636,7 +3700,6 @@ PrintEx(indices: number[]): boolean;
 
 ---
 
-
 ## createLocalStorage()
 
 Create a storage folder locally to save the cache of encrypted images.
@@ -3648,12 +3711,13 @@ createLocalStorage(
   settings?: {
     password?: string;
   }
-): Promise<string>; 
+): Promise<string>;
 ```
 
 **Parameters**
 
-`settings`: 
+`settings`:
+
 - `password`: Specify the password which is used to protect the storage folder. Up to 32 characters.
 
 **Return value**
@@ -3685,19 +3749,19 @@ A Promise object which will be resolved with the uid string which will be used a
 **Usage notes**
 
 - If `password` is not specified, the returned `uid` string will be set as the password of the storage folder.
-- The local directory of the created storage folder is under 
-  - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\storage`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`)
-  - macOS: `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > storage`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`)
-  - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/storage`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/storage`)
-- The creation will not be successful, if the remaining disk space is less than 
+- The local directory of the created storage folder is under
+    - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\storage`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`)
+    - macOS: `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > storage`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`)
+    - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/storage`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/storage`)
+- The creation will not be successful, if the remaining disk space is less than
 
-  | System      | Remaining Disk Space |
-  | ----------- | -------------------- |
-  | Windows x86 | < 1.2GB              |
-  | Windows x64 | < 4GB                |
-  | macOS 32bit | < 1.2GB              |
-  | macOS 64bit | < 4GB                |
-  | Linux       | < 4GB                |
+    | System      | Remaining Disk Space |
+    | ----------- | -------------------- |
+    | Windows x86 | < 1.2GB              |
+    | Windows x64 | < 4GB                |
+    | macOS 32bit | < 1.2GB              |
+    | macOS 64bit | < 4GB                |
+    | Linux       | < 4GB                |
 
 ---
 
@@ -3739,9 +3803,9 @@ localStorageExist(uid: string):Promise<boolean>;
 
 ---
 
-## saveToLocalStorage() 
+## saveToLocalStorage()
 
-Save encrypted image caches to the specified storage folder. 
+Save encrypted image caches to the specified storage folder.
 
 **Syntax**
 
@@ -3752,17 +3816,18 @@ saveToLocalStorage(
     password?: string;
     indices?: number[];
   }
-): Promise<string[]>;  
+): Promise<string[]>;
 ```
 
 **Parameters**
 
 `settings`:
+
 - `uid`: Specify the storage folder to save the images cache.
 - `password`: The password of the specified storage folder.
-- `indices`: Specify the indices to save. 
-  - If not set, means all images in buffer. 
-  - If set to `[]`, all cache in the specified storage folder will be clear.
+- `indices`: Specify the indices to save.
+    - If not set, means all images in buffer.
+    - If set to `[]`, all cache in the specified storage folder will be clear.
 
 **Return value**
 
@@ -3793,15 +3858,15 @@ A Promise object which will be resolved with the array of image ids which are sa
 **Usage notes**
 
 - Each time this method is called successfully, the original cache in the specified folder will be overwritten by the new cache.
-- The remaining disk space is calculated before saving each encrypted image caches. Subsequent saves will not be successful, if the remaining disk space is less than 
+- The remaining disk space is calculated before saving each encrypted image caches. Subsequent saves will not be successful, if the remaining disk space is less than
 
-  | System      | Remaining Disk Space |
-  | ----------- | -------------------- |
-  | Windows x86 | < 1.2GB              |
-  | Windows x64 | < 4GB                |
-  | macOS 32bit | < 1.2GB              |
-  | macOS 64bit | < 4GB                |
-  | Linux       | < 4GB                |
+    | System      | Remaining Disk Space |
+    | ----------- | -------------------- |
+    | Windows x86 | < 1.2GB              |
+    | Windows x64 | < 4GB                |
+    | macOS 32bit | < 1.2GB              |
+    | macOS 64bit | < 4GB                |
+    | Linux       | < 4GB                |
 
 ---
 
@@ -3817,12 +3882,13 @@ loadFromLocalStorage (
         uid: string,
         password?:string,
     }
-): Promise<{oriImageId: string, newImageId: string}[]>; 
+): Promise<{oriImageId: string, newImageId: string}[]>;
 ```
 
 **Parameters**
 
 `settings`:
+
 - `uid`: Specify the storage folder to load the images.
 - `password`: The password of the specified storage folder.
 
@@ -3856,7 +3922,7 @@ A Promise object which will be resolved with the array of object which contains 
 
 ## removeLocalStorage()
 
-Remove the specified storage folder. 
+Remove the specified storage folder.
 
 **Syntax**
 
@@ -3866,12 +3932,13 @@ removeLocalStorage(
     uid: string,
     password?: string,
   }
-): Promise<boolean>; 
+): Promise<boolean>;
 ```
 
 **Parameters**
 
 `settings`:
+
 - `uid`: Specify the storage folder to remove.
 - `password`: The password of the specified storage folder.
 
@@ -3973,11 +4040,11 @@ IfTiffMultiPage: boolean;
 
 **Usage notes**
 
-When you save a new image in the same name of an existing TIFF file: 
+When you save a new image in the same name of an existing TIFF file:
 
-1) If this property is true, the new image will be added to the existing file.
+1. If this property is true, the new image will be added to the existing file.
 
-2) If this property is false, the new image will replace the existing file.
+2. If this property is false, the new image will replace the existing file.
 
 ---
 
@@ -4056,6 +4123,5 @@ IfSortBySelectionOrder: boolean;
 
 </table>
 </div>
-
 
 <div class="multi-panel-switching-end"></div>

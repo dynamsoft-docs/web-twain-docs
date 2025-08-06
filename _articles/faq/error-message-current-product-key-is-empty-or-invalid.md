@@ -6,6 +6,7 @@ title: Error message - The current product key is empty or invalid, please conta
 keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: Error message - The current product key is empty or invalid, please contact the site administrator
 description: Error message - The current product key is empty or invalid, please contact the site administrator
+date: 2021-12-03 23:26:46 +0800
 ---
 
 # Error Troubleshooting

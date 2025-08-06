@@ -6,6 +6,7 @@ title: How can I use Dynamic Web TWAIN SDK in a Citrix environment?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, citrix
 breadcrumbText: How can I use Dynamic Web TWAIN in a Citrix environment?
 description: How can I use Dynamic Web TWAIN in a Citrix environment?
+date: 2021-12-14 00:10:42 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

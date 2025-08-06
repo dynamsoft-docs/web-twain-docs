@@ -6,6 +6,7 @@ title: How can I set the last selected source as the default source for an end u
 keywords: Dynamic Web TWAIN, Capture/ Image Source, default source, last selected source
 breadcrumbText: How can I set the last selected source as the default source for an end user?
 description: How can I set the last selected source as the default source for an end user?
+date: 2021-12-08 03:01:32 +0800
 ---
 
 # Capture/Image Source

@@ -6,6 +6,7 @@ title: What are the Resources files?
 keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: What Are The Resources Files
 description: What are the Resources files? 
+date: 2021-07-14 18:53:19 +0800
 ---
 
 # General

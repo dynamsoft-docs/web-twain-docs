@@ -6,6 +6,7 @@ title: The handle is in the wrong state for the requested operation
 keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: The handle is in the wrong state for the requested operation
 description: The handle is in the wrong state for the requested operation
+date: 2021-03-02 14:43:01 +0800
 ---
 
 # Error Troubleshooting

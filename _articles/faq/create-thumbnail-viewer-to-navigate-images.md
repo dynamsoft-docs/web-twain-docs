@@ -6,6 +6,7 @@ title: How can I create a thumbnail viewer to view images?
 keywords: Dynamic Web TWAIN, Image Viewer, navigate images, thumbnail viewer
 breadcrumbText: How can I create a thumbnail viewer to view images?
 description: How can I create a thumbnail viewer to view images?
+date: 2021-12-09 11:34:50 +0800
 ---
 
 # Image Viewer

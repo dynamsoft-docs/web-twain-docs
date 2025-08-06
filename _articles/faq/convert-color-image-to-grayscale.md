@@ -6,6 +6,7 @@ title: Can I convert a color image to grayscale or black & white?
 keywords: Dynamic Web TWAIN, Image Editing, convert color to grayscale, grayscale, black and white
 breadcrumbText: Can I convert a color image to grayscale or black & white?
 description: Can I convert a color image to grayscale or black & white?
+date: 2021-12-09 09:25:33 +0800
 ---
 
 # Image Editing

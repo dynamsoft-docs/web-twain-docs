@@ -6,6 +6,7 @@ title: How can I show page number on each image?
 keywords: Dynamic Web TWAIN, Image Viewer, show , page number
 breadcrumbText: How can I show page number on each image?
 description: How can I show page number on each image?
+date: 2025-04-17 17:43:22 +0800
 ---
 
 # Image Viewer

@@ -6,6 +6,7 @@ title: Error message - You have exceeded the number of OCR attempts allowed by t
 keywords: Dynamic Web TWAIN, Error Troubleshooting, exceeded OCR attempts
 breadcrumbText: Error message - You have exceeded the number of OCR attempts allowed by the current license
 description: Error message - You have exceeded the number of OCR attempts allowed by the current license
+date: 2021-12-03 23:26:46 +0800
 ---
 
 # Error Troubleshooting

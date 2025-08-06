@@ -6,6 +6,7 @@ title: Can I hide offline scanner devices from the select source list?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, hide offline scanners, source list
 breadcrumbText: Can I hide offline scanner devices from the select source list?
 description: Can I hide offline scanner devices from the select source list?
+date: 2021-12-08 03:01:32 +0800
 ---
 
 # Capture/Image Source

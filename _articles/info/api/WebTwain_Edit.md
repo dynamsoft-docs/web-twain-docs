@@ -61,7 +61,6 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Properties**
 
-
 | [`BackgroundFillColor`](#backgroundfillcolor) |
 
 ## ChangeBitDepth()
@@ -87,6 +86,7 @@ ChangeBitDepth(
 `highQuality`: Whether to keep high quality. When it's true, it takes more time.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -127,7 +127,7 @@ ChangeImageSize(
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 ChangeImageSize(
     index: number,
     width: number,
@@ -142,7 +142,7 @@ ChangeImageSize(
 ```
 
 **Parameters**
-`index`: Specify  the index of the image to be changed. The index is 0-based.
+`index`: Specify the index of the image to be changed. The index is 0-based.
 
 `width`: Specify the new width.
 
@@ -153,11 +153,12 @@ ChangeImageSize(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
- * `errorCode`: The error code.
- * `errorString`: The error string.
 
+    - `errorCode`: The error code.
+    - `errorString`: The error string.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -195,7 +196,7 @@ SetDPI(
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SetDPI(
     index: number,
     xResolution: number,
@@ -225,10 +226,12 @@ SetDPI(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
- * `errorCode`: The error code.
- * `errorString` The error string.
+
+- `errorCode`: The error code.
+- `errorString` The error string.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -249,7 +252,6 @@ SetDPI(
 </table>
 </div>
 
-
 ---
 
 ## ConvertToBW()
@@ -263,7 +265,7 @@ ConvertToBW(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 ConvertToBW(
     index: number,
     successCallback: () => void,
@@ -281,10 +283,12 @@ ConvertToBW(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
- * `errorCode`: The error code.
- * `errorString`: The error string.
+
+- `errorCode`: The error code.
+- `errorString`: The error string.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -318,7 +322,7 @@ ConvertToGrayScale(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 ConvertToGrayScale(
     index: number,
     successCallback: () => void,
@@ -334,6 +338,7 @@ ConvertToGrayScale(
 `index`: Specify the index of the image to be converted. The index is 0-based.
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -385,7 +390,7 @@ Invert(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 Invert(
     index: number,
     successCallback: () => void,
@@ -400,6 +405,7 @@ Invert(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -439,7 +445,7 @@ SetImageWidth(
     width: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 SetImageWidth(
     index: number,
     width: number,
@@ -457,6 +463,7 @@ SetImageWidth(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -495,7 +502,7 @@ Flip(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 Flip(
     index: number,
     successCallback: () => void,
@@ -507,9 +514,10 @@ Flip(
 
 `index`: Specify the image.
 
- `successCallback`: A callback function that is executed if the request succeeds.
+`successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -566,7 +574,7 @@ Mirror(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 Mirror(
     index: number,
     successCallback: () => void,
@@ -581,6 +589,7 @@ Mirror(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -636,7 +645,7 @@ RotateLeft(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 RotateLeft(
     index: number,
     successCallback: () => void,
@@ -651,6 +660,7 @@ RotateLeft(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -706,7 +716,7 @@ RotateRight(
     index: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 RotateRight(
     index: number,
     successCallback: () => void,
@@ -721,6 +731,7 @@ RotateRight(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -778,7 +789,7 @@ Rotate(
     keepSize: boolean
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 Rotate(
     index: number,
     angle: number,
@@ -799,6 +810,7 @@ Rotate(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -862,7 +874,7 @@ RotateEx(
     method: Dynamsoft.DWT.EnumDWT_InterpolationMethod | number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 RotateEx(
     index: number,
     angle: number,
@@ -886,6 +898,7 @@ RotateEx(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -928,7 +941,7 @@ Crop(
     bottom: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 Crop(
     index: number,
     left: number,
@@ -955,6 +968,7 @@ Crop(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -997,7 +1011,7 @@ Erase(
     bottom: number
 ): boolean;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 Erase(
     index: number,
     left: number,
@@ -1024,6 +1038,7 @@ Erase(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -1245,7 +1260,6 @@ CutFrameToClipboard(
 </table>
 </div>
 
-
 **Usage notes**
 
 The empty area resulted from the crop/erase/cut will be filled with the color set with [`BackgroundFillColor`](#backgroundfillcolor).
@@ -1298,7 +1312,7 @@ Change the image brightness.
 
 ```typescript
 ChangeBrightnessAsync(
-    index: number, 
+    index: number,
     value: number
 ): Promise<boolean>;
 ```
@@ -1341,7 +1355,7 @@ Change the image contrast.
 
 ```typescript
 ChangeContrastAsnyc(
-    index: number, 
+    index: number,
     value: number
 ): Promise<boolean>;
 ```

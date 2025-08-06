@@ -6,6 +6,7 @@ title: How can I extend my free trial?
 keywords: Dynamic Web TWAIN, SDK Download, free trial, extend
 breadcrumbText: How can I extend my free trial?
 description: How can I extend my free trial?
+date: 2021-11-18 11:17:20 +0800
 ---
 
 # SDK Download/Free Trial

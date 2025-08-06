@@ -8,36 +8,32 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 ---
 
 # Global
+
 > The Global Web TWAIN properties and methods on this page live in the namespace `{Dynamsoft.DWT}`,
 
 **Methods**
 
-
-| [`CreateDWTObject()`](#createdwtobject) | [`CreateDWTobjectEx()`](#createdwtobjectex) | [`DeleteDWTObject()`](#deletedwtobject) | [`GetWebTwain()`](#getwebtwain)      |
-| [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   |        |
+| [`CreateDWTObject()`](#createdwtobject) | [`CreateDWTobjectEx()`](#createdwtobjectex) | [`DeleteDWTObject()`](#deletedwtobject) | [`GetWebTwain()`](#getwebtwain) |
+| [`Load()`](#load)                       | [`RegisterEvent()`](#registerevent)         | [`Unload()`](#unload)                   |                                 |
 
 <!-- [`UpdateCert()`](#updatecert)  -->
 
 **Properties**
 
-
-| [`Autoload`](#autoload)   | [`Containers`](#containers)  | [`CustomizableDisplayInfo`](#customizabledisplayinfo)   | [`DeviceFriendlyName`](#devicefriendlyname)   |
-| [`Host`](#host)  | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer)   | [`JSVersion`](#jsversion)     | 
-|[`ProductKey`](#productkey)     | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation)  |[`UseDefaultViewer`](#usedefaultviewer) | 
-| [`IfCheckCORS`](#ifcheckcors)   | [`IfAlwaysFocusOnPopupWindow`](#ifalwaysfocusonpopupwindow) |                      |
-
+| [`Autoload`](#autoload)       | [`Containers`](#containers)                                 | [`CustomizableDisplayInfo`](#customizabledisplayinfo)           | [`DeviceFriendlyName`](#devicefriendlyname) |
+| [`Host`](#host)               | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader)         | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer) | [`JSVersion`](#jsversion)                   |
+| [`ProductKey`](#productkey)   | [`ResourcesPath`](#resourcespath)                           | [`ServiceInstallerLocation`](#serviceinstallerlocation)         | [`UseDefaultViewer`](#usedefaultviewer)     |
+| [`IfCheckCORS`](#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](#ifalwaysfocusonpopupwindow) |                                                                 |                                             |
 
 **Events**
 
-
-| [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`](#onwebtwainpostexecute) | [`OnWebTwainPreExecute`](#onwebtwainpreexecute) | 
-
+| [`OnWebTwainReady`](#onwebtwainready) | [`OnWebTwainError`](#onwebtwainerror) | [`OnWebTwainPostExecute`](#onwebtwainpostexecute) | [`OnWebTwainPreExecute`](#onwebtwainpreexecute) |
 
 <!--
 ``` typescript
 interface Dynamsoft.DWT {
     readonly licenseException: string;
-    
+
     readonly ActiveXVersion: string;
     readonly JSVersion: string;
     readonly PdfVersion: string;
@@ -81,19 +77,19 @@ interface Dynamsoft.DWT {
      * Define the path to the Web TWAIN dist folder (client side service installers)
      */
     ServiceInstallerLocation: string;
-    
+
     // Functions
     CreateDWTObject(
-        ContainerId: string, 
-        host?: string, 
-        port?: string | number, 
-        portSSL?: string | number, 
-        asyncSuccessFunc: function (DWTObject: WebTwain) {}, 
+        ContainerId: string,
+        host?: string,
+        port?: string | number,
+        portSSL?: string | number,
+        asyncSuccessFunc: function (DWTObject: WebTwain) {},
         asyncFailureFunc: function (errorString: string) {}
     ): void;
     CreateDWTObjectEx(
-        dwtInitialConfig: DWTInitialConfig,                 
-        asyncSuccessFunc: (DWTObject: WebTwain) => {},                   
+        dwtInitialConfig: DWTInitialConfig,
+        asyncSuccessFunc: (DWTObject: WebTwain) => {},
         asyncFailureFunc: (errorString: string) => {}
     ): void;
     DeleteDWTObject(Id?: string): boolean;
@@ -106,11 +102,11 @@ interface Dynamsoft.DWT {
 }
 
 /**
- * Update and download cert to DynamsoftServicex64_17\cert 
+ * Update and download cert to DynamsoftServicex64_17\cert
  */
 UpdateCert(
-    url: string, // url to download the new certificate. 
-    optionalAsyncSuccessFunc?: function () {}, 
+    url: string, // url to download the new certificate.
+    optionalAsyncSuccessFunc?: function () {},
     optionalAsyncFailureFunc?: function (errorCode: number, errorString: string) {}
 );
 
@@ -129,11 +125,11 @@ licenseException: string;
 
 **Usage notes**
 
-Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html) 
+Check [license error list](https://www.dynamsoft.com/license-tracking/docs/common/errorlist.html)
 -->
 <!-- ## Options -->
 
-<!-- 
+<!--
 ### errorMessages
 
 Specify the error messages.
@@ -162,7 +158,6 @@ Specify the source of the loader bar image. Check out more on [HTMLImageElement.
 
 Specify the class name of the DIV element that contains the loader bar. With this class, you can customize the loader bar even further with CSS. -->
 
-
 ## CreateDWTObject()
 
 Creates a new `WebTwain` instance that listens to the specified host and ports. This instance requires a UI element specified by the `ContainerId` attribute, typically a `<div>`. The DWT library will generate UI and bind it to this element.
@@ -174,16 +169,16 @@ Creates a new `WebTwain` instance that listens to the specified host and ports. 
 
 ```typescript
 CreateDWTObject(
-    ContainerId: string, 
+    ContainerId: string,
     successCallBack: (DWTObject: WebTwain) => void,
     failureCallBack: ({code: number, message: string}) => void
 ): void;
 
 CreateDWTObject(
-    ContainerId: string, 
-    host: string, 
-    port: string | number, 
-    portSSL: string | number, 
+    ContainerId: string,
+    host: string,
+    port: string | number,
+    portSSL: string | number,
     successCallBack: (DWTObject: WebTwain) => void,
     failureCallBack: ({code: number, message: string}) => void
 ): void;
@@ -200,9 +195,11 @@ CreateDWTObject(
 `portSSL`: Specify the SSL port. Default value: `18623`
 
 `successCallback`: A callback function that is executed if the request succeeds.
+
 - `DWTObject`: The `WebTwain` instance.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorString`: The error string.
 
 **Availability**
@@ -231,17 +228,26 @@ CreateDWTObject(
 
 ```typescript
 var DWTObject;
-Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',"127.0.0.1", 18622, 18623,
-    function (DWTObject) { 
+Dynamsoft.DWT.CreateDWTObject(
+    "dwtcontrolContainer",
+    "127.0.0.1",
+    18622,
+    18623,
+    function (DWTObject) {
         DWTObject = DWTObject;
-        DWTObject.SelectSourceAsync().then(function () {
-        DWTObject.AcquireImageAsync({ 
-            IfCloseSourceAfterAcquire: true 
-        });
-    }).catch(function (exp) {
-        alert(exp.message);
-    });}, 
-    function (error) {console.log(error);}
+        DWTObject.SelectSourceAsync()
+            .then(function () {
+                DWTObject.AcquireImageAsync({
+                    IfCloseSourceAfterAcquire: true,
+                });
+            })
+            .catch(function (exp) {
+                alert(exp.message);
+            });
+    },
+    function (error) {
+        console.log(error);
+    },
 );
 ```
 
@@ -249,17 +255,23 @@ OR
 
 ```typescript
 var DWTObject;
-Dynamsoft.DWT.CreateDWTObject('dwtcontrolContainer',
-        function (DWTObject) { 
-            DWTObject = DWTObject;
-            DWTObject.SelectSourceAsync().then(function () {
-            DWTObject.AcquireImageAsync({ 
-                IfCloseSourceAfterAcquire: true 
+Dynamsoft.DWT.CreateDWTObject(
+    "dwtcontrolContainer",
+    function (DWTObject) {
+        DWTObject = DWTObject;
+        DWTObject.SelectSourceAsync()
+            .then(function () {
+                DWTObject.AcquireImageAsync({
+                    IfCloseSourceAfterAcquire: true,
+                });
+            })
+            .catch(function (exp) {
+                alert(exp.message);
             });
-        }).catch(function (exp) {
-            alert(exp.message);
-        });}, 
-        function (error) {console.log(error);}
+    },
+    function (error) {
+        console.log(error);
+    },
 );
 ```
 
@@ -276,8 +288,8 @@ Creates a new UI-less `WebTwain` instance. This instance will be uniquely identi
 
 ```typescript
 CreateDWTObjectEx(
-  dwtInitialConfig: DWTInitialConfig, 
-  successCallBack: (DWTObject: WebTwain) => void, 
+  dwtInitialConfig: DWTInitialConfig,
+  successCallBack: (DWTObject: WebTwain) => void,
   failureCallBack: ({code: number, message: string}) => void
 ): void;
 ```
@@ -287,9 +299,11 @@ CreateDWTObjectEx(
 `dwtInitialConfig`: Specify the initial configuration of the instance. Please refer to [`DWTInitialConfig`](/_articles/info/api/interfaces.md#DWTInitialConfig).
 
 `successCallback`: A callback function that is executed if the request succeeds.
+
 - `DWTObject`: The `WebTwain` instance.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `code`: The error code.
 - `message`: The error string.
 
@@ -319,22 +333,28 @@ CreateDWTObjectEx(
 
 ```typescript
 var DWTObject;
-Dynamsoft.DWT.CreateDWTObjectEx({
-      WebTwainId: 'dwtId',
-  },function (DWTObject) {
-      DWTObject = DWTObject;
-      DWTObject.Viewer.bind("dwtcontrolContainer");
-      DWTObject.Viewer.show();
-      DWTObject.SelectSourceAsync().then(function () {
-              DWTObject.AcquireImageAsync({ 
-                  IfCloseSourceAfterAcquire: true 
-              });
-          }).catch(function (exp) {
-              alert(exp.message);
-          });
-  }, function (error) {
-      console.log(error);
-});
+Dynamsoft.DWT.CreateDWTObjectEx(
+    {
+        WebTwainId: "dwtId",
+    },
+    function (DWTObject) {
+        DWTObject = DWTObject;
+        DWTObject.Viewer.bind("dwtcontrolContainer");
+        DWTObject.Viewer.show();
+        DWTObject.SelectSourceAsync()
+            .then(function () {
+                DWTObject.AcquireImageAsync({
+                    IfCloseSourceAfterAcquire: true,
+                });
+            })
+            .catch(function (exp) {
+                alert(exp.message);
+            });
+    },
+    function (error) {
+        console.log(error);
+    },
+);
 ```
 
 ---
@@ -424,7 +444,7 @@ GetWebTwain(ContainerIdOrWebTwainId?: string): WebTwain;
 ```javascript
 var DWTObject;
 function Dynamsoft_OnReady() {
-    DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer"); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
 }
 ```
 
@@ -439,10 +459,10 @@ function Dynamsoft_OnReady() {
 Gets an `WebTwain` instance by its `WebTwainId`.
 
 --- -->
-  
+
 ## Load()
 
-Initiates the library. If there are predefined [`Containers`](#containers), one `WebTwain` instance will be created for each `Container`. 
+Initiates the library. If there are predefined [`Containers`](#containers), one `WebTwain` instance will be created for each `Container`.
 
 **Syntax**
 
@@ -525,22 +545,20 @@ Dynamsoft.DWT.RegisterEvent(eventName: string, listener: (...arguments: any[])=>
 **Example**
 
 ```javascript
-Dynamsoft.DWT.RegisterEvent('OnWebTwainReady',
- Dynamsoft_OnReady //The typical function for initializing the environment once the resources have loaded
+Dynamsoft.DWT.RegisterEvent(
+    "OnWebTwainReady",
+    Dynamsoft_OnReady, //The typical function for initializing the environment once the resources have loaded
 );
- 
+
 function Dynamsoft_OnReady() {
-DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer"); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
 }
- 
-Dynamsoft.DWT.RegisterEvent("OnWebTwainError", function (error) {
-});
- 
-Dynamsoft.DWT.RegisterEvent("OnWebTwainPostExecute", function () {
-});
- 
-Dynamsoft.DWT.RegisterEvent("OnWebTwainPreExecute", function () {
-});
+
+Dynamsoft.DWT.RegisterEvent("OnWebTwainError", function (error) {});
+
+Dynamsoft.DWT.RegisterEvent("OnWebTwainPostExecute", function () {});
+
+Dynamsoft.DWT.RegisterEvent("OnWebTwainPreExecute", function () {});
 ```
 
 ---
@@ -590,7 +608,7 @@ UpdateCert(
     url: string,
     optionalAsyncSuccessFunc?: () => void,
     optionalAsyncFailureFunc?: (
-        errorCode: number, 
+        errorCode: number,
         errorString: string) => void
 );
 ```
@@ -634,8 +652,8 @@ UpdateCert(
 // overwrite the following function in dynamsoft.webtwain.install.js
    Dynamsoft.OnSSLCertInfo = function (sslExpiredDate) {
         console.log(sslExpiredDate);
-   Dynamsoft.DWT.UpdateCert("https://domainlocation.com/cert.zip", 
-        function () { console.log("OK"); }, 
+   Dynamsoft.DWT.UpdateCert("https://domainlocation.com/cert.zip",
+        function () { console.log("OK"); },
         function (errorCode, errorString) { console.log(errorString);}
     );
   };
@@ -826,7 +844,7 @@ Default value: `127.0.0.1`.
 ---
 
 ## IfAddMD5InUploadHeader
-  
+
 Whether or not an md5 header `dwt-md5` should be included in HTTP upload requests. Note that this header is not a standard header and may be deemed invalid on some web servers.
 
 **Syntax**
@@ -942,7 +960,7 @@ Sets or returns the product key for the library. A valid product key is required
 **Syntax**
 
 ```typescript
-ProductKey: string;	
+ProductKey: string;
 ```
 
 **Availability**
@@ -970,13 +988,13 @@ ProductKey: string;
 **Example**
 
 ```typescript
-Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******';
+Dynamsoft.DWT.ProductKey = "t0076lQAAAGNcO61He******";
 ```
 
 If you have multiple license keys, separate them with semicolons like below:
 
 ```typescript
-Dynamsoft.DWT.ProductKey = 't0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******';
+Dynamsoft.DWT.ProductKey = "t0076lQAAAGNcO61He******;t0076lQAAAGNcO61He******";
 ```
 
 ---
@@ -1051,7 +1069,7 @@ ServiceInstallerLocation: string;
 
 ## UseDefaultViewer
 
-Whether to use the built-in viewer. 
+Whether to use the built-in viewer.
 
 **Syntax**
 
@@ -1202,15 +1220,17 @@ RegisterEvent("OnWebTwainReady", function () {});
 </div>
 
 **Example**
+
 ```javascript
-Dynamsoft.DWT.RegisterEvent('OnWebTwainReady', 
-  Dynamsoft_OnReady //The typical function for initializing the environment once the resources have loaded
-); 
+Dynamsoft.DWT.RegisterEvent(
+    "OnWebTwainReady",
+    Dynamsoft_OnReady, //The typical function for initializing the environment once the resources have loaded
+);
 
 var DWTObject;
 
 function Dynamsoft_OnReady() {
-  DWTObject = Dynamsoft.DWT.GetWebTwain('dwtcontrolContainer'); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
+    DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer"); // Get the Dynamic Web TWAIN object that is embedded in the div with id 'dwtcontrolContainer'
 }
 ```
 
@@ -1251,15 +1271,12 @@ RegisterEvent("OnWebTwainError", function () {});
 **Example**
 
 ```javascript
-Dynamsoft.DWT.RegisterEvent('OnWebTwainError', 
-  Dynamsoft_OnError 
-); 
+Dynamsoft.DWT.RegisterEvent("OnWebTwainError", Dynamsoft_OnError);
 
- 
-function Dynamsoft_OnError(error){
-  // error handling
-  console.error(error.message);
-} 
+function Dynamsoft_OnError(error) {
+    // error handling
+    console.error(error.message);
+}
 ```
 
 ---
@@ -1272,13 +1289,11 @@ The default behavior is to hide the mask and loading spinner triggered by `OnWeb
 
 You may override this function to implement your own post-execute scenario. Please refer to this [article](/_articles/extended-usage/ui-customization.md#loading-bar-and-backdrop).
 
-
 **Syntax**
 
 ```typescript
 RegisterEvent("OnWebTwainPostExecute", function () {});
 ```
-
 
 **Availability**
 
@@ -1306,7 +1321,7 @@ RegisterEvent("OnWebTwainPostExecute", function () {});
 
 ## OnWebTwainPreExecute
 
-This event triggers at the beginning of an asynchronous API. 
+This event triggers at the beginning of an asynchronous API.
 
 The default behavior is to display a mask and a loading spinner.
 

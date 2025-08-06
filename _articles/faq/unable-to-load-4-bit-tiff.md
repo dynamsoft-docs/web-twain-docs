@@ -6,6 +6,7 @@ title: Why am I unable to load the TIFF file into Dynamic Web TWAIN?
 keywords: Dynamic Web TWAIN, Error Troubleshooting, tiff
 breadcrumbText: Why am I unable to load the TIFF file into Dynamic Web TWAIN?
 description: Why am I unable to load the TIFF file into Dynamic Web TWAIN?
+date: 2025-04-23 16:09:35 +0800
 ---
 
 # Error Troubleshooting

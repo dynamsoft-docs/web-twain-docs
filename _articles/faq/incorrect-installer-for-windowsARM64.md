@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN prompts the .deb installer for Windows
 keywords: Dynamic Web TWAIN, Error Troubleshooting, deb, Windows, ARM64
 breadcrumbText: Dynamic Web TWAIN prompts the .deb installer for Windows
 description: Dynamic Web TWAIN prompts the .deb installer for Windows
+date: 2025-04-17 17:43:22 +0800
 ---
 
 # Error Troubleshooting

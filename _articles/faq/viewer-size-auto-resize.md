@@ -6,6 +6,7 @@ title: Can the size of the image viewer auto resize when the browser window size
 keywords: Dynamic Web TWAIN, Image Viewer, auto resize
 breadcrumbText: Can the size of the image viewer auto resize when the browser window size changes?
 description: Can the size of the image viewer auto resize when the browser window size changes?
+date: 2021-12-09 11:34:50 +0800
 ---
 
 # Image Viewer

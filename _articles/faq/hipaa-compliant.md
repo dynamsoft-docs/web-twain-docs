@@ -6,6 +6,7 @@ title: Is the Dynamic Web TWAIN SDK HIPAA compliant?
 keywords: Dynamic Web TWAIN, Security, HIPAA compliant
 breadcrumbText: Is the Dynamic Web TWAIN SDK HIPAA compliant?
 description: Is the Dynamic Web TWAIN SDK HIPAA compliant?
+date: 2021-11-29 18:33:59 +0800
 ---
 
 # Security

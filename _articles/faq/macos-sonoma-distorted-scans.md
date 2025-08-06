@@ -6,6 +6,7 @@ title: Why are my images coming out distorted in MacOS Sonoma?
 keywords: Dynamic Web TWAIN, MacOS, Sonoma, Colour, Grayscale, Greyscale, distorted
 breadcrumbText: Why are my images coming out distorted in MacOS Sonoma?
 description: Why are my images coming out distorted in MacOS Sonoma?
+date: 2023-10-14 02:40:37 +0800
 ---
 
 # MacOS Sonoma issue identified

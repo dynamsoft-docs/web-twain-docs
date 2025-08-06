@@ -13,18 +13,17 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Methods**
 
-
-| [`ClearImageTags()`](#clearimagetags)           | [`RenameTag()`](#renametag)                             | [`RemoveTag()`](#removetag)                                         | [`GetTagList()`](#gettaglist)                       |
-| [`FilterImagesByTag()`](#filterimagesbytag)     | [`ClearFilter()`](#clearfilter)                         | [`SetDefaultTag()`](#setdefaulttag)                                 | [`TagImages()`](#tagimages)                         |
-| [`GetImageBitDepth()`](#getimagebitdepth)       | [`GetImageSize()`](#getimagesize)                       | [`GetImageSizeWithSpecifiedType()`](#getimagesizewithspecifiedtype) | [`GetSelectedImagesSize()`](#getselectedimagessize) |
-| [`GetImageHeight()`](#getimageheight)           | [`GetImageWidth()`](#getimagewidth)                     | [`GetImagePartURL()`](#getimageparturl)                             | [`GetImageURL()`](#getimageurl)                     |
-| [`GetImageXResolution()`](#getimagexresolution) | [`GetImageYResolution()`](#getimageyresolution)         | [`GetSkewAngle()`](#getskewangle)                                   | [`GetSkewAngleEx()`](#getskewangleex)               |
-| [`ImageIDToIndex()`](#imageidtoindex)           | [`IndexToImageID()`](#indextoimageid)                   | [`IsBlankImage()`](#isblankimage)                                   | [`IsBlankImageExpress()`](#isblankimageexpress)     |
-| [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                             | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                     |
-| [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages) | [`SelectImages()`](#selectimages)                                   | [`GetTagListByIndex()`](#gettaglistbyindex)         |
-| [`CreateDocument()`](#createdocument)           | [`OpenDocument()`](#opendocument)                       | [`GetCurrentDocumentName()`](#getcurrentdocumentname)               | [`RenameDocument()`](#renamedocument)               |
-| [`RemoveDocument()`](#removedocument)           | [`GetDocumentInfoList()`](#getdocumentinfolist)         | [`CopyToDocumentAsync()`](#copytodocumentasync)                     | [`MoveToDocumentAsync()`](#movetodocumentasync)     |
-| [`IsBlankImageAsync()`](#isblankimageasync)     |  [`updateImage()`](#updateimage)                        |
+| [`ClearImageTags()`](#clearimagetags)           | [`RenameTag()`](#renametag)                     | [`RemoveTag()`](#removetag)                                         | [`GetTagList()`](#gettaglist)                         |
+| [`FilterImagesByTag()`](#filterimagesbytag)     | [`ClearFilter()`](#clearfilter)                 | [`SetDefaultTag()`](#setdefaulttag)                                 | [`TagImages()`](#tagimages)                           |
+| [`GetImageBitDepth()`](#getimagebitdepth)       | [`GetImageSize()`](#getimagesize)               | [`GetImageSizeWithSpecifiedType()`](#getimagesizewithspecifiedtype) | [`GetSelectedImagesSize()`](#getselectedimagessize)   |
+| [`GetImageHeight()`](#getimageheight)           | [`GetImageWidth()`](#getimagewidth)             | [`GetImagePartURL()`](#getimageparturl)                             | [`GetImageURL()`](#getimageurl)                       |
+| [`GetImageXResolution()`](#getimagexresolution) | [`GetImageYResolution()`](#getimageyresolution) | [`GetSkewAngle()`](#getskewangle)                                   | [`GetSkewAngleEx()`](#getskewangleex)                 |
+| [`ImageIDToIndex()`](#imageidtoindex)           | [`IndexToImageID()`](#indextoimageid)           | [`IsBlankImage()`](#isblankimage)                                   | [`IsBlankImageExpress()`](#isblankimageexpress)       |
+| [`SelectAllImages()`](#selectallimages)         | [`MoveImage()`](#moveimage)                     | [`SwitchImage()`](#switchimage)                                     | [`RemoveImage()`](#removeimage)                       |
+| [`IsBlankImageAsync()`](#isblankimageasync)     | [`RemoveAllImages()`](#removeallimages)         | [`RemoveAllSelectedImages()`](#removeallselectedimages)             | [`SelectImages()`](#selectimages)                     |
+| [`GetTagListByIndex()`](#gettaglistbyindex)     | [`CreateDocument()`](#createdocument)           | [`OpenDocument()`](#opendocument)                                   | [`GetCurrentDocumentName()`](#getcurrentdocumentname) |
+| [`RenameDocument()`](#renamedocument)           | [`RemoveDocument()`](#removedocument)           | [`GetDocumentInfoList()`](#getdocumentinfolist)                     | [`CopyToDocumentAsync()`](#copytodocumentasync)       |
+| [`MoveToDocumentAsync()`](#movetodocumentasync) | [`updateImage()`](#updateimage)                 |                                                                     |                                                       |
 
 <!--* [GetImageBitDepthAsync()](#getimagebitdepthasync)-->
 
@@ -34,16 +33,14 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Properties**
 
-
 | [`BlankImageCurrentStdDev`](#blankimagecurrentstddev)     | [`BlankImageMaxStdDev`](#blankimagemaxstddev)     | [`BlankImageThreshold`](#blankimagethreshold) | [`BufferMemoryLimit`](#buffermemorylimit)         |
 | [`CurrentImageIndexInBuffer`](#currentimageindexinbuffer) | [`HowManyImagesInBuffer`](#howmanyimagesinbuffer) | [`IfAllowLocalCache`](#ifallowlocalcache)     | [`SelectedImagesIndices`](#selectedimagesindices) |
-| [`MaxImagesInBuffer`](#maximagesinbuffer)                 |
+| [`MaxImagesInBuffer`](#maximagesinbuffer)                 |                                                   |                                               |                                                   |
 
 **Events**
 
-
-| [`OnBufferChanged`](#onbufferchanged) | [`OnBitmapChanged`](#onbitmapchanged) | [`OnIndexChangeDragDropDone`](#onindexchangedragdropdone) | [`OnTopImageInTheViewChanged`](#ontopimageintheviewchanged) |
-| [`OnDiskExceedLimit`](#ondiskexceedlimit) |
+| [`OnBufferChanged`](#onbufferchanged)                       | [`OnBitmapChanged`](#onbitmapchanged)     | [`OnIndexChangeDragDropDone`](#onindexchangedragdropdone) |
+| [`OnTopImageInTheViewChanged`](#ontopimageintheviewchanged) | [`OnDiskExceedLimit`](#ondiskexceedlimit) |                                                           |
 
 ---
 
@@ -327,7 +324,7 @@ FilterImagesByTag(tag: string): boolean;
 
 ## ClearFilter()
 
-Stop filtering images by tag. 
+Stop filtering images by tag.
 
 **Syntax**
 
@@ -654,7 +651,7 @@ GetSkewAngle(
     index: number
 ): number;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread`
 GetSkewAngle(
     index: number,
     successCallback: (angle: number) => void,
@@ -667,9 +664,11 @@ GetSkewAngle(
 `index`: Specify the image.
 
 `successCallback`: A callback function that is executed if the request succeeds.
+
 - `angle`: The skew angle.
 
-`failureCallback`: A callback function that is executed if the request fails. 
+`failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -712,7 +711,7 @@ GetSkewAngleEx(
     bottom: number
 ): number;
 
-// Call this API asynchronously to avoid blocking the browser's main thread 
+// Call this API asynchronously to avoid blocking the browser's main thread
 GetSkewAngleEx(
     index: number,
     left: number,
@@ -737,9 +736,11 @@ GetSkewAngleEx(
 `bottom`: The y-coordinate of the lower-right corner of the rectangle.
 
 `successCallback`: A callback function that is executed if the request succeeds.
+
 - `angle`: The skew angle.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -942,6 +943,7 @@ GetImagePartURL(index: number, width: number, height: number): string;
 The returned URL looks like this: 'dwt://dwt_trial_13000404/img?id=306159652&index=0&t=1502184632022'.
 
 You get the original size (a, b) of the image in PNG format in Service Mode
+
 - if either width or height is not set or
 - if either width or height is set to -1 or
 - if either width or height is larger than the original width or height
@@ -998,6 +1000,7 @@ GetImageURL(index: number, width: number, height: number): string;
 The returned URL looks like this: "https://127.0.0.1:18623/dwt/dwt_17110818/img?id=795151779&index=1&t=1640936181588".
 
 You get the original size (a, b) of the image in PNG format in Service Mode
+
 - if either width or height is not set or
 - if either width or height is set to -1 or
 - if either width or height is larger than the original width or height
@@ -1660,22 +1663,27 @@ IsBlankImage(index: number): boolean;
 
 ---
 
-
 **Usage Notes**
 
 See also:
+
 - [`BlankImageCurrentStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagecurrentstddev)
 - [`BlankImageMaxStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagemaxstddev)
 - [`BlankImageThreshold()`](/_articles/info/api/WebTwain_Buffer.md#blankimagethreshold)
 
 ## IsBlankImageAsync()
 
-Check whether the specified image is blank based on connected blocks.
+Check whether the specified image is blank. This API employs a different algorithm than the one used in [`IsBlankImage()`](/_articles/info/api/WebTwain_Buffer.md#isblankimage) and [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress) and is the recommended blank image detection method.
+
+You can set `minBlockHeight` and `maxBlockHeight` to the expected text pixel height. In most cases, these values do not require adjustment.
+
+> [!NOTE]
+> `IsBlankImageAsync()` **is not** related to [`BlankImageCurrentStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagecurrentstddev), [`BlankImageMaxStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagemaxstddev), or [`BlankImageThreshold()`](/_articles/info/api/WebTwain_Buffer.md#blankimagethreshold).
 
 **Syntax**
 
 ```typescript
-IsBlankImageAsync(index: number, 
+IsBlankImageAsync(index: number,
   options?: {
     minBlockHeight?: number,
     maxBlockHeight?: number,
@@ -1712,15 +1720,6 @@ IsBlankImageAsync(index: number,
 
 </table>
 </div>
-
-**Usage Notes**
-
-This API employs a different algorithm than the one used in [`IsBlankImage()`](/_articles/info/api/WebTwain_Buffer.md#isblankimage) and [`IsBlankImageExpress()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageexpress). It utilizes the connected blocks method to determine whether a page contains text or graphics.
-
-You can specify `minBlockHeight` and `maxBlockHeight` based on character height. In most cases, these values do not require adjustment.
-
-> [!NOTE]
-> `IsBlankImageAsync()` **is not** related to [`BlankImageCurrentStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagecurrentstddev), [`BlankImageMaxStdDev()`](/_articles/info/api/WebTwain_Buffer.md#blankimagemaxstddev), or [`BlankImageThreshold()`](/_articles/info/api/WebTwain_Buffer.md#blankimagethreshold).
 
 ---
 
@@ -1885,11 +1884,11 @@ RegisterEvent('OnBitmapChanged',
 
 `indices`: Array of the changed index(indices).
 
-`type`: Operation type.
-   1 means new image(s) were added at the tail,
-   2 means image(s) were inserted before the current index,
-   3 means image(s) are deleted,
-   4 means image(s) are modified,
+`type`: Operation type:
+  - `1`: new image(s) added at the tail
+  - `2`: image(s) inserted before the current index
+  - `3`: image(s) deleted
+  - `4`: image(s) modified
 
 `index`: Index of the current image.
 
@@ -1918,12 +1917,9 @@ RegisterEvent('OnBitmapChanged',
 **Example**
 
 ```javascript
-DWTObject.RegisterEvent(
-  "OnBitmapChanged",
-  function (updatedIndices, operationType, currentIndex) {
+DWTObject.RegisterEvent("OnBitmapChanged", function (updatedIndices, operationType, currentIndex) {
     console.log(updatedIndices);
-  }
-);
+});
 ```
 
 ---
@@ -2113,10 +2109,11 @@ DWTObject.CreateDocument("Document1");
 DWTObject.CreateDocument("Document2");
 DWTObject.OpenDocument("Document1");
 await DWTObject.SelectSourceAsync();
-await DWTObject.AcquireImageAsync({   //scan 5 Images
-        IfCloseSourceAfterAcquire: true 
-    });
-await DWTObject.CopyToDocumentAsync("Document1", "Document2", [0,1]);
+await DWTObject.AcquireImageAsync({
+    //scan 5 Images
+    IfCloseSourceAfterAcquire: true,
+});
+await DWTObject.CopyToDocumentAsync("Document1", "Document2", [0, 1]);
 DWTObject.OpenDocument("Document2");
 ```
 
@@ -2166,10 +2163,10 @@ DWTObject.CreateDocument("Document1");
 DWTObject.OpenDocument("Document1"); //Need to call OpenDocument after CreateDocument.
 DWTObject.AcquireImage(successCallback, failureCallback);
 function successCallback() {
-  console.log("successful");
+    console.log("successful");
 }
 function failureCallback(errorCode, errorString) {
-  alert(errorString);
+    alert(errorString);
 }
 ```
 
@@ -2230,10 +2227,11 @@ DWTObject.CreateDocument("Document1");
 DWTObject.CreateDocument("Document2");
 DWTObject.OpenDocument("Document1");
 await DWTObject.SelectSourceAsync();
-await DWTObject.AcquireImageAsync({   //scan 5 Images
-        IfCloseSourceAfterAcquire: true 
-    });
-await DWTObject.MoveToDocumentAsync("Document1", "Document2", [0,1]);
+await DWTObject.AcquireImageAsync({
+    //scan 5 Images
+    IfCloseSourceAfterAcquire: true,
+});
+await DWTObject.MoveToDocumentAsync("Document1", "Document2", [0, 1]);
 DWTObject.OpenDocument("Document2");
 ```
 
@@ -2285,10 +2283,10 @@ DWTObject.CreateDocument("Document3");
 DWTObject.OpenDocument("Document2"); //Need to call OpenDocument after CreateDocument.
 DWTObject.AcquireImage(successCallback, failureCallback);
 function successCallback() {
-  console.log("successful");
+    console.log("successful");
 }
 function failureCallback(errorCode, errorString) {
-  alert(errorString);
+    alert(errorString);
 }
 ```
 
@@ -2526,10 +2524,10 @@ RegisterEvent('OnDiskExceedLimit',
 
 **Usage notes**
 
-| System      | Triggered when       |
-| ----------- | -------------------- |
-| Windows x86 | < 1.2GB              |
-| Windows x64 | < 4GB                |
-| macOS 32bit | < 1.2GB              |
-| macOS 64bit | < 4GB                |
-| Linux       | < 4GB                |
+| System      | Triggered when |
+| ----------- | -------------- |
+| Windows x86 | < 1.2GB        |
+| Windows x64 | < 4GB          |
+| macOS 32bit | < 1.2GB        |
+| macOS 64bit | < 4GB          |
+| Linux       | < 4GB          |

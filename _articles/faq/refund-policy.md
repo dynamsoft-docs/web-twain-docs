@@ -6,6 +6,7 @@ title: What's your refund policy?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, refund, moneyback guarantee
 breadcrumbText: What's your refund policy?
 description: What's your refund policy?
+date: 2021-12-04 02:34:30 +0800
 ---
 
 # Licensing and Purchase
