@@ -6,6 +6,7 @@ title: Do I get free upgrade if there is a newer version available?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, free, upgrade
 breadcrumbText: Do I get free upgrade if there is a newer version available?
 description: Do I get free upgrade if there is a newer version available?
+date: 2021-12-04 02:34:30 +0800
 ---
 
 # Licensing and Purchase

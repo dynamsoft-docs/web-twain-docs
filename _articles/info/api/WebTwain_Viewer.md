@@ -8,36 +8,34 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Viewer APIs Page
 needGenerateH3Content: true
 ---
 
-# `{WebTwainObject}.Viewer`
+# {WebTwainObject}.Viewer
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 
-| [`bind()`](#bind) | [`clearSelectedAreas()`](#clearselectedareas) | [`createCustomElement()`](#createcustomelement) | [`createImageEditor()`](#createimageeditor) |
-| [`createThumbnailViewer()`](#createthumbnailviewer) | [`first()`](#first) | [`fitWindow()`](#fitwindow) | [`gotoPage()`](#gotopage) |
-| [`getVisiblePagesInfo()`](#getvisiblepagesinfo) | [`hide()`](#hide) | [`last()`](#last) | [`next()`](#next) |
-| [`off()`](#off) | [`on()`](#on) | [`previous()`](#previous) | [`render()`](#render) |
-| [`setButtonClass()`](#setbuttonclass) | [`setSelectedAreas()`](#setselectedareas) | [`setViewMode()`](#setviewmode) | [`show()`](#show) |
-| [`unbind()`](#unbind) | [`updateCheckboxStyle()`](#updatecheckboxstyle) | [`updatePageNumberStyle()`](#updatepagenumberstyle) | [`updateSelectionBoxStyle()`](#updateselectionboxstyle) | 
-
+| [`bind()`](#bind)                                   | [`clearSelectedAreas()`](#clearselectedareas)   | [`createCustomElement()`](#createcustomelement)     | [`createImageEditor()`](#createimageeditor)             |
+| [`createThumbnailViewer()`](#createthumbnailviewer) | [`first()`](#first)                             | [`fitWindow()`](#fitwindow)                         | [`gotoPage()`](#gotopage)                               |
+| [`getVisiblePagesInfo()`](#getvisiblepagesinfo)     | [`hide()`](#hide)                               | [`last()`](#last)                                   | [`next()`](#next)                                       |
+| [`off()`](#off)                                     | [`on()`](#on)                                   | [`previous()`](#previous)                           | [`render()`](#render)                                   |
+| [`setButtonClass()`](#setbuttonclass)               | [`setSelectedAreas()`](#setselectedareas)       | [`setViewMode()`](#setviewmode)                     | [`show()`](#show)                                       |
+| [`unbind()`](#unbind)                               | [`updateCheckboxStyle()`](#updatecheckboxstyle) | [`updatePageNumberStyle()`](#updatepagenumberstyle) | [`updateSelectionBoxStyle()`](#updateselectionboxstyle) |
 
 **Properties**
 
-| [`acceptDrop`](#acceptdrop) | [`allowPageDragging`](#allowpagedragging) | [`allowSlide`](#allowslide) | [`autoChangeIndex`](#autochangeindex) |
-| [`background`](#background) | [`border`](#border) | [`cursor`](#cursor) | [`disableFocusOutline`](#disablefocusoutline) |
-| [`height`](#height) | [`idPostfix`](#idpostfix) | [`ifAutoScroll`](#ifautoscroll) | [`innerBorder`](#innerborder) |
-| [`pageMargin`](#pagemargin) | [`selectedAreaBorderColor`](#selectedareabordercolor) | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder) |
-| [`selectionMode`](#selectionmode) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode) | [`width`](#width) |
-| [`zoom`](#zoom) | [`zoomOrigin`](#zoomorigin) |  |  | 
-
+| [`acceptDrop`](#acceptdrop)       | [`allowPageDragging`](#allowpagedragging)               | [`allowSlide`](#allowslide)                         | [`autoChangeIndex`](#autochangeindex)         |
+| [`background`](#background)       | [`border`](#border)                                     | [`cursor`](#cursor)                                 | [`disableFocusOutline`](#disablefocusoutline) |
+| [`height`](#height)               | [`idPostfix`](#idpostfix)                               | [`ifAutoScroll`](#ifautoscroll)                     | [`innerBorder`](#innerborder)                 |
+| [`pageMargin`](#pagemargin)       | [`selectedAreaBorderColor`](#selectedareabordercolor)   | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)   |
+| [`selectionMode`](#selectionmode) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)                 | [`width`](#width)                             |
+| [`zoom`](#zoom)                   | [`zoomOrigin`](#zoomorigin)                             |                                                     |                                               |
 
 **Events**
 
-| [`click`](#on)               | [`contextmenu`](#on) | [`dblclick`](#on)                 | [`mousemove`](#on)                   |
-| [`mousedown`](#on)       | [`mouseup`](#on)         | [`mouseout`](#on)                 | [`mouseover`](#on)                   |
-| [`keydown`](#on)           | [`keyup`](#on)             | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
-| [`pageRendered`](#pagerendered) | [`resize`](#resize)           |
+| [`click`](#on)                  | [`contextmenu`](#on) | [`dblclick`](#on)                       | [`mousemove`](#on)                          |
+| [`mousedown`](#on)              | [`mouseup`](#on)     | [`mouseout`](#on)                       | [`mouseover`](#on)                          |
+| [`keydown`](#on)                | [`keyup`](#on)       | [`pageAreaSelected`](#pageareaselected) | [`pageAreaUnselected`](#pageareaunselected) |
+| [`pageRendered`](#pagerendered) | [`resize`](#resize)  |
 
 ---
 
@@ -61,18 +59,19 @@ bind(element: HTMLDivElement | HTMLElement) : boolean;
 var DWTObject;
 Dynamsoft.DWT.CreateDWTObjectEx(
     {
-        WebTwainId: "dwtControl"
+        WebTwainId: "dwtControl",
     },
     function (obj) {
         DWTObject = obj;
         DWTObject.Viewer.bind("dwtcontrolContainer");
-        DWTObject.Viewer.width=600;
-        DWTObject.Viewer.height=800;
-        DWTObject.Viewer.show();    
-    }, 
+        DWTObject.Viewer.width = 600;
+        DWTObject.Viewer.height = 800;
+        DWTObject.Viewer.show();
+    },
     function (err) {
         console.log(err);
-    });
+    },
+);
 ```
 
 **Availability**
@@ -161,9 +160,9 @@ createCustomElement(
 
 `element`: Specify the HTMLDivElement.
 
- `location`: Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
+`location`: Define where to place the custom element. The allowed values are "left" and "right", and the default value is "right".
 
- `ifFull`: The default value is `false`, that is, the created [`CustomElement`](/_articles/info/api/interfaces.md#customelement) is displayed according to the set area. If set to true, the main viewer will be covered by the [`CustomElement`](/_articles/info/api/interfaces.md#customelement).
+`ifFull`: The default value is `false`, that is, the created [`CustomElement`](/_articles/info/api/interfaces.md#customelement) is displayed according to the set area. If set to true, the main viewer will be covered by the [`CustomElement`](/_articles/info/api/interfaces.md#customelement).
 
 **Arguments**
 
@@ -196,11 +195,7 @@ createCustomElement(
 ```javascript
 var myElement = document.createElement("div");
 myElement.style = "width:100px;height:200px;background:red";
-var customElement = DWTObject.Viewer.createCustomElement(
-  myElement,
-  "right",
-  false
-);
+var customElement = DWTObject.Viewer.createCustomElement(myElement, "right", false);
 customElement.show();
 ```
 
@@ -565,8 +560,8 @@ var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.background = "rgb(0,0,255)";
 objThumbnailViewer.show();
 
-objThumbnailViewer.on("click",LeftClick);
-objThumbnailViewer.on("contextmenu",RightClick);
+objThumbnailViewer.on("click", LeftClick);
+objThumbnailViewer.on("contextmenu", RightClick);
 objThumbnailViewer.on("pageRendered", PageRendered);
 ```
 
@@ -615,7 +610,7 @@ The following table shows the events available to a ThumbnailViewer object.
 | `mousemove`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over                                  |
 | `mousedown`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed                              |
 | `mouseup`      | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released                             |
-| `resize`       | width:number, height:number                     | Triggered when width & height of the ThumbnailViewer object changes. |
+| `resize`       | width:number, height:number                       | Triggered when width & height of the ThumbnailViewer object changes. |
 | `pageRendered` | index: number                                     | Triggered when a page is rendered.                                   |
 | `mouseout`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers           |
 | `mouseover`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when mouse is hovering, only for desktop browsers          |
@@ -1007,7 +1002,7 @@ render(): boolean;
 
 ```javascript
 DWTObject.Viewer.on("pageRendered", function (index) {
-  console.log(index);
+    console.log(index);
 });
 
 DWTObject.Viewer.render(); //It will trigger the pageRendered event
@@ -1021,7 +1016,7 @@ Set the CSS class name of the specified button.
 
 **Syntax**
 
-``` typescript
+```typescript
 setButtonClass(
     name: string,
     className: string
@@ -1062,7 +1057,7 @@ Use this method to fine-tune the buttons in the viewer with CSS.
 
 **Example**
 
-``` javascript
+```javascript
 DWTObject.Viewer.setButtonClass("crop", "CropClass");
 ```
 
@@ -1116,18 +1111,18 @@ This method only works when [`cursor`](/_articles/info/api/WebTwain_Viewer.md#cu
 
 ```javascript
 DWTObject.Viewer.setSelectedAreas([
-  {
-    left: 0,
-    top: 0,
-    right: 100,
-    bottom: 100,
-  },
-  {
-    left: 200,
-    top: 200,
-    right: 400,
-    bottom: 500,
-  },
+    {
+        left: 0,
+        top: 0,
+        right: 100,
+        bottom: 100,
+    },
+    {
+        left: 200,
+        top: 200,
+        right: 400,
+        bottom: 500,
+    },
 ]);
 ```
 
@@ -1177,7 +1172,6 @@ setViewMode(
 **Usage notes**
 
 Setting the view mode as -1 by -1 is equivalent to setting [`singlePageMode`](/_articles/info/api/WebTwain_Viewer.md#singlepagemode) to true.
-
 
 **Example**
 
@@ -1303,7 +1297,7 @@ acceptDrop: boolean;
 </table>
 </div>
 
- **Example**
+**Example**
 
 ```javascript
 DWTObject.Viewer.acceptDrop = true;
@@ -1386,7 +1380,7 @@ allowPageDragging: boolean;
 **Example**
 
 ```javascript
-DWTObject.Viewer.setViewMode(2,2);
+DWTObject.Viewer.setViewMode(2, 2);
 DWTObject.Viewer.cursor = "pointer";
 DWTObject.Viewer.allowPageDragging = false; //Disable drag&drop.
 ```
@@ -1517,8 +1511,8 @@ cursor: string;
 
 The allowed values are:
 
-| Value       | Description                                                                                                                                                 |
-| :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Value       | Description                                                                                                                                          |
+| :---------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `default`   | The shape is ![default](/assets/imgs/default.gif).                                                                                                   |
 | `crosshair` | The shape is ![crosshair](/assets/imgs/crosshair.gif)(default setting), you can select one or multiple area(s) on the page.                          |
 | `pointer`   | The shape is ![pointer](/assets/imgs/pointer.gif). If the displayed page is bigger than the viewer, the page can be moved.                           |
@@ -1707,6 +1701,7 @@ innerBorder: string;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -1785,8 +1780,8 @@ DWTObject.Viewer.pageMargin = 10;
 
 ## selectedAreaBorderColor
 
-<div class="blockquote-note"></div>
-> This API has been deprecated as of release 18.4. 
+> [!NOTE]
+> This API has been deprecated as of release 18.4.
 
 Please use the [`updateSelectionBoxStyle()`](/_articles/info/api/WebTwain_Viewer.md#updateselectionboxstyle) function.
 
@@ -2020,8 +2015,7 @@ DWTObject.Viewer.singlePageMode = true;
 
 ## updateSelectionBoxStyle()
 
-Sets the graphical style for the selection box in the Viewer. 
-
+Sets the graphical style for the selection box in the Viewer.
 
 **Syntax**
 
@@ -2059,12 +2053,12 @@ updateSelectionBoxStyle(selectionBoxStyleSettings?: SelectionBoxStyleSettings): 
 ```javascript
 let styleSettings = {
     borderColor: "rgba(255, 105, 110, 1)",
-    borderWidth:4,
-    lineDash:[4,2],
-    handleWidth:10,
-    handleHeight:10,
+    borderWidth: 4,
+    lineDash: [4, 2],
+    handleWidth: 10,
+    handleHeight: 10,
     handleColor: "rgba(252, 92, 255, 1)",
-}
+};
 
 DWTObject.Viewer.updateSelectionBoxStyle(styleSettings);
 ```
@@ -2284,7 +2278,6 @@ updatePageNumberStyle(pageNumberSettings?: PageNumberSettings): boolean;
 </table>
 </div>
 
-
 ---
 
 ## selectionMode
@@ -2328,10 +2321,10 @@ Please refer to [`EnumDWT_SelectionMode`](/_articles/info/api/Dynamsoft_Enum.md#
 **Example**
 
 ```javascript
-DWTObject.Viewer.setViewMode(2,2);
+DWTObject.Viewer.setViewMode(2, 2);
 DWTObject.Viewer.cursor = "pointer";
 DWTObject.Viewer.updateCheckboxStyle({
-    visibility:"visible",
+    visibility: "visible",
 });
 DWTObject.Viewer.selectionMode = Dynamsoft.DWT.EnumDWT_SelectionMode.Multiple; // Multiple Selection
 ```
@@ -2345,7 +2338,10 @@ Set the zoom origin.
 **Syntax**
 
 ```typescript
-zoomOrigin: {x: string; y: string;};
+zoomOrigin: {
+    x: string;
+    y: string;
+}
 ```
 
 **Parameters**
@@ -2383,7 +2379,7 @@ The default value is `{x:"center", y:"center"}`, which means the zoom origin is 
 **Example**
 
 ```javascript
-DWTObject.Viewer.zoomOrigin = {x:"left", y:"top"}; // Set the zoom origin to top left corner.
+DWTObject.Viewer.zoomOrigin = { x: "left", y: "top" }; // Set the zoom origin to top left corner.
 ```
 
 ---
@@ -2408,6 +2404,7 @@ on(
 `eventName`: Specify the event. Value: click, contextmenu, dblclick, mousemove, mousedown, mouseup, mouseout, mouseover, keydown, keyup, pageAreaSelected, pageAreaUnselected, pageRendered and resize.
 
 `callback`: Specify the callback.
+
 - `dwtEvent`: The viewer-specific event object. Please refer to [`ViewerEvent`](/_articles/info/api/interfaces.md#viewerevent) and <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent" target="_blank">`KeyboardEvent`</a>.
 - `domEvent`: The original mouse event object. Please refer to <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent" target="_blank">`MouseEvent`</a>.
 
@@ -2442,43 +2439,43 @@ The events `mouseout`, `mouseover`, `keydown` and `keyup` are only triggered on 
 
 ```javascript
 DWTObject.Viewer.on("click", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+    console.log(dwtEvent, domEvent);
 });
 
 DWTObject.Viewer.on("dblclick", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+    console.log(dwtEvent, domEvent);
 });
 
 DWTObject.Viewer.on("contextmenu", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+    console.log(dwtEvent, domEvent);
 });
 
 DWTObject.Viewer.on("mousemove", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+    console.log(dwtEvent, domEvent);
 });
 
 DWTObject.Viewer.on("mousedown", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+    console.log(dwtEvent, domEvent);
 });
 
 DWTObject.Viewer.on("mouseup", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+    console.log(dwtEvent, domEvent);
 });
 
 DWTObject.Viewer.on("mouseout", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+    console.log(dwtEvent, domEvent);
 });
 
 DWTObject.Viewer.on("mouseover", function (dwtEvent, domEvent) {
-  console.log(dwtEvent, domEvent);
+    console.log(dwtEvent, domEvent);
 });
 
 DWTObject.Viewer.on("keydown", function (keyboardEvent) {
-  console.log(keyboardEvent);
+    console.log(keyboardEvent);
 });
 
 DWTObject.Viewer.on("keyup", function (keyboardEvent) {
-  console.log(keyboardEvent);
+    console.log(keyboardEvent);
 });
 ```
 
@@ -2533,7 +2530,6 @@ DWTObject.Viewer.off("pageAreaSelected");
 
 If no listener is specified, all listeners will be removed.
 
-
 ---
 
 ### pageAreaSelected
@@ -2580,7 +2576,7 @@ on('pageAreaSelected',
 
 ```javascript
 DWTObject.Viewer.on("pageAreaSelected", function (sImageIndex, rect) {
-  console.log(sImageIndex);
+    console.log(sImageIndex);
 });
 
 DWTObject.Viewer.off("pageAreaSelected");
@@ -2630,11 +2626,7 @@ on('pageAreaUnselected',
 
 ```javascript
 DWTObject.Viewer.on("pageAreaUnselected", function (sImageIndex) {
-  console.log(
-    "The selected areas on the page with index " +
-      sImageIndex +
-      " have been cleared"
-  );
+    console.log("The selected areas on the page with index " + sImageIndex + " have been cleared");
 });
 
 DWTObject.Viewer.off("pageAreaUnselected");
@@ -2684,7 +2676,7 @@ on('pageRendered',
 
 ```javascript
 DWTObject.Viewer.on("pageRendered", function (index) {
-  console.log(index);
+    console.log(index);
 });
 DWTObject.Viewer.render(); //It will trigger the pageRendered event
 ```
@@ -2735,7 +2727,7 @@ on('resize',
 
 ```javascript
 DWTObject.Viewer.on("resize", function (width, height) {
-  console.log(width, height);
+    console.log(width, height);
 });
 DWTObject.Viewer.width = 100;
 ```

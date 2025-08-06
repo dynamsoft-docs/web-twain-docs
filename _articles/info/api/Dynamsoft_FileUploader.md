@@ -33,9 +33,11 @@ Init(
 `URL`: Specify a path to retrieve the FileUploader library.
 
 `successCallback`: A callback function that is executed if the request succeeds.
+
 - `uploadManager`: A FileUploader instance. Please refer to [`UploadManager`](#uploadmanager).
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -66,11 +68,11 @@ Init(
 ```javascript
 var dsUploadManager;
 Dynamsoft.FileUploader.Init(
-  "",
-  function (obj) {
-    dsUploadManager = obj;
-  },
-  function () {}
+    "",
+    function (obj) {
+        dsUploadManager = obj;
+    },
+    function () {},
 );
 ```
 
@@ -82,14 +84,11 @@ The FileUploader library is installed with Dynamic Web TWAIN Service by default,
 
 **Methods**
 
-
-|  [`CreateJob()`](#createjob)  |  [`Run()`](#run)  |   [`Cancel()`](#cancel) |
-| [`CancelAllUpload()`](#cancelallupload) | | |
-
+| [`CreateJob()`](#createjob) | [`Run()`](#run) | [`Cancel()`](#cancel) | [`CancelAllUpload()`](#cancelallupload) |
 
 ### CreateJob()
 
-Create an upload job. 
+Create an upload job.
 
 **Syntax**
 
@@ -234,19 +233,19 @@ CancelAllUpload(): boolean;
 ```javascript
 var dsUploadManager;
 Dynamsoft.FileUploader.Init(
-  "",
-  function (obj) {
-    dsUploadManager = obj;
-    var job = dsUploadManager.CreateJob();
-    job.OnUploadTransferPercentage = FileUpload_OnUploadTransferPercentage;
-    dsUploadManager.Run(job);
+    "",
+    function (obj) {
+        dsUploadManager = obj;
+        var job = dsUploadManager.CreateJob();
+        job.OnUploadTransferPercentage = FileUpload_OnUploadTransferPercentage;
+        dsUploadManager.Run(job);
 
-    function FileUpload_OnUploadTransferPercentage(job, iPercentage) {
-      console.log("job cancelled!");
-      dsUploadManager.Cancel(job);
-    }
-  },
-  function () {}
+        function FileUpload_OnUploadTransferPercentage(job, iPercentage) {
+            console.log("job cancelled!");
+            dsUploadManager.Cancel(job);
+        }
+    },
+    function () {},
 );
 ```
 
@@ -254,18 +253,15 @@ Dynamsoft.FileUploader.Init(
 
 **Properties**
 
-|                               |                            |                           |
-| ----------------------------- | -------------------------- | ------------------------- |
-| [`BlockSize`](#blocksize)     | [`FileName`](#filename)    | [`FormField`](#formfield) |
+| [`BlockSize`](#blocksize)     | [`FileName`](#filename)       | [`FormField`](#formfield) |
 | [`HttpHeader`](#httpheader)   | [`HttpVersion`](#httpversion) | [`ServerUrl`](#serverurl) |
-| [`SourceValue`](#sourcevalue) | [`ThreadNum`](#threadnum)   | [`Version`](#version)|
+| [`SourceValue`](#sourcevalue) | [`ThreadNum`](#threadnum)     | [`Version`](#version)     |
 
 **Events**
 
 |                                                             |
 | :---------------------------------------------------------- | :------------------------------ | ------------------------------- |
 | [`OnUploadTransferPercentage`](#onuploadtransferpercentage) | [`OnRunSuccess`](#onrunsuccess) | [`OnRunFailure`](#onrunfailure) |
-
 
 ### BlockSize
 
@@ -473,10 +469,9 @@ ServerUrl: string;
 </table>
 </div>
 
-
 ### SourceValue
 
-Specifies the files to be uploaded and the name for it. The files are specified by URLs which can be created with the method [`GenerateURLForUploadData()`](/_articles/info/api/WebTwain_Util.md#generateurlforuploaddata). 
+Specifies the files to be uploaded and the name for it. The files are specified by URLs which can be created with the method [`GenerateURLForUploadData()`](/_articles/info/api/WebTwain_Util.md#generateurlforuploaddata).
 
 **Syntax**
 
@@ -671,7 +666,7 @@ OnRunSuccess: (job: Job) => void;
 ```javascript
 job.OnRunSuccess = FileUpload_OnRunSuccess;
 function FileUpload_OnRunSuccess(job) {
-  alert(" upload completed ");
+    alert(" upload completed ");
 }
 ```
 
@@ -724,6 +719,6 @@ OnRunFailure: (
 ```javascript
 job.OnRunFailure = FileUpload_OnRunFailure;
 function FileUpload_OnRunFailure(job, errorCode, errorString) {
-  alert(errorString);
+    alert(errorString);
 }
 ```

@@ -6,6 +6,7 @@ title: When are the locally cached images destroyed?
 keywords: Dynamic Web TWAIN, Security, end user, local cache, destroy
 breadcrumbText: When are the locally cached images destroyed?
 description: When are the locally cached images destroyed?
+date: 2021-11-29 18:33:59 +0800
 ---
 
 # Security

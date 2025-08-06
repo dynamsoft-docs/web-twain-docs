@@ -6,6 +6,7 @@ title: Can I stop the scanner from showing its default popup when there is a pap
 keywords: Dynamic Web TWAIN, UI Customization, stop popup, default popup
 breadcrumbText: Can I stop the scanner from showing its default popup when there is a paper jam?
 description: Can I stop the scanner from showing its default popup when there is a paper jam?
+date: 2021-12-08 03:32:59 +0800
 ---
 
 # UI Customization

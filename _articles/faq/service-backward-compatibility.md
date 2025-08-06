@@ -6,6 +6,7 @@ title: Can I use two different websites integrated with two different versions o
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, backward compatibility, two different versions
 breadcrumbText: Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?
 description: Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?
+date: 2022-03-01 07:05:02 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

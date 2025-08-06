@@ -6,6 +6,7 @@ title: How can I change the background color of the image viewer?
 keywords: Dynamic Web TWAIN, Image Viewer, background color
 breadcrumbText: How can I change the background color of the image viewer?
 description: How can I change the background color of the image viewer?
+date: 2021-12-09 11:34:50 +0800
 ---
 
 # Image Viewer

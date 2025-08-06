@@ -6,6 +6,7 @@ title: How can I save selected images instead of all images to my server or data
 keywords: Dynamic Web TWAIN, Document Saving, save selected images
 breadcrumbText: How can I save selected images instead of all images to my server or database?
 description: How can I save selected images instead of all images to my server or database?
+date: 2025-04-17 17:43:22 +0800
 ---
 
 # Document Saving

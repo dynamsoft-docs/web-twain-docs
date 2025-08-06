@@ -7,19 +7,18 @@ breadcrumbText: Webcam Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs Page
 ---
 
-# `{WebTwainObject}.Addon.Webcam`
+# {WebTwainObject}.Addon.Webcam
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 
-
-| [`CaptureImage()`](#captureimage)                       | [`OpenSource()`](#opensource)                                 | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) |
+| [`CaptureImage()`](#captureimage)                                               | [`OpenSource()`](#opensource)                           | [`CloseSource()`](#closesource)                                 | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) |
 | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) | [`GetVideoPropertySetting()`](#getvideopropertysetting) | [`GetVideoPropertyMoreSetting()`](#getvideopropertymoresetting) | [`SetCameraControlPropertySetting()`](#setcameracontrolpropertysetting) |
 | [`SetVideoPropertySetting()`](#setvideopropertysetting)                         | [`GetFrameRate()`](#getframerate)                       | [`SetFrameRate()`](#setframerate)                               | [`GetMediaType()`](#getmediatype)                                       |
 | [`SetMediaType()`](#setmediatype)                                               | [`GetResolution()`](#getresolution)                     | [`SetResolution()`](#setresolution)                             | [`GetFramePartURL()`](#getframeparturl)                                 |
 | [`GetFrameURL()`](#getframeurl)                                                 | [`GetSourceList()`](#getsourcelist)                     | [`SelectSource()`](#selectsource)                               | [`PauseVideo()`](#pausevideo)                                           |
-| [`PlayVideo()`](#playvideo)                                                     | [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |
+| [`PlayVideo()`](#playvideo)                                                     | [`SetVideoRotateMode()`](#setvideorotatemode)           | [`StopVideo()`](#stopvideo)                                     |                                                                         |
 
 ## CaptureImage()
 
@@ -39,6 +38,7 @@ CaptureImage(
 `successCallback`: A callback function that is executed if the request succeeds.
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error String
 

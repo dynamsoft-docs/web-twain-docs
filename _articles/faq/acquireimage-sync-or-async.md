@@ -6,6 +6,7 @@ title: Is the AcquireImage() method synchronous or asynchronous?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, acquireImage synchronous, asynchronous
 breadcrumbText: Is the AcquireImage() method synchronous or asynchronous?
 description: Is the AcquireImage() method synchronous or asynchronous?
+date: 2021-12-08 03:01:32 +0800
 ---
 
 # Capture/Image Source

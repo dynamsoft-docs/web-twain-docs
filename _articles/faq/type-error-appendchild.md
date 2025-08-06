@@ -6,6 +6,7 @@ title: Error Message - Uncaught TypeError - Cannot read properties of null (read
 keywords: Dynamic Web TWAIN, Error message
 breadcrumbText: Error Message - Uncaught TypeError - Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node'- parameter 1 is not of type 'Node'.
 description: Error Message - Uncaught TypeError - Cannot read properties of null (reading 'appendChild') or Failed to execute 'appendChild' on 'Node'- parameter 1 is not of type 'Node'.
+date: 2022-12-27 15:57:25 +0800
 ---
 
 # Error Troubleshooting

@@ -13,14 +13,13 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 
 **Methods**
 
-
 | [`RegisterEvent()`](#registerevent) | [`UnregisterEvent()`](#unregisterevent) | [`GenerateURLForUploadData()`](#generateurlforuploaddata) |
 
 **Properties**
 
 
-| [`ErrorCode`](#errorcode)  | [`ErrorCause`](#errorcause)             | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       | [`Manufacturer`](#manufacturer) |
-| [`ProductFamily`](#productfamily)     | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
+| [`ErrorCode`](#errorcode)       | [`ErrorCause`](#errorcause)       | [`ErrorString`](#errorstring) | [`LogLevel`](#loglevel)       |
+| [`Manufacturer`](#manufacturer) | [`ProductFamily`](#productfamily) | [`ProductName`](#productname) | [`VersionInfo`](#versioninfo) |
 
 
 ---
@@ -138,11 +137,13 @@ GenerateURLForUploadData(
 `type`: Specify the file type. Please refer to [`EnumDWT_ImageType`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_imagetype).
 
 `successCallback`: A callback function that is executed if the request succeeds.
+
 - `resultURL`: The generated URL.
 - `indices`: The indices of the images.
 - `type`: The file type. Please refer to [`EnumDWT_ImageType`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_imagetype).
 
 `failureCallback`: A callback function that is executed if the request fails.
+
 - `errorCode`: The error code.
 - `errorString`: The error string.
 
@@ -173,26 +174,23 @@ GenerateURLForUploadData(
 ```javascript
 var dsUploadManager;
 Dynamsoft.FileUploader.Init(
-  "",
-  function (obj) {
-    dsUploadManager = obj;
-  },
-  function () {}
+    "",
+    function (obj) {
+        dsUploadManager = obj;
+    },
+    function () {},
 );
 DWTObject.GenerateURLForUploadData(
-  [0, 1],
-  EnumDWT_ImageType.IT_PDF,
-  function (resultURL, newIndices, enumImageType) {
-    var serverUrl = "https://yoursite/yourserverurl.aspx";
-    var jobtemp = dsUploadManager.CreateJob();
-    jobtemp.ServerUrl = serverUrl;
-    jobtemp.SourceValue.Add(resultURL, "uploadedFile.pdf");
-    dsUploadManager.Run(jobtemp);
-  },
-  function (
-    errorCode,
-    errorString
-  ) {}
+    [0, 1],
+    EnumDWT_ImageType.IT_PDF,
+    function (resultURL, newIndices, enumImageType) {
+        var serverUrl = "https://yoursite/yourserverurl.aspx";
+        var jobtemp = dsUploadManager.CreateJob();
+        jobtemp.ServerUrl = serverUrl;
+        jobtemp.SourceValue.Add(resultURL, "uploadedFile.pdf");
+        dsUploadManager.Run(jobtemp);
+    },
+    function (errorCode, errorString) {},
 );
 ```
 
@@ -343,9 +341,10 @@ LogLevel: number;
 **Usage notes**
 
 The logs for the Dynamic Web TWAIN library are saved in the directory:
-  - Windows `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\log`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\log`) or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\Dynamic Web TWAIN Service\log`(version 18.5.1 and earlier `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`)
-  - macOS, `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > log`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`)
-  - Linux:  `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/log`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/log`)
+
+- Windows `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\log`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\log`) or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\Dynamic Web TWAIN Service\log`(version 18.5.1 and earlier `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`)
+- macOS, `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > log`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`)
+- Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/log`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/log`)
 
 By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines. Please set it back to 0 if you don't need to record log as it will slow down the speed.
 
@@ -500,7 +499,5 @@ readonly VersionInfo: string;
 **Usage notes**
 
 [`Manufacturer`](/_articles/info/api/WebTwain_Util.md#manufacturer), [`ProductFamily`](/_articles/info/api/WebTwain_Util.md#productfamily), [`ProductName`](/_articles/info/api/WebTwain_Util.md#productname) and [`VersionInfo`](/_articles/info/api/WebTwain_Util.md#versioninfo) together form the identity string of the Dynamic Web TWAIN library.
-
-
 
 <div class="multi-panel-switching-end"></div>

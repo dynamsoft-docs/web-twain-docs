@@ -6,6 +6,7 @@ title: Can I generate/load an encrypted file in PDF format?
 keywords: Dynamic Web TWAIN, Security, encrypt PDF
 breadcrumbText: Can I generate/load an encrypted file in PDF format?
 description: Can I generate/load an encrypted file in PDF format?
+date: 2021-12-29 09:58:04 +0800
 ---
 
 # Security

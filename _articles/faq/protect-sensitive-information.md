@@ -6,6 +6,7 @@ title: Can I protect sensitive information of an image from being seen?
 keywords: Dynamic Web TWAIN, Image Viewer, object defined
 breadcrumbText: Can I protect sensitive information of an image from being seen?
 description: Can I protect sensitive information of an image from being seen?
+date: 2021-12-09 11:34:50 +0800
 ---
 
 # Image Viewer

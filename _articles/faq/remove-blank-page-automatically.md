@@ -6,6 +6,7 @@ title: Can the Dynamic Web TWAIN SDK automatically remove blank pages during the
 keywords: Dynamic Web TWAIN, Capture/ Image Source, detect, discard blank pages
 breadcrumbText: Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?
 description: Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?
+date: 2021-07-14 18:58:25 +0800
 ---
 
 # Capture/Image Source

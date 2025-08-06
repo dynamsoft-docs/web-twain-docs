@@ -6,6 +6,7 @@ title: What image and document formats can I save my documents as?
 keywords: Dynamic Web TWAIN, Document Saving, formats
 breadcrumbText: What image and document formats can I save my documents as?
 description: What image and document formats can I save my documents as?
+date: 2021-11-20 05:11:22 +0800
 ---
 
 # Document Saving

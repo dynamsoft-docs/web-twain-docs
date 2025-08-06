@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN Service installation and uninstallation issue
 keywords: Dynamic Web TWAIN, Dynamic Web TWAIN Service, installation, uninstallation
 breadcrumbText: Dynamic Web TWAIN Service installation and uninstallation issue
 description: Dynamic Web TWAIN Service installation and uninstallation issue
+date: 2022-02-18 18:06:22 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

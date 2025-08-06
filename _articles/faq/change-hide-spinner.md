@@ -6,6 +6,7 @@ title: How can I change/hide the spinner which shows during document scanning?
 keywords: Dynamic Web TWAIN, UI Customization, hide spinner
 breadcrumbText: How can I change/hide the spinner which shows during document scanning?
 description: How can I change/hide the spinner which shows during document scanning?
+date: 2021-12-08 03:32:59 +0800
 ---
 
 # UI Customization

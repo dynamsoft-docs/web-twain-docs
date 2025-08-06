@@ -6,6 +6,7 @@ title: Are admin privileges required to install the end-user component?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, admin privileges, install
 breadcrumbText: Are admin privileges required to install the end-user component?
 description: Are admin privileges required to install the end-user component?
+date: 2025-01-15 14:58:40 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

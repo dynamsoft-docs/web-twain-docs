@@ -7,7 +7,7 @@ breadcrumbText: Barcode Reader Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Addon APIs Page
 ---
 
-# `{WebTwainObject}.Addon.BarcodeReader`
+# {WebTwainObject}.Addon.BarcodeReader
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
@@ -15,7 +15,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference BarcodeReader Add
 
 
 | [`decode()`](/_articles/info/api/Addon_BarcodeReader.md#decode)                             | [`getRuntimeSettings()`](/_articles/info/api/Addon_BarcodeReader.md#getruntimesettings)                       | [`updateRuntimeSettings()`](/_articles/info/api/Addon_BarcodeReader.md#updateruntimesettings) |
-| [`resetRuntimeSettings()`](/_articles/info/api/Addon_BarcodeReader.md#resetruntimesettings) | [`initRuntimeSettingsWithString()`](/_articles/info/api/Addon_BarcodeReader.md#initruntimesettingswithstring) |
+| [`resetRuntimeSettings()`](/_articles/info/api/Addon_BarcodeReader.md#resetruntimesettings) | [`initRuntimeSettingsWithString()`](/_articles/info/api/Addon_BarcodeReader.md#initruntimesettingswithstring) |                                                                                               |
 
 ---
 
@@ -59,7 +59,7 @@ decode(index: number): Promise<TextResult[]> ;
 
 Return the current runtime settings or the settings of the specified built-in template. Please refer to [`RuntimeSettings`](/_articles/info/api/interfaces.md#runtimesettings).
 
-The template can only be "speed", "balance", or "coverage". 
+The template can only be "speed", "balance", or "coverage".
 
 **Syntax**
 
@@ -68,6 +68,7 @@ getRuntimeSettings(template?: string): Promise<RuntimeSettings> ;
 ```
 
 **Availability**
+
 <div class="availability">
 <table>
 

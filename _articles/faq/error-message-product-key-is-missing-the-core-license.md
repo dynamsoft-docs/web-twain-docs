@@ -6,6 +6,7 @@ title: Error message - The current product key is missing the core license, plea
 keywords: Dynamic Web TWAIN, Error Troubleshooting, missing core license
 breadcrumbText: Error message - The current product key is missing the core license, please contact the site administrator
 description: Error message - The current product key is missing the core license, please contact the site administrator
+date: 2021-12-03 23:26:46 +0800
 ---
 
 # Error Troubleshooting

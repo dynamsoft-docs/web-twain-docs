@@ -7,21 +7,21 @@ breadcrumbText: PDF Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference PDF Addon APIs Page
 ---
 
-# `{WebTwainObject}.Addon.PDF`
+# {WebTwainObject}.Addon.PDF
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
 **Methods**
 
-
-| [`GetConvertMode()`](#getconvertmode) | [`GetReaderOptions()`](#getreaderoptions) | [`IsModuleInstalled()`](#ismoduleinstalled)| [`IsRasterizationRequired()`](#israsterizationrequired) | [`IsTextBasedPDF()`](#istextbasedpdf) |
-| [`SetConvertMode()`](#setconvertmode) | [`SetPassword()`](#setpassword)       | [`SetResolution()`](#setresolution)         | [`Write.Setup()`](#writesetup)        |
-| [`SetReaderOptions()`](#setreaderoptions) |
+| [`GetConvertMode()`](#getconvertmode) | [`GetReaderOptions()`](#getreaderoptions) | [`IsModuleInstalled()`](#ismoduleinstalled) | [`IsRasterizationRequired()`](#israsterizationrequired) |
+| [`IsTextBasedPDF()`](#istextbasedpdf) | [`SetConvertMode()`](#setconvertmode)     | [`SetPassword()`](#setpassword)             | [`SetResolution()`](#setresolution)                     |
+| [`Write.Setup()`](#writesetup)        | [`SetReaderOptions()`](#setreaderoptions) |                                             |                                                         |
 
 ---
 
 ## GetConvertMode()
-<div class="blockquote-note"></div>
+
+> [!NOTE]
 > This API has been deprecated as of release 18.4. Please use the [`GetReaderOptions()`](/_articles/info/api/Addon_PDF.md#getreaderoptions) function.
 
 Return the convert mode.
@@ -57,6 +57,7 @@ Please refer to [`EnumDWT_ConvertMode`](/_articles/info/api/Dynamsoft_Enum.md#dy
 </div>
 
 ---
+
 ## GetReaderOptions()
 
 Returns the current PDF reader options. Please refer to [`ReaderOptions`](/_articles/info/api/interfaces.md#readeroptions).
@@ -199,7 +200,7 @@ IsTextBasedPDF(path: string): boolean;
 
 ## SetConvertMode()
 
-<div class="blockquote-note"></div>
+> [!NOTE]
 > This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions) function.
 
 Set the convert mode.
@@ -244,9 +245,10 @@ There are three conversion modes
 - `CM_IMAGEONLY` (2): The PDF Rasterizer is turned off.
 - `CM_AUTO` (3): The library automatically detect whether a file needs to be rasterized or not and then process the file accordingly.
 
-Use this method before you import a PDF into the viewer with methods such as [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage){:target="_blank"} , [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload){:target="_blank"} and [`FTPDownload()`](/_articles/info/api/WebTwain_IO.md#ftpdownload){:target="_blank"}.
+Use this method before you import a PDF into the viewer with methods such as [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage){:target="\_blank"}, [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload){:target="\_blank"}, and [`FTPDownload()`](/_articles/info/api/WebTwain_IO.md#ftpdownload){:target="\_blank"}.
 
 ---
+
 ## SetReaderOptions()
 
 Sets the current PDF reader options.
@@ -283,36 +285,36 @@ SetReaderOptions(options: ReaderOptions): boolean;
 </div>
 
 **Usage Notes**
-Use this method before you import a PDF into the viewer with methods such as [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage){:target="_blank"} , [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload){:target="_blank"} and [`FTPDownload()`](/_articles/info/api/WebTwain_IO.md#ftpdownload){:target="_blank"}.
+Use this method before you import a PDF into the viewer with methods such as [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage){:target="\_blank"}, [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload){:target="\_blank"}, and [`FTPDownload()`](/_articles/info/api/WebTwain_IO.md#ftpdownload){:target="\_blank"}.
 
 **Examples**
 
 1. Render the PDF file to grayscale images without annotations.
 
-   ```javascript
-   DWTObject.Addon.PDF.SetReaderOptions({
-       convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
-       renderOptions: {
-           renderAnnotations: false,
-           renderGrayscale: true,
-       }
-   });
-   ```
+    ```javascript
+    DWTObject.Addon.PDF.SetReaderOptions({
+        convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
+        renderOptions: {
+            renderAnnotations: false,
+            renderGrayscale: true,
+        },
+    });
+    ```
 
 2. Render the PDF file to images, but when saving, preserve the original data if the content of a page is not modified.
 
-   ```javascript
-   DWTObject.Addon.PDF.SetReaderOptions({
-       convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
-       preserveUnmodifiedOnSave: true //only available for v19.0+
-   });
-   ```
+    ```javascript
+    DWTObject.Addon.PDF.SetReaderOptions({
+        convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
+        preserveUnmodifiedOnSave: true, //only available for v19.0+
+    });
+    ```
 
 ---
 
 ## SetPassword()
 
-<div class="blockquote-note"></div>
+v
 > This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions) function.
 
 Set the password for reading encrypted PDF files.
@@ -351,13 +353,13 @@ SetPassword(password: string): boolean;
 
 **Usage notes**
 
-Use this method before you import a PDF into the viewer with methods such as [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage){:target="_blank"} , [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload){:target="_blank"} and [`FTPDownload()`](/_articles/info/api/WebTwain_IO.md#ftpdownload){:target="_blank"}.
+Use this method before you import a PDF into the viewer with methods such as [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage){:target="\_blank"}, [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload){:target="\_blank"}, and [`FTPDownload()`](/_articles/info/api/WebTwain_IO.md#ftpdownload){:target="\_blank"}.
 
 ---
 
 ## SetResolution()
 
-<div class="blockquote-note"></div>
+> [!NOTE]
 > This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions) function.
 
 Set the resolution for rasterizing.
@@ -398,7 +400,7 @@ SetResolution(resolution: number): boolean;
 
 The default resolution for the conversion is 200. We recommend that you set a value smaller than 300, otherwise it might slow down the program or cause the process to fail.
 
-Use this method before you import a PDF into the viewer with methods such as [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage){:target="_blank"} , [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload){:target="_blank"} and [`FTPDownload()`](/_articles/info/api/WebTwain_IO.md#ftpdownload){:target="_blank"}.
+Use this method before you import a PDF into the viewer with methods such as [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage){:target="\_blank"}, [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload){:target="\_blank"}, and [`FTPDownload()`](/_articles/info/api/WebTwain_IO.md#ftpdownload){:target="\_blank"}.
 
 ---
 
@@ -454,22 +456,21 @@ DWTObject.Addon.PDF.Write.Setup({
     title: "SamplePdf",
     version: "1.5",
     quality: 90,
-    });
+});
 
 DWTObject.SaveAllAsPDF("DynamicWebTWAIN.pdf", OnSuccess, OnFailure);
 
 function OnSuccess() {
-    console.log('successful');
+    console.log("successful");
 }
 
 function OnFailure(errorCode, errorString) {
-    if(errorCode != -2326)
-    alert(errorString);
+    if (errorCode != -2326) alert(errorString);
 }
 ```
 
 **Usage notes**
 
-Use this method before you create a PDF with methods such as [`HTTPUpload()`](/_articles/info/api/WebTwain_IO.md#httpupload){:target="_blank"}, [`SaveAsPDF()`](/_articles/info/api/WebTwain_IO.md#saveaspdf){:target="_blank"}, and [`SaveAllAsPDF()`](/_articles/info/api/WebTwain_IO.md#saveallaspdf){:target="_blank"}.
+Use this method before you create a PDF with methods such as [`HTTPUpload()`](/_articles/info/api/WebTwain_IO.md#httpupload){:target="\_blank"}, [`SaveAsPDF()`](/_articles/info/api/WebTwain_IO.md#saveaspdf){:target="\_blank"}, and [`SaveAllAsPDF()`](/_articles/info/api/WebTwain_IO.md#saveallaspdf){:target="\_blank"}.
 
 Only the core module license is required to use this method.

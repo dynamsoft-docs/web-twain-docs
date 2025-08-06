@@ -6,6 +6,7 @@ title: Is the free trial version fully functional?
 keywords: Dynamic Web TWAIN, SDK Download, free trial,
 breadcrumbText: Is the free trial version fully functional?
 description: Is the free trial version fully functional?
+date: 2021-11-18 11:17:20 +0800
 ---
 
 # SDK Download/Free Trial

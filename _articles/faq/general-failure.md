@@ -6,6 +6,7 @@ title: General failure
 keywords: Dynamic Web TWAIN, Documentation, ErrorList
 breadcrumbText: General failure
 description: General failure
+date: 2020-12-10 16:11:49 +0800
 ---
 
 # ErrorList

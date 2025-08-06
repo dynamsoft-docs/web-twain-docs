@@ -6,6 +6,7 @@ title: Is there any way to speed up the barcode reading process?
 keywords: Dynamic Web TWAIN, Addon, increase speed, barcode
 breadcrumbText: Is there any way to speed up the barcode reading process?
 description: Is there any way to speed up the barcode reading process?
+date: 2021-12-01 01:09:41 +0800
 ---
 
 # Addon

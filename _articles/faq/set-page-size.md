@@ -6,6 +6,7 @@ title: How can I configure all scanned images to conform to a specific size stan
 keywords: Dynamic Web TWAIN, Image Editing, page size, A4
 breadcrumbText: How can I configure all scanned images to conform to a specific size standard (e.g., A4)?
 description: How can I configure all scanned images to conform to a specific size standard (e.g., A4)?
+date: 2021-12-09 09:25:33 +0800
 ---
 
 # Image Editing

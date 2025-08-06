@@ -6,6 +6,7 @@ title: How to resolve Dynamic Web TWAIN SDK doesn't work on insecure public webs
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 94 issue, HTTP website, Edge 94 issue
 breadcrumbText: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
 description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
+date: 2021-09-24 07:56:47 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

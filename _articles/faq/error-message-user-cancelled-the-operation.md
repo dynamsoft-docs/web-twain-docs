@@ -6,6 +6,7 @@ title: Error message - User cancelled the operation
 keywords: Dynamic Web TWAIN, Error Troubleshooting, product key does not support version
 breadcrumbText: Error message - User cancelled the operation
 description: Error message - User cancelled the operation
+date: 2023-02-07 18:21:50 +0800
 ---
 
 # Error Troubleshooting

@@ -6,6 +6,7 @@ title: What is your discount policy?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, discount policy
 breadcrumbText: What is your discount policy?
 description: What is your discount policy?
+date: 2021-12-04 02:34:30 +0800
 ---
 
 # Licensing and Purchase

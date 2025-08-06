@@ -6,6 +6,7 @@ title: When do I need PDF Rasterizer Addon? Can I load existing PDF files into t
 keywords: Dynamic Web TWAIN, Addon, pdf rasterizer
 breadcrumbText: When do I need PDF Rasterizer Addon? Can I load existing PDF files into the Dynamic Web TWAIN SDK without the PDF Rasterizer addon?
 description: When do I need PDF Rasterizer Addon? Can I load existing PDF files into the Dynamic Web TWAIN SDK without the PDF Rasterizer addon?
+date: 2021-12-01 01:09:41 +0800
 ---
 
 # Addon

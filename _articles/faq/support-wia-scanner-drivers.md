@@ -6,6 +6,7 @@ title: How can I support WIA scanner drivers in my application?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, WIA
 breadcrumbText: How can I support WIA scanner drivers in my application?
 description: How can I support WIA scanner drivers in my application?
+date: 2023-05-25 04:19:02 +0800
 ---
 
 # Capture/Image Source

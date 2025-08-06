@@ -11,8 +11,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Device APIs Page
 
 > The properties and methods on this page live in the namespace {DeviceObject}.
 
-``` typescript
-interface Device  {
+```typescript
+interface Device {
     /**
      * The real name of the device.
      */
@@ -24,14 +24,16 @@ interface Device  {
     readonly deviceType: Dynamsoft.EnumDWT_DeviceType;
     readonly serviceInfo?: ServiceInfo;
     readonly deviceInfo?: any;
-    acquireImage(deviceConfiguration: DeviceConfiguration | null, sendTo: WebTwain): Promise< boolean>;
+    acquireImage(
+        deviceConfiguration: DeviceConfiguration | null,
+        sendTo: WebTwain,
+    ): Promise<boolean>;
 }
-``` 
+```
 
 **Methods**
 
-
-| [`DeviceObject.acquireImage()`](#deviceobject.acquireimage)   |
+| [`DeviceObject.acquireImage()`](#deviceobject.acquireimage) |
 
 ---
 
@@ -66,6 +68,7 @@ interface DeviceConfiguration {
 `sendTo`: The DWTObject control to scan into
 
 **Availability**
+
 <div class="availability">
 <table>
 
@@ -89,11 +92,14 @@ interface DeviceConfiguration {
 **Example**
 
 ```javascript
-DWTObject.GetDevicesAsync().then((deviceList)=>{
-  return deviceList[0].acquireImage({},DWTObject)  
-}).then((result)=>{
-    console.log(result)
-}).catch((e)=>{
-    console.error(e)
-})
+DWTObject.GetDevicesAsync()
+    .then((deviceList) => {
+        return deviceList[0].acquireImage({}, DWTObject);
+    })
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((e) => {
+        console.error(e);
+    });
 ```
