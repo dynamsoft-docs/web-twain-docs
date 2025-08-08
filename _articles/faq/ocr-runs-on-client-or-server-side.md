@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Addon, OCR
 breadcrumbText: Does your OCR addon run on the client side or server side?
 description: Does your OCR addon run on the client side or server side?
 date: 2021-12-01 01:09:41 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Addon

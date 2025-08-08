@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, scanner not shown, scanner n
 breadcrumbText: Why is my scanner not shown or not responding in the browser?
 description: Why is my scanner not shown or not responding in the browser?
 date: 2022-01-05 15:14:32 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Capture/Image Source

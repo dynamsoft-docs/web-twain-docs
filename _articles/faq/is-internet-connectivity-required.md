@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Licensing and Purchase, difference, service, webass
 breadcrumbText: Is internet connectivity required to use all licenses?
 description: Is internet connectivity required to use all licenses?
 date: 2021-12-04 02:34:30 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Licensing and Purchase

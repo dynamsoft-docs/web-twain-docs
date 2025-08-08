@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, slow scan
 breadcrumbText: Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up?
 description: Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up?
 date: 2021-12-08 03:01:32 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Capture/Image Source

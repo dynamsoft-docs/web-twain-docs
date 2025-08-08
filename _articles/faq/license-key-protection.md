@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Security, license key protection
 breadcrumbText: The license key is set in JavaScript. How can I protect it?
 description: The license key is set in JavaScript. How can I protect it?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Security

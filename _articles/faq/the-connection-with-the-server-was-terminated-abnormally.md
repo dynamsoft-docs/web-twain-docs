@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: The connection with the server was terminated abnormally
 description: The connection with the server was terminated abnormally
 date: 2021-07-14 18:55:57 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Error Troubleshooting

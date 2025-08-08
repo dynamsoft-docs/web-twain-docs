@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, verify scanner, compatible, 
 breadcrumbText: How to use TWACKER to check if your device is TWAIN Compliant
 description: How to use TWACKER to check if your device is TWAIN Compliant
 date: 2021-07-14 18:55:57 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Capture/Image Source

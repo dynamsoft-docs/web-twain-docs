@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, product key, expired
 breadcrumbText: Error message – The current product key has expired on XXX, please contact the site administrator
 description: Error message – The current product key has expired on XXX, please contact the site administrator
 date: 2021-12-03 23:26:46 +0800
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Error Troubleshooting

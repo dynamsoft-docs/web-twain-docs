@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Addon, webcam
 breadcrumbText: What types of webcams does the Webcam Capture addon support
 description: What types of webcams does the Webcam Capture addon support
 date: 2021-12-01 01:09:41 +0800
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Addon

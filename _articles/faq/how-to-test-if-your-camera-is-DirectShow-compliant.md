@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, DirectShow compliant, Camera
 breadcrumbText: How to test if your camera is DirectShow compliant
 description: How to test if your camera is DirectShow compliant
 date: 2021-07-14 18:55:57 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Capture/Image Source

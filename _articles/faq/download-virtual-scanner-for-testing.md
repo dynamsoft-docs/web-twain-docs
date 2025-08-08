@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, virtual scanner
 breadcrumbText: Download virtual scanner for testing
 description: Download virtual scanner for testing
 date: 2021-07-14 18:55:57 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Capture/Image Source

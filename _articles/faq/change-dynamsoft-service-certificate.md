@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Security, change certificate, service
 breadcrumbText: How can I change the certificate of the Dynamic Web TWAIN Service?
 description: How can I change the certificate of the Dynamic Web TWAIN Service?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2024-03-20 14:46:45 +0800
 ---
 
 # Security

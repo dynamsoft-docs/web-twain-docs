@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrom
 breadcrumbText: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
 description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
 date: 2021-09-24 07:56:47 +0800
+last_modified: 2022-12-22 10:44:01 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

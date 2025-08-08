@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, wasm, iphone
 breadcrumbText: The loading bar keeps spinning when capture the image with iPhone.
 description: The loading bar keeps spinning when capture the image with iPhone.
 date: 2023-05-22 14:37:58 +0800
+last_modified: 2023-09-26 09:40:57 +0800
 ---
 
 # Error Troubleshooting

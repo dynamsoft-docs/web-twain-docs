@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Dynam
 breadcrumbText: What does the Dynamic Web TWAIN Service do on the end-user machine?
 description: What does the Dynamic Web TWAIN Service do on the end-user machine?
 date: 2021-12-11 06:47:21 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

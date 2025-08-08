@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Annotation, Dynamsoft Document Viewer, DWT, DDV
 breadcrumbText: Dynamic Web TWAIN with Annotations – Hello World
 description: Dynamic Web TWAIN with Annotations – Hello World
 date: 2024-09-03 17:31:36 +0800
+last_modified: 2024-09-20 15:00:08 +0800
 ---
 
 # Dynamic Web TWAIN with Annotations – Hello World

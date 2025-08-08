@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Document Saving, response string on upload
 breadcrumbText: How can I get a response string from my HTTP Server if the upload succeeds or fails?
 description: How can I get a response string from my HTTP Server if the upload succeeds or fails?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Document Saving

@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Security, ISO 27001 compliant
 breadcrumbText: Is the Dynamic Web TWAIN SDK ISO 27001 compliant?
 description: Is the Dynamic Web TWAIN SDK ISO 27001 compliant?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2023-08-03 14:18:47 +0800
 ---
 
 # Security

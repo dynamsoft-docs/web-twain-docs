@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Security, end user, deprecated, NPAPI, ActiveX
 breadcrumbText: Does the Dynamic Web TWAIN SDK use any deprecated technologies like NPAPI or ActiveX?
 description: Does the Dynamic Web TWAIN SDK use any deprecated technologies like NPAPI or ActiveX?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Security

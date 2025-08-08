@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Security, securely transfer, server
 breadcrumbText: How can I securely transfer scanned documents to my server?
 description: How can I securely transfer scanned documents to my server?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Security

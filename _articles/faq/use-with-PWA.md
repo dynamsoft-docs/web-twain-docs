@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, SDK Download, free trial, PWA
 breadcrumbText: Can I use the Dynamic Web TWAIN SDK to create a PWA application?
 description: Can I use the Dynamic Web TWAIN SDK to create a PWA application?
 date: 2021-11-18 11:17:20 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # SDK Download/Free Trial
