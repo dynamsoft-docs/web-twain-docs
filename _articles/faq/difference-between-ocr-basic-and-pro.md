@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Addon, OCR, OCR basic, OCR pro
 breadcrumbText: What's the difference between your OCR Basic and OCR Pro SDK?
 description: What's the difference between your OCR Basic and OCR Pro SDK?
 date: 2021-12-01 01:09:41 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Addon

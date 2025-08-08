@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Dynamic Web TWAIN Service, scanner UI, file dialog
 breadcrumbText:  The scanner's UI or the system's file dialog does not open when scanning
 description:  The scanner's UI or the system's file dialog does not open when scanning
 date: 2022-06-15 06:06:49 +0800
+last_modified: 2023-11-28 15:42:10 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

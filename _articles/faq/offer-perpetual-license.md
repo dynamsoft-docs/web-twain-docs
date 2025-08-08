@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Licensing and Purchase, lifetime, perpetual
 breadcrumbText: Do you offer lifetime/perpetual licenses?
 description: Do you offer lifetime/perpetual licenses?
 date: 2021-12-04 02:34:30 +0800
+last_modified: 2023-05-08 09:20:52 +0800
 ---
 
 # Licensing and Purchase

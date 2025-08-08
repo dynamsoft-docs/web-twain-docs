@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Document Saving, formats
 breadcrumbText: Can I upload documents to a different website domain?
 description: Can I upload documents to a different website domain?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Document Saving

@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Licensing and Purchase, license, SaaS
 breadcrumbText: What license should I purchase if I am providing SaaS?
 description: What license should I purchase if I am providing SaaS?
 date: 2021-12-04 02:34:30 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Licensing and Purchase

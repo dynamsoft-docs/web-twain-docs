@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, Canvas2D, Warning
 breadcrumbText: Warning message - Canvas2D Warning
 description: Canvas2D Warning
 date: 2022-10-13 18:34:42 +0800
+last_modified: 2022-10-17 18:04:03 +0800
 ---
 
 # Error Troubleshooting

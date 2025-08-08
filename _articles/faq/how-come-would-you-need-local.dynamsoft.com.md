@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, CERT INVALID, local.dynamsoft.com
 breadcrumbText: In which cases would I use local.dynamsoft.com instead of 127.0.0.1?
 description: In which cases would I use local.dynamsoft.com instead of 127.0.0.1?
 date: 2021-12-08 17:19:12 +0800
+last_modified: 2022-10-14 14:05:08 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

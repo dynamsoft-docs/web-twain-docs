@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, upgra
 breadcrumbText: How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?
 description: How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?
 date: 2021-12-11 06:47:21 +0800
+last_modified: 2022-10-14 14:05:08 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

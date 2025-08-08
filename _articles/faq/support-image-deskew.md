@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Image Editing, image deskew
 breadcrumbText: Do you support image deskew?
 description: Do you support image deskew?
 date: 2021-12-09 09:25:33 +0800
+last_modified: 2024-09-19 08:47:35 +0800
 ---
 
 # Image Editing
