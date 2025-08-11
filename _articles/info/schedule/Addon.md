@@ -40,6 +40,14 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 
 A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client side to convert text-based PDF files into images and display in the image viewer.
 
+### `12.0.0.0318` (04/01/2025)
+
+New APIs:
+
+* [`preserveUnmodifiedOnSave`](/_articles/info/api/interfaces.md#readeroptions)
+* [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired)
+
+
 ### `11.5.2.0312` (05/14/2024)
 * Updated third party libraries
 
