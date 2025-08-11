@@ -314,7 +314,6 @@ Use this method before you import a PDF into the viewer with methods such as [`L
 
 ## SetPassword()
 
-v
 > This API has been deprecated as of release 18.4. Please use the [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions) function.
 
 Set the password for reading encrypted PDF files.

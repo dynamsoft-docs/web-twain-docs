@@ -14,6 +14,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 
 | Version | Service | Core | PDFR | Barcode | Camera/Webcam | OCRB | OCRPro| Uploader | 
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| v19.1| 1.9.0.428 | 19.1.0.0428 | 12.0.0.0318 | 9.6.40.220 | N/A /15.0.0.0625 | N/A | N/A | 1.9.0.0318 |
 | v19.0| 1.9.0.318 | 19.0.0.0318 | 12.0.0.0318 | 9.6.40.220 | N/A /15.0.0.0625 | N/A | N/A | 1.9.0.0318 |
 | v18.5.1| 1.8.5.828 | 18.5.1.0828 | 11.5.3.0828 | 9.6.40.220 | N/A /15.0.0.0625 | N/A | N/A | 1.8.5.0828 |
 | v18.5| 1.8.5.312 | 18.5.0.0312 | 11.5.2.0312 | 9.6.40.220 | N/A /15.0.0.0625 | N/A | N/A | 1.8.5.0312 |
@@ -38,6 +39,14 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 ## PDFR
 
 A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client side to convert text-based PDF files into images and display in the image viewer.
+
+### `12.0.0.0318` (04/01/2025)
+
+New APIs:
+
+* [`preserveUnmodifiedOnSave`](/_articles/info/api/interfaces.md#readeroptions)
+* [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired)
+
 
 ### `11.5.2.0312` (05/14/2024)
 * Updated third party libraries
@@ -125,6 +134,10 @@ A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client si
 ## Barcode Reader
 
 A professional linear & 2D barcode reading library for recognizing barcode from any document captured from scanners, cameras or file systems.
+
+### `9.6.40.200` (05/14/2024)
+
+Check out the release notes of Dynamsoft Barcode Reader: [9.6.40](https://www.dynamsoft.com/barcode-reader/docs/server/programming/cplusplus/release-notes/cpp-9.html?ver=9.6.40#9640-03142024).
 
 ### `9.6.20.307` (06/20/2023)
 * General algorithm improvements
