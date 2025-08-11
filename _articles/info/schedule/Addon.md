@@ -127,6 +127,10 @@ A lightweight PDF library integrated with Dynamic Web TWAIN SDK on the client si
 
 A professional linear & 2D barcode reading library for recognizing barcode from any document captured from scanners, cameras or file systems.
 
+### `9.6.40.200` (05/14/2024)
+
+Check out the release notes of Dynamsoft Barcode Reader: [9.6.40](https://www.dynamsoft.com/barcode-reader/docs/server/programming/cplusplus/release-notes/cpp-9.html?ver=9.6.40#9640-03142024).
+
 ### `9.6.20.307` (06/20/2023)
 * General algorithm improvements
 
