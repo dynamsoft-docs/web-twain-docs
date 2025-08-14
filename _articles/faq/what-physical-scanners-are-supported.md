@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, physical, document, scanner,
 breadcrumbText: What physical document scanners does the Dynamic Web TWAIN SDK support?
 description: What physical document scanners does the Dynamic Web TWAIN SDK support?
 date: 2021-12-08 03:01:32 +0800
+last_modified: 2022-12-23 06:51:36 +0800
 ---
 
 # Capture/Image Source

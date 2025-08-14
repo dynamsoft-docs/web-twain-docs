@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, product key, invalid, differ
 breadcrumbText: Error message - The current product key is invalid because it's generated with the licenses of a different major version
 description: Error message - The current product key is invalid because it's generated with the licenses of a different major version
 date: 2021-12-03 23:26:46 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Error Troubleshooting

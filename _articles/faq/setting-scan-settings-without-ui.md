@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, scan settings
 breadcrumbText: Can I set scanning settings without using the default scanner's UI? What pre-scanning settings do you support?
 description: Can I set scanning settings without using the default scanner's UI? What pre-scanning settings do you support?
 date: 2021-12-08 03:01:32 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Capture/Image Source

@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, connection not established
 breadcrumbText: A connection with the server could not be established
 description: A connection with the server could not be established
 date: 2020-12-10 16:11:49 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Error Troubleshooting

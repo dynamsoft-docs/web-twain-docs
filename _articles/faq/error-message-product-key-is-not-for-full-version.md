@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, product key, full/trial
 breadcrumbText: Error message - The current product key is not for full/trial version, please contact the site administrator
 description: Error message - The current product key is not for full/trial version, please contact the site administrator
 date: 2021-12-03 23:26:46 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Error Troubleshooting

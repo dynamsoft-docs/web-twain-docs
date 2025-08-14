@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Security, images stored, encrypted
 breadcrumbText: Where does the Dynamic Web TWAIN SDK store images on end-user machines? Are they encrypted?
 description: Where does the Dynamic Web TWAIN SDK store images on end-user machines? Are they encrypted?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Security

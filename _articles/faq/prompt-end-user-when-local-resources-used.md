@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Security, end user, prompt
 breadcrumbText: Can I prompt the end-user when the Dynamic Web TWAIN SDK attempts to visit any local resources (scanner, camera, or disk drive)?
 description: Can I prompt the end-user when the Dynamic Web TWAIN SDK attempts to visit any local resources (scanner, camera, or disk drive)?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Security

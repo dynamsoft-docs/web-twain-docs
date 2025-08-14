@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Image Viewer, print
 breadcrumbText: Can I print images from the viewer?
 description: Can I print images from the viewer?
 date: 2021-12-09 11:34:50 +0800
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Image Viewer

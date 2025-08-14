@@ -524,20 +524,26 @@ DWTObject.RegisterEvent("OnGetFilePath", function (isSave, filesCount, index, di
 
 ## OnPostLoad
 
-This event triggers upon returning from [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage) or [`LoadImageEx()`](/_articles/info/api/WebTwain_IO.md#loadimageex), regardless of whether they succeed or not.
+This event is triggered when a file is loaded in the following cases:
+
+- A file is dragged and dropped into the viewer
+- A local file is loaded using [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage) or [`LoadImageEx()`](/_articles/info/api/WebTwain_IO.md#loadimageex)
+- A remote file is downloaded using network methods like [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload)
+
+Note: The event fires regardless of the operation's success.
 
 **Syntax**
 
 ```javascript
 RegisterEvent(
     "OnPostLoad",
-    function (directory: string, fileName: string, fileType: string) {}
+    function (path: string, fileName: string, fileType: string) {}
 );
 ```
 
 **Parameters**
 
-`directory`: The directory of the loaded file. For example, "C:\\Users\\[username]\\Downloads".
+`path`: The path of the source. For example, "C:\\Users\\[username]\\Downloads". It is empty if the file is dragged and dropped.
 
 `fileName`: The name of the loaded file. For example, "image1.jpg".
 
@@ -3441,10 +3447,6 @@ IfShowFileDialog: boolean;
 </table>
 </div>
 
-{% comment %}**Usage notes**
-
-Supported in Service mode only. {% endcomment %}
-
 ---
 
 ## IfShowCancelDialogWhenImageTransfer
@@ -3542,9 +3544,9 @@ ShowFileDialog(
 
 `isSave`: Whether to show a save-file dialog or an open-file dialog.
 
-`filter`: The filter pattern like `JPG` or `*.jpg`.
+`filter`: The filter pattern like `JPG` or `*.jpg`. See usage notes below for details.
 
-`filterIndex`: The order of the filter. Normally, just put 0.
+`filterIndex`: The default file type `filter` selected in the open-file dialog. The filters are 1-indexed. Default value: 1.
 
 `defaultExtension`: Extension to be appended to the file name. Only valid in a save-file dialog.
 
@@ -3552,9 +3554,9 @@ ShowFileDialog(
 
 `allowMultiSelect`: Whether or not multiple files can be selected at the same time. Only valid in an open-file dialog.
 
-`showOverwritePrompt`: Whether or not a prompt shows up when saving a file may overwrite an existing file.
+`showOverwritePrompt`: Whether to display a prompt if saving a file which would overwrite an existing file.
 
-`flag`: If set to 0, `allowMultiSelect` and `showOverwritePrompt` will be effective. Otherwise, these two parameters are ignored.
+`flag`: If set to 0, `allowMultiSelect` and `showOverwritePrompt` take effect. Otherwise, ignore those two parameters.
 
 **Availability**
 
@@ -3580,11 +3582,13 @@ ShowFileDialog(
 
 **Usage notes**
 
-{% comment %}Supported in Service mode only.{% endcomment %}
+The `filter` is a concatenation of **pattern strings** of valid file extensions. Each pattern string has a **text label**. The text label precedes the pattern string and is separated by a pipe `|`. The pattern string is a combination of semicolon-separated valid file extensions with asterisks.
 
-The `filter` pattern string consists of a combination(s) of valid file extensions with asterisk (\*). For example: `JPG, PNG and TIF | *.jpg;*png;*.tif` . On macOS, the string is different. For example `JPG, PNG , TIF` . To show all files, use `All Files | *.*` . Do not include spaces in the pattern string.
+For example, the following is a single entry that allows JPG, PNG, and TIF: `JPG, PNG and TIF|*.jpg;*png;*.tif`. You can concatenate multiple combinations separated by pipes `|`, e.g. `BMP|*.bmp|TIF|*.tif|JPG|*.jpg|PNG|*.png|PDF|*.pdf` creates one entry for each of the five file types instead of combining multiple file types into one entry.
 
-This method will trigger [`OnGetFilePath`](/_articles/info/api/WebTwain_IO.md#ongetfilepath) event even when it fails. If multiple files are selected, the event will be called multiple times.
+The open-file dialog display the combinations in order in the file type drop-down. You can use the `filterIndex` argument to set the default combination to use (1-indexed). On macOS, the string is different, e.g. `JPG, PNG , TIF`. To show all files, use `All Files | *.*`. Do not include spaces in the pattern string.
+
+This method triggers the [`OnGetFilePath`](/_articles/info/api/WebTwain_IO.md#ongetfilepath) event even when it fails. If multiple files are selected, the event triggers multiple times.
 
 **Example**
 
@@ -3597,7 +3601,7 @@ DWTObject.RegisterEvent("OnGetFilePath", function (isSave, filesCount, index, di
 DWTObject.ShowFileDialog(
     false,
     "TIF,TIFF,JPG,JPEG,PNG,PDF",
-    0,
+    1,
     "",
     "",
     true,
@@ -3609,7 +3613,7 @@ DWTObject.ShowFileDialog(
 DWTObject.ShowFileDialog(
     false,
     "BMP,TIF,JPG,PNG,PDF|*.bmp;*.tif;*.png;*.jpg;*.pdf;*.tiff;*.jpeg",
-    0,
+    1,
     "",
     "",
     true,
@@ -3655,10 +3659,6 @@ Print(useOSPrintWindow?: boolean): boolean;
 
 </table>
 </div>
-
-**Usage Notes**
-
-The parameter only works in Windows Service mode.
 
 ---
 

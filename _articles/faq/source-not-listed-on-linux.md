@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Dynamic Web TWAIN Service, installation, uninstalla
 breadcrumbText: Scanner source is listed on XSane application but not on my web application on Linux machines
 description: Scanner source is listed on XSane application but not on my web application on Linux machines
 date: 2022-04-14 02:51:15 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

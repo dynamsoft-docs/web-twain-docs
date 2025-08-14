@@ -10,17 +10,58 @@ description: Dynamic Web TWAIN SDK Documentation Dynamic Web TWAIN Service Page
 
 # Configuring the Dynamic Web TWAIN Service
 
-> This article is meant exclusively for the Desktop Service Edition of Dynamic Web TWAIN.
+The Dynamic Web TWAIN Service is the core piece of Dynamic Web TWAIN. It handles the communication between hardware (scanner, webcam, etc.) and browser, manages the image buffer, and coordinates data between different modules.
 
-The Dynamic Web TWAIN Service is the core piece of Dynamic Web TWAIN when running in Service mode. It handles the communication between hardware (scanner, webcam, etc.) and browser, manages the image buffer, and coordinates data between different modules.
+
+## Installation of Dynamic Web TWAIN Service
+
+On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamic Web TWAIN Service. This is a built-in behavior of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
+
+The prompt comes up when you try to [create a WebTwain instance](/_articles/extended-usage/advanced-initialization.md#instantiating-webtwain-without-onwebtwainready).
+
+![Initialization](/assets/imgs/Initialization-1.png)
+
+On **Windows and macOS**, double click the downloaded installer to install the service. 
+
+On **Linux**, instead of double clicking, the downloaded installer needs to be run using one of the following commands:
+
+- Debian / Ubuntu
+
+  ```bash 
+  sudo dpkg -i DynamicWebTWAINServiceSetup.deb
+  ```
+
+- Fedora
+
+  ```bash 
+  sudo rpm -ivh DynamicWebTWAINServiceSetup.rpm
+  ```
+
+Once the installation is done, the users can click the orange sentence 'click here to verify completion' or refresh the page to start using Dynamic Web TWAIN.
+
+![Initialization](/assets/imgs/Initialization-2.png)
+
+## Installation Folder
+
+The service is installed in the following folders on different platforms by default.
+
+- Windows:
+  - version 19.0 and later: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}`
+  - version 18.5.1 and earlier: `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}`)
+- macOS: 
+  - version 19.2 and later: `/Users/{username}/Applications/Dynamsoft/Dynamic Web TWAIN Service {versionnumber}`
+  - version 19.0-19.1: `/Applications/Dynamsoft/Dynamic Web TWAIN Service {versionnumber}`
+  - version 18.5.1 and earlier: `/Applications/Dynamsoft/DynamsoftServicex64_{versionnumber}/{installed version No.}`)
+- Linux: 
+  - version 19.0 and later:  `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}`
+  - version 18.5.1 and earlier: `/opt/dynamsoft/DynamsoftService`
 
 ## IP and ports
 
 The Dynamic Web TWAIN Service uses `localhost` and `18622` `18625` ports for HTTP connection and `18623` `18626` ports for HTTPS connection.  
-These ports can be configured in the `DSConfiguration.ini` file located in:
-  - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}`)
-  - macOS: `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber}`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.}`)
-  - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService`)
+
+These ports can be configured in the `DSConfiguration.ini` file located in the service's installatin folder.
+
 
 ## Access-Control-Allow-Origin
 
@@ -58,33 +99,40 @@ When a request comes from a different origin, a CORS error message will be displ
 
   ![CORS-error-console](/assets/imgs/CORS-error-console.png)
 
-## Installation of Dynamic Web TWAIN Service
 
-On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamic Web TWAIN Service. This is a built-in behavior of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
+## Web Setup
 
-The prompt comes up when you try to [create a WebTwain instance](/_articles/extended-usage/advanced-initialization.md#instantiating-webtwain-without-onwebtwainready) in Service mode.
+The service provides a web page to know its status and make basic configurations. You can access it through <http://127.0.0.1:18625>.
 
-![Initialization](/assets/imgs/Initialization-1.png)
+For security reasons, the web setup is disabled by default. You can add the following line to `DSConfiguration.ini` to enable it.
 
-On **Windows and macOS**, double click the downloaded installer to install the service. 
+```
+EnableWebSetup=TRUE
+```
 
-On **Linux**, instead of double clicking, the downloaded installer needs to be run using one of the following commands:
+Screenshots:
 
-- Debian / Ubuntu
+* Default:
 
-  ```bash 
-  sudo dpkg -i DynamicWebTWAINServiceSetup.deb
-  ```
+   ![home](/assets/imgs/service-web-setup/home.jpg)
 
-- Fedora
+* External Access Tab:
 
-  ```bash 
-  sudo rpm -ivh DynamicWebTWAINServiceSetup.rpm
-  ```
+   ![external access setup](/assets/imgs/service-web-setup/external-access-setup.jpg)
 
-Once the installation is done, the users can click the orange sentence 'click here to verify completion' or refresh the page to start using Dynamic Web TWAIN.
+On the left of the page, you can check the service's status and update the [`LogLevel`](/_articles/info/api/WebTwain_Util.md#loglevel)。
 
-![Initialization](/assets/imgs/Initialization-2.png)
+On the right of the page, you can configure the service through the local access tab and the external access tab.
+
+In the local access tab, you can update the SSL certificate for domains bound to `127.0.0.1`.
+
+In the external access tab, you can update the following settings:
+
+1. Host: configure an external IP so that it can be accessed by other devices.
+2. Firewall exception: add exception rules to the firewall to avoid the traffic being blocked by the firewall (only for Windows).
+3. Domain: bind a domain to the IP of your service and configure its SSL certificate.
+4. Bonjour service: enable Bonjour service to allow service discovery in local networks. It is needed for the [Remote Scan solution](https://www.dynamsoft.com/remote-scan/docs/introduction/).
+
 
 ## Msg: Dynamic Web TWAIN Service is not installed / Dynamic Web TWAIN is not installed
 

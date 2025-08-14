@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, supported resolution, DPI
 breadcrumbText: How can I get a list of supported resolution/DPI values from the document scanner?
 description: How can I get a list of supported resolution/DPI values from the document scanner?
 date: 2021-12-08 03:01:32 +0800
+last_modified: 2025-02-26 14:48:28 +0800
 ---
 
 # Capture/Image Source

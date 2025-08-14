@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, earliest iphone
 breadcrumbText: What is the earliest iPhone model that your SDK supports?
 description: What is the earliest iPhone model that your SDK supports?
 date: 2021-12-08 03:01:32 +0800
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # Capture/Image Source

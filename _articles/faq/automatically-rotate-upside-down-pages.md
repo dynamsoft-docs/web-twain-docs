@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, automatically rotate pages
 breadcrumbText: Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process?
 description: Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process?
 date: 2021-12-08 03:01:32 +0800
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Capture/Image Source

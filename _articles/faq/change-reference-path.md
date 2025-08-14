@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, refer
 breadcrumbText: How can I change the reference path to the Dynamsoft's resources in my project?
 description: How can I change the reference path to the Dynamsoft's resources in my project?
 date: 2021-07-14 18:58:25 +0800
+last_modified: 2025-02-06 17:18:09 +0800
 ---
 View all FAQs about [Project Deployment and End-user Installation](
 https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)

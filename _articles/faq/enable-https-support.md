@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Document Saving, enable HTTPS support
 breadcrumbText: How can I enable HTTPS support?
 description: How can I enable HTTPS support?
 date: 2021-11-29 18:33:59 +0800
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Document Saving

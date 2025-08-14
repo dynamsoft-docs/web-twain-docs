@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, verify scanner, compatible, 
 breadcrumbText: How to test if your scanner supports ICA scanning on Mac OS
 description: How to test if your scanner supports ICA scanning on Mac OS
 date: 2021-07-14 18:55:57 +0800
+last_modified: 2022-12-22 09:32:48 +0800
 ---
 
 # Capture/Image Source
