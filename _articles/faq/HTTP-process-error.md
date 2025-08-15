@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, HTTP process
 breadcrumbText: HTTP process error
 description: HTTP process error
 date: 2021-12-03 23:26:46 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+last_modified: 2025-08-14 14:09:35 +0800
 ---
 
 # Error Troubleshooting
@@ -78,8 +78,26 @@ When attempting to upload images using any of the HTTPUpload\*\*\* methods the u
     </configuration>
     ```
 
-    If you are using `PHP` , you can change the value in the following line in the `php.ini` file:
+    If you are using `PHP` , you can change the value in the following lines in the `php.ini` file and `web.config` file:
+
+    - **php.ini**
 
     ```shell
-    upload_max_filesize = 2M
+    file_uploads = On            ; Enable file uploads
+    upload_max_filesize = 50M    ; Max single file size for uploads
+    post_max_size = 60M          ; Max size for POST data (includes all fields and files)
+    max_execution_time = 300     ; Max script execution time (in seconds)
     ```
+
+    - **web.config**
+
+    ```xml
+    <system.webServer>
+        <security>
+            <requestFiltering>
+                <requestLimits maxAllowedContentLength="52428800" /><!-- 50MB -->
+            </requestFiltering>
+        </security>
+    </system.webServer>
+    ```
+
