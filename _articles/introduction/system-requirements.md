@@ -12,7 +12,11 @@ description: Dynamic Web TWAIN SDK Documentation Platform Page
 
 ## Supported Systems and Browsers
 
-Dynamic Web TWAIN is designed to be cross-platform, thus, it works in all major browsers across all major operating systems, including Windows, macOS, Linux. 
+Dynamic Web TWAIN is designed to be cross-platform, thus, it works in all major browsers across all major operating systems:
+
+* Windows: Windows 7 or later
+* macOS: macOS 10.15 or later
+* Linux: Ubuntu, Debian, Fedora, Linux on ChromeOS ([guide](https://www.dynamsoft.com/codepool/chrome-os-web-document-scanning.html)), etc
 
 [See the list of supported systems and browsers >](https://www.dynamsoft.com/web-twain/features/)
 
