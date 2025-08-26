@@ -87,4 +87,4 @@ The Base 64 string accessible through the `result` argument of the success callb
 
 ## Print
 
-Finally, DWT can also print directly to a printer through the [ `Print()` ](/_articles/info/api/WebTwain_IO.md#print) API. This API brings all images from the image buffer into the browser's print dialog. Alternatively, while running in Windows Service Mode, the API can also take an argument to use the Windows OS print dialog instead.
+Finally, DWT can also print directly to a printer through the [ `Print()` ](/_articles/info/api/WebTwain_IO.md#print) API. This API brings all images from the image buffer into the browser's print dialog. Alternatively, while running on Windows, the API can also take an argument to use the Windows OS print dialog instead.

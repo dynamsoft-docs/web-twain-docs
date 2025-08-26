@@ -14,6 +14,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 
 | Version | Service | Core | PDFR | Barcode | Camera/Webcam | OCRB | OCRPro| Uploader | 
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| v19.2| 1.9.0.826 | 19.2.0.0826 | 12.0.1.0826 | 9.6.40.220 | N/A /19.2.0.0826 | N/A | N/A | 1.9.0.0318 |
 | v19.1| 1.9.0.428 | 19.1.0.0428 | 12.0.0.0318 | 9.6.40.220 | N/A /15.0.0.0625 | N/A | N/A | 1.9.0.0318 |
 | v19.0| 1.9.0.318 | 19.0.0.0318 | 12.0.0.0318 | 9.6.40.220 | N/A /15.0.0.0625 | N/A | N/A | 1.9.0.0318 |
 | v18.5.1| 1.8.5.828 | 18.5.1.0828 | 11.5.3.0828 | 9.6.40.220 | N/A /15.0.0.0625 | N/A | N/A | 1.8.5.0828 |
@@ -46,7 +47,6 @@ New APIs:
 
 * [`preserveUnmodifiedOnSave`](/_articles/info/api/interfaces.md#readeroptions)
 * [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired)
-
 
 ### `11.5.2.0312` (05/14/2024)
 * Updated third party libraries
@@ -283,6 +283,10 @@ Check out the release notes of Dynamsoft Barcode Reader: [9.6.40](https://www.dy
 * Updates in this version include 1D barcode improvements in accuracy and performance for Code 39 and Code128 recognition. Also image preprocessing is improved. For Code 128, the recognition ratio and speed have jumped up by as much as 30 percent.
 
 ## Desktop Webcam Capture
+
+### `19.2.0` (08/26/2025)
+
+Improved the performance by using persistent HTTP connection.
 
 ### `15.0` (06/27/2019)
 

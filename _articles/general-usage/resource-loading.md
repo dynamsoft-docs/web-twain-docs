@@ -21,7 +21,7 @@ The official SDK installers store the installers under the `/dist` directory, an
 
 The official [DWT installer](https://www.dynamsoft.com/web-twain/downloads) installs the SDK with a 30-day free trial (license key included), and contains the resource scripts, along with SDK documentation, and samples. This method is useful for developers to quickly evaluate the SDK. The resource files may be obtained from the following locations after installation:
 
-- On Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic WebTWAIN SDK {version number}/Resources`
+- On Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic WebTWAIN SDK {version number}\Resources`
 - On Linux: Where you extracted the SDK archive file to - `{extracted directory}/Dynamic Web TWAIN SDK {version number}/Resources`
 - On MacOS: `/Applications/Dynamsoft/Dynamic Web TWAIN SDK {version number}/Resources`
 
@@ -95,6 +95,7 @@ Note that jsDelivr currently has problems delivering the Dynamic Web TWAIN Servi
         <script>
             Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@latest/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
+            Dynamsoft.DWT.ServiceInstallerLocation = 'https://unpkg.com/dwt/dist/dist/'; // Set the service installers' location
         </script>
     </body>
 </html>

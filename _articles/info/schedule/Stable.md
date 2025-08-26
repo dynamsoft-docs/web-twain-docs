@@ -10,6 +10,34 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.2 (08/26/2025) 
+
+### Highlights
+ 
+* Redesigned the service configuration page ([guide](/_articles/extended-usage/dynamsoft-service-configuration.md#web-setup)).
+   * Moved settings of host, firewall and Bonjour service to the new external access tab.
+   * Added domain binding for the service.
+   * For security reasons, the settings cannot be modified through the web page unless `EnableWebSetup` is set to true in `DSConfiguration.ini` (requires admin privileges).
+* Improved the performance of the webcam add-on.
+ 
+### Other Changes
+ 
+* Added back support for [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/) with the following methods renamed:
+   * `getDynamsoftService()` -> `getServices()`
+   * `setDefaultDynamsoftService()` -> `setDefaultService()`
+   * `getDefaultDynamsoftService()` -> `getDefaultService()`
+* Added support for [`IsBlankImageAsync()`](/_articles/info/api/WebTwain_Buffer.md#isblankimageasync) on Linux/Mac.
+* Added [`requestFocusForScanningUI`](/_articles/info/api/restful.md#:~:text=requestFocusForScanningUI){:target="_blank"} parameter for RESTful API.
+* Added file name and type for drag-and-dropped files in the [`OnPostLoad`](/_articles/info/api/WebTwain_IO.md#onpostload) event.
+* Renamed `disableFocusOutline` to [`focusOutlineEnabled`](/_articles/info/api/WebTwain_Viewer.md#focusoutlineenabled).
+* Improved PDF image extraction to take the transformation info (mainly mirroring) into consideration.
+* Opening links in the service installation dialog will no longer open a blank window.
+
+### Bug Fixes
+
+* Fixed the spelling of [`ChangeContrastAsync()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasync).
+* Fixed a bug where [`GetSelectedImagesSize()`](/_articles/info/api/WebTwain_Buffer.md#getselectedimagessize) returned 0 for images imported from PDFs. This issue occurred when loading a PDF with [`preserveUnmodifiedOnSave`](/_articles/info/api/interfaces.md#:~:text=preserveUnmodifiedOnSave){:target="_blank"} enabled and executing [`SelectAllImages()`](/_articles/info/api/WebTwain_Buffer.md#selectallimages).
+
 ## 19.1 (05/07/2025) 
 
 ### New Features
@@ -41,11 +69,11 @@ Updated the names of headers for the REST API.
 
 - **Greatly expanded support for the [RESTful Dynamic Web TWAIN Service](/_articles/extended-usage/restful-api.md).**
 - **PDF Handling**:
-  - Added new PDF Rasterizer Add-On API [`preserveUnmodifiedOnSave`](/_articles/info/api/interfaces.md#readeroptions) to preserve the size of unmodified PDF pages when saving.
+  - Added new PDF Rasterizer Add-On API [`preserveUnmodifiedOnSave`](/_articles/info/api/interfaces.md#:~:text=preserveUnmodifiedOnSave){:target="_blank"} to preserve the size of unmodified PDF pages when saving.
   - Added new PDF Rasterizer Add-On API [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired). This API returns true if the PDF file contains content other than one image per page. Please note that while invoking this API does not require a license for the PDF Rasterizer Add-On, a license is required to perform actual rasterization of the PDF for viewing purposes.
 - **Cross-platform support**: Added macOS and Linux platform support for DWT Barcode Reader Add-On.
 - **Error messages**: Added more informative error messages with the new [`ErrorCause`](/_articles/info/api/WebTwain_Util.md#errorcause) API.
-- **Keyboard accessibility**: Added Tab key keyboard navigation in the DWT `Viewer`. The browser now shows a focus outline on the `Viewer` upon tabbing into the `Viewer`, which can be disabled with the new [`{WebTwainObject}.Viewer.disableFocusOutline`](/_articles/info/api/WebTwain_Viewer.md#disablefocusoutline) API. (this property is `true` by default, i.e. disables the outline)
+- **Keyboard accessibility**: Added Tab key keyboard navigation in the DWT `Viewer`. The browser now shows a focus outline on the `Viewer` upon tabbing into the `Viewer`, which can be disabled with the new `{WebTwainObject}.Viewer.disableFocusOutline` API. (this property is `true` by default, i.e. disables the outline)
 
 ### Improvements
 
@@ -491,7 +519,7 @@ See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scann
 #### Editor
 
 - [HTML5 & WASM] Added new method [`ChangeBrightnessAsync()`](/_articles/info/api/WebTwain_Edit.md#changebrightnessasync){:target="_blank"}. 
-- [HTML5 & WASM] Added new method [`ChangeContrastAsync()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasnyc){:target="_blank"}.
+- [HTML5 & WASM] Added new method `ChangeContrastAsync()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasync){:target="_blank"}.
 
 #### Camera
 - [WASM] Added new method [`scanDocument()`](https://www.dynamsoft.com/web-twain/docs-archive/v17.2.1/info/api/Addon_Camera.html#scandocument){:target="_blank"} to capture document(s).

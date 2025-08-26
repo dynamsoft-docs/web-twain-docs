@@ -21,7 +21,7 @@ Create a `HelloWorld.html` file anywhere and copy the `Resources` folder to the 
 
 - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`
 - Linux: Within the decompressed file `Dynamic Web TWAIN SDK {Version Number}/`
-- MacOS: `Applications/Dynamsoft/Dynamic Web TWAIN SDK {Version Number}/`
+- MacOS: `/Applications/Dynamsoft/Dynamic Web TWAIN SDK {Version Number}/`
 
 ### Include the DWT Scripts
 

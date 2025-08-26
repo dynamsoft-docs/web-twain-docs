@@ -942,7 +942,7 @@ GetImagePartURL(index: number, width: number, height: number): string;
 
 The returned URL looks like this: 'dwt://dwt_trial_13000404/img?id=306159652&index=0&t=1502184632022'.
 
-You get the original size (a, b) of the image in PNG format in Service Mode
+You get the original size (a, b) of the image in PNG format
 
 - if either width or height is not set or
 - if either width or height is set to -1 or
@@ -999,7 +999,7 @@ GetImageURL(index: number, width: number, height: number): string;
 
 The returned URL looks like this: "https://127.0.0.1:18623/dwt/dwt_17110818/img?id=795151779&index=1&t=1640936181588".
 
-You get the original size (a, b) of the image in PNG format in Service Mode
+You get the original size (a, b) of the image in PNG format
 
 - if either width or height is not set or
 - if either width or height is set to -1 or
@@ -1713,9 +1713,9 @@ IsBlankImageAsync(index: number,
 
 <tr>
 <td align="center">v18.4+</td>
-<td align="center">N/A</td>
-<td align="center">N/A</td>
-<td align="center">N/A</td>
+<td align="center">v19.2+</td>
+<td align="center">v19.2+</td>
+<td align="center">v19.2+</td>
 </tr>
 
 </table>

@@ -24,7 +24,7 @@ needGenerateH3Content: true
 **Properties**
 
 | [`acceptDrop`](#acceptdrop)       | [`allowPageDragging`](#allowpagedragging)               | [`allowSlide`](#allowslide)                         | [`autoChangeIndex`](#autochangeindex)         |
-| [`background`](#background)       | [`border`](#border)                                     | [`cursor`](#cursor)                                 | [`disableFocusOutline`](#disablefocusoutline) |
+| [`background`](#background)       | [`border`](#border)                                     | [`cursor`](#cursor)                                 | [`focusOutlineEnabled`](#focusoutlineenabled) |
 | [`height`](#height)               | [`idPostfix`](#idpostfix)                               | [`ifAutoScroll`](#ifautoscroll)                     | [`innerBorder`](#innerborder)                 |
 | [`pageMargin`](#pagemargin)       | [`selectedAreaBorderColor`](#selectedareabordercolor)   | [`selectedPageBackground`](#selectedpagebackground) | [`selectedPageBorder`](#selectedpageborder)   |
 | [`selectionMode`](#selectionmode) | [`selectionRectAspectRatio`](#selectionrectaspectratio) | [`singlePageMode`](#singlepagemode)                 | [`width`](#width)                             |
@@ -225,7 +225,7 @@ createImageEditor(
 
 `editorSettings`: Configure the object. Please refer to [`EditorSettings`](/_articles/info/api/interfaces.md#editorsettings).
 
-**Arguments**
+**Returns**
 
 `ImageEditor`: Please refer to [`ImageEditor`](/_articles/info/api/interfaces.md#imageeditor).
 
@@ -512,6 +512,8 @@ The method [`unbind()`](/_articles/info/api/WebTwain_Viewer.md#unbind) will disp
 
 Generate a independent `ThumbnailViewer` object. This `ThumbnailViewer` behaves in the same way as the default `{WebTwainObject}.Viewer`, and uses the same APIs.
 
+If a `ThumbnailViewer` object already exists, this API gives the error 'A ThumbnailViewer already exists.' and returns the existing `ThumbnailViewer` object.
+
 **Syntax**
 
 ```typescript
@@ -522,9 +524,9 @@ createThumbnailViewer(
 
 **Parameters**
 
-`thumbnailViewerSettings`: Configure the ThumbnailViewer object. Please refer to [`ThumbnailViewerSettings`](/_articles/info/api/interfaces.md#thumbnailviewersettings).
+`thumbnailViewerSettings`: Configure the `ThumbnailViewer` object. Please refer to [`ThumbnailViewerSettings`](/_articles/info/api/interfaces.md#thumbnailviewersettings).
 
-**Arguments**
+**Returns**
 
 `ThumbnailViewer`: Please refer to [`ThumbnailViewer`](/_articles/info/api/interfaces.md#thumbnailviewer).
 
@@ -560,9 +562,18 @@ var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer();
 objThumbnailViewer.background = "rgb(0,0,255)";
 objThumbnailViewer.show();
 
-objThumbnailViewer.on("click", LeftClick);
-objThumbnailViewer.on("contextmenu", RightClick);
-objThumbnailViewer.on("pageRendered", PageRendered);
+// Log the index of the image that the user clicked on (primary mouse button)
+objThumbnailViewer.on("click", function(thumbnailViewerEvent, domEvent) {
+    console.log("Selected image index: " + thumbnailViewerEvent.index);
+});
+// Log the width of the thumbnail container that the user clicked on (secondary mouse button)
+objThumbnailViewer.on("contextmenu",function(thumbnailViewerEvent, domEvent) {
+	console.log("Width of selected thumbnail container: " + thumbnailViewerEvent.pageWidth);
+});
+// Log the index of the image when rendered
+objThumbnailViewer.on("pageRendered", function(index) {
+	console.log("Index of rendered page: " + index);
+});
 ```
 
 ```javascript
@@ -586,40 +597,47 @@ var thumbnailViewerSettings = {
     placeholderBackground: "rgb(251, 236, 136)",
     selectedPageBorder: "1px solid rgb(125,162,206)",
     selectedPageBackground: "rgb(199, 222, 252)"
-}​​​​​​​;
+};
 
 var objThumbnailViewer = DWTObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
 objThumbnailViewer.show();
 
-objThumbnailViewer.on("click",LeftClick);
-objThumbnailViewer.on("contextmenu",RightClick);
-objThumbnailViewer.on("pageRendered", PageRendered);
+// Log the index of the image that the user clicked on (primary mouse button)
+objThumbnailViewer.on("click", function(thumbnailViewerEvent, domEvent) {
+    console.log("Selected image index: " + thumbnailViewerEvent.index);
+});
+// Log the width of the thumbnail container that the user clicked on (secondary mouse button)
+objThumbnailViewer.on("contextmenu",function(thumbnailViewerEvent, domEvent) {
+	console.log("Width of selected thumbnail container: " + thumbnailViewerEvent.pageWidth);
+});
+// Log the index of the image when rendered
+objThumbnailViewer.on("pageRendered", function(index) {
+	console.log("Index of rendered page: " + index);
+});
 ```
 
 **Usage notes**
 
-For the CheckboxSettings and PageNumberSettings interface, please refer to the APIs [`updateCheckboxStyle()`](/_articles/info/api/WebTwain_Viewer.md#updatecheckboxstyle) and [`updatePageNumberStyle()`](/_articles/info/api/WebTwain_Viewer.md#updatepagenumberstyle).
+For the `CheckboxSettings` and `PageNumberSettings` interface, please refer to the APIs [`updateCheckboxStyle()`](/_articles/info/api/WebTwain_Viewer.md#updatecheckboxstyle) and [`updatePageNumberStyle()`](/_articles/info/api/WebTwain_Viewer.md#updatepagenumberstyle).
 
 The following table shows the events available to a ThumbnailViewer object.
 
 | Event Name     | Arguments                                         | Description                                                          |
 | :------------- | :------------------------------------------------ | :------------------------------------------------------------------- |
-| `click`        | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is clicked                                  |
-| `dblclick`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is double clicked                           |
-| `contextmenu`  | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is right clicked                            |
-| `mousemove`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse moved over                                  |
-| `mousedown`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is pressed                              |
-| `mouseup`      | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse key is released                             |
-| `resize`       | width:number, height:number                       | Triggered when width & height of the ThumbnailViewer object changes. |
-| `pageRendered` | index: number                                     | Triggered when a page is rendered.                                   |
-| `mouseout`     | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when the mouse is out, only for desktop browsers           |
-| `mouseover`    | event: ThumbnailViewerEvent, domEvent: MouseEvent | Triggered when mouse is hovering, only for desktop browsers          |
-| `keydown`      | keyboardEvent: KeyboardEvent                      | Triggered when a key is pressed, only for desktop browsers           |
-| `keyup`        | keyboardEvent: KeyboardEvent                      | Triggered when a key is released, only for desktop browsers          |
+| `click`        | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon primary mouse click                                  |
+| `dblclick`     | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon primary mouse double click                           |
+| `contextmenu`  | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon secondary mouse click                            |
+| `mousemove`    | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon mouse movements within the `ThumbnailViewer`                                  |
+| `mousedown`    | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon pressing down the primary mouse button                             |
+| `mouseup`      | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon releasing the primary mouse button                             |
+| `resize`       | width:number, height:number                       | Triggered when the width or height of the `ThumbnailViewer` object changes |
+| `pageRendered` | index: number                                     | Triggered when a page becomes rendered.                                   |
+| `mouseout`     | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon the mouse leaving the `ThumbnailViewer`; **only supported on desktop browsers**           |
+| `mouseover`    | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon mouse hovering over the `ThumbnailViewer`; **only supported on desktop browsers**          |
+| `keydown`      | keyboardEvent: KeyboardEvent                      | Triggered upon pressing a key; **only supported on desktop browsers**           |
+| `keyup`        | keyboardEvent: KeyboardEvent                      | Triggered upon releasing a key; **only supported on desktop browsers**          |
 
-By default, scrolling the scroll bar on Thumbnail does not trigger the `topchanged` event.
-
-Only one ThumbnailViewer object can be created. If you try creating it again, you will get the error 'A ThumbnailViewer already exists.' and the existing ThumbnailViewer object will be returned.
+By default, scrolling the scroll bar on the `ThumbnailViewer` does not trigger the `topchanged` event.
 
 The method [`unbind()`](/_articles/info/api/WebTwain_Viewer.md#unbind) will dispose all created ThumbnailViewer objects.
 
@@ -1528,14 +1546,14 @@ DWTObject.Viewer.cursor = "crosshair";
 
 ---
 
-## disableFocusOutline
+## focusOutlineEnabled
 
-Control whether the viewer removes the focus border after selecting with the Tab key - defaults to `true` to remove the focus border.
+Control whether the viewer removes the focus border after selecting with the Tab key - defaults to `false` to remove the focus border.
 
 **Syntax**
 
 ```typescript
-disableFocusOutline: boolean;
+focusOutlineEnabled: boolean;
 ```
 
 **Availability**
@@ -1551,10 +1569,10 @@ disableFocusOutline: boolean;
 </tr>
 
 <tr>
-<td align="center">v19.0+ </td>
-<td align="center">v19.0+ </td>
-<td align="center">v19.0+ </td>
-<td align="center">v19.0+ </td>
+<td align="center">v19.2+ </td>
+<td align="center">v19.2+ </td>
+<td align="center">v19.2+ </td>
+<td align="center">v19.2+ </td>
 </tr>
 
 </table>

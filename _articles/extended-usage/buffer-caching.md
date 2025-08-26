@@ -48,10 +48,7 @@ var storageItemUid = await DWTObject.createLocalStorage(folderSettings);
 
 Please ensure to set a strong password to enhance data security, especially in multi-user login scenarios.
 
-The local directory of the created storage folder is under 
-  - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\storage`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`)
-  - macOS: `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > storage`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`)
-  - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/storage`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/storage`)
+The local directory of the created storage folder is under the service's [intallation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 
 **Save image caches**
 

@@ -19,7 +19,7 @@ The properties and methods on this page live in the namespace {WebTwainObject}. 
 | [`Rotate()`](#rotate)                           | [`RotateEx()`](#rotateex)               | [`RotateLeft()`](#rotateleft)                   | [`RotateRight()`](#rotateright)                     |
 | [`ChangeBitDepth()`](#changebitdepth)           | [`SetDPI()`](#setdpi)                   | [`ConvertToBW()`](#converttobw)                 | [`ConvertToGrayScale()`](#converttograyscale)       |
 | [`ChangeImageSize()`](#changeimagesize)         | [`Invert()`](#invert)                   | [`SetImageWidth()`](#setimagewidth)             | [`ChangeBrightnessAsync()`](#changebrightnessasync) |
-| [`ChangeContrastAsnyc()`](#changecontrastasnyc) |
+| [`ChangeContrastAsync()`](#changecontrastasync) |
 
 <!--
 * [Crop()](#crop)
@@ -1347,14 +1347,14 @@ ChangeBrightnessAsync(
 
 ---
 
-## ChangeContrastAsnyc()
+## ChangeContrastAsync()
 
 Change the image contrast.
 
 **Syntax**
 
 ```typescript
-ChangeContrastAsnyc(
+ChangeContrastAsync(
     index: number,
     value: number
 ): Promise<boolean>;

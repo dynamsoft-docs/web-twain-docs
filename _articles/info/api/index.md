@@ -137,7 +137,7 @@ breadcrumbText: API Reference
 | [`Rotate()`](/_articles/info/api/WebTwain_Edit.md#rotate)                           | [`RotateEx()`](/_articles/info/api/WebTwain_Edit.md#rotateex)               | [`RotateLeft()`](/_articles/info/api/WebTwain_Edit.md#rotateleft)                   | [`RotateRight()`](/_articles/info/api/WebTwain_Edit.md#rotateright)                     |
 | [`ChangeBitDepth()`](/_articles/info/api/WebTwain_Edit.md#changebitdepth)           | [`SetDPI()`](/_articles/info/api/WebTwain_Edit.md#setdpi)                   | [`ConvertToBW()`](/_articles/info/api/WebTwain_Edit.md#converttobw)                 | [`ConvertToGrayScale()`](/_articles/info/api/WebTwain_Edit.md#converttograyscale)       |
 | [`ChangeImageSize()`](/_articles/info/api/WebTwain_Edit.md#changeimagesize)         | [`Invert()`](/_articles/info/api/WebTwain_Edit.md#invert)                   | [`SetImageWidth()`](/_articles/info/api/WebTwain_Edit.md#setimagewidth)             | [`ChangeBrightnessAsync()`](/_articles/info/api/WebTwain_Edit.md#changebrightnessasync) |
-| [`ChangeContrastAsnyc()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasnyc) |
+| [`ChangeContrastAsync()`](/_articles/info/api/WebTwain_Edit.md#changecontrastasync) |
 
 <!--
 * [`Crop()`](/_articles/info/api/WebTwain_Edit.md#crop)
@@ -491,7 +491,7 @@ breadcrumbText: API Reference
 ### Properties
 
 | [`acceptDrop`](/_articles/info/api/WebTwain_Viewer.md#acceptdrop)       | [`allowPageDragging`](/_articles/info/api/WebTwain_Viewer.md#allowpagedragging)               | [`allowSlide`](/_articles/info/api/WebTwain_Viewer.md#allowslide)                         | [`autoChangeIndex`](/_articles/info/api/WebTwain_Viewer.md#autochangeindex)         |
-| [`background`](/_articles/info/api/WebTwain_Viewer.md#background)       | [`border`](/_articles/info/api/WebTwain_Viewer.md#border)                                     | [`cursor`](/_articles/info/api/WebTwain_Viewer.md#cursor)                                 | [`disableFocusOutline`](/_articles/info/api/WebTwain_Viewer.md#disablefocusoutline) |
+| [`background`](/_articles/info/api/WebTwain_Viewer.md#background)       | [`border`](/_articles/info/api/WebTwain_Viewer.md#border)                                     | [`cursor`](/_articles/info/api/WebTwain_Viewer.md#cursor)                                 | [`focusOutlineEnabled`](/_articles/info/api/WebTwain_Viewer.md#focusoutlineenabled) |
 | [`height`](/_articles/info/api/WebTwain_Viewer.md#height)               | [`idPostfix`](/_articles/info/api/WebTwain_Viewer.md#idpostfix)                               | [`ifAutoScroll`](/_articles/info/api/WebTwain_Viewer.md#ifautoscroll)                     | [`innerBorder`](/_articles/info/api/WebTwain_Viewer.md#innerborder)                 |
 | [`pageMargin`](/_articles/info/api/WebTwain_Viewer.md#pagemargin)       | [`selectedAreaBorderColor`](/_articles/info/api/WebTwain_Viewer.md#selectedareabordercolor)   | [`selectedPageBackground`](/_articles/info/api/WebTwain_Viewer.md#selectedpagebackground) | [`selectedPageBorder`](/_articles/info/api/WebTwain_Viewer.md#selectedpageborder)   |
 | [`selectionMode`](/_articles/info/api/WebTwain_Viewer.md#selectionmode) | [`selectionRectAspectRatio`](/_articles/info/api/WebTwain_Viewer.md#selectionrectaspectratio) | [`singlePageMode`](/_articles/info/api/WebTwain_Viewer.md#singlepagemode)                 | [`width`](/_articles/info/api/WebTwain_Viewer.md#width)                             |
