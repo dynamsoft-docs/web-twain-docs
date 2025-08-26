@@ -340,11 +340,7 @@ LogLevel: number;
 
 **Usage notes**
 
-The logs for the Dynamic Web TWAIN library are saved in the directory:
-
-- Windows `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\log`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\log`) or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\Dynamic Web TWAIN Service\log`(version 18.5.1 and earlier `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService\log`)
-- macOS, `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > log`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > log`)
-- Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/log`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/log`)
+The logs for the Dynamic Web TWAIN library are saved in the `log` folder under its [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 
 By default, `LogLevel` is 0 and nothing is recorded. When it is set to 1, all debugging information is recorded. This setting in your application will apply to all machines. Please set it back to 0 if you don't need to record log as it will slow down the speed.
 

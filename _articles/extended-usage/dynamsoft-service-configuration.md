@@ -120,7 +120,7 @@ Screenshots:
 
    ![external access setup](/assets/imgs/service-web-setup/external-access-setup.jpg)
 
-On the left of the page, you can check the service's status and update the [`LogLevel`](/_articles/info/api/WebTwain_Util.md#loglevel)。
+On the left of the page, you can check the service's status and update the [`LogLevel`](/_articles/info/api/WebTwain_Util.md#loglevel).
 
 On the right of the page, you can configure the service through the local access tab and the external access tab.
 

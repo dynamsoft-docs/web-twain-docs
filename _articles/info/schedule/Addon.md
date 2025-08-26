@@ -284,6 +284,10 @@ Check out the release notes of Dynamsoft Barcode Reader: [9.6.40](https://www.dy
 
 ## Desktop Webcam Capture
 
+### `19.2.0` (08/26/2025)
+
+Improved the performance by using persistent HTTP connection.
+
 ### `15.0` (06/27/2019)
 
 #### IMPROVED

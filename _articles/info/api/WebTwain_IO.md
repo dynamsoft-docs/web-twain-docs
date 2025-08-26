@@ -3554,7 +3554,7 @@ ShowFileDialog(
 
 `allowMultiSelect`: Whether or not multiple files can be selected at the same time. Only valid in an open-file dialog.
 
-`showOverwritePrompt`: Whether to display a prompt if saving a file which would overwrite an existing file.
+`showOverwritePrompt`: Whether to display a prompt if saving a file which would overwrite an existing file (only valid for Windows).
 
 `flag`: If set to 0, `allowMultiSelect` and `showOverwritePrompt` take effect. Otherwise, ignore those two parameters.
 
@@ -3749,10 +3749,7 @@ A Promise object which will be resolved with the uid string which will be used a
 **Usage notes**
 
 - If `password` is not specified, the returned `uid` string will be set as the password of the storage folder.
-- The local directory of the created storage folder is under
-    - Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {versionnumber}\storage`(version 18.5.1 and earlier `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{versionnumber}\storage`)
-    - macOS: `Go > Applications > Dynamsoft > Dynamic Web TWAIN Service {versionnumber} > storage`(version 18.5.1 and earlier `Go > Applications > Dynamsoft > DynamsoftServicex64_{versionnumber} > {installed version No.} > storage`)
-    - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}/storage`(version 18.5.1 and earlier `/opt/dynamsoft/DynamsoftService/storage`)
+- The local directory of the created storage folder is under the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 - The creation will not be successful, if the remaining disk space is less than
 
     | System      | Remaining Disk Space |

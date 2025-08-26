@@ -34,7 +34,7 @@ Deliver the SDK dependencies with either the [jsDelivr](https://jsdelivr.com/) o
 
   ```html
     <!--Dynamic Web TWAIN-->
-    <script src="https://cdn.jsdelivr.net/npm/dwt@19.1.0/dist/dynamsoft.webtwain.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist/dynamsoft.webtwain.min.js"></script>
     <!--Dynamsoft Document Viewer-->
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
@@ -44,7 +44,7 @@ Deliver the SDK dependencies with either the [jsDelivr](https://jsdelivr.com/) o
 
   ```html
     <!--Dynamic Web TWAIN-->
-    <script src="https://unpkg.com/dwt@19.1.0/dist/dynamsoft.webtwain.min.js"></script>
+    <script src="https://unpkg.com/dwt@19.2.0/dist/dynamsoft.webtwain.min.js"></script>
     <!--Dynamsoft Document Viewer-->
     <script src="https://unpkg.com/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
@@ -120,7 +120,7 @@ API Reference
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
 Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DWT.UseDefaultViewer = false;
-Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.1.0/dist";
+Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist";
 // You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. You'd better host the installers in your own environment.
 Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
 
@@ -279,7 +279,7 @@ API Reference
 <html>
 <head>
     <title>HelloWorld</title>
-    <script src=" https://cdn.jsdelivr.net/npm/dwt@19.1.0/dist/dynamsoft.webtwain.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist/dynamsoft.webtwain.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
 </head>
@@ -316,7 +316,7 @@ let DWObject, editViewer, ddvDoc;
     // Create Dynamic Web TWAIN object
     Dynamsoft.DWT.ProductKey = license;
     Dynamsoft.DWT.UseDefaultViewer = false;
-    Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.1.0/dist";
+    Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist";
     // You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. You'd better host the installers in your own environment.
     Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
 
