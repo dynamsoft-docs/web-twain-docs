@@ -22,7 +22,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
  
 ### Other Changes
  
-* Added back support for [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/) with the following methods renamed:
+* Added back support for [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/){:target="_blank"} with the following methods renamed:
    * `getDynamsoftService()` -> `getServices()`
    * `setDefaultDynamsoftService()` -> `setDefaultService()`
    * `getDefaultDynamsoftService()` -> `getDefaultService()`
