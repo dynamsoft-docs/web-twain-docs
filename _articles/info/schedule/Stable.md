@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN SDK Schedule - Stable Release
-keywords: Dynamic Web TWAIN, Documentation, Schedule, Stable Release
+keywords: Dynamic Web TWAIN, Documentation, Schedule, Stable Release, Release Notes
 breadcrumbText: Stable Releases
 noTitleIndex: true
 description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
