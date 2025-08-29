@@ -103,7 +103,7 @@ The runtime settings of the add-on gives you access to a wide array of customiza
 
 By default, the add-on will read all the supported barcode types from the image. (See the `Supported Symbologies` [here](https://www.dynamsoft.com/Products/Barcode-Types.aspx))
 
-If your license only covers a subset of the full list or you want to read specific barcode types, you can use `barcodeFormatIds` and `barcodeFormatIds2` to specify the barcode format(s). For example, to enable only 1D barcode reading, you can use the following code snippet:
+If your license only covers a subset of the full list or you want to read specific barcode types, you can use [__`barcodeFormatIds`__](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumBarcodeFormat.html?ver=9.6.42) and [__`barcodeFormatIds2`__](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumBarcodeFormat_2.html?ver=9.6.42) to specify the barcode format(s). For example, to enable only 1D barcode reading, you can use the following code snippet:
 
 ``` javascript
 DWTObject.Addon.BarcodeReader.getRuntimeSettings()
