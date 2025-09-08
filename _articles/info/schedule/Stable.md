@@ -439,8 +439,6 @@ In 18.0+, if you call Dynamsoft.DWT.GetWebTwain against a non-existent Container
     - Building your custom workflow to trigger actions in your desired sequence is made easy.
     - Interface elements in the viewer/editor are now customizable. You can easily add/remove icons or change their style.
 
-See the <a href="https://demo.dynamsoft.com/web-twain/mobile-online-camera-scanner/" target="_blank">**live demo**</a>.
-
 #### Buffer
 - Added new method [RenameDocument](/_articles/info/api/WebTwain_Buffer.md#renamedocument){:target="_blank"}.
 -	Renamed methods

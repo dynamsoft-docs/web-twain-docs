@@ -124,7 +124,7 @@ Links to API Reference:
 
 ### Open the Application in Your Browser
 
-![HelloWorld-Scan-1](/assets/imgs\HelloWorldScanSetting1.png)
+![HelloWorld-Scan-1](/assets/imgs/HelloWorldScanSetting1.png)
 
 ### Press the Scan button
 
@@ -134,7 +134,7 @@ The scan should proceed directly after the button press, without displaying the 
 
 You should receive a grayscale image at 150 ppi:
 
-![HelloWorld-Scan-2](/assets/imgs\HelloWorldScanSetting2.png)
+![HelloWorld-Scan-2](/assets/imgs/HelloWorldScanSetting2.png)
 
 # Previous Articles
 

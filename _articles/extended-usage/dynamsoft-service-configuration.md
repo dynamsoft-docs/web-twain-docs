@@ -55,6 +55,12 @@ The service is installed in the following folders on different platforms by defa
 - Linux: 
   - version 19.0 and later:  `/opt/dynamsoft/Dynamic Web TWAIN Service {versionnumber}`
   - version 18.5.1 and earlier: `/opt/dynamsoft/DynamsoftService`
+  
+There are some files and folders you may pay attention to:
+
+* `log`: the folder where the logs are kept.
+* `DSConfiguration.ini`: the service's configuration file.
+* `storage`: the folder used by [`createLocalStorage()`](/_articles/info/api/WebTwain_IO.md#createlocalstorage).
 
 ## IP and ports
 
