@@ -17,4 +17,4 @@ last_modified: 2025-09-08 13:50:00 +0800
 > If you are looking to capture documents using mobile cameras, please see FAQ: [Do you support capturing documents from mobile cameras?](/_articles/faq/support-capture-from-mobile-camera.md)
 
 
-The Dynamic Web TWAIN has introduced a [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/) feature starting from version [18.2](/_articles/info/schedule/stable.html#remote-scan-1). It allows end users to access scanners of various protocols (TWAIN, SANE, ICA, eSCL, WIA) on the Intranet through any devices and any popular browsers, without any extra software installed.
+The Dynamic Web TWAIN has introduced a [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/) feature starting from version [18.2](/_articles/info/schedule/Stable.md#remote-scan-1). It allows end users to access scanners of various protocols (TWAIN, SANE, ICA, eSCL, WIA) on the Intranet through any devices and any popular browsers, without any extra software installed.

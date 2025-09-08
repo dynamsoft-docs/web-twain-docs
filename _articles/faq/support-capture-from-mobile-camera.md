@@ -14,4 +14,4 @@ last_modified: 2025-09-08 13:50:00 +0800
 
 ## Do you support capturing documents from mobile camera?
 
-While Dynamic Web TWAIN has discontiued its support of using mobile cameras starting from version [18.1](/_articles/info/schedule/stable.html#181-01122023), we are introducing [Mobile Document Scanner](https://www.dynamsoft.com/use-cases/mobile-document-scanner/) for better performance and customizability.
+While Dynamic Web TWAIN has discontiued its support of using mobile cameras starting from version [18.1](/_articles/info/schedule/Stable.md#181-01122023), we are introducing [Mobile Document Scanner](https://www.dynamsoft.com/use-cases/mobile-document-scanner/) for better performance and customizability.
