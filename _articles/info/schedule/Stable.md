@@ -102,7 +102,7 @@ Updated the names of headers for the REST API.
 - **Discontinued support for the PDF Compressor Add-On.**
 - **Discontinued out-of-the-box support for ActiveX.**
 - **Discontinued support for 32-bit macOS**: now only supporting macOS versions 10.15 and higher.
-- **Discontinued support for Android**: use [Mobile Web Capture](https://www.dynamsoft.com/use-cases/mobile-web-capture-sdk/) instead.
+- **Discontinued support for Android**: use [Mobile Document Scanner](https://www.dynamsoft.com/use-cases/mobile-document-scanner/) instead.
 
 ### Bug Fixes
 
