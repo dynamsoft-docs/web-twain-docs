@@ -1816,7 +1816,7 @@ fetch(url, requestOptions)
 
 Create a new document process to read a barcode on a scanned page.
 
-Barcode scanning requires a valid Barcode Reader Add-On license. Blank page detection is only supported on Windows.
+Barcode scanning requires a valid Barcode Reader Add-On license.
 
 #### Parameters
 
@@ -2019,8 +2019,6 @@ HTTP Status Code **200**
 ### `POST /process/check-blank`
 
 Create a new document process to check if a scanned page is blank.
-
-Blank page detection is **only supported on Windows**.
 
 #### Parameters
 
