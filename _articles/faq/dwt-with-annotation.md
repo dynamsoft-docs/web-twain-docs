@@ -114,6 +114,12 @@ API Reference
     - [`openDocument()`](https://www.dynamsoft.com/document-viewer/docs/api/class/editviewer.html#opendocument)  
 
 ### 3.3 Create a Viewerless Dynamic Web TWAIN Instance
+
+Reference a CDN like `jsDelivr` to fetch most resources using `Dynamsoft.DWT.ResourcesPath`. Notably these resources exclude DWT Service installers, which exceed the `jsDelivr` CDN per-file size limit. You have a few options to set this path with `Dynamsoft.DWT.ServiceInstallerLocation`:
+
+1. [Install the DWT SDK](https://www.dynamsoft.com/web-twain/downloads/), extract the DWT service installers (under path like `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 19.2\Resources\dist`), then self-host the DWT Service installers with `Dynamsoft.DWT.ServiceInstallerLocation = "https://example.com/DWT/Resources/dist"`.
+2. Use a different CDN with a higher per-file size limit by referencing the location with `Dynamsoft.DWT.ServiceInstallerLocation = "https://unpkg.com/dwt@19.2.0/dist/dist"`.
+
 ```javascript
 // Create Dynamic Web TWAIN object
 // Public trial license which is valid for 24 hours
@@ -121,8 +127,8 @@ API Reference
 Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DWT.UseDefaultViewer = false;
 Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist";
-// You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. You'd better host the installers in your own environment.
-Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
+// Do not forget to set your installer path
+Dynamsoft.DWT.ServiceInstallerLocation = "YOUR_INSTALLER_PATH_HERE";
 
 let DWObject;
 // Create a Dynamic Web TWAIN instance without the built-in viewer
@@ -317,8 +323,8 @@ let DWObject, editViewer, ddvDoc;
     Dynamsoft.DWT.ProductKey = license;
     Dynamsoft.DWT.UseDefaultViewer = false;
     Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist";
-    // You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. You'd better host the installers in your own environment.
-    Dynamsoft.DWT.ServiceInstallerLocation = 'https://download2.dynamsoft.com/Demo/DWT/Resources/dist/';
+    // Do not forget to set your installer path
+    Dynamsoft.DWT.ServiceInstallerLocation = "YOUR_INSTALLER_PATH_HERE";
 
     // Create a Dynamic Web TWAIN instance without the built-in viewer
     Dynamsoft.DWT.CreateDWTObjectEx({

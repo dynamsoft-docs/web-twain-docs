@@ -13,7 +13,6 @@ description: Advanced DWT Initialization
 
 As presented in the standard [initialization guide](/_articles/general-usage/initialization.md), DWT instantiates a default `WebTwain` object in its default configuration. Here, we offer some alternative ways to instantiate `WebTwain` objects, as well as ways to alter the configuration of `WebTwain` objects.
 
-> Note: jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/DynamicWebTWAINServiceSetup.msi`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UNPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
 
 ## Auto-Loading with CDN/Package Manager Resources
 
@@ -34,6 +33,53 @@ The resource files loaded from CDNs and package managers slightly differ from th
             var DWTObject; // Use this to store the WebTwain object after retrieval
 
             Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/dwt@latest/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ProductKey = ""; // Add product key here
+            //You need to set the service installer location here since the installer's size exceeds jsdelivr's limit. 
+            //You'd better host the installers in your own environment.
+            Dynamsoft.DWT.ServiceInstallerLocation = 'https://unpkg.com/dwt/dist/dist/';
+            // Configure the default WebTwain instance
+            Dynamsoft.DWT.Containers = [{
+                ContainerId: 'dwtcontrolContainer', // Binds WebTwain to container by ID
+                Width: 270,
+                Height: 320
+            }];
+            // Instantiate the WebTwain instance upon loading resources
+            Dynamsoft.DWT.AutoLoad = true;
+
+            // Retrieve WebTwain object after initializing DWT
+            Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
+                DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer"); // Retrieve instantiated WebTwain object
+
+                // Include this block to verify WebTwain instantiation
+                /*
+                    if (DWTObject) {
+                        alert("WebTwain object instantiated");
+                    }
+                    */
+            });
+        </script>
+    </body>
+</html>
+```
+
+### Loading from UNPKG
+
+> [!WARNING]
+> UNPKG may not provide any guarantees of uptime or technical support.
+
+```html
+<html>
+    <head>
+        <!-- Load resources from UNPKG CDN -->
+        <script src="https://unpkg.com/dwt@19.2.0/dist/dynamsoft.webtwain.min.js"></script>
+    </head>
+
+    <body>
+        <div id="dwtcontrolContainer"></div> <!-- The WebTwain object binds to this div by default -->
+        <script>
+            var DWTObject; // Use this to store the WebTwain object after retrieval
+
+            Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@19.2.0/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
 
             // Configure the default WebTwain instance
@@ -76,7 +122,7 @@ APIs used:
 
 Setting values for `Dynamsoft.DWT.AutoLoad` and `Dynamsoft.DWT.Containers` results in identical startup behavior for resources obtained from CDNs and package managers to resources obtained from the official SDK.
 
-> Note: jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/DynamicWebTWAINServiceSetup.msi`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. UNPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
+> Note: jsDelivr currently has problems delivering the Dynamic Web TWAIN Service installer (`https://cdn.jsdelivr.net/npm/dwt@latest/dist/dist/DynamicWebTWAINServiceSetup.msi`) due to [size restrictions](https://www.jsdelivr.com/documentation#id-configuring-a-default-file-in-packagejson); please consider hosting this particular resource file elsewhere. You can specify the path using [`ServiceInstallerLocation`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#serviceinstallerlocation). UNPKG is currently unaffected. For information about the Dynamic Web TWAIN Service, learn more [here](/_articles/extended-usage/dynamsoft-service-configuration.md).
 
 ## Configuring Default `WebTwain` Instances
 

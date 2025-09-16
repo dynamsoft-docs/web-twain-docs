@@ -2028,8 +2028,8 @@ interface TextResult {
 }
 ```
 
-- [`EnumBarcodeFormat`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumBarcodeFormat.html?ver=9.6.33)
-- [`EnumBarcodeFormat_2`](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/enum/EnumBarcodeFormat_2.html?ver=9.6.33)
+- [`EnumBarcodeFormat`](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/enum/EnumBarcodeFormat.html?ver=9.6.42)
+- [`EnumBarcodeFormat_2`](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/enum/EnumBarcodeFormat_2.html?ver=9.6.42)
 - [`LocalizationResult`](/_articles/info/api/interfaces.md#localizationresult) 
 - [`Result`](/_articles/info/api/interfaces.md#result)
 
@@ -2130,7 +2130,7 @@ interface RuntimeSettings {
 
 - [`FurtherModes`](/_articles/info/api/interfaces.md#furthermodes)
 - [`Region`](/_articles/info/api/interfaces.md#region)
-- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interface/RuntimeSettings.html?ver=9.6.42) to view.
+- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/interface/RuntimeSettings.html?ver=9.6.42) to view.
 
 ### FurtherModes
 
@@ -2154,7 +2154,7 @@ interface FurtherModes {
 }
 ```
 
-- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interface/furthermodes.html?ver=9.6.42) to view.
+- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/interface/furthermodes.html?ver=9.6.42) to view.
 
 ### Region
 
@@ -2169,7 +2169,7 @@ interface Region {
     regionTop: number;
 }
 ```
-- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/web/programming/javascript/api-reference/interface/Region.html?ver=9.6.42) to view.
+- For more detailed information, please [click the link](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/interface/Region.html?ver=9.6.42) to view.
 
 ## FileUploader
 

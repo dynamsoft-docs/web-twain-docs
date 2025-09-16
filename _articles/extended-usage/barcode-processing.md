@@ -133,6 +133,8 @@ DWTObject.Addon.BarcodeReader.getRuntimeSettings()
     });
 ```
 
+See also [`EnumBarcodeFormat`](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/enum/EnumBarcodeFormat.html?ver=9.6.42) and [`EnumBarcodeFormat_2`](https://www.dynamsoft.com/barcode-reader/docs/v9/web/programming/javascript/api-reference/enum/EnumBarcodeFormat_2.html?ver=9.6.42).
+
 ### Specify maximum barcode count
 
 By default, the add-on will read as many barcodes as it can. To increase the recognition efficiency, you can use `expectedBarcodesCount` to specify the maximum number of barcodes to recognize according to your scenario.
