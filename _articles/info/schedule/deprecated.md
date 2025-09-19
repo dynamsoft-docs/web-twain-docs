@@ -68,6 +68,11 @@ Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT
 
 * Dynamsoft.DWT.GetWebTwainEx()
 
+## 18.1
+
+The WASM edition (camera add-on) is removed from Web TWAIN. The following API is deprecated: `UseLocalService`.
+
+
 ## 18.0
 
 ### Dynamic Web TWAIN
@@ -105,7 +110,7 @@ Deprecate the enum value CM_RENDERALLWITHANNOTATION from [`Dynamsoft.DWT.EnumDWT
 
 ### Camera Add-On
 
-> [Alternative] Use [scanDocument](/_articles/info/api/Addon_Camera.md#scandocument) instead.
+> [Alternative] Use [Mobile Document Scanner](https://www.dynamsoft.com/use-cases/mobile-document-scanner/) instead.
 
 * Camera.showVideo()
 
