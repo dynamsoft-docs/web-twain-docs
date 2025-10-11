@@ -130,7 +130,7 @@ On the left of the page, you can check the service's status and update the [`Log
 
 On the right of the page, you can configure the service through the local access tab and the external access tab.
 
-In the local access tab, you can update the SSL certificate for domains bound to `127.0.0.1`.
+In the local access tab, you can update the SSL certificate for domains bound to `127.0.0.1` ([guide](/_articles/faq/change-dynamsoft-service-certificate.md)).
 
 In the external access tab, you can update the following settings:
 
