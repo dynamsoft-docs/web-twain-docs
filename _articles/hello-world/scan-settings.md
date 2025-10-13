@@ -90,19 +90,19 @@ function AcquireImage() {
                         Dynamsoft.DWT.EnumDWT_ImageType.IT_PNG,
                         Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
                         "WebTWAINImage.png",
-                        onUploadSuccess,
-                        onUploadFailure,
+                        onEmptyResponse,
+                        onServerReturnedSomething,
                     );
                 } else {
                     alert("There is no image in buffer.");
                 }
             }
 
-            function onUploadSuccess() {
+            function onEmptyResponse() {
                 alert("Upload successful");
             }
 
-            function onUploadFailure(errorCode, errorString, sHttpResponse) {
+            function onServerReturnedSomething(errorCode, errorString, sHttpResponse) {
                 alert(sHttpResponse.length > 0 ? sHttpResponse : errorString);
             }
         </script>
