@@ -1490,7 +1490,7 @@ HTTPUpload(
 
 `onEmptyResponse`: A callback function that is executed if the response is empty.
 
-`onServerReturnedSomething`: A callback function that is executed if the response is not empty.
+`onServerReturnedSomething`: A callback function that is executed if the response is not empty. The accepted response type is `string`.
 
 - `errorCode` The error code.
 - `errorString` The error string.
@@ -2069,6 +2069,10 @@ httpUploadBlob(
 - `headers`: The headers to the HTTP Post Form.
     - `name`: The name of header.
     - `value`: The value of header.
+
+**Return Values**
+
+A Promise object of the response that is resolved based on the `responseType` parameter.
 
 **Availability**
 
