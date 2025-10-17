@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation. This will help you integrate d
 
 # Introduction
 
-**Dynamsoft Dynamic Web TWAIN** (DWT) is a software development kit (SDK) that enables users to scan documents from a **web environment** via APIs like TWAIN, WIA, ICA, SANE and eSCL. DWT handles the whole data flow, from image acquisition at the scanner, to displaying and editing scanned images in the browser, and finally uploading to the server.
+**Dynamsoft Dynamic Web TWAIN** (DWT) is a software development kit (SDK) that enables users to scan documents from a **web environment** via APIs like TWAIN, WIA, ICA, SANE and eSCL. DWT handles the whole data flow, from image acquisition at the scanner, to displaying and editing scanned images in the browser, and finally uploading to the server. To see it in action, please visit its [online demo](https://demo.dynamsoft.com/web-twain/).
 
 ## Quick Start
 
@@ -32,7 +32,7 @@ description: Dynamic Web TWAIN SDK Documentation. This will help you integrate d
 5. Secure data handling:
     - Encrypted data pipeline <!-- is data encrypted in in motion and at rest? -->
     - Cache sanitization even upon unexpected shutdown of SDK
-6. PDF annotation with [Dynamsoft Document Viewer](https://www.dynamsoft.com/document-viewer/docs/introduction/index.html)
+6. PDF annotation with [Dynamsoft Document Viewer](https://www.dynamsoft.com/document-viewer/docs/introduction/index.html) ([demo](https://demo.dynamsoft.com/web-twain/annotate-scan))
 
 
 ## Add-Ons
