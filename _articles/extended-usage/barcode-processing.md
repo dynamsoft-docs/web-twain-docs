@@ -18,6 +18,8 @@ With the increasing use of barcode reading in document management systems, the B
 ## Environment
 
 * Windows
+* macOS
+* Linux
 
 ## How to use
 
