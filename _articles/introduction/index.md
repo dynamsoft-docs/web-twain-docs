@@ -10,20 +10,16 @@ description: Dynamic Web TWAIN SDK Documentation. This will help you integrate d
 
 # Introduction
 
-**Dynamsoft Dynamic Web TWAIN** (DWT) is a software development kit (SDK) that enables users to scan and upload documents from a **web environment**. DWT handles the whole data flow, from image acquisition at the scanner, to displaying and editing scanned images in the browser, and finally uploading to the server.
+**Dynamsoft Dynamic Web TWAIN** (DWT) is a software development kit (SDK) that enables users to scan documents from a **web environment** via APIs like TWAIN, WIA, ICA, SANE and eSCL. DWT handles the whole data flow, from image acquisition at the scanner, to displaying and editing scanned images in the browser, and finally uploading to the server.
 
-Here we provide a series of usage guides, so that you can quickly start making use of both basic and advanced features of DWT with just a few lines of code - see our [general usage](/_articles/extended-usage/index.md) guides for more. You can also use our [Hello World](/_articles/hello-world/index.md) demo that demonstrates how to enable basic scanning, viewing, and uploading functionality in a web application.
+## Quick Start
 
-DWT add-ons provide additional features such as scanning using a webcam video feed, document barcode reading, and PDF rasterization. <!-- You can learn more about add-ons and licensing [here](../add-ons/). -->
-
-Starting in DWT version 19, we drastically improved DWT platform support with the addition of a suite of RESTful APIs, which brings DWT's powerful scanning functionalities to not just web clients, but to native desktop/mobile applications and background services in any language. Click here for [sample implementations of the Dynamic Web TWAIN RESTful API](/_articles/extended-usage/restful-api.md) as well as the full [RESTful API reference](/_articles/info/api/restful.md).
-
-We also have an<!-- [knowledge base](../knowledge-base/) --> [API reference](/_articles/info/api/index.md) where you can find more comprehensive descriptions of our product.
+* [Hello World](/_articles/hello-world/index.md) demo that demonstrates how to enable basic scanning, viewing, and uploading functionality in a web application.
+* [General usage](/_articles/general-usage/index.md) and [extended usage](/_articles/extended-usage/index.md) guides for you to quickly start making use of both basic and advanced features of DWT.
 
 ## Key Features
 
-1. Platform support:
-    - Broad compatibility with browsers, operating systems, and image sources
+1. Platform support: Broad compatibility with browsers, operating systems, and image sources
 2. Image acquisition:
     - Connect to scanners from web browser with industry standard protocols
     - Communicate with scanners using a background service ([The Dynamic Web TWAIN Service](/_articles/faq/what-does-dynamsoft-service-do-on-end-user-machine.md)) with flexible configurations
@@ -36,7 +32,25 @@ We also have an<!-- [knowledge base](../knowledge-base/) --> [API reference](/_a
 5. Secure data handling:
     - Encrypted data pipeline <!-- is data encrypted in in motion and at rest? -->
     - Cache sanitization even upon unexpected shutdown of SDK
+6. PDF annotation with [Dynamsoft Document Viewer](https://www.dynamsoft.com/document-viewer/docs/introduction/index.html)
 
-## [System Requirements](/_articles/introduction/system-requirements.md)
 
-DWT supports most major operating systems, browsers, and printers using standard drivers. Learn more about hardware requirements [here](/_articles/introduction/imaging-hardware.md). Other environments not officially listed may still support DWT, but Dynamsoft does not officially support these environments as they are not tested. If you have questions about unofficially supported environments, please contact our [support team](/_articles/about/getsupport.md) for more information.
+## Add-Ons
+
+DWT add-ons provide additional features:
+
+* [Webcam add-on](/_articles/info/api/Addon_Webcam.md) to access cameras in the browser.
+* [Barcode Reader add-on](/_articles/info/api/Addon_BarcodeReader.md) to read barcodes in documents.
+* [PDF Rasterizer add-on](/_articles/info/api/Addon_PDF.md) to load external PDFs.
+
+## System Requirements
+
+DWT supports most major operating [systems](/_articles/introduction/system-requirements.md), browsers, and printers using standard drivers. Learn more about hardware requirements [here](/_articles/introduction/imaging-hardware.md). Other environments not officially listed may still support DWT, but Dynamsoft does not officially support these environments as they are not tested. If you have questions about unofficially supported environments, please contact our [support team](/_articles/about/getsupport.md) for more information.
+
+## API Reference
+
+See [API reference](/_articles/info/api/index.md) where you can find more comprehensive descriptions of our product.
+
+## RESTful API
+
+Dynamic Web TWAIN also provides [RESTful API](https://www.dynamsoft.com/web-twain/restfulapi/) to access scanners using various programming languages. You can check out the [samples](https://www.dynamsoft.com/web-twain/docs/extended-usage/restful-api.html) and [APIs](https://www.dynamsoft.com/web-twain/docs/info/api/restful.html) to learn more.
