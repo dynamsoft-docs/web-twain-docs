@@ -40,10 +40,10 @@ Then, you can find the certificate named `fullchain.cer` and the private key nam
 * default keys
   * server.pem
   * server_key.pem
-* keys for [local.dynamsoft.com](/_articles/faq/failed-to-load-resource.md) (encrypted)
+* keys for [local.dynamsoft.com](/_articles/faq/failed-to-load-resource.md) (encrypted, get the latest from [demo site](https://demo.dynamsoft.com/DWT/Resources/dist/cert.zip))
   * server.pem.ldsc
   * server_key.pem.ldsc
-* keys for [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)'s proxy server after installation (encrypted)
+* keys for [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)'s proxy server after installation (encrypted, get the latest from the domain binding page)
   * server.pem.ldwtc
   * server_key.pem.ldwtc
 
