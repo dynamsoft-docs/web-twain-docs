@@ -207,6 +207,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 31.  [Dynamic Web TWAIN prompts the .deb installer for Windows](/_articles/faq/incorrect-installer-for-windowsARM64.md)
 32.  [Why am I unable to load the TIFF file into Dynamic Web TWAIN?](/_articles/faq/unable-to-load-4-bit-tiff.md)
 
+33.  [Error message - Permission was denied for this request to access the unknown address space](/_articles/faq/chrome-142-local-network-access-issue.md)
+
 ## Licensing and Purchase
 
 1.  [Is internet connectivity required to use all licenses?](/_articles/faq/is-internet-connectivity-required.md)

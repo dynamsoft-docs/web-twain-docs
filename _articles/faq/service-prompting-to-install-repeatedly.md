@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, insta
 breadcrumbText: I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?
 description: I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?
 date: 2021-12-11 06:47:21 +0800
-last_modified: 2024-05-15 13:39:41 +0800
+last_modified: 2025-11-04 13:39:41 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
@@ -17,7 +17,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 #### There are a few possible causes
 
-1. The Dynamic Web TWAIN Service (also called "Dynamsoft Service") is not installed properly.
+1. The Dynamic Web TWAIN Service (previously called "Dynamsoft Service") is not installed properly.
 
 2. The Dynamic Web TWAIN Service is installed correctly but not started.
 
@@ -25,7 +25,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 4. The service's listening ports are blocked by another software, like anti-virus software.
 
-5. The service is blocked by plugins you have installed in the browser. (e.g. NoScript)
+5. The service is blocked by extensions or plugins you have installed in the browser. (e.g. NoScript, M*Modal Fluency Direct Web Connector)
 
 6. You are accessing an HTTPS site on a Linux machine.
 
@@ -33,9 +33,11 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 8. You have added `Access-Control-Allow-Origin` setting in the `DSConfiguration.ini` file, but the request originates from a different domain and you didn't set [`IfCheckCORS`](/_articles/extended-usage/dynamsoft-service-configuration.md#access-control-allow-origin).
 
+9. The local network access permission is not granted (required since Chrome 142).
+
 #### The respective fixes are listed below
 
-1. Check the path `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}` (for v19.0+) or `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}` or `C:\Users\{UserName}\AppData\Roaming\Dynamsoft\DynamsoftService` and make sure you have [the correct files](/_articles/extended-usage/dynamsoft-service-configuration.md#related-files-and-folders){:target="_blank"}.
+1. Check the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder) and make sure you have [the correct files](/_articles/extended-usage/dynamsoft-service-configuration.md#related-files-and-folders){:target="_blank"}.
 
 2. Check `Local Services` and make sure the Dynamic Web TWAIN Service is listed and Running.
 
@@ -45,10 +47,12 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 4. Check your anti-virus software or any other software that can block local ports and make sure the ports 18622, 18623, 18625 and 18626 are not blocked.
 
-5. Disable all the plugins in the browser, refresh and try again.
+5. Disable all the extensions or plugins in the browser, refresh and try again.
 
 6. On your Linux client machine, visit https://127.0.0.1:18626 and https://127.0.0.1:18623 separately in Chrome and FireFox, manually add both certificates to the exception lists.
 
 7. See the solution [here](/_articles/faq/http-insecure-websites-in-chromium-browser.md){:target="_blank"}
 
 8. Set [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) to `true` in `dynamsoft.webtwain.config.js` file.
+
+9. Ask the user to grant the local network access permission manually. See this [webpage](https://chromestatus.com/feature/5152728072060928) for details.
