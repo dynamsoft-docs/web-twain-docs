@@ -17,23 +17,26 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 #### There are a few possible causes
 
-1. The Dynamic Web TWAIN Service (previously called "Dynamsoft Service") is not installed properly.
+> [!NOTE]
+> "Local network access permission is not granted" is a **newly developing issue**
 
-2. The Dynamic Web TWAIN Service is installed correctly but not started.
+1. The local network access permission is not granted (required starting Chromium 142). See [Chromium local network access issue](/_articles/faq/chromium-142-local-network-access-issue) for details and corrective action.
 
-3. The requests sent to the Service are redirected because you are using a proxy server on IE.
+2. The Dynamic Web TWAIN Service (previously called "Dynamsoft Service") is not installed properly.
 
-4. The service's listening ports are blocked by another software, like anti-virus software.
+3. The Dynamic Web TWAIN Service is installed correctly but not started.
 
-5. The service is blocked by extensions or plugins you have installed in the browser. (e.g. NoScript, M*Modal Fluency Direct Web Connector)
+4. The requests sent to the Service are redirected because you are using a proxy server on IE.
 
-6. You are accessing an HTTPS site on a Linux machine.
+5. The service's listening ports are blocked by another software, like anti-virus software.
 
-7. You are visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+ (or any Chromium v94+ based browsers)
+6. The service is blocked by extensions or plugins you have installed in the browser. (e.g. NoScript, M*Modal Fluency Direct Web Connector)
 
-8. You have added `Access-Control-Allow-Origin` setting in the `DSConfiguration.ini` file, but the request originates from a different domain and you didn't set [`IfCheckCORS`](/_articles/extended-usage/dynamsoft-service-configuration.md#access-control-allow-origin).
+7. You are accessing an HTTPS site on a Linux machine.
 
-9. The local network access permission is not granted (required since Chrome 142).
+8. You are visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+ (or any Chromium v94+ based browsers)
+
+9. You have added `Access-Control-Allow-Origin` setting in the `DSConfiguration.ini` file, but the request originates from a different domain and you didn't set [`IfCheckCORS`](/_articles/extended-usage/dynamsoft-service-configuration.md#access-control-allow-origin).
 
 #### The respective fixes are listed below
 
