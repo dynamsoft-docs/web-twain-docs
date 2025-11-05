@@ -57,11 +57,9 @@ This affects the Dynamic Web TWAIN Service which relies on local services for co
 
 Enterprise administrators can deploy a Chrome and/or Edge policy to set the "Local Network Access" setting to "Allow" for your website.
 
-Please Refer to: 
+Please refer to: 
 * [Chrome Enterprise Policy List & Management Documentation](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls)
 * [Microsoft Edge Browser Policy Documentation](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls)
-
-
 
 ***3. (For Developers) To Manually Check the Permission on Local Network Access***
 
