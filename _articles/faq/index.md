@@ -163,7 +163,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 14.  [Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?](/_articles/faq/service-backward-compatibility.md)
 15.  [How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?](/_articles/faq/upgrade-to-latest-version.md)
 16.  [How do I upgrade the end-user installation for all end users once I upgrade my project?](/_articles/faq/upgrade-end-user-installations.md)
-17.  [How to resolve if Dynamic Web TWAIN stops working on insecure websites in Chrome v94?](/_articles/faq/http-insecure-websites-in-chromium-browser.md)
+17.  [How to Resolve Dynamic Web TWAIN Issues on Insecure Websites in Chrome v94–v141](/_articles/faq/http-insecure-websites-in-chromium-browser.md)
 18.  [How to resolve Dynamic Web TWAIN issue in Chrome 101?](/_articles/faq/private-network-access-in-chrome101.md)
 19.  [Dynamic Web TWAIN – Content-Security-Policy violated](/_articles/faq/content-security-policy-violated.md)
 20.  [Scanner source is listed on XSane application but not on my web application on Linux machines](/_articles/faq/source-not-listed-on-linux.md)
@@ -206,7 +206,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 30.  [How to debug on Dynamic Web TWAIN online demo?](/_articles/faq/debug-on-online-demo.md)
 31.  [Dynamic Web TWAIN prompts the .deb installer for Windows](/_articles/faq/incorrect-installer-for-windowsARM64.md)
 32.  [Why am I unable to load the TIFF file into Dynamic Web TWAIN?](/_articles/faq/unable-to-load-4-bit-tiff.md)
-33.  [Error message - Permission was denied for this request to access the unknown address space](/_articles/faq/chromium-142-local-network-access-issue.md)
+33.  [Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later](/_articles/faq/chromium-142-local-network-access-issue.md)
 
 ## Licensing and Purchase
 

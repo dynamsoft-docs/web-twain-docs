@@ -2,23 +2,22 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How to resolve Dynamic Web TWAIN SDK doesn't work on insecure public websites in Chrome v94+
+title: How to Resolve Dynamic Web TWAIN Issues on Insecure Websites in Chrome v94–v141
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 94 issue, HTTP website, Edge 94 issue
-breadcrumbText: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
-description: How to resolve if Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
+breadcrumbText: How to Resolve Dynamic Web TWAIN Issues on Insecure Websites in Chrome v94–v141
+description: How to Resolve Dynamic Web TWAIN Issues on Insecure Websites in Chrome v94–v141
 date: 2021-09-24 07:56:47 +0800
-last_modified: 2022-12-22 10:44:01 +0800
+last_modified: 2025-11-05 10:44:01 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
 https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-# Dynamic Web TWAIN doesn't work on insecure public websites in Chrome v94+
+# Dynamic Web TWAIN does not function on insecure (non-HTTPS) public websites in Chrome versions 94 to 141 due to browser security restrictions.
 
 ### Symptom
 
-Visiting a public HTTP website with Dynamic Web TWAIN SDK integrated via Chrome v94+, you may get prompted to download and install the Dynamic Web TWAIN Service (also called "Dynamsoft Service") repeatedly.
-The same issue is also seen in Microsoft Edge 94.0.992.31 - as it uses the same Chromium version 94 as the latest Chrome browser.
+When visiting a public HTTP website that integrates the Dynamic Web TWAIN SDK using Chrome versions 94 through 141, you may be repeatedly prompted to download and install the Dynamic Web TWAIN Service (also known as the Dynamsoft Service). The same issue occurs in Microsoft Edge, as it is based on Chromium.
 
 In the browser console, you may see the following **error message**
 

@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Message, Failed to load resource, CERT INVALI
 breadcrumbText: Error Message - Failed to load resource
 description: Error Message - Failed to load resource
 date: 2021-12-01 17:04:03 +0800
-last_modified: 2025-10-11 15:23:24 +0800
+last_modified: 2025-11-05 15:23:24 +0800
 ---
 
 # Error Troubleshooting
@@ -22,7 +22,7 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, "127.0.0.1" is used for service connection. "127.0.0.1" uses a self-signed SSL certificate without an expiry date. It is installed to your system so that the browser can trust it. If your environment requires high level security, self-signed certificates may not be accepted. Moreover, it is not easy to install the self-signed certificate for systems like Chrome OS.
 
-In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign’ed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2024 November 19th</font>, and the latest certificate will expire on <font color=red>2025 November 20th</font>.
+In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign’ed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2025 November 20th</font>, and the latest certificate will expire on <font color=red>2026 November 21st</font>.
 
 > ___Please note:___ _all official certificates issued by 3rd party come with an expiry date - generally one year. This means that each year the certificate will need to be updated if local.dynamsoft.com is used._
 
@@ -39,11 +39,39 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 
   If you have to use "local.dynamsoft.com", the following methods can be taken:
 
-  - Method 1. Click <a href="https://tst.dynamsoft.com/public/download/dwt/newcert/local.dynamsoft.com/newcert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one in the `cert` folder under the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). Then restart Dynamic Web TWAIN Service.
+  - Method 1.Use the following links to download and install the new Dynamic Web TWAIN Service Installer.
+    - For Windows
+        > Choose between Admin (requires admin privileges) or Personal (for individual users).
+        - Version 19.2
+            - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.2/DynamicWebTWAINServiceSetup.msi)
+            - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.2/DynamicWebTWAINServiceSetup.exe)
+        - Version 18
+            - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.2/DynamsoftServiceSetup.msi)
+            - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.2/DynamsoftServiceSetup.exe)
+    - For macOS
+        > Use the installer matching your SDK version.
+        - [macOS Installer v19.2](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.2/DynamicWebTWAINServiceSetup.pkg)
+        - [macOS Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.2/DynamsoftServiceSetup.pkg)
+    - For Linux
+        > Select the installer format based on your distribution type.
+        - RPM Packages (Red Hat, Fedora, CentOS, etc.)
+            - [Linux RPM Installer v19.2](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.2/DynamicWebTWAINServiceSetup.rpm)
+            - [Linux RPM Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.2/DynamsoftServiceSetup.rpm)
+         - DEB Packages (Ubuntu, Debian, etc.)
+            - [Linux DEB Installer v19.2](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.2/DynamicWebTWAINServiceSetup.deb)
+            - [Linux DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.2/DynamsoftServiceSetup.deb)
+         - ARM64 Architecture
+            - [Linux ARM64 DEB Installer v19.2](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.2/DynamicWebTWAINServiceSetup-arm64.deb)
+            - [Linux ARM64 DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.2/DynamsoftServiceSetup-arm64.deb)
+         - MIPS Architecture
+            - [Linux MIPS DEB Installer v19.2](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.2/DynamicWebTWAINServiceSetup-mips64el.deb)
+            - [Linux MIPS DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.2/DynamsoftServiceSetup-mips64el.deb)
 
-  - Method 2. [Contact Dynamsoft](/_articles/about/getsupport.md){:target="_blank"} for a new service installer for client-side. Please specify the exact service version build number found from the version your client currently has installed.
+  - Method 2. Click <a href="https://demo.dynamsoft.com/DWT/Resources/dist/cert.zip" target="_blank">here</a> to download the new certificate and use the new server.pem.ldsc & server_key.pem.ldsc to replace the old one in the `cert` folder under the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). Then restart Dynamic Web TWAIN Service.
 
-  - Method 3. You can also generate the certificate by yourself. Check out this [post](/_articles/faq/change-dynamsoft-service-certificate.md).
+  - Method 3. [Contact Dynamsoft](/_articles/about/getsupport.md){:target="_blank"} for a new service installer for client-side. Please specify the exact service version build number found from the version your client currently has installed.
+
+  - Method 4. You can also generate the certificate by yourself. Check out this [post](/_articles/faq/change-dynamsoft-service-certificate.md).
 
 <!--
 
