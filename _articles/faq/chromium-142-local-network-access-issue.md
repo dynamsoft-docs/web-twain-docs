@@ -3,7 +3,7 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Error message - Permission was denied for this request to access the unknown address space
-keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space, chrome, 142
+keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space, Chromium, 142
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
@@ -19,9 +19,15 @@ last_modified: 2025-11-04 17:21:42 +0800
 
 ### Symptom
 
-When using browsers based on Chromium version 142 (released on October 28th, 2025) or later (including but not limited to Edge, Brave, and Opera), the Dynamsoft Web TWAIN Service installation cannot be detected, prompting the Dynamsoft Web TWAIN Service installation modal. Installing the service does not fix the issue.
+When using Chromium-based browsers version 142 or later (released on October 28th, 2025), including Chrome, Edge, Brave, and Opera, the Dynamsoft Web TWAIN Service may fail to function properly:
 
-You may also encounter the following error message in the browser console:
+- Phenomenon 1: the browser prompts users to download the service installer even though it is already installed.
+
+![DWT_installer.png](/assets/imgs/DWT_installer.png)
+
+- Phenomenon 2: the initialization succeeds, but scanning or loading images results in blank images.
+
+Open the browser console (press F12, then go to the Console tab), you should see the following error message:
 
 ```shell
 Access to fetch at 'https://127.0.0.1:18623/fa/VersionInfo?ts=1761893667670' from origin 'https://your-domain.com' has been blocked by CORS policy: Permission was denied for this request to access the `unknown` address space.
@@ -29,28 +35,26 @@ Access to fetch at 'https://127.0.0.1:18623/fa/VersionInfo?ts=1761893667670' fro
 
 ### Cause
 
-In Chromium 142 Google introduced a new Local Network Access security policy. Requests from web pages hosted within iframes to local addresses such as 127.0.0.1 or localhost get blocked unless explicit permission is granted.
+In Chromium 142 Google introduced a new [Local Network Access security policy](https://chromestatus.com/feature/5152728072060928). Requests from web pages to local addresses such as 127.0.0.1 or localhost get blocked unless explicit permission is granted.
 
 This affects the Dynamic Web TWAIN Service which relies on local services for communication.
 
-### Solution
+### Resolution
 
-<div class="multi-panel-switching-prefix"></div>
+***Step 1: (For All End Users)***
 
-- [Quick Solution for End Users](#Quick Solutions for End Users)
-- [Solutions for Developers](#Solutions for Developers)
+- Navigate to your Dynamic Web TWAIN web interface
 
-<div class="multi-panel-start"></div>
+- Click the lock icon (or settings icon) next to your site URL in the browser’s address bar.
 
-**Enable Local Network Access**
-
-Make sure your website has Local Network Access enabled.
+- Ensure that **Local Network Access** is enabled.
 
 ![local-network.png](/assets/imgs/local-network.png)
 
-<div class="multi-panel-end"></div>
+> [!NOTE]
+> If you're unable to restore functionality after enabling 'Local Network Access,' please contact [Dynamsoft](https://www.dynamsoft.com/contact/).
 
-<div class="multi-panel-start"></div>
+***Step 2: (For Developers Only)***
 
 **Option 1:**
 
@@ -73,11 +77,7 @@ If the permission is not granted, prompt users to manually enable it (Chrome set
 **Option 2: (For Enterprise Users)**
 
 Enterprise administrators can allow specified URLs to access local resources through Chrome’s Enterprise Policy configuration.
-Refer to: [Chrome Enterprise Policy List & Management | Documentation](https://chromeenterprise.google/policies/)
-
-<div class="multi-panel-end"></div>
-
-<div class="multi-panel-switching-end"></div>
+Refer to: [Chrome Enterprise Policy List & Management | Documentation](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls)
 
 ### Planning
 

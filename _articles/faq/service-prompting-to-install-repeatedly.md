@@ -20,7 +20,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 > [!NOTE]
 > "Local network access permission is not granted" is a **newly developing issue**
 
-1. The local network access permission is not granted (required starting Chromium 142). See [Chromium local network access issue](/_articles/faq/chromium-142-local-network-access-issue) for details and corrective action.
+1. The local network access permission is not granted (required starting Chromium 142).
 
 2. The Dynamic Web TWAIN Service (previously called "Dynamsoft Service") is not installed properly.
 
@@ -40,22 +40,23 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 #### The respective fixes are listed below
 
-1. Check the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder) and make sure you have [the correct files](/_articles/extended-usage/dynamsoft-service-configuration.md#related-files-and-folders){:target="_blank"}.
+1.  See [Chromium local network access issue](/_articles/faq/chromium-142-local-network-access-issue.md) for details and corrective actions.
 
-2. Check `Local Services` and make sure the Dynamic Web TWAIN Service is listed and Running.
+2. Check the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder) and make sure you have [the correct files](/_articles/extended-usage/dynamsoft-service-configuration.md#related-files-and-folders){:target="_blank"}.
 
-3. On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`, uncheck 'Include all sites that bypass the proxy server'  
+3. Check `Local Services` and make sure the Dynamic Web TWAIN Service is listed and Running.
+
+4. On IE, go to `Internet Options` --> `Security` tab, select `Local Intranet`, then click `Sites`, uncheck 'Include all sites that bypass the proxy server'  
    ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1](/assets/imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-1.png)
    ![why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2](/assets/imgs/why-is-the-browser-prompting-me-to-install-dynamsoft-service-repeatedly-2.png)
 
-4. Check your anti-virus software or any other software that can block local ports and make sure the ports 18622, 18623, 18625 and 18626 are not blocked.
+5. Check your anti-virus software or any other software that can block local ports and make sure the ports 18622, 18623, 18625 and 18626 are not blocked.
 
-5. Disable all the extensions or plugins in the browser, refresh and try again.
+6. Disable all the extensions or plugins in the browser, refresh and try again.
 
-6. On your Linux client machine, visit https://127.0.0.1:18626 and https://127.0.0.1:18623 separately in Chrome and FireFox, manually add both certificates to the exception lists.
+7. On your Linux client machine, visit https://127.0.0.1:18626 and https://127.0.0.1:18623 separately in Chrome and FireFox, manually add both certificates to the exception lists.
 
-7. See the solution [here](/_articles/faq/http-insecure-websites-in-chromium-browser.md){:target="_blank"}
+8. See the solution [here](/_articles/faq/http-insecure-websites-in-chromium-browser.md){:target="_blank"}
 
-8. Set [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) to `true` in `dynamsoft.webtwain.config.js` file.
+9. Set [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) to `true` in `dynamsoft.webtwain.config.js` file.
 
-9. Ask the user to grant the local network access permission manually. See this [webpage](https://chromestatus.com/feature/5152728072060928) for details.
