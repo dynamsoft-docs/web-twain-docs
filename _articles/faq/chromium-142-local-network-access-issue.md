@@ -15,11 +15,11 @@ last_modified: 2025-11-04 17:21:42 +0800
 > [!IMPORTANT]
 > This is a newly developing issue, and as such the information in this article may change over time.
 
-## Error message - Access to fetch at `https://127.0.0.1:18623` or `http://127.0.0.1:18622` has been blocked by CORS policy: Permission was denied for this request to access the unknown address space.
+## Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later
 
 ### Symptom
 
-When using Chromium-based browsers version 142 or later (released on October 28th, 2025), including Chrome, Edge, Brave, and Opera, the Dynamsoft Web TWAIN Service may fail to function properly:
+When using **Chromium-based browsers version 142 or later** (released on October 28th, 2025), including Chrome, Edge, Brave, and Opera, the Dynamsoft Web TWAIN Service may fail to function properly:
 
 - Phenomenon 1: the browser prompts users to download the service installer even though it is already installed.
 
@@ -41,12 +41,11 @@ This affects the Dynamic Web TWAIN Service which relies on local services for co
 
 ### Resolution
 
-***Step 1: (For All End Users)***
+***1. To Manually Correct This in Chrome***
 
 - Navigate to your Dynamic Web TWAIN web interface
 
 - Click the lock icon (or settings icon) next to your site URL in the browser’s address bar.
-
 - Ensure that **Local Network Access** is enabled.
 
 ![local-network.png](/assets/imgs/local-network.png)
@@ -54,9 +53,17 @@ This affects the Dynamic Web TWAIN Service which relies on local services for co
 > [!NOTE]
 > If you're unable to restore functionality after enabling 'Local Network Access,' please contact [Dynamsoft](https://www.dynamsoft.com/contact/).
 
-***Step 2: (For Developers Only)***
+***2. (For Administrators) To Apply This Setting Across an Enterprise***
 
-**Option 1:**
+Enterprise administrators can deploy a Chrome and/or Edge policy to set the "Local Network Access" setting to "Allow" for your website.
+
+Please Refer to: 
+* [Chrome Enterprise Policy List & Management Documentation](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls)
+* [Microsoft Edge Browser Policy Documentation](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls)
+
+
+
+***3. (For Developers) To Manually Check the Permission on Local Network Access***
 
 You can check the permission programmatically:
 
@@ -74,10 +81,6 @@ If the permission is not granted, prompt users to manually enable it (Chrome set
 <iframe src="..." allow="local-network-access *"></iframe>
 ```
 
-**Option 2: (For Enterprise Users)**
-
-Enterprise administrators can allow specified URLs to access local resources through Chrome’s Enterprise Policy configuration.
-Refer to: [Chrome Enterprise Policy List & Management | Documentation](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls)
 
 ### Planning
 
