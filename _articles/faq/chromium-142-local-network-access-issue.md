@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2025-11-04 17:21:42 +0800
+last_modified: 2025-11-05 17:26:42 +0800
 ---
 
 # Error Troubleshooting
@@ -25,14 +25,14 @@ Starting in **Chromium-based browsers v142+** (released Oct 28, 2025)—includin
 
 You may experience one or more of the following:
 
-1. **Service installer repeatedly prompted**
-The browser prompts you to download/install the service even though it is already installed.
+***1. Service installer repeatedly prompted***
 
+The browser prompts you to download/install the service even though it is already installed.
 ![DWT_installer.png](/assets/imgs/DWT_installer.png)
 
-2. **Initialization succeeds, but scan/load shows blank images**
-The browser console (F12 → Console) shows a CORS rejection similar to:
+***2. Initialization succeeds, but scan/load shows blank images***
 
+The browser console (F12 → Console) shows a CORS rejection similar to:
 ```shell
 Access to fetch at 'https://127.0.0.1:18623/fa/VersionInfo?ts=1761893667670' from origin 'https://your-domain.com' has been blocked by CORS policy: Permission was denied for this request to access the `unknown` address space.
 ```
@@ -75,6 +75,7 @@ console.log(status.state);
 ```
 
 If not granted, guide users to:
+
 Chrome → Settings → Privacy and Security → Site Settings → Local network access
 
 **b) If Running Inside an `iframe`**
