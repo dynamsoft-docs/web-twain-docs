@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2025-11-05 17:26:42 +0800
+last_modified: 2025-11-06 15:06:00 +0800
 ---
 
 # Error Troubleshooting
@@ -25,17 +25,35 @@ Starting in **Chromium-based browsers v142+** (released Oct 28, 2025)—includin
 
 You may experience one or more of the following:
 
-***1. Service installer repeatedly prompted***
+#### **1) Browser repeatedly prompts to download the service**
+The browser asks the user to download/install the Dynamsoft Web TWAIN Service even though it is already installed.
 
-The browser prompts you to download/install the service even though it is already installed.
 ![DWT_installer.png](/assets/imgs/DWT_installer.png)
 
-***2. Initialization succeeds, but scan/load shows blank images***
+#### **2) Initialization succeeds, but scanning / loading returns blank**
+Initialization appears successful, but scanned or loaded images are blank.
 
-The browser console (F12 → Console) shows a CORS rejection similar to:
+The browser console (F12 → Console) may show a CORS denial similar to:
+
 ```shell
-Access to fetch at 'https://127.0.0.1:18623/fa/VersionInfo?ts=1761893667670' from origin 'https://your-domain.com' has been blocked by CORS policy: Permission was denied for this request to access the `unknown` address space.
+Access to fetch at 'https://127.0.0.1:18623/fa/VersionInfo?ts=1761893667670'
+from origin 'https://your-domain.com' has been blocked by CORS policy:
+Permission was denied for this request to access the `unknown` address space.
 ```
+
+---
+
+#### Version-Specific Behavior
+The observed behavior depends on Chromium browser version and Dynamic Web TWAIN (DWT) version:
+
+| Browser Version | DWT Version       | Resulting Symptom           |
+|-----------------|------------------|-----------------------------|
+| Chromium 142      | ≤ 18.4.2         | Download Prompt             |
+| Chromium 142      | ≥ 18.5.0         | Blank images after scanning |
+| Chromium 144 (*)  | Any              | Download Prompt             |
+
+> (*) **Chromium 144 has not been officially released.**  
+> Behavior is based on pre-release testing and may change once the final release becomes available.
 
 ### Root Cause
 
@@ -67,26 +85,36 @@ Please refer to:
 
 ***3. Developer Notes***
 
-**a) Check Permission Programmatically**
+**a) If Running Inside an `iframe`**
 
+> [!IMPORTANT]
+> If Dynamic Web TWAIN is running inside an iframe from a different origin (cross-origin), you must explicitly grant local-network access in the iframe.
+> If the iframe is same-origin, no additional configuration is required.
+
+To enable access, specify the `allow` attribute.
+For security reasons, it is recommended to allow only the necessary origin rather than using a wildcard.
+
+```html
+<!-- Recommended: restrict to specific origin -->
+<iframe src="..." allow="local-network-access your-domain.com"></iframe>
+
+<!-- Not recommended: wildcard -->
+<!-- <iframe src="..." allow="local-network-access *"></iframe> -->
+```
+
+**b) (Optional Enhancement) Permission Check for Improved UX**
+
+You can optionally query Local Network Access permission at runtime.
+This isn’t required, but implementing a check can help you proactively notify users and provide clearer guidance if permission is missing.
 ```javascript
 let status = await navigator.permissions.query({ name: "local-network-access" });
 console.log(status.state);
 ```
+If the permission is not granted, consider displaying a user-friendly message directing them to:
 
-If not granted, guide users to:
+> Chrome → Settings → Privacy and Security → Site Settings → Local network access
 
-Chrome → Settings → Privacy and Security → Site Settings → Local network access
-
-**b) If Running Inside an `iframe`**
-
-> [!IMPORTANT]
-> If your site is embedded in an iframe, you MUST explicitly allow local-network access.
-
-Please explicitly allow `local-network-access` in the attributes of the iframe:
-```html
-<iframe src="..." allow="local-network-access *"></iframe>
-```
+This approach provides a more polished user experience, especially during onboarding or troubleshooting.
 
 ### Roadmap
 
