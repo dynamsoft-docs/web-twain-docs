@@ -190,6 +190,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2901 | Source document does not exist. Please check the document name or create the document before performing this operation. |
 |-2902 | Target document does not exist. Please check the document name or create the document before performing this operation. |
 |-2905 | This API is not supported on the current operating system. Please contact your system administrator. |
+|-2910 | The OS print functionality is not supported on the current operating system. |
 |<= -3000 | See ErrorString property for details |
 
 <!-- |-2826 | Failed to connect the Dynamic Web TWAIN Service on [' + name + ']. | -->
