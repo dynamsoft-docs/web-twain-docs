@@ -21,6 +21,7 @@ This set of guides builds on the fundamental features covered in the standard us
 - [UI Customization](/_articles/extended-usage/ui-customization.md)
 - [Using the DWT RESTful API](/_articles/extended-usage/restful-api.md)
 - [Barcode Recognition](/_articles/extended-usage/barcode-processing.md)
+- [OCR](./ocr.md)
 - [PDF Handling](/_articles/extended-usage/pdf-processing.md)
 - [Buffer Caching](/_articles/extended-usage/buffer-caching.md)
 - [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)

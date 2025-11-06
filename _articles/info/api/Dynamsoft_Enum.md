@@ -918,3 +918,39 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | ArrayBuffer | 2     |
 | XML         | 3     |
 | JSON        | 4     |
+
+
+## `Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat`
+
+| Label                      | Value |
+| :------------------------- | :---- |
+| TEXT                       | 0     |
+| PDF_PLAIN_TEXT             | 1     |
+| PDF_WITH_EXTRA_TEXTLAYER   | 2     |
+
+
+Note:
+
+`PDF_PLAIN_TEXT` will only keep a text layer of the OCRed text for each page.
+
+`PDF_WITH_EXTRA_TEXTLAYER` will add an extra invisible text layer of the OCRed text above each page.
+
+## `Dynamsoft.DWT.EnumDWT_PageOrientation`
+
+| Label                      | Value |
+| :------------------------- | :---- |
+| AUTO                       | -1    |
+| ANGLE_0                    | 0     |
+| ANGLE_90                   | 90    |
+| ANGLE_180                  | 180   |
+| ANGLE_270                  | 270   |
+
+## `Dynamsoft.DWT.EnumDWT_PageOrientationDetectionMode`
+
+| Label                      | Value |
+| :------------------------- | :---- |
+| FAST                       | 0     |
+| BALANCE                    | 1     |
+| PRECISION                  | 2     |
+
+  

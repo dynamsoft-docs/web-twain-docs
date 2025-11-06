@@ -1676,7 +1676,59 @@ interface Base64Result {
 }
 ```
 
+### PrintSettings
 
+```ts
+interface PrintSettings {     
+   useOSPrintWindow?: boolean; 
+   withoutUI?: boolean; 
+} 
+```
+
+Usage note:
+
+Enable `useOSPrintWindow` to call the system's UI for printing settings.
+
+If you do not want to show any UI, set `withoutUI` to `true`. It is only effective if `useOSPrintWindow` is enabled.
+
+## OCR
+
+### OCRInfo 
+
+The info of the installed OCR add-on.
+
+**Syntax**
+
+```ts
+interface OCRInfo {
+  version: string;     
+}
+```
+
+### OCRResult
+
+The OCR result of one page.
+
+**Syntax**
+
+```ts
+interface OCRResult {     
+  imageID: string;     
+  dimensions: {width: number; height: number};  
+  orientation: {value: number; confidence: number};  
+  blocks:{ 
+    geometry: {left: number; top: number; right: number; bottom: number}; 
+    lines: { 
+      geometry: {left: number; top: number; right: number; bottom: number}; 
+      words?:{ 
+        value: string;  
+        confidence: number;
+        geometry: {left: number; top: number; right: number; bottom: number}; 
+      }[];
+    }[];	 
+  }[]; 
+} 
+```
 
 ## PDF
 
