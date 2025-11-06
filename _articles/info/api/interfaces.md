@@ -1680,16 +1680,19 @@ interface Base64Result {
 
 ```ts
 interface PrintSettings {     
-   useOSPrintWindow?: boolean; 
-   withoutUI?: boolean; 
+  mode: 'browser' | 'os'; 
+  osPrintOptions?: { showPrintDialog?: boolean; } 
 } 
 ```
 
 Usage note:
 
-Enable `useOSPrintWindow` to call the system's UI for printing settings.
+Set the `mode` parameter to choose the printing API:
 
-If you do not want to show any UI, set `withoutUI` to `true`. It is only effective if `useOSPrintWindow` is enabled.
+* `os`: Uses the operating system's API. Currently, only Windows is supported.
+* `browser`: Uses the browser's API.
+
+There are extra options for the `os` mode. You can set whether to show the print dialog to update the print setting. If the print dialog is not shown, it will use previous settings.
 
 ## OCR
 
