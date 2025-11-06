@@ -1857,6 +1857,12 @@ interface PDFWSettings {
      * Up to 32 characters.
      */
     password?: string;
+    /**
+     * From version 19.3
+     * Specify PDF/A version to save as PDF/A.
+     * Supported values: "pdf/a-1b", "pdf/a-2b"
+     */
+    pdfaVersion?: string;
 }
 ```
 
