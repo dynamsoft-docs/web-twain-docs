@@ -107,8 +107,38 @@ For security reasons, it is recommended to allow only the necessary origin rathe
 You can optionally query Local Network Access permission at runtime.
 This isn’t required, but implementing a check can help you proactively notify users and provide clearer guidance if permission is missing.
 ```javascript
-let status = await navigator.permissions.query({ name: "local-network-access" });
-console.log(status.state);
+// Before initializing Dynamsoft WebTWAIN (DWT), you can remind users
+// that Chrome may ask for Local Network Access permission.
+(async () => {
+  try {
+    const result = await navigator.permissions.query({ name: "local-network-access" });
+    console.log(`LNA permission state: ${result.state}`);
+ 
+    const state = result.state; // 'denied', 'prompt', 'granted'
+ 
+    if (state === "denied") {
+      const currentSite = encodeURIComponent(window.location.origin);
+      const settingsUrl = `chrome://settings/content/siteDetails?site=${currentSite}`;
+      console.log(`Local network access is currently denied.\n\nPlease go to:\n${settingsUrl}\nand enable 'Local network access' permission for this site.`);
+      // Optionally show a UI guide or help link here.
+    } else if (state === "prompt") {
+      alert("To connect with the local scanning service, Chrome will ask for 'Local network access' permission.\n\nPlease click 'Allow' when prompted.");
+      // Proceed to init DWT after this message. 
+      // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
+    } else if (state === "granted") {
+      console.log("Local network access already granted.");
+      // Initialize DWT or proceed directly.
+      // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
+    } else {
+      console.log("Unexpected LNA state:", state);
+    }
+ 
+  } catch (e) {
+    console.log("This browser does not support Chromium LNA Permissions API yet.");
+    // Fallback: directly initialize DWT
+    // Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
+  }
+})();
 ```
 If the permission is not granted, consider displaying a user-friendly message directing them to:
 
