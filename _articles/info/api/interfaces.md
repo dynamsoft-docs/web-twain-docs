@@ -1710,7 +1710,7 @@ interface OCRInfo {
 
 ### OCRResult
 
-The OCR result of one page.
+The OCR result of one page. If the page is rotated, the geometry will be based on the orientation-corrected version.
 
 **Syntax**
 
