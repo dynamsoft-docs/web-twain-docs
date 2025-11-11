@@ -48,9 +48,10 @@ The observed behavior depends on Chromium browser version and Dynamic Web TWAIN 
 
 | Browser Version | DWT Version       | Resulting Symptom           |
 |-----------------|------------------|-----------------------------|
-| Chromium 142      | ≤ 18.4.2         | Download Prompt             |
-| Chromium 142      | ≥ 18.5.0         | Blank images after scanning |
-| Chromium 144 (*)  | Any              | Download Prompt             |
+|Chromium 142+ | < 18.1 | Not Tested, but LNA is Required |
+| Chromium 142      | ≥ 18.1 and ≤ 18.4.2         | Download Prompt             |
+| Chromium 142      | ≥ 18.5         | Blank Images after Scanning |
+| Chromium 144+ (*)  | Any              | Download Prompt             |
 
 > (*) **Chromium 144 has not been officially released.**  
 > Behavior is based on pre-release testing and may change once the final release becomes available.
