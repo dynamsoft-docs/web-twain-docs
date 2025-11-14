@@ -45,7 +45,7 @@ DWT add-ons provide additional features:
 
 ## Requirements
 
-You can find supported systems, browsers, and hardware in the following page:
+You can find supported systems, browsers, and hardware in the following pages:
 
 * [System requirements](/_articles/introduction/system-requirements.md)
 * [Hardware requirements](/_articles/introduction/imaging-hardware.md)
