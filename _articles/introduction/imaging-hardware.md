@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN supports image capture from TWAIN Scanners, ICA S
 
 # Imaging Hardware 
 
-Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras via different scanning APIs like TWAIN, ICA, SANE and DirectShow. As long as the scanner is supported by these APIs, Dynamic Web TWAIN can use them.
+Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras via different APIs like TWAIN, ICA, SANE and DirectShow. As long as the scanner is supported by these APIs, Dynamic Web TWAIN can use them.
 
 In this section, we'll look at these APIs.
 
@@ -53,7 +53,7 @@ See more: [How to test if your scanner supports ICA scanning on Mac OS?](/_artic
 
 * As of version 16.1.1, `Dynamic Web TWAIN` supports SANE v1.0.25.
 
-* You can find the list of supported device [here](https://www.sane-project.org/sane-supported-devices.html).
+* You can find the list of supported devices [here](https://www.sane-project.org/sane-supported-devices.html).
 
 See more: [How to test if your device is SANE compliant?](/_articles/faq/how-to-test-if-your-device-is-SANE-compliant.md){:target="_blank"} 
 
