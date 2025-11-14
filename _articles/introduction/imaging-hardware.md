@@ -53,6 +53,8 @@ See more: [How to test if your scanner supports ICA scanning on Mac OS?](/_artic
 
 * As of version 16.1.1, `Dynamic Web TWAIN` supports SANE v1.0.25.
 
+* You can find the list of supported device [here](https://www.sane-project.org/sane-supported-devices.html).
+
 See more: [How to test if your device is SANE compliant?](/_articles/faq/how-to-test-if-your-device-is-SANE-compliant.md){:target="_blank"} 
 
 ## DirectShow
