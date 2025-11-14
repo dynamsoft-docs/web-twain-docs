@@ -13,12 +13,6 @@ Dynamic Web TWAIN's main feature is interacting with imaging devices like scanne
 
 In this section, we'll look at these APIs.
 
-- [Imaging Hardware](#imaging-hardware)
-  - [TWAIN](#twain)
-  - [ICA](#ica)
-  - [SANE](#sane)
-  - [DirectShow](#directshow)
-
 ## TWAIN
 
 ![Hardware-Scanners-Cameras-1](/assets/imgs/Hardware-Scanners-Cameras-1.png)
