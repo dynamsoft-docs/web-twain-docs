@@ -60,7 +60,7 @@ For demonstration purposes, save the sample in an HTML file (e.g. `helloWorld.ht
 
 Otherwise, click [here](/_articles/general-usage/server-deployment.md) to learn how to deploy DWT on your web server.
 
-> If your environment does not have **Dynamic Web TWAIN Service** installed, a prompt will appear to ask you to install the service. You can learn more about what the service does [here](/_articles/faq/what-does-dynamsoft-service-do-on-end-user-machine.md).
+> If your environment does not have **Dynamic Web TWAIN Service** installed or local network access is not granted, a prompt will appear to ask you to install the service. You can learn more about what the service does [here](/_articles/faq/what-does-dynamsoft-service-do-on-end-user-machine.md).
 
 Below is more detail on what happens during initialization and how to retrieve the `WebTwain` object.
 
