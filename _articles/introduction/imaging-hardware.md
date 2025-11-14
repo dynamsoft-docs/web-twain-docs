@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN supports image capture from TWAIN Scanners, ICA S
 
 # Imaging Hardware 
 
-Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras via different APIs like TWAIN, ICA, SANE and DirectShow. As long as the scanner is supported by these APIs, Dynamic Web TWAIN can use them.
+Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras via different APIs like TWAIN, ICA, SANE and DirectShow. As long as the scanners are supported by these APIs, Dynamic Web TWAIN can use them.
 
 In this section, we'll look at these APIs.
 
