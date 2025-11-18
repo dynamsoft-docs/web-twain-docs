@@ -618,6 +618,8 @@ objThumbnailViewer.on("pageRendered", function(index) {
 
 **Usage notes**
 
+The method [`unbind()`](/_articles/info/api/WebTwain_Viewer.md#unbind) will dispose all created ThumbnailViewer objects.
+
 For the `CheckboxSettings` and `PageNumberSettings` interface, please refer to the APIs [`updateCheckboxStyle()`](/_articles/info/api/WebTwain_Viewer.md#updatecheckboxstyle) and [`updatePageNumberStyle()`](/_articles/info/api/WebTwain_Viewer.md#updatepagenumberstyle).
 
 The following table shows the events available to a ThumbnailViewer object.
@@ -637,9 +639,6 @@ The following table shows the events available to a ThumbnailViewer object.
 | `keydown`      | keyboardEvent: KeyboardEvent                      | Triggered upon pressing a key; **only supported on desktop browsers**           |
 | `keyup`        | keyboardEvent: KeyboardEvent                      | Triggered upon releasing a key; **only supported on desktop browsers**          |
 
-By default, scrolling the scroll bar on the `ThumbnailViewer` does not trigger the `topchanged` event.
-
-The method [`unbind()`](/_articles/info/api/WebTwain_Viewer.md#unbind) will dispose all created ThumbnailViewer objects.
 
 ---
 
