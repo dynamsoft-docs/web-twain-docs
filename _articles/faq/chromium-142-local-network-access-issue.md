@@ -149,3 +149,17 @@ This approach provides a more polished user experience, especially during onboar
 ### Roadmap
 
 Dynamsoft plans to add a feature that automatically detects local service connectivity and permission status. If the connection is blocked, users will be prompted with a message and directed to this FAQ page.
+
+Here are the details:
+
+* When local network access is blocked, prompt the user with the following dialog:
+
+   ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
+
+* Add a sentence about the permission in the service installation dialog, since we cannot determine whether the connection failure is due to the service not being installed or the access being blocked.
+
+   ![prompt blocked](/assets/imgs/local-network-access/service-installation-dialog.png)
+
+    Clicking "Guide" will open the dialog shown above.
+
+This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](support@dynamsoft.com).
