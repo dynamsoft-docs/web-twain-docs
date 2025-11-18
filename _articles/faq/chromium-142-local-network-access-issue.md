@@ -162,4 +162,4 @@ Here are the details:
 
     Clicking "Guide" will open the dialog shown above.
 
-This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](support@dynamsoft.com).
+This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](mailto://support@dynamsoft.com).
