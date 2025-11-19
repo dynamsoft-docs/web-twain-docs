@@ -28,6 +28,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Fixed the blurry image issue when the viewer's mode is set to 1x1.
 * Fixed a license issue of RemoteScan.
+* Fixed the auto start of the service on Linux not using GUI
 
 
 
