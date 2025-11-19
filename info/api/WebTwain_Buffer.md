@@ -2465,10 +2465,8 @@ interface DocumentInfo {
 }
 ```
 ```javascript
-/**
- * Get the list of all categories and their information.
- */
-GetFileInfoList():Json
+// Get the list of all categories and their information.
+GetFileInfoList(): Json
 Json:
 [{
    name: "categoryName",
