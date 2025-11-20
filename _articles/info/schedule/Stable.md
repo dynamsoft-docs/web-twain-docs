@@ -22,6 +22,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Added checking of the [local network access permission](/_articles/faq/chromium-142-local-network-access-issue.md) introduced in Chrome 142.
 * Added extra settings for [`PrintEx()`](/_articles/info/api/WebTwain_IO.md#printex).
 * Added prevention of service installation on macOS versions lower than 10.15.
+* Added support for service installation for multiple users (Windows only).
 * Updated third-party libraries to enhance security.
 
 ### Bug Fixes
