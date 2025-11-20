@@ -2451,14 +2451,13 @@ Get the list of all documents and their information.
 
 **Syntax**
 
-<div class="sample-code-prefix template2"></div>
 >- v17.3
 >- v17.2.5
 >
 >
 ```javascript
 GetDocumentInfoList(): DocumentInfo[];
-
+>
 interface DocumentInfo {
     name: string;
     imageIds: number[];
