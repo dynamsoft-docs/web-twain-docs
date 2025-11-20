@@ -2457,7 +2457,6 @@ Get the list of all documents and their information.
 >
 ```javascript
 GetDocumentInfoList(): DocumentInfo[];
->
 interface DocumentInfo {
     name: string;
     imageIds: number[];
