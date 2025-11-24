@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2025-11-06 15:06:00 +0800
+last_modified: 2025-11-24 11:06:00 +0800
 ---
 
 # Error Troubleshooting
@@ -44,16 +44,18 @@ Permission was denied for this request to access the `unknown` address space.
 ---
 
 #### Version-Specific Behavior
+
 The observed behavior depends on Chromium browser version and Dynamic Web TWAIN (DWT) version:
 
 | Browser Version   | DWT Version      | Resulting Symptom           |
 |-------------------|------------------|-----------------------------|
 | Chromium 142      | < 18.5.0         | Download Prompt             |
 | Chromium 142      | ≥ 18.5.0         | Blank Images after Scanning |
-| Chromium 144+ (*) | Any              | Download Prompt             |
+| Chromium 145+ (*) | Any              | Download Prompt             |
 
-> (*) **Chromium 144 has not been officially released.**  
+> (*) **Chromium 145, which can also block websocket, has not been officially released.**  
 > Behavior is based on pre-release testing and may change once the final release becomes available.
+> Edge 143 and Firefox Nightly will have local network permission control as well.
 
 ### Root Cause
 
@@ -149,3 +151,17 @@ This approach provides a more polished user experience, especially during onboar
 ### Roadmap
 
 Dynamsoft plans to add a feature that automatically detects local service connectivity and permission status. If the connection is blocked, users will be prompted with a message and directed to this FAQ page.
+
+Here are the details:
+
+* When local network access is blocked, prompt the user with the following dialog:
+
+   ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
+
+* Add a sentence about the permission in the service installation dialog, since we cannot determine whether the connection failure is due to the service not being installed or the access being blocked.
+
+   ![prompt blocked](/assets/imgs/local-network-access/service-installation-dialog.png)
+
+    Clicking "Guide" will open the dialog shown above.
+
+This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](mailto://support@dynamsoft.com).
