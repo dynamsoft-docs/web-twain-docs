@@ -44,16 +44,18 @@ Permission was denied for this request to access the `unknown` address space.
 ---
 
 #### Version-Specific Behavior
+
 The observed behavior depends on Chromium browser version and Dynamic Web TWAIN (DWT) version:
 
 | Browser Version   | DWT Version      | Resulting Symptom           |
 |-------------------|------------------|-----------------------------|
 | Chromium 142      | < 18.5.0         | Download Prompt             |
 | Chromium 142      | ≥ 18.5.0         | Blank Images after Scanning |
-| Chromium 144+ (*) | Any              | Download Prompt             |
+| Chromium 145+ (*) | Any              | Download Prompt             |
 
-> (*) **Chromium 144 has not been officially released.**  
+> (*) **Chromium 145, which can also block websocket, has not been officially released.**  
 > Behavior is based on pre-release testing and may change once the final release becomes available.
+> Edge 143 and Firefox Nightly will have local network permission control as well.
 
 ### Root Cause
 
