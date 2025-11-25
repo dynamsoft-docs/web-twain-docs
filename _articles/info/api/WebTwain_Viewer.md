@@ -592,7 +592,7 @@ var thumbnailViewerSettings = {
     allowResizing: false,
     pageBackground: "transparent",
     pageBorder: "1px solid rgb(238, 238, 238)",
-    hoverBackground: "rgb(239, 246, 253)",
+    hoverPageBackground: "rgb(239, 246, 253)",
     hoverPageBorder: "1px solid rgb(238, 238, 238)",
     placeholderBackground: "rgb(251, 236, 136)",
     selectedPageBorder: "1px solid rgb(125,162,206)",
