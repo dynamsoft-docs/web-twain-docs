@@ -23,6 +23,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Added extra settings for [`PrintEx()`](/_articles/info/api/WebTwain_IO.md#printex).
 * Added prevention of service installation on macOS versions lower than 10.15.
 * Added support for service installation for multiple users (Windows only).
+* Added an [`EnableLocalNetworkMixedContent`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#enablelocalnetworkmixedcontent) property.
+* Improved the performance of [`RemoveAllSelectedImages()`](/_articles/info/api/WebTwain_Buffer.md#removeallselectedimages) by triggering [`OnBufferChanged`](/_articles/info/api/WebTwain_Buffer.md#onbufferchanged) and [`OnBitmapChanged`](/_articles/info/api/WebTwain_Buffer.md#onbitmapchanged) events only once.
 * Updated third-party libraries to enhance security.
 
 ### Bug Fixes
@@ -30,7 +32,6 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Fixed the blurry image issue when the viewer's mode is set to 1x1.
 * Fixed a license issue of RemoteScan.
 * Fixed the auto start of the service on Linux not using GUI
-
 
 
 ## 19.2 (08/26/2025) 
