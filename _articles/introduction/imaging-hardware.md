@@ -9,7 +9,7 @@ description: Dynamic Web TWAIN supports image capture from TWAIN Scanners, ICA S
 
 # Imaging Hardware 
 
-Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras via different APIs like TWAIN, ICA, SANE and DirectShow. As long as the scanners are supported by these APIs, Dynamic Web TWAIN can use them.
+Dynamic Web TWAIN's main feature is interacting with imaging devices like scanners and cameras via different APIs like TWAIN, ICA, SANE, WIA, eSCL and DirectShow. As long as the scanners are supported by these APIs, Dynamic Web TWAIN can use them.
 
 In this section, we'll look at these APIs.
 
@@ -50,6 +50,19 @@ See more: [How to test if your scanner supports ICA scanning on Mac OS?](/_artic
 * You can find the list of supported devices [here](https://www.sane-project.org/sane-supported-devices.html).
 
 See more: [How to test if your device is SANE compliant?](/_articles/faq/how-to-test-if-your-device-is-SANE-compliant.md){:target="_blank"} 
+
+## WIA
+
+![Hardware-Scanners-WIA](/assets/imgs/Hardware-Scanners-WIA.png)
+
+Windows Image Acquisition (WIA) is the still image acquisition platform in the Windows family of operating systems starting with Windows Millennium Edition (Windows Me) and Windows XP.
+
+Most multi-function printers are supported by WIA without the need to install extra drivers. But for advanced scanners, TWAIN is still a better choice.
+
+## eSCL
+
+eSCL (also named Mopria) is a RESTful interface. The network scanners broadcast themselves via Bonjour and the client can find them and send HTTP requests to scan documents. It is a driverless solution. The supported devices are limited, mostly multi-function printers (MFPs).
+
 
 ## DirectShow
 
