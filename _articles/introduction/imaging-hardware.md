@@ -45,9 +45,9 @@ See more: [How to test if your scanner supports ICA scanning on Mac OS?](/_artic
 
 * SANE is supported on multiple Linux distributions.
 
-* As of version 16.1.1, `Dynamic Web TWAIN` supports SANE v1.0.25.
+* `Dynamic Web TWAIN` supports SANE v1.0.25+.
 
-* You can find the list of supported devices [here](https://www.sane-project.org/sane-supported-devices.html).
+* You can find the list of supported devices [here](http://www.sane-project.org/sane-supported-devices.html).
 
 See more: [How to test if your device is SANE compliant?](/_articles/faq/how-to-test-if-your-device-is-SANE-compliant.md){:target="_blank"} 
 
@@ -55,13 +55,17 @@ See more: [How to test if your device is SANE compliant?](/_articles/faq/how-to-
 
 ![Hardware-Scanners-WIA](/assets/imgs/Hardware-Scanners-WIA.png)
 
-Windows Image Acquisition (WIA) is the still image acquisition platform in the Windows family of operating systems starting with Windows Millennium Edition (Windows Me) and Windows XP.
+* Windows Image Acquisition (WIA) is the still image acquisition platform in the Windows family of operating systems starting with Windows Millennium Edition (Windows Me) and Windows XP.
 
-Most multi-function printers are supported by WIA without the need to install extra drivers. But for advanced scanners, TWAIN is still a better choice.
+* Most multi-function printers are supported by WIA without the need to install extra drivers. But for advanced scanners, TWAIN is still a better choice.
 
 ## eSCL
 
-eSCL (also named Mopria) is a RESTful interface. The network scanners broadcast themselves via Bonjour and the client can find them and send HTTP requests to scan documents. It is a driverless solution. The supported devices are limited, mostly multi-function printers (MFPs).
+* eSCL (also named Mopria) is a RESTful interface. The network scanners broadcast themselves via Bonjour and the client can find them and send HTTP requests to scan documents. 
+
+* It is a driverless solution. 
+
+* The supported devices are mostly multi-function printers (MFPs). You can find the list of supported scanners [here](https://mopria.org/certified-products).
 
 
 ## DirectShow
