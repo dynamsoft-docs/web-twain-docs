@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2025-11-24 11:06:00 +0800
+last_modified: 2025-11-26 15:46:00 +0800
 ---
 
 # Error Troubleshooting
@@ -165,3 +165,7 @@ Here are the details:
     Clicking "Guide" will open the dialog shown above.
 
 This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](mailto://support@dynamsoft.com).
+
+## Other Causes
+
+There are other causes of service not being connected. You can find them in [another FAQ](/_articles/faq/service-prompting-to-install-repeatedly.md).
