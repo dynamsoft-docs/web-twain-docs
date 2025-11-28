@@ -20,7 +20,7 @@ Dynamic Web TWAIN provides an OCR add-on to extract text in your scanned images.
 
 ### Step One - Install the OCR Package
 
-Download `DynamicWebTWAINOCRPack.zip`, unzip it and run `Install.cmd` as admin to install the OCR package. It will copy the `ocr` folder to the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
+Download `DynamicWebTWAINOCRPack.zip`, unzip it and run `Install.cmd` as admin to install the OCR package. It will copy the `ocr` folder to the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). (You need to install Dynamic Web TWAIN Service beforehand.)
 
 ### Step Two - Write a Basic Document Scanning Page
 
@@ -264,7 +264,7 @@ Here is the complete code of the demo.
     <div>Output:</div>
     <input type="button" value="Save as PDF" onclick="SaveAsPDF();" />
     <label>Option:
-      <select>
+      <select id="outputFormat">
         <option value="extralayer">With Extra Text Layer</option>
         <option value="plaintext">Plain Text</option>
       </select>
@@ -279,6 +279,7 @@ Here is the complete code of the demo.
   <script type="text/javascript">
     var DWTObject;
     var storedOCRResults = {};
+
     Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
       DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
       DWTObject.Viewer.width = "100%";
@@ -409,7 +410,7 @@ Here is the complete code of the demo.
 
     async function SaveAsPDF(){
       try {
-        let format = document.querySelector('select').value;
+        let format = document.getElementById('outputFormat').value;
         if(format === "extralayer"){
           await DWTObject.Addon.OCRKit.SaveToPath(DWTObject.SelectAllImages(),Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_WITH_EXTRA_TEXTLAYER);
         }else{
