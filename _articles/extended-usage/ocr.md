@@ -424,3 +424,34 @@ Here is the complete code of the demo.
 </body>
 </html>
 ```
+
+## FAQ
+
+### What Languages are Supported?
+
+The OCR add-on supports multiple languages including English, French, Spanish, German, Italian, and Portuguese.
+
+Contact [support](mailto:support@dynamsoft.com) if you need to OCR documents in other languages.
+
+### What are the Hardware Requirements?
+
+The OCR add-on requires a 64-bit operating system and at least 4GB of RAM for optimal performance.
+
+### Can I Limit the Region for OCR?
+
+Yes. You can specify which regions for OCR using the `rects` option of the [`recognize()`](/_articles/info/api/Addon_OCR.md#recognize) function.
+
+### Will My Document be Uploaded to a Remote Server?
+
+No. The OCR process happens locally on your machine. No data is sent to any remote servers.
+
+### What is Searchable PDF?
+
+A searchable PDF is a type of PDF file where the text content is recognized by a computer. This means you can use the Find function (usually Ctrl+F or Cmd+F) to search for specific words or phrases within the document, just like you would on a webpage or in a Word document. 
+
+The OCR add-on supports two kinds of searchable PDF output.
+
+* Plain-text PDF, which will only keep a text layer of the OCRed text for each page.
+* Extra-text-layer PDF, which will add an extra invisible text layer of the OCRed text above each page.
+
+
