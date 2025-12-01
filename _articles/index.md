@@ -49,6 +49,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 - [Using the DWT RESTful API]({{site.extended-usage}}restful-api.html)
 - [Barcode Recognition]({{site.extended-usage}}barcode-processing.html)
 - [PDF Handling]({{site.extended-usage}}pdf-processing.html)
+- [OCR](/_articles/extended-usage/ocr.md)
 <!--- [PDF Compressor (Beta)]({{site.extended-usage}}pdf-compression.html)-->
 - [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)
 - [Configuring System Messages]({{site.extended-usage}}system-message-configuration.html)
