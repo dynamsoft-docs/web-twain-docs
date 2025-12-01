@@ -164,6 +164,8 @@ tree_list:
           #   path: /info/api/Addon_Camera.html
           - name: PDF Rasterizer
             path: /info/api/Addon_PDF.html
+          - name: OCR
+            path: /info/api/Addon_OCR.html
           - name: Webcam
             path: /info/api/Addon_Webcam.html
       - name: Enumerations
