@@ -13,7 +13,7 @@ Dynamic Web TWAIN provides an OCR add-on to extract text in your scanned images.
 
 ## Requirements
 
-* Windows 10+
+* Windows 10 versions >= 1809 and all versions of Windows 11
 * A license with the OCR module
 
 ## How to Use
