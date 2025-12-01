@@ -1,6 +1,8 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
 title: Dynamic Web TWAIN SDK API Reference - OCR Addon APIs
 keywords: Dynamic Web TWAIN, Documentation, API Reference, OCR Addon APIs
 breadcrumbText: OCR Addon
