@@ -30,7 +30,7 @@ GetInstalledOCRInfo(): Promise<OCRInfo>;
 
 **Return Values**
 
-An [`OCRInfo`](/_articles/info/api/interfaces.md#ocrinfo) object.
+Promise of an [`OCRInfo`](/_articles/info/api/interfaces.md#ocrinfo) object.
 
 **Availability**
 
