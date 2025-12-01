@@ -13,6 +13,9 @@ description: Dynamic Web TWAIN SDK Documentation API Reference OCR Addon APIs Pa
 
 **Methods**
 
+| [`GetInstalledOCRInfo()`](#getinstalledocrinfo) | [`DetectPageOrientation()`](#detectpageorientation) | [`Recognize()`](#recognize) | [`SaveToPath()`](#savetopath) |
+| [`SaveAsBase64()`](#saveasbase64) | [`SaveAsBlob()`](#saveasblob) |  |  |
+
 ---
 
 ## GetInstalledOCRInfo()
