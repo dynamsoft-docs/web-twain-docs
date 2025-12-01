@@ -10,6 +10,31 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.3 (12/09/2025) 
+
+### New Features
+
+* Added a new [OCR add-on](/_articles/extended-usage/ocr.md), which uses latest AI technology.
+* Added support for writing PDF/A files.
+
+### Other Changes
+
+* Added checking of the [local network access permission](/_articles/faq/chromium-142-local-network-access-issue.md) introduced in Chrome 142.
+* Added extra settings for [`PrintEx()`](/_articles/info/api/WebTwain_IO.md#printex).
+* Added prevention of service installation on macOS versions lower than 10.15.
+* Added support for service installation for multiple users (Windows only).
+* Added an [`EnableLocalNetworkMixedContent`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#enablelocalnetworkmixedcontent) property.
+* Improved the performance of [`RemoveAllSelectedImages()`](/_articles/info/api/WebTwain_Buffer.md#removeallselectedimages) by triggering [`OnBufferChanged`](/_articles/info/api/WebTwain_Buffer.md#onbufferchanged) and [`OnBitmapChanged`](/_articles/info/api/WebTwain_Buffer.md#onbitmapchanged) events only once.
+* Improved performance for the viewer loading documents with thousands of pages.
+* Updated third-party libraries to enhance security.
+
+### Bug Fixes
+
+* Fixed the blurry image issue when the viewer's mode is set to 1x1.
+* Fixed a license issue of RemoteScan.
+* Fixed the auto start of the service on Linux not using GUI
+
+
 ## 19.2 (08/26/2025) 
 
 ### Highlights

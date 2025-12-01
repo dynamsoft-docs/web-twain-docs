@@ -570,6 +570,13 @@ breadcrumbText: API Reference
 | [`SetPassword()`](/_articles/info/api/Addon_PDF.md#setpassword)           | [`SetResolution()`](/_articles/info/api/Addon_PDF.md#setresolution)         | [`Write.Setup()`](/_articles/info/api/Addon_PDF.md#writesetup)                          | [`GetReaderOptions()`](/_articles/info/api/Addon_PDF.md#getreaderoptions) |
 | [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions) |
 
+## OCR
+
+### Methods
+
+| [`GetInstalledOCRInfo()`](/_articles/info/api/Addon_OCR.md#getinstalledocrinfo) | [`DetectPageOrientation()`](/_articles/info/api/Addon_OCR.md#detectpageorientation) | [`Recognize()`](/_articles/info/api/Addon_OCR.md#recognize) | [`SaveToPath()`](/_articles/info/api/Addon_OCR.md#savetopath) |
+| [`SaveAsBase64()`](/_articles/info/api/Addon_OCR.md#saveasbase64) | [`SaveAsBlob()`](/_articles/info/api/Addon_OCR.md#saveasblob) |
+
 <!-- ## Camera
 
 ### Methods

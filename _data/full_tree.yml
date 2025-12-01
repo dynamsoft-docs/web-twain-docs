@@ -72,6 +72,8 @@ tree_list:
       path: /extended-usage/restful-api.html
     - name: Barcode Recognition
       path: /extended-usage/barcode-processing.html
+    - name: OCR
+      path: /extended-usage/ocr.html
     - name: PDF Handling
       path: /extended-usage/pdf-processing.html
     - name: Buffer Caching

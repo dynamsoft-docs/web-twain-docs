@@ -20,10 +20,10 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 
 **Properties**
 
-| [`Autoload`](#autoload)       | [`Containers`](#containers)                                 | [`CustomizableDisplayInfo`](#customizabledisplayinfo)           | [`DeviceFriendlyName`](#devicefriendlyname) |
-| [`Host`](#host)               | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader)         | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer) | [`JSVersion`](#jsversion)                   |
-| [`ProductKey`](#productkey)   | [`ResourcesPath`](#resourcespath)                           | [`ServiceInstallerLocation`](#serviceinstallerlocation)         | [`UseDefaultViewer`](#usedefaultviewer)     |
-| [`IfCheckCORS`](#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](#ifalwaysfocusonpopupwindow) |                                                                 |                                             |
+| [`AutoLoad`](#autoload) | [`Containers`](#containers) | [`CustomizableDisplayInfo`](#customizabledisplayinfo) | [`DeviceFriendlyName`](#devicefriendlyname) |
+| [`EnableLocalNetworkMixedContent`](#enablelocalnetworkmixedcontent) | [`Host`](#host) | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer) |
+| [`JSVersion`](#jsversion) | [`ProductKey`](#productkey) | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation) |
+| [`UseDefaultViewer`](#usedefaultviewer) | [`IfCheckCORS`](#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](#ifalwaysfocusonpopupwindow) | |
 
 **Events**
 
@@ -804,6 +804,38 @@ DeviceFriendlyName: string;
 </div>
 
 ---
+
+## EnableLocalNetworkMixedContent
+
+If enabled, the library will use HTTP to communicate with the service. The host must be `localhost` or `127.0.0.1`. The default value is `false`.
+
+**Syntax**
+
+```typescript
+EnableLocalNetworkMixedContent: boolean;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">H5(Windows)</td>
+<td align="center">H5(macOS)</td>
+<td align="center">H5(Linux)</td>
+</tr>
+
+<tr>
+<td align="center">v19.3+</td>
+<td align="center">v19.3+</td>
+<td align="center">v19.3+</td>
+</tr>
+
+</table>
+</div>
+
+----
 
 ## Host
 

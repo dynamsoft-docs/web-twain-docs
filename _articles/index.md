@@ -73,6 +73,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 - [Dynamsoft FileUploader]({{site.api}}Dynamsoft_FileUploader.html)
 - Add-On Modules
   - [Barcode Reader]({{site.api}}Addon_BarcodeReader.html)
+  - [OCR](/_articles/info/api/Addon_OCR.md)
   - [PDF Rasterizer]({{site.api}}Addon_PDF.html)
   - [Webcam]({{site.api}}Addon_Webcam.html)
 - [Enumerations]({{site.api}}Dynamsoft_Enum.html)

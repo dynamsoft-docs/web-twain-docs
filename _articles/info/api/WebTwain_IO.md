@@ -3673,12 +3673,14 @@ Print selected image(s).
 **Syntax**
 
 ```javascript
-PrintEx(indices: number[]): boolean;
+PrintEx(indices: number[], settings?: PrintSettings): boolean;
 ```
 
 **Parameters**
 
 `indices`: Specify the image.
+
+`settings`: Settings for printing. Refer to [`PrintSettings`](/_articles/info/api/interfaces.md#printsettings). (Only available since v19.3.)
 
 **Availability**
 

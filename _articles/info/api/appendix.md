@@ -50,6 +50,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-1090 | BMP format error or not supported |
 |-1100 | PNG format error or not supported |
 |-1110 | Unrecognized file extension |
+|-1126 | The specified module could not be found. |
 |-1200 | PDF format error or not supported |
 |-2000 | Can not initiate the internet session |
 |-2001 | HTTP request error |
@@ -58,9 +59,11 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2004 | FTP download file is too large |
 |-2007 | The system is busy, some operations are not completed. Please try later |
 |-2137 | Cross-Origin Resource Sharing (CORS) policy is blocking the access. Please contact the Administrator to configure 'Access-Control-Allow-Origin'.|
+|-2120 | There must be at least one OCR result. \| No detection model found in local. \| No recognition model found in local.  |
 |-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website |
 |-2208 | The connection with the local Dynamic Web TWAIN Service encountered a problem and has been reset |
 |-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
+|-2217 | Missing dependent files for OCR.  |
 |-2300 | Http upload error: the HTTP Server cannot empty |
 |-2301 | Network error |
 |-2302 | The result format is invalid |
@@ -99,6 +102,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2337 | The current product key does not include a license for reading DataMatrix barcode, please contact the site administrator |
 |-2338 | The current product key does not support Webcam, please contact the site administrator |
 |-2339 | The current product key does not support pdf rasterizer, please contact the site administrator |
+|-2340 | The license for the module ocr kit is not found or has expired. |
 |-2342 | The domain of your current site does not match the domain bound in the current product key, please contact the site administrator |
 |-2343 | The current product key does not support your browser, please contact the site administrator |
 |-2344 | The current product key does not support Windows OS, please contact the site administrator |
@@ -135,6 +139,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2619 | Only single index selection is allowed when enumImageFormatType is set to url. |
 |-2621 | Dynamsoft.DWT.Containers was not set. |
 |-2622 | Please do not set enumImageType to "IT_MULTIPAGE_PDF", "IT_MULTIPAGE_TIF" or "IT_ALL". |
+|-2701 | The OCR feature is only supported on x64 versions of Windows.  |
 |-2800 | Please make sure the Dynamic Web TWAIN Service has been installed. |
 |-2801 | Invalid response data was returned from the Dynamic Web TWAIN Service. |
 |-2802 | The file dynamsoft.webtwain.config.js timed out while loading. |
@@ -185,6 +190,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2901 | Source document does not exist. Please check the document name or create the document before performing this operation. |
 |-2902 | Target document does not exist. Please check the document name or create the document before performing this operation. |
 |-2905 | This API is not supported on the current operating system. Please contact your system administrator. |
+|-2910 | The OS print functionality is not supported on the current operating system. |
 |<= -3000 | See ErrorString property for details |
 
 <!-- |-2826 | Failed to connect the Dynamic Web TWAIN Service on [' + name + ']. | -->
