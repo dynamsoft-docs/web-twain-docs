@@ -101,6 +101,8 @@ Create a HTML with the following content. It can scan documents from scanners as
 </html>
 ```
 
+PS: You can find where the resources files are in this [FAQ](/_articles/faq/what-are-the-resources-files.md).
+
 ### Step Three - Include the Add-on
 
 Reference the add-on with the following code. It is in the [resources files](/_articles/faq/what-are-the-resources-files.md).
