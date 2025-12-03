@@ -71,7 +71,7 @@ The resource files loaded from CDNs and package managers slightly differ from th
 <html>
     <head>
         <!-- Load resources from UNPKG CDN -->
-        <script src="https://unpkg.com/dwt@19.2.0/dist/dynamsoft.webtwain.min.js"></script>
+        <script src="https://unpkg.com/dwt@19.3.0/dist/dynamsoft.webtwain.min.js"></script>
     </head>
 
     <body>
@@ -79,7 +79,7 @@ The resource files loaded from CDNs and package managers slightly differ from th
         <script>
             var DWTObject; // Use this to store the WebTwain object after retrieval
 
-            Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@19.2.0/dist"; // Load supporting resources from here
+            Dynamsoft.DWT.ResourcesPath = "https://unpkg.com/dwt@19.3.0/dist"; // Load supporting resources from here
             Dynamsoft.DWT.ProductKey = ""; // Add product key here
 
             // Configure the default WebTwain instance

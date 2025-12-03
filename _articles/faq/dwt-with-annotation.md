@@ -34,7 +34,7 @@ Deliver the SDK dependencies with either the [jsDelivr](https://jsdelivr.com/) o
 
   ```html
     <!--Dynamic Web TWAIN-->
-    <script src="https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist/dynamsoft.webtwain.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dwt@19.3.0/dist/dynamsoft.webtwain.min.js"></script>
     <!--Dynamsoft Document Viewer-->
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
@@ -44,7 +44,7 @@ Deliver the SDK dependencies with either the [jsDelivr](https://jsdelivr.com/) o
 
   ```html
     <!--Dynamic Web TWAIN-->
-    <script src="https://unpkg.com/dwt@19.2.0/dist/dynamsoft.webtwain.min.js"></script>
+    <script src="https://unpkg.com/dwt@19.3.0/dist/dynamsoft.webtwain.min.js"></script>
     <!--Dynamsoft Document Viewer-->
     <script src="https://unpkg.com/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
@@ -118,7 +118,7 @@ API Reference
 Reference a CDN like `jsDelivr` to fetch most resources using `Dynamsoft.DWT.ResourcesPath`. Notably these resources exclude DWT Service installers, which exceed the `jsDelivr` CDN per-file size limit. You have a few options to set this path with `Dynamsoft.DWT.ServiceInstallerLocation`:
 
 1. [Install the DWT SDK](https://www.dynamsoft.com/web-twain/downloads/), extract the DWT service installers (under path like `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 19.2\Resources\dist`), then self-host the DWT Service installers with `Dynamsoft.DWT.ServiceInstallerLocation = "https://example.com/DWT/Resources/dist"`.
-2. Use a different CDN with a higher per-file size limit by referencing the location with `Dynamsoft.DWT.ServiceInstallerLocation = "https://unpkg.com/dwt@19.2.0/dist/dist"`.
+2. Use a different CDN with a higher per-file size limit by referencing the location with `Dynamsoft.DWT.ServiceInstallerLocation = "https://unpkg.com/dwt@19.3.0/dist/dist"`.
 
 ```javascript
 // Create Dynamic Web TWAIN object
@@ -126,7 +126,7 @@ Reference a CDN like `jsDelivr` to fetch most resources using `Dynamsoft.DWT.Res
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=dwtddv
 Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DWT.UseDefaultViewer = false;
-Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist";
+Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.3.0/dist";
 // Do not forget to set your installer path
 Dynamsoft.DWT.ServiceInstallerLocation = "YOUR_INSTALLER_PATH_HERE";
 
@@ -285,7 +285,7 @@ API Reference
 <html>
 <head>
     <title>HelloWorld</title>
-    <script src=" https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist/dynamsoft.webtwain.min.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/dwt@19.3.0/dist/dynamsoft.webtwain.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@3.0.0/dist/ddv.css">
 </head>
@@ -322,7 +322,7 @@ let DWObject, editViewer, ddvDoc;
     // Create Dynamic Web TWAIN object
     Dynamsoft.DWT.ProductKey = license;
     Dynamsoft.DWT.UseDefaultViewer = false;
-    Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.2.0/dist";
+    Dynamsoft.DWT.ResourcesPath = "https://cdn.jsdelivr.net/npm/dwt@19.3.0/dist";
     // Do not forget to set your installer path
     Dynamsoft.DWT.ServiceInstallerLocation = "YOUR_INSTALLER_PATH_HERE";
 
