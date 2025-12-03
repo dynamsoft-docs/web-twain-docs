@@ -22,7 +22,7 @@ Dynamic Web TWAIN provides an OCR add-on to extract text in your scanned images.
 
 ### Step One - Install the OCR Package
 
-Download `DynamicWebTWAINOCRPack.zip`, unzip it and run `Install.cmd` as admin to install the OCR package. It will copy the `ocr` folder to the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). (You need to install Dynamic Web TWAIN Service beforehand.)
+Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it and run `Install.cmd` as admin to install the OCR package. It will copy the `ocr` folder to the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). (You need to install Dynamic Web TWAIN Service beforehand.)
 
 ### Step Two - Write a Basic Document Scanning Page
 
