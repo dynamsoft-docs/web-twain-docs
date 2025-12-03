@@ -163,7 +163,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 14.  [Can I use two different websites integrated with two different versions of Dynamic Web TWAIN on the same computer?](/_articles/faq/service-backward-compatibility.md)
 15.  [How do I upgrade my project to use the latest version of the Dynamic Web TWAIN SDK?](/_articles/faq/upgrade-to-latest-version.md)
 16.  [How do I upgrade the end-user installation for all end users once I upgrade my project?](/_articles/faq/upgrade-end-user-installations.md)
-17.  [How to Resolve Dynamic Web TWAIN Issues on Insecure Websites in Chrome v94–v141](/_articles/faq/http-insecure-websites-in-chromium-browser.md)
+17.  [Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?](/_articles/faq/http-insecure-websites-in-chromium-browser.md)
 18.  [How to resolve Dynamic Web TWAIN issue in Chrome 101?](/_articles/faq/private-network-access-in-chrome101.md)
 19.  [Dynamic Web TWAIN – Content-Security-Policy violated](/_articles/faq/content-security-policy-violated.md)
 20.  [Scanner source is listed on XSane application but not on my web application on Linux machines](/_articles/faq/source-not-listed-on-linux.md)
@@ -171,6 +171,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 22.  [The scanner's UI or the system's file dialog does not open when scanning](/_articles/faq/service-is-blocked.md)
 23.  [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md)
 24.  [Where can I download the Dynamic Web TWAIN Service installers only?](/_articles/faq/download-service-only.md)
+25.  [Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later](/_articles/faq/chromium-142-local-network-access-issue.md)
 
 ## Error Troubleshooting
 
