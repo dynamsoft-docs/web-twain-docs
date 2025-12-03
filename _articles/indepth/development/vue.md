@@ -164,9 +164,9 @@ export default {
        * Note:
        * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed separately
        */
-      this.DWTObject.Addon.PDF.SetConvertMode(
-        Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL
-      );
+      this.DWTObject.Addon.PDF.SetReaderOptions({
+        convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL
+      });
       this.DWTObject.LoadImageEx(
         "",
         Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL,
@@ -324,7 +324,9 @@ function openImage() {
    * Note:
    * This following line of code uses the PDF Rasterizer which is an extra add-on that is licensed separately
    */
-  DWTObject.Addon.PDF.SetConvertMode(Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL);
+  DWTObject.Addon.PDF.SetReaderOptions({
+    convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL
+  });
   DWTObject.LoadImageEx(
     "",
     Dynamsoft.DWT.EnumDWT_ImageType.IT_ALL,
