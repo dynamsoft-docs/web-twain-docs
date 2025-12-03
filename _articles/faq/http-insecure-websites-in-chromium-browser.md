@@ -2,22 +2,22 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How to Resolve Dynamic Web TWAIN Issues on Insecure Websites in Chrome v94–v141
-keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 94 issue, HTTP website, Edge 94 issue
-breadcrumbText: How to Resolve Dynamic Web TWAIN Issues on Insecure Websites in Chrome v94–v141
-description: How to Resolve Dynamic Web TWAIN Issues on Insecure Websites in Chrome v94–v141
+title: Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?
+keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 94 issue, HTTP website, Edge 94 issue, insecure
+breadcrumbText: Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?
+description: Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?
 date: 2021-09-24 07:56:47 +0800
-last_modified: 2025-11-05 10:44:01 +0800
+last_modified: 2025-12-03 10:44:01 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
 https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
-# Dynamic Web TWAIN does not function on insecure (non-HTTPS) public websites in Chrome versions 94 to 141 due to browser security restrictions.
+# Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?
 
 ### Symptom
 
-When visiting a public HTTP website that integrates the Dynamic Web TWAIN SDK using Chrome versions 94 through 141, you may be repeatedly prompted to download and install the Dynamic Web TWAIN Service (also known as the Dynamsoft Service). The same issue occurs in Microsoft Edge, as it is based on Chromium.
+When accessing a public HTTP website that uses the Dynamic Web TWAIN SDK with Chrome versions 94 and above, you may encounter repeated prompts asking you to download and install the Dynamic Web TWAIN Service, also known as the Dynamsoft Service. The same behavior may occur in Microsoft Edge because it is built on the Chromium engine.
 
 In the browser console, you may see the following **error message**
 
@@ -57,8 +57,9 @@ If you need time to update your website, you may try one of the following workar
    [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)  
    For more details about managing policies for your users, see refer to google's [help center article](https://support.google.com/chrome/a/answer/9037717).
 
-3. If you need to disable the block for an end user, there is a Chrome setting available.  
+3. If you need to disable the block for an end user, there is a Chrome setting available.
    see the steps below  
    Step 1: visit chrome://flags/#block-insecure-private-network-requests  
    Step 2: set 'Block insecure private network requests' to Disabled  
    ![block-insecure-private-network-request](/assets/imgs/block-insecure-private-network-request.png)
+   > Note:This configuration is available in Chrome 94. Settings may have changed in newer versions. Please contact [Dynamsoft](https://www.dynamsoft.com/contact/) for further assistance.
