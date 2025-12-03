@@ -43,9 +43,14 @@ DWT add-ons provide additional features:
 * [Barcode Reader add-on](/_articles/info/api/Addon_BarcodeReader.md) to read barcodes in documents.
 * [PDF Rasterizer add-on](/_articles/info/api/Addon_PDF.md) to load external PDFs.
 
-## System Requirements
+## Requirements
 
-DWT supports most major operating [systems](/_articles/introduction/system-requirements.md), browsers, and printers using standard drivers. Learn more about hardware requirements [here](/_articles/introduction/imaging-hardware.md). Other environments not officially listed may still support DWT, but Dynamsoft does not officially support these environments as they are not tested. If you have questions about unofficially supported environments, please contact our [support team](/_articles/about/getsupport.md) for more information.
+You can find supported systems, browsers, and hardware in the following pages:
+
+* [System requirements](/_articles/introduction/system-requirements.md)
+* [Hardware requirements](/_articles/introduction/imaging-hardware.md)
+
+In addition, [local network access permission](https://www.dynamsoft.com/web-twain/docs/faq/chromium-142-local-network-access-issue.html) and [HTTPS](https://www.dynamsoft.com/web-twain/docs/faq/http-insecure-websites-in-chromium-browser.html) are also required by latest browsers.
 
 ## API Reference
 

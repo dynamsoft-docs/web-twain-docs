@@ -1151,13 +1151,13 @@ interface ThumbnailViewer {
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      * Allow any CSS rules
      */
-    hoverBackground: string;
+    hoverPageBackground: string;
     /**
      * Set the image border when the mouse is hovered.
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      * Allow any CSS rules
      */
-    hoverBorder: string;
+    hoverPageBorder: string;
     /**
      * Set the background when dragging the image. The default value is yellow.
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
@@ -1169,13 +1169,13 @@ interface ThumbnailViewer {
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      * Allow any CSS rules
      */
-    selectedImageBorder: string;
+    selectedPageBorder: string;
     /**
      * Set the background of the selected image.
      * 'Invalid property value' will be reported when the specified value type is wrong or the parameter name is spelled incorrectly.
      * Allow any CSS rules
      */
-    selectedImageBackground: string;
+    selectedPageBackground: string;
 }
 ```
 

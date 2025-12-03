@@ -592,7 +592,7 @@ var thumbnailViewerSettings = {
     allowResizing: false,
     pageBackground: "transparent",
     pageBorder: "1px solid rgb(238, 238, 238)",
-    hoverBackground: "rgb(239, 246, 253)",
+    hoverPageBackground: "rgb(239, 246, 253)",
     hoverPageBorder: "1px solid rgb(238, 238, 238)",
     placeholderBackground: "rgb(251, 236, 136)",
     selectedPageBorder: "1px solid rgb(125,162,206)",
@@ -618,28 +618,27 @@ objThumbnailViewer.on("pageRendered", function(index) {
 
 **Usage notes**
 
+The method [`unbind()`](/_articles/info/api/WebTwain_Viewer.md#unbind) will dispose all created ThumbnailViewer objects.
+
 For the `CheckboxSettings` and `PageNumberSettings` interface, please refer to the APIs [`updateCheckboxStyle()`](/_articles/info/api/WebTwain_Viewer.md#updatecheckboxstyle) and [`updatePageNumberStyle()`](/_articles/info/api/WebTwain_Viewer.md#updatepagenumberstyle).
 
 The following table shows the events available to a ThumbnailViewer object.
 
 | Event Name     | Arguments                                         | Description                                                          |
 | :------------- | :------------------------------------------------ | :------------------------------------------------------------------- |
-| `click`        | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon primary mouse click                                  |
-| `dblclick`     | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon primary mouse double click                           |
-| `contextmenu`  | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon secondary mouse click                            |
-| `mousemove`    | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon mouse movements within the `ThumbnailViewer`                                  |
-| `mousedown`    | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon pressing down the primary mouse button                             |
-| `mouseup`      | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon releasing the primary mouse button                             |
+| `click`        | event: [ThumbnailViewerEvent](/_articles/info/api/interfaces.md#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon primary mouse click                                  |
+| `dblclick`     | event: [ThumbnailViewerEvent](/_articles/info/api/interfaces.md#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon primary mouse double click                           |
+| `contextmenu`  | event: [ThumbnailViewerEvent](/_articles/info/api/interfaces.md#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon secondary mouse click                            |
+| `mousemove`    | event: [ThumbnailViewerEvent](/_articles/info/api/interfaces.md#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon mouse movements within the `ThumbnailViewer`                                  |
+| `mousedown`    | event: [ThumbnailViewerEvent](/_articles/info/api/interfaces.md#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon pressing down the primary mouse button                             |
+| `mouseup`      | event: [ThumbnailViewerEvent](/_articles/info/api/interfaces.md#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon releasing the primary mouse button                             |
 | `resize`       | width:number, height:number                       | Triggered when the width or height of the `ThumbnailViewer` object changes |
 | `pageRendered` | index: number                                     | Triggered when a page becomes rendered.                                   |
-| `mouseout`     | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon the mouse leaving the `ThumbnailViewer`; **only supported on desktop browsers**           |
-| `mouseover`    | event: [ThumbnailViewerEvent](/_articles/info/api.html#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon mouse hovering over the `ThumbnailViewer`; **only supported on desktop browsers**          |
+| `mouseout`     | event: [ThumbnailViewerEvent](/_articles/info/api/interfaces.md#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon the mouse leaving the `ThumbnailViewer`; **only supported on desktop browsers**           |
+| `mouseover`    | event: [ThumbnailViewerEvent](/_articles/info/api/interfaces.md#thumbnailviewerevent), domEvent: [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent){:target="_blank"} | Triggered upon mouse hovering over the `ThumbnailViewer`; **only supported on desktop browsers**          |
 | `keydown`      | keyboardEvent: KeyboardEvent                      | Triggered upon pressing a key; **only supported on desktop browsers**           |
 | `keyup`        | keyboardEvent: KeyboardEvent                      | Triggered upon releasing a key; **only supported on desktop browsers**          |
 
-By default, scrolling the scroll bar on the `ThumbnailViewer` does not trigger the `topchanged` event.
-
-The method [`unbind()`](/_articles/info/api/WebTwain_Viewer.md#unbind) will dispose all created ThumbnailViewer objects.
 
 ---
 

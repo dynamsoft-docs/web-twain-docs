@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2025-11-05 17:26:42 +0800
+last_modified: 2025-11-26 15:46:00 +0800
 ---
 
 # Error Troubleshooting
@@ -25,17 +25,37 @@ Starting in **Chromium-based browsers v142+** (released Oct 28, 2025)—includin
 
 You may experience one or more of the following:
 
-***1. Service installer repeatedly prompted***
+#### **1) Browser repeatedly prompts to download the service**
+The browser asks the user to download/install the Dynamsoft Web TWAIN Service even though it is already installed.
 
-The browser prompts you to download/install the service even though it is already installed.
 ![DWT_installer.png](/assets/imgs/DWT_installer.png)
 
-***2. Initialization succeeds, but scan/load shows blank images***
+#### **2) Initialization succeeds, but scanning / loading returns blank**
+Initialization appears successful, but scanned or loaded images are blank.
 
-The browser console (F12 → Console) shows a CORS rejection similar to:
+The browser console (F12 → Console) may show a CORS denial similar to:
+
 ```shell
-Access to fetch at 'https://127.0.0.1:18623/fa/VersionInfo?ts=1761893667670' from origin 'https://your-domain.com' has been blocked by CORS policy: Permission was denied for this request to access the `unknown` address space.
+Access to fetch at 'https://127.0.0.1:18623/fa/VersionInfo?ts=1761893667670'
+from origin 'https://your-domain.com' has been blocked by CORS policy:
+Permission was denied for this request to access the `unknown` address space.
 ```
+
+---
+
+#### Version-Specific Behavior
+
+The observed behavior depends on Chromium browser version and Dynamic Web TWAIN (DWT) version:
+
+| Browser Version   | DWT Version      | Resulting Symptom           |
+|-------------------|------------------|-----------------------------|
+| Chromium 142      | < 18.5.0         | Download Prompt             |
+| Chromium 142      | ≥ 18.5.0         | Blank Images after Scanning |
+| Chromium 145+ (*) | Any              | Download Prompt             |
+
+> (*) **Chromium 145, which can also block websocket, has not been officially released.**  
+> Behavior is based on pre-release testing and may change once the final release becomes available.
+> Edge 143 and Firefox Nightly will have local network permission control as well.
 
 ### Root Cause
 
@@ -67,27 +87,85 @@ Please refer to:
 
 ***3. Developer Notes***
 
-**a) Check Permission Programmatically**
-
-```javascript
-let status = await navigator.permissions.query({ name: "local-network-access" });
-console.log(status.state);
-```
-
-If not granted, guide users to:
-
-Chrome → Settings → Privacy and Security → Site Settings → Local network access
-
-**b) If Running Inside an `iframe`**
+**a) If Running Inside an `iframe`**
 
 > [!IMPORTANT]
-> If your site is embedded in an iframe, you MUST explicitly allow local-network access.
+> If Dynamic Web TWAIN is running inside an iframe from a different origin (cross-origin), you must explicitly grant local-network access in the iframe.
+> If the iframe is same-origin, no additional configuration is required.
 
-Please explicitly allow `local-network-access` in the attributes of the iframe:
+To enable access, specify the `allow` attribute.
+For security reasons, it is recommended to allow only the necessary origin rather than using a wildcard.
+
 ```html
-<iframe src="..." allow="local-network-access *"></iframe>
+<!-- Recommended: restrict to specific origin -->
+<iframe src="..." allow="local-network-access your-domain.com"></iframe>
+
+<!-- Not recommended: wildcard -->
+<!-- <iframe src="..." allow="local-network-access *"></iframe> -->
 ```
+
+**b) (Optional Enhancement) Permission Check for Improved UX**
+
+You can optionally query Local Network Access permission at runtime.
+This isn’t required, but implementing a check can help you proactively notify users and provide clearer guidance if permission is missing.
+```javascript
+// Before initializing Dynamsoft WebTWAIN (DWT), you can remind users
+// that Chrome may ask for Local Network Access permission.
+(async () => {
+  try {
+    const result = await navigator.permissions.query({ name: "local-network-access" });
+    console.log(`LNA permission state: ${result.state}`);
+ 
+    const state = result.state; // 'denied', 'prompt', 'granted'
+ 
+    if (state === "denied") {
+      const currentSite = encodeURIComponent(window.location.origin);
+      const settingsUrl = `chrome://settings/content/siteDetails?site=${currentSite}`;
+      console.log(`Local network access is currently denied.\n\nPlease go to:\n${settingsUrl}\nand enable 'Local network access' permission for this site.`);
+      // Optionally show a UI guide or help link here.
+    } else if (state === "prompt") {
+      alert("To connect with the local scanning service, Chrome will ask for 'Local network access' permission.\n\nPlease click 'Allow' when prompted.");
+      // Proceed to init DWT after this message. 
+      // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
+    } else if (state === "granted") {
+      console.log("Local network access already granted.");
+      // Initialize DWT or proceed directly.
+      // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
+    } else {
+      console.log("Unexpected LNA state:", state);
+    }
+ 
+  } catch (e) {
+    console.log("This browser does not support Chromium LNA Permissions API yet.");
+    // Fallback: directly initialize DWT
+    // Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
+  }
+})();
+```
+If the permission is not granted, consider displaying a user-friendly message directing them to:
+
+> Chrome → Settings → Privacy and Security → Site Settings → Local network access
+
+This approach provides a more polished user experience, especially during onboarding or troubleshooting.
 
 ### Roadmap
 
 Dynamsoft plans to add a feature that automatically detects local service connectivity and permission status. If the connection is blocked, users will be prompted with a message and directed to this FAQ page.
+
+Here are the details:
+
+* When local network access is blocked, prompt the user with the following dialog:
+
+   ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
+
+* Add a sentence about the permission in the service installation dialog, since we cannot determine whether the connection failure is due to the service not being installed or the access being blocked.
+
+   ![prompt blocked](/assets/imgs/local-network-access/service-installation-dialog.png)
+
+    Clicking "Guide" will open the dialog shown above.
+
+This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](mailto://support@dynamsoft.com).
+
+## Other Causes
+
+There are other causes of service not being connected. You can find them in [another FAQ](/_articles/faq/service-prompting-to-install-repeatedly.md).

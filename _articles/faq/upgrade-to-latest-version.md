@@ -22,7 +22,7 @@ Please refer to the upgrade guide and the release notes below to update your app
 
 [Dynamic Web TWAIN Development - Upgrade Guide](/_articles/indepth/development/upgrade.md){:target="_blank"}
 
-[Dynamic Web TWAIN Schedule - Stable Release](/_articles/info/schedule/stable.md){:target="_blank"}
+[Dynamic Web TWAIN Schedule - Stable Release](/_articles/info/schedule/Stable.md){:target="_blank"}
 
 Once you are ready to upgrade, please send an email to <a href="mailto:sales@dynamsoft.com">sales@dynamsoft.com</a> requesting the upgrade be done.
 
