@@ -809,6 +809,8 @@ DeviceFriendlyName: string;
 
 If enabled, the library will use HTTP to communicate with the service. The host must be `localhost` or `127.0.0.1`. The default value is `false`.
 
+It works on FireFox and Chromium-based browsers. Internet Explorer and Safari are not supported.
+
 **Syntax**
 
 ```typescript
