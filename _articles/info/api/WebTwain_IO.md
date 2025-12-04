@@ -3630,6 +3630,9 @@ DWTObject.ShowFileDialog(
 
 ## Print()
 
+> [!NOTE]
+> This API has been deprecated as of release 19.3. Please use the [`PrintEX()`](#printex) function.
+
 Export all image data in the buffer to a new browser window and use the browser's built-in print feature to print the image(s).
 
 **Syntax**
