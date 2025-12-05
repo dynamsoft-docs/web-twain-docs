@@ -192,7 +192,7 @@ After recognition, we can save the the OCR results as a PDF file. It will add an
 
 ```js
 let indicesOfAll = DWTObject.SelectAllImages();
-await DWTObject.Addon.OCRKit.SaveToPath(indicesOfAll,Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_WITH_EXTRA_TEXTLAYER);
+await DWTObject.Addon.OCRKit.SaveToPath(indicesOfAll,Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
 ```
 
 APIs used:
@@ -416,9 +416,9 @@ Here is the complete code of the demo.
       try {
         let format = document.getElementById('outputFormat').value;
         if(format === "extralayer"){
-          await DWTObject.Addon.OCRKit.SaveToPath(DWTObject.SelectAllImages(),Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_WITH_EXTRA_TEXTLAYER);
+          await DWTObject.Addon.OCRKit.SaveToPath(DWTObject.SelectAllImages(),Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
         }else{
-          await DWTObject.Addon.OCRKit.SaveToPath(DWTObject.SelectAllImages(),Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_PLAIN_TEXT);
+          await DWTObject.Addon.OCRKit.SaveToPath(DWTObject.SelectAllImages(),Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_PLAIN_TEXT,"output.pdf");
         }  
       } catch (error) {
         alert(error.message);
