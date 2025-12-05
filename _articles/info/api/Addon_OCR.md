@@ -114,10 +114,10 @@ Recognize(
       pageOrientation?: EnumDWT_PageOrientation| number,
     },  
     rects?: { 
-      x: number, 
-      y: number, 
-      width: number, 
-      height: number
+      left: number, 
+      top: number, 
+      right: number, 
+      bottom: number
     }[]
   }
 ): Promise<OCRResult>;  
