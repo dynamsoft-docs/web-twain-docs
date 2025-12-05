@@ -182,7 +182,7 @@ Save the result to a local path.
 SaveToPath(
   indices: number[],  
   outputFormat: Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat | number,  
-  path?: string
+  path: string
 ): Promise<boolean>;
 ```
 
@@ -192,7 +192,7 @@ SaveToPath(
 
 `outputFormat`: Please refer to [`EnumDWT_OCRKitOutputFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_ocrkitoutputformat).
 
-`path`: System's absolute path for saving. If not specified, it will show the file saving dialog to select an output path.
+`path`: System's absolute path for saving or the filename. A file saving dialog will appear for confirmation.
 
 **Return Values**
 
