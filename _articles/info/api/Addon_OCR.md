@@ -108,7 +108,7 @@ Recognize the text in one page.
 ```ts
 Recognize( 
   index: number,
-  options: {
+  options?: {
     settings?: { 
       language?: string,
       pageOrientation?: EnumDWT_PageOrientation| number,
