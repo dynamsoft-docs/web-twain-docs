@@ -192,7 +192,7 @@ SaveToPath(
 
 `outputFormat`: Please refer to [`EnumDWT_OCRKitOutputFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_ocrkitoutputformat).
 
-`path`: System's absolute path for saving or the filename. A file saving dialog will appear for confirmation.
+`path`: System's absolute path or filename for saving. A file saving dialog will appear for confirmation.
 
 **Return Values**
 
