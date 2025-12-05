@@ -354,7 +354,7 @@ Here is the complete code of the demo.
       let result = await DWTObject.Addon.OCRKit.DetectPageOrientation(index);
       console.log(result);
       if (result.angle != 0) {
-        DWTObject.Rotate(index,result.angle,true);
+        DWTObject.Rotate(index,-result.angle,true);
       }
     }
 
