@@ -11,7 +11,9 @@ description: Dynamic Web TWAIN SDK Documentation OCR Page
 
 # OCR
 
-Dynamic Web TWAIN provides an OCR add-on to extract text in your scanned images. It uses latest deep learning techniques and has a good accuracy. Read on to learn about how to use it.
+Dynamic Web TWAIN provides an OCR add-on to extract text from scanned images. It utilizes the latest deep learning techniques and delivers high accuracy. All processing occurs locally on end-user devices, with no data uploaded to cloud servers.
+
+Read on to learn about how to use it.
 
 ## Requirements
 
@@ -24,6 +26,8 @@ Dynamic Web TWAIN provides an OCR add-on to extract text in your scanned images.
 ### Step One - Install the OCR Package
 
 Download [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip), unzip it and run `Install.cmd` inside the `ocr` folder as admin to install the OCR package. It will copy the `ocr` folder to the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). (You need to install Dynamic Web TWAIN Service beforehand.)
+
+The `ocr` folder contains the runtime and model files that are required to perform on-device OCR.
 
 ### Step Two - Write a Basic Document Scanning Page
 
