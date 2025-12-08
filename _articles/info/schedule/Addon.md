@@ -309,27 +309,35 @@ Improved the performance by using persistent HTTP connection.
 
 ## OCR
 
-### `1.1.0.0625` (08/13/2019)
+### OCR Kit
+
+#### `11.0.0.1028` (12/08/2025)
+
+A new OCR add-on was added. It is named OCR Kit internally.
+
+### OCR Basic and OCR Pro (Deprecated)
+
+#### `1.1.0.0625` (08/13/2019)
 
 * [OCRPro] Added a feature to read multiple zones in one OCR operation.
 
-### `1.1.0.0625` (06/27/2019)
+#### `1.1.0.0625` (06/27/2019)
 
 * [OCRPro] Fixed a bug where the OCR result may not be readable when the target language is Arabic.
 
-### `1.0.0.425` (11/20/2018)
+#### `1.0.0.425` (11/20/2018)
 
 * [OCRPro] Added a new feature to allow multiple OCR processes to run concurrently on the server side.
 
-### `1.0.0.425` (09/06/2018)
+#### `1.0.0.425` (09/06/2018)
 
 * [OCRPro & OCRB] Added the version number of the library to the name of the library so that different versions of the library can co-exist.
 * [OCRPro & OCRB] Added a method `IsModuleInstalled()` to detect whether the library has been installed on the client machine.
 
-### `1.0.0.425` (07/17/2018)
+#### `1.0.0.425` (07/17/2018)
 
 * [OCRPro] Better mechanism to verify the OCR license.
 
-### `1.0` (07/05/2016)
+#### `1.0` (07/05/2016)
 
 * [OCRPro] Added OCR Professional (OCR Pro) module. The module uses Kofax's OCR engine. It only works on Windows.
