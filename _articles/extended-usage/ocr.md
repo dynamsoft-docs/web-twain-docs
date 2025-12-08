@@ -193,7 +193,7 @@ APIs used:
 
 ### Step Six - Save as PDF
 
-After recognition, we can save the the OCR results as a PDF file. It will add an invisible text layer above the original content so that the text becomes selectable and searchable.
+After recognition, we can save the OCR results and images as a PDF file. It will add an invisible text layer above the original content so that the text becomes selectable and searchable.
 
 ```js
 let indicesOfAll = DWTObject.SelectAllImages();
