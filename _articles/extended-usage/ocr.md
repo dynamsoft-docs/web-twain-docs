@@ -17,12 +17,13 @@ Dynamic Web TWAIN provides an OCR add-on to extract text in your scanned images.
 
 * Windows 10 versions >= 1809 and all versions of Windows 11
 * A license with the OCR module ([30-day trial application](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt))
+* [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip)
 
 ## How to Use
 
 ### Step One - Install the OCR Package
 
-Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it and run `Install.cmd` as admin to install the OCR package. It will copy the `ocr` folder to the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). (You need to install Dynamic Web TWAIN Service beforehand.)
+Download [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip), unzip it and run `Install.cmd` inside the `ocr` folder as admin to install the OCR package. It will copy the `ocr` folder to the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). (You need to install Dynamic Web TWAIN Service beforehand.)
 
 ### Step Two - Write a Basic Document Scanning Page
 
@@ -105,12 +106,12 @@ PS: You can find where the resources files are in this [FAQ](/_articles/faq/what
 
 ### Step Three - Include the Add-on
 
-Reference the add-on with the following code. It is in the [resources files](/_articles/faq/what-are-the-resources-files.md).
+Reference the add-on's JavaScript with the following code. You can find the file in `DynamicWebTWAINOCRResources.zip`.
 
-> If you are using the [dwt package](https://www.npmjs.com/package/dwt), the OCR is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
+> If you are using the [npm package](https://www.npmjs.com/package/dwt), the OCR is already included in the main JavaScript file (`dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs`), which means you can skip this step.
 
-``` html
-<script src="Resources/addon/dynamsoft.webtwain.addon.ocrkit.js"> </script>
+```html
+<script src="dynamsoft.webtwain.addon.ocrkit.js"></script>
 ```
 
 Then, you can run the following to check if it is installed correctly:
@@ -210,7 +211,7 @@ Here is the complete code of the demo.
   <title>Dynamic Web TWAIN - OCR Demo</title>
   <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
   <script src="Resources/dynamsoft.webtwain.config.js"></script>
-  <script src="Resources/addon/dynamsoft.webtwain.addon.ocrkit.js"></script>
+  <script src="dynamsoft.webtwain.addon.ocrkit.js"></script>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
   <style>
     #dwtcontrolContainer {
