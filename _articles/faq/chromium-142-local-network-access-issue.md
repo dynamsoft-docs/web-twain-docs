@@ -158,11 +158,15 @@ Here are the details:
 
    ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
 
+   *Dialog 1*
+
 * Add a sentence about the permission in the service installation dialog, since we cannot determine whether the connection failure is due to the service not being installed or the access being blocked.
 
-   ![prompt blocked](/assets/imgs/local-network-access/service-installation-dialog.png)
+   ![dialog installation](/assets/imgs/local-network-access/service-installation-dialog.png)
 
-    Clicking "Guide" will open the dialog shown above.
+   *Dialog 2*
+
+    Clicking "Guide" will open dialog 1, prompting the user to enable the permission.
 
 This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](mailto://support@dynamsoft.com).
 
