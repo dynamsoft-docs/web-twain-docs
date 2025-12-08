@@ -163,10 +163,10 @@ Recognize the text in one image and print it in a `pre` element.
 <script>
 async function RecognizeOnePage(index){
   let result = await DWTObject.Addon.OCRKit.Recognize(index);
-  PrintPrettyResult(result);
+  PrettyPrintResult(result);
 }
 
-function PrintPrettyResult(result){
+function PrettyPrintResult(result){
   let prettyResult = "";
   result.blocks.forEach(block => {
     block.lines.forEach(line => {
@@ -295,7 +295,7 @@ Here is the complete code of the demo.
           if (DWTObject.CurrentImageIndexInBuffer != -1) {
             let imageID = DWTObject.IndexToImageID(DWTObject.CurrentImageIndexInBuffer);
             if (imageID in storedOCRResults) {
-              PrintPrettyResult(storedOCRResults[imageID]);
+              PrettyPrintResult(storedOCRResults[imageID]);
             } else {
               document.getElementById("result").innerText = "";
             }
@@ -380,10 +380,10 @@ Here is the complete code of the demo.
       let result = await DWTObject.Addon.OCRKit.Recognize(index,{settings:{language:language}});
       console.log(result);
       storedOCRResults[result.imageID] = result;
-      PrintPrettyResult(result);
+      PrettyPrintResult(result);
     }
 
-    function PrintPrettyResult(result){
+    function PrettyPrintResult(result){
       let prettyResult = "";
       result.blocks.forEach(block => {
         block.lines.forEach(line => {
