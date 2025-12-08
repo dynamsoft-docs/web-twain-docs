@@ -463,4 +463,9 @@ The OCR add-on supports two kinds of searchable PDF output.
 * Plain-text PDF, which will only keep a text layer of the OCRed text for each page.
 * Extra-text-layer PDF, which will add an extra invisible text layer of the OCRed text above each page.
 
+### What are OCR Basic and OCR Pro?
+
+OCR Basic and OCR Pro are previous OCR add-ons, which are deprecated in v16.2. But they are still usable in the latest version.
+
+To differentiate from previous versions, the new OCR uses `OCRKit` as the namespace.
 
