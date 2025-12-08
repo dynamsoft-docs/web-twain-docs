@@ -144,7 +144,7 @@ This is an optional step. If the scanned document is rotated, we can detect its 
 async function CorrectOrientationForOne(index){
   let result = await DWTObject.Addon.OCRKit.DetectPageOrientation(index);
   if (result.angle != 0) {
-    DWTObject.Rotate(index,result.angle,true);
+    DWTObject.Rotate(index,-result.angle,true);
   }
 }
 ```
