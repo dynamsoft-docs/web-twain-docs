@@ -3,11 +3,11 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Why Do I Get a "File is Damaged and Can’t Be Opened" Error When Using the Dynamic Web TWAIN on macOS?
-keywords: Dynamic Web TWAIN, macos, Damaged
+keywords: Dynamic Web TWAIN, macos, Damaged, can't be opened
 breadcrumbText: Why Do I Get a "File is Damaged and Can’t Be Opened" Error When Using the Dynamic Web TWAIN on macOS?
 description: Why Do I Get a "File is Damaged and Can’t Be Opened" Error When Using the Dynamic Web TWAIN on macOS?
-date: 2025-12-05 07:56:47 +0800
-last_modified: 2025-12-05 07:56:47 +0800
+date: 2025-12-08 07:56:47 +0800
+last_modified: 2025-12-08 07:56:47 +0800
 ---
 
 # Why Do I Get a "File is Damaged and Can’t Be Opened" Error When Using the Dynamic Web TWAIN on macOS?
@@ -16,11 +16,13 @@ last_modified: 2025-12-05 07:56:47 +0800
 
 When attempt to use the scanner on macOS, an error message states “<xxx.ds> is damaged and can’t be opened”.
 
+![ds-is-damaged](/assets/imgs/ds-is-damaged.png)
+
 ### Reason
 
-This error arises from macOS Gatekeeper, a built-in security feature that blocks unsigned files. The driver lacks a valid Apple developer signature, so macOS tags it with a “quarantine” attribute and prevents execution.
+This issue is caused by macOS Gatekeeper, a security feature that blocks applications that are unsigned or not notarized when the file carries a quarantine attribute. The file itself is not damaged but Gatekeeper prevents it from running.
 
-The error may also show an old download date (e.g., “Safari downloaded this file on June xx, xxxx”) even if the file is new. This occurs because macOS retains the “quarantine” metadata when the file is transferred from:
+The error message may also show an outdated download time, for example “Safari downloaded this file on `June 18, 2019`”, even on a new computer. This happens because macOS preserves the quarantine metadata when the file has been copied from sources such as:
 
 - An old computer
 - A USB drive
@@ -31,10 +33,14 @@ The error may also show an old download date (e.g., “Safari downloaded this fi
 
 This issue is not related to our product but stems from the unsigned driver.
 
-- Temporary Fix: Click “OK” on the error dialog. The driver often works normally afterward, as macOS may relax enforcement after initial blocking.
+- Temporary Fix: Click “OK” on the error dialog. The driver often works normally afterward.
+
 - Permanent Fix (if error persists): Remove the “quarantine” attribute via Terminal:
     - Open Terminal (/Applications/Utilities).
-    - Run this command (replace /path/to/driver with the actual file path, e.g., /Applications/YourDriver.app):
+    - Run this command:
     ```bash
-    sudo xattr -rd com.apple.quarantine /path/to/driver  
+    sudo xattr -rd com.apple.quarantine /Applications/{YourDriver}.app  
     ```
+
+<div class="blockquote-warning"></div>
+> Only disable checks for trusted files. Verify the driver’s source is safe before proceeding.
