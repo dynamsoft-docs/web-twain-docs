@@ -29,11 +29,11 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Improved the performance of [`RemoveAllSelectedImages()`](/_articles/info/api/WebTwain_Buffer.md#removeallselectedimages) by triggering [`OnBufferChanged`](/_articles/info/api/WebTwain_Buffer.md#onbufferchanged) and [`OnBitmapChanged`](/_articles/info/api/WebTwain_Buffer.md#onbitmapchanged) events only once.
 * Improved performance for the viewer loading documents with thousands of pages.
+* Improved image clarity in the 1x1 viewer mode.
 * Updated third-party libraries to enhance security.
 
 ### Bug Fixes
 
-* Fixed the blurry image issue when the viewer's mode is set to 1x1.
 * Fixed a license issue of RemoteScan.
 * Fixed the auto start of the service on Linux not using GUI
 
