@@ -131,4 +131,26 @@ DWTObject.Addon.PDF.SetReaderOptions({
 
 Then, it will keep the unmodified pages in the PDF file instead of converting them to images when saving a new PDF file with the scanned documents.
 
+## PDF/A
 
+PDF/A is a version of PDF specialized for use in the archiving and long-term preservation of electronic documents. For example, it does not allow using external fonts, which will change the appearance if opening it on another device.
+
+Starting from Web TWAIN v19.3, it can save PDF as PDF/A-1b or PDF/A-2b by specifying `pdfaVersion` in [`PDFWSettings`](/_articles/info/api/interfaces.md#pdfwsettings).
+
+Here is the code to do this:
+
+```js
+DWTObject.Addon.PDF.Write.Setup({
+    pdfaVersion:"pdf/a-1b"
+});
+DWTObject.IfShowFileDialog = true;
+DWTObject.SaveAllAsPDF(' ', function() {}, function() {})
+```
+
+Both PDF/A-1b and PDF/A-2b are basic conformation level standards. PDF/A-1b is based on PDF version 1.4 and PDF/A-2b is based on PDF version 1.7. PDF/A-2b has the following new features compared to PDF/A-1b:
+
+* JPEG 2000 image compression.
+* support for transparency effects and layers.
+* embedding of OpenType fonts.
+* provisions for digital signatures in accordance with the PDF Advanced Electronic Signatures – PAdES standard.
+* the option of embedding PDF/A files to facilitate archiving of sets of documents with a single file.
