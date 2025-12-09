@@ -139,7 +139,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2619 | Only single index selection is allowed when enumImageFormatType is set to url. |
 |-2621 | Dynamsoft.DWT.Containers was not set. |
 |-2622 | Please do not set enumImageType to "IT_MULTIPAGE_PDF", "IT_MULTIPAGE_TIF" or "IT_ALL". |
-|-2701 | The OCR feature is only supported on x64 versions of Windows.  |
+|-2701 | The OCR Kit feature is only supported on x64 versions of Windows.  |
 |-2800 | Please make sure the Dynamic Web TWAIN Service has been installed. |
 |-2801 | Invalid response data was returned from the Dynamic Web TWAIN Service. |
 |-2802 | The file dynamsoft.webtwain.config.js timed out while loading. |
