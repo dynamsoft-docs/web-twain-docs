@@ -24,9 +24,9 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 Yes, the Dynamic Web TWAIN Service installer is a `.msi` file which requires administrator privileges to install as the install target is `C:\Program Files (x86)`. Once the Dynamic Web TWAIN Service is installed with admin privileges, every user on that machine can has access to the Dynamic Web TWAIN Service. 
 
-If your organization does not allow end users to have admin privileges, you can contact [Dynamsoft Support](/_articles/about/getsupport.md) to get a special "Personal Installer" that does not require admin privileges.
+If your organization does not allow end users to have admin privileges, you can contact [Dynamsoft Support](/_articles/about/getsupport.md) to get a special "User Installer" that does not require admin privileges.
 
-The "Personal Installer", will install to the user's `C:\Users\{UserName}\AppData\Roaming\` folder. Please be aware that only one user per machine is able to have the service installed via this method. The service cannot be installed to multiple user profiles, and only the user that installs the Services in this manner will have access to the Dynamic Web TWAIN Service.
+The "User Installer", will install to the user's `C:\Users\{UserName}\AppData\Roaming\` folder. Please be aware that only one user per machine is able to have the service installed via this method. The service cannot be installed to multiple user profiles, and only the user that installs the Services in this manner will have access to the Dynamic Web TWAIN Service.
 
 <div class="multi-panel-end"></div>
 
@@ -34,9 +34,9 @@ The "Personal Installer", will install to the user's `C:\Users\{UserName}\AppDat
 
 Yes, the Dynamsoft Service installer is a `.msi` file which requires administrator privileges to install as the install target is `C:\Windows\SysWOW64\`. Once the Dynamsoft Service is installed with admin privileges, every user on that machine can has access to the Dynamsoft Service. 
 
-If your organization does not allow end users to have admin privileges, you can contact [Dynamsoft Support](/_articles/about/getsupport.md) to get a special "Personal Installer" that does not require admin privileges.
+If your organization does not allow end users to have admin privileges, you can contact [Dynamsoft Support](/_articles/about/getsupport.md) to get a special "User Installer" that does not require admin privileges.
 
-The "Personal Installer", will install to the user's `C:\Users\{UserName}\AppData\Roaming\` folder. Please be aware that only one user per machine is able to have the service installed via this method. The service cannot be installed to multiple user profiles, and only the user that installs the Services in this manner will have access to the Dynamsoft Service.
+The "User Installer", will install to the user's `C:\Users\{UserName}\AppData\Roaming\` folder. Please be aware that only one user per machine is able to have the service installed via this method. The service cannot be installed to multiple user profiles, and only the user that installs the Services in this manner will have access to the Dynamsoft Service.
 
 <div class="multi-panel-end"></div>
 
