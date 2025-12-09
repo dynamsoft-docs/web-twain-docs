@@ -26,7 +26,9 @@ Yes, the Dynamic Web TWAIN Service installer is a `.msi` file which requires adm
 
 If your organization does not allow end users to have admin privileges, you can contact [Dynamsoft Support](/_articles/about/getsupport.md) to get a special "User Installer" that does not require admin privileges.
 
-The "User Installer", will install to the user's `C:\Users\{UserName}\AppData\Roaming\` folder. Please be aware that only one user per machine is able to have the service installed via this method. The service cannot be installed to multiple user profiles, and only the user that installs the Services in this manner will have access to the Dynamic Web TWAIN Service.
+The "User Installer", will install to the user's `C:\Users\{UserName}\AppData\Roaming\` folder. 
+
+For Web TWAIN versions lower than 19.3, please be aware that only one user per machine is able to have the service installed via this method. The service cannot be installed to multiple user profiles, and only the user that installs the Services in this manner will have access to the Dynamic Web TWAIN Service.
 
 <div class="multi-panel-end"></div>
 
