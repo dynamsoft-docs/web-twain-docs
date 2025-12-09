@@ -15,7 +15,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### New Features
 
 * Added a new [OCR add-on](/_articles/extended-usage/ocr.md), which uses latest AI technology.
-* Added support for writing PDF/A files.
+* Added support for writing [PDF/A](/_articles/extended-usage/pdf-processing.md#pdfa) files.
 
 ### Other Changes
 
