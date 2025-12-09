@@ -42,6 +42,7 @@ DWT add-ons provide additional features:
 * [Webcam add-on](/_articles/info/api/Addon_Webcam.md) to access cameras in the browser.
 * [Barcode Reader add-on](/_articles/info/api/Addon_BarcodeReader.md) to read barcodes in documents.
 * [PDF Rasterizer add-on](/_articles/info/api/Addon_PDF.md) to load external PDFs.
+* [OCR add-on](/_articles/info/api/Addon_OCR.md) to extract text, correct document orientation and create searchable PDFs.
 
 ## Requirements
 
