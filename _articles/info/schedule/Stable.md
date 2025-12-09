@@ -35,8 +35,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Bug Fixes
 
 * Fixed a license issue of RemoteScan.
-* Fixed the auto start of the service on Linux not using GUI
-
+* Fixed the auto start of the service on Linux not using GUI.
+* Fixed the `areaIndex` of `rects` returned in the [`pageAreaSelected`](/_articles/info/api/WebTwain_Viewer.md#pageareaselected) event.
 
 ## 19.2 (08/26/2025) 
 
