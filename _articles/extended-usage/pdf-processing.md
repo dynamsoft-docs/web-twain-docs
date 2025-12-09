@@ -117,3 +117,18 @@ DWTObject.SaveAllAsPDF(' ', function() {}, function() {})
 When you set a password prior to generating a PDF file, that password becomes necessary each time you attempt to open the file thereafter. The password does not restrict the usage permissions of the PDF. The encryption algorithm utilized is AES256, ensuring robust security measures.
 
 Note: Only the core module license is required to use this method.
+
+## Append Pages to a PDF
+
+If you need to append a scanned document to a PDF file and keep the rest pages unmodified. You can use the following code to read a PDF file by setting the `preserveUnmodifiedOnSave` property to `true`.
+
+```js
+DWTObject.Addon.PDF.SetReaderOptions({
+  convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
+  preserveUnmodifiedOnSave: true, //only available for v19.0+
+});
+```
+
+Then, it will keep the unmodified pages in the PDF file instead of converting them to images when saving a new PDF file with the scanned documents.
+
+
