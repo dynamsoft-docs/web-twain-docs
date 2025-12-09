@@ -159,6 +159,7 @@ Updated the names of headers for the REST API.
 - Fixed an issue where the file selection dialog fails to load files from manually entered file names 
 - Fixed an issue where right clicking on a selection of multiple images in the viewer de-selects all but one image. 
 - Fixed an issue where the print API prints two images on the same page under certain conditions. 
+- Fixed the order of selected files using [`SelectedImageIndices`](/_articles/info/api/WebTwain_Buffer.md#selectedimagesindices).
 
 
 ## 18.5 (05/14/2024)
