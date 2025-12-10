@@ -55,4 +55,4 @@ Rasterization may occur when using any of the following APIs (including drag-and
 Previous versions of Dynamic Web TWAIN did **not** support exporting PDF/A files.
 As of **19.3**, you can now:
 - Load PDF/A files (with or without the PDF Rasterizer, depending on content), and
-- Generate PDF/A files using the PDF Add-on.
+- Generate PDF/A files.
