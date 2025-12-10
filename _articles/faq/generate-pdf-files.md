@@ -43,7 +43,7 @@ For most use cases, we recommend using **`pdf/a-2b`**.
 It offers better compression support, fewer limitations, and higher compatibility with modern PDFs while still meeting archival requirements.
 
 ### Licensing Requirements
-Dynamic Web TWAIN does not require any add-on license to **export** or generate PDF or PDF/A files. However, PDF-Rasterizer Addon would be required when **loading** a PDF/PDF-A file that contains **text or vector graphics**.
+Dynamic Web TWAIN does not require any add-on license to **export** or generate PDF or PDF/A files. However, PDF Rasterizer add-on would be required when **loading** a PDF/PDF-A file that contains **text or vector graphics**.
 
 You can programmatically check whether a file needs rasterization using [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired):
 
