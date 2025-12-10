@@ -1680,7 +1680,7 @@ interface Base64Result {
 
 ```ts
 interface PrintSettings {     
-  mode: 'browser' | 'os'; 
+  mode?: string; // "os" or "browser"
   osPrintOptions?: { showPrintDialog?: boolean; } 
 } 
 ```
