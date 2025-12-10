@@ -45,7 +45,7 @@ It offers better compression support, fewer limitations, and higher compatibilit
 ### Licensing Requirements
 Dynamic Web TWAIN does not require any add-on license to **export** or generate PDF or PDF/A files. However, PDF-Rasterizer Addon would be required when **loading** a PDF/PDF-A file that contains **text or vector graphics**.
 
-You can programmatically check whether a file needs rasterization using [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.html#israsterizationrequired):
+You can programmatically check whether a file needs rasterization using [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired):
 
 ```javascript
 DWTObject.Addon.PDF.IsRasterizationRequired(path); // returns true or false
@@ -61,7 +61,7 @@ DWTObject.Addon.PDF.IsRasterizationRequired(path); // returns true or false
 
 ### How to Export as PDF/A
 
-Configure PDF output using [`Write.Setup()`](/_articles/info/api/Addon_PDF.html#writesetup) before calling any save function.
+Configure PDF output using [`Write.Setup()`](/_articles/info/api/Addon_PDF.md#writesetup) before calling any save function.
 
 ```javascript
 DWTObject.Addon.PDF.Write.Setup({
@@ -72,10 +72,10 @@ DWTObject.Addon.PDF.Write.Setup({
 
 After configuring `pdfaVersion`, all APIs that output PDF files will automatically generate PDF/A-compliant PDFs. This includes, but is not limited to:
 
-- **Save APIs** like: [`SaveAsPDF()`](/_articles/info/api/WebTwain_IO.html#saveaspdf), [`SaveSelectedImagesAsMultiPagePDF()`](/_articles/info/api/WebTwain_IO.html#saveselectedimagesasmultipagepdf), [`SaveAllAsPDF()`](/_articles/info/api/WebTwain_IO.html#saveallaspdf)
+- **Save APIs** like: [`SaveAsPDF()`](/_articles/info/api/WebTwain_IO.md#saveaspdf), [`SaveSelectedImagesAsMultiPagePDF()`](/_articles/info/api/WebTwain_IO.md#saveselectedimagesasmultipagepdf), [`SaveAllAsPDF()`](/_articles/info/api/WebTwain_IO.md#saveallaspdf)
 
-- **Conversion APIs** like: [`ConvertToBlob()`](/_articles/info/api/WebTwain_IO.html#converttoblob), [`ConvertToBase64()`](/_articles/info/api/WebTwain_IO.html#converttobase64)
+- **Conversion APIs** like: [`ConvertToBlob()`](/_articles/info/api/WebTwain_IO.md#converttoblob), [`ConvertToBase64()`](/_articles/info/api/WebTwain_IO.md#converttobase64)
 
-- **Upload APIs** like: [`HTTPUpload()`](/_articles/info/api/WebTwain_IO.html#httpupload), [`FTPUpload()`](/_articles/info/api/WebTwain_IO.html#ftpupload), [`httpUploadBlob()`](/_articles/info/api/WebTwain_IO.html#httpuploadblob)
+- **Upload APIs** like: [`HTTPUpload()`](/_articles/info/api/WebTwain_IO.md#httpupload), [`FTPUpload()`](/_articles/info/api/WebTwain_IO.md#ftpupload), [`httpUploadBlob()`](/_articles/info/api/WebTwain_IO.md#httpuploadblob)
 
-- **OCR Output APIs** like: [`SaveToPath()`](/_articles/info/api/Addon_OCR.html#savetopath), [`SaveAsBase64()`](/_articles/info/api/Addon_OCR.html#saveasbase64), [`SaveAsBlob()`](/_articles/info/api/Addon_OCR.html#saveasblob)
+- **OCR Output APIs** like: [`SaveToPath()`](/_articles/info/api/Addon_OCR.md#savetopath), [`SaveAsBase64()`](/_articles/info/api/Addon_OCR.md#saveasbase64), [`SaveAsBlob()`](/_articles/info/api/Addon_OCR.md#saveasblob)
