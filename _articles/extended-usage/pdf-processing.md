@@ -154,3 +154,10 @@ Both PDF/A-1b and PDF/A-2b are basic conformation level standards. PDF/A-1b is b
 * embedding of OpenType fonts.
 * provisions for digital signatures in accordance with the PDF Advanced Electronic Signatures – PAdES standard.
 * the option of embedding PDF/A files to facilitate archiving of sets of documents with a single file.
+
+It is recommended to use PDF/A-2b because of the support for more features.
+
+Related FAQ:
+
+* [How can I generate PDF/A files?](/_articles/faq/generate-pdf-files.md)
+* [How can I load PDF/A files into the Dynamic Web TWAIN SDK?](/_articles/faq/load-pdf-files.md)
