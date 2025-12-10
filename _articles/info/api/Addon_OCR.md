@@ -196,7 +196,7 @@ SaveToPath(
 
 **Return Values**
 
-A `boolean` result indicating the success of the operation.
+Promise of a `boolean` result indicating the success of the operation.
 
 **Availability**
 
@@ -242,7 +242,7 @@ SaveAsBase64(
 
 **Return Values**
 
-A base64 string result.
+Promise of a base64 string result.
 
 **Availability**
 
@@ -277,7 +277,7 @@ Save the result as blob.
 SaveAsBlob(
   indices: number[],  
   outputFormat: Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat | number
-): Promise<blob>;
+): Promise<Blob>;
 ```
 
 **Parameters**
@@ -288,7 +288,7 @@ SaveAsBlob(
 
 **Return Values**
 
-A `blob` result.
+Promise of a `Blob` object.
 
 **Availability**
 
