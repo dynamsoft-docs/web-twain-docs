@@ -102,7 +102,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2337 | The current product key does not include a license for reading DataMatrix barcode, please contact the site administrator |
 |-2338 | The current product key does not support Webcam, please contact the site administrator |
 |-2339 | The current product key does not support pdf rasterizer, please contact the site administrator |
-|-2340 | The license for the module ocr kit is not found or has expired. |
+|-2340 | The license for the module OCR Kit is not found or has expired. |
 |-2342 | The domain of your current site does not match the domain bound in the current product key, please contact the site administrator |
 |-2343 | The current product key does not support your browser, please contact the site administrator |
 |-2344 | The current product key does not support Windows OS, please contact the site administrator |
