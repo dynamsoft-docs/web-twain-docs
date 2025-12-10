@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Addon, separate, license
 breadcrumbText: How can I generate PDF/A files?
 description: How can I generate PDF/A files?
 date: 2021-12-01 01:09:41 +0800
-last_modified: 2025-12-10 15:15:15 +0800
+last_modified: 2025-12-10 16:43:15 +0800
 ---
 
 # Addon
@@ -41,6 +41,15 @@ Although both variants ensure that documents can be reliably displayed in the fu
 **Recommendation:**
 For most use cases, we recommend using **`pdf/a-2b`**.
 It offers better compression support, fewer limitations, and higher compatibility with modern PDFs while still meeting archival requirements.
+
+### Licensing Requirements
+Dynamic Web TWAIN does not require any add-on license to **export** or generate PDF or PDF/A files. However, PDF-Rasterizer Addon would be required when **loading** a PDF/PDF-A file that contains **text or vector graphics**.
+
+You can programmatically check whether a file needs rasterization using [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.html#israsterizationrequired):
+
+```javascript
+DWTObject.Addon.PDF.IsRasterizationRequired(path); // returns true or false
+```
 
 ### Behavior and Defaults
 
