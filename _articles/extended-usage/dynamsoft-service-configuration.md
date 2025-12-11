@@ -41,6 +41,18 @@ Once the installation is done, the users can click the orange sentence 'click he
 
 ![Initialization](/assets/imgs/Initialization-2.png)
 
+### Download Links for the Service Installers
+
+Here is a table of links for the latest version.
+
+| Platform      | Download Link |
+| ------------- | --------------- |
+| Windows       | [Dynamic-Web-TWAIN-Service-Setup.msi](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup.msi)       |
+| macOS         | [Dynamic-Web-TWAIN-Service-Setup.pkg](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup.pkg)        |
+| Linux         | [Dynamic-Web-TWAIN-Service-Setup.deb](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup.deb) <br/> [Dynamic-Web-TWAIN-Service-Setup-arm64.deb](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup-arm64.deb) <br/> [Dynamic-Web-TWAIN-Service-Setup-mips64el.deb](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup-mips64el.deb) <br/> [Dynamic-Web-TWAIN-Service-Setup.rpm](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup.rpm)|
+
+You can find the download links for different versions of service installers on [unpkg](https://app.unpkg.com/dwt/files/dist/dist).
+
 ## Installation Folder
 
 The service is installed in the following folders on different platforms by default.

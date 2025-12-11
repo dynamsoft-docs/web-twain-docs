@@ -21,13 +21,19 @@ Read on to learn about how to use it.
 * A license with the OCR module ([30-day trial application](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt))
 * [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip)
 
+## Online Demo
+
+You can visit the [online demo](https://demo.dynamsoft.com/Samples/dwt/OCR/index.html) to try it.
+
 ## How to Use
 
 ### Step One - Install the OCR Package
 
-Download [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip), unzip it and run `Install.cmd` inside the `DynamicWebTWAINOCRPack.zip` file as admin to install the OCR package. It will copy an `ocr` folder to the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). (You need to install Dynamic Web TWAIN Service beforehand.)
+Download [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip), unzip it and run `Install.cmd` inside the `DynamicWebTWAINOCRPack.zip` file as admin to install the OCR package.
 
-The `ocr` folder contains the runtime and model files that are required to perform on-device OCR.
+It will copy an `ocr` folder to Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). The `ocr` folder contains the runtime and model files that are required to perform on-device OCR.
+
+PS: You need to [install Dynamic Web TWAIN Service](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-of-dynamic-web-twain-service) beforehand.
 
 ### Step Two - Write a Basic Document Scanning Page
 
