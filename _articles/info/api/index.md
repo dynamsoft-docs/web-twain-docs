@@ -36,10 +36,10 @@ breadcrumbText: API Reference
 
 ### Properties
 
-| [`Autoload`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#autoload)       | [`Containers`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#containers)                                 | [`CustomizableDisplayInfo`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#customizabledisplayinfo)           | [`DeviceFriendlyName`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#devicefriendlyname) |
-| [`Host`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#host)               | [`IfAddMD5InUploadHeader`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifaddmd5inuploadheader)         | [`IfConfineMaskWithinTheViewer`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifconfinemaskwithintheviewer) | [`JSVersion`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#jsversion)                   |
-| [`ProductKey`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#productkey)   | [`ResourcesPath`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#resourcespath)                           | [`ServiceInstallerLocation`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#serviceinstallerlocation)         | [`UseDefaultViewer`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#usedefaultviewer)     |
-| [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifalwaysfocusonpopupwindow) |                                                                                                             |
+| [`AutoLoad`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#autoload) | [`Containers`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#containers) | [`CustomizableDisplayInfo`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#customizabledisplayinfo) | [`DeviceFriendlyName`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#devicefriendlyname) |
+| [`EnableLocalNetworkMixedContent`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#enablelocalnetworkmixedcontent) | [`Host`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#host) | [`IfAddMD5InUploadHeader`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifconfinemaskwithintheviewer) |
+| [`JSVersion`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#jsversion) | [`ProductKey`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#productkey) | [`ResourcesPath`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#resourcespath) | [`ServiceInstallerLocation`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#serviceinstallerlocation) |
+| [`UseDefaultViewer`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#usedefaultviewer) | [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifalwaysfocusonpopupwindow) | |
 
 ### Events
 
@@ -569,6 +569,13 @@ breadcrumbText: API Reference
 | [`GetConvertMode()`](/_articles/info/api/Addon_PDF.md#getconvertmode)     | [`IsModuleInstalled()`](/_articles/info/api/Addon_PDF.md#ismoduleinstalled) | [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired) | [`IsTextBasedPDF()`](/_articles/info/api/Addon_PDF.md#istextbasedpdf)     | [`SetConvertMode()`](/_articles/info/api/Addon_PDF.md#setconvertmode) |
 | [`SetPassword()`](/_articles/info/api/Addon_PDF.md#setpassword)           | [`SetResolution()`](/_articles/info/api/Addon_PDF.md#setresolution)         | [`Write.Setup()`](/_articles/info/api/Addon_PDF.md#writesetup)                          | [`GetReaderOptions()`](/_articles/info/api/Addon_PDF.md#getreaderoptions) |
 | [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions) |
+
+## OCR
+
+### Methods
+
+| [`GetInstalledOCRInfo()`](/_articles/info/api/Addon_OCR.md#getinstalledocrinfo) | [`DetectPageOrientation()`](/_articles/info/api/Addon_OCR.md#detectpageorientation) | [`Recognize()`](/_articles/info/api/Addon_OCR.md#recognize) | [`SaveToPath()`](/_articles/info/api/Addon_OCR.md#savetopath) |
+| [`SaveAsBase64()`](/_articles/info/api/Addon_OCR.md#saveasbase64) | [`SaveAsBlob()`](/_articles/info/api/Addon_OCR.md#saveasblob) |
 
 <!-- ## Camera
 

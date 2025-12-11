@@ -36,6 +36,10 @@ The prompts are one-time, once you accept the "risk", the software will install 
 
 The recommended fix is to patch the operating system, you can find the patch [here](http://www.catalog.update.microsoft.com/search.aspx?q=kb4474419). -->
 
+## 19.3
+
+Deprecated Method: DWTObject.Print
+
 ## 19.0
 
 ### Global

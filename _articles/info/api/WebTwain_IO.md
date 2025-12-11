@@ -3630,6 +3630,9 @@ DWTObject.ShowFileDialog(
 
 ## Print()
 
+> [!NOTE]
+> This API has been deprecated as of release 19.3. Please use the [`PrintEX()`](#printex) function.
+
 Export all image data in the buffer to a new browser window and use the browser's built-in print feature to print the image(s).
 
 **Syntax**
@@ -3673,12 +3676,14 @@ Print selected image(s).
 **Syntax**
 
 ```javascript
-PrintEx(indices: number[]): boolean;
+PrintEx(indices: number[], settings?: PrintSettings): boolean;
 ```
 
 **Parameters**
 
 `indices`: Specify the image.
+
+`settings`: Settings for printing. Refer to [`PrintSettings`](/_articles/info/api/interfaces.md#printsettings). (Only available since v19.3.)
 
 **Availability**
 

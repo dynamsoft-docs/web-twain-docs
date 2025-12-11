@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Documentation, General
 breadcrumbText: What Are The Resources Files
 description: What are the Resources files? 
 date: 2021-07-14 18:53:19 +0800
-last_modified: 2023-06-28 16:10:36 +0800
+last_modified: 2025-12-02 10:35:36 +0800
 ---
 
 # General
@@ -16,7 +16,13 @@ last_modified: 2023-06-28 16:10:36 +0800
 
 Resources files help you include Dynamic Web TWAIN in your application. The following shows the purpose of these files.
 
-> *Resources* is the default name of the folder that contain these files. It can be changed. For example, in the <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN" target="_blank">DWT package</a>, it's called *dist*.
+You can typically find the `Resources` folder inside the following locations depending on your platform after using the [installer](https://www.dynamsoft.com/web-twain/downloads/):
+
+- Windows: `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {Version Number}\`
+- Linux: Within the decompressed file `Dynamic Web TWAIN SDK {Version Number}/`
+- macOS: `/Applications/Dynamsoft/Dynamic Web TWAIN SDK {Version Number}/`
+
+> *Resources* is the default name of the folder that contain these files. In the <a href="https://github.com/Dynamsoft/Dynamic-Web-TWAIN" target="_blank">DWT npm package</a>, it's called *dist*.
 
 <div class="multi-panel-switching-prefix"></div>
 

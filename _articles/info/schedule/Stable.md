@@ -10,6 +10,34 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.3 (12/11/2025) 
+
+### New Features
+
+* Added a new [OCR add-on](/_articles/extended-usage/ocr.md), which uses latest AI technology.
+* Added support for writing [PDF/A](/_articles/extended-usage/pdf-processing.md#pdfa) files.
+
+### Other Changes
+
+* Added checking of the [local network access permission](/_articles/faq/chromium-142-local-network-access-issue.md) introduced in Chrome 142.
+* Added extra settings for [`PrintEx()`](/_articles/info/api/WebTwain_IO.md#printex).
+* Added prevention of service installation on macOS versions lower than 10.15.
+* Added support for service installation for multiple users (Windows only).
+* Added an [`EnableLocalNetworkMixedContent`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#enablelocalnetworkmixedcontent) property.
+
+### Improvements
+
+* Improved the performance of [`RemoveAllSelectedImages()`](/_articles/info/api/WebTwain_Buffer.md#removeallselectedimages) by triggering [`OnBufferChanged`](/_articles/info/api/WebTwain_Buffer.md#onbufferchanged) and [`OnBitmapChanged`](/_articles/info/api/WebTwain_Buffer.md#onbitmapchanged) events only once.
+* Improved performance for the viewer loading documents with thousands of pages.
+* Improved image clarity for the viewer.
+* Updated third-party libraries to enhance security.
+
+### Bug Fixes
+
+* Fixed a license issue of RemoteScan.
+* Fixed the auto start of the service on Linux not using GUI.
+* Fixed the `areaIndex` of `rects` returned in the [`pageAreaSelected`](/_articles/info/api/WebTwain_Viewer.md#pageareaselected) event.
+
 ## 19.2 (08/26/2025) 
 
 ### Highlights
@@ -131,6 +159,7 @@ Updated the names of headers for the REST API.
 - Fixed an issue where the file selection dialog fails to load files from manually entered file names 
 - Fixed an issue where right clicking on a selection of multiple images in the viewer de-selects all but one image. 
 - Fixed an issue where the print API prints two images on the same page under certain conditions. 
+- Fixed the order of selected files using [`SelectedImageIndices`](/_articles/info/api/WebTwain_Buffer.md#selectedimagesindices).
 
 
 ## 18.5 (05/14/2024)

@@ -1676,7 +1676,62 @@ interface Base64Result {
 }
 ```
 
+### PrintSettings
 
+```ts
+interface PrintSettings {     
+  mode?: string; // "os" or "browser"
+  osPrintOptions?: { showPrintDialog?: boolean; } 
+} 
+```
+
+Usage note:
+
+Set the `mode` parameter to choose the printing API:
+
+* `os`: Uses the operating system's API. Currently, only Windows is supported.
+* `browser`: Uses the browser's API.
+
+There are extra options for the `os` mode. You can set whether to show the print dialog to update the print setting. If the print dialog is not shown, it will use previous settings.
+
+## OCR
+
+### OCRInfo 
+
+The info of the installed OCR add-on.
+
+**Syntax**
+
+```ts
+interface OCRInfo {
+  version: string;     
+}
+```
+
+### OCRResult
+
+The OCR result of one page. If the page is rotated, the geometry will be based on the orientation-corrected version.
+
+**Syntax**
+
+```ts
+interface OCRResult {     
+  imageID: string;     
+  dimensions: {width: number; height: number};  
+  orientation: {value: number; confidence: number};  
+  blocks:{ 
+    geometry: {left: number; top: number; right: number; bottom: number}; 
+    lines: { 
+      geometry: {left: number; top: number; right: number; bottom: number}; 
+      words?:{ 
+        value: string;  
+        confidence: number;
+        geometry: {left: number; top: number; right: number; bottom: number}; 
+      }[];
+    }[];	 
+  }[]; 
+} 
+```
 
 ## PDF
 
@@ -1802,6 +1857,12 @@ interface PDFWSettings {
      * Up to 32 characters.
      */
     password?: string;
+    /**
+     * From version 19.3
+     * Specify PDF/A version to save as PDF/A.
+     * Supported values: "pdf/a-1b", "pdf/a-2b"
+     */
+    pdfaVersion?: string;
 }
 ```
 
