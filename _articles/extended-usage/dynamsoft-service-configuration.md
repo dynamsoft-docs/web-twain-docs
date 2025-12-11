@@ -51,7 +51,7 @@ Here is a table of links for the latest version.
 | macOS         | [Dynamic-Web-TWAIN-Service-Setup.pkg](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup.pkg)        |
 | Linux         | [Dynamic-Web-TWAIN-Service-Setup.deb](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup.deb) <br/> [Dynamic-Web-TWAIN-Service-Setup-arm64.deb](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup-arm64.deb) <br/> [Dynamic-Web-TWAIN-Service-Setup-mips64el.deb](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup-mips64el.deb) <br/> [Dynamic-Web-TWAIN-Service-Setup.rpm](https://demo.dynamsoft.com/DWT/DWTResources/dist/DynamicWebTWAINServiceSetup.rpm)|
 
-You can find the download links for different versions of service installers on [unpkg](https://app.unpkg.com/dwt@/files/dist/dist).
+You can find the download links for different versions of service installers on [unpkg](https://app.unpkg.com/dwt/files/dist/dist).
 
 ## Installation Folder
 
