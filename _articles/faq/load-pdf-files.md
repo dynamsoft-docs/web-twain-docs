@@ -38,7 +38,7 @@ If this method returns **`true`**, the SDK will need the PDFR to process the fil
 
 ### When rasterization actually happens
 
-Dynamic Web TWAIN performs rasterization **only when necessary**. If [`IsRasterizationRequired()`](_articles/info/api/Addon_PDF.md#israsterizationrequired) returns **`true`** and the PDF Rasterizer license is configured, the SDK automatically rasterizes the PDF into images using the reader settings you specify.
+Dynamic Web TWAIN performs rasterization **only when necessary**. If [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired) returns **`true`** and the PDF Rasterizer license is configured, the SDK automatically rasterizes the PDF into images using the reader settings you specify.
 
 The rasterization behavior—including resolution (default **200 DPI**) and other rendering parameters—can be customized through [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions).
 
