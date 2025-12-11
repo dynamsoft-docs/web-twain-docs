@@ -63,7 +63,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website |
 |-2208 | The connection with the local Dynamic Web TWAIN Service encountered a problem and has been reset |
 |-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
-|-2217 | Missing dependent files for OCR.  |
+|-2217 | Missing dependent files for OCR Kit.  |
 |-2300 | Http upload error: the HTTP Server cannot empty |
 |-2301 | Network error |
 |-2302 | The result format is invalid |
