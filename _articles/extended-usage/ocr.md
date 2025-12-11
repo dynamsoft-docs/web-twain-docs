@@ -21,6 +21,10 @@ Read on to learn about how to use it.
 * A license with the OCR module ([30-day trial application](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt))
 * [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip)
 
+## Online Demo
+
+You can visit the [online demo](https://demo.dynamsoft.com/Samples/dwt/OCR/index.html) to try it.
+
 ## How to Use
 
 ### Step One - Install the OCR Package
