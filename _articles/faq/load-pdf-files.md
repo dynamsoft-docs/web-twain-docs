@@ -7,39 +7,43 @@ keywords: Dynamic Web TWAIN, Addon, load pdf/a
 breadcrumbText: How can I load PDF/A files into the Dynamic Web TWAIN SDK?
 description: How can I load PDF/A files into the Dynamic Web TWAIN SDK?
 date: 2021-12-01 01:09:41 +0800
-last_modified: 2025-12-10 15:53:54 +0800
+last_modified: 2025-12-11 14:20:54 +0800
 ---
 
 # Addon
 
 ## How can I load PDF/A files into the Dynamic Web TWAIN SDK?
 
-Dynamic Web TWAIN can load PDF/A files, but whether the PDF Rasterizer add-on is required depends on the content of the PDF/A file:
+Dynamic Web TWAIN can load PDF/A files. Whether you need the **[PDF Rasterizer Add-on (PDFR)](https://www.dynamsoft.com/web-twain/pdf-to-image-javascript/)** depends entirely on the contents of the PDF/A document:
 
-- If the PDF/A contains text or vector graphics, it must be rasterized, and therefore requires the PDF Rasterizer add-on.
-- If the PDF/A contains only raster images, it can be loaded without the PDF Rasterizer.
+- If the PDF/A contains **text or vector graphics**, rasterization is required → **PDFR license needed**.
+- If the PDF/A contains **only raster images**, the file can be loaded **without** the PDFR add-on.
 
-You can programmatically check whether a file needs rasterization using [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.html#israsterizationrequired):
+> [!NOTE]
+> **Looking for information about generating PDF/A files?**
+>
+> Starting from Dynamic Web TWAIN 19.3, PDF/A creation is supported.
+>
+> See: [How can I generate PDF/A files?](/_articles/faq/generate-pdf-files.md)
+
+### How to check whether rasterization is required
+
+You can programmatically detect whether a given PDF/A file requires rasterization before loading it:
 
 ```javascript
 DWTObject.Addon.PDF.IsRasterizationRequired(path); // returns true or false
 ```
 
-When enabled, the add-on automatically rasterizes PDF/A documents into images when they are loaded into the viewer.
+If this method returns **`true`**, the SDK will need the PDFR to process the file.
 
-> [!NOTE]
-> **Looking for information about generating PDF/A files?**
-> Starting from Dynamic Web TWAIN 19.3, PDF/A creation is supported.
-> See: [How can I generate PDF/A files?](/_articles/faq/generate-pdf-files.md)
+### When rasterization actually happens
+
+Dynamic Web TWAIN performs rasterization **only when necessary**. If [`IsRasterizationRequired()`](/_articles/info/api/Addon_PDF.md#israsterizationrequired) returns **`true`** and the PDF Rasterizer license is configured, the SDK automatically rasterizes the PDF into images using the reader settings you specify.
+
+The rasterization behavior—including resolution (default **200 DPI**) and other rendering parameters—can be customized through [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions).
 
 
-### When is PDF Rasterizer used?
-
-Once the PDF Rasterizer (`PDFR`) is configured, it automatically rasterizes the file *only when needed*.
-If rasterization is required, the PDF is converted into one or more images at the specified resolution (default **200 DPI**).
-
-Rasterization may occur when using any of the following APIs (including drag-and-drop):
-
+Rasterization may occur when using any of these APIs (including drag-and-drop):
 - [ `LoadImage()` ](/_articles/info/api/WebTwain_IO.md#loadimage)
 - [ `LoadImageEx()` ](/_articles/info/api/WebTwain_IO.md#loadimageex)
 - [ `LoadImageFromBase64Binary()` ](/_articles/info/api/WebTwain_IO.md#loadimagefrombase64binary)
@@ -50,9 +54,3 @@ Rasterization may occur when using any of the following APIs (including drag-and
 - [ `HTTPDownloadEx()` ](/_articles/info/api/WebTwain_IO.md#httpdownloadex)
 - [ `HTTPDownloadThroughPost()` ](/_articles/info/api/WebTwain_IO.md#httpdownloadthroughpost)
 - [ `HTTPDownloadDirectly()` ](/_articles/info/api/WebTwain_IO.md#httpdownloaddirectly)
-
-### Important Change in v19.3
-Previous versions of Dynamic Web TWAIN did **not** support exporting PDF/A files.
-As of **19.3**, you can now:
-- Load PDF/A files (with or without the PDF Rasterizer, depending on content), and
-- Generate PDF/A files.
