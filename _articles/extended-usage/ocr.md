@@ -463,7 +463,7 @@ Yes. You can specify which regions for OCR using the `rects` option of the [`rec
 
 ### Will My Document be Uploaded to a Remote Server?
 
-No. The OCR process happens locally on your machine. No data is sent to any remote servers.
+No. The OCR process happens locally on your machine. No data is sent to any remote servers. Also, we do not collect data for training AI.
 
 ### What is Searchable PDF?
 
