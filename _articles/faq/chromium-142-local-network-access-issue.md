@@ -172,6 +172,6 @@ Here are the details:
 
 This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](mailto://support@dynamsoft.com).
 
-### Other Causes
+## Other Causes of Failure to Connect to the Service
 
 There are other causes of service not being connected. You can find them in [another FAQ](/_articles/faq/service-prompting-to-install-repeatedly.md).
