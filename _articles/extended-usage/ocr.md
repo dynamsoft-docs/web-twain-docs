@@ -33,7 +33,12 @@ Download [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/D
 
 It will copy an `ocr` folder to Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). The `ocr` folder contains the runtime and model files that are required to perform on-device OCR.
 
-PS: You need to [install Dynamic Web TWAIN Service](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-of-dynamic-web-twain-service) beforehand.
+
+> [!NOTE]
+> * You need to [install Dynamic Web TWAIN Service](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-of-dynamic-web-twain-service) beforehand.
+> * Since only Windows is supported for now, you have to do this on a Windows client for testing.
+
+
 
 ### Step Two - Write a Basic Document Scanning Page
 
