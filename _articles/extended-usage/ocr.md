@@ -445,6 +445,8 @@ Here is the complete code of the demo.
 </html>
 ```
 
+This complete code is different from the [online demo](#online-demo)'s code, which supports regional OCR. You can find the code for the online demo [here](https://download2.dynamsoft.com/Samples/DWT/Scan-Documents-and-Do-OCR.zip).
+
 ## FAQ
 
 ### What Languages are Supported?
