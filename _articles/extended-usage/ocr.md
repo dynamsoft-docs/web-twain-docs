@@ -33,7 +33,12 @@ Download [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/D
 
 It will copy an `ocr` folder to Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder). The `ocr` folder contains the runtime and model files that are required to perform on-device OCR.
 
-PS: You need to [install Dynamic Web TWAIN Service](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-of-dynamic-web-twain-service) beforehand.
+
+> [!NOTE]
+> * You need to [install Dynamic Web TWAIN Service](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-of-dynamic-web-twain-service) beforehand.
+> * Since only Windows is supported for now, you have to do this on a Windows client for testing.
+
+
 
 ### Step Two - Write a Basic Document Scanning Page
 
@@ -440,6 +445,8 @@ Here is the complete code of the demo.
 </html>
 ```
 
+This complete code is different from the [online demo](#online-demo)'s code, which supports regional OCR. You can find the code for the online demo [here](https://download2.dynamsoft.com/Samples/DWT/Scan-Documents-and-Do-OCR.zip).
+
 ## FAQ
 
 ### What Languages are Supported?
@@ -458,7 +465,7 @@ Yes. You can specify which regions for OCR using the `rects` option of the [`rec
 
 ### Will My Document be Uploaded to a Remote Server?
 
-No. The OCR process happens locally on your machine. No data is sent to any remote servers.
+No. The OCR process happens locally on your machine. No data is sent to any remote servers. Also, we do not collect data for training AI.
 
 ### What is Searchable PDF?
 

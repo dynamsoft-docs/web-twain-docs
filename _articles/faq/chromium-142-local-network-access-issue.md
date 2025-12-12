@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2025-11-26 15:46:00 +0800
+last_modified: 2025-12-12 10:04:00 +0800
 ---
 
 # Error Troubleshooting
@@ -19,7 +19,7 @@ last_modified: 2025-11-26 15:46:00 +0800
 
 ### Overview
 
-Starting in **Chromium-based browsers v142+** (released Oct 28, 2025)—including Chrome, Edge, Brave, and Opera—Dynamsoft Web TWAIN Service may not work as expected due to new local-network security rules.
+Starting in **Chromium-based browsers v142+** (released Oct 28, 2025)—including Chrome, Edge, Brave, and Opera—Dynamsoft Web TWAIN Service may not work as expected due to new **Local Network Access (LNA)** restrictions that limit requests **from public network locations to private and loopback network locations**.
 
 ### Symptoms
 
@@ -41,6 +41,8 @@ from origin 'https://your-domain.com' has been blocked by CORS policy:
 Permission was denied for this request to access the `unknown` address space.
 ```
 
+This error occurs because the web page is loaded from a public network origin (for example, `https://your-domain.com`) and is attempting to connect to a loopback network location (`127.0.0.1`), which Chrome now treats as a protected local network request.
+
 ---
 
 #### Version-Specific Behavior
@@ -59,10 +61,14 @@ The observed behavior depends on Chromium browser version and Dynamic Web TWAIN 
 
 ### Root Cause
 
-Chromium 142 introduces a new [Local Network Access security policy](https://chromestatus.com/feature/5152728072060928) requirement. 
-Requests from web pages to loopback addresses such as `localhost` / `127.0.0.1` are blocked unless the user (or an admin policy) explicitly grants access.
+Chromium 142 introduces and enforces a new [Local Network Access (LNA)](https://chromestatus.com/feature/5152728072060928) security model that restricts requests **from public network locations to private and loopback network locations**, requiring explicit user permission.
 
-Because Dynamic Web TWAIN communicates with a local service, these restrictions can prevent normal operation.
+> [!NOTE]
+> For background and design rationale, see Chrome’s Developer Blog: [New permission prompt for Local Network Access](https://developer.chrome.com/blog/local-network-access).
+
+Under this model, **requests originating from a public network location** (such as a publicly hosted website) **to private or loopback network locations** (including localhost and 127.0.0.1) are blocked by default unless the user explicitly grants permission.
+
+Dynamic Web TWAIN relies on a locally installed service that listens on a loopback address. When a web application hosted on a public domain attempts to communicate with this service, Chrome categorizes the request as a **public-to-local** network request, which now requires explicit user consent.
 
 ### Resolution
 
@@ -170,6 +176,6 @@ Here are the details:
 
 This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](mailto://support@dynamsoft.com).
 
-## Other Causes
+## Other Causes of Failure to Connect to the Service
 
 There are other causes of service not being connected. You can find them in [another FAQ](/_articles/faq/service-prompting-to-install-repeatedly.md).
