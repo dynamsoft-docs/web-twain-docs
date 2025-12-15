@@ -18,7 +18,7 @@ Read on to learn about how to use it.
 ## Requirements
 
 * Windows 10 versions >= 1809 and all versions of Windows 11
-* A license with the OCR module ([30-day trial application](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt))
+* A license with the OCR module ([30-day trial application](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform))
 * [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip)
 
 ## Online Demo
