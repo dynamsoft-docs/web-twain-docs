@@ -482,3 +482,7 @@ OCR Basic and OCR Pro are previous OCR add-ons, which are deprecated in v16.2. B
 
 To differentiate from previous versions, the new OCR uses `OCRKit` as the namespace.
 
+### Why I Cannot Load Saved PDF Files
+
+The searchable PDF saved has an text layer. You need to use [PDF Rasterizer](/_articles/info/api/Addon_PDF.md) to load it. A PDF Rasterizer license is required.
+
