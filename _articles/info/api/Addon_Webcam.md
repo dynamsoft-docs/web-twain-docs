@@ -11,6 +11,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Webcam Addon APIs
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
+The Webcam add-on works on Windows desktop. If you need to scan documents with camera on other platforms (macOS, Linux and mobile) or perform document boundary detection and cropping, you can use [Mobile Document Scanner](https://www.dynamsoft.com/use-cases/mobile-document-scanner/).
+
 **Methods**
 
 | [`CaptureImage()`](#captureimage) | [`CloseSource()`](#closesource) | [`GetCameraControlPropertySetting()`](#getcameracontrolpropertysetting) | [`GetCameraControlPropertyMoreSetting()`](#getcameracontrolpropertymoresetting) |

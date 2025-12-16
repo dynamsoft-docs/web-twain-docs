@@ -480,5 +480,9 @@ The OCR add-on supports two kinds of searchable PDF output.
 
 OCR Basic and OCR Pro are previous OCR add-ons, which are deprecated in v16.2. But they are still usable in the latest version.
 
-To differentiate from previous versions, the new OCR uses `OCRKit` as the namespace.
+To differentiate from previous versions, the new OCR added since v19.3 uses `OCRKit` as the namespace.
+
+### Why I Cannot Load Saved PDF Files
+
+The searchable PDF saved has a text layer. You need to use [PDF Rasterizer](/_articles/info/api/Addon_PDF.md) to load it. A PDF Rasterizer license is required.
 

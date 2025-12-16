@@ -126,6 +126,9 @@ If you need to append a scanned document to a PDF file and keep the rest pages u
 DWTObject.Addon.PDF.SetReaderOptions({
   convertMode: Dynamsoft.DWT.EnumDWT_ConvertMode.CM_RENDERALL,
   preserveUnmodifiedOnSave: true, //only available for v19.0+
+  renderOptions:{
+    renderAnnotations: true //enable this to keep annotations
+  }
 });
 ```
 

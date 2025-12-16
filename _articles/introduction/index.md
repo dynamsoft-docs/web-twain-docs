@@ -60,3 +60,7 @@ See [API reference](/_articles/info/api/index.md) where you can find more compre
 ## RESTful API
 
 Dynamic Web TWAIN also provides [RESTful API](https://www.dynamsoft.com/web-twain/restfulapi/) to access scanners using various programming languages. You can check out the [samples](https://www.dynamsoft.com/web-twain/docs/extended-usage/restful-api.html) and [APIs](https://www.dynamsoft.com/web-twain/docs/info/api/restful.html) to learn more.
+
+## Scan with Camera
+
+If you need to scan documents using your camera, with features like automatic border detection and cropping, try our other product: [Mobile Document Scanner](https://www.dynamsoft.com/use-cases/mobile-document-scanner/).
