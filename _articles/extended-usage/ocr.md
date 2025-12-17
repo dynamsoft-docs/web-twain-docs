@@ -18,7 +18,7 @@ Read on to learn about how to use it.
 ## Requirements
 
 * Windows 10 versions >= 1809 and all versions of Windows 11
-* A license with the OCR module ([30-day trial application](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform))
+* A license with the OCR module ([contact support to get a 30-day trial license](mailto:support@dynamsoft.com))
 * [DynamicWebTWAINOCRResources.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRResources.zip)
 
 ## Online Demo
@@ -42,7 +42,7 @@ It will copy an `ocr` folder to Dynamic Web TWAIN Service's [installation folder
 
 ### Step Two - Write a Basic Document Scanning Page
 
-Create a HTML with the following content. It can scan documents from scanners as well as loading local images.
+Create a HTML file with the following content. It can scan documents from scanners as well as loading local images.
 
 ```html
 <!DOCTYPE html>
@@ -79,6 +79,7 @@ Create a HTML with the following content. It can scan documents from scanners as
   
   <script type="text/javascript">
     var DWTObject;
+    Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; //one-day trial license
     Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
       DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
       DWTObject.Viewer.width = "100%";
