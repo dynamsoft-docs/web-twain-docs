@@ -79,6 +79,7 @@ Create a HTML file with the following content. It can scan documents from scanne
   
   <script type="text/javascript">
     var DWTObject;
+
     Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; //one-day trial license
     Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
       DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
@@ -301,6 +302,7 @@ Here is the complete code of the demo.
     var DWTObject;
     var storedOCRResults = {};
 
+    Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; //one-day trial license
     Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
       DWTObject = Dynamsoft.DWT.GetWebTwain("dwtcontrolContainer");
       DWTObject.Viewer.width = "100%";
