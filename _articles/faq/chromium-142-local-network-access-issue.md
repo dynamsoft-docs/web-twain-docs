@@ -174,8 +174,6 @@ When the browser blocks communication with the local service, a clear dialog is 
    
 * **Clearer messaging during service installation** \
 A notice is added to the service installation dialog to inform users that a connection failure may be caused either by the service not being installed or by local network access being denied, as these two cases cannot be reliably distinguished.
-   
-* Add a sentence about the permission in the service installation dialog, since we cannot determine whether the connection failure is due to the service not being installed or the access being blocked.
 
    ![dialog installation](/assets/imgs/local-network-access/service-installation-dialog.png)
 
