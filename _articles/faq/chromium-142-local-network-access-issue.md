@@ -169,13 +169,19 @@ The key improvements include:
 When the browser blocks communication with the local service, a clear dialog is displayed explaining the cause and directing users to this FAQ.
 
    ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
-
+   
+   *Dialog 1 - Permission Guidance*
+   
 * **Clearer messaging during service installation** \
 A notice is added to the service installation dialog to inform users that a connection failure may be caused either by the service not being installed or by local network access being denied, as these two cases cannot be reliably distinguished.
+   
+* Add a sentence about the permission in the service installation dialog, since we cannot determine whether the connection failure is due to the service not being installed or the access being blocked.
 
-   ![prompt blocked](/assets/imgs/local-network-access/service-installation-dialog.png)
+   ![dialog installation](/assets/imgs/local-network-access/service-installation-dialog.png)
 
-    Clicking “Guide” opens the permission guidance dialog shown above.
+   *Dialog 2 - Service Installation*
+
+    Clicking "Guide" opens the permission guidance dialog shown above.
 
 These improvements are **available starting with Dynamic Web TWAIN v19.3**.
 
