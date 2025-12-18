@@ -165,12 +165,12 @@ These changes **do not alter or bypass Chromium’s security model**. Their purp
 
 Planned improvements include:
 
-* **Explicit detection of blocked local network access**
+* **Explicit detection of blocked local network access** \
 When the browser blocks communication with the local service, a clear dialog will be displayed explaining the cause and directing users to this FAQ.
 
    ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
 
-* **Clearer messaging during service installation**
+* **Clearer messaging during service installation** \
 A notice will be added to the service installation dialog to inform users that a connection failure may be caused either by the service not being installed or by local network access being denied, as these two cases cannot be reliably distinguished.
 
    ![prompt blocked](/assets/imgs/local-network-access/service-installation-dialog.png)
