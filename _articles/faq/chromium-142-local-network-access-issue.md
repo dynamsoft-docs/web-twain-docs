@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2025-12-12 10:04:00 +0800
+last_modified: 2025-12-17 16:00:00 +0800
 ---
 
 # Error Troubleshooting
@@ -71,6 +71,9 @@ Under this model, **requests originating from a public network location** (such 
 Dynamic Web TWAIN relies on a locally installed service that listens on a loopback address. When a web application hosted on a public domain attempts to communicate with this service, Chrome categorizes the request as a **public-to-local** network request, which now requires explicit user consent.
 
 ### Resolution
+
+> [!WARNING]
+> The steps outlined below **do not “fix” or bypass this restriction**, nor can Dynamic Web TWAIN override it programmatically. They simply ensure that the browser’s required permission is correctly granted so the local Dynamic Web TWAIN service is allowed to communicate with your application.
 
 ***1. To Manually Correct This in Chrome***
 
@@ -154,23 +157,32 @@ If the permission is not granted, consider displaying a user-friendly message di
 
 This approach provides a more polished user experience, especially during onboarding or troubleshooting.
 
-### Roadmap
+### Product Improvements Related to Local Network Access
 
-Dynamsoft plans to add a feature that automatically detects local service connectivity and permission status. If the connection is blocked, users will be prompted with a message and directed to this FAQ page.
+Dynamic Web TWAIN v19.3 introduces **user-experience enhancements** to better surface local service connectivity and permission issues.
 
-Here are the details:
+These changes **do not alter or bypass Chromium’s security model**. Their purpose is to make permission-related failures easier to identify and understand, and to guide users to the appropriate browser settings when access is blocked.
 
-* When local network access is blocked, prompt the user with the following dialog:
+The key improvements include:
+
+* **Explicit detection of blocked local network access** \
+When the browser blocks communication with the local service, a clear dialog is displayed explaining the cause and directing users to this FAQ.
 
    ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
 
-* Add a sentence about the permission in the service installation dialog, since we cannot determine whether the connection failure is due to the service not being installed or the access being blocked.
+* **Clearer messaging during service installation** \
+A notice is added to the service installation dialog to inform users that a connection failure may be caused either by the service not being installed or by local network access being denied, as these two cases cannot be reliably distinguished.
 
    ![prompt blocked](/assets/imgs/local-network-access/service-installation-dialog.png)
 
-    Clicking "Guide" will open the dialog shown above.
+    Clicking “Guide” opens the permission guidance dialog shown above.
 
-This design will be integrated in v19.3. For old versions, we can include an extra js file, which can be retrieved by contacting [support](mailto://support@dynamsoft.com).
+These improvements are **available starting with Dynamic Web TWAIN v19.3**.
+
+For older versions, a supplemental JavaScript file can be provided upon request by contacting [Dynamsoft Support](mailto:support@dynamsoft.com).
+
+> [!NOTE]
+> This file improves user guidance only and does not change the underlying browser permission requirements.
 
 ## Other Causes of Failure to Connect to the Service
 
