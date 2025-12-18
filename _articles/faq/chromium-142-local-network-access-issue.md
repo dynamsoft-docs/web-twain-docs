@@ -157,27 +157,27 @@ If the permission is not granted, consider displaying a user-friendly message di
 
 This approach provides a more polished user experience, especially during onboarding or troubleshooting.
 
-### Roadmap
+### Product Improvements Related to Local Network Access
 
-Dynamsoft plans to introduce **user-experience enhancements** to better surface local service connectivity and permission issues.
+Dynamic Web TWAIN v19.3 introduces **user-experience enhancements** to better surface local service connectivity and permission issues.
 
 These changes **do not alter or bypass Chromium’s security model**. Their purpose is to make permission-related failures easier to identify and understand, and to guide users to the appropriate browser settings when access is blocked.
 
-Planned improvements include:
+The key improvements include:
 
 * **Explicit detection of blocked local network access** \
-When the browser blocks communication with the local service, a clear dialog will be displayed explaining the cause and directing users to this FAQ.
+When the browser blocks communication with the local service, a clear dialog is displayed explaining the cause and directing users to this FAQ.
 
    ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
 
 * **Clearer messaging during service installation** \
-A notice will be added to the service installation dialog to inform users that a connection failure may be caused either by the service not being installed or by local network access being denied, as these two cases cannot be reliably distinguished.
+A notice is added to the service installation dialog to inform users that a connection failure may be caused either by the service not being installed or by local network access being denied, as these two cases cannot be reliably distinguished.
 
    ![prompt blocked](/assets/imgs/local-network-access/service-installation-dialog.png)
 
-    Clicking “Guide” will open the permission guidance dialog shown above.
+    Clicking “Guide” opens the permission guidance dialog shown above.
 
-These **UX improvements** are scheduled to be integrated starting with **Dynamic Web TWAIN v19.3**. 
+These improvements are **available starting with Dynamic Web TWAIN v19.3**.
 
 For older versions, a supplemental JavaScript file can be provided upon request by contacting [Dynamsoft Support](mailto:support@dynamsoft.com).
 
