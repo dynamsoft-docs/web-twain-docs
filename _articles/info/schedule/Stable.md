@@ -1852,4 +1852,4 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 
 * TWAIN specification 1.9 compatible.
 * Supports Native image transfer mode.
-* Supports uploading and downloading image trough FTP.
+* Supports uploading and downloading image through FTP.
