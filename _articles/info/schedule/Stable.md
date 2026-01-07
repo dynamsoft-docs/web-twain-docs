@@ -137,6 +137,10 @@ Updated the names of headers for the REST API.
 - Fixed a CORS request blocked error which also triggers a prompt to install the Dynamic Web TWAIN Service.
 - Fixed Vite runtime errors caused by polyfills and resource path misconfiguration.
 
+## 18.5.3 (01/14/2026)
+
+Updated third-party libraries to enhance security.
+
 ## 18.5.1 (10/22/2024)
 
 ### Improvements 
