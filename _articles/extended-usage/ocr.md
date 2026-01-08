@@ -42,7 +42,7 @@ It will copy an `ocr` folder to Dynamic Web TWAIN Service's [installation folder
 
 ### Step Two - Write a Basic Document Scanning Page
 
-Create a HTML file with the following content. It can scan documents from scanners as well as loading local images.
+Create an HTML file with the following content. It can scan documents from scanners as well as loading local images.
 
 ```html
 <!DOCTYPE html>
