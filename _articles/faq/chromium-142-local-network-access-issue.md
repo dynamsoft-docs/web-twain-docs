@@ -3,11 +3,11 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 title: Error message - Permission was denied for this request to access the unknown address space
-keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space, Chromium, 142, Firefox, 147
+keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space, Chromium, 142
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2026-1-12 16:00:00 +0800
+last_modified: 2025-12-17 16:00:00 +0800
 ---
 
 # Error Troubleshooting
@@ -15,11 +15,11 @@ last_modified: 2026-1-12 16:00:00 +0800
 > [!IMPORTANT]
 > This is a newly developing issue, and as such the information in this article may change over time.
 
-## Error message - CORS Errors caused by local network access permissions when using Chromium 142+ and Firefox 147+
+## Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later
 
 ### Overview
 
-Starting in **Chromium-based browsers v142+ (released Oct 28, 2025) & Firefox v147+ (released Jan 13th, 2026)** —including Chrome, Edge, Firefox, Brave, and Opera—Dynamsoft Web TWAIN Service may not work as expected due to new **Local Network Access (LNA)** restrictions that limit requests **from public network locations to private and loopback network locations**.
+Starting in **Chromium-based browsers v142+** (released Oct 28, 2025)—including Chrome, Edge, Brave, and Opera—Dynamsoft Web TWAIN Service may not work as expected due to new **Local Network Access (LNA)** restrictions that limit requests **from public network locations to private and loopback network locations**.
 
 ### Symptoms
 
@@ -47,21 +47,21 @@ This error occurs because the web page is loaded from a public network origin (f
 
 #### Version-Specific Behavior
 
-The observed behavior depends on Chromium/Firefox browser version and Dynamic Web TWAIN (DWT) version:
+The observed behavior depends on Chromium browser version and Dynamic Web TWAIN (DWT) version:
 
 | Browser Version   | DWT Version      | Resulting Symptom           |
 |-------------------|------------------|-----------------------------|
-| Chromium 142/Firefox 147      | < 18.5.0         | Download Prompt             |
-| Chromium 142/Firefox 147      | ≥ 18.5.0         | Blank Images after Scanning |
-| Chromium 145+/Firefox 147 (*) | Any              | Download Prompt             |
+| Chromium 142      | < 18.5.0         | Download Prompt             |
+| Chromium 142      | ≥ 18.5.0         | Blank Images after Scanning |
+| Chromium 145+ (*) | Any              | Download Prompt             |
 
-> (*) **Chromium 145\Firefox 147, which can also block websocket, has not been officially released.**  
+> (*) **Chromium 145, which can also block websocket, has not been officially released.**  
 > Behavior is based on pre-release testing and may change once the final release becomes available.
 > Edge 143 and Firefox Nightly will have local network permission control as well.
 
 ### Root Cause
 
-Chromium 142+\Firefox 147+ introduces and enforces a new [Local Network Access (LNA)](https://chromestatus.com/feature/5152728072060928) security model that restricts requests **from public network locations to private and loopback network locations**, requiring explicit user permission.
+Chromium 142 introduces and enforces a new [Local Network Access (LNA)](https://chromestatus.com/feature/5152728072060928) security model that restricts requests **from public network locations to private and loopback network locations**, requiring explicit user permission.
 
 > [!NOTE]
 > For background and design rationale, see Chrome’s Developer Blog: [New permission prompt for Local Network Access](https://developer.chrome.com/blog/local-network-access).
@@ -74,13 +74,6 @@ Dynamic Web TWAIN relies on a locally installed service that listens on a loopba
 
 > [!WARNING]
 > The steps outlined below **do not “fix” or bypass this restriction**, nor can Dynamic Web TWAIN override it programmatically. They simply ensure that the browser’s required permission is correctly granted so the local Dynamic Web TWAIN service is allowed to communicate with your application.
-
-<div class="multi-panel-switching-prefix"></div>
-
-- [For Chromium](#For Chromium)
-- [For Firefox](#For Firefox)
-
-<div class="multi-panel-start"></div>
 
 ***1. To Manually Correct This in Chrome***
 
@@ -194,44 +187,6 @@ For older versions, a supplemental JavaScript file can be provided upon request 
 
 > [!NOTE]
 > This file improves user guidance only and does not change the underlying browser permission requirements.
-
-<div class="multi-panel-end"></div>
-
-<div class="multi-panel-start"></div>
-
-***1. To Manually Correct This in Firefox***
-
-- First time to use Dynamic Web TWAIN features
-  
-  - Check "Remember my choice for this site"
-  - Allow the permission
-  - Refresh the browser
-
-![Permission-firefox.png](/assets/imgs/local-network-access/popup-firefox.png)
-
-- Accidentally **blocked** the permission
-
-  1. Click the menu button and select `Settings`.
-  2. Go to the `Privacy & Security` panel
-  3. Scroll down to the Permissions section
-  4. Find `Device apps and services` and click `Settings...`
-  5. Here you’ll see a list of sites that have requested this permission.
-  6. Use the dropdown menu next to each site to change access.
-  7. Find `Local network devices`, click `Settings...`, and repeat steps 5-6.
-
-![Permission-firefox.png](/assets/imgs/local-network-access/Permission-firefox.png)
-
-<!-- ***2. (For Admins) To Apply This Setting Across an Enterprise***
-
-
-
-***3. Developer Notes*** -->
-
-
-
-<div class="multi-panel-end"></div>
- 
-<div class="multi-panel-switching-end"></div>
 
 ## Other Causes of Failure to Connect to the Service
 
