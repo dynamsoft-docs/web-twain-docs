@@ -137,6 +137,10 @@ Updated the names of headers for the REST API.
 - Fixed a CORS request blocked error which also triggers a prompt to install the Dynamic Web TWAIN Service.
 - Fixed Vite runtime errors caused by polyfills and resource path misconfiguration.
 
+## 18.5.3 (01/14/2026)
+
+Updated third-party libraries to enhance security.
+
 ## 18.5.1 (10/22/2024)
 
 ### Improvements 
@@ -1852,4 +1856,4 @@ In v10.0.1 there is no limit to the size of an Http Request. In v10.0, the WebSo
 
 * TWAIN specification 1.9 compatible.
 * Supports Native image transfer mode.
-* Supports uploading and downloading image trough FTP.
+* Supports uploading and downloading image through FTP.

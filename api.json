@@ -1,0 +1,17 @@
+---
+layout: null
+sitemap: false
+---
+{
+  "articles": [
+    {% assign filtered_articles = site.articles | where_exp: "article", "article.url contains '/info/api/'" %}
+    {% for article in filtered_articles %}
+    {
+      "title": {{ article.title | jsonify }},
+      "url": "https://www.dynamsoft.com{{ article.url | relative_url }}",
+      "content": {{ article.content | strip_html | jsonify }},
+      "breadcrumb": {{ article.breadcrumbText | default: article.title | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}

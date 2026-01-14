@@ -1519,23 +1519,19 @@ const url = new URL("https://127.0.0.1:18623/api");
 const documentuid = `190807444d76`;
 const pathSegments = ['storage', 'documents', documentuid];
 url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
-
+url.searchParams.set('pages', '190817548d70,190817648270');
+url.searchParams.set('password', 'myFilePassword');
+url.searchParams.set('quality', '50');
+ 
 let myHeaders = new Headers();
 myHeaders.append("DWT-DOC-PASSWORD", "myPassword");
-
-let raw = JSON.stringify({
-  pages: '190817548d70,190817648270',
-  password: 'myFilePassword',
-  quality: 50
-  });
-
+ 
 let requestOptions = {
    method: 'GET',
    headers: myHeaders,
-   body: raw,
    redirect: 'follow'
 };
-
+ 
 fetch(url, requestOptions)
    .then(response => response.text())
    .then(result => console.log(result))
