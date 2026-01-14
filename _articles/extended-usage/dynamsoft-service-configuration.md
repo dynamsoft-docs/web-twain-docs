@@ -122,10 +122,11 @@ When a request comes from a different origin, a CORS error message will be displ
 
 The service provides a web page to know its status and make basic configurations. You can access it through <http://127.0.0.1:18625>.
 
-For security reasons, the web setup is disabled by default. You can add the following line to `DSConfiguration.ini` to enable it.
+For security reasons, the web setup is disabled by default. You modify the following line in `DSConfiguration.ini` to enable it. If you cannot find the line, you can add it manually.
 
-```
-EnableWebSetup=TRUE
+```diff
+- EnableWebSetup=FALSE
++ EnableWebSetup=TRUE
 ```
 
 Screenshots:
