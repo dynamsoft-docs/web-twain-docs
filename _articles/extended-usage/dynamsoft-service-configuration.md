@@ -15,7 +15,7 @@ The Dynamic Web TWAIN Service is the core piece of Dynamic Web TWAIN. It handles
 
 ## Installation of Dynamic Web TWAIN Service
 
-On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamic Web TWAIN Service. This is a built-in behavior of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
+On a desktop, when new users access a web page using Dynamic Web TWAIN SDK for the first time, they will be prompted to install the Dynamic Web TWAIN Service. This is a built-in behavior of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
 
 The prompt comes up when you try to [create a WebTwain instance](/_articles/extended-usage/advanced-initialization.md#instantiating-webtwain-without-onwebtwainready).
 
