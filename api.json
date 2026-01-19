@@ -9,7 +9,7 @@ sitemap: false
     {
       "title": {{ article.title | jsonify }},
       "url": "https://www.dynamsoft.com{{ article.url | relative_url }}",
-      "content": {{ article.content | strip_html | html_decode | jsonify }},
+      "content": {{ article.raw_content | jsonify }},
       "breadcrumb": {{ article.breadcrumbText | default: article.title | jsonify }}
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
