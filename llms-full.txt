@@ -1,0 +1,17 @@
+---
+layout: null
+sitemap: false
+---
+{% for article in site.articles %}<page>
+---
+title: {{article.title}}
+description: {{article.description}}
+source_url:
+  html: https://www.dynamsoft.com{{ article.url | relative_url }}
+  md: {{ site.repositoryUrl }}/{{article.path}}
+---
+{{ article.raw_content }}
+</page>
+
+{% endfor %}
+

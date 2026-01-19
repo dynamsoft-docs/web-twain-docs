@@ -15,7 +15,7 @@ The Dynamic Web TWAIN Service is the core piece of Dynamic Web TWAIN. It handles
 
 ## Installation of Dynamic Web TWAIN Service
 
-On a desktop, when a new user accesses a web page using Dynamic Web TWAIN SDK for the first time, he will be prompted to install the Dynamic Web TWAIN Service. This is a built-in behavior of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
+On a desktop, when new users access a web page using Dynamic Web TWAIN SDK for the first time, they will be prompted to install the Dynamic Web TWAIN Service. This is a built-in behavior of the library. The prompt will display the download link. Once the installer is downloaded, the installation process will take just a few seconds.
 
 The prompt comes up when you try to [create a WebTwain instance](/_articles/extended-usage/advanced-initialization.md#instantiating-webtwain-without-onwebtwainready).
 
@@ -122,10 +122,11 @@ When a request comes from a different origin, a CORS error message will be displ
 
 The service provides a web page to know its status and make basic configurations. You can access it through <http://127.0.0.1:18625>.
 
-For security reasons, the web setup is disabled by default. You can add the following line to `DSConfiguration.ini` to enable it.
+For security reasons, the web setup is disabled by default. You modify the following line in `DSConfiguration.ini` to enable it. If you cannot find the line, you can add it manually.
 
-```
-EnableWebSetup=TRUE
+```diff
+- EnableWebSetup=FALSE
++ EnableWebSetup=TRUE
 ```
 
 Screenshots:

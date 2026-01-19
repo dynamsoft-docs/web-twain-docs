@@ -1,0 +1,15 @@
+---
+layout: null
+sitemap: false
+---
+
+# Dynamic Web TWAIN Docs
+
+## Docs
+
+{% for article in site.articles %}- [{{article.title}}](https://www.dynamsoft.com{{ article.url | relative_url }}): {{ article.description }}
+{% endfor %}
+
+## Samples
+
+- [Samples](https://github.com/Dynamsoft/web-twain-codelab/): Samples of Dynamic Web TWAIN
