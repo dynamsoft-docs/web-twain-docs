@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, connection not established
 breadcrumbText: A connection with the server could not be established
 description: A connection with the server could not be established
 date: 2020-12-10 16:11:49 +0800
-last_modified: 2022-06-02 15:30:49 +0800
+last_modified: 2026-01-21 15:26:16 -08:00
 ---
 
 # Error Troubleshooting
@@ -16,16 +16,16 @@ last_modified: 2022-06-02 15:30:49 +0800
 
 ### Symptom
 
-When attempting to upload images web server the upload fails and you receive the error message.
+When attempting to upload images to your web server, the upload fails and you see this error message.
 
 ### Cause
 
-The problem may occur when a connection with the server is not available.
+This usually means the client cannot reach the server.
 
 ### Resolution
 
-- Check if the HTTP port you set in your code coincides with the port number you set on your web server. You can use the [HTTPPort](/_articles/info/api/WebTwain_IO.md#httpport) property to set the port number.
-- Make sure the address of the server is available. To check this, you can ping the address from a client machine.
+- Verify the HTTP port in your code matches the server’s listening port. Set it with [`HTTPPort`](/_articles/info/api/WebTwain_IO.md#httpport).
+- Confirm the server address is reachable (ping it from a client machine). Use either the machine name or IP with `HTTPUpload`.
 
 > Note:
-> Both the machine name and the IP address of the server can be used for the HTTPUpload method.
+> Both the machine name and the IP address of the server can be used for the [`HTTPUpload`](/_articles/info/api/WebTwain_IO.md#httpupload) method.

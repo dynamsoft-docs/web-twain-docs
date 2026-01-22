@@ -196,7 +196,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 19.  [Error message - The domain of your current site does not match the domain bound in the current product key, please contact the site administrator](/_articles/faq/error-message-domain-of-site-doesnt-match-domain-bound-to-product-key.md)
 20.  [Error message - The current product key is invalid because it's generated with the licenses of a different major version](/_articles/faq/error-message-license-generated-with-license-of-major-version.md)
 21.  [Error message - The current product key is not for full/trial version, please contact the site administrator](/_articles/faq/error-message-product-key-is-not-for-full-version.md)
-22.  [Error message – The current product key has expired on XXX, please contact the site administrator](/_articles/faq/error-message-product-key-expired.md)
+22.  [Error message – Your Dynamic Web TWAIN product key expired](/_articles/faq/error-message-product-key-expired.md)
 23.  [Error Message - Failed to load resource: net::ERR\_CERT\_DATE\_INVALID](/_articles/faq/failed-to-load-resource.md)
 24.  [Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed](/_articles/faq/connection-from-the-insecure-HTTP-to-service-failed.md)
 25.  [Error Message - Source has nothing to capture](/_articles/faq/source-has-nothing-to-capture.md)
