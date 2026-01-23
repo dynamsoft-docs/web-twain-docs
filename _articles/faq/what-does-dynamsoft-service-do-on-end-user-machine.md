@@ -59,8 +59,6 @@ There are multiple files and folders in the service directory. Taking Windows se
 
 ### For the Service
 
-TODO: Description for possible OCR files?
-
 * `\cache\` : Data cached on the disk. Check out [Disk Caching](/_articles/extended-usage/buffer-caching.md#disk-caching){:target="_blank"}.
 * `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](/_articles/faq/change-dynamsoft-service-certificate.md){:target="_blank"}.
 * `\dump\` : Dump files in case the service crashes.
