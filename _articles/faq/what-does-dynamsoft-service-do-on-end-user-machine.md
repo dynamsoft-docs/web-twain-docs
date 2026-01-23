@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Dynam
 breadcrumbText: What does the Dynamic Web TWAIN Service do on the end-user machine?
 description: What does the Dynamic Web TWAIN Service do on the end-user machine?
 date: 2021-12-11 06:47:21 +0800
-last_modified: 2025-03-31 00:00:00 +0800
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
@@ -58,8 +58,6 @@ By default, there are three Dynamic Web TWAIN Service processes running which us
 There are multiple files and folders in the service directory. Taking Windows service (located at `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}`) as an example, the content is as follows:
 
 ### For the Service
-
-TODO: Description for possible OCR files?
 
 * `\cache\` : Data cached on the disk. Check out [Disk Caching](/_articles/extended-usage/buffer-caching.md#disk-caching){:target="_blank"}.
 * `\cert\` : The certificates used for SSL connection. Check out [How to change the certificates](/_articles/faq/change-dynamsoft-service-certificate.md){:target="_blank"}.

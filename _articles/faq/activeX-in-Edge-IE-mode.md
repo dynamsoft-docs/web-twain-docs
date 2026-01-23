@@ -7,15 +7,13 @@ keywords: Dynamic Web TWAIN, ActiveX, Internet Explorer mode, IE mode
 breadcrumbText: How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode
 description: How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode
 date: 2022-04-22 05:24:12 +0800
-last_modified: 2026-01-21 14:32:41 -08:00
+last_modified: 2022-10-14 14:05:08 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
 https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-installation)
 
 # How to run Dynamic Web TWAIN ActiveX in Microsoft Edge Internet Explorer (IE) mode
-
-> ActiveX support was removed starting in Dynamic Web TWAIN v19. This article is archived for customers running versions earlier than 19. For supported browsers in v19 and later, please migrate to the HTML5 edition.
 
 Microsoft is <a href="https://www.microsoft.com/en-us/edge/business/ie-mode" target="_blank">retiring Internet Explorer 11</a> on June 15, 2022. To support Dynamic Web TWAIN ActiveX, please configure IE mode in Edge following the steps below. For better browser compatibility, we strongly recommend [updating your web application with our HTML5 edition](/_articles/indepth/development/activex.md#move-away-from-activex){:target="_blank"}.
 

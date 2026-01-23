@@ -7,15 +7,15 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, slow scan
 breadcrumbText: Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up?
 description: Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up?
 date: 2021-12-08 03:01:32 +0800
-last_modified: 2026-01-21 15:42:47 -08:00
+last_modified: 2022-10-21 14:05:54 +0800
 ---
 
 # Capture/Image Source
 
 ## Document scanning via the Dynamic Web TWAIN SDK is slower than using the native scanner application. How can I speed it up?
 
-First, confirm you are using the same scan settings (color mode, DPI, duplex, etc.) as the native app.
+Please first check if you use the same pre-scanning settings (e.g. color mode, resolution, etc.).
 
-If settings match, look for extra work in your callbacks. Check code in `AcquireImage()` callbacks like [`OnPostTransfer`](/_articles/info/api/WebTwain_Acquire.md#onposttransfer){:target="_blank"} and [`OnPostAllTransfers`](/_articles/info/api/WebTwain_Acquire.md#onpostalltransfers){:target="_blank"}. If you must run per-page logic, prefer [`OnPostTransferAsync`](/_articles/info/api/WebTwain_Acquire.md#onposttransferasync){:target="_blank"} to avoid blocking the scan pipeline.
+Assuming the pre-scanning settings are the same, please double check if there are any automatic actions after scanning pages. You may double check the call back functions of the [AcquireImage](/_articles/info/api/WebTwain_Acquire.md#acquireimage){:target="_blank"} function or check if you write any code in the [OnPostTransfer](/_articles/info/api/WebTwain_Acquire.md#onposttransfer){:target="_blank"} or [OnPostAllTransfers](/_articles/info/api/WebTwain_Acquire.md#onpostalltransfers){:target="_blank"} event. If you need to run some automatic actions  right after each page is scanned, it's recommended to use the [OnPostTransferAsync](/_articles/info/api/WebTwain_Acquire.md#onposttransferasync){:target="_blank"} event.
 
 If the scanning performance issue persists, please <a href="mailto:support@dynamsoft.com">contact us</a>.

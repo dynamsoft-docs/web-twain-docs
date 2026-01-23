@@ -7,14 +7,12 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, Canvas2D, Warning
 breadcrumbText: Warning message - Canvas2D Warning
 description: Canvas2D Warning
 date: 2022-10-13 18:34:42 +0800
-last_modified: 2026-01-21 14:54:50 -08:00
+last_modified: 2022-10-17 18:04:03 +0800
 ---
 
 # Error Troubleshooting
 
 ## Warning message - Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true.
-
-> Archived: This warning was fixed in Dynamic Web TWAIN 18.0. The steps below are only for projects pinned to versions prior to 18.0.
 
 ### Symptom
 
@@ -36,6 +34,7 @@ Step 1. Navigate to '<strong>../Resources/dynamsoft.webtwain.initiate.js</strong
 
 Step 2. Navigate to '<strong>../Resources/src/dynamsoft.viewer.js</strong>' replace all `getContext("2d")` to `getContext("2d",{willReadFrequently:true})`
 
-### Status
 
-Fixed in Dynamic Web TWAIN 18.0+. No action is needed on supported versions.
+### Planning
+
+It will be fixed in version 18.0 officially. 

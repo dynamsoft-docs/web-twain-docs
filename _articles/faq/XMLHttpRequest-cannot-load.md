@@ -50,5 +50,3 @@ Try uploading to the same domain or update the server side configuration to allo
 > If you are downloading a file, you might need to clear the browser cache because a cached file will not be requested again from the server, thus still no 'Access-Control-Allow-Origin' header will be presented.
 >
 > If you are using Windows Authentication, you may need to change the default setting of `withCredentials` in the `dynamsoft.webtwain.initiate.js` file. To do that, open the JS file, find `withCredentials:false` and change it to `withCredentials:true` .
-
-TODO: I can no longer find the keyword `withCredentials:false` in the latest `dynamsoft.webtwain.initiate.js`, it is now `withCredentials:!1`. Please advise on how this FAQ needs to be changed, or if it is still necessary at all.

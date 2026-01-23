@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, upgra
 breadcrumbText: How do I upgrade the end-user installation for all end users once I upgrade my project?
 description: How do I upgrade the end-user installation for all end users once I upgrade my project?
 date: 2021-12-11 06:47:21 +0800
-last_modified: 2025-03-31 00:00:00 +0800
+last_modified: 2022-10-14 14:05:08 +0800
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

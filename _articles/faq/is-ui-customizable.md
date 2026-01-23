@@ -7,11 +7,11 @@ keywords: Dynamic Web TWAIN, UI Customization, ui customizable
 breadcrumbText: Is the UI of the Dynamic Web TWAIN SDK fully customizable? What cannot be customized?
 description: Is the UI of the Dynamic Web TWAIN SDK fully customizable? What cannot be customized?
 date: 2021-12-08 03:32:59 +0800
-last_modified: 2026-01-21 16:19:08 -08:00
+last_modified: 2022-06-02 15:30:49 +0800
 ---
 
 # UI Customization
 
 ## Is the UI of the Dynamic Web TWAIN SDK fully customizable? What cannot be customized?
 
-Most UI is customizable: you can style or replace the viewer, thumbnail viewer, image editor, progress/loading indicators, and the install prompt (via `dynamsoft.webtwain.install.js`, e.g., `Dynamsoft._show_install_dialog`). You can also localize built-in error messages and other labels. What you cannot customize is the native scanner UI itself. See the full guide at [UI Elements and customization](/_articles/extended-usage/ui-customization.md){:target="_blank"}.
+The UI of the Dynamic web TWAIN SDK consists of the viewer, thumbnail viewer, image editor, among other HTML UI elements. The display language of the scan page can be customized. You can certainly create a scan page in your local language as the interface is all about HTML elements. Also, the built-in errors can be translated to your own language. The progress bar and image editor can also be customized. Most UI elements are fully customizable except for the scanner UI, which is not customizable.

@@ -7,11 +7,11 @@ keywords: Dynamic Web TWAIN, Image Viewer, resize view
 breadcrumbText: How can I resize the view of image (e.g. zoom in/out on an image)?
 description: How can I resize the view of image (e.g. zoom in/out on an image)?
 date: 2021-12-09 11:34:50 +0800
-last_modified: 2026-01-22 13:04:05 -08:00
+last_modified: 2022-06-10 04:40:03 +0800
 ---
 
 # Image Viewer
 
 ## How can I resize the view of image (e.g. zoom in/out on an image)?
 
-Use the viewer’s `zoom` property to change the zoom factor (enlarge or reduce the current page). See the API reference for details: [zoom](/_articles/info/api/WebTwain_Viewer.md#zoom){:target="_blank"}.
+You can resize the view of the image by using the zoom property of the viewer. It will return or set the zoom factor, and then the current page will be enlarged or reduced. You can find [here](/_articles/info/api/WebTwain_Viewer.md#zoom){:target="_blank"} a detail explanations of this property.
