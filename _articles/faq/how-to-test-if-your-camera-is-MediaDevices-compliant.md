@@ -23,3 +23,5 @@ last_modified: 2022-06-02 15:30:49 +0800
 ![Hardware-Scanners-Cameras-11](/assets/imgs/Hardware-Scanners-Cameras-11.png)
 
 - Try showing the video stream and capturing a frame to see if it works without any errors
+
+TODO: This demo seems not working with latest version. Please advice.

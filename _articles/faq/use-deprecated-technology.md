@@ -21,3 +21,5 @@ Before Chrome stopped the support for NPAPI, Dynamic Web TWAIN added HTML5 suppo
 Dynamsoft has kept support for the ActiveX edition of Dynamic Web TWAIN for customers who must use IE 8 or 9. However, we encourage customers to move away from ActiveX whenever possible.
 
 Please check this page for more information on [Dynamic Web TWAIN & ActiveX: Dynamic Web TWAIN Development - About ActiveX ](/_articles/indepth/development/activex.md){:target="_blank"}.
+
+TODO: This FAQ seems very outdated. Are we still offering ActiveX versions? Please advice.

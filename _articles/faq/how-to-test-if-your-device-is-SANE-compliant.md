@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, verify scanner, compatible, 
 breadcrumbText: How to test if your device is SANE compliant
 description: How to test if your device is SANE compliant
 date: 2021-07-14 18:55:57 +0800
-last_modified: 2022-06-02 15:30:49 +0800
+last_modified: 2026-01-21 16:13:08 -08:00
 ---
 
 # Capture/Image Source
@@ -20,7 +20,7 @@ There are 3 ways to verify whether your scanner is SANE compliant.
 
   - Open the [demo page](https://demo.dynamsoft.com/dwt/online_demo_scan.aspx) on [Linux]({{site.getstarted}}platform.html#browsers-on-linux)
 
-  > If you haven't installed the SDK, a dialog will show up for you to download and install it.
+  > If you haven't installed the Dynamic Web TWAIN Service, a dialog will show up for you to download and install it.
 
   - Make sure the scanner driver shows up in the scanner list
   ![Hardware-Scanners-Cameras-5](/assets/imgs/Hardware-Scanners-Cameras-5.png)
