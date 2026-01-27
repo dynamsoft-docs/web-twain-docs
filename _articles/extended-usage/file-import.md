@@ -9,12 +9,12 @@ description: Dynamic Web TWAIN SDK General Usage Guide - Loading Documents from 
 
 # Loading Documents from Files
 
-![TIP]
+> [!TIP]
 > Prerequisite: [DWT Initialization](/_articles/general-usage/initialization.md)
 
 On top of scanning images, DWT can also load documents from files on the file system, or files shared over the network. It can display, edit, and export these documents just the same as scanned images. This flexible design caters to mixed use, scanner-only, or file-only scenarios. We support the following file types: BMP, JPG, TIF, PNG, and PDF. DWT does not support all PDFs due to the complexities of the format, but the PDF rasterizer add-on does provide extra compatibility on top of base support in DWT. We can load in files through the following methods:
 
-![NOTE]
+> [!NOTE]
 > The PDF rasterizer add-on provides compatibility for a broader range of PDFs. Here we use the add-on script in the `html` head. For any loaded PDFs, the add-on rasterizes every page at the set resolution of 200 DPI. The PDF rasterizer can also selectively rasterize images only - check [`Dynamsoft.DWT.EnumDWT_ConvertMode`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_convertmode) and [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderoptions) for details.
 
 ## Loading Files from the Selection UI
