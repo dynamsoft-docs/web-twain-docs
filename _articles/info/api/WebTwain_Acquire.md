@@ -926,6 +926,10 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 </table>
 </div>
 
+**Usage notes**
+
+[`OnPostTransfer`](#onposttransfer), [`OnPostAllTransfers`](#onpostalltransfers) and [`OnPreAllTransfers`](#onprealltransfers) events are not triggered using `startScan()`. You can use the `funcScanStatus` callback instead.
+
 **Sample**
 
 <a href="https://demo.dynamsoft.com/Samples/dwt/Make-use-of-the-API-startScan/index.html" target="_blank">Make use of the API startScan </a>
