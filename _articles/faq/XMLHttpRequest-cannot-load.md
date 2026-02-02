@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, XMLHttpRequest
 breadcrumbText: XMLHttpRequest cannot load XXX
 description: XMLHttpRequest cannot load XXX
 date: 2021-12-03 23:26:46 +0800
-last_modified: 2022-06-02 15:30:49 +0800
+last_modified: 2026-01-23 06:35:12 -08:00
 ---
 
 # Error Troubleshooting
@@ -28,7 +28,7 @@ You are uploading or downloading to/from a web server which is in a different do
 
 ### Solution
 
-Try uploading to the same domain or update the server side configuration to allow cross domain requests. If you are using IIS, you can refer to the following configuration.
+Try uploading to the same domain or update the server-side configuration to allow cross-domain requests. If you are using IIS, you can refer to the following configuration.
 
 ```xml
 <system.webServer>
@@ -49,4 +49,8 @@ Try uploading to the same domain or update the server side configuration to allo
 >
 > If you are downloading a file, you might need to clear the browser cache because a cached file will not be requested again from the server, thus still no 'Access-Control-Allow-Origin' header will be presented.
 >
-> If you are using Windows Authentication, you may need to change the default setting of `withCredentials` in the `dynamsoft.webtwain.initiate.js` file. To do that, open the JS file, find `withCredentials:false` and change it to `withCredentials:true` .
+> If you need to send cookies/credentials (e.g., Windows Authentication), enable credentials via code:
+>
+> ```javascript
+> DWTObject.HTTPRequestswithCredentials = true; // adds withCredentials:true on upload requests
+> ```

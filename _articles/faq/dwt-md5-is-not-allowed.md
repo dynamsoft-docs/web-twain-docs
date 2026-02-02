@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, dwt-md5, Access-Control-Allo
 breadcrumbText: Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
 description: Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
 date: 2021-12-03 23:26:46 +0800
-last_modified: 2022-06-02 15:30:49 +0800
+last_modified: 2026-01-21 15:58:00 -08:00
 ---
 
 # Error Troubleshooting
@@ -16,15 +16,15 @@ last_modified: 2022-06-02 15:30:49 +0800
 
 ### Symptom
 
-When you fail to upload images, you may get this error
+When uploading images, the request fails with this CORS error.
 
 ### Cause
 
-`dwt-md5` is a default built-in header in `Dynamic Web TWAIN` . It is used for each uploading process to test the integrity of data. Since this is not a standard header, the browser will send an OPTIONS preflight request before the original request is sent to verify that this header is allowed. If not, the browser will return the above error.
+`dwt-md5` is a built-in header Dynamic Web TWAIN uses to validate upload integrity. Because it’s non-standard, browsers send a preflight OPTIONS request to confirm the header is allowed. If your server doesn’t allow it, the upload fails.
 
 ### Solution
 
-Update your server-side configuration file as per your environment. If you are using IIS, you can refer to the following configuration.
+Allow the `dwt-md5` header in your server’s CORS configuration. For IIS, add:
 
 ```xml
 <system.webServer>
