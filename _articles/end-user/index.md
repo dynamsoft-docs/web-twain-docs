@@ -11,6 +11,9 @@ date: 2026-02-02 13:43:40 +0800
 last_modified: 2026-02-02 13:43:40 +0800
 ---
 
+
+# End-User Guide
+
 This article aims at guiding you, an end-user of your company's web app, to scan documents using Dynamic Web TWAIN.
 
 ## Install Service
@@ -57,6 +60,7 @@ More resources:
 
 * [Configuring the Dynamic Web TWAIN Service](/_articles/extended-usage/dynamsoft-service-configuration.md)
 * [What does the Dynamic Web TWAIN Service do on the end-user machine?](/_articles/faq/what-does-dynamsoft-service-do-on-end-user-machine.md)
+* [I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?](/_articles/faq/service-prompting-to-install-repeatedly.md)
 * [How to uninstall Dynamic Web TWAIN Service?](/_articles/faq/how-to-uninstall-dynamsoft-service.md)
 
 
