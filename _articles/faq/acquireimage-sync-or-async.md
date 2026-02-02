@@ -15,4 +15,3 @@ last_modified: 2022-06-10 04:40:03 +0800
 ## Is the AcquireImage() method synchronous or asynchronous?
 
 [AcquireImage()](/_articles/info/api/WebTwain_Acquire.md#acquireimage){:target="_blank"} is an asynchronous method, regardless of whether it includes a callback function or not.
-b
