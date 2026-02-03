@@ -189,6 +189,8 @@ tree_list:
         path: /info/schedule/deprecated.html
   - name: Upgrade Instructions
     path: /indepth/development/upgrade.html
+  - name: End-User Guide 
+    path: /end-user/index.html
   - name: Resources 
     path: /about/resources.html
   - name: Support

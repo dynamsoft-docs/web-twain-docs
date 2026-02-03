@@ -3885,8 +3885,8 @@ Load image from the specified storage folder.
 ```typescript
 loadFromLocalStorage (
     settings:{
-        uid: string,
-        password?:string,
+        uid: string;
+        password?:string;
     }
 ): Promise<{oriImageId: string, newImageId: string}[]>;
 ```
@@ -3935,8 +3935,8 @@ Remove the specified storage folder.
 ```typescript
 removeLocalStorage(
   settings:{
-    uid: string,
-    password?: string,
+    uid: string;
+    password?: string;
   }
 ): Promise<boolean>;
 ```

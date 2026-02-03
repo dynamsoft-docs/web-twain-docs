@@ -90,6 +90,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 - [Deprecated]({{site.info}}schedule/deprecated.html)
 
 ### [Upgrade Instructions]({{site.indepth}}development/upgrade.html)
+### [End-User Guide](/_articles/end-user/index.md)
 ### [Resources]({{site.about}}resources.html)
 ### [Support]({{site.about}}getsupport.html)
 ### [FAQ]({{site.faq}}index.html)
