@@ -22,7 +22,7 @@ When you visit your company's web app and want to scan for the first time, you m
 
 Service Installation Dialog:
 
-![service installation dialog](/assets/imgs/install-dialog.png)
+![service installation dialog](/assets/imgs/install-dialog.png){: width="658" height="365"}
 
 If you still see the dialog after installation, try enabling [access to apps on your device](#allow-access-to-local-apps) and checking the [list of possible reasons](/_articles/faq/service-prompting-to-install-repeatedly.md).
 
@@ -32,11 +32,11 @@ In latest browsers, you may need to grant access to apps on your device to make 
 
 When it is asking for permission, please click "Allow".
 
-![permission dialog](/assets/imgs/end-user/permission-dialog.jpg)
+![permission dialog](/assets/imgs/end-user/permission-dialog.jpg){: width="467" height="272"}
 
 If you accidentally block the access, you can reset it as shown in the following dialog.
 
-![site settings](/assets/imgs/end-user/site-settings.jpg)<a id="site-settings"></a>
+![site settings](/assets/imgs/end-user/site-settings.jpg){: width="623" height="489"}<a id="site-settings"></a>
 
 The UI may vary according to different browsers and browser versions. The following shows the different UIs. Edge, Chrome and other Chromium-based browsers have similar designs, so only Chrome is listed here.
 
@@ -64,7 +64,7 @@ FireFox Nightly<a id="firefox"></a>:
 
 1. Permission asking dialog:
 
-   ![site settings](/assets/imgs/end-user/firefox-permission-dialog.jpg)
+   ![permission dialog](/assets/imgs/end-user/firefox-permission-dialog.jpg)
 
 2. Site settings:
 
