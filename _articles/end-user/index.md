@@ -28,7 +28,7 @@ If you still see the dialog after installation, try enabling [access to apps on 
 
 ## Allow Access to Local Apps
 
-In latest browsers, you also need to grant access to apps on your device to make proper scanning.
+In latest browsers, you may need to grant access to apps on your device to make proper scanning.
 
 When it is asking for permission, please click "Allow".
 
@@ -36,7 +36,7 @@ When it is asking for permission, please click "Allow".
 
 If you accidentally block the access, you can reset it as shown in the following dialog.
 
-![site settings](/assets/imgs/end-user/site-settings.jpg)
+![site settings](/assets/imgs/end-user/site-settings.jpg)<a id="site-settings"></a>
 
 The UI may vary according to different browsers and browser versions.
 
