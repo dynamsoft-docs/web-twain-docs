@@ -40,7 +40,13 @@ If you accidentally block the access, you can reset it as shown in the following
 
 The UI may vary according to different browsers and browser versions. The following shows the different UIs. Edge, Chrome and other Chromium-based browsers have similar designs, so only Chrome is listed here.
 
-Chrome 145+<a id="chrome145"></a>:
+<div class="multi-panel-switching-prefix"></div>
+
+- [Chrome 145+](#chrom145)
+- [Chrome 142-144](#chrom142)
+- [FireFox](#firefox)
+
+<div class="multi-panel-start"></div>
 
 1. Permission asking dialog:
 
@@ -50,7 +56,9 @@ Chrome 145+<a id="chrome145"></a>:
 
    ![site settings dialog chrome 145](/assets/imgs/end-user/chrome-145-permission-dialog.jpg)
 
-Chrome 142-144<a id="chrome142"></a>:
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
 
 1. Permission asking dialog:
 
@@ -60,7 +68,9 @@ Chrome 142-144<a id="chrome142"></a>:
 
    ![site settings](/assets/imgs/end-user/site-settings.jpg)
 
-FireFox Nightly<a id="firefox"></a>:
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
 
 1. Permission asking dialog:
 
@@ -69,6 +79,10 @@ FireFox Nightly<a id="firefox"></a>:
 2. Site settings:
 
    ![site settings](/assets/imgs/end-user/firefox-site-settings.jpg)
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>
 
 
 ## Perform Scanning
