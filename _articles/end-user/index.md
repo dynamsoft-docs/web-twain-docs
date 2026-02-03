@@ -38,7 +38,38 @@ If you accidentally block the access, you can reset it as shown in the following
 
 ![site settings](/assets/imgs/end-user/site-settings.jpg)<a id="site-settings"></a>
 
-The UI may vary according to different browsers and browser versions.
+The UI may vary according to different browsers and browser versions. The following shows the different UIs. Edge, Chrome and other Chromium-based browsers have similar designs, so only Chrome is listed here.
+
+Chrome 145+<a id="chrome145"></a>:
+
+1. Permission asking dialog:
+
+   ![permission dialog chrome 145](/assets/imgs/end-user/chrome-145-permission-dialog.jpg)
+   
+2. Site settings:
+
+   ![site settings dialog chrome 145](/assets/imgs/end-user/chrome-145-permission-dialog.jpg)
+
+Chrome 142-144<a id="chrome142"></a>:
+
+1. Permission asking dialog:
+
+   ![permission dialog](/assets/imgs/end-user/permission-dialog.jpg)
+   
+2. Site settings:
+
+   ![site settings](/assets/imgs/end-user/site-settings.jpg)
+
+FireFox Nightly<a id="firefox"></a>:
+
+1. Permission asking dialog:
+
+   ![site settings](/assets/imgs/end-user/firefox-permission-dialog.jpg)
+
+2. Site settings:
+
+   ![site settings](/assets/imgs/end-user/firefox-site-settings.jpg)
+
 
 ## Perform Scanning
 
