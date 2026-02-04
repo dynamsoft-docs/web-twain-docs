@@ -14,7 +14,7 @@ last_modified: 2026-02-02 13:43:40 +0800
 
 # End-User Guide
 
-This article aims at guiding you, an end-user of your company's web app, to scan documents using Dynamic Web TWAIN.
+This article aims at guiding you, an end user of your company's web app, to scan documents using Dynamic Web TWAIN.
 
 ## Install Service
 
@@ -117,9 +117,9 @@ Now, visit your app and try to scan documents. Here, we are using Dynamsoft's [o
 
 ![web demo](/assets/imgs/end-user/web-demo.jpg)
 
-If it does not detect any scanners, make sure that you have installed the driver. You can find the driver from scanner manufacturer's support site.
+If it does not detect any scanners, make sure that you have installed the driver. You can find the driver from the scanner manufacturer's support site.
 
-Canon's Driver Download Site:
+Canon's Driver Download Site (e.g.):
 
 ![canon driver](/assets/imgs/end-user/canon-driver-download-site.jpg)
 
