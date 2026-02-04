@@ -22,7 +22,7 @@ When you visit your company's web app and want to scan for the first time, you m
 
 Service Installation Dialog:
 
-![service installation dialog](/assets/imgs/install-dialog.png){: width="658" height="365"}
+![service installation dialog](/assets/imgs/install-dialog.png)
 
 If you still see the dialog after installation, try enabling [access to apps on your device](#allow-access-to-local-apps) and checking the [list of possible reasons](/_articles/faq/service-prompting-to-install-repeatedly.md).
 
@@ -30,7 +30,7 @@ If you still see the dialog after installation, try enabling [access to apps on 
 
 In latest browsers, you may need to grant access to apps on your device to make proper scanning.
 
-When it is asking for permission, please click "Allow".
+When it is asking for permission, please click "**Allow**".
 
 ![permission dialog](/assets/imgs/end-user/chrome-142-permission-dialog.jpg){: id="permission-dialog"}
 
