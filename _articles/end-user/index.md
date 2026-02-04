@@ -38,7 +38,7 @@ If you accidentally block the access, you can reset it as shown in the following
 
 ![site settings](/assets/imgs/end-user/chrome-142-site-settings.jpg){: id="site-settings"}
 
-The UI may vary according to different browsers and browser versions. The following shows the different UIs. Edge, Chrome and other Chromium-based browsers have similar designs, so only Chrome is listed here.
+The UI may vary according to different browsers and browser versions. The following shows the different UIs.
 
 <div class="multi-panel-switching-prefix"></div>
 
