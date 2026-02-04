@@ -32,19 +32,21 @@ In latest browsers, you may need to grant access to apps on your device to make 
 
 When it is asking for permission, please click "Allow".
 
-![permission dialog](/assets/imgs/end-user/permission-dialog.jpg){: width="467" height="272"}
+![permission dialog](/assets/imgs/end-user/chrome-142-permission-dialog.jpg){: id="permission-dialog"}
 
 If you accidentally block the access, you can reset it as shown in the following dialog.
 
-![site settings](/assets/imgs/end-user/site-settings.jpg){: width="623" height="489"}<a id="site-settings"></a>
+![site settings](/assets/imgs/end-user/chrome-142-site-settings.jpg){: id="site-settings"}
 
 The UI may vary according to different browsers and browser versions. The following shows the different UIs. Edge, Chrome and other Chromium-based browsers have similar designs, so only Chrome is listed here.
 
 <div class="multi-panel-switching-prefix"></div>
 
-- [Chrome 145+](#chrom145)
-- [Chrome 142-144](#chrom142)
-- [FireFox](#firefox)
+- Chrome 145+
+- Chrome 142-144
+- Edge 145+
+- Edge 142-144
+- FireFox
 
 <div class="multi-panel-start"></div>
 
@@ -54,7 +56,7 @@ The UI may vary according to different browsers and browser versions. The follow
    
 2. Site settings:
 
-   ![site settings dialog chrome 145](/assets/imgs/end-user/chrome-145-permission-dialog.jpg)
+   ![site settings dialog chrome 145](/assets/imgs/end-user/chrome-145-site-settings.jpg)
 
 <div class="multi-panel-end"></div>
 
@@ -62,11 +64,35 @@ The UI may vary according to different browsers and browser versions. The follow
 
 1. Permission asking dialog:
 
-   ![permission dialog](/assets/imgs/end-user/permission-dialog.jpg)
+   ![permission dialog](/assets/imgs/end-user/chrome-142-permission-dialog.jpg)
    
 2. Site settings:
 
-   ![site settings](/assets/imgs/end-user/site-settings.jpg)
+   ![site settings](/assets/imgs/end-user/chrome-142-site-settings.jpg)
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+1. Permission asking dialog:
+
+   ![permission dialog](/assets/imgs/end-user/edge-145-permission-dialog.jpg)
+   
+2. Site settings:
+
+   ![site settings](/assets/imgs/end-user/edge-145-site-settings.jpg)
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+1. Permission asking dialog:
+
+   ![permission dialog](/assets/imgs/end-user/edge-142-permission-dialog.jpg)
+   
+2. Site settings:
+
+   ![site settings](/assets/imgs/end-user/edge-142-site-settings.jpg)
 
 <div class="multi-panel-end"></div>
 
@@ -109,4 +135,35 @@ More resources:
 * [How to uninstall Dynamic Web TWAIN Service?](/_articles/faq/how-to-uninstall-dynamsoft-service.md)
 
 
-
+<script>
+function updateImageBasedOnBrowser(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const browser = urlParams.get("browser");
+    const browserVersion = urlParams.get("browserversion");
+    const permissionDialog = document.getElementById('permission-dialog');
+    const siteSettingsDialog = document.getElementById("site-settings");
+    if (urlParams) {
+      if (browser === "chrome") {
+        if (browserVersion >= 145) {
+          permissionDialog.src = "/web-twain/docs/assets/imgs/end-user/chrome-145-permission-dialog.jpg";
+          siteSettingsDialog.src = "/web-twain/docs/assets/imgs/end-user/chrome-145-site-settings.jpg";
+        }else{
+          permissionDialog.src = "/web-twain/docs/assets/imgs/end-user/chrome-142-permission-dialog.jpg";
+          siteSettingsDialog.src = "/web-twain/docs/assets/imgs/end-user/chrome-142-site-settings.jpg";
+        }
+      }else if (browser === "firefox") {
+          permissionDialog.src = "/web-twain/docs/assets/imgs/end-user/firefox-permission-dialog.jpg";
+          siteSettingsDialog.src = "/web-twain/docs/assets/imgs/end-user/firefox-site-settings.jpg";
+      }else if (browser === "edge" ) {
+        if (browserVersion >= 145) {
+          permissionDialog.src = "/web-twain/docs/assets/imgs/end-user/edge-145-permission-dialog.jpg";
+          siteSettingsDialog.src = "/web-twain/docs/assets/imgs/end-user/edge-145-site-settings.jpg";
+        }else{
+          permissionDialog.src = "/web-twain/docs/assets/imgs/end-user/edge-142-permission-dialog.jpg";
+          siteSettingsDialog.src = "/web-twain/docs/assets/imgs/end-user/edge-142-site-settings.jpg";
+        }
+      }
+    }
+}
+updateImageBasedOnBrowser();
+</script>
