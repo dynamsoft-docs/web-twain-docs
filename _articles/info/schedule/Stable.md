@@ -10,6 +10,12 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.3.1 (02/11/2026) 
+
+* Updated the checking of the local network access.
+* Updated third-party libraries to enhance security.
+* Fixed the params of a local network request, which causes failure to connect to the service after installation (only on Safari 26.2).
+
 ## 19.3 (12/11/2025) 
 
 ### New Features
@@ -136,6 +142,10 @@ Updated the names of headers for the REST API.
 
 - Fixed a CORS request blocked error which also triggers a prompt to install the Dynamic Web TWAIN Service.
 - Fixed Vite runtime errors caused by polyfills and resource path misconfiguration.
+
+## 18.5.4 (02/11/2026)
+
+Updated third-party libraries to enhance security.
 
 ## 18.5.3 (01/14/2026)
 
