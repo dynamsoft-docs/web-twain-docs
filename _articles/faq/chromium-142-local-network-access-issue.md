@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2026-02-11 11:25:00 +0800
+last_modified: 2026-02-11 12:00:00 +0800
 ---
 
 # Error Troubleshooting
@@ -62,11 +62,11 @@ Observed behavior depends on Chromium version and Dynamic Web TWAIN (DWT) versio
 |------------------|-------------|-----------------------------|
 | Chromium 142-144 | < 18.5.0    | Download Prompt             |
 | Chromium 142-144 | >= 18.5.0   | Blank Images after Scanning |
-| Chromium 145+    | < 18.5.0    | Download Prompt             |
-| Chromium 145+    | >= 18.5.0   | Blank Images after Scanning |
+| Chromium 145+ (*)    | Any         | Download Prompt             |
 
 > [!NOTE]
-> As of **February 11, 2026**, Chrome 145 has not started blocking WebSocket requests through this permission gate yet. This may change in future browser versions.
+> (*) Blocking WebSocket requests is on Chromium's roadmap, and may be enforced in a future release.  
+> Other browsers are also introducing local network permission controls.
 
 ### Root Cause
 
