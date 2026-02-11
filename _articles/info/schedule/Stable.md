@@ -14,7 +14,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Improved the local network access check. Screenshots have been moved to a separate web page (which lists UI differences across browsers/versions) instead of being embedded directly in the dialogs.
 * Updated third-party libraries to enhance security.
-* Fixed an issue with local network request parameters that caused connection failures after installation (affecting only Safari 26.2).
+* Fixed an issue with local network request parameters that caused connection failures after installation (affecting only Safari 26.2+).
 
 ## 19.3 (12/11/2025) 
 
