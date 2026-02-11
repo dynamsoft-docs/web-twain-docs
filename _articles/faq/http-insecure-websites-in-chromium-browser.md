@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrom
 breadcrumbText: Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?
 description: Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?
 date: 2021-09-24 07:56:47 +0800
-last_modified: 2025-12-03 10:44:01 +0800
+last_modified: 2026-02-11 10:55:00 -0500
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
@@ -17,7 +17,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 ### Symptom
 
-When accessing a public HTTP website that uses the Dynamic Web TWAIN SDK with Chrome versions 94 and above, you may encounter repeated prompts asking you to download and install the Dynamic Web TWAIN Service, also known as the Dynamsoft Service. The same behavior may occur in Microsoft Edge because it is built on the Chromium engine.
+When users access a public HTTP website that uses the Dynamic Web TWAIN SDK in Chromium-based browsers (for example, Chrome and Edge), they may repeatedly see prompts to install the Dynamic Web TWAIN Service (Dynamsoft Service).
 
 In the browser console, you may see the following **error message**
 
@@ -26,40 +26,48 @@ Access to XMLHttpRequest at 'http://127.0.0.1:****' from origin 'http://yourwebs
 The request client is not a secure context and the resource is in more-private address space `local`.
 ```
 
-However, the same issue doesn't exist in Chrome v93 and earlier version or other web browsers like Firefox, Internet Explorer and Safari.
+This behavior is primarily tied to Chromium security enforcement and may vary by browser and version.
 
 ### Reason
 
-Google introduced a new security feature from Chrome v94 to block any requests to private networks from insecure public websites. More detail can be found at [https://developer.chrome.com/blog/private-network-access-update/](https://developer.chrome.com/blog/private-network-access-update/)
+This is caused by browser security policy changes, not by a bug in Dynamic Web TWAIN itself.
 
-Dynamic Web TWAIN utilizes a local service - called 'Dynamic Web TWAIN Service' to support document scanning from physical scanners. Therefore, your web scan page would need to make requests to localhost or 127.0.0.1 to communicate with the local service. However, if your website is hosted under HTTP, by using or upgrading to Chrome v94, the connection from your insecure public website to the private network (i.e., localhost/127.0.0.1) is blocked.
+Starting from Chrome 94, Chromium introduced stronger Private Network Access restrictions that block requests from insecure public origins (HTTP) to more private addresses such as `localhost` / `127.0.0.1`. More detail can be found at [https://developer.chrome.com/blog/private-network-access-update/](https://developer.chrome.com/blog/private-network-access-update/)
 
-If the web page couldn't connect to the Dynamic Web TWAIN Service successfully, its default behavior is to prompt the dialog to install the service. That's why your end users would see the dialog appearing repeatedly.
+Dynamic Web TWAIN uses a local service to communicate with physical scanners, so your web page must call `localhost` or `127.0.0.1`. When the page itself is served over HTTP, modern Chromium security rules can block that communication path.
+
+When the page cannot connect to the local service, the SDK may trigger the service installation prompt repeatedly, which is the symptom users see.
 
 ### Resolution
 
+The long-term direction from browser vendors is stricter security on insecure origins.  
+Any HTTP workaround should be treated as temporary and may be removed in future browser releases.
+
 #### Update your public website from HTTP to HTTPS
 
-As suggested by Google, the ultimate solution is to update your website from HTTP to HTTPS.  
+As suggested by Google and Chromium security guidance, the only durable solution is to migrate your public website from HTTP to HTTPS.  
 Once you update your website to HTTPS, please note that you also need to set [IfSSL](/_articles/info/api/WebTwain_IO.md#ifssl) to 'true' and specify the secure port number for SSL connection via the [HTTPPort](/_articles/info/api/WebTwain_IO.md#httpport) API before calling the HTTP upload method of the SDK.
 
 \*_If you are using an older version of Dynamic Web TWAIN (v12.3 or earlier), you need to upgrade your SDK to newer version, please contact <support@dynamsoft.com> for further assistance._
 
 #### Workarounds if you need to keep HTTP for some time
 
-If you need time to update your website, you may try one of the following workarounds:
+If you need limited transition time before migrating to HTTPS, you may try one of the following temporary workarounds:
 
-1. Registering for [Google's deprecation trials](https://developer.chrome.com/blog/origin-trials/#deprecation-trials), which will allow developers to request a time extension.  
-   During the trial period, your insecure public website will not be affected by the security upgrade until [Chrome 106](https://chromestatus.com/feature/5436853517811712) - to be released by September 27, 2022.
+1. [Current / temporary] In current Chrome versions, you can try the `unsafely-treat-insecure-origin-as-secure` flag as a temporary workaround for specific HTTP origins.
+   Step 1: visit chrome://flags/#unsafely-treat-insecure-origin-as-secure  
+   Step 2: in "Insecure origins treated as secure", add your HTTP website origin (for example: `http://yourwebsiteURL`)  
+   Step 3: relaunch Chrome  
+   > Note: This is a temporary workaround for testing or controlled environments, and this flag may also be deprecated and removed in future Chrome versions. For policy background on insecure origins and powerful features, see Chromium's proposal: [Deprecating Powerful Features on Insecure Origins](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins/).
 
-2. If you have administrative control over your end users, you can re-enable the deprecated feature using either of the following policies:  
+2. [Archived: Chrome 92-136] If you have administrative control over your end users, older Chrome versions supported re-enabling the deprecated behavior through the following enterprise policies:  
    [InsecurePrivateNetworkRequestsAllowed](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowed)  
    [InsecurePrivateNetworkRequestsAllowedForUrls](https://chromeenterprise.google/policies/#InsecurePrivateNetworkRequestsAllowedForUrls)  
-   For more details about managing policies for your users, see refer to google's [help center article](https://support.google.com/chrome/a/answer/9037717).
+   For more details about managing policies for your users, see Google's [help center article](https://support.google.com/chrome/a/answer/9037717).  
+   > Note: These policy-based workarounds are archived for older Chrome versions only. They were removed beginning with Chrome 137.
 
-3. If you need to disable the block for an end user, there is a Chrome setting available.
-   see the steps below  
+3. [Archived: Prior to Chrome 117] In older Chrome versions, end users could disable this block through a browser flag.
    Step 1: visit chrome://flags/#block-insecure-private-network-requests  
-   Step 2: set 'Block insecure private network requests' to Disabled  
-   ![block-insecure-private-network-request](/assets/imgs/block-insecure-private-network-request.png)
-   > Note:This configuration is available in Chrome 94. Settings may have changed in newer versions. Please contact [Dynamsoft](https://www.dynamsoft.com/contact/) for further assistance.
+   Step 2: set "Block insecure private network requests" to `Disabled`  
+   ![block-insecure-private-network-request](/assets/imgs/block-insecure-private-network-request.png)  
+   > Note: This workaround is archived for older Chrome versions only. The [`block-insecure-private-network-requests`](https://developer.chrome.com/blog/private-network-access-update) flag was removed beginning with Chrome 117.
