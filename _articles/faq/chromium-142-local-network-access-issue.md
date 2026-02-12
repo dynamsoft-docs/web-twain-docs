@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2026-02-11 12:00:00 +0800
+last_modified: 2026-02-11 12:35:00 +0800
 ---
 
 # Error Troubleshooting
@@ -19,7 +19,7 @@ last_modified: 2026-02-11 12:00:00 +0800
 
 ### Overview
 
-Starting in **Chromium-based browsers v142+** (released October 28, 2025), including Chrome, Edge, Brave, and Opera, Dynamic Web TWAIN Service may not work as expected due to **Local Network Access (LNA)** restrictions.
+Local Network Access (LNA) is a browser security model that has been enforced in Chromium-based browsers since version 142 (released October 28, 2025), including Chrome, Edge, Brave, and Opera. It blocks web apps from reaching local or loopback targets unless the user explicitly grants permission, which can affect Dynamic Web TWAIN Service behavior.
 
 These restrictions limit requests from **public network locations** to **local or loopback locations** unless the required site permission is granted.
 
@@ -30,9 +30,14 @@ Starting in **Chrome 145**, the site-setting label changed from one permission t
 
 Dynamic Web TWAIN Service communicates with `localhost` / `127.0.0.1`, so **Local Network** (`loopback-network`) is the key permission for most deployments.
 
+When your page first requests local access, Chromium will show an LNA permission prompt.  
+This FAQ and the symptoms below apply when users dismiss this prompt or click **Block**.
+
+![LNA prompt](/assets/imgs/local-network-access/LNA-prompt.png)
+
 ### Symptoms
 
-You may experience one or more of the following:
+If the initial LNA prompt is dismissed or blocked, you may experience one or more of the following:
 
 #### **1) Browser repeatedly prompts to download the service**
 The browser asks the user to download/install the Dynamic Web TWAIN Service even though it is already installed.
