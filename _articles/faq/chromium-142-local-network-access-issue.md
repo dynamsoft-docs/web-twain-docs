@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2026-02-11 12:35:00 +0800
+last_modified: 2026-02-12 10:20:00 -0800
 ---
 
 # Error Troubleshooting
