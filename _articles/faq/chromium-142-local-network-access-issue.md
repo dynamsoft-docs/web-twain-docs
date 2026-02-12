@@ -94,7 +94,7 @@ Dynamic Web TWAIN relies on a locally installed service that listens on a loopba
 
 - Navigate to your Dynamic Web TWAIN page.
 - Click the lock/settings icon in the browser address bar.
-- In **Chrome 142-144**, ensure **Local Network Access** is enabled.
+- In **Chrome 142-144**, ensure **Local Network Access** (`local-network-access`) is `Allow`.
 - In **Chrome 145+**, check:
   - **Local Network** (`loopback-network`) is `Allow` (required for `localhost` / `127.0.0.1`)
   - **Apps on device** (`local-network`) is `Allow` only if your app also needs private-network device access
