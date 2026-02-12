@@ -25,10 +25,10 @@ These restrictions limit requests from **public network locations** to **local o
 
 Starting in **Chrome 145**, the site-setting label changed from one permission to two:
 
-- `loopback-network` shown as **Local Network**
-- `local-network` shown as **Apps on device**
+- `loopback-network` shown as **Apps on device**
+- `local-network` shown as **Local Network**
 
-Dynamic Web TWAIN Service communicates with `localhost` / `127.0.0.1`, so **Local Network** (`loopback-network`) is the key permission for most deployments.
+Dynamic Web TWAIN Service communicates with `localhost` / `127.0.0.1`, so **Apps on device** (`loopback-network`) is the key permission for most deployments.
 
 When your page first requests local access, Chromium will show an LNA permission prompt.  
 This FAQ and the symptoms below apply when users dismiss this prompt or click **Block**.
@@ -96,8 +96,8 @@ Dynamic Web TWAIN relies on a locally installed service that listens on a loopba
 - Click the lock/settings icon in the browser address bar.
 - In **Chrome 142-144**, ensure **Local Network Access** (`local-network-access`) is `Allow`.
 - In **Chrome 145+**, check:
-  - **Local Network** (`loopback-network`) is `Allow` (required for `localhost` / `127.0.0.1`)
-  - **Apps on device** (`local-network`) is `Allow` only if your app also needs private-network device access
+  - **Apps on device** (`loopback-network`) is `Allow` (required for `localhost` / `127.0.0.1`)
+  - **Local Network** (`local-network`) is `Allow` only if your app also needs private-network device access
 
 ![local-network.png](/assets/imgs/local-network-access/local-network.png)
 
@@ -119,7 +119,7 @@ Please refer to:
 **a) If running inside an `iframe`**
 
 > [!IMPORTANT]
-> If Dynamic Web TWAIN runs inside a cross-origin iframe, local-network permissions must be explicitly allowed in the iframe `allow` attribute.
+> If Dynamic Web TWAIN runs inside a cross-origin iframe, `loopback-network` permissions must be explicitly allowed in the iframe `allow` attribute.
 > If the iframe is same-origin, no additional iframe permission configuration is required.
 
 For Chrome 145+, use `loopback-network` (and `local-network` only if needed). For older versions, include `local-network-access`.
