@@ -65,9 +65,10 @@ Observed behavior depends on Chromium version and Dynamic Web TWAIN (DWT) versio
 
 | Browser Version  | DWT Version | Resulting Symptom           |
 |------------------|-------------|-----------------------------|
-| Chromium 142-144 | < 18.5.0    | Download Prompt             |
-| Chromium 142-144 | >= 18.5.0   | Blank Images after Scanning |
-| Chromium 145+ (*)    | Any         | Download Prompt             |
+| Chromium 142+ | < 18.5.0    | Download Prompt             |
+| Chromium 142+ | >= 18.5.0, < 19.3   | Blank Images after Scanning |
+| Chromium 142+ | >= 19.3   | Permission Prompt |
+| Chromium future version blocking WebSocket(*) | Any   | Download Prompt |
 
 > [!NOTE]
 > (*) Blocking WebSocket requests is on Chromium's roadmap, and may be enforced in a future release.  
