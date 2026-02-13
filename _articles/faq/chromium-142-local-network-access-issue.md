@@ -218,8 +218,6 @@ The key improvements include:
 
   *Dialog 2 - Service Installation*
 
-  Clicking "Guide" opens the permission guidance dialog shown above.
-
 - **Latest popup screenshots hosted externally (v19.3.1+)**  
   Because Chromium updates native permission popups frequently, static popup screenshots were removed from this FAQ in v19.3.1.
   Use this page for the latest screenshots:
