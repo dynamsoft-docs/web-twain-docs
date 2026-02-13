@@ -204,19 +204,26 @@ These changes do not alter or bypass Chromium's security model. They make permis
 
 The key improvements include:
 
+- **Guide the user to grant local network access**   
+  If the service is installed (detected with WebSocket) and the access to the local service is not through or the detected permission is "prompt", prompt the user to grant access.
+
+  *Dialog 1 - Permission Granting Guidance*
+
+  ![permission granting dialog](/assets/imgs/local-network-access/permission-granting-dialog.png)
+
 - **Explicit detection of blocked local network access**  
-  When the browser blocks communication with the local service, a clear dialog explains the cause and directs users to this FAQ.
+  If the permission can be detected and is "denied", a clear dialog explains the cause and directs users to a guide, which tells how to enable the permission in site settings.
 
   ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.png)
 
-  *Dialog 1 - Permission Guidance*
+  *Dialog 2 - Site Settings Guidance*
 
 - **Clearer messaging during service installation**  
   The service installation dialog explains that connection failure may be caused either by missing service installation or denied local-network permission.
 
   ![dialog installation](/assets/imgs/local-network-access/service-installation-dialog.png)
 
-  *Dialog 2 - Service Installation*
+  *Dialog 3 - Service Installation*
 
 - **Latest popup screenshots hosted externally (v19.3.1+)**  
   Because Chromium updates native permission popups frequently, static popup screenshots were removed from this FAQ in v19.3.1.
