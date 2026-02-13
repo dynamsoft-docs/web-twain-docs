@@ -7,33 +7,47 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0800
-last_modified: 2025-12-17 16:00:00 +0800
+last_modified: 2026-02-12 10:20:00 -0800
 ---
 
 # Error Troubleshooting
 
 > [!IMPORTANT]
-> This is a newly developing issue, and as such the information in this article may change over time.
+> This is an evolving browser behavior. Details in this article may change as Chromium updates Local Network Access.
 
-## Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later
+## Error message - CORS errors caused by local network access permissions in Chromium 142 and later
 
 ### Overview
 
-Starting in **Chromium-based browsers v142+** (released Oct 28, 2025)—including Chrome, Edge, Brave, and Opera—Dynamsoft Web TWAIN Service may not work as expected due to new **Local Network Access (LNA)** restrictions that limit requests **from public network locations to private and loopback network locations**.
+Local Network Access (LNA) is a browser security model that has been enforced in Chromium-based browsers since version 142 (released October 28, 2025), including Chrome, Edge, Brave, and Opera. It blocks web apps from reaching local or loopback targets unless the user explicitly grants permission, which can affect Dynamic Web TWAIN Service behavior.
+
+These restrictions limit requests from **public network locations** to **local or loopback locations** unless the required site permission is granted.
+
+Starting in **Chrome 145**, the site-setting label changed from one local network access permission  to two:
+
+- `loopback-network` shown as **Apps on device**
+- `local-network` shown as **Local Network**
+
+Dynamic Web TWAIN Service communicates with `localhost` / `127.0.0.1`, so **Apps on device** (`loopback-network`) is the key permission for most deployments.
+
+When your page first requests local access, Chromium will show an LNA permission prompt.  
+This FAQ and the symptoms below apply when users dismiss this prompt or click **Block**.
+
+![LNA prompt](/assets/imgs/local-network-access/LNA-prompt.png)
 
 ### Symptoms
 
-You may experience one or more of the following:
+If the initial LNA prompt is dismissed or blocked, you may experience one or more of the following:
 
 #### **1) Browser repeatedly prompts to download the service**
-The browser asks the user to download/install the Dynamsoft Web TWAIN Service even though it is already installed.
+The browser asks the user to download/install the Dynamic Web TWAIN Service even though it is already installed.
 
 ![DWT_installer.png](/assets/imgs/DWT_installer.png)
 
 #### **2) Initialization succeeds, but scanning / loading returns blank**
 Initialization appears successful, but scanned or loaded images are blank.
 
-The browser console (F12 → Console) may show a CORS denial similar to:
+The browser console (`F12` -> `Console`) may show a CORS denial similar to:
 
 ```shell
 Access to fetch at 'https://127.0.0.1:18623/fa/VersionInfo?ts=1761893667670'
@@ -41,153 +55,188 @@ from origin 'https://your-domain.com' has been blocked by CORS policy:
 Permission was denied for this request to access the `unknown` address space.
 ```
 
-This error occurs because the web page is loaded from a public network origin (for example, `https://your-domain.com`) and is attempting to connect to a loopback network location (`127.0.0.1`), which Chrome now treats as a protected local network request.
+This happens because a page on a public origin (for example, `https://your-domain.com`) is trying to access a loopback address (`127.0.0.1`), which Chromium now treats as a protected local-network request.
 
 ---
 
 #### Version-Specific Behavior
 
-The observed behavior depends on Chromium browser version and Dynamic Web TWAIN (DWT) version:
+Observed behavior depends on Chromium version and Dynamic Web TWAIN (DWT) version:
 
-| Browser Version   | DWT Version      | Resulting Symptom           |
-|-------------------|------------------|-----------------------------|
-| Chromium 142      | < 18.5.0         | Download Prompt             |
-| Chromium 142      | ≥ 18.5.0         | Blank Images after Scanning |
-| Chromium 145+ (*) | Any              | Download Prompt             |
+| Browser Version  | DWT Version | Resulting Symptom           |
+|------------------|-------------|-----------------------------|
+| Chromium 142+ | < 18.5.0    | Service Installation Prompt             |
+| Chromium 142+ | >= 18.5.0, < 19.3   | Blank Images after Scanning |
+| Chromium 142+ | >= 19.3   | Permission Prompt |
+| Chromium future version blocking WebSocket(*) | Any   | Service Installation Prompt |
 
-> (*) **Chromium 145, which can also block websocket, has not been officially released.**  
-> Behavior is based on pre-release testing and may change once the final release becomes available.
-> Edge 143 and Firefox Nightly will have local network permission control as well.
+> [!NOTE]
+> (*) Blocking WebSocket requests is on Chromium's roadmap, and may be enforced in a future release.  
+> Other browsers are also introducing local network permission controls.
 
 ### Root Cause
 
-Chromium 142 introduces and enforces a new [Local Network Access (LNA)](https://chromestatus.com/feature/5152728072060928) security model that restricts requests **from public network locations to private and loopback network locations**, requiring explicit user permission.
+Chromium 142 introduced [Local Network Access (LNA)](https://chromestatus.com/feature/5152728072060928), which restricts requests from public network locations to local/loopback network locations unless permission is granted.
 
 > [!NOTE]
-> For background and design rationale, see Chrome’s Developer Blog: [New permission prompt for Local Network Access](https://developer.chrome.com/blog/local-network-access).
+> For background and design rationale, see Chrome's developer blog: [New permission prompt for Local Network Access](https://developer.chrome.com/blog/local-network-access).
 
-Under this model, **requests originating from a public network location** (such as a publicly hosted website) **to private or loopback network locations** (including localhost and 127.0.0.1) are blocked by default unless the user explicitly grants permission.
+Under this model, requests from a public origin (a publicly hosted site) to local or loopback targets (including `localhost` and `127.0.0.1`) can be blocked by default.
 
-Dynamic Web TWAIN relies on a locally installed service that listens on a loopback address. When a web application hosted on a public domain attempts to communicate with this service, Chrome categorizes the request as a **public-to-local** network request, which now requires explicit user consent.
+Dynamic Web TWAIN relies on a locally installed service that listens on a loopback address. If browser permission is not granted, communication with that local service fails.
 
 ### Resolution
 
 > [!WARNING]
-> The steps outlined below **do not “fix” or bypass this restriction**, nor can Dynamic Web TWAIN override it programmatically. They simply ensure that the browser’s required permission is correctly granted so the local Dynamic Web TWAIN service is allowed to communicate with your application.
+> This is driven by browser security policy decisions. Dynamic Web TWAIN cannot bypass these restrictions programmatically.
+> Browser behavior will continue evolving, and temporary workarounds may be removed in future versions. You should plan your deployment and UX flow around current browser permission requirements.
 
-***1. To Manually Correct This in Chrome***
+***1. To manually correct this in Chrome***
 
 - Navigate to your Dynamic Web TWAIN page.
 - Click the lock/settings icon in the browser address bar.
-- Ensure that **Local Network Access** is enabled.
+- In **Chrome 142-144**, ensure **Local Network Access** (`local-network-access`) is `Allow`.
+- In **Chrome 145+**, check:
+  - **Apps on device** (`loopback-network`) is `Allow` (required for `localhost` / `127.0.0.1`)
+  - **Local Network** (`local-network`) is `Allow` only if your app also needs private-network device access
 
-![local-network.png](/assets/imgs/local-network.png)
+![local-network.png](/assets/imgs/local-network-access/local-network.png)
 
 > [!NOTE]
-> If you're unable to restore functionality after enabling 'Local Network Access,' please contact [Dynamsoft](https://www.dynamsoft.com/contact/).
+> Chrome updates permission popup UI frequently. Starting with Dynamic Web TWAIN **v19.3.1**, static screenshots were removed from built-in popups.
+> For the latest browser-specific screenshots, see:
+> [https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html](https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html)
 
-***2. (For Admins) To Apply This Setting Across an Enterprise***
+***2. (For Admins) Apply this setting across an enterprise***
 
-Enterprise administrators can deploy a Chrome and/or Edge policy to set the "Local Network Access" setting to "Allow" for your website.
+Enterprise administrators can deploy Chrome and/or Edge policies to set local-network permission to `Allow` for your website.
 
-Please refer to: 
-* [Chrome Enterprise Policy List & Management Documentation](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls)
-* [Microsoft Edge Browser Policy Documentation](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls)
+Please refer to:
+- [Chrome Enterprise Policy List and Management Documentation](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls)
+- [Microsoft Edge Browser Policy Documentation](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls)
 
 ***3. Developer Notes***
 
-**a) If Running Inside an `iframe`**
+**a) If running inside an `iframe`**
 
 > [!IMPORTANT]
-> If Dynamic Web TWAIN is running inside an iframe from a different origin (cross-origin), you must explicitly grant local-network access in the iframe.
-> If the iframe is same-origin, no additional configuration is required.
+> If Dynamic Web TWAIN runs inside a cross-origin iframe, `loopback-network` permissions must be explicitly allowed in the iframe `allow` attribute.
+> If the iframe is same-origin, no additional iframe permission configuration is required.
 
-To enable access, specify the `allow` attribute.
-For security reasons, it is recommended to allow only the necessary origin rather than using a wildcard.
+For Chrome 145+, use `loopback-network` (and `local-network` only if needed). For older versions, include `local-network-access`.
 
 ```html
-<!-- Recommended: restrict to specific origin -->
-<iframe src="..." allow="local-network-access your-domain.com"></iframe>
+<!-- Recommended: explicitly list only required origins and permissions -->
+<iframe
+  src="..."
+  allow="loopback-network https://your-domain.com; local-network https://your-domain.com; local-network-access https://your-domain.com">
+</iframe>
 
 <!-- Not recommended: wildcard -->
-<!-- <iframe src="..." allow="local-network-access *"></iframe> -->
+<!-- <iframe src="..." allow="loopback-network *; local-network *; local-network-access *"></iframe> -->
 ```
 
-**b) (Optional Enhancement) Permission Check for Improved UX**
+**b) (Optional enhancement) Permission check for improved UX**
 
-You can optionally query Local Network Access permission at runtime.
-This isn’t required, but implementing a check can help you proactively notify users and provide clearer guidance if permission is missing.
+You can optionally query LNA permissions at runtime. This is not required, but it can help you guide users before initialization fails.
+
 ```javascript
-// Before initializing Dynamsoft WebTWAIN (DWT), you can remind users
-// that Chrome may ask for Local Network Access permission.
-(async () => {
-  try {
-    const result = await navigator.permissions.query({ name: "local-network-access" });
-    console.log(`LNA permission state: ${result.state}`);
- 
-    const state = result.state; // 'denied', 'prompt', 'granted'
- 
-    if (state === "denied") {
-      const currentSite = encodeURIComponent(window.location.origin);
-      const settingsUrl = `chrome://settings/content/siteDetails?site=${currentSite}`;
-      console.log(`Local network access is currently denied.\n\nPlease go to:\n${settingsUrl}\nand enable 'Local network access' permission for this site.`);
-      // Optionally show a UI guide or help link here.
-    } else if (state === "prompt") {
-      alert("To connect with the local scanning service, Chrome will ask for 'Local network access' permission.\n\nPlease click 'Allow' when prompted.");
-      // Proceed to init DWT after this message. 
-      // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
-    } else if (state === "granted") {
-      console.log("Local network access already granted.");
-      // Initialize DWT or proceed directly.
-      // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
-    } else {
-      console.log("Unexpected LNA state:", state);
+// Helper: query the first supported permission name from a list.
+async function queryFirstSupportedPermission(names) {
+  for (const name of names) {
+    try {
+      const result = await navigator.permissions.query({ name });
+      return { name, state: result.state };
+    } catch (_) {
+      // Not supported in this browser version.
     }
- 
-  } catch (e) {
-    console.log("This browser does not support Chromium LNA Permissions API yet.");
-    // Fallback: directly initialize DWT
-    // Dynamsoft.DWT.Load() or CreateDWTObjectEx or your init DWT function
   }
+  return null;
+}
+
+(async () => {
+  // Chrome 145+: loopback-network; Chrome 142-144: local-network-access.
+  const loopbackPerm = await queryFirstSupportedPermission([
+    "loopback-network",
+    "local-network-access"
+  ]);
+
+  if (!loopbackPerm) {
+    console.log("This browser does not expose the Local Network permission API.");
+    // Fallback: initialize DWT directly.
+    return;
+  }
+
+  console.log(`Loopback permission (${loopbackPerm.name}): ${loopbackPerm.state}`);
+
+  if (loopbackPerm.state === "denied") {
+    const currentSite = encodeURIComponent(window.location.origin);
+    const settingsUrl = `chrome://settings/content/siteDetails?site=${currentSite}`;
+    console.log(
+      "Local network permission is denied.\n" +
+      `Open: ${settingsUrl}\n` +
+      "Then allow Local Network for this site."
+    );
+    return;
+  }
+
+  if (loopbackPerm.state === "prompt") {
+    alert(
+      "To connect with the local scanning service, Chrome may ask for Local Network permission. " +
+      "Please click Allow when prompted."
+    );
+  }
+
+  // Proceed with DWT initialization.
+  // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx(...)
 })();
 ```
-If the permission is not granted, consider displaying a user-friendly message directing them to:
 
-> Chrome → Settings → Privacy and Security → Site Settings → Local network access
+If permission is not granted, direct users to:
 
-This approach provides a more polished user experience, especially during onboarding or troubleshooting.
+> Chrome -> Settings -> Privacy and security -> Site settings -> Local Network / Apps on device
 
 ### Product Improvements Related to Local Network Access
 
-Dynamic Web TWAIN v19.3 introduces **user-experience enhancements** to better surface local service connectivity and permission issues.
+Starting from v19.3, Dynamic Web TWAIN now includes UX enhancements to better surface local-service connectivity and permission issues.
 
-These changes **do not alter or bypass Chromium’s security model**. Their purpose is to make permission-related failures easier to identify and understand, and to guide users to the appropriate browser settings when access is blocked.
+These changes do not alter or bypass Chromium's security model. They make permission-related failures easier to identify and guide users to the correct browser settings.
 
 The key improvements include:
 
-* **Explicit detection of blocked local network access** \
-When the browser blocks communication with the local service, a clear dialog is displayed explaining the cause and directing users to this FAQ.
+- **Guide the user to grant local network access**   
+  If the service is installed (detected with WebSocket) and the access to the local service is not through or the detected permission is "prompt", prompt the user to grant access.
 
-   ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.jpg)
-   
-   *Dialog 1 - Permission Guidance*
-   
-* **Clearer messaging during service installation** \
-A notice is added to the service installation dialog to inform users that a connection failure may be caused either by the service not being installed or by local network access being denied, as these two cases cannot be reliably distinguished.
+  *Dialog 1 - Permission Granting Guidance*
 
-   ![dialog installation](/assets/imgs/local-network-access/service-installation-dialog.png)
+  ![permission granting dialog](/assets/imgs/local-network-access/permission-granting-dialog.png)
 
-   *Dialog 2 - Service Installation*
+- **Explicit detection of blocked local network access**  
+  If the permission can be detected and is "denied", a clear dialog explains the cause and directs users to a guide, which tells how to enable the permission in site settings.
 
-    Clicking "Guide" opens the permission guidance dialog shown above.
+  ![prompt blocked](/assets/imgs/local-network-access/prompt-blocked.png)
 
-These improvements are **available starting with Dynamic Web TWAIN v19.3**.
+  *Dialog 2 - Site Settings Guidance*
 
-For older versions, a supplemental JavaScript file can be provided upon request by contacting [Dynamsoft Support](mailto:support@dynamsoft.com).
+- **Clearer messaging during service installation**  
+  The service installation dialog explains that connection failure may be caused either by missing service installation or denied local-network permission.
+
+  ![dialog installation](/assets/imgs/local-network-access/service-installation-dialog.png)
+
+  *Dialog 3 - Service Installation*
+
+- **Latest popup screenshots hosted externally (v19.3.1+)**  
+  Because Chromium updates native permission popups frequently, static popup screenshots were removed from this FAQ in v19.3.1.
+  Use this page for the latest screenshots:
+  [https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html](https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html)
+
+These improvements are available starting with Dynamic Web TWAIN v19.3.
+
+For older versions, a supplemental JavaScript file can be provided on request by contacting [Dynamsoft Support](mailto:support@dynamsoft.com).
 
 > [!NOTE]
-> This file improves user guidance only and does not change the underlying browser permission requirements.
+> This supplemental JavaScript file improves user guidance only and does not change browser permission requirements.
 
 ## Other Causes of Failure to Connect to the Service
 
-There are other causes of service not being connected. You can find them in [another FAQ](/_articles/faq/service-prompting-to-install-repeatedly.md).
+There are other causes of service connection failure. See [another FAQ](/_articles/faq/service-prompting-to-install-repeatedly.md).
