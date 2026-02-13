@@ -23,7 +23,7 @@ Local Network Access (LNA) is a browser security model that has been enforced in
 
 These restrictions limit requests from **public network locations** to **local or loopback locations** unless the required site permission is granted.
 
-Starting in **Chrome 145**, the site-setting label changed from one permission to two:
+Starting in **Chrome 145**, the site-setting label changed from one local network access permission  to two:
 
 - `loopback-network` shown as **Apps on device**
 - `local-network` shown as **Local Network**
