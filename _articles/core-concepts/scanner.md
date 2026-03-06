@@ -25,7 +25,7 @@ Most flatbed scanners work in a reflective way, which shines white light onto th
 
 ### Sheetfed Scanner
 
-A sheetfed scanner, also known as a document feeder scanner, uses motor-driven rollers to move individual sheets of paper past a stationary scanning element (or two for duplex scanning). Unlike flatbed scanners, sheetfed scanners are not designed to scan bound materials such as books or magazines, nor are they suitable for materials thicker than standard paper. Their primary advantage is the ability to scan multiple documents quickly and automatically, making them much faster than flatbed scanners for high-volume tasks.
+A sheetfed scanner, also known as a document feeder scanner or ADF (Automatic Document Feeder) scanner, uses motor-driven rollers to move individual sheets of paper past a stationary scanning element (or two for duplex scanning). Unlike flatbed scanners, sheetfed scanners are not designed to scan bound materials such as books or magazines, nor are they suitable for materials thicker than standard paper. Their primary advantage is the ability to scan multiple documents quickly and automatically, making them much faster than flatbed scanners for high-volume tasks.
 
 ![ScanSnap iX500](/assets/imgs/core-concepts/ScanSnap_iX500.jpg)
 
