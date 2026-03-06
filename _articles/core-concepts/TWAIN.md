@@ -7,6 +7,7 @@ breadcrumbText: TWAIN
 description: This page gives a general introduction to TWAIN, the document scanning API that Dynamic Web TWAIN exposes to the browser environment.
 ---
 
+# TWAIN
 
 TWAIN is a standard for interacting with image devices, like document scanners and cameras. It was created by a small group of software and hardware companies in response to the need for a proposed specification for the imaging industry. Without TWAIN, we have to program for every device. With TWAIN, we only need to create an application that knows TWAIN and it can have access to thousands of TWAIN-compatible devices.
 
