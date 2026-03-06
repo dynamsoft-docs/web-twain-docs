@@ -13,6 +13,11 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 - [System Requirements]({{site.introduction}}system-requirements.html)
 - [Imaging Hardware]({{site.introduction}}imaging-hardware.html)
 - [Supported File Formats]({{site.introduction}}supported-file-formats.html)
+- Core Concepts
+   - [Scanner](/_articles/core-concepts/scanner.md)
+   - [TWAIN](/_articles/core-concepts/TWAIN.md)
+   - [Dynamic Web TWAIN Service](/_articles/core-concepts/Dynamic-Web-TWAIN-Service.md)
+   - [Resource Files](/_articles/core-concepts/resource-files.md)
 
 ## Developer Guide
 

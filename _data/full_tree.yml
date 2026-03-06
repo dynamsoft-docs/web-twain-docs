@@ -8,6 +8,16 @@ tree_list:
         path: /introduction/imaging-hardware.html
       - name: Supported File Formats
         path: /introduction/supported-file-formats.html
+      - name: Core Concepts
+        childList:
+          - name: Scanner
+            path: /core-concepts/scanner.html
+          - name: TWAIN
+            path: /core-concepts/TWAIN.html
+          - name: Dynamic Web TWAIN Service
+            path: /core-concepts/Dynamic-Web-TWAIN-Service.html
+          - name: Resource Files
+            path: /core-concepts/resource-files.html
 
   - name: Developer Guide
     isCategory: true
