@@ -9,7 +9,7 @@ description: This page gives a general introduction to Dynamic Web TWAIN Service
 
 # Dynamic Web TWAIN Service
 
-Dynamic Web TWAIN Service (previously known as Dynamsoft Service before v19) is a local service installed on end user devices to make it possible to access imaging devices in the browser. It also provides other functions like image processing, cache, barcode reading, OCR and system functions calling, etc.
+Dynamic Web TWAIN Service (previously known as Dynamsoft Service prior to version 19) is a local service installed on end-user devices to make it possible to access imaging devices in the browser. It also provides other functions like image processing, caching, barcode reading, OCR and system function calls.
 
 ![architecture](/assets/imgs/core-concepts//local-scan-architecture.svg)
 
@@ -17,7 +17,7 @@ To use Dynamic Web TWAIN in the browser, you have to install the service beforeh
 
 ## Other Ways of Accessing Scanners in the Browser
 
-There are ActiveX for Internet Explorer and NPAPI Plugin for old versions of Chrome, which allow accessing scanners in the browser. But they are all deprecated. Modern browsers do not have APIs for document scanning. Chrome does provide a Web USB API, but it is still experimental and has limited functions. So currently, using a local service is the most viable option. 
+Previously, technologies like ActiveX for Internet Explorer and NPAPI plugins for older versions of Chrome allowed scanner access directly in the browser. However, these technologies are now deprecated. Modern browsers lack built-in APIs for document scanning. While Chrome offers an experimental WebUSB API, it has limited functionality. Therefore, using a local service is currently the most viable solution.
 
 ## Related Articles
 
