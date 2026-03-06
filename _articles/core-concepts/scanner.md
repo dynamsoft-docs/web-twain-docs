@@ -2,7 +2,7 @@
 layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN Core Concepts - Scanner
-keywords: Dynamic Web TWAIN, Documentation, Scanner
+keywords: Dynamic Web TWAIN, Documentation, Scanner, Concept
 breadcrumbText: Scanner
 description: This page gives a general introduction to document scanners, which Dynamic Web TWAIN interacts with.
 ---
