@@ -1,6 +1,8 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
 title: Dynamic Web TWAIN Core Concepts - TWAIN
 keywords: Dynamic Web TWAIN, Documentation, TWAIN, Concept
 breadcrumbText: TWAIN

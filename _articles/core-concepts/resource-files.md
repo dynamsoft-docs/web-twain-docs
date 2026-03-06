@@ -1,6 +1,8 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
 title: Dynamic Web TWAIN Core Concepts - Resource Files
 keywords: Dynamic Web TWAIN, Documentation, Resource Files, Concept
 breadcrumbText: TWAIN
