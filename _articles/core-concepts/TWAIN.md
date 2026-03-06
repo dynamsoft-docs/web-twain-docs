@@ -8,7 +8,7 @@ description: This page gives a general introduction to TWAIN, the document scann
 ---
 
 
-TWAIN is a standard for interacting with image devices, like document scanners and cameras. It was created by a small group of software and hardware companies in response to the need for a proposed specification for the imaging industry. Without TWAIN, we have to program for every devices. With TWAIN, we only need to create an application that knows TWAIN and it can have access to thousands of TWAIN-compatible devices.
+TWAIN is a standard for interacting with image devices, like document scanners and cameras. It was created by a small group of software and hardware companies in response to the need for a proposed specification for the imaging industry. Without TWAIN, we have to program for every device. With TWAIN, we only need to create an application that knows TWAIN and it can have access to thousands of TWAIN-compatible devices.
 
 ## Architecture
 
@@ -22,7 +22,7 @@ primarily in this layer.
 
 ## Files
 
-Files of the following are required to use TWAIN.
+The following files are required to use TWAIN.
 
 ### Source Manager
 
@@ -38,7 +38,7 @@ Sources.
    * The Source Manager can manage simultaneous sessions between an application and many 
 Sources.
 
-Normally, the system has the libraries built-in. Dynamsoft have the Dlls included in its Windows installer by default.
+Normally, the system has the libraries built-in. Dynamsoft have the DLLs included in its Windows installer by default.
 
 ### Source
 
@@ -59,10 +59,9 @@ TWAIN capabilities are divided into three groups:
 general Source. Such capabilities include use of automatic document feeders, identification of 
 the creator of the data, etc.
 * **ICAP_xxxx**: Capabilities whose names begin with ICAP are capabilities that apply to image 
-devices. The "I" stands for image. (When TWAIN is expanded to support other data transfer 
-such as text or fax data, there will be TCAPs and FCAPs in a similar style.) 
+devices. The "I" stands for image.
 * **ACAP_xxxx**: Capabilities whose names begin with ACAP are capabilities that apply to 
-devices that support audio. The “A” stands for audio.
+devices that support audio. The "A" stands for audio.
 
 Here are some capabilities for example:
 
