@@ -23,7 +23,7 @@ Read on to learn about how to use it.
 
 ## Online Demo
 
-You can visit the [online demo](https://demo.dynamsoft.com/Samples/dwt/OCR/index.html) to try it.
+You can visit the [online demo](https://demo.dynamsoft.com/Samples/dwt/OCR/index.html) ([source code](https://download2.dynamsoft.com/Samples/DWT/Scan-Documents-and-Do-OCR.zip)) to try it.
 
 ## How to Use
 
