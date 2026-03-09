@@ -11,9 +11,9 @@ description: This page gives a general introduction to Dynamic Web TWAIN's resou
 
 # Resource Files
 
-Resources files are the files your web application needs to use.
+Resource files are the files your web application needs to use.
 
-There are two formats of resources files.
+There are two formats of resource files.
 
 Format 1 is for the traditional vanilla JavaScript development. You can find the files in the [SDK installer](https://www.dynamsoft.com/web-twain/downloads/) or official samples' zip files.
 
