@@ -53,6 +53,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-1119 | This PDF file is not supported by the Core module. You may need to activate your PDF Rasterizer license to support this PDF file. Please contact support for further information. |
 |-1126 | The specified module could not be found. |
 |-1200 | PDF format error or not supported |
+|-2007 | The system is busy, some operations are not completed. Please try later |
 |-2137 | Cross-Origin Resource Sharing (CORS) policy is blocking the access. Please contact the Administrator to configure 'Access-Control-Allow-Origin'.|
 |-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website |
 |-2208 | The connection with the local Dynamic Web TWAIN Service encountered a problem and has been reset |
