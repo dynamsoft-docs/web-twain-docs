@@ -51,15 +51,11 @@ There are also scanners designed for specific use cases.
 
 Check scanners are equipped with a Magnetic Ink Character Recognition (MICR) unit, which reads the magnetic ink characters printed on checks.
 
-![Epson TM-S1000](/assets/imgs/core-concepts/A41A266001_Scanners_Epson%20TM-S1000_PT.png)
-
 With Dynamic Web TWAIN, you can not only retrieve the scanned image but also obtain the MICR data from the check.
 
 ### Scanners with Imprinter / Endorser
 
 Many production scanners can be integrated with a printer or endorser module. This allows them to print text or barcodes directly onto the scanned documents during the scanning process, which is useful for document routing or post-scan sorting.
-
-![fi-7160](/assets/imgs/core-concepts/FI-7160.2.jpg)
 
 ## Connectivity
 
