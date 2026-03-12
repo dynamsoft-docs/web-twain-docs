@@ -12,7 +12,7 @@ This project is to store [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain
    bundle install
    ```
 
-4. Serve the Site.
+4. Serve the site.
 
    ```bash
    bundle exec jekyll serve -P 5555 --trace --host=0.0.0.0
