@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 
 # Enumerations
 
-## `Dynamsoft.DWT.EnumDWT_PixelType`
+## Dynamsoft.DWT.EnumDWT_PixelType
 
 | Label         | Value |
 | :------------ | :---- |
@@ -28,7 +28,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWPT_SCRGB    | 11    |
 | TWPT_INFRARED | 16    |
 
-## `Dynamsoft.DWT.EnumDWT_BorderStyle`
+## Dynamsoft.DWT.EnumDWT_BorderStyle
 
 | Label           | Value |
 | :-------------- | :---- |
@@ -36,7 +36,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWBS_SINGLEFLAT | 1     |
 | TWBS_SINGLE3D   | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_MessageType`
+## Dynamsoft.DWT.EnumDWT_MessageType
 
 | Label           | Value |
 | :-------------- | :---- |
@@ -46,7 +46,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWQC_GETCURRENT | 8     |
 | TWQC_RESET      | 16    |
 
-## `Dynamsoft.DWT.EnumDWT_Cap`
+## Dynamsoft.DWT.EnumDWT_Cap
 
 | Label                                | Value |
 | :----------------------------------- | :---- |
@@ -192,7 +192,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | ICAP_IMAGEMERGEHEIGHTTHRESHOLD       | 4445  |
 | ICAP_SUPPORTEDEXTIMAGEINFO           | 4446  |
 
-## `Dynamsoft.DWT.EnumDWT_CapType`
+## Dynamsoft.DWT.EnumDWT_CapType
 
 | Label            | Value |
 | :--------------- | :---- |
@@ -202,7 +202,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWON_ONEVALUE    | 5     |
 | TWON_RANGE       | 6     |
 
-## `Dynamsoft.DWT.EnumDWT_TransferMode`
+## Dynamsoft.DWT.EnumDWT_TransferMode
 
 | Label       | Value |
 | :---------- | :---- |
@@ -210,7 +210,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWSX_FILE   | 1     |
 | TWSX_MEMORY | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_FileFormat`
+## Dynamsoft.DWT.EnumDWT_FileFormat
 
 | Label          | Value | Description                                                                               |
 | :------------- | :---- | :---------------------------------------------------------------------------------------- |
@@ -231,7 +231,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TWFF_PDFA      | 15    | A file format from Adobe PDF/A, Version 1 (TWAIN Spec 2.0)                                |
 | TWFF_PDFA2     | 16    | A file format from Adobe PDF/A, Version 2 (TWAIN Spec 2.1)                                |
 
-## `Dynamsoft.DWT.EnumDWT_TIFFCompressionType`
+## Dynamsoft.DWT.EnumDWT_TIFFCompressionType
 
 | Label         | Value |
 | :------------ | :---- |
@@ -246,7 +246,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | TIFF_JPEG     | 7     |
 | TIFF_PACKBITS | 32773 |
 
-## `Dynamsoft.DWT.EnumDWT_InterpolationMethod`
+## Dynamsoft.DWT.EnumDWT_InterpolationMethod
 
 | Label               | Value |
 | :------------------ | :---- |
@@ -255,7 +255,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
 | IM_BICUBIC          | 3     |
 | IM_BESTQUALITY      | 5     |
 
-## `Dynamsoft.DWT.EnumDWT_ImageType`
+## Dynamsoft.DWT.EnumDWT_ImageType
 
 | Label            | Value |
 | :--------------- | :---- |
@@ -273,7 +273,7 @@ Note:
 - IT_MULTIPAGE_PDF & IT_MULTIPAGE_TIF are only applicable to the ImageType of [`startScan()`](/_articles/info/api/WebTwain_Acquire.md#startscan).
 - IT_ALL is only applicable to the ImageType of [`LoadImageEx()`](/_articles/info/api/WebTwain_IO.md#loadimageex){% comment %}, [`LoadImageFromBase64Binary()`](/_articles/info/api/WebTwain_IO.md#loadimagefrombase64binary), [`HTTPDownloadEx()`](/_articles/info/api/WebTwain_IO.md#httpdownloadex), [`HTTPDownloadThroughPost()`](/_articles/info/api/WebTwain_IO.md#httpdownloadthroughpost){% endcomment %}.
 
-## `Dynamsoft.DWT.EnumDWT_ImageFormatType`
+## Dynamsoft.DWT.EnumDWT_ImageFormatType
 
 | Label  | Value |
 | :----- | :---- |
@@ -281,7 +281,7 @@ Note:
 | Blob   | 1     |
 | Base64 | 2     |
 
-## `Dynamsoft.DWT.EnumPDF_Page`
+## Dynamsoft.DWT.EnumPDF_Page
 
 | Label               | Value |
 | :------------------ | :---- |
@@ -296,7 +296,7 @@ Note:
 | Page_Legal          | 8     |
 | Page_Legal_Reverse  | 9     |
 
-## `Dynamsoft.DWT.EnumDWT_PDFCompressionType`
+## Dynamsoft.DWT.EnumDWT_PDFCompressionType
 
 | Label      | Value |
 | :--------- | :---- |
@@ -307,7 +307,7 @@ Note:
 | PDF_JP2000 | 6     |
 | PDF_JBIG2  | 7     |
 
-## `Dynamsoft.DWT.EnumDWT_ShowMode`
+## Dynamsoft.DWT.EnumDWT_ShowMode
 
 | Label     | Value |
 | :-------- | :---- |
@@ -317,7 +317,7 @@ Note:
 | SW_CLOSE  | 3     |
 | SW_IFLIVE | 4     |
 
-## `Dynamsoft.DWT.EnumDWT_CapValueType`
+## Dynamsoft.DWT.EnumDWT_CapValueType
 
 | Label       | Value |
 | :---------- | :---- |
@@ -335,7 +335,7 @@ Note:
 | TWTY_STR128 | 11    |
 | TWTY_STR255 | 12    |
 
-## `Dynamsoft.DWT.EnumDWT_UnitType`
+## Dynamsoft.DWT.EnumDWT_UnitType
 
 | Label            | Value |
 | :--------------- | :---- |
@@ -347,7 +347,7 @@ Note:
 | TWUN_PIXELS      | 5     |
 | TWUN_MILLIMETERS | 6     |
 
-## `Dynamsoft.DWT.EnumDWT_ConvertMode`
+## Dynamsoft.DWT.EnumDWT_ConvertMode
 
 | Label        | Value |
 | :----------- | :---- |
@@ -361,7 +361,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | :------------------------- | :---- |
 | CM_RENDERALLWITHANNOTATION | 4     |
 
-## `Dynamsoft.DWT.EnumDWT_DUPLEX`
+## Dynamsoft.DWT.EnumDWT_DUPLEX
 
 | Label            | Value |
 | :--------------- | :---- |
@@ -369,7 +369,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWDX_1PASSDUPLEX | 1     |
 | TWDX_2PASSDUPLEX | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_CapLanguage`
+## Dynamsoft.DWT.EnumDWT_CapLanguage
 
 | Label                     | Value |
 | :------------------------ | :---- |
@@ -503,7 +503,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWLG_URDU                 | 112   |
 | TWLG_VIETNAMESE           | 113   |
 
-## `Dynamsoft.DWT.EnumDWT_CapSupportedSizes`
+## Dynamsoft.DWT.EnumDWT_CapSupportedSizes
 
 | Label             | Value |
 | :---------------- | :---- |
@@ -567,7 +567,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWSS_BUSINESSCARD | 53    |
 | TWSS_MAXSIZE      | 54    |
 
-## `Dynamsoft.DWT.EnumDWT_CapFeederAlignment`
+## Dynamsoft.DWT.EnumDWT_CapFeederAlignment
 
 | Label       | Value |
 | :---------- | :---- |
@@ -576,14 +576,14 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWFA_CENTER | 2     |
 | TWFA_RIGHT  | 3     |
 
-## `Dynamsoft.DWT.EnumDWT_CapFeederOrder`
+## Dynamsoft.DWT.EnumDWT_CapFeederOrder
 
 | Label               | Value |
 | :------------------ | :---- |
 | TWFO_FIRSTPAGEFIRST | 0     |
 | TWFO_LASTPAGEFIRST  | 1     |
 
-## `Dynamsoft.DWT.EnumDWT_CapPrinter`
+## Dynamsoft.DWT.EnumDWT_CapPrinter
 
 | Label                      | Value |
 | :------------------------- | :---- |
@@ -596,7 +596,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWPR_ENDORSERBOTTOMBEFORE  | 6     |
 | TWPR_ENDORSERBOTTOMAFTER   | 7     |
 
-## `Dynamsoft.DWT.EnumDWT_CapPrinterMode`
+## Dynamsoft.DWT.EnumDWT_CapPrinterMode
 
 | Label               | Value |
 | :------------------ | :---- |
@@ -604,7 +604,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWPM_MULTISTRING    | 1     |
 | TWPM_COMPOUNDSTRING | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_CapBitdepthReduction`
+## Dynamsoft.DWT.EnumDWT_CapBitdepthReduction
 
 | Label             | Value |
 | :---------------- | :---- |
@@ -613,14 +613,14 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWBR_CUSTHALFTONE | 2     |
 | TWBR_DIFFUSION    | 3     |
 
-## `Dynamsoft.DWT.EnumDWT_CapBitOrder`
+## Dynamsoft.DWT.EnumDWT_CapBitOrder
 
 | Label         | Value |
 | :------------ | :---- |
 | TWBO_LSBFIRST | 0     |
 | TWBO_MSBFIRST | 1     |
 
-## `Dynamsoft.DWT.EnumDWT_CapFilterType`
+## Dynamsoft.DWT.EnumDWT_CapFilterType
 
 | Label        | Value |
 | :----------- | :---- |
@@ -634,7 +634,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWFT_YELLOW  | 7     |
 | TWFT_BLACK   | 8     |
 
-## `Dynamsoft.DWT.EnumDWT_CapFlash`
+## Dynamsoft.DWT.EnumDWT_CapFlash
 
 | Label       | Value |
 | :---------- | :---- |
@@ -644,14 +644,14 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWFL_AUTO   | 3     |
 | TWFL_REDEYE | 4     |
 
-## `Dynamsoft.DWT.EnumDWT_CapFlipRotation`
+## Dynamsoft.DWT.EnumDWT_CapFlipRotation
 
 | Label        | Value |
 | :----------- | :---- |
 | TWFR_BOOK    | 0     |
 | TWFR_FANFOLD | 1     |
 
-## `Dynamsoft.DWT.EnumDWT_CapImageFilter`
+## Dynamsoft.DWT.EnumDWT_CapImageFilter
 
 | Label         | Value |
 | :------------ | :---- |
@@ -663,14 +663,14 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWIF_TEXT     | 3     |
 | TWIF_FINELINE | 4     |
 
-## `Dynamsoft.DWT.EnumDWT_CapLightPath`
+## Dynamsoft.DWT.EnumDWT_CapLightPath
 
 | Label             | Value |
 | :---------------- | :---- |
 | TWLP_REFLECTIVE   | 0     |
 | TWLP_TRANSMISSIVE | 1     |
 
-## `Dynamsoft.DWT.EnumDWT_CapLightSource`
+## Dynamsoft.DWT.EnumDWT_CapLightSource
 
 | Label      | Value |
 | :--------- | :---- |
@@ -682,7 +682,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWLS_UV    | 5     |
 | TWLS_IR    | 6     |
 
-## `Dynamsoft.DWT.EnumDWT_MagType`
+## Dynamsoft.DWT.EnumDWT_MagType
 
 | Label        | Value |
 | :----------- | :---- |
@@ -690,7 +690,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWMD_RAW     | 1     |
 | TWMD_INVALID | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_CapNoiseFilter`
+## Dynamsoft.DWT.EnumDWT_CapNoiseFilter
 
 | Label             | Value |
 | :---------------- | :---- |
@@ -699,7 +699,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWNF_LONEPIXEL    | 2     |
 | TWNF_MAJORITYRULE | 3     |
 
-## `Dynamsoft.DWT.EnumDWT_CapORientation`
+## Dynamsoft.DWT.EnumDWT_CapORientation
 
 | Label            | Value |
 | :--------------- | :---- |
@@ -713,7 +713,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWOR_AUTOTEXT    | 5     |
 | TWOR_AUTOPICTURE | 6     |
 
-## `Dynamsoft.DWT.EnumDWT_CapOverscan`
+## Dynamsoft.DWT.EnumDWT_CapOverscan
 
 | Label          | Value |
 | :------------- | :---- |
@@ -723,21 +723,21 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWOV_LEFTRIGHT | 3     |
 | TWOV_ALL       | 4     |
 
-## `Dynamsoft.DWT.EnumDWT_CapPixelFlavor`
+## Dynamsoft.DWT.EnumDWT_CapPixelFlavor
 
 | Label          | Value |
 | :------------- | :---- |
 | TWPF_CHOCOLATE | 0     |
 | TWPF_VANILLA   | 1     |
 
-## `Dynamsoft.DWT.EnumDWT_CapPlanarChunky`
+## Dynamsoft.DWT.EnumDWT_CapPlanarChunky
 
 | Label       | Value |
 | :---------- | :---- |
 | TWPC_CHUNKY | 0     |
 | TWPC_PLANAR | 1     |
 
-## `Dynamsoft.DWT.EnumDWT_DataSourceStatus`
+## Dynamsoft.DWT.EnumDWT_DataSourceStatus
 
 | Label           | Value |
 | :-------------- | :---- |
@@ -746,7 +746,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWDSS_ENABLED   | 2     |
 | TWDSS_ACQUIRING | 3     |
 
-## `Dynamsoft.DWT.EnumDWT_FitWindowType`
+## Dynamsoft.DWT.EnumDWT_FitWindowType
 
 | Label               | Value |
 | :------------------ | :---- |
@@ -754,7 +754,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | enumFitWindowHeight | 1     |
 | enumFitWindowWidth  | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_PlatformType`
+## Dynamsoft.DWT.EnumDWT_PlatformType
 
 | Label      | Value |
 | :--------- | :---- |
@@ -762,14 +762,14 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | enumMac    | 1     |
 | enumLinux  | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_UploadDataFormat`
+## Dynamsoft.DWT.EnumDWT_UploadDataFormat
 
 | Label  | Value |
 | :----- | :---- |
 | Binary | 0     |
 | Base64 | 1     |
 
-## `Dynamsoft.DWT.EnumDWT_MouseShape`
+## Dynamsoft.DWT.EnumDWT_MouseShape
 
 | Label     | Value |
 | :-------- | :---- |
@@ -785,7 +785,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 
 {% comment %}
 
-## `Dynamsoft.DWT.EnumDWT_InitMsg`
+## Dynamsoft.DWT.EnumDWT_InitMsg
 
 | Label                   | Value |
 | :---------------------- | :---- |
@@ -797,7 +797,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 
 {% endcomment %}
 
-## `Dynamsoft.DWT.EnumDWT_Driver`
+## Dynamsoft.DWT.EnumDWT_Driver
 
 | Label             | Value |
 | :---------------- | :---- |
@@ -808,7 +808,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWAIN_AND_TWAIN64 | 4     |
 | TWAIN64           | 5     |
 
-## `Dynamsoft.DWT.EnumDWT_CameraControlProperty`
+## Dynamsoft.DWT.EnumDWT_CameraControlProperty
 
 | Label        | Value | Description                                                                                                                                                                                                                                                                                 |
 | :----------- | :---- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -820,7 +820,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | CCP_IRIS     | 5     | Specify the iris in units of fstop\* 10.                                                                                                                                                                                                                                                    |
 | CCP_FOCUS    | 6     | Specify the focus in millimeters which is the distance to the optimally focused target. The range and default value are specific to the device.                                                                                                                                             |
 
-## `Dynamsoft.DWT.EnumDWT_VideoProperty`
+## Dynamsoft.DWT.EnumDWT_VideoProperty
 
 | Label                    | Value | Description                                                                                                                                                                                                                              |
 | :----------------------- | :---- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -835,7 +835,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | VP_BACKLIGHTCOMPENSATION | 8     | Specify the backlight compensation setting. It's either 0 (off) or 1 (on).                                                                                                                                                               |
 | VP_GAIN                  | 9     | Specify the gain adjustment. Zero is normal. Positive values are brighter and negative values are darker. The range of values depends on the device.                                                                                     |
 
-## `Dynamsoft.DWT.EnumDWT_VideoRotateMode`
+## Dynamsoft.DWT.EnumDWT_VideoRotateMode
 
 | Label                     | Value | Description           |
 | :------------------------ | :---- | :-------------------- |
@@ -846,14 +846,14 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | VRM_FLIP_VERTICAL         | 4     | Flip                  |
 | VRM_FLIP_HORIZONTAL       | 5     | Mirror                |
 
-## `Dynamsoft.DWT.EnumDWT_SelectionMode`
+## Dynamsoft.DWT.EnumDWT_SelectionMode
 
 | Label    | Value |
 | :------- | :---- |
 | Single   | 0     |
 | Multiple | 1     |
 
-## `Dynamsoft.DWT.EnumDWT_ConfirmExitType`
+## Dynamsoft.DWT.EnumDWT_ConfirmExitType
 
 | Label       | Value |
 | :---------- | :---- |
@@ -861,7 +861,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | Exit        | 1     |
 | SaveAndExit | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_DeviceType`
+## Dynamsoft.DWT.EnumDWT_DeviceType
 
 | Label             | Value | Description                                                                                                      |
 | :---------------- | :---- | :--------------------------------------------------------------------------------------------------------------- |
@@ -874,7 +874,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | WIFIDIRECTSCANNER | 0x400 |                                                                                                                  |
 | WIATWAINSCANNER   | 0x800 | Deprecated since version 18.2 and will be removed in future versions, please use the value `WIASCANNER` instead. |
 
-## `Dynamsoft.DWT.EnumDWT_ExtImageInfo`
+## Dynamsoft.DWT.EnumDWT_ExtImageInfo
 
 | Label     | Value |
 | :-------- | :---- |
@@ -882,14 +882,14 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | standard  | 1     |
 | supported | 2     |
 
-## `Dynamsoft.DWT.EnumDWT_WorkMode`
+## Dynamsoft.DWT.EnumDWT_WorkMode
 
 | Label   | Value | Description                                              |
 | :------ | :---- | :------------------------------------------------------- |
 | normal  | 0     | Original mode, the image data is processed in the buffer |
 | balance | 1     | The image data is processed in the browser canvas        |
 
-## `Dynamsoft.DWT.EnumDWT_CompressionType`
+## Dynamsoft.DWT.EnumDWT_CompressionType
 
 | Label            | Value |
 | :--------------- | :---- |
@@ -909,7 +909,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | TWCP_ZIP         | 13    |
 | TWCP_JPEG2000    | 14    |
 
-## `Dynamsoft.DWT.EnumDWT_ResponseType`
+## Dynamsoft.DWT.EnumDWT_ResponseType
 
 | Label       | Value |
 | :---------- | :---- |
@@ -920,7 +920,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | JSON        | 4     |
 
 
-## `Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat`
+## Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat
 
 | Label                      | Value |
 | :------------------------- | :---- |
@@ -935,7 +935,7 @@ Note:
 
 `PDF_WITH_EXTRA_TEXTLAYER` will add an extra invisible text layer of the OCRed text above each page.
 
-## `Dynamsoft.DWT.EnumDWT_PageOrientation`
+## Dynamsoft.DWT.EnumDWT_PageOrientation
 
 | Label                      | Value |
 | :------------------------- | :---- |
@@ -945,7 +945,7 @@ Note:
 | ANGLE_180                  | 180   |
 | ANGLE_270                  | 270   |
 
-## `Dynamsoft.DWT.EnumDWT_PageOrientationDetectionMode`
+## Dynamsoft.DWT.EnumDWT_PageOrientationDetectionMode
 
 | Label                      | Value |
 | :------------------------- | :---- |
