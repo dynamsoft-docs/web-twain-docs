@@ -22,7 +22,7 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, "127.0.0.1" is used for service connection. "127.0.0.1" uses a self-signed SSL certificate without an expiry date. It is installed to your system so that the browser can trust it. If your environment requires high level security, self-signed certificates may not be accepted. Moreover, it is not easy to install the self-signed certificate for systems like Chrome OS.
 
-In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign’ed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2025 November 20th</font>, and the latest certificate will expire on <font color=red>2026 November 21st</font>.
+In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign-signed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2025 November 20th</font>, and the latest certificate will expire on <font color=red>2026 November 21st</font>.
 
 > [!NOTE]
 > All official third-party certificates come with an expiry date (generally one year). If `local.dynamsoft.com` is used, the certificate needs to be updated each year.
