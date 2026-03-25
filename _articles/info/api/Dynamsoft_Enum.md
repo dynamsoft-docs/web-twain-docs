@@ -6,6 +6,7 @@ title: Dynamic Web TWAIN SDK API Reference - Enumerations
 keywords: Dynamic Web TWAIN, Documentation, API Reference, Enumerations
 breadcrumbText: Enumerations
 description: Dynamic Web TWAIN SDK Documentation API Reference Enumerations Page
+last_modified: 2026-03-25 22:23:48 +0000
 ---
 
 # Enumerations
