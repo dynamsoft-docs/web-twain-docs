@@ -24,7 +24,8 @@ By default, "127.0.0.1" is used for service connection. "127.0.0.1" uses a self-
 
 In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign’ed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2025 November 20th</font>, and the latest certificate will expire on <font color=red>2026 November 21st</font>.
 
-> ___Please note:___ _all official certificates issued by 3rd party come with an expiry date - generally one year. This means that each year the certificate will need to be updated if local.dynamsoft.com is used._
+> [!NOTE]
+> All official third-party certificates come with an expiry date (generally one year). If `local.dynamsoft.com` is used, the certificate needs to be updated each year.
 
 
 ### Resolution
@@ -32,12 +33,16 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 - **No High Level Security Requirement**:
   Set back to self-signed certificate "127.0.0.1" by comment the line `Dynamsoft.WebTwainEnv.Host = "local.dynamsoft.com"` or `Dynamsoft.DWT.Host="local.dynamsoft.com"` out. No need to worry about the expiry date of the certificate anymore.
 
-- **High Level Security Requirement (<font color=red>Please note: you need to replace the certificate annually due to expiration</font>)**
+- **High Level Security Requirement**
+
+  > [!WARNING]
+  > If you use `local.dynamsoft.com`, replace the certificate annually due to expiration.
 
   If you have to use "local.dynamsoft.com", the following methods can be taken:
 
   - Method 1. Use the following links to download and install the Dynamic Web TWAIN Service Installer.
-    > Note: Dynamic Web TWAIN Service installers are backward-compatible within the same major version. Please identify the major SDK version you are using first, then download the corresponding installer (for example, 19.x SDK uses v19 installers, 18.x SDK uses v18 installers). If you are unsure about your SDK version, follow [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md).
+    > [!IMPORTANT]
+    > Dynamic Web TWAIN Service installers are backward-compatible within the same major version. Identify the major SDK version first, then download the corresponding installer (for example, 19.x SDK uses v19 installers, 18.x SDK uses v18 installers). If you are unsure about your SDK version, follow [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md).
 
     <div class="multi-panel-switching-prefix"></div>
 
