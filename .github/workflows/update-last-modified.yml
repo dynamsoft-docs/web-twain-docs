@@ -1,0 +1,90 @@
+﻿name: Update last_modified
+
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - synchronize
+      - reopened
+    paths:
+      - "_articles/faq/*.md"
+
+permissions:
+  contents: write
+
+jobs:
+  update-on-master-pr:
+    if: github.actor != 'github-actions[bot]' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR head branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Collect target files
+        id: targets
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git fetch origin "${{ github.event.pull_request.base.ref }}"
+
+          git diff --name-only "origin/${{ github.event.pull_request.base.ref }}"...HEAD \
+            | grep -E '^_articles/faq/[^/]+\.md$' \
+            | sort -u > changed_files.txt || true
+
+          count="$(wc -l < changed_files.txt | tr -d ' ')"
+          echo "count=$count" >> "$GITHUB_OUTPUT"
+
+      - name: Update front matter
+        if: steps.targets.outputs.count != '0'
+        shell: bash
+        run: |
+          set -euo pipefail
+          timestamp="$(date '+%Y-%m-%d %H:%M:%S %z')"
+
+          while IFS= read -r file; do
+            [[ -f "$file" ]] || continue
+
+            TS="$timestamp" perl -0777 -i -pe '
+              BEGIN { $ts = $ENV{"TS"}; }
+
+              s{\A---\R(.*?)\R---(?:\R|$)}{
+                my $fm = $1;
+
+                if ($fm =~ /^last_modified:.*$/m) {
+                  $fm =~ s/^last_modified:.*$/last_modified: $ts/m;
+                } elsif ($fm =~ /^date:.*$/m) {
+                  $fm =~ s/^(date:.*)$/$1\nlast_modified: $ts/m;
+                } else {
+                  $fm .= "\nlast_modified: $ts";
+                }
+
+                "---\n$fm\n---\n";
+              }es;
+            ' "$file"
+          done < changed_files.txt
+
+      - name: Commit and push to PR branch
+        if: steps.targets.outputs.count != '0'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet; then
+            echo "No timestamp updates needed."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          while IFS= read -r file; do
+            [[ -f "$file" ]] || continue
+            git add "$file"
+          done < changed_files.txt
+          git commit -m "chore: update last_modified timestamps"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
