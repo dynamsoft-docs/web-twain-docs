@@ -4,22 +4,40 @@ This project is to store [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain
 
 ### Local Development
 
-1. Download the docs template repo and the Web TWAIN docs repo with [download-dwt.sh](https://github.com/tony-xlh/misc/raw/refs/heads/main/build-docs/download-dwt.sh).
-2. Install Ruby and Jekyll.
-3. Go to the docs' folder and install dependencies.
+1. Install Ruby, Bundler, and Jekyll.
+2. Run the local dev script from this repository root:
 
-   ```bash
-   bundle install
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\scripts\dev.ps1
    ```
 
-4. Serve the site.
+This script keeps all local-only files in `.dev/`:
+- `.dev/Docs-Template-Repo` (template clone)
+- `.dev/DocHome` (merged docs + template workspace)
+- `.dev/vendor/bundle`, `.dev/.bundle`, `.dev/.bundle-user`, `.dev/.jekyll-cache`, `.dev/_site`
 
-   ```bash
-   bundle exec jekyll serve -P 5555 --trace --host=0.0.0.0
-   ```
+Optional flags:
+
+```powershell
+# Prepare workspace only (do not start server)
+powershell -ExecutionPolicy Bypass -File .\scripts\dev.ps1 -NoServe
+
+# Skip template pull/refresh and use current local template copy
+powershell -ExecutionPolicy Bypass -File .\scripts\dev.ps1 -NoTemplateUpdate
+
+# Change port
+powershell -ExecutionPolicy Bypass -File .\scripts\dev.ps1 -Port 6001
+
+# Bind to all interfaces (optional)
+powershell -ExecutionPolicy Bypass -File .\scripts\dev.ps1 -BindHost 0.0.0.0
+```
+
+Local preview URL root:
+
+```text
+http://localhost:5555/web-twain/docs/
+```
 
 ### License
 
 All documentation is available under the terms of [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
-
-
