@@ -97,7 +97,7 @@ Write-Step "Rebuilding merged site workspace"
 New-Item -ItemType Directory -Force -Path $docHome | Out-Null
 Invoke-Robocopy -Source $repoRoot -Destination $docHome -ExtraArgs @(
     "/MIR",
-    "/XD", ".git", ".dev", ".vs", "node_modules", "_site"
+    "/XD", ".git", ".dev", ".vs", "node_modules", "_site", ".bundle", ".jekyll-cache", ".sass-cache", "vendor"
 )
 Invoke-Robocopy -Source $templateRoot -Destination $docHome -ExtraArgs @(
     "/E",

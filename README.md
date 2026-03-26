@@ -4,7 +4,11 @@ This project is to store [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain
 
 ### Local Development
 
-1. Install Ruby, Bundler, and Jekyll.
+1. Prerequisites:
+   - `git`
+   - `bundle` (install Ruby + Bundler)
+   - `robocopy` (Windows built-in command used by the script)
+   - Note: a global Jekyll install is not required because the script runs `bundle exec jekyll`.
 2. Run the local dev script from this repository root:
 
    ```powershell
