@@ -4,7 +4,7 @@ This project is to store [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain
 
 ### Local Development
 
-1. Download the docs template repo and the Web TWAIN docs repo with [download-dwt.sh](https://github.com/tony-xlh/misc/raw/refs/heads/main/build-docs/download-dwt.sh).
+1. Download the docs template repo and the Web TWAIN docs repo with [download.sh](https://github.com/dynamsoft-docs/web-twain-docs/raw/refs/heads/master/scripts/download.sh).
 2. Install Ruby.
 3. Go to the docs' folder and install dependencies.
 
