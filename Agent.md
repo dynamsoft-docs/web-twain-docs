@@ -58,7 +58,7 @@ description: <concise summary>
 Notes:
 - `noTitleIndex` is common for FAQ and selected index-style pages; match nearby files.
 - If updating an existing FAQ, update `last_modified` to current edit time and keep the existing date format.
-- Keep timezone format consistent with the target file (many files use `+0800`; some newer files use `-08:00`).
+- Use the committer's local timezone for `date` / `last_modified` (for example, `+0800` for UTC+8 users).
 
 ## FAQ Content Pattern
 
