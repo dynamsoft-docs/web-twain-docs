@@ -142,6 +142,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 8.  [How can I separate my documents automatically by barcode?](/_articles/faq/separate-documents-by-barcode.md)
 9.  [Is there any way to speed up the barcode reading process?](/_articles/faq/speed-up-barcode-reading-process.md)
 10.  [What types of webcams does the Webcam Capture addon support](/_articles/faq/webcam-supported-by-webcam-capture-addon.md)
+11.  [How can I prompt users for a password when loading a password-protected PDF?](/_articles/faq/prompt-password-for-protected-pdf.md)
 
 ## Project Deployment and End-user Installation
 
