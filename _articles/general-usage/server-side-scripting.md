@@ -15,7 +15,7 @@ description: Dynamic Web TWAIN SDK Documentation Server Scripts Page
 
 As mentioned in our [image upload guide](/_articles/general-usage/image-export/server-upload.md), `Dynamic Web TWAIN` sends an HTTP POST request to the server when doing an upload. The file in the POST Form has the name `RemoteFile` by default. If you wish to change that, you can use [ `HttpFieldNameOfUploadedImage` ](/_articles/info/api/WebTwain_IO.md#httpfieldnameofuploadedimage). 
 
-The following assumes the default `RemoteFile` is used and that [extra Form fields](/_articles/general-usage/image-export/index.md#can-i-change-the-fields-of-the-http-form) might accompany the file.
+The following assumes the default `RemoteFile` is used and that [extra Form fields](/_articles/faq/additional-form-fields.md) might accompany the file.
 
 ### Upload via CSharp
 

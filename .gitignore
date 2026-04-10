@@ -46,3 +46,9 @@ sitemap.xml
 Hide_Tree_Page.md
 Gemfile.lock
 Gemfile
+
+# Local development workspace
+.dev/
+.bundle/
+.jekyll-cache/
+.sass-cache/
