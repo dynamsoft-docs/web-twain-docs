@@ -35,22 +35,34 @@ Options:
 EOF
 }
 
+require_option_value() {
+  if [[ $# -lt 2 || -z "${2:-}" || "${2:-}" == --* ]]; then
+    echo "Missing value for option: $1" >&2
+    show_help
+    exit 1
+  fi
+}
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --template-repo-url)
-      template_repo_url="${2:-}"
+      require_option_value "$@"
+      template_repo_url="$2"
       shift 2
       ;;
     --template-branch)
-      template_branch="${2:-}"
+      require_option_value "$@"
+      template_branch="$2"
       shift 2
       ;;
     --port)
-      port="${2:-}"
+      require_option_value "$@"
+      port="$2"
       shift 2
       ;;
     --bind-host)
-      bind_host="${2:-}"
+      require_option_value "$@"
+      bind_host="$2"
       shift 2
       ;;
     --no-template-update)
