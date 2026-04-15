@@ -12,7 +12,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ## 19.3.3 (04/16/2026) 
 
-Updated third-party libraries to enhance security.
+* Updated third-party libraries to enhance security.
+* Fixed a `COMMONJS_VARIABLE_IN_ESM` warning using Vite 8+.
 
 ## 19.3.2 (03/05/2026) 
 
