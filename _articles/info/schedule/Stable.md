@@ -10,6 +10,11 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.3.3 (04/16/2026) 
+
+* Updated third-party libraries to enhance security.
+* Fixed a `COMMONJS_VARIABLE_IN_ESM` warning using Vite 8+.
+
 ## 19.3.2 (03/05/2026) 
 
 Updated third-party libraries to enhance security.
@@ -146,6 +151,10 @@ Updated the names of headers for the REST API.
 
 - Fixed a CORS request blocked error which also triggers a prompt to install the Dynamic Web TWAIN Service.
 - Fixed Vite runtime errors caused by polyfills and resource path misconfiguration.
+
+## 18.5.5 (04/16/2026) 
+
+Updated third-party libraries to enhance security.
 
 ## 18.5.4 (03/05/2026) 
 
