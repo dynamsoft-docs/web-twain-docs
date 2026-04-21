@@ -37,8 +37,8 @@ title: <question>
 keywords: Dynamic Web TWAIN, <topic keywords>
 breadcrumbText: <same as title>
 description: <same as title, or concise variant>
-date: YYYY-MM-DD HH:mm:ss +0800
-last_modified: YYYY-MM-DD HH:mm:ss +0800
+date: YYYY-MM-DD HH:mm:ss ±HHMM (or ±HH:MM)
+last_modified: YYYY-MM-DD HH:mm:ss ±HHMM (or ±HH:MM)
 ---
 ```
 
@@ -57,8 +57,7 @@ description: <concise summary>
 
 Notes:
 - `noTitleIndex` is common for FAQ and selected index-style pages; match nearby files.
-- If updating an existing FAQ, update `last_modified` to current edit time and keep the existing date format.
-- Use the committer's local timezone for `date` / `last_modified` (for example, `+0800` for UTC+8 users).
+- If updating an existing FAQ, update `last_modified` to current edit time and match the exact datetime/offset format used by nearby files in the same folder.
 
 ## FAQ Content Pattern
 
