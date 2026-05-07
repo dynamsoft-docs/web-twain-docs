@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Dynamic Web TWAIN Service, silently
 breadcrumbText: Can I install Dynamic Web TWAIN Service silently? 
 description: Can I install Dynamic Web TWAIN Service silently? 
 date: 2021-07-14 18:58:25 +0800
-last_modified: 2023-06-28 14:12:36 +0800
+last_modified: 2026-05-06 10:54:41 -0700
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
@@ -15,7 +15,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 # Can I install Dynamic Web TWAIN Service silently? 
 
-Yes. The following are the commands for this purpose
+Yes. You can install Dynamic Web TWAIN Service silently by running the appropriate command for your version and operating system.
 
 <div class="multi-panel-switching-prefix"></div>
 
@@ -25,6 +25,8 @@ Yes. The following are the commands for this purpose
 <div class="multi-panel-start"></div>
 
 * Windows
+
+Run Command Prompt as administrator, then execute:
 
 ``` shell
 msiexec  /i  "/path/to/DynamicWebTWAINServiceSetup.msi"   /qn
@@ -59,6 +61,8 @@ sudo rpm -i path/to/DynamicWebTWAINServiceSetup.rpm
 
 * Windows
 
+Run Command Prompt as administrator, then execute:
+
 ``` shell
 msiexec  /i  "/path/to/DynamsoftServiceSetup.msi"   /qn
 ```
@@ -90,4 +94,4 @@ sudo rpm -i path/to/DynamsoftServiceSetup.rpm
 
 <div class="multi-panel-switching-end"></div>
 
-And in a controlled environment, Dynamic Web TWAIN Service can be distributed to all clients in one go just like other similar programs. [Group Policy](https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software) is one such technology.
+In a controlled environment, you can distribute Dynamic Web TWAIN Service to all client machines at once, as you would with other software. [Group Policy](https://docs.microsoft.com/en-us/troubleshoot/windows-server/group-policy/use-group-policy-to-install-software) is one option for Windows deployments.
