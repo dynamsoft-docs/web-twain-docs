@@ -10,6 +10,31 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.4 (06/26/2026) 
+
+## New Features
+
+* Added support for writing PDF as PDF/A-3b.
+* Added `maxThreads` param for [`loadFromLocalStorage()`](/_articles/info/api/WebTwain_IO.md#loadfromlocalstorage) and [`saveToLocalStorage()`](/_articles/info/api/WebTwain_IO.md#savetolocalstorage) to improve performance.
+* Added [`outputInfo`](/_articles/info/api/interfaces.md#outputinfo) for [`startScan()`](/_articles/info/api/WebTwain_Acquire.md#startscan).
+
+### Improvements
+
+* Included the previous major version's DLLs in Dynamic Web TWAIN Service to make it compatible with the previous version's JavaScript.
+* Packaged the macOS version of Dynamic Web TWAIN Service as a Universal App.
+* Removed the major version restriction using annual licenses.
+* [`ResourcePath`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#resourcespath) is now inferred with the script path if not specified.
+* Improved the triggering of [`OnTopImageInTheViewChanged`](/_articles/info/api/WebTwain_Buffer.md#ontopimageintheviewchanged).
+* Improved the error message if the JavaScript version does match the service version.
+* Added an error code for failure to load password-protected PDFs.
+* Updated third-party libraries to enhance security.
+
+### Bug Fixes
+
+* Fixed loading of interlaced PNGs.
+* Fixed an issue where the HTTP form fields are lost using segmented upload with large files.
+
+
 ## 19.3.3 (04/16/2026) 
 
 * Updated third-party libraries to enhance security.
