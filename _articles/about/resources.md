@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
-title: Dynamic Web TWAIN SDK Resources
+title: "Dynamic Web TWAIN SDK Resources – Guides & Tools"
 keywords: Dynamic Web TWAIN, TWAIN, Documentation, Resources
 breadcrumbText: Resources
 description: Dynamic Web TWAIN SDK Documentation Resources Page
