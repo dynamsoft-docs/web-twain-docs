@@ -6,8 +6,8 @@ title: Can I limit the size of documents to be uploaded to my server?
 keywords: Dynamic Web TWAIN, Security, limit upload size
 breadcrumbText: Can I limit the size of documents to be uploaded to my server?
 description: Can I limit the size of documents to be uploaded to my server?
-date: 2021-11-29 18:33:59 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-11-29 18:33:59 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Security

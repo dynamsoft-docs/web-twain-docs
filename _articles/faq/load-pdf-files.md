@@ -6,8 +6,8 @@ title: How can I load PDF/A files into the Dynamic Web TWAIN SDK?
 keywords: Dynamic Web TWAIN, Addon, load pdf/a
 breadcrumbText: How can I load PDF/A files into the Dynamic Web TWAIN SDK?
 description: How can I load PDF/A files into the Dynamic Web TWAIN SDK?
-date: 2021-12-01 01:09:41 +0800
-last_modified: 2025-12-11 14:20:54 +0800
+date: 2021-12-01 01:09:41 +0000
+last_modified: 2025-12-11 14:20:54 +0000
 ---
 
 # Addon

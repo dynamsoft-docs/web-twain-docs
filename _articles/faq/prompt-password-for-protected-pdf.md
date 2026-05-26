@@ -6,8 +6,8 @@ title: How can I prompt users for a password when loading a password-protected P
 keywords: Dynamic Web TWAIN, Addon, PDF, password, encrypted, LoadImageEx, OnPostLoad
 breadcrumbText: How can I prompt users for a password when loading a password-protected PDF?
 description: How can I prompt users for a password when loading a password-protected PDF?
-date: 2026-04-09 10:00:00 +0800
-last_modified: 2026-04-09 10:00:00 +0800
+date: 2026-04-09 10:00:00 +0000
+last_modified: 2026-04-09 10:00:00 +0000
 ---
 
 # Addon

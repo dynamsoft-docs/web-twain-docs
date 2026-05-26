@@ -6,8 +6,8 @@ title: Dynamic Web TWAIN SDK FAQs Develop How to Exclude WIA Sources in the Sour
 keywords: Dynamic Web TWAIN, Documentation, Develop
 breadcrumbText: How To Exclude WIA Sources in the Source List
 description: Dynamic Web TWAIN SDK Documentation FAQs How to Exclude WIA Sources in the Source List
-date: 2022-09-15 03:22:48 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+date: 2022-09-15 03:22:48 +0000
+last_modified: 2024-09-19 08:47:35 +0000
 ---
 
 # Develop

@@ -6,8 +6,8 @@ title: Do you provide free trial versions of the Dynamic Web TWAIN SDK?
 keywords: Dynamic Web TWAIN, SDK Download, free trial
 breadcrumbText: Do you provide free trial versions of the Dynamic Web TWAIN SDK?
 description: Do you provide free trial versions of the Dynamic Web TWAIN SDK?
-date: 2021-11-18 11:17:20 +0800
-last_modified: 2022-10-21 14:05:54 +0800
+date: 2021-11-18 11:17:20 +0000
+last_modified: 2022-10-21 14:05:54 +0000
 ---
 
 # SDK Download/Free Trial

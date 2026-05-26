@@ -6,8 +6,8 @@ title: What resources of the SDK should be included in my web application?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, resources
 breadcrumbText: What resources of the SDK should be included in my web application?
 description: What resources of the SDK should be included in my web application?
-date: 2021-12-11 06:47:21 +0800
-last_modified: 2022-10-14 14:05:08 +0800
+date: 2021-12-11 06:47:21 +0000
+last_modified: 2022-10-14 14:05:08 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

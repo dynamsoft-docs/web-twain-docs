@@ -6,8 +6,8 @@ title: Error message – Your Dynamic Web TWAIN product key expired
 keywords: Dynamic Web TWAIN, Error Troubleshooting, product key, expired
 breadcrumbText: Error message – Your Dynamic Web TWAIN product key expired
 description: Error message – Your Dynamic Web TWAIN product key expired
-date: 2021-12-03 23:26:46 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-12-03 23:26:46 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Error Troubleshooting

@@ -6,8 +6,8 @@ title: How can I use a custom capability of my scanner hardware when there is no
 keywords: Dynamic Web TWAIN, Capture/ Image Source, custom capability
 breadcrumbText: How can I use a custom capability of my scanner hardware when there is no direct API to set it?
 description: How can I use a custom capability of my scanner hardware when there is no direct API to set it?
-date: 2021-12-08 03:01:32 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+date: 2021-12-08 03:01:32 +0000
+last_modified: 2024-09-19 08:47:35 +0000
 ---
 
 # Capture/Image Source

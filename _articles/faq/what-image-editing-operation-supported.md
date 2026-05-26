@@ -6,8 +6,8 @@ title: What image editing operations does the Dynamic Web TWAIN SDK support?
 keywords: Dynamic Web TWAIN, Image Editing, image, image editing,
 breadcrumbText: What image editing operations does the Dynamic Web TWAIN SDK support?
 description: What image editing operations does the Dynamic Web TWAIN SDK support?
-date: 2021-12-09 09:25:33 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-12-09 09:25:33 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Image Editing

@@ -6,7 +6,7 @@ title: Request header field dwt-md5 is not allowed by Access-Control-Allow-Heade
 keywords: Dynamic Web TWAIN, Error Troubleshooting, dwt-md5, Access-Control-Allow-Headers
 breadcrumbText: Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
 description: Request header field dwt-md5 is not allowed by Access-Control-Allow-Headers in preflight response
-date: 2021-12-03 23:26:46 +0800
+date: 2021-12-03 23:26:46 +0000
 last_modified: 2026-01-21 15:58:00 -08:00
 ---
 

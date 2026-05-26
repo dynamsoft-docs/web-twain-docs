@@ -6,8 +6,8 @@ title: Do you have any local resellers from whom I can purchase a license of the
 keywords: Dynamic Web TWAIN, Licensing and Purchase, local, resellers
 breadcrumbText: Do you have any local resellers from whom I can purchase a license of the Dynamic Web TWAIN SDK?
 description: Do you have any local resellers from whom I can purchase a license of the Dynamic Web TWAIN SDK?
-date: 2021-12-04 02:34:30 +0800
-last_modified: 2022-10-21 14:05:54 +0800
+date: 2021-12-04 02:34:30 +0000
+last_modified: 2022-10-21 14:05:54 +0000
 ---
 
 # Licensing and Purchase

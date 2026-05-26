@@ -6,8 +6,8 @@ title: Can the Dynamic Web TWAIN SDK detect whether papers exist on the flatbed?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, detect paper, flatbed
 breadcrumbText: Can the Dynamic Web TWAIN SDK detect whether papers exist on the flatbed?
 description: Can the Dynamic Web TWAIN SDK detect whether papers exist on the flatbed?
-date: 2021-12-08 03:01:32 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+date: 2021-12-08 03:01:32 +0000
+last_modified: 2024-09-19 08:47:35 +0000
 ---
 
 # Capture/Image Source

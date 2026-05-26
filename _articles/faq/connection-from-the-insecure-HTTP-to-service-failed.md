@@ -6,8 +6,8 @@ title: Error Message - The connection from the insecure (HTTP) web page to the l
 keywords: Dynamic Web TWAIN, Error Message, connection failed, Dynamsoft Service, HTTP
 breadcrumbText: Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed
 description: Error Message - The connection from the insecure (HTTP) web page to the local 'Dynamsoft Service' failed
-date: 2022-03-02 18:10:16 +0800
-last_modified: 2023-01-05 09:58:27 +0800
+date: 2022-03-02 18:10:16 +0000
+last_modified: 2023-01-05 09:58:27 +0000
 ---
 
 # Error Troubleshooting

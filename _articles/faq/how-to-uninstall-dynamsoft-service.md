@@ -6,8 +6,8 @@ title: How to uninstall Dynamic Web TWAIN Service?
 keywords: Dynamic Web TWAIN, Dynamic Web TWAIN Service, uninstall, silently
 breadcrumbText: How to uninstall Dynamic Web TWAIN Service?
 description: How to uninstall Dynamic Web TWAIN Service?
-date: 2021-07-14 18:58:25 +0800
-last_modified: 2025-03-31 00:00:00 +0800
+date: 2021-07-14 18:58:25 +0000
+last_modified: 2025-03-31 00:00:00 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

@@ -7,7 +7,7 @@ title: Apple Rosetta Transition and Dynamic Web TWAIN Service on macOS
 keywords: Dynamic Web TWAIN Service, Rosetta, macOS, Apple Silicon, Universal Binary, Intel, arm64
 breadcrumbText: Apple Rosetta Transition and Dynamic Web TWAIN Service on macOS
 description: Apple is phasing out Rosetta for Intel apps on Apple Silicon Macs. Learn how this affects the Dynamic Web TWAIN Service and what steps to take.
-date: 2026-05-22 17:21:42 +0800
+date: 2026-05-22 17:21:42 +0000
 last_modified: 2026-05-22 10:20:00 -0800
 ---
 
