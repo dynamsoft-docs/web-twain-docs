@@ -34,14 +34,14 @@ interface DWTInitialConfig {
 
 ``` typescript
 interface Container {
-    WebTwainId?: string; // Id of the WebTwain instance
-    ContainerId?: string; // Id of the element
-    Width?: string | number; // Width of the element
-    Height?: string | number; // Height of the element
+    WebTwainId?: string; // ID of the WebTwain instance
+    ContainerId?: string; // ID of the container element to bind
+    Width?: string | number; // Width of the div element appended to the container
+    Height?: string | number; // Height of the div element appended to the container
 }
 ```
 
-- `WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance.
+- `WebTwainId` and `ContainerId` are both optional but one must exist as the identifier for that `WebTwain` instance. If you don't need to use the viewer (headless), you can leave `ContainerId` empty.
 - `Width` and `Height` determine the initial size of `Viewer` object.
 
 ### DisplayInfo
