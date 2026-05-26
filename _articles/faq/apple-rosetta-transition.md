@@ -4,11 +4,11 @@ noTitleIndex: true
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 title: macOS Rosetta Discontinuation and Dynamic Web TWAIN Service
-keywords: Dynamic Web TWAIN Service, Rosetta, macOS
+keywords: Dynamic Web TWAIN Service, Rosetta, macOS, Apple Silicon, Universal Binary, Intel, arm64
 breadcrumbText: macOS Rosetta Discontinuation and Dynamic Web TWAIN Service
-description: macOS Rosetta Discontinuation and Dynamic Web TWAIN Service
-date: 2026-05-22 17:21:42 +0800
-last_modified: 2026-05-22 10:20:00 -0800
+description: Apple is phasing out Rosetta for Intel apps on Apple Silicon Macs. Learn how this affects the Dynamic Web TWAIN Service and what steps to take.
+date: 2026-05-26 17:21:42 +0800
+last_modified: 2026-05-26 10:20:00 -0800
 ---
 
 # Error Troubleshooting
