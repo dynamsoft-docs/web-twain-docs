@@ -171,7 +171,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 23.  [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md)
 24.  [Where can I download the Dynamic Web TWAIN Service installers only?](/_articles/faq/download-service-only.md)
 25.  [Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later](/_articles/faq/chromium-142-local-network-access-issue.md)
-26.  [macOS Rosetta Discontinuation and Dynamic Web TWAIN Service](/_articles/faq/apple-rosetta-transition-original.md)
+26.  [macOS Rosetta Discontinuation and Dynamic Web TWAIN Service](/_articles/faq/apple-rosetta-transition.md)
 
 ## Error Troubleshooting
 
