@@ -6,8 +6,8 @@ title: I need to resell the SDK within my application to my customers. What opti
 keywords: Dynamic Web TWAIN, Licensing and Purchase, resell sdk
 breadcrumbText: I need to resell the SDK within my application to my customers. What options do you offer?
 description: I need to resell the SDK within my application to my customers. What options do you offer?
-date: 2021-12-04 02:34:30 +0800
-last_modified: 2022-06-02 15:30:49 +0800
+date: 2021-12-04 02:34:30 +0000
+last_modified: 2022-06-02 15:30:49 +0000
 ---
 
 # Licensing and Purchase

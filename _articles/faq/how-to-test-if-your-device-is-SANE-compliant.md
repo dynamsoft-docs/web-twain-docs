@@ -6,7 +6,7 @@ title: How to test if your device is SANE compliant
 keywords: Dynamic Web TWAIN, Capture/ Image Source, verify scanner, compatible, SANE
 breadcrumbText: How to test if your device is SANE compliant
 description: How to test if your device is SANE compliant
-date: 2021-07-14 18:55:57 +0800
+date: 2021-07-14 18:55:57 +0000
 last_modified: 2026-01-21 16:13:08 -08:00
 ---
 

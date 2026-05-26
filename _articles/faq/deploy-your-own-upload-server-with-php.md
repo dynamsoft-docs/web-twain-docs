@@ -6,8 +6,8 @@ title: How to deploy your own upload server with PHP?
 keywords: Dynamic Web TWAIN, Document Saving, Upload
 breadcrumbText: How to deploy your own upload server with PHP?
 description: How to deploy your own upload server with PHP?
-date: 2024-06-14 10:24:21 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+date: 2024-06-14 10:24:21 +0000
+last_modified: 2024-09-19 08:47:35 +0000
 ---
 
 # Document Saving

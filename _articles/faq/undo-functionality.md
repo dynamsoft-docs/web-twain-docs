@@ -6,8 +6,8 @@ title: Is there an undo functionality?
 keywords: Dynamic Web TWAIN, Image Editing, undo
 breadcrumbText: Is there an undo functionality?
 description: Is there an undo functionality?
-date: 2021-12-09 09:25:33 +0800
-last_modified: 2022-10-21 14:05:54 +0800
+date: 2021-12-09 09:25:33 +0000
+last_modified: 2022-10-21 14:05:54 +0000
 ---
 
 # Image Editing

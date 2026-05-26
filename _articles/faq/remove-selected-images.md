@@ -6,8 +6,8 @@ title: How can I remove only the selected images?
 keywords: Dynamic Web TWAIN, Image Editing, remove selected images, remove specific images
 breadcrumbText: How can I remove only the selected images?
 description: How can I remove only the selected images?
-date: 2021-12-09 09:25:33 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+date: 2021-12-09 09:25:33 +0000
+last_modified: 2024-09-19 08:47:35 +0000
 ---
 
 # Image Editing

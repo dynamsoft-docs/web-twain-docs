@@ -6,8 +6,8 @@ title: Can I customize UI elements of the built-in image editor?
 keywords: Dynamic Web TWAIN, UI Customization, customize, ui elements
 breadcrumbText: Can I customize UI elements of the built-in image editor?
 description: Can I customize UI elements of the built-in image editor?
-date: 2021-12-08 03:32:59 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+date: 2021-12-08 03:32:59 +0000
+last_modified: 2024-09-19 08:47:35 +0000
 ---
 
 # UI Customization

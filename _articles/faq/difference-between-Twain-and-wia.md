@@ -6,8 +6,8 @@ title: What are the differences between TWAIN and WIA?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, twain, wia, difference
 breadcrumbText: What are the differences between TWAIN and WIA?
 description: What are the differences between TWAIN and WIA?
-date: 2021-07-14 18:55:57 +0800
-last_modified: 2023-05-25 22:38:03 +0800
+date: 2021-07-14 18:55:57 +0000
+last_modified: 2023-05-25 22:38:03 +0000
 ---
 
 # Capture/Image Source

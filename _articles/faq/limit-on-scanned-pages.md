@@ -6,7 +6,7 @@ title: Is there a limit on the number of pages I can scan at a time? Where do yo
 keywords: Dynamic Web TWAIN, Capture/ Image Source, limit on scanned pages
 breadcrumbText: Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning?
 description: Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning?
-date: 2021-12-08 03:01:32 +0800
+date: 2021-12-08 03:01:32 +0000
 last_modified: 2026-01-21 14:32:41 -0800
 ---
 

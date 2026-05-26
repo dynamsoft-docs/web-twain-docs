@@ -6,7 +6,7 @@ title: XMLHttpRequest cannot load XXX
 keywords: Dynamic Web TWAIN, Error Troubleshooting, XMLHttpRequest
 breadcrumbText: XMLHttpRequest cannot load XXX
 description: XMLHttpRequest cannot load XXX
-date: 2021-12-03 23:26:46 +0800
+date: 2021-12-03 23:26:46 +0000
 last_modified: 2026-01-23 06:35:12 -08:00
 ---
 

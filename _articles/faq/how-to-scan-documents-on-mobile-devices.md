@@ -6,8 +6,8 @@ title: How to scan documents on mobile devices?
 keywords: Dynamic Web TWAIN, Capture/Image Source, scan with mobile
 breadcrumbText: How to scan documents on mobile devices?
 description: How to scan documents on mobile devices?
-date: 2025-09-08 13:50:00 +0800
-last_modified: 2025-09-08 13:50:00 +0800
+date: 2025-09-08 13:50:00 +0000
+last_modified: 2025-09-08 13:50:00 +0000
 ---
 
 # Capture/Image Source

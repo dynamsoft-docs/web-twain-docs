@@ -6,8 +6,8 @@ title: Why Do I Get a "File is Damaged and Can’t Be Opened" Error When Using t
 keywords: Dynamic Web TWAIN, macos, Damaged, can't be opened
 breadcrumbText: Why Do I Get a "File is Damaged and Can’t Be Opened" Error When Using the Dynamic Web TWAIN on macOS?
 description: Why Do I Get a "File is Damaged and Can’t Be Opened" Error When Using the Dynamic Web TWAIN on macOS?
-date: 2025-12-08 07:56:47 +0800
-last_modified: 2025-12-08 07:56:47 +0800
+date: 2025-12-08 07:56:47 +0000
+last_modified: 2025-12-08 07:56:47 +0000
 ---
 
 # Why Do I Get a "File is Damaged and Can’t Be Opened" Error When Using the Dynamic Web TWAIN on macOS?

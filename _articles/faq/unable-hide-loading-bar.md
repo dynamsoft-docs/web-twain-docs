@@ -6,8 +6,8 @@ title: Why I cannot hide the loading bar (spinner)?
 keywords: Dynamic Web TWAIN, UI Customization, hide, spinner, loading bar
 breadcrumbText: Why I cannot hide the loading bar (spinner)?
 description: Why I cannot hide the loading bar (spinner)?
-date: 2022-08-05 11:32:29 +0800
-last_modified: 2022-08-28 20:58:54 +0800
+date: 2022-08-05 11:32:29 +0000
+last_modified: 2022-08-28 20:58:54 +0000
 ---
 
 # UI Customization

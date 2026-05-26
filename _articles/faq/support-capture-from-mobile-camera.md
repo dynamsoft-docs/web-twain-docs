@@ -6,8 +6,8 @@ title: Do you support capturing documents from mobile cameras?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, support mobile camera
 breadcrumbText: Do you support capturing documents from mobile cameras?
 description: Do you support capturing documents from mobile cameras?
-date: 2021-12-08 03:01:32 +0800
-last_modified: 2025-09-08 13:50:00 +0800
+date: 2021-12-08 03:01:32 +0000
+last_modified: 2025-09-08 13:50:00 +0000
 ---
 
 # Capture/Image Source
