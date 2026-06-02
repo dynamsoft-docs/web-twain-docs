@@ -565,9 +565,12 @@ interface Status {
     event?: string;
     result?: {
         currentPageNum?: number;
+        outputInfo?:OutputInfo; 
     };
 }
 ```
+
+[`OutputInfo`](/_articles/info/api/interfaces.md#outputinfo) is only returned for `postTransfer` event.
 
 ### TiffTag
 
