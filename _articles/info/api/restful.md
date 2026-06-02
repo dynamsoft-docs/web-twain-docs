@@ -34,6 +34,7 @@ This is the comprehensive reference for the Dynamic Web TWAIN RESTful API. By de
 | [`/device/scanners/jobs/{jobuid}/scanner/settings`](#get-devicescannersjobsjobuidscannersettings)          | `GET`    | Retrieve settings of scanner specified in a scan job.  |
 | [`/device/scanners/jobs/{jobuid}/next-page-info`](#get-devicescannersjobsjobuidnext-page-info)             | `GET`    | Get information of the next page in a scan job |
 | [`/device/scanners/jobs/{jobuid}/next-page`](#get-devicescannersjobsjobuidnext-page)                       | `GET`    | Get the page in a scan job                     |
+| [`/device/scanners/jobs/{jobuid}/content`](#get-devicescannersjobsjobuidcontent)                         | `GET`    | Get scanned image content by page index        |
 
 [**Document Management**](#document-management)
 
@@ -41,6 +42,7 @@ This is the comprehensive reference for the Dynamic Web TWAIN RESTful API. By de
 | ----------------------------------------------------------------------------------------------------- | -------- | ----------------------------------- |
 | [`/storage/documents`](#post-storagedocuments)                                                       | `POST`   | Create a new document for storage   |
 | [`/storage/documents/{documentuid}`](#get-storagedocumentsdocumentuid)                              | `GET`    | Get info of a stored document       |
+| [`/storage/documents/{documentuid}`](#patch-storagedocumentsdocumentuid)                            | `PATCH`  | Update customData of a stored document |
 | [`/storage/documents/{documentuid}`](#delete-storagedocumentsdocumentuid)                           | `DELETE` | Delete a stored document            |
 | [`/storage/documents/{documentuid}/content`](#get-storagedocumentsdocumentuidcontent)              | `GET`    | Get content of a stored document    |
 | [`/storage/documents/{documentuid}/pages`](#post-storagedocumentsdocumentuidpages)                 | `POST`   | Insert pages into a stored document |
@@ -228,7 +230,10 @@ fetch(url, requestOptions)
 ```json
 {
   "version": "20240719",
-  "compatible": true
+  "compatible": true,
+  "moduleVersions": {
+    "core": ["18.5.5.0416", "19.4.0.0410"]
+  }
 }
 ```
 
@@ -1093,6 +1098,111 @@ fetch(url, requestOptions)
 }
 ```
 
+### `GET /device/scanners/jobs/{jobuid}/content`
+
+Get the scanned image content by page index from a scan job, provided its `jobuid`.
+
+Use the `type` parameter to set the format of the image as either `image/jpeg` or `image/png`, and `page` (0-based index) to specify which page to retrieve. Obtain the `jobuid` from the response of the [`POST /device/scanners/jobs`](#post-devicescannersjobs) scan job creation request.
+
+#### Parameters
+
+|Name|Location|Type|Required|Restrictions|Description|
+|---|---|---|---|---|---|
+|`jobuid`|path|`string`| yes | none |Unique identifier for the scan job, obtained from the [`POST /device/scanners/jobs`](#post-devicescannersjobs) scan job creation request. |
+|`type`|query|`string`| yes | - `image/png`: PNG<br/> - `image/jpeg`: JPEG |The image format of the page, either `image/png` or `image/jpeg`.|
+|`page`|query|`number`| yes | 0-based page index |The index of the page to retrieve, starting from 0.|
+
+#### Request Example
+
+Get page index 0 from a scan job as a `jpeg`:
+
+```js
+const url = new URL("https://127.0.0.1:18623/api");
+const jobuid = `B3701DC5-86D3-44B6-A8A1-FF0B5D43FD86`;
+const pathSegments = ['device', 'scanners', 'jobs', jobuid, 'content'];
+url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
+
+const params = new URLSearchParams();
+params.append(`type`, 'image/jpeg');
+params.append(`page`, '0');
+
+url.search = params.toString();
+let requestOptions = {
+   method: 'GET',
+   redirect: 'follow'
+};
+
+fetch(url, requestOptions)
+   .then(response => response.text())
+   .then(result => console.log(result))
+   .catch(error => console.log('error', error));
+```
+
+#### Responses
+
+|HTTP Status Code |Meaning|Description|Data Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation. Return `image/png` or `image/jpeg` stream.|binary data stream|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad request, e.g. parameter is invalid.|[`Error`](#error)|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|The provided job UID is invalid.|[`Error`](#error)|
+|405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
+|409|[Conflict](https://tools.ietf.org/html/rfc7231#section-6.5.8)|The job is in pending.|[`Error`](#error)|
+|410|[Gone](https://tools.ietf.org/html/rfc7231#section-6.5.9)|Job was deleted. Return 404 instead upon restart of the Dynamic Web TWAIN Service as that clears all job info.|[`Error`](#error)|
+
+#### Response Examples
+
+> 200 Response
+
+> 400 Response
+
+```json
+{
+  "code": -2113,
+  "message": "The parameter is not valid.",
+  "statusCode": 400
+}
+```
+
+> 404 Response
+
+```json
+{
+  "code": -1034,
+  "message": "The provided job UID is invalid.",
+  "statusCode": 404
+}
+```
+
+> 405 Response
+
+```json
+{
+  "code": -2112,
+  "message": "This endpoint only supports GET.",
+  "statusCode": 405
+}
+```
+
+> 409 Response
+
+```json
+{
+  "code": -1011,
+  "message": "Operation out of expected sequence.",
+  "statusCode": 409
+}
+```
+
+> 410 Response
+
+```json
+{
+  "code": -1034,
+  "message": "Invalid value.",
+  "statusCode": 410
+}
+```
+
 ### `GET /device/scanners/jobs/{jobuid}/next-page`
 
 Get the page in a scan job, provided its `jobuid`.
@@ -1387,7 +1497,126 @@ HTTP Status Code **201**
 ```json
 {
   "code": -2112,
-  "message": "This endpoint only supports GET, DELETE.",
+  "message": "This endpoint only supports GET, PATCH, DELETE.",
+  "statusCode": 405
+}
+```
+
+### `PATCH /storage/documents/{documentuid}`
+
+Update the `customData` of a stored document.
+
+Update the metadata of a document stored in the working directory of the Dynamic Web TWAIN Service. The new metadata will completely overwrite the existing one. Only one copy of customData is stored at any time. If the document is password-encrypted, this request must provide the password for access. Obtain the `documentuid` from the response of the [`POST storage/documents`](#post-storagedocuments) document creation request.
+
+#### Parameters
+
+|Name|Location|Type|Required|Restrictions|Description|
+|---|---|---|---|---|---|
+|`documentuid`|path|`string`| yes |none|The UID of the document.|
+|`DWT-DOC-PASSWORD`|header|`string`| no |length <= 32 characters|The password of the document (32 characters max).|
+|`metadata`|body|`string` or `object`| yes |none|Custom data to update, will fully overwrite existing data.|
+
+#### Request Example
+
+Update the customData of a document:
+
+```js
+const url = new URL("https://127.0.0.1:18623/api");
+const documentuid = `190807444d76`;
+const pathSegments = ['storage', 'documents', documentuid];
+url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
+
+let myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+let raw = JSON.stringify({
+  metadata: {
+    fileName: 'test.pdf',
+    uploadTime: '2025-01-01'
+  }
+});
+
+let requestOptions = {
+   method: 'PATCH',
+   headers: myHeaders,
+   body: raw,
+   redirect: 'follow'
+};
+
+fetch(url, requestOptions)
+   .then(response => response.text())
+   .then(result => console.log(result))
+   .catch(error => console.log('error', error));
+```
+
+#### Responses
+
+|HTTP Status Code |Meaning|Description|Data Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation.|[`DocumentInfo`](#documentinfo)|
+|400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Bad request, e.g. parameter is invalid.|[`Error`](#error)|
+|403|[Forbidden](https://tools.ietf.org/html/rfc7231#section-6.5.3)|The password is not valid.|[`Error`](#error)|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|The provided document UID is invalid.|[`Error`](#error)|
+|405|[Method Not Allowed](https://tools.ietf.org/html/rfc7231#section-6.5.5)|Method not allowed.|[`Error`](#error)|
+
+#### Response Examples
+
+> 200 Response
+
+```json
+{
+  "uid": "190807444d76",
+  "metadata": {
+    "fileName": "test.pdf",
+    "uploadTime": "2025-01-01"
+  },
+  "pages": [
+    {
+      "uid": "190817548d70"
+    },
+    {
+      "uid": "190817648270"
+    }
+  ]
+}
+```
+
+> 400 Response
+
+```json
+{
+  "code": -2113,
+  "message": "The parameter is not valid.",
+  "statusCode": 400
+}
+```
+
+> 403 Response
+
+```json
+{
+  "code": -1043,
+  "message": "The password is not valid.",
+  "statusCode": 403
+}
+```
+
+> 404 Response
+
+```json
+{
+  "code": -1040,
+  "message": "The provided document UID is invalid.",
+  "statusCode": 404
+}
+```
+
+> 405 Response
+
+```json
+{
+  "code": -2112,
+  "message": "This endpoint only supports GET, PATCH, DELETE.",
   "statusCode": 405
 }
 ```
@@ -1477,7 +1706,7 @@ fetch(url, requestOptions)
 ```json
 {
   "code": -2112,
-  "message": "This endpoint only supports GET, DELETE.",
+  "message": "This endpoint only supports GET, PATCH, DELETE.",
   "statusCode": 405
 }
 ```
@@ -2280,6 +2509,10 @@ We also return websocket protocol info. but not list.
 ```json
 {
   "uid": "190807444d76",
+  "metadata": {
+    "fileName": "test.pdf",
+    "uploadTime": "2025-01-01"
+  },
   "pages": [
     {
       "uid": "190817548d70"
@@ -2294,6 +2527,7 @@ We also return websocket protocol info. but not list.
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
 |`uid`|`string`|true|none|document uid|
+|`metadata`|`object`|false|none|custom data attached to the document|
 |`pages`|[[`PageInfo`](#pageinfo)]|true|none|pages info|
 
 ### `ServerSettingsInput`
@@ -2350,7 +2584,10 @@ Currently, only return log level.
 ```json
 {
   "version": "20240719",
-  "compatible": true
+  "compatible": true,
+  "moduleVersions": {
+    "core": ["18.5.5.0416", "19.4.0.0410"]
+  }
 }
 
 ```
@@ -2361,6 +2598,7 @@ Currently, only return log level.
 |---|---|---|---|---|
 |`version`|`string`|false|none|server api version.|
 |`compatible`|`boolean`|false|none|server is compatible with the client.|
+|`moduleVersions`|`object`|false|none|the versions of different modules of the server. Keys are module names, values are arrays of version strings.|
 
 ### `CheckBlankSettings`
 
