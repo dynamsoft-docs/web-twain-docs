@@ -211,7 +211,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2807 | Error: The element specified by the id XXX doesn't exist. |
 |-2808 | The license for v' + majorVersion + ' Service Core Module has expired. |
 |-2809 | The license for v' + majorVersion + ' Service Core Module is not found. |
-|-2810 | The product key for the current operating system is missing the Service Core license. Please contact the site administrator. |
+|-2810 | The product key for the current operating system is missing the Service Core license. Please contact the site administrator. \| The current product key does not support REST Call for the current operating system. |
 |-2812 | Error: Duplicate ID detected while creating a Dynamic Web TWAIN object. |
 |-2813 | Error: The ID of the target DIV for the new DWT object is invalid. |
 |-2814 | Error: The Dynamic Web TWAIN module is not installed. |
