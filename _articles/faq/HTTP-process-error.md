@@ -6,8 +6,8 @@ title: HTTP process error
 keywords: Dynamic Web TWAIN, Error Troubleshooting, HTTP process
 breadcrumbText: HTTP process error
 description: HTTP process error
-date: 2021-12-03 23:26:46 +0800
-last_modified: 2025-08-14 14:09:35 +0800
+date: 2021-12-03 23:26:46 +0000
+last_modified: 2025-08-14 14:09:35 +0000
 ---
 
 # Error Troubleshooting

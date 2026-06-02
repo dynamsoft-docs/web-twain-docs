@@ -6,8 +6,8 @@ title: Where can I download the Dynamic Web TWAIN Service installers only?
 keywords: Dynamic Web TWAIN, Installation, Dynamic Web TWAIN Service, installer
 breadcrumbText: Where can I download the Dynamic Web TWAIN Service installers only?
 description: Where can I download the Dynamic Web TWAIN Service installers only?
-date: 2025-02-13 11:35:18 +0800
-last_modified: 2025-02-13 23:59:50 +0800
+date: 2025-02-13 11:35:18 +0000
+last_modified: 2025-02-13 23:59:50 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

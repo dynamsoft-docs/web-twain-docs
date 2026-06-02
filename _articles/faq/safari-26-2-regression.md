@@ -6,8 +6,8 @@ title: Safari 26.2 Regression Causing Dynamic Web TWAIN v19.3 Auto-Reconnect Fai
 keywords: Dynamic Web TWAIN, macos, Auto-Reconnect, 19.3, Safari
 breadcrumbText: Safari 26.2 Regression Causing Dynamic Web TWAIN v19.3 Auto-Reconnect Failure on macOS
 description: Safari 26.2 Regression Causing Dynamic Web TWAIN v19.3 Auto-Reconnect Failure on macOS
-date: 2025-12-31 13:18:47 +0800
-last_modified: 2025-12-31 13:18:47 +0800
+date: 2025-12-31 13:18:47 +0000
+last_modified: 2025-12-31 13:18:47 +0000
 ---
 
 # Safari 26.2 Regression Causing Dynamic Web TWAIN v19.3 Auto-Reconnect Failure on macOS

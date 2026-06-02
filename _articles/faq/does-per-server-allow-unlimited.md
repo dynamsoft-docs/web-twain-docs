@@ -6,8 +6,8 @@ title: Does the per-server license allow unlimited number of client devices and 
 keywords: Dynamic Web TWAIN, Licensing and Purchase, per-server, unlimited
 breadcrumbText: Does the per-server license allow unlimited number of client devices and end users?
 description: Does the per-server license allow unlimited number of client devices and end users?
-date: 2021-12-04 02:34:30 +0800
-last_modified: 2022-06-02 15:30:49 +0800
+date: 2021-12-04 02:34:30 +0000
+last_modified: 2022-06-02 15:30:49 +0000
 ---
 
 # Licensing and Purchase

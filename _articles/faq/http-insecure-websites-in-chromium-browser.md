@@ -6,7 +6,7 @@ title: Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, Chrome 94 issue, HTTP website, Edge 94 issue, insecure
 breadcrumbText: Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?
 description: Can I still use Dynamic Web TWAIN on non-HTTPS (insecure HTTP) sites with Chrome?
-date: 2021-09-24 07:56:47 +0800
+date: 2021-09-24 07:56:47 +0000
 last_modified: 2026-02-11 10:55:00 -0500
 ---
 

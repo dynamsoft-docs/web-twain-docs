@@ -6,8 +6,8 @@ title:  How do I know which SDK version I am using?
 keywords: Dynamic Web TWAIN, Dynamic Web TWAIN Service, SDK version
 breadcrumbText:  How do I know which SDK version I am using?
 description:  How do I know which SDK version I am using?
-date: 2023-12-01 18:57:14 +0800
-last_modified: 2025-01-15 14:58:40 +0800
+date: 2023-12-01 18:57:14 +0000
+last_modified: 2025-01-15 14:58:40 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

@@ -6,8 +6,8 @@ title: Can the Dynamic Web TWAIN SDK automatically detect borders of the scanned
 keywords: Dynamic Web TWAIN, Capture/ Image Source, default source, automatically, detect border
 breadcrumbText: Can the Dynamic Web TWAIN SDK automatically detect borders of the scanned document and crop it out?
 description: Can the Dynamic Web TWAIN SDK automatically detect borders of the scanned document and crop it out?
-date: 2021-12-08 03:01:32 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-12-08 03:01:32 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Capture/Image Source

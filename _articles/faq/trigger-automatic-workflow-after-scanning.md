@@ -6,8 +6,8 @@ title: How can I trigger an automatic workflow right after document scanning or 
 keywords: Dynamic Web TWAIN, Capture/ Image Source, trigger, automatic workflow
 breadcrumbText: How can I trigger an automatic workflow right after document scanning or image importing?
 description: How can I trigger an automatic workflow right after document scanning or image importing?
-date: 2021-12-08 03:01:32 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-12-08 03:01:32 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Capture/Image Source

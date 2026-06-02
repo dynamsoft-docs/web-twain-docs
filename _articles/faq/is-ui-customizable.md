@@ -6,7 +6,7 @@ title: Is the UI of the Dynamic Web TWAIN SDK fully customizable? What cannot be
 keywords: Dynamic Web TWAIN, UI Customization, ui customizable
 breadcrumbText: Is the UI of the Dynamic Web TWAIN SDK fully customizable? What cannot be customized?
 description: Is the UI of the Dynamic Web TWAIN SDK fully customizable? What cannot be customized?
-date: 2021-12-08 03:32:59 +0800
+date: 2021-12-08 03:32:59 +0000
 last_modified: 2026-01-21 16:19:08 -08:00
 ---
 

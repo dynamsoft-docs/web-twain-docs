@@ -6,7 +6,7 @@ title: Error Message - Source has nothing to capture
 keywords: Dynamic Web TWAIN, Error Message
 breadcrumbText: Error Message - Source has nothing to capture
 description: Error Message - Source has nothing to capture
-date: 2022-10-12 16:32:41 +0800
+date: 2022-10-12 16:32:41 +0000
 last_modified: 2026-01-22 13:19:23 -08:00
 ---
 

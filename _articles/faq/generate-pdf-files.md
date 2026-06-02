@@ -6,8 +6,8 @@ title: How can I generate PDF/A files?
 keywords: Dynamic Web TWAIN, Addon, separate, license
 breadcrumbText: How can I generate PDF/A files?
 description: How can I generate PDF/A files?
-date: 2021-12-01 01:09:41 +0800
-last_modified: 2025-12-10 16:43:15 +0800
+date: 2021-12-01 01:09:41 +0000
+last_modified: 2025-12-10 16:43:15 +0000
 ---
 
 # Addon

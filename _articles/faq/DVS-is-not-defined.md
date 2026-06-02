@@ -6,8 +6,8 @@ title: Uncaught ReferenceError - DVS is not defined
 keywords: Dynamic Web TWAIN, Error Troubleshooting, DVS
 breadcrumbText: Uncaught ReferenceError - DVS is not defined
 description: Uncaught ReferenceError - DVS is not defined
-date: 2021-12-03 23:26:46 +0800
-last_modified: 2023-10-11 00:56:56 +0800
+date: 2021-12-03 23:26:46 +0000
+last_modified: 2023-10-11 00:56:56 +0000
 ---
 
 # Error Troubleshooting

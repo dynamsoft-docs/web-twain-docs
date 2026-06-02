@@ -6,8 +6,8 @@ title: Can I hide webcam devices from the select source list?
 keywords: Dynamic Web TWAIN, Capture/ Image Source, hide, webcam
 breadcrumbText: Can I hide webcam devices from the select source list?
 description: Can I hide webcam devices from the select source list?
-date: 2021-12-08 03:01:32 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-12-08 03:01:32 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Capture/Image Source

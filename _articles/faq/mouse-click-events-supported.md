@@ -6,8 +6,8 @@ title: What mouse click events does the viewer support?
 keywords: Dynamic Web TWAIN, Image Viewer, mouse click, events, click events
 breadcrumbText: What mouse click events does the viewer support?
 description: What mouse click events does the viewer support?
-date: 2021-12-09 11:34:50 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-12-09 11:34:50 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Image Viewer

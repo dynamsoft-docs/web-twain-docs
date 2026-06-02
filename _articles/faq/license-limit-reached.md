@@ -6,7 +6,7 @@ title: What if I reach the limit of the granted number of license seats?
 keywords: Dynamic Web TWAIN, Licensing and Purchase, license limit reached
 breadcrumbText: What if I reach the limit of the granted number of license seats?
 description: What if I reach the limit of the granted number of license seats?
-date: 2021-12-04 02:34:30 +0800
+date: 2021-12-04 02:34:30 +0000
 last_modified: 2026-01-23 06:37:36 -08:00
 ---
 

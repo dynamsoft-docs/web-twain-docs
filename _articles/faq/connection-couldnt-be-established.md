@@ -6,7 +6,7 @@ title: A connection with the server could not be established
 keywords: Dynamic Web TWAIN, Error Troubleshooting, connection not established
 breadcrumbText: A connection with the server could not be established
 description: A connection with the server could not be established
-date: 2020-12-10 16:11:49 +0800
+date: 2020-12-10 16:11:49 +0000
 last_modified: 2026-01-21 15:26:16 -08:00
 ---
 

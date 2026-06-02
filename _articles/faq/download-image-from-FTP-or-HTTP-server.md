@@ -6,8 +6,8 @@ title: Can I download an image from an FTP or HTTP server using the Dynamic Web 
 keywords: Dynamic Web TWAIN, Capture/ Image Source, download, FTP, HTTP server
 breadcrumbText: Can I download an image from an FTP or HTTP server using the Dynamic Web TWAIN SDK?
 description: Can I download an image from an FTP or HTTP server using the Dynamic Web TWAIN SDK?
-date: 2021-12-08 03:01:32 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-12-08 03:01:32 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Capture/Image Source

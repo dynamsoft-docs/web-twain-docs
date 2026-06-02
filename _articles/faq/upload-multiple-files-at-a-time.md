@@ -6,8 +6,8 @@ title: How to upload multiple files at a time?
 keywords: Dynamic Web TWAIN, Document Saving, upload files
 breadcrumbText: How to upload multiple files at a time?
 description: How to upload multiple files at a time?
-date: 2022-08-29 18:03:43 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+date: 2022-08-29 18:03:43 +0000
+last_modified: 2024-09-19 08:47:35 +0000
 ---
 
 # Document Saving

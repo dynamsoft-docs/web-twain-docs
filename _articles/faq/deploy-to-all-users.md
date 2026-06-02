@@ -6,8 +6,8 @@ title: Is there an easy way to deploy the end-user components to all users?
 keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, deploy, end-users
 breadcrumbText: Is there an easy way to deploy the end-user components to all users?
 description: Is there an easy way to deploy the end-user components to all users?
-date: 2021-07-14 18:58:25 +0800
-last_modified: 2025-03-31 00:00:00 +0800
+date: 2021-07-14 18:58:25 +0000
+last_modified: 2025-03-31 00:00:00 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](

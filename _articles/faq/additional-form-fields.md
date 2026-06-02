@@ -6,8 +6,8 @@ title: How can I send additional form fields with images to my server or databas
 keywords: Dynamic Web TWAIN, Document Saving, additional form fields
 breadcrumbText: How can I send additional form fields with images to my server or database?
 description: How can I send additional form fields with images to my server or database?
-date: 2021-11-29 18:33:59 +0800
-last_modified: 2024-09-19 08:47:35 +0800
+date: 2021-11-29 18:33:59 +0000
+last_modified: 2024-09-19 08:47:35 +0000
 ---
 
 # Document Saving

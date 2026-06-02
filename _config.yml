@@ -41,6 +41,8 @@ dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
 
 baseurl: /web-twain/docs/
 
+future: true
+
 useVersionTreeV2: true
 
 collections:

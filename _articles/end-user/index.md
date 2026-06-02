@@ -7,8 +7,8 @@ title: End-User Guide - Dynamic Web TWAIN SDK Documentation
 keywords: Dynamic Web TWAIN, Documentation, End User
 breadcrumbText: End-User Guide
 description: This article will guide the end users of your web app to use Dynamic Web TWAIN for document scanning.
-date: 2026-02-02 13:43:40 +0800
-last_modified: 2026-02-02 13:43:40 +0800
+date: 2026-02-02 13:43:40 +0000
+last_modified: 2026-02-02 13:43:40 +0000
 ---
 
 

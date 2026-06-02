@@ -6,8 +6,8 @@ title: How can I reorder images in the viewer?
 keywords: Dynamic Web TWAIN, Image Viewer, reorder images
 breadcrumbText: How can I reorder images in the viewer?
 description: How can I reorder images in the viewer?
-date: 2021-12-09 11:34:50 +0800
-last_modified: 2022-06-10 04:40:03 +0800
+date: 2021-12-09 11:34:50 +0000
+last_modified: 2022-06-10 04:40:03 +0000
 ---
 
 # Image Viewer
