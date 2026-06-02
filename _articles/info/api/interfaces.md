@@ -1863,7 +1863,7 @@ interface PDFWSettings {
     /**
      * From version 19.3
      * Specify PDF/A version to save as PDF/A.
-     * Supported values: "pdf/a-1b", "pdf/a-2b"
+     * Supported values: "pdf/a-1b", "pdf/a-2b", "pdf/a-3b"
      */
     pdfaVersion?: string;
 }
