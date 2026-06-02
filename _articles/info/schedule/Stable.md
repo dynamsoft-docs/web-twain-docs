@@ -23,9 +23,13 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Included the previous major version's DLLs in Dynamic Web TWAIN Service to make it compatible with the previous version's JavaScript.
 * Packaged the macOS version of Dynamic Web TWAIN Service as a Universal App.
 * Removed the major version restriction using annual licenses.
-* [`ResourcePath`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#resourcespath) is now inferred with the script path if not specified.
+* Added mechanism to infer [`ResourcePath`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#resourcespath) from the script path when not specified.
 * Improved the triggering of [`OnTopImageInTheViewChanged`](/_articles/info/api/WebTwain_Buffer.md#ontopimageintheviewchanged).
-* Improved the error message if the JavaScript version does match the service version.
+* Improved the error message if the JavaScript version does not match the service version.
+* Improved the REST API:
+   * Added service version info for [`GET /server/version`](/_articles/info/api/restful.md#get-serverversion).
+   * Added [`PATCH /storage/documents/{documentuid}`](/_articles/info/api/restful.md#patch-storagedocumentsdocumentuid) to modify document metadata.
+   * Added [`GET /device/scanners/jobs/{jobuid}/content`](/_articles/info/api/restful.md#get-devicescannersjobsjobuidcontent) to retrieve page data concurrently.
 * Added an error code for failure to load password-protected PDFs.
 * Updated third-party libraries to enhance security.
 
