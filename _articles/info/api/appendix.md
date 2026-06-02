@@ -55,7 +55,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-1200 | PDF format error or not supported |
 |-2007 | The system is busy, some operations are not completed. Please try later |
 |-2137 | Cross-Origin Resource Sharing (CORS) policy is blocking the access. Please contact the Administrator to configure 'Access-Control-Allow-Origin'.|
-|-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website |
+|-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website \| The installed Dynamic Web TWAIN Service (old version) is incompatible with the JavaScript version x.x.x used on this website. \| The installed Dynamic Web TWAIN Service (version x.x.x) is incompatible with the JavaScript version x.x.x used on this website. |
 |-2208 | The connection with the local Dynamic Web TWAIN Service encountered a problem and has been reset |
 |-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
 |-2210 | You cannot call this method on this WebTwain instance because it does not use the default viewer. |
