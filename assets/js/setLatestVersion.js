@@ -1,4 +1,4 @@
-var versionNoteLatestVersion = "19.3.3"
+var versionNoteLatestVersion = "19.4"
 
 $(function() {
   $("#versionNoteLatestVersion").text(" (" + versionNoteLatestVersion + ")")
