@@ -51,6 +51,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-1100 | PNG format error or not supported |
 |-1110 | Unrecognized file extension |
 |-1119 | This PDF file is not supported by the Core module. You may need to activate your PDF Rasterizer license to support this PDF file. Please contact support for further information. |
+|-1120 | Failed to read the PDF file because it's encrypted and the correct password is not provided.  |
 |-1126 | The specified module could not be found. |
 |-1200 | PDF format error or not supported |
 |-2007 | The system is busy, some operations are not completed. Please try later |
