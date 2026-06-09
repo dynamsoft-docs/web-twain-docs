@@ -20,7 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ### Improvements
 
-* Included the previous major version's DLLs in Dynamic Web TWAIN Service to make it compatible with the previous version's JavaScript.
+* Improved Dynamic Web TWAIN Service to make it compatible with the previous major version's JavaScript.
 * Packaged the macOS version of Dynamic Web TWAIN Service as a universal binary.
 * Removed the major version restriction using annual full licenses.
 * Added mechanism to infer [`ResourcePath`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#resourcespath) from the script path when not specified.
