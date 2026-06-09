@@ -12,7 +12,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 ## 19.4 (06/11/2026) 
 
-## New Features
+### New Features
 
 * Added support for writing PDF as PDF/A-3b.
 * Added `maxThreads` param for [`loadFromLocalStorage()`](/_articles/info/api/WebTwain_IO.md#loadfromlocalstorage) and [`saveToLocalStorage()`](/_articles/info/api/WebTwain_IO.md#savetolocalstorage) to improve performance.
