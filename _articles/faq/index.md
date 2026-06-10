@@ -22,7 +22,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 1.  [Download virtual scanner for testing](/_articles/faq/download-virtual-scanner-for-testing.md)
 2.  [What physical document scanners does the Dynamic Web TWAIN SDK support?](/_articles/faq/what-physical-scanners-are-supported.md)
-3.  [How to use TWACKER to check if your device is TWAIN Compliant?](/_articles/faq/how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.md)
+3.  [How can I verify if my physical document scanner works with the Dynamic Web TWAIN SDK?](/_articles/faq/verify-if-device-is-supported.md)
+4.  [How to use TWACKER to check if your device is TWAIN Compliant?](/_articles/faq/how-to-use-TWACKER-to-check-if-your-device-is-TWAIN-Compliant.md)
 4.  [How to test if your scanner supports ICA scanning on Mac OS?](/_articles/faq/how-to-test-if-your-scanner-supports-ICA-scanning-on-Mac-OS.md)
 5.  [How to test if your device is SANE compliant?](/_articles/faq/how-to-test-if-your-device-is-SANE-compliant.md)
 6.  [How to test if your camera is DirectShow compliant?](/_articles/faq/how-to-test-if-your-camera-is-DirectShow-compliant.md)
