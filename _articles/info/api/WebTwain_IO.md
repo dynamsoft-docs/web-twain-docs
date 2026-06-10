@@ -3832,7 +3832,7 @@ saveToLocalStorage(
 
 - `uid`: Specify the storage folder to save the images cache.
 - `password`: The password of the specified storage folder.
-- `maxThreads`: The maximum number of threads used for saving. You can set this to improve the speed. The default value is 1. Available for v19.4+.
+- `maxThreads`: The maximum number of threads used for saving. You can set this to improve the speed. The default value is 1. Available for v19.4+. Windows only.
 - `indices`: Specify the indices to save.
     - If not set, means all images in buffer.
     - If set to `[]`, all cache in the specified storage folder will be clear.
@@ -3900,7 +3900,7 @@ loadFromLocalStorage (
 
 - `uid`: Specify the storage folder to load the images.
 - `password`: The password of the specified storage folder.
-- `maxThreads`: The maximum number of threads used for loading. You can set this to improve the speed. The default value is 1. Available for v19.4+.
+- `maxThreads`: The maximum number of threads used for loading. You can set this to improve the speed. The default value is 1. Available for v19.4+. Windows only.
 
 **Return value**
 
