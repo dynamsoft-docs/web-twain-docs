@@ -51,11 +51,12 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-1100 | PNG format error or not supported |
 |-1110 | Unrecognized file extension |
 |-1119 | This PDF file is not supported by the Core module. You may need to activate your PDF Rasterizer license to support this PDF file. Please contact support for further information. |
+|-1120 | Failed to read the PDF file because it's encrypted and the correct password is not provided.  |
 |-1126 | The specified module could not be found. |
 |-1200 | PDF format error or not supported |
 |-2007 | The system is busy, some operations are not completed. Please try later |
 |-2137 | Cross-Origin Resource Sharing (CORS) policy is blocking the access. Please contact the Administrator to configure 'Access-Control-Allow-Origin'.|
-|-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website |
+|-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website \| The installed Dynamic Web TWAIN Service (old version) is incompatible with the JavaScript version x.x.x used on this website. \| The installed Dynamic Web TWAIN Service (version x.x.x) is incompatible with the JavaScript version x.x.x used on this website. |
 |-2208 | The connection with the local Dynamic Web TWAIN Service encountered a problem and has been reset |
 |-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
 |-2210 | You cannot call this method on this WebTwain instance because it does not use the default viewer. |
@@ -86,21 +87,21 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2322 | The left or top or right or bottom you entered is invalid |
 |-2325 | The license is invalid. \| The current product key is empty or invalid. |
 |-2326 | The Dynamic Web TWAIN license expired${sDate}. Please contact the website developer for further assistance. \| The document scanning SDK license expired${sDate}. Please contact the website developer for further assistance. \| The Dynamic Web TWAIN product key expired${sDate}. Please contact the website developer for further assistance. \| The document scanning SDK product key expired${sDate}. Please contact the website developer for further assistance. |
-|-2327 | The current product key does not support Chrome, please contact the site administrator |
-|-2328 | The current product key does not support Firefox, please contact the site administrator |
-|-2329 | The current product key does not support IE, please contact the site administrator |
-|-2330 | The current product key does not support Edge, please contact the site administrator |
-|-2338 | The current product key does not support Webcam, please contact the site administrator |
-|-2339 | The current product key does not support pdf rasterizer, please contact the site administrator |
+|-2327 | The current product key does not support Chrome. Please contact the site administrator |
+|-2328 | The current product key does not support Firefox. Please contact the site administrator |
+|-2329 | The current product key does not support IE. Please contact the site administrator |
+|-2330 | The current product key does not support Edge. Please contact the site administrator |
+|-2338 | The current product key does not support Webcam. Please contact the site administrator |
+|-2339 | The current product key does not support pdf rasterizer. Please contact the site administrator |
 |-2340 | The license for the module OCR Kit is not found or has expired. |
-|-2342 | The domain of your current site does not match the domain bound in the current product key, please contact the site administrator |
-|-2343 | The current product key does not support your browser, please contact the site administrator |
-|-2344 | The current product key does not support Windows OS, please contact the site administrator |
-|-2345 | The current product key does not support MAC OS, please contact the site administrator |
-|-2346 | The current product key does not support Linux OS, please contact the site administrator |
-|-2347 | The current product key does not support your OS, please contact the site administrator |
+|-2342 | The domain of your current site does not match the domain bound in the current product key. Please contact the site administrator |
+|-2343 | The current product key does not support your browser. Please contact the site administrator |
+|-2344 | The current product key does not support Windows OS. Please contact the site administrator |
+|-2345 | The current product key does not support MAC OS. Please contact the site administrator |
+|-2346 | The current product key does not support Linux OS. Please contact the site administrator |
+|-2347 | The current product key does not support your OS. Please contact the site administrator |
 |-2348 | The current product key is invalid because it's generated with the licenses of a different major version |
-|-2349 | The current product key does not include a license for reading barcode, please contact the site administrator |
+|-2349 | The current product key does not include a license for reading barcode. Please contact the site administrator |
 |-2350 | The indices cannot be empty |
 |-2351 | You cannot upload more than one image when the format is BMP, JPG or PNG |
 |-2352 | The indices are out of range |
@@ -120,7 +121,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2367 | Invalid value for the parameter segmentUploadThreshold |
 |-2368 | Invalid value for the parameter moduleSize |
 |-2369 | The module for Dynamic Web TWAIN has failed to download |
-|-2370 | The current product key is invalid, please contact the site administrator |
+|-2370 | The current product key is invalid. Please contact the site administrator |
 |-2372 | You cannot convert more than one image to binary when the format is BMP, JPG or PNG |
 |-2375 | The left or top or right or bottom you entered is invalid. |
 |-2376 | The generate url failed. |
@@ -211,7 +212,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2807 | Error: The element specified by the id XXX doesn't exist. |
 |-2808 | The license for v' + majorVersion + ' Service Core Module has expired. |
 |-2809 | The license for v' + majorVersion + ' Service Core Module is not found. |
-|-2810 | The product key for the current operating system is missing the Service Core license. Please contact the site administrator. |
+|-2810 | The product key for the current operating system is missing the Service Core license. Please contact the site administrator. \| The current product key does not support REST Call for the current operating system. |
 |-2812 | Error: Duplicate ID detected while creating a Dynamic Web TWAIN object. |
 |-2813 | Error: The ID of the target DIV for the new DWT object is invalid. |
 |-2814 | Error: The Dynamic Web TWAIN module is not installed. |
