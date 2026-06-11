@@ -49,7 +49,7 @@ If scanning is successful without any errors, then your device should be TWAIN c
 
 ### For macOS
 
-Use the ImageCapture app (provided by Apple Inc.) to verify if a scanner is ICA compatible on a macOS machine.
+Use the Image Capture app (provided by Apple Inc.) to verify if a scanner is ICA compatible on a macOS machine.
 
 1. Find the Image Capture application
 
