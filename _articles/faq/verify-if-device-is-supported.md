@@ -14,7 +14,7 @@ last_modified: 2022-10-21 14:05:54 +0800
 
 ## How can I verify if my physical document scanner works with the Dynamic Web TWAIN SDK?
 
-Dynamsoft supports the following types of scanners
+Dynamsoft supports the following types of scanners:
 
 - TWAIN Scanners (for Windows)
 - ICA Scanners (for macOS)
