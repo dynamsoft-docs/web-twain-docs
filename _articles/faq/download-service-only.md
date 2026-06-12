@@ -49,8 +49,7 @@ Click on the "View Raw" button, it will start to download the installer.
 **Step 1:**
 Visit the GitHub site: [https://github.com/Dynamsoft/Dynamic-Web-TWAIN/releases](https://github.com/Dynamsoft/Dynamic-Web-TWAIN/releases).
 
-**Step 2**
-
+**Step 2:**
 Scroll down to the **Assets** section.
 
 - For Windows, download the **.msi** installer.
