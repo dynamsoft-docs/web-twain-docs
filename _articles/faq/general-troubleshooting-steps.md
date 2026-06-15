@@ -25,7 +25,7 @@ Before contacting support, complete the following steps:
 1. Remove old log files in the `log` folder under the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 2. Set the log level using one of the options below:
    - **Option A (recommended) — Single client machine (no coding required):** Use the Dynamic Web TWAIN Service information page.
-     1. Open `http://127.0.0.1:18625/` in a browser on the client machine.
+     1. Open [http://127.0.0.1:18625/](http://127.0.0.1:18625/) in a browser on the client machine.
      2. Under **Detailed information**, locate the **Log** row.
      3. Click **(change)** to enable verbose logging.
 
