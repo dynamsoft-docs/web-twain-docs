@@ -10,6 +10,10 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.4.1 (06/15/2026)
+
+Removed the Linux ARM64 installer from the npm package due to jsDelivr's size limit.
+
 ## 19.4 (06/11/2026) 
 
 ### New Features
