@@ -8,7 +8,7 @@ keywords: Dynamic Web TWAIN Service, Rosetta, macOS, Apple Silicon, Universal Bi
 breadcrumbText: macOS Rosetta Discontinuation and Dynamic Web TWAIN Service
 description: Apple is phasing out Rosetta for Intel apps on Apple Silicon Macs. Learn how this affects the Dynamic Web TWAIN Service and what steps to take.
 date: 2026-05-26 17:21:42 +0000
-last_modified: 2026-05-26 10:20:00 -0800
+last_modified: 2026-06-15 00:00:00 -0800
 ---
 
 # Error Troubleshooting
@@ -39,9 +39,9 @@ Yes. The current version of Dynamic Web TWAIN Service continues to function norm
 
 ### What is Dynamsoft doing to address this?
 
-Dynamsoft is actively developing a Universal Binary version of Dynamic Web TWAIN Service with native Apple Silicon support.
+Dynamsoft has released a Universal Binary version of Dynamic Web TWAIN Service with native Apple Silicon support.
 
-This enhancement is currently planned for the **Dynamic Web TWAIN 19.4 release (ETA: June 2026)**, with the goal of ensuring full compatibility before the general availability of macOS 27.
+**Dynamic Web TWAIN 19.4 is now available**, shipping the Universal Binary service installer that runs natively on Apple Silicon — no Rosetta required. This ensures full compatibility ahead of macOS 27.
 
 ### I'm on Dynamic Web TWAIN v18.x. Do I need to upgrade my SDK to v19.4+?
 
@@ -49,19 +49,19 @@ Not necessarily. The v19.4 service installer includes the **DWT 18.6 service mod
 
 You do not need to change your application code or upgrade your JavaScript SDK to v19 just to resolve the Rosetta notification.
 
-### Do end-user need to take any action now?
+### Do end-users need to take any action now?
 
-No immediate action is required. Customers can continue using the current version normally and are encouraged to upgrade to the future Universal Binary release once available.
+Yes. Now that Dynamic Web TWAIN 19.4 is available, we recommend upgrading the Dynamic Web TWAIN Service on end-user machines to get native Apple Silicon support and eliminate the macOS system notification about Intel-based apps. See the deployment section below for details.
 
 ### How do I deploy the updated service to end users?
 
-The deployment process is the same as the current service. Once v19.4 is released, download the updated macOS service installer and distribute it to your end users. If you use silent installation or enterprise deployment methods, the process remains the same — only the installer binary changes.
+The deployment process is the same as the current service. Download the v19.4 macOS service installer and distribute it to your end users. If you use silent installation or enterprise deployment methods, the process remains the same — only the installer binary changes.
 
 For details on deployment options, see: [How to deploy the end-user components to all users](/_articles/faq/deploy-to-all-users.md)
 
 ### Do I need to renew my license or maintenance to get the update?
 
-- **Active annual license or maintenance plan**: You are entitled to upgrade to v19.4 at no additional cost. Download and deploy the updated service installer when it becomes available.
+- **Active annual license or maintenance plan**: You are entitled to upgrade to v19.4 at no additional cost. Download and deploy the updated service installer now.
 - **Perpetual license without active maintenance**: You will need to renew your maintenance plan to access the v19.4 release. Please contact [Dynamsoft Sales](https://www.dynamsoft.com/company/contact/) to discuss renewal options.
 
 ### Does this affect Intel-based Macs?
