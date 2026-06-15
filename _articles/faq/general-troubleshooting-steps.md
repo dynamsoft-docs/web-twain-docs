@@ -24,11 +24,17 @@ Before contacting support, complete the following steps:
 
 1. Remove old log files in the `log` folder under the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 2. Set the log level using one of the options below:
-   - **Option A (recommended) — Single client machine:** Add the line `LogLevel=14` to `DSConfiguration.ini` on the machine. The `DSConfiguration.ini` file is in the **parent directory** of the log folder.
+   - **Option A (recommended) — Single client machine (no coding required):** Use the Dynamic Web TWAIN Service information page.
+     1. Open `http://127.0.0.1:18625/` in a browser on the client machine.
+     2. Under **Detailed information**, locate the **Log** row.
+     3. Click **(change)** to enable verbose logging.
 
-     *Requires v18.0 or later. If you are on an older version, use Option B.*
+     ![DWT Service page — click (change) to enable verbose logging](/assets/imgs/dwt-service-log-change.png)
 
-   - **Option B — Single client machine:** Open the browser developer tools (F12), switch to the **Console** tab, and run `DWTObject.LogLevel = 1`.
+     > [!NOTE]
+     > Click **(change)** again after log collection is complete to restore the default log level.
+
+   - **Option B — Single client machine:** Add the line `LogLevel=14` to `DSConfiguration.ini` on the machine. The `DSConfiguration.ini` file is in the **parent directory** of the log folder.
 
    - **Option C — All client machines (application-wide):** Set [`LogLevel`](/_articles/info/api/WebTwain_Util.md#loglevel) to `1` in your application code. This should be set as early as possible when the `WebTwain` instance is created — for example, in the `Dynamsoft_OnReady` event:
      ```javascript
@@ -42,4 +48,7 @@ Before contacting support, complete the following steps:
 5. Zip the log folder and share it with the [Dynamsoft Support Team](/_articles/about/getsupport.md).
 
 > [!IMPORTANT]
-> After collecting the logs, reset the log level: remove the `LogLevel` entry from `DSConfiguration.ini`, or set `DWTObject.LogLevel = 0`. Leaving verbose logging enabled will affect scanning performance.
+> After collecting the logs, disable verbose logging — leaving it enabled will affect scanning performance.
+> - **Option A**: Click **(change)** again on the service page.
+> - **Option B**: Remove the `LogLevel` line from `DSConfiguration.ini`.
+> - **Option C**: Set `DWTObject.LogLevel` back to `0` in your application code.
