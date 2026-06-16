@@ -26,7 +26,7 @@ Before contacting support, complete the following steps:
 2. Set the log level using one of the options below:
    - **Option A (recommended) — Single client machine (no coding required):** Use the Dynamic Web TWAIN Service information page.
       1. Open [http://127.0.0.1:18625/](http://127.0.0.1:18625/) in a browser on the client machine.
-      2. If **(change)** is not available, enable Web Setup by setting `EnableWebSetup=TRUE` in `DSConfiguration.ini` (admin privileges required). See [Web Setup](/_articles/extended-usage/dynamsoft-service-configuration.md#web-setup).
+      2. If **(change)** is not available, enable Web Setup by setting `EnableWebSetup=TRUE` in `DSConfiguration.ini` (admin privileges required), then restart the Dynamic Web TWAIN Service. See [Web Setup](/_articles/extended-usage/dynamsoft-service-configuration.md#web-setup).
       3. Under **Detailed information**, locate the **Log** row.
       4. Click **(change)** to enable verbose logging.
 
