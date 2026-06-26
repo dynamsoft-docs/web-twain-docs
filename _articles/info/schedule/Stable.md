@@ -21,7 +21,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improvements
 
 * Improved Dynamic Web TWAIN Service to make it compatible with the previous major version's JavaScript.
-* Packaged the macOS version of Dynamic Web TWAIN Service as a universal binary.
+* Added native Apple Silicon support by packaging the macOS version of Dynamic Web TWAIN Service as a universal binary.
 * Removed the major version restriction using annual full licenses.
 * Added mechanism to infer [`ResourcesPath`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#resourcespath) from the script path when not specified.
 * Improved the triggering of [`OnTopImageInTheViewChanged`](/_articles/info/api/WebTwain_Buffer.md#ontopimageintheviewchanged).
