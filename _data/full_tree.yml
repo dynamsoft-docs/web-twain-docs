@@ -197,6 +197,12 @@ tree_list:
         path: /info/schedule/Addon.html
       - name: Deprecated
         path: /info/schedule/deprecated.html
+  - name: AI 
+    childList:
+      - name: Overview
+        path: /ai/index.html
+      - name: Agent Skills
+        path: /ai/agent-skills.html
   - name: Upgrade Instructions
     path: /indepth/development/upgrade.html
   - name: End-User Guide 
