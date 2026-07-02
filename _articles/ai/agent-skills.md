@@ -22,23 +22,11 @@ npx skills add https://github.com/Dynamsoft/web-twain-samples/
 
 Try the following prompts after installing. Your AI agent will automatically use the installed skills:
 
-1. Use Web TWAIN in an existing Angular project.
-
-   ``` 
-   Please create a component to use Dynamic Web TWAIN for document scanning in this angular app. Just a scan button to perform scanning and view the document in a viewer.
-   ```
-
-2. Create a plain JavaScript HTML file to scan documents.
-
-   ```
-   Please write an html file which loads Web TWAIN via CDN. The page contains a scan button, which triggers scanning with the scanner ui. The scanned images are displayed in Web TWAIN's viewer.
-   ```
-
-3. Ask questions about Web TWAIN.
-
-   ```
-   What is Dynamic Web TWAIN service?
-   ```
+| Prompt | Description |
+|--------|-------------|
+| Please create a component to use Dynamic Web TWAIN for document scanning in this angular app. Just a scan button to perform scanning and view the document in a viewer. | Use Web TWAIN in an existing Angular project. |
+| Please write an html file which loads Web TWAIN via CDN. The page contains a scan button, which triggers scanning with the scanner ui. The scanned images are displayed in Web TWAIN's viewer. | Create a plain JavaScript HTML file to scan documents. |
+| What is Dynamic Web TWAIN service? | Ask questions about Web TWAIN. |
 
 
 ## Additional Resources
