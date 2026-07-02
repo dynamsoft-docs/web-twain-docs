@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Agent Skills | Dynamic Web TWAIN Documentation
 keywords: Dynamic Web TWAIN, Documentation, Agent Skills
 breadcrumbText: Agent Skills
