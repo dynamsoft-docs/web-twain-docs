@@ -17,7 +17,7 @@ You can run the following command to install the skills:
 npx skills add https://github.com/Dynamsoft/web-twain-samples/
 ```
 
-## Example prompts
+## Example Prompts
 
 Try the following prompts after installing. Your AI agent will automatically use the installed skills:
 
