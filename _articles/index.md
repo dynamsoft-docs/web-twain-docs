@@ -96,7 +96,7 @@ description: Dynamic Web TWAIN SDK Documentation Homepage
 
 ### AI
 
-- [Overview](/_articles/ai/index.md)
+- [Overview](/_articles/ai/overview.md)
 - [Agent Skills](/_articles/ai/agent-skills.md)
 
 ### [Upgrade Instructions]({{site.indepth}}development/upgrade.html)

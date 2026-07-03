@@ -200,7 +200,7 @@ tree_list:
   - name: AI 
     childList:
       - name: Overview
-        path: /ai/index.html
+        path: /ai/overview.html
       - name: Agent Skills
         path: /ai/agent-skills.html
   - name: Upgrade Instructions
