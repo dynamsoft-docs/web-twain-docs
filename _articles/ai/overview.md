@@ -16,7 +16,7 @@ AI can answer questions related to Dynamic Web TWAIN and write codes directly. Y
 
 1. Use the "Ask AI" buttton to ask questions about the SDK.
 
-   ![](/assets/imgs/ask-ai-button.jpg)
+   ![Ask AI Button](/assets/imgs/ask-ai-button.jpg)
 
 2. Use the [agent skills](./agent-skills.md) in your AI agent like Claude Code, Codex and Cursor. Skills teach the agent how to include Web TWAIN in your project and use its APIs correctly.
 
