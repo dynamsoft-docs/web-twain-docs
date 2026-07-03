@@ -5,7 +5,7 @@ noTitleIndex: true
 title: Agent Skills | Dynamic Web TWAIN Documentation
 keywords: Dynamic Web TWAIN, Documentation, Agent Skills
 breadcrumbText: Agent Skills
-description: This post teaches you how to use Dynamic Web TWAIN's offical agent skills.
+description: This post teaches you how to use Dynamic Web TWAIN's official agent skills.
 ---
 
 # Agent Skills
