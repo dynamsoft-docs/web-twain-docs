@@ -10,14 +10,18 @@ description: Overview of Dynamic Web TWAIN and AI.
 
 # AI Overview
 
-AI can answer questions related to Dynamic Web TWAIN and write codes directly. You can utilize AI in several ways.
+AI can answer questions about Dynamic Web TWAIN and write code directly. You can use AI in several ways.
 
-## How to Use
+## Ask AI
 
-1. Use the "Ask AI" buttton to ask questions about the SDK.
+Use the "Ask AI" button on this documentation site to ask questions about the SDK and get answers based on the documentation.
 
-   ![Ask AI Button](/assets/imgs/ask-ai-button.jpg)
+![Ask AI Button](/assets/imgs/ask-ai-button.jpg)
 
-2. Use the [agent skills](./agent-skills.md) in your AI agent like Claude Code, Codex and Cursor. Skills teach the agent how to include Web TWAIN in your project and use its APIs correctly.
+## Agent Skills
 
-3. Use [llms.txt](/llms.txt) and [llms-full.txt](/llms-full.txt) to provide documentation for large language models (LLMs) and apps that use them.
+Use the [agent skills](./agent-skills.md) in AI agents like Claude Code, Codex, and Cursor. Skills teach the agent how to include Web TWAIN in your project and use its APIs correctly.
+
+## Use with LLMs
+
+Use [llms.txt](/llms.txt) and [llms-full.txt](/llms-full.txt) to provide documentation for large language models (LLMs) and the apps built on them.

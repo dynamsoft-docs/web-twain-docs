@@ -16,6 +16,7 @@ description: Dynamic Web TWAIN SDK Documentation. This will help you integrate d
 
 * [Hello World](/_articles/hello-world/index.md) demo that demonstrates how to enable basic scanning, viewing, and uploading functionality in a web application.
 * [General usage](/_articles/general-usage/index.md) and [extended usage](/_articles/extended-usage/index.md) guides for you to quickly start making use of both basic and advanced features of DWT.
+* [AI](/_articles/ai/overview.md) - Ask AI questions about the SDK directly on this documentation site, use [agent skills](/_articles/ai/agent-skills.md) to let Claude Code / Cursor / Codex write integration code for you, or provide documentation context to LLMs via [llms.txt](/llms.txt).
 
 ## Key Features
 
