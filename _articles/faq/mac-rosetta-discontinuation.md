@@ -8,7 +8,7 @@ keywords: Dynamic Web TWAIN Service, Rosetta, macOS, Apple Silicon, Universal Bi
 breadcrumbText: macOS Rosetta Discontinuation and Dynamic Web TWAIN Service
 description: Apple is phasing out Rosetta for Intel apps on Apple Silicon Macs. Learn how this affects the Dynamic Web TWAIN Service and what steps to take.
 date: 2026-05-26 17:21:42 +0000
-last_modified: 2026-06-15 00:00:00 -0800
+last_modified: 2026-07-14 00:00:00 +0000
 ---
 
 # Error Troubleshooting
@@ -69,3 +69,11 @@ For details on deployment options, see: [How to deploy the end-user components t
 No. Intel-based Macs run Intel binaries natively without Rosetta. The current service installer continues to work on Intel-based Macs regardless of macOS version.
 
 > Note: Apple has announced that macOS 26 is the last macOS release to support Intel-based Mac hardware.
+
+### Why can't Dynamic Web TWAIN detect my TWAIN scanner on Apple Silicon Macs after upgrading to v19.4+?
+
+Dynamic Web TWAIN v19.4 introduces a native Universal installation package for Apple Silicon. However, some scanner vendors still provide Intel-only TWAIN Data Sources. Since the Universal service cannot load Intel-only TWAIN Data Sources, no TWAIN Source will be detected.
+
+We recommend upgrading to a Universal TWAIN driver whenever available. For scanners that have not yet provided a Universal driver, Dynamsoft also offer an Intel version of the Dynamic Web TWAIN Service as a temporary compatibility option. This installer is available separately through [GitHub](https://github.com/Dynamsoft/Dynamic-Web-TWAIN/releases) rather than being included in the standard release.
+
+![Intel-based-installer](/assets/imgs/intel-service-installer.png)
