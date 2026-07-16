@@ -74,6 +74,6 @@ No. Intel-based Macs run Intel binaries natively without Rosetta. The current se
 
 Dynamic Web TWAIN v19.4 introduces a native Universal installation package for Apple Silicon. However, some scanner vendors still provide Intel-only TWAIN Data Sources. Since the Universal service cannot load Intel-only TWAIN Data Sources, no TWAIN Source will be detected.
 
-We recommend upgrading to a Universal TWAIN driver whenever available. For scanners that have not yet provided a Universal driver, Dynamsoft also offer an Intel version of the Dynamic Web TWAIN Service as a temporary compatibility option. This installer is available separately through [GitHub](https://github.com/Dynamsoft/Dynamic-Web-TWAIN/releases) rather than being included in the standard release.
+We recommend upgrading to a Universal TWAIN driver whenever available. For scanners that have not yet provided a Universal driver, Dynamsoft also offers an Intel version of the Dynamic Web TWAIN Service as a temporary compatibility option. This installer is available separately through [GitHub](https://github.com/Dynamsoft/Dynamic-Web-TWAIN/releases) rather than being included in the standard release. This installer will only be able to detect Intel versions of TWAIN Drivers and will not detect Universal drivers.
 
 ![Intel-based-installer](/assets/imgs/intel-service-installer.png)
