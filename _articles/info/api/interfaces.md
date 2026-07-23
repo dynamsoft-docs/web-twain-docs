@@ -117,7 +117,9 @@ interface DeviceConfiguration {
 - [`EnumDWT_ExtImageInfo`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_extimageinfo)
 - [`EnumDWT_CapSupportedSizes`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_capsupportedsizes)
 
-`extendedImageInfoQueryLevel` is 0 (`default`) by default which means the following information will be retrieved (if available):
+Extended image info is used to pass extra info such as barcodes, magnetic data or patch codes found on a scanned page. Check out [this sample](https://demo.dynamsoft.com/web-twain/mag-data) to learn about how to get the extended image info.
+
+You can set which info to query with `extendedImageInfoQueryLevel`. It is 0 (`default`) by default which means the following information will be retrieved (if available):
 
 | Label                  | Value  |
 | :--------------------- | :----- |
@@ -609,6 +611,7 @@ interface OutputInfo {
 }
 ```
 
+Check how extended image info is retrieved [here](#deviceconfiguration).
 
 
 ### CapabilityDetails

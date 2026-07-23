@@ -527,6 +527,7 @@ DWTObject.RegisterEvent("OnGetFilePath", function (isSave, filesCount, index, di
 This event is triggered when a file is loaded in the following cases:
 
 - A file is dragged and dropped into the viewer
+- A file is loaded using [`LoadImageFromBase64Binary()`](/_articles/info/api/WebTwain_IO.md#loadimagefrombase64binary) or [`LoadImageFromBinary()`](/_articles/info/api/WebTwain_IO.md#loadimagefrombinary) 
 - A local file is loaded using [`LoadImage()`](/_articles/info/api/WebTwain_IO.md#loadimage) or [`LoadImageEx()`](/_articles/info/api/WebTwain_IO.md#loadimageex)
 - A remote file is downloaded using network methods like [`HTTPDownload()`](/_articles/info/api/WebTwain_IO.md#httpdownload)
 
