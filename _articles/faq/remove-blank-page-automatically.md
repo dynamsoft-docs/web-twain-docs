@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, detect, discard blank pages
 breadcrumbText: Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?
 description: Can the Dynamic Web TWAIN SDK automatically remove blank pages during the document scanning process?
 date: 2021-07-14 18:58:25 +0000
-last_modified: 2024-09-19 08:47:35 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # Capture/Image Source
@@ -19,22 +19,31 @@ last_modified: 2024-09-19 08:47:35 +0000
 If the TWAIN driver of your device supports discarding blank pages, you can use the driver's built-in feature.
 
 1. You can set the [ `IfShowUI` ](/_articles/info/api/WebTwain_Acquire.md#ifshowui) property to true to display the User Interface (UI) of the source and you can check the option there (It normally reads 'discard blank'.).
-2. If you don't want to show the user interface of the source, you can set [ `IfAutoDiscardBlankpages` ](/_articles/info/api/WebTwain_Acquire.md#ifautodiscardblankpages) to true or negotiate the ICAP_AUTODISCARDBLANKPAGES capability to discard blank pages automatically. Please NOTE that this property or capability only works if the scanner itself supports the feature (on the hardware level).
+2. If you don't want to show the user interface of the source, you can set [ `IfAutoDiscardBlankpages` ](/_articles/info/api/WebTwain_Acquire.md#ifautodiscardblankpages) to true or negotiate the ICAP_AUTODISCARDBLANKPAGES capability using [ `setCapabilities()` ](/_articles/info/api/WebTwain_Acquire.md#setcapabilities) to discard blank pages automatically. Please NOTE that this property or capability only works if the scanner itself supports the feature (on the hardware level).
 
 ```javascript
 DWTObject.SelectSource();
-DWTObject.OpenSource;
+DWTObject.OpenSource();
 DWTObject.IfShowUI = false;
 //*Use the property
 DWTObject.IfAutoDiscardBlankpages = true;
 //*Use capability negotiation
-DWTObject.Capability = Dynamsoft.DWT.EnumDWT_Cap.ICAP_AUTODISCARDBLANKPAGES;
-DWTObject.CapType = Dynamsoft.DWT.EnumDWT_CapType.TWON_ONEVALUE;
-DWTObject.CapValue = -1; //Auto
-if (DWTObject.CapSet) {
-  alert("Successful!");
-}
-DWTObject.AcquireImage();
+DWTObject.setCapabilities(
+  {
+    capabilities: [
+      {
+        capability: Dynamsoft.DWT.EnumDWT_Cap.ICAP_AUTODISCARDBLANKPAGES,
+        curValue: -1, //Auto
+      },
+    ],
+  },
+  function (successData) {
+    DWTObject.AcquireImage();
+  },
+  function (errorData) {
+    console.error(errorData);
+  }
+);
 ```
 
 ### Method Two
