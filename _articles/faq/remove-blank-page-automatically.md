@@ -38,12 +38,13 @@ DWTObject.setCapabilities(
     ],
   },
   function (successData) {
-    DWTObject.AcquireImage();
+    console.log("Capability was successfully applied.");
   },
   function (errorData) {
     console.error(errorData);
   }
 );
+DWTObject.AcquireImage();
 ```
 
 ### Method Two
