@@ -13,7 +13,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ## 19.4.2 (07/30/2026) 
 
 * Updated third-party libraries to enhance security.
-* Fixed an issue occurring when [`IfCheckDCP`](/_articles/faq/faq/use-dwt-in-citrix-env.md) was enabled.
+* Fixed an issue occurring when [`IfCheckDCP`](/_articles/faq/use-dwt-in-citrix-env.md) was enabled.
 * Fixed an issue where [`OnPostLoad`](/_articles/info/api/WebTwain_IO.md#onpostload) was not triggered when using [`LoadImageFromBase64Binary()`](/_articles/info/api/WebTwain_IO.md#loadimagefrombase64binary) and [`LoadImageFromBinary()`](/_articles/info/api/WebTwain_IO.md#loadimagefrombinary).
 
 ## 19.4 (06/11/2026) 
