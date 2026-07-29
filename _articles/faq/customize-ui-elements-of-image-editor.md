@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, UI Customization, customize, ui elements
 breadcrumbText: Can I customize UI elements of the built-in image editor?
 description: Can I customize UI elements of the built-in image editor?
 date: 2021-12-08 03:32:59 +0000
-last_modified: 2024-09-19 08:47:35 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # UI Customization
@@ -18,15 +18,17 @@ Yes, you can perform various customizations on the image editor. Some of such cu
 
 ### Can I change the language of the Editor?
 
-Yes, as shown in the sample code below, you can use the parameters `titles` and `dialogText` to specify the language used in the editor.
+Yes, as shown in the sample code below, you can use the parameters `buttons.titles` and `dialogText` to specify the language used in the editor.
 
 ```javascript
- titles: {
-            'previous': 'Previous Image',
-            'next': 'Next Image',
-            'print': 'Print Image',
-            'scan': 'Scan Documents',
-            'load': 'Load Local Images'
+ buttons: {
+   titles: {
+              'previous': 'Previous Image',
+              'next': 'Next Image',
+              'print': 'Print Image',
+              'scan': 'Scan Documents',
+              'load': 'Load Local Images'
+   }
  }
 ```
 
@@ -41,14 +43,16 @@ Yes, as shown in the sample code below, you can use the parameters `titles` and 
 
 ### Can I remove or add buttons on the toolbar of the Editor?
 
-While you can use `visibility` (as shown in the sample code below) to remove a default button(s), currently you cannot add a custom button.
+While you can use `buttons.visibility` (as shown in the sample code below) to remove a default button(s), currently you cannot add a custom button.
 
 ```javascript
-visibility: {
-            'scan': true,
-            'load': true,
-            'print': false,
-            'removeall': true
+buttons: {
+  visibility: {
+              'scan': true,
+              'load': true,
+              'print': false,
+              'removeall': true
+  }
 }
 ```
 
