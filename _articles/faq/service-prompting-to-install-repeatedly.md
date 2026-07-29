@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, insta
 breadcrumbText: I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?
 description: I have installed the Dynamic Web TWAIN Service on an end-user machine but still got asked to install it repeatedly. Why?
 date: 2021-12-11 06:47:21 +0000
-last_modified: 2025-11-04 13:39:41 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
@@ -42,7 +42,7 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 1.  See [Chromium local network access issue](/_articles/faq/chromium-142-local-network-access-issue.md) for details and corrective actions.
 
-2. Check the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder) and make sure you have [the correct files](/_articles/extended-usage/dynamsoft-service-configuration.md#related-files-and-folders){:target="_blank"}.
+2. Check the service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder) and make sure you have [the correct files](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder){:target="_blank"}.
 
 3. Check `Local Services` and make sure the Dynamic Web TWAIN Service is listed and Running.
 
