@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Addon, separate, license
 breadcrumbText: How can I generate PDF/A files?
 description: How can I generate PDF/A files?
 date: 2021-12-01 01:09:41 +0000
-last_modified: 2025-12-10 16:43:15 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # Addon
@@ -19,10 +19,11 @@ PDF/A is an archival format designed for long-term preservation. The following v
 
 ### Supported PDF/A Versions
 
-| PDF/A Variant |    Underlying PDF Version   |
-|:-------------:|-----------------------------|
-| `pdf/a-1b`    | **1.4** (default)           |
-| `pdf/a-2b`    | **1.5** (default), 1.6, 1.7 |
+| PDF/A Variant |    Underlying PDF Version   | Availability |
+|:-------------:|-----------------------------|--------------|
+| `pdf/a-1b`    | **1.4** (default)           | v19.3+       |
+| `pdf/a-2b`    | **1.5** (default), 1.6, 1.7 | v19.3+       |
+| `pdf/a-3b`    | See [`pdfaVersion`](/_articles/info/api/interfaces.md#pdfwsettings) | v19.4+       |
 
 ### What’s the difference between PDF/A-1b and PDF/A-2b?
 Although both variants ensure that documents can be reliably displayed in the future, they differ in terms of supported PDF features and compression options.
@@ -65,8 +66,8 @@ Configure PDF output using [`Write.Setup()`](/_articles/info/api/Addon_PDF.md#wr
 
 ```javascript
 DWTObject.Addon.PDF.Write.Setup({
-    version: "1.5",          // [optional] 1.4 for "pdf/a-1b"; 1.5/1.6/1.7 for "pdf/a-2b"
-    pdfaVersion: "pdf/a-2b"  // "pdf/a-1b" or "pdf/a-2b"
+    version: "1.5",          // [optional] 1.4 for "pdf/a-1b"; 1.5/1.6/1.7 for "pdf/a-2b"/"pdf/a-3b"
+    pdfaVersion: "pdf/a-2b"  // "pdf/a-1b", "pdf/a-2b" (since v19.3), or "pdf/a-3b" (since v19.4)
 });
 ```
 
