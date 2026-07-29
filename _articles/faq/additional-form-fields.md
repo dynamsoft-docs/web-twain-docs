@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Document Saving, additional form fields
 breadcrumbText: How can I send additional form fields with images to my server or database?
 description: How can I send additional form fields with images to my server or database?
 date: 2021-11-29 18:33:59 +0000
-last_modified: 2024-09-19 08:47:35 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # Document Saving
@@ -27,7 +27,7 @@ You can check out this <a href="https://demo.dynamsoft.com/Samples/dwt/Scan-Docu
 [SetHTTPFormField](/_articles/info/api/WebTwain_IO.md#sethttpformfield){:target="_blank"} can also be used to send image data in base64 or BLOB to the server side.
 
 By design, the method [HTTPUpload()](/_articles/info/api/WebTwain_IO.md#httpupload){:target="_blank"} only contains one file. But as it essentially sends an HTTP form to the server, you can attach multiple files in that form using the methods [ConvertToBlob()](/_articles/info/api/WebTwain_IO.md#converttoblob){:target="_blank"} and [SetHTTPFormField()](/_articles/info/api/WebTwain_IO.md#sethttpformfield){:target="_blank"} .
-Check out the following snippet on how it is done. NOTE that the method [HTTPUpload()](/_articles/info/api/WebTwain_IO.md#httpupload){:target="_blank"} only has 3 parameters as it doesn't need to specify a file anymore.
+Check out the following snippet on how it is done. Note that [HTTPUpload()](/_articles/info/api/WebTwain_IO.md#httpupload){:target="_blank"} still requires its `indices`, `type` and `dataFormat` parameters — since every image has already been attached individually as its own form field above, simply pass an empty array for `indices` so `HTTPUpload()` doesn't attach an additional file of its own.
 
 ```javascript
 /**
@@ -56,6 +56,9 @@ function uploadSeparateFiles(indices, type) {
           if (done === count) {
             DWTObject.HTTPUpload(
               url,
+              [],
+              type,
+              Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
               function () {
                 console.log("Success");
               },
