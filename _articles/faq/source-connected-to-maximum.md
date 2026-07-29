@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: Source is connected to the maximum supported number of applications
 description: Source is connected to the maximum supported number of applications
 date: 2021-12-03 23:26:46 +0000
-last_modified: 2024-09-19 08:47:35 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # Error Troubleshooting
@@ -32,11 +32,17 @@ function btnScan_onclick() {
   DWTObject.RegisterEvent("OnPostAllTransfers", function () {
     DWTObject.CloseSource();
   });
-  DWTObject.SelectSource();
-  DWTObject.CloseSource(); //close source before open
-  DWTObject.OpenSource();
-  DWTObject.IfDisableSourceAfterAcquire = true; //close the scanner UI after acquiring
-  DWTObject.AcquireImage();
+  DWTObject.SelectSource(
+    function () {
+      DWTObject.CloseSource(); //close source before open
+      DWTObject.OpenSource();
+      DWTObject.IfDisableSourceAfterAcquire = true; //close the scanner UI after acquiring
+      DWTObject.AcquireImage();
+    },
+    function (errorCode, errorString) {
+      console.log(errorString);
+    }
+  );
 }
 ```
 
