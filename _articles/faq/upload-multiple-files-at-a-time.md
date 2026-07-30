@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Document Saving, upload files
 breadcrumbText: How to upload multiple files at a time?
 description: How to upload multiple files at a time?
 date: 2022-08-29 18:03:43 +0000
-last_modified: 2024-09-19 08:47:35 +0000
+last_modified: 2026-07-30 09:38:19 +0000
 ---
 
 # Document Saving
@@ -20,6 +20,9 @@ After scanning multiple files, you might want to upload them one by one as indiv
 ### Solution:
 You can use the methods [ConvertToBlob](/_articles/info/api/WebTwain_IO.md#converttoblob) and [HTTPUpload](/_articles/info/api/WebTwain_IO.md#httpupload) to achieve this.
 
+> [!NOTE]
+> Passing multiple image indices directly to `HTTPUpload()` only produces one combined file, and only for multi-page formats like PDF or TIFF. To upload each scan as its own separate JPG file in a single request, convert each image to a blob and attach it as its own form field instead, as shown below.
+
 ### Steps:
 
 1. In JS, write code similar to the following:
@@ -27,7 +30,7 @@ You can use the methods [ConvertToBlob](/_articles/info/api/WebTwain_IO.md#conve
 function UploadAsJPG() {
     var count = 0;
     DWTObject.ClearAllHTTPFormField();
-    DWTObject.SetHTTPFormField("UploadedImagesCount",DWTObject.HowManyImagesInBuffer);
+    DWTObject.SetHTTPFormField("UploadedImagesCount", DWTObject.HowManyImagesInBuffer.toString());
 
     function asyncFailureFunc(errorCode, errorString) {
         alert("ErrorCode: " + errorCode + "\r" + "ErrorString:" + errorString);
@@ -51,7 +54,14 @@ function UploadAsJPG() {
                 if (count < DWTObject.HowManyImagesInBuffer) {
                     convertImage(count);
                 } else {
-                    DWTObject.HTTPUpload("http://localhost:90/saveUploadedJPG.aspx", onEmptyResponse, onServerReturnedSomething);// Please replace the URL with yours.
+                    DWTObject.HTTPUpload(
+                        "http://localhost:90/saveUploadedJPG.aspx", // Please replace the URL with yours.
+                        [],
+                        Dynamsoft.DWT.EnumDWT_ImageType.IT_JPG,
+                        Dynamsoft.DWT.EnumDWT_UploadDataFormat.Binary,
+                        onEmptyResponse,
+                        onServerReturnedSomething
+                    );
                 }
             }, 
             asyncFailureFunc
