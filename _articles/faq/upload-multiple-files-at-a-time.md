@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Document Saving, upload files
 breadcrumbText: How to upload multiple files at a time?
 description: How to upload multiple files at a time?
 date: 2022-08-29 18:03:43 +0000
-last_modified: 2024-09-19 08:47:35 +0000
+last_modified: 2026-07-30 10:09:28 +0000
 ---
 
 # Document Saving
@@ -15,10 +15,13 @@ last_modified: 2024-09-19 08:47:35 +0000
 ## How to upload multiple files at a time?
 
 ### Scenario:
-After scanning multiple files, you might want to upload them one by one as individual images. Before version 13.1, you have to call the upload method(s) multiple times. From version 13.1+, you can do this in one go.
+After scanning multiple documents, you may want to send each one to your server as its own separate file in a single HTTP request, rather than calling an upload method separately for each image. Before version 13.1, this required multiple calls to the upload method(s). From version 13.1 onward, you can send them all in one request instead, as shown below.
 
 ### Solution:
-You can use the methods [ConvertToBlob](/_articles/info/api/WebTwain_IO.md#converttoblob) and [HTTPUpload](/_articles/info/api/WebTwain_IO.md#httpupload) to achieve this.
+Convert each image to a JPG file (as a Blob) using [ConvertToBlob](/_articles/info/api/WebTwain_IO.md#converttoblob), attach each one as its own form field using [SetHTTPFormField](/_articles/info/api/WebTwain_IO.md#sethttpformfield), then call [HTTPUpload](/_articles/info/api/WebTwain_IO.md#httpupload) once at the end to submit everything together.
+
+> [!NOTE]
+> Because each image is already attached individually as its own form field, the final `HTTPUpload()` call below doesn't need to specify which images to send — it simply submits the form. This is different from passing image indices directly to `HTTPUpload()`, which only combines multiple images into a single file for multi-page formats like PDF or TIFF.
 
 ### Steps:
 
