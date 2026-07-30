@@ -149,7 +149,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 
 1.  [What are the Resources files?](/_articles/faq/what-are-the-resources-files.md)
 2.  [What resources of the SDK should be included in my web application?](/_articles/faq/resources-to-be-included-in-SDK.md)
-3.  [How can I change the reference path to the Dynamsoft's resources in my project?](/_articles/faq/change-reference-path.md)
+3.  [How can I change the reference path to the Dynamsoft resources in my project?](/_articles/faq/change-reference-path.md)
 4.  [What is Remote Scan and how do I enable it?](https://www.dynamsoft.com/remote-scan/docs/introduction/)
 5.  [How can I use Dynamic Web TWAIN in a Citrix environment?](/_articles/faq/use-dwt-in-citrix-env.md)
 6.  [Is there any component of the Dynamic Web TWAIN SDK that needs to be installed on end-user machines?](/_articles/faq/component-needs-to-be-installed-on-end-user-machine.md)
