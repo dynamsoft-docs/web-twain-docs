@@ -208,8 +208,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 32.  [Why am I unable to load the TIFF file into Dynamic Web TWAIN?](/_articles/faq/unable-to-load-4-bit-tiff.md)
 33.  [Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later](/_articles/faq/chromium-142-local-network-access-issue.md)
 34.  [Error message - File is Damaged and Can’t Be Opened in macOS](/_articles/faq/file-damaged-on-macos.md)
-35.  [Safari 26.2 Regression Causing Dynamic Web TWAIN v19.3 Auto-Reconnect Failure on macOS](/_articles/faq/safari-26-2-regression.md)
-36.  [File Dialog Closes Immediately on Linux](/_articles/faq/file-dialog-on-linux.md)
+35.  [File Dialog Closes Immediately on Linux](/_articles/faq/file-dialog-on-linux.md)
 
 ## Licensing and Purchase
 
