@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Document Saving, upload files
 breadcrumbText: How to upload multiple files at a time?
 description: How to upload multiple files at a time?
 date: 2022-08-29 18:03:43 +0000
-last_modified: 2026-07-30 10:09:28 +0000
+last_modified: 2026-07-30 10:12:07 +0000
 ---
 
 # Document Saving
@@ -30,7 +30,7 @@ Convert each image to a JPG file (as a Blob) using [ConvertToBlob](/_articles/in
 function UploadAsJPG() {
     var count = 0;
     DWTObject.ClearAllHTTPFormField();
-    DWTObject.SetHTTPFormField("UploadedImagesCount",DWTObject.HowManyImagesInBuffer);
+    DWTObject.SetHTTPFormField("UploadedImagesCount", DWTObject.HowManyImagesInBuffer.toString());
 
     function asyncFailureFunc(errorCode, errorString) {
         alert("ErrorCode: " + errorCode + "\r" + "ErrorString:" + errorString);
