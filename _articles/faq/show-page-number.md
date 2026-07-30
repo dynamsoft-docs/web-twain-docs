@@ -14,7 +14,7 @@ last_modified: 2026-07-29 08:01:45 +0000
 
 ## How can I show page number on each image?
 
-`Viewer.showPageNumber` has been deprecated since v17.3. Use [updatePageNumberStyle](/_articles/info/api/WebTwain_Viewer.md#updatepagenumberstyle){:target="_blank"} instead to show the page number.
+You could configure the `visibility` property to `true` with the [updatePageNumberStyle](/_articles/info/api/WebTwain_Viewer.md#updatepagenumberstyle){:target="_blank"} API to show the page number.
 
 ```javascript
 DWTObject.Viewer.updatePageNumberStyle({ visibility: "visible" });
