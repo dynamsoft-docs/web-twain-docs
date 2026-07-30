@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting
 breadcrumbText: The connection with the server was terminated abnormally
 description: The connection with the server was terminated abnormally
 date: 2021-07-14 18:55:57 +0000
-last_modified: 2022-06-02 15:30:49 +0000
+last_modified: 2026-07-30 09:02:54 +0000
 ---
 
 # Error Troubleshooting
@@ -35,7 +35,7 @@ When you upload images from Dynamic Web TWAIN's buffer, you may receive the foll
 
     ```javascript
     strHTTPServer = location.hostname;
-    WebTWAIN.HTTPPort = location.port == "" ? 80 : location.port;
+    DWTObject.HTTPPort = location.port == "" ? 80 : location.port;
     ```
 
 3. Please reset the maximum transferable data size:
