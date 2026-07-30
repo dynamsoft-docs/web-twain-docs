@@ -51,9 +51,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 29.  [How to scan documents on mobile devices?](/_articles/faq/how-to-scan-documents-on-mobile-devices.md)
 30.  [Do you support fingerprint or medical imaging devices?](/_articles/faq/fingerprint-medical-imaging.md)
 31.  [Is the AcquireImage() method synchronous or asynchronous?](/_articles/faq/acquireimage-sync-or-async.md)
-32.  [Why is my scanner not shown or not responding in the browser?](/_articles/faq/scanner-not-shown-or-not-responding-in-the-browser.md)
-33.  [How can I support WIA scanner drivers in my application?](/_articles/faq/support-wia-scanner-drivers.md)
-34.  [Why are my images coming out distorted in MacOS Sonoma?](/_articles/faq/macos-sonoma-distorted-scans.md)
+32.  [How can I support WIA scanner drivers in my application?](/_articles/faq/support-wia-scanner-drivers.md)
+33.  [Why are my images coming out distorted in MacOS Sonoma?](/_articles/faq/macos-sonoma-distorted-scans.md)
 
 ## Image Viewer
 
