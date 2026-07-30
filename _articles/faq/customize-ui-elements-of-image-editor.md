@@ -23,22 +23,21 @@ Yes, as shown in the sample code below, you can use the parameters `buttons.titl
 ```javascript
  buttons: {
    titles: {
-              'previous': 'Previous Image',
-              'next': 'Next Image',
-              'print': 'Print Image',
-              'scan': 'Scan Documents',
-              'load': 'Load Local Images'
+     'next': 'Next Image',
+     'print': 'Print Image',
+     'scan': 'Scan Documents',
+     'load': 'Load Local Images'
    }
  }
 ```
 
 ```javascript
  dialogText: {
-        dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
-        dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
-        saveChangedImage: ['You have changed the image, do you want to keep the change(s)?', '  Yes  ', '  No  '],
-        selectSource: ['Select Source:', 'Select', 'Cancel', 'There is no source available']
-    }
+   dlgRotateAnyAngle: ['Angle :', 'Interpolation:', 'Keep size', '  OK  ', 'Cancel'],
+   dlgChangeImageSize: ['New Height :', 'New Width :', 'Interpolation method:', '  OK  ', 'Cancel'],
+   saveChangedImage: ['You have changed the image, do you want to keep the change(s)?', '  Yes  ', '  No  '],
+   selectSource: ['Select Source:', 'Select', 'Cancel', 'There is no source available']
+ }
 ```
 
 ### Can I remove or add buttons on the toolbar of the Editor?
@@ -48,10 +47,10 @@ While you can use `buttons.visibility` (as shown in the sample code below) to re
 ```javascript
 buttons: {
   visibility: {
-              'scan': true,
-              'load': true,
-              'print': false,
-              'removeall': true
+    'scan': true,
+    'load': true,
+    'print': false,
+    'removeall': true
   }
 }
 ```
