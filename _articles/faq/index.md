@@ -38,7 +38,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 16.  [Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process?](/_articles/faq/automatically-rotate-upside-down-pages.md)
 17.  [Can the Dynamic Web TWAIN SDK automatically detect borders of the scanned document and crop it out?](/_articles/faq/automatically-detect-border.md)
 18.  [Can I set my document scanner to scan x number of pages instead of all pages from the automatic document feeder (ADF)?](/_articles/faq/scan-x-pages-from-automatic-document-feeder.md)
-19.  [Can the Dynamic Web TWAIN SDK detect whether papers exist on the flatbed?](/_articles/faq/detect-paper-on-flatbed.md)
+19.  [Can the Dynamic Web TWAIN SDK detect whether papers exist in the feeder?](/_articles/faq/detect-paper-on-feeder.md)
 20.  [How can I get a list of supported resolution/DPI values from the document scanner?](/_articles/faq/list-supported-resolution-DPI.md)
 21.  [How can I use a custom capability of my scanner hardware when there is no direct API to set it?](/_articles/faq/custom-capability.md)
 22.  [Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning?](/_articles/faq/limit-on-scanned-pages.md)
