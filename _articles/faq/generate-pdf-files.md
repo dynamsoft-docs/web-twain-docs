@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Addon, separate, license
 breadcrumbText: How can I generate PDF/A files?
 description: How can I generate PDF/A files?
 date: 2021-12-01 01:09:41 +0000
-last_modified: 2026-07-30 06:34:30 +0000
+last_modified: 2026-07-30 07:04:41 +0000
 ---
 
 # Addon
@@ -24,20 +24,6 @@ PDF/A is an archival format designed for long-term preservation. The following v
 | `pdf/a-1b`    | **1.4** (fixed)             | v19.3+       |
 | `pdf/a-2b`    | **1.7** (fixed)             | v19.3+       |
 | `pdf/a-3b`    | **1.7** (fixed)             | v19.4+       |
-
-### What’s the difference between PDF/A-1b and PDF/A-2b?
-Although both variants ensure that documents can be reliably displayed in the future, they differ in terms of supported PDF features and compression options.
-- PDF/A-1b
-  - Uses the older PDF 1.4 specification.
-  - **Does not support JPEG2000** or JBIG2 image compression.
-  - Does not allow transparency.
-  - May result in larger file sizes and more conversion restrictions.
-
-- PDF/A-2b
-  - Based on PDF 1.7.
-  - Supports **JPEG2000**, JBIG2, transparency, and other modern PDF features.
-  - Typically requires **fewer changes** to the source document.
-  - Usually produces **smaller output** files.
 
 **Recommendation:**
 For most use cases, we recommend using **`pdf/a-2b`**.
