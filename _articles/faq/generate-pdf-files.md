@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Addon, separate, license
 breadcrumbText: How can I generate PDF/A files?
 description: How can I generate PDF/A files?
 date: 2021-12-01 01:09:41 +0000
-last_modified: 2026-07-29 08:01:45 +0000
+last_modified: 2026-07-30 06:34:30 +0000
 ---
 
 # Addon
@@ -21,9 +21,9 @@ PDF/A is an archival format designed for long-term preservation. The following v
 
 | PDF/A Variant |    Underlying PDF Version   | Availability |
 |:-------------:|-----------------------------|--------------|
-| `pdf/a-1b`    | **1.4** (default)           | v19.3+       |
-| `pdf/a-2b`    | **1.5** (default), 1.6, 1.7 | v19.3+       |
-| `pdf/a-3b`    | See [`pdfaVersion`](/_articles/info/api/interfaces.md#pdfwsettings) | v19.4+       |
+| `pdf/a-1b`    | **1.4** (fixed)             | v19.3+       |
+| `pdf/a-2b`    | **1.7** (fixed)             | v19.3+       |
+| `pdf/a-3b`    | **1.7** (fixed)             | v19.4+       |
 
 ### What’s the difference between PDF/A-1b and PDF/A-2b?
 Although both variants ensure that documents can be reliably displayed in the future, they differ in terms of supported PDF features and compression options.
@@ -34,7 +34,7 @@ Although both variants ensure that documents can be reliably displayed in the fu
   - May result in larger file sizes and more conversion restrictions.
 
 - PDF/A-2b
-  - Based on newer PDF versions (1.5–1.7).
+  - Based on PDF 1.7.
   - Supports **JPEG2000**, JBIG2, transparency, and other modern PDF features.
   - Typically requires **fewer changes** to the source document.
   - Usually produces **smaller output** files.
@@ -56,9 +56,9 @@ DWTObject.Addon.PDF.IsRasterizationRequired(path); // returns true or false
 
 - If you do not set `pdfaVersion`, the export uses standard PDF format (non-PDF/A).
 
-- If you set `pdfaVersion` but forget to set `version`, or set a mismatched or incorrect PDF version, Dynamic Web TWAIN automatically falls back to a default PDF version:
-  - `pdf/a-1b` → defaults to PDF `1.4`
-  - `pdf/a-2b` → defaults to PDF `1.5`
+- The `version` setting only applies when exporting standard (non-PDF/A) PDFs. Once `pdfaVersion` is set, `version` is ignored — the underlying PDF version is fixed entirely by the PDF/A variant:
+  - `pdf/a-1b` → PDF `1.4`
+  - `pdf/a-2b` / `pdf/a-3b` → PDF `1.7`
 
 ### How to Export as PDF/A
 
@@ -66,7 +66,7 @@ Configure PDF output using [`Write.Setup()`](/_articles/info/api/Addon_PDF.md#wr
 
 ```javascript
 DWTObject.Addon.PDF.Write.Setup({
-    version: "1.5",          // [optional] 1.4 for "pdf/a-1b"; 1.5/1.6/1.7 for "pdf/a-2b"/"pdf/a-3b"
+    version: "1.5",          // [optional] Only used for standard (non-PDF/A) PDFs; ignored once pdfaVersion is set
     pdfaVersion: "pdf/a-2b"  // "pdf/a-1b", "pdf/a-2b" (since v19.3), or "pdf/a-3b" (since v19.4)
 });
 ```
