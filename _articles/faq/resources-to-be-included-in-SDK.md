@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Project Deployment and End-user Installation, resou
 breadcrumbText: What resources of the SDK should be included in my web application?
 description: What resources of the SDK should be included in my web application?
 date: 2021-12-11 06:47:21 +0000
-last_modified: 2022-10-14 14:05:08 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
@@ -23,4 +23,4 @@ Under the `\dist` folder, you can include the installers required per your OS re
 
 Under the `\src` folder, you do not need the wasm files if you are not using camera functionalities.
 
-For more information, please check [Loading the Resource Files](/_articles/general-usage/initialization.md#loading-the-core-js-files){:target="_blank"}.
+For more information, please check [Loading Library Resources](/_articles/general-usage/resource-loading.md#loading-from-official-sdk-package){:target="_blank"}.

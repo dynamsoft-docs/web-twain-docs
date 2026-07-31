@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, supported resolution, DPI
 breadcrumbText: How can I get a list of supported resolution/DPI values from the document scanner?
 description: How can I get a list of supported resolution/DPI values from the document scanner?
 date: 2021-12-08 03:01:32 +0000
-last_modified: 2025-02-26 14:48:28 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # Capture/Image Source
@@ -45,7 +45,7 @@ DWTObject.getCapabilities(
     for (var i = 0; i < result.length; i++) {
       if (result[i].capability.value === Dynamsoft.DWT.EnumDWT_Cap.ICAP_XRESOLUTION) {
         if (result[i].conType.label === 'TWON_ENUMERATION') { // If the capability's Value Type is Enumeration
-            dpi = result[i].values;
+            dpi = result[i].enums;
             console.log(dpi); // The list of supported resolution.
         } else if (result[i].conType.label === 'TWON_RANGE') { // If the capability's Value Type is Range
             max = result[i].maxValue;

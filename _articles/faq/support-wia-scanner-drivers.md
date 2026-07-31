@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Capture/ Image Source, WIA
 breadcrumbText: How can I support WIA scanner drivers in my application?
 description: How can I support WIA scanner drivers in my application?
 date: 2023-05-25 04:19:02 +0000
-last_modified: 2024-09-19 08:47:35 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # Capture/Image Source
@@ -25,7 +25,7 @@ To compatible with both TWAIN and WIA 2.0,
 
 | New APIs (supports WIA) | Old APIs |
 |:-|:-|
-| [GetDeviceAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#getdevicesasync) | [GetSourceNames()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#getsourcenames), [GetSourceNamesAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#getsourcenamesasync)|
+| [GetDevicesAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#getdevicesasync) | [GetSourceNames()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#getsourcenames), [GetSourceNamesAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#getsourcenamesasync)|
 | [SelectDeviceAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectdeviceasync) | [SelectSourceByIndex()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectsourcebyindex), [SelectSourceByIndexAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectsourcebyindexasync) |
 | [SelectSourceAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectsourceasync) | [SelectSource()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#selectsource) |
 | [AcquireImageAsync()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#acquireimageasync) | [AcquireImage()](https://www.dynamsoft.com/web-twain/docs/info/api/WebTwain_Acquire.html#acquireimage) |
@@ -43,4 +43,4 @@ DWTObject.GetDevicesAsync(Dynamsoft.DWT.EnumDWT_DeviceType.TWAINSCANNER|Dynamsof
 ```
 
 ### Difference between the WIASCANNER and WIATWAINSCANNER DeviceType
-To support the WIA protocol in v18.2+, we added a new Enumeration `WIASCANNER` to [Dynamsoft.DWT.EnumDWT_DeviceType](https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest&&cVer=true#dynamsoftdwtenumdwt_devicetype) . The enumeration named `WIATWAINSCANNER` represents WIA sources mapped through the TWAIN protocol after packaging by Microsoft. It was used in previous versions of Dynamic Web TWAIN and it will continue to be supported.
+To support the WIA protocol in v18.2+, we added a new enumeration `WIASCANNER` to [Dynamsoft.DWT.EnumDWT_DeviceType](https://www.dynamsoft.com/web-twain/docs/info/api/Dynamsoft_Enum.html?ver=latest&&cVer=true#dynamsoftdwtenumdwt_devicetype). The enumeration named `WIATWAINSCANNER` represents WIA sources mapped through the TWAIN protocol after packaging by Microsoft. It was used in previous versions of Dynamic Web TWAIN but has been deprecated since v18.2 and will be removed in a future version; please use `WIASCANNER` instead for new development.

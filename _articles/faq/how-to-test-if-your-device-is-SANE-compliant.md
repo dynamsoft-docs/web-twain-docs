@@ -29,7 +29,5 @@ There are 3 ways to verify whether your scanner is SANE compliant.
 
 
 * [Recommended] Try the scanner with the XSane app on Linux. Check out the [official guide](http://www.fifi.org/doc/xsane/html/sane-xsane-doc.html)
-   
-   > [More info>>](/assets/docs/Scanning_with_XSane.pdf)
 
 * Check out the [official list](http://www.sane-project.org/sane-backends-1.0.25.html) of supported scanners.
