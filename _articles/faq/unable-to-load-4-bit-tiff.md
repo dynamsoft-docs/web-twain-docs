@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, tiff
 breadcrumbText: Why am I unable to load the TIFF file into Dynamic Web TWAIN?
 description: Why am I unable to load the TIFF file into Dynamic Web TWAIN?
 date: 2025-04-23 16:09:35 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # Error Troubleshooting
@@ -19,7 +20,7 @@ When you attempt to import a TIFF file using Dynamic Web TWAIN, it will indicate
 
 ### Cause
 
-All versions prior to version 19.0 do not support importing 4-bit color images. If you encounter the issue mentioned above, your file may be using the deprecated JPEG compression standard.
+All versions prior to version 19.1 do not support importing 4-bit color images. If you encounter the issue mentioned above, your file may be using the deprecated JPEG compression standard.
 
 ### Resolution
 

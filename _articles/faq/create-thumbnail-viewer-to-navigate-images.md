@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Image Viewer, navigate images, thumbnail viewer
 breadcrumbText: How can I create a thumbnail viewer to view images?
 description: How can I create a thumbnail viewer to view images?
 date: 2021-12-09 11:34:50 +0000
-last_modified: 2024-09-19 08:47:35 +0000
+last_modified: 2026-07-30 09:44:34 +0000
 ---
 
 # Image Viewer
@@ -35,10 +35,9 @@ var thumbnailViewerSettings = {
   allowKeyboardControl: true,
   allowPageDragging: true,
   allowResizing: false,
-  showPageNumber: false,
   pageBackground: "transparent",
   pageBorder: "1px solid rgb(238, 238, 238)",
-  hoverBackground: "rgb(239, 246, 253)",
+  hoverPageBackground: "rgb(239, 246, 253)",
   hoverPageBorder: "1px solid rgb(238, 238, 238)",
   placeholderBackground: "rgb(251, 236, 136)",
   selectedPageBorder: "1px solid rgb(125,162,206)",
@@ -47,4 +46,5 @@ var thumbnailViewerSettings = {
 
 var thumbnail = DWTObject.Viewer.createThumbnailViewer(thumbnailViewerSettings);
 thumbnail.show();
+thumbnail.updatePageNumberStyle({ visibility: "hidden" }); // Hide the page number on each thumbnail
 ```

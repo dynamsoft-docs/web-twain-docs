@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Dynamic Web TWAIN Service, scanner UI, file dialog
 breadcrumbText:  The scanner's UI or the system's file dialog does not open when scanning
 description:  The scanner's UI or the system's file dialog does not open when scanning
 date: 2022-06-15 06:06:49 +0000
-last_modified: 2023-11-28 15:42:10 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
@@ -41,7 +41,7 @@ The issue occurs when the allocated memory address exceeds the 32-bit limit. In 
 
 To determine which process is blocking Dynamic Web TWAIN Service, please follow the steps below.
 
-1. Collect [verbose log](/_articles/faq/general-troubleshooting-steps.md#how-to-enable-and-collect-verbose-log){:target="_blank"}
+1. Collect [verbose log](/_articles/faq/general-troubleshooting-steps.md#enable-and-collect-verbose-logs){:target="_blank"}
 
 2. Open the file wts.log and search for the string "GetConnectionProcessID" to locate the line:
 *GetConnectionProcessID:: connection client 1960 process is xxxxx.*

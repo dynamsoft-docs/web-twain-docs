@@ -7,6 +7,7 @@ keywords: Dynamic Web TWAIN, Image Viewer, object defined
 breadcrumbText: Where is the image viewer object defined?
 description: Where is the image viewer object defined?
 date: 2025-04-17 17:43:22 +0000
+last_modified: 2026-07-29 08:01:45 +0000
 ---
 
 # Image Viewer
@@ -14,4 +15,4 @@ date: 2025-04-17 17:43:22 +0000
 ## Where is the image viewer object defined?
 
 By default, Dynamic Web TWAIN has a viewer component that helps to view data available in the buffer. When you [create an instance of Web Twain](/_articles/extended-usage/advanced-initialization.md#instantiating-webtwain-without-onwebtwainready){:target="_blank"}, the viewer is created automatically with its default available settings. You can customize the viewer settings according to your requirements and replace the default viewer with your customized viewer settings.
-You can refer to this [link](/_articles/general-usage/viewer-configuration.md#create-the-viewer){:target="_blank"} to read in details about the steps to create/modify the viewer.
+You can refer to this [link](/_articles/general-usage/viewer-configuration.md#configuring-viewer-instantiation){:target="_blank"} to read in details about the steps to create/modify the viewer.

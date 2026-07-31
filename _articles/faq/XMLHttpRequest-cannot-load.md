@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, XMLHttpRequest
 breadcrumbText: XMLHttpRequest cannot load XXX
 description: XMLHttpRequest cannot load XXX
 date: 2021-12-03 23:26:46 +0000
-last_modified: 2026-01-23 06:35:12 -08:00
+last_modified: 2026-07-30 09:33:44 +0000
 ---
 
 # Error Troubleshooting
@@ -48,9 +48,3 @@ Try uploading to the same domain or update the server-side configuration to allo
 > After updating the server configuration file, you'll need to restart the server (i.e. IIS).
 >
 > If you are downloading a file, you might need to clear the browser cache because a cached file will not be requested again from the server, thus still no 'Access-Control-Allow-Origin' header will be presented.
->
-> If you need to send cookies/credentials (e.g., Windows Authentication), enable credentials via code:
->
-> ```javascript
-> DWTObject.HTTPRequestswithCredentials = true; // adds withCredentials:true on upload requests
-> ```

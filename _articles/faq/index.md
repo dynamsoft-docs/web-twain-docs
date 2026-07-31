@@ -38,7 +38,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 16.  [Can the Dynamic Web TWAIN SDK automatically rotate upside-down pages during the document scanning process?](/_articles/faq/automatically-rotate-upside-down-pages.md)
 17.  [Can the Dynamic Web TWAIN SDK automatically detect borders of the scanned document and crop it out?](/_articles/faq/automatically-detect-border.md)
 18.  [Can I set my document scanner to scan x number of pages instead of all pages from the automatic document feeder (ADF)?](/_articles/faq/scan-x-pages-from-automatic-document-feeder.md)
-19.  [Can the Dynamic Web TWAIN SDK detect whether papers exist on the flatbed?](/_articles/faq/detect-paper-on-flatbed.md)
+19.  [Can the Dynamic Web TWAIN SDK detect whether papers exist in the feeder?](/_articles/faq/detect-paper-on-feeder.md)
 20.  [How can I get a list of supported resolution/DPI values from the document scanner?](/_articles/faq/list-supported-resolution-DPI.md)
 21.  [How can I use a custom capability of my scanner hardware when there is no direct API to set it?](/_articles/faq/custom-capability.md)
 22.  [Is there a limit on the number of pages I can scan at a time? Where do you store them after scanning?](/_articles/faq/limit-on-scanned-pages.md)
@@ -51,9 +51,8 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 29.  [How to scan documents on mobile devices?](/_articles/faq/how-to-scan-documents-on-mobile-devices.md)
 30.  [Do you support fingerprint or medical imaging devices?](/_articles/faq/fingerprint-medical-imaging.md)
 31.  [Is the AcquireImage() method synchronous or asynchronous?](/_articles/faq/acquireimage-sync-or-async.md)
-32.  [Why is my scanner not shown or not responding in the browser?](/_articles/faq/scanner-not-shown-or-not-responding-in-the-browser.md)
-33.  [How can I support WIA scanner drivers in my application?](/_articles/faq/support-wia-scanner-drivers.md)
-34.  [Why are my images coming out distorted in MacOS Sonoma?](/_articles/faq/macos-sonoma-distorted-scans.md)
+32.  [How can I support WIA scanner drivers in my application?](/_articles/faq/support-wia-scanner-drivers.md)
+33.  [Why are my images coming out distorted in MacOS Sonoma?](/_articles/faq/macos-sonoma-distorted-scans.md)
 
 ## Image Viewer
 
@@ -98,23 +97,22 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 ## Document Saving
 
 1.  [What image and document formats can I save my documents as?](/_articles/faq/image-document-formats-save.md)
-2.  [What type of HTTP servers do your support? Do you support other server types?](/_articles/faq/http-servers-support.md)
+2.  [What type of HTTP servers do you support? Do you support other server types?](/_articles/faq/http-servers-support.md)
 3.  [How can I enable HTTPS support?](/_articles/faq/enable-https-support.md)
 4.  [How can I get the smallest size of documents in PDF, TIFF or JPEG format?](/_articles/faq/smallest-size-documents.md)
-5.  [How can I send additional form fields with images to my server or database?](/_articles/faq/additional-form-fields.md)
-6.  [How can I automatically trigger actions when images arrive on my server side?](/_articles/faq/trigger-actions-server-side.md)
-7.  [Can I upload documents to a different website domain?](/_articles/faq/upload-documents-to-different-domain.md)
-8.  [How can I get a response string from my HTTP Server if the upload succeeds or fails?](/_articles/faq/response-string-from-server-on-upload.md)
-9.  [Can I upload documents via a background service outside the web browser?](/_articles/faq/upload-using-background-service.md)
-10.  [Can I insert newly scanned pages to an existing document?](/_articles/faq/insert-new-pages-to-existing-document.md)
-11.  [How can I upload a JSON file to my server?](/_articles/faq/upload-json-files-to-server.md)
-12.  [How can I save selected images instead of all images to my server or database?](/_articles/faq/save-selected-images-to-server.md)
-13.  [How to use a blank page as a separator?](/_articles/faq/use-blank-page-as-a-separator.md)
-14.  [How to upload multiple files at a time?](/_articles/faq/upload-multiple-files-at-a-time.md)
-15.  [How to deploy your own upload server with ASP.NET?](/_articles/faq/deploy-your-own-upload-server-with-asp.net.md)
-16.  [How to deploy your own upload server with JSP?](/_articles/faq/deploy-your-own-upload-server-with-jsp.md)
-17.  [How to deploy your own upload server with Node.js?](/_articles/faq/deploy-your-own-upload-server-with-node.js.md)
-18.  [How to deploy your own upload server with PHP?](/_articles/faq/deploy-your-own-upload-server-with-php.md)
+5.  [How can I automatically trigger actions when images arrive on my server side?](/_articles/faq/trigger-actions-server-side.md)
+6.  [Can I upload documents to a different website domain?](/_articles/faq/upload-documents-to-different-domain.md)
+7.  [How can I get a response string from my HTTP Server if the upload succeeds or fails?](/_articles/faq/response-string-from-server-on-upload.md)
+8.  [Can I upload documents via a background service outside the web browser?](/_articles/faq/upload-using-background-service.md)
+9.  [Can I insert newly scanned pages to an existing document?](/_articles/faq/insert-new-pages-to-existing-document.md)
+10.  [How can I upload a JSON file to my server?](/_articles/faq/upload-json-files-to-server.md)
+11.  [How can I save selected images instead of all images to my server or database?](/_articles/faq/save-selected-images-to-server.md)
+12.  [How to use a blank page as a separator?](/_articles/faq/use-blank-page-as-a-separator.md)
+13.  [How to upload multiple files at a time?](/_articles/faq/upload-multiple-files-at-a-time.md)
+14.  [How to deploy your own upload server with ASP.NET?](/_articles/faq/deploy-your-own-upload-server-with-asp.net.md)
+15.  [How to deploy your own upload server with JSP?](/_articles/faq/deploy-your-own-upload-server-with-jsp.md)
+16.  [How to deploy your own upload server with Node.js?](/_articles/faq/deploy-your-own-upload-server-with-node.js.md)
+17.  [How to deploy your own upload server with PHP?](/_articles/faq/deploy-your-own-upload-server-with-php.md)
 
 ## Security
 
@@ -210,8 +208,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 32.  [Why am I unable to load the TIFF file into Dynamic Web TWAIN?](/_articles/faq/unable-to-load-4-bit-tiff.md)
 33.  [Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later](/_articles/faq/chromium-142-local-network-access-issue.md)
 34.  [Error message - File is Damaged and Can’t Be Opened in macOS](/_articles/faq/file-damaged-on-macos.md)
-35.  [Safari 26.2 Regression Causing Dynamic Web TWAIN v19.3 Auto-Reconnect Failure on macOS](/_articles/faq/safari-26-2-regression.md)
-36.  [File Dialog Closes Immediately on Linux](/_articles/faq/file-dialog-on-linux.md)
+35.  [File Dialog Closes Immediately on Linux](/_articles/faq/file-dialog-on-linux.md)
 
 ## Licensing and Purchase
 
