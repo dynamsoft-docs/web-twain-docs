@@ -233,8 +233,8 @@ Dynamsoft.DWT.CreateDWTObject(
     "127.0.0.1",
     18622,
     18623,
-    function (DWTObject) {
-        DWTObject = DWTObject;
+    function (object) {
+        DWTObject = object;
         DWTObject.SelectSourceAsync()
             .then(function () {
                 DWTObject.AcquireImageAsync({
@@ -257,8 +257,8 @@ OR
 var DWTObject;
 Dynamsoft.DWT.CreateDWTObject(
     "dwtcontrolContainer",
-    function (DWTObject) {
-        DWTObject = DWTObject;
+    function (object) {
+        DWTObject = object;
         DWTObject.SelectSourceAsync()
             .then(function () {
                 DWTObject.AcquireImageAsync({
@@ -337,8 +337,8 @@ Dynamsoft.DWT.CreateDWTObjectEx(
     {
         WebTwainId: "dwtId",
     },
-    function (DWTObject) {
-        DWTObject = DWTObject;
+    function (object) {
+        DWTObject = object;
         DWTObject.Viewer.bind("dwtcontrolContainer");
         DWTObject.Viewer.show();
         DWTObject.SelectSourceAsync()

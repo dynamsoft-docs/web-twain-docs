@@ -32,9 +32,9 @@ However, considering that more and more enterprise users are using the Dynamic W
 Visit the CDN site: [https://www.unpkg.com/browse/dwt/dist/dist/](https://www.unpkg.com/browse/dwt/dist/dist/).
 
 **Step 2:**
-For Windows users, please choose ".msi" installer
-For Mac users, please choose ".pkg" installer
-For Linux users, please choose ".rpm" or ".deb" installer accordingly
+- For Windows users, please choose ".msi" installer
+- For Mac users, please choose ".pkg" installer
+- For Linux users, please choose ".rpm" or ".deb" installer accordingly
 
 ![download_installer](/assets/imgs/download_msi_from_cdn.png)
 
