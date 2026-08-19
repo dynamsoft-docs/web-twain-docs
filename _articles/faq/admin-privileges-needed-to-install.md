@@ -24,18 +24,16 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 Yes, the Dynamic Web TWAIN Service installer is a `.msi` file which requires administrator privileges to install as the install target is `C:\Program Files (x86)`. Once the Dynamic Web TWAIN Service is installed with admin privileges, every user on that machine has access to the Dynamic Web TWAIN Service.
 
+> [!NOTE]
+> Installers are backwards compatible within the same major version - for example, the v19.4 installer can also be used for a project targeting v19.0-19.3. Using the latest installer available within your major version is recommended, as it includes the latest fixes and resolves a known issue present in versions prior to v19.4, where only one user per machine could have the service installed via the User Installer.
+
 If your organization does not allow end users to have administrator privileges, you can use the **User Installer** instead, which does not require administrator privileges and installs to the user's `C:\Users\{UserName}\AppData\Roaming\` folder.
 
 To get the User Installer:
 
 1. Go to the [Dynamic Web TWAIN releases page](https://github.com/Dynamsoft/Dynamic-Web-TWAIN/releases) on GitHub.
-2. Find the release matching your SDK major version. We recommend using the latest minor/patch version within that major version.
+2. Find the release matching your SDK major version.
 3. In the **Assets** section, download `DynamicWebTWAINServiceUserSetup.msi`.
-
-> [!NOTE]
-> User Installers are backwards compatible within the same major version. For example, if your project uses Dynamic Web TWAIN v19.0-19.3, you can also use the User Installer from v19.4. Using the latest User Installer available within your major version is recommended, as it includes the latest fixes and improvements.
->
-> Known issue: for v19.0-19.3, only one user per machine can have the service installed via the User Installer - the service cannot be installed to multiple user profiles, and only the user who installed it will have access. This is fixed as of v19.4, so if your project targets v19.0-19.3, installing the [latest User Installer](https://github.com/Dynamsoft/Dynamic-Web-TWAIN/releases) from v19.4 or later is recommended.
 
 <div class="multi-panel-end"></div>
 
