@@ -57,7 +57,10 @@ Scroll down to the **Assets** section.
 - For macOS, download the **.pkg** installer.
 - For Linux, download either the **.rpm** or **.deb** installer, depending on your distribution.
 
-![download_installer](/assets/imgs/download_admin_installer_github.png)
+![download_installer](/assets/imgs/download_installer_from_github.png)
+
+> [!NOTE]
+> In the screenshot above, the installers circled in red require administrator privileges to install, while the installers circled in green are User Installers that do not require administrator privileges. Choose the installer that matches your end users' privileges.
 
 <div class="multi-panel-end"></div>
 
