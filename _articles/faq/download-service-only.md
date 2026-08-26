@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Installation, Dynamic Web TWAIN Service, installer
 breadcrumbText: Where can I download the Dynamic Web TWAIN Service installers only?
 description: Where can I download the Dynamic Web TWAIN Service installers only?
 date: 2025-02-13 11:35:18 +0000
-last_modified: 2026-06-11 10:00:00 +0000
+last_modified: 2026-08-19 05:47:27 +0000
 ---
 
 View all FAQs about [Project Deployment and End-user Installation](
@@ -15,11 +15,12 @@ https://www.dynamsoft.com/web-twain/docs/faq/#project-deployment-and-end-user-in
 
 # Where can I download the Dynamic Web TWAIN Service installers only?
 
-Typically, we recommend that developers retrieve the Dynamic Web TWAIN Service Installers from the downloaded SDK package. This approach guarantees that the version of the Dynamic Web TWAIN Service installed by the user aligns with the current version of the SDK libraries. 
+We recommend getting the Service installers from the [downloaded SDK package](https://www.dynamsoft.com/web-twain/downloads/), under `Resources\dist`, so the installed Service version matches your SDK version.
 
-Let's use Windows as an illustration. After installing the SDK package, you can locate all Dynamic Web TWAIN Service installers for various operating systems in the directory "C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK {version number}\Resources\dist".[[Download the SDK](https://www.dynamsoft.com/web-twain/downloads/)]
+If you don't have access to the SDK package, you can download the installers directly via CDN or GitHub instead.
 
-However, considering that more and more enterprise users are using the Dynamic Web TWAIN SDK, it would be a hassle for end users to obtain the Dynamic Web TWAIN Service installer by downloading the SDK if they are unable to acquire the installers from the developer for some reasons. Therefore, you can use the following trick to download the desired Service installers.
+> [!NOTE]
+> If your end users do not have administrator privileges, see [Are admin privileges required to install the end-user component?](/_articles/faq/admin-privileges-needed-to-install.md){:target="_blank"} for how to get the User Installer instead.
 
 <div class="multi-panel-switching-prefix"></div>
 
@@ -56,10 +57,10 @@ Scroll down to the **Assets** section.
 - For macOS, download the **.pkg** installer.
 - For Linux, download either the **.rpm** or **.deb** installer, depending on your distribution.
 
-![download_installer](/assets/imgs/download_admin_installer_github.png)
+![download_installer](/assets/imgs/download_installer_from_github.png)
 
-> [!IMPORTANT]
-> If you don't have **administrator privileges** to install the service, you can use our Personal Installer, which can be installed without admin rights.![download_personal_installer](/assets/imgs/download_personal_installer_github.png)
+> [!NOTE]
+> In the screenshot above, the installers circled in red require administrator privileges to install, while the installers circled in green are User Installers that do not require administrator privileges. Choose the installer that matches your end users' privileges.
 
 <div class="multi-panel-end"></div>
 
