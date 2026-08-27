@@ -10,6 +10,13 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.4.3 (08/27/2026)
+
+* Updated third-party libraries to enhance security.
+* Changed the compression format of the Linux .deb packages from zstd to xz for better compatibility with older Linux distributions (v19.4 started using zstd).
+* Fixed an issue on Linux where the service started on every login, resulting in multiple running instances.
+
+
 ## 19.4.2 (07/30/2026) 
 
 * Updated third-party libraries to enhance security.
