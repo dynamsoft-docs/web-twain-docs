@@ -119,3 +119,4 @@ echo "=== Build completed ==="
 echo "Final directory: $FINAL_DIR"
 echo "Final directory contents:"
 ls -la "$FINAL_DIR"
+
