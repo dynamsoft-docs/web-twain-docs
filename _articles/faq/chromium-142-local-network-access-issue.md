@@ -3,12 +3,12 @@ layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
-title: Error message - Permission was denied for this request to access the unknown address space
+title: Error message - Local network access permission denied
 keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space, Chromium, 142, Firefox, 153, Local Network Access
-breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
-description: CORS unknown address space
+breadcrumbText: Error message - Local network access permission denied
+description: Local network access permission denied in Chromium and Firefox
 date: 2025-11-04 17:21:42 +0000
-last_modified: 2026-09-01 06:15:31 +0000
+last_modified: 2026-09-01 08:31:31 +0000
 ---
 
 # Error Troubleshooting
@@ -128,7 +128,7 @@ These changes do not alter or bypass Chromium's security model. They make permis
 The key improvements include:
 
 - **Guide the user to grant local network access**   
-  If the service is installed (detected with WebSocket) and the access to the local service is not through or the detected permission is "prompt", prompt the user to grant access.
+  If the service is installed (detected via WebSocket) but access to the local service is failing, and the detected permission state is "prompt", DWT prompts the user to grant access.
 
   *Dialog 1 - Permission Granting Guidance*
 
