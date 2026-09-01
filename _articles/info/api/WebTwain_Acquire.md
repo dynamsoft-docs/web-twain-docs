@@ -689,7 +689,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 
 **Parameters**
 
-`deviceType`: Specify the device type of scanners. Please refer to [`EnumDWT_DeviceType`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_devicetype).
+`deviceType`: Specify the device type of scanners. Please refer to [`EnumDWT_DeviceType`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_devicetype). The default value selects the following device types: `TWAINSCANNER | WIASCANNER | TWAINX64SCANNER | ICASCANNER | SANESCANNER`.
 
 **Availability**
 <div class="availability">
