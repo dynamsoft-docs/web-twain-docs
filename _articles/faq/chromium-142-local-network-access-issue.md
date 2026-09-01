@@ -4,17 +4,17 @@ noTitleIndex: true
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 title: Error message - Permission was denied for this request to access the unknown address space
-keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space, Chromium, 142
+keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space, Chromium, 142, Firefox, 153, Local Network Access
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0000
-last_modified: 2026-02-12 10:20:00 -0800
+last_modified: 2026-09-01 03:21:37 +0000
 ---
 
 # Error Troubleshooting
 
 > [!IMPORTANT]
-> This is an evolving browser behavior. Details in this article may change as Chromium updates Local Network Access.
+> This is an evolving browser security behavior. Details in this article may change as Chromium and Firefox continue updating their Local Network Access implementations.
 
 ## Error message - CORS errors caused by local network access permissions in Chromium 142 and later
 
@@ -73,7 +73,7 @@ Observed behavior depends on Chromium version and Dynamic Web TWAIN (DWT) versio
 
 > [!NOTE]
 > (*) Blocking WebSocket requests is on Chromium's roadmap, and may be enforced in a future release.  
-> Other browsers are also introducing local network permission controls.
+> Firefox has already begun enforcing Local Network Access, including blocking WebSocket connections starting in Firefox 154 - see [Local Network Access in Firefox](#error-message---local-network-access-permissions-in-firefox-153-and-later) below.
 
 ### Root Cause
 
@@ -116,87 +116,6 @@ Please refer to:
 - [Chrome Enterprise Policy List and Management Documentation](https://chromeenterprise.google/policies/#LocalNetworkAccessAllowedForUrls)
 - [Microsoft Edge Browser Policy Documentation](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/localnetworkaccessallowedforurls)
 
-***3. Developer Notes***
-
-**a) If running inside an `iframe`**
-
-> [!IMPORTANT]
-> If Dynamic Web TWAIN runs inside a cross-origin iframe, `loopback-network` permissions must be explicitly allowed in the iframe `allow` attribute.
-> If the iframe is same-origin, no additional iframe permission configuration is required.
-
-For Chrome 145+, use `loopback-network` (and `local-network` only if needed). For older versions, include `local-network-access`.
-
-```html
-<!-- Recommended: explicitly list only required origins and permissions -->
-<iframe
-  src="..."
-  allow="loopback-network https://your-domain.com; local-network https://your-domain.com; local-network-access https://your-domain.com">
-</iframe>
-
-<!-- Not recommended: wildcard -->
-<!-- <iframe src="..." allow="loopback-network *; local-network *; local-network-access *"></iframe> -->
-```
-
-**b) (Optional enhancement) Permission check for improved UX**
-
-You can optionally query LNA permissions at runtime. This is not required, but it can help you guide users before initialization fails.
-
-```javascript
-// Helper: query the first supported permission name from a list.
-async function queryFirstSupportedPermission(names) {
-  for (const name of names) {
-    try {
-      const result = await navigator.permissions.query({ name });
-      return { name, state: result.state };
-    } catch (_) {
-      // Not supported in this browser version.
-    }
-  }
-  return null;
-}
-
-(async () => {
-  // Chrome 145+: loopback-network; Chrome 142-144: local-network-access.
-  const loopbackPerm = await queryFirstSupportedPermission([
-    "loopback-network",
-    "local-network-access"
-  ]);
-
-  if (!loopbackPerm) {
-    console.log("This browser does not expose the Local Network permission API.");
-    // Fallback: initialize DWT directly.
-    return;
-  }
-
-  console.log(`Loopback permission (${loopbackPerm.name}): ${loopbackPerm.state}`);
-
-  if (loopbackPerm.state === "denied") {
-    const currentSite = encodeURIComponent(window.location.origin);
-    const settingsUrl = `chrome://settings/content/siteDetails?site=${currentSite}`;
-    console.log(
-      "Local network permission is denied.\n" +
-      `Open: ${settingsUrl}\n` +
-      "Then allow Local Network for this site."
-    );
-    return;
-  }
-
-  if (loopbackPerm.state === "prompt") {
-    alert(
-      "To connect with the local scanning service, Chrome may ask for Local Network permission. " +
-      "Please click Allow when prompted."
-    );
-  }
-
-  // Proceed with DWT initialization.
-  // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx(...)
-})();
-```
-
-If permission is not granted, direct users to:
-
-> Chrome -> Settings -> Privacy and security -> Site settings -> Local Network / Apps on device
-
 ### Product Improvements Related to Local Network Access
 
 Starting from v19.3, Dynamic Web TWAIN now includes UX enhancements to better surface local-service connectivity and permission issues.
@@ -237,6 +156,153 @@ For older versions, a supplemental JavaScript file can be provided on request by
 
 > [!NOTE]
 > This supplemental JavaScript file improves user guidance only and does not change browser permission requirements.
+
+## Error message - Local Network Access permissions in Firefox 153 and later
+
+### Overview
+
+Firefox is rolling out its own Local Network Access (LNA) protections, with a similar goal to Chromium's but on a different timeline and with different permission names. See Mozilla's official documentation: [Control personal device and local network permissions in Firefox](https://support.mozilla.org/en-US/kb/control-personal-device-local-network-permissions-firefox).
+
+Rollout timeline:
+
+| Firefox Version | Behavior                                                              |
+|------------------|------------------------------------------------------------------------|
+| 149              | LNA enforced only for users with Enhanced Tracking Protection set to **Strict** |
+| 151              | Gradual rollout begins for all users                                 |
+| **153**          | Enforced **by default** for all desktop users                        |
+| **154**          | Enforcement extended to **WebSocket** connections                    |
+
+Dynamic Web TWAIN Service communicates with the browser over WebSocket, so **Firefox 154+** is the version that directly affects DWT, in the same way Chromium's LNA does.
+
+Firefox groups this permission differently than Chromium:
+
+- **Device apps and services** - access to your own computer / localhost and apps running on it. This is the permission relevant to DWT Service.
+- **Local network devices** - access to other hardware on the same LAN (printers, routers, IoT devices, etc.). Not required for DWT Service.
+
+### Symptoms
+
+Because Firefox blocks the WebSocket connection itself (rather than a subset of requests, as Chromium currently does), DWT cannot distinguish "service not installed" from "service installed but permission blocked." As a result, Firefox users who dismiss or block the LNA prompt will consistently see:
+
+**Browser repeatedly prompts to download the service**, even though it is already installed - regardless of DWT version.
+
+![Firefox LNA prompt](/assets/imgs/local-network-access/firefox-LNA-prompt.png)
+
+> [!NOTE]
+> As observed on Firefox 153+, DWT currently shows this generic service-installation dialog on Firefox rather than the enhanced guidance dialogs described in [Product Improvements Related to Local Network Access](#product-improvements-related-to-local-network-access) above - even though Firefox does support querying the underlying permission (see Root Cause below). Until DWT's guided dialogs are extended to Firefox, use the manual steps below to resolve this.
+
+### Root Cause
+
+Same underlying cause as the Chromium behavior above: a page on a public origin is attempting to reach a loopback address (`127.0.0.1`), and Firefox now requires explicit user permission before allowing that connection.
+
+### Resolution
+
+***1. To manually correct this in Firefox***
+
+- Navigate to your Dynamic Web TWAIN page.
+- When Firefox shows the permission prompt near the address bar ("**\<site\> wants to access other apps and services on this device**"), click **Allow**.
+- To fix it after dismissing/blocking the prompt, or to manage it in advance: open Firefox **Settings → Privacy & Security → Permissions → Device apps and services → Settings...**, find your site, and set it to **Allow**.
+
+> [!NOTE]
+> Firefox's permission UI is also expected to evolve. For the latest screenshots, see:
+> [https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html](https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html)
+
+***2. (For Admins) Apply this setting across an enterprise***
+
+Firefox Enterprise / ESR supports the `LocalNetworkAccess` policy via `policies.json`, which works differently from Chrome/Edge's `LocalNetworkAccessAllowedForUrls` - it uses a `SkipDomains` exception list rather than an allow-list:
+
+```json
+{
+  "policies": {
+    "LocalNetworkAccess": {
+      "SkipDomains": ["your-domain.com", "*.your-domain.com"]
+    }
+  }
+}
+```
+
+Please refer to: [Firefox LocalNetworkAccess policy documentation](https://firefox-admin-docs.mozilla.org/reference/policies/localnetworkaccess/)
+
+## Developer Notes
+
+These notes apply to Dynamic Web TWAIN deployments on both Chromium-based browsers and Firefox, since both implement Local Network Access against the same underlying permission model.
+
+### If running inside an `iframe`
+
+> [!IMPORTANT]
+> If Dynamic Web TWAIN runs inside a cross-origin iframe, `loopback-network` permissions must be explicitly allowed in the iframe `allow` attribute.
+> If the iframe is same-origin, no additional iframe permission configuration is required.
+
+For Chrome 145+, use `loopback-network` (and `local-network` only if needed). For older Chromium versions, include `local-network-access`.
+
+```html
+<!-- Recommended: explicitly list only required origins and permissions -->
+<iframe
+  src="..."
+  allow="loopback-network https://your-domain.com; local-network https://your-domain.com; local-network-access https://your-domain.com">
+</iframe>
+
+<!-- Not recommended: wildcard -->
+<!-- <iframe src="..." allow="loopback-network *; local-network *; local-network-access *"></iframe> -->
+```
+
+> [!NOTE]
+> Firefox implements the same underlying Local Network Access specification as Chromium and reuses the `loopback-network` permission name, so the same `allow` attribute pattern above is expected to carry over. This has not been explicitly confirmed against a cross-origin iframe in Firefox - test before relying on it in production, and contact [Dynamsoft Support](https://www.dynamsoft.com/contact/) if you run into issues.
+
+### Permission check for improved UX
+
+You can optionally query LNA permissions at runtime. This is not required, but it can help you guide users before initialization fails. The permission name `loopback-network` is shared by Chrome 145+ and Firefox 153+; the code below also falls back to the older Chromium 142-144 name.
+
+```javascript
+// Helper: query the first supported permission name from a list.
+async function queryFirstSupportedPermission(names) {
+  for (const name of names) {
+    try {
+      const result = await navigator.permissions.query({ name });
+      return { name, state: result.state };
+    } catch (_) {
+      // Not supported in this browser version.
+    }
+  }
+  return null;
+}
+
+(async () => {
+  // Chrome 145+ and Firefox 153+: loopback-network; Chrome 142-144: local-network-access.
+  const loopbackPerm = await queryFirstSupportedPermission([
+    "loopback-network",
+    "local-network-access"
+  ]);
+
+  if (!loopbackPerm) {
+    console.log("This browser does not expose the Local Network permission API.");
+    // Fallback: initialize DWT directly.
+    return;
+  }
+
+  console.log(`Loopback permission (${loopbackPerm.name}): ${loopbackPerm.state}`);
+
+  if (loopbackPerm.state === "denied") {
+    const currentSite = encodeURIComponent(window.location.origin);
+    const chromeSettingsUrl = `chrome://settings/content/siteDetails?site=${currentSite}`;
+    console.log(
+      "Local network permission is denied.\n" +
+      `Chrome/Edge: open ${chromeSettingsUrl} and allow Local Network / Apps on device.\n` +
+      "Firefox: open Settings -> Privacy & Security -> Permissions -> Device apps and services, and allow this site."
+    );
+    return;
+  }
+
+  if (loopbackPerm.state === "prompt") {
+    alert(
+      "To connect with the local scanning service, your browser may ask for Local Network permission. " +
+      "Please click Allow when prompted."
+    );
+  }
+
+  // Proceed with DWT initialization.
+  // e.g., Dynamsoft.DWT.Load() or CreateDWTObjectEx(...)
+})();
+```
 
 ## Other Causes of Failure to Connect to the Service
 
