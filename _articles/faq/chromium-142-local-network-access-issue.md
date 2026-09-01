@@ -8,7 +8,7 @@ keywords: Dynamic Web TWAIN, Error Troubleshooting, CORS, unknown address space,
 breadcrumbText: Error message - Permission was denied for this request to access the unknown address space
 description: CORS unknown address space
 date: 2025-11-04 17:21:42 +0000
-last_modified: 2026-09-01 03:21:37 +0000
+last_modified: 2026-09-01 06:15:31 +0000
 ---
 
 # Error Troubleshooting
@@ -16,23 +16,46 @@ last_modified: 2026-09-01 03:21:37 +0000
 > [!IMPORTANT]
 > This is an evolving browser security behavior. Details in this article may change as Chromium and Firefox continue updating their Local Network Access implementations.
 
-## Error message - CORS errors caused by local network access permissions in Chromium 142 and later
+## Error message - Local network access permission denied
 
 ### Overview
 
-Local Network Access (LNA) is a browser security model that has been enforced in Chromium-based browsers since version 142 (released October 28, 2025), including Chrome, Edge, Brave, and Opera. It blocks web apps from reaching local or loopback targets unless the user explicitly grants permission, which can affect Dynamic Web TWAIN Service behavior.
+Local Network Access (LNA) is a browser security model that restricts requests from public network origins to local or loopback destinations - including `localhost` / `127.0.0.1` - unless the user explicitly grants permission. Dynamic Web TWAIN relies on a locally installed service that listens on a loopback address, so if this permission is not granted, DWT cannot communicate with that service.
 
-These restrictions limit requests from **public network locations** to **local or loopback locations** unless the required site permission is granted.
+When a page first requests local access, the browser shows an LNA permission prompt. The symptoms and resolution steps below apply when a user dismisses this prompt or clicks **Block**.
 
-Starting in **Chrome 145**, the site-setting label changed from one local network access permission  to two:
+Both Chromium-based browsers (Chrome, Edge, Brave, Opera) and Firefox now enforce LNA, but on different rollout timelines and with different permission names - choose your browser below.
+
+### Root Cause
+
+A page hosted on a public origin (for example, `https://your-domain.com`) is attempting to reach a loopback address (`127.0.0.1`), which is now treated as a protected local-network request. Under this model, such requests are blocked by default unless the required permission has been granted.
+
+> [!WARNING]
+> This is driven by browser security policy decisions. Dynamic Web TWAIN cannot bypass these restrictions programmatically.
+> Browser behavior will continue evolving, and temporary workarounds may be removed in future versions. You should plan your deployment and UX flow around current browser permission requirements.
+
+> [!NOTE]
+> Browser permission popup UI changes frequently. Starting with Dynamic Web TWAIN **v19.3.1**, static popup screenshots were removed from this FAQ - for the latest browser-specific screenshots, see:
+> [https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html](https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html)
+
+<div class="multi-panel-switching-prefix"></div>
+
+- [Chromium 142+](#chromium142plus)
+- [Firefox 153+](#firefox153plus)
+
+<div class="multi-panel-start"></div>
+
+Local Network Access has been enforced in Chromium-based browsers since version 142 (released October 28, 2025), including Chrome, Edge, Brave, and Opera.
+
+> [!NOTE]
+> For Chromium's background and design rationale, see [Chrome's developer blog](https://developer.chrome.com/blog/local-network-access) and the [Chrome Platform Status entry](https://chromestatus.com/feature/5152728072060928).
+
+Starting in **Chrome 145**, the site-setting label changed from one local network access permission to two:
 
 - `loopback-network` shown as **Apps on device**
 - `local-network` shown as **Local Network**
 
 Dynamic Web TWAIN Service communicates with `localhost` / `127.0.0.1`, so **Apps on device** (`loopback-network`) is the key permission for most deployments.
-
-When your page first requests local access, Chromium will show an LNA permission prompt.  
-This FAQ and the symptoms below apply when users dismiss this prompt or click **Block**.
 
 ![LNA prompt](/assets/imgs/local-network-access/LNA-prompt.png)
 
@@ -56,7 +79,7 @@ from origin 'https://your-domain.com' has been blocked by CORS policy:
 Permission was denied for this request to access the `unknown` address space.
 ```
 
-This happens because a page on a public origin (for example, `https://your-domain.com`) is trying to access a loopback address (`127.0.0.1`), which Chromium now treats as a protected local-network request.
+This is the Local Network Access restriction described in Root Cause above.
 
 ---
 
@@ -73,24 +96,9 @@ Observed behavior depends on Chromium version and Dynamic Web TWAIN (DWT) versio
 
 > [!NOTE]
 > (*) Blocking WebSocket requests is on Chromium's roadmap, and may be enforced in a future release.  
-> Firefox has already begun enforcing Local Network Access, including blocking WebSocket connections starting in Firefox 154 - see [Local Network Access in Firefox](#error-message---local-network-access-permissions-in-firefox-153-and-later) below.
-
-### Root Cause
-
-Chromium 142 introduced [Local Network Access (LNA)](https://chromestatus.com/feature/5152728072060928), which restricts requests from public network locations to local/loopback network locations unless permission is granted.
-
-> [!NOTE]
-> For background and design rationale, see Chrome's developer blog: [New permission prompt for Local Network Access](https://developer.chrome.com/blog/local-network-access).
-
-Under this model, requests from a public origin (a publicly hosted site) to local or loopback targets (including `localhost` and `127.0.0.1`) can be blocked by default.
-
-Dynamic Web TWAIN relies on a locally installed service that listens on a loopback address. If browser permission is not granted, communication with that local service fails.
+> Firefox has already begun enforcing Local Network Access, including blocking WebSocket connections starting in Firefox 154 - see the Firefox tab above.
 
 ### Resolution
-
-> [!WARNING]
-> This is driven by browser security policy decisions. Dynamic Web TWAIN cannot bypass these restrictions programmatically.
-> Browser behavior will continue evolving, and temporary workarounds may be removed in future versions. You should plan your deployment and UX flow around current browser permission requirements.
 
 ***1. To manually correct this in Chrome***
 
@@ -102,11 +110,6 @@ Dynamic Web TWAIN relies on a locally installed service that listens on a loopba
   - **Local Network** (`local-network`) is `Allow` only if your app also needs private-network device access
 
 ![local-network.png](/assets/imgs/local-network-access/local-network.png)
-
-> [!NOTE]
-> Chrome updates permission popup UI frequently. Starting with Dynamic Web TWAIN **v19.3.1**, static screenshots were removed from built-in popups.
-> For the latest browser-specific screenshots, see:
-> [https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html](https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html)
 
 ***2. (For Admins) Apply this setting across an enterprise***
 
@@ -145,11 +148,6 @@ The key improvements include:
 
   *Dialog 3 - Service Installation*
 
-- **Latest popup screenshots hosted externally (v19.3.1+)**  
-  Because Chromium updates native permission popups frequently, static popup screenshots were removed from this FAQ in v19.3.1.
-  Use this page for the latest screenshots:
-  [https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html](https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html)
-
 These improvements are available starting with Dynamic Web TWAIN v19.3.
 
 For older versions, a supplemental JavaScript file can be provided on request by contacting [Dynamsoft Support](mailto:support@dynamsoft.com).
@@ -157,11 +155,14 @@ For older versions, a supplemental JavaScript file can be provided on request by
 > [!NOTE]
 > This supplemental JavaScript file improves user guidance only and does not change browser permission requirements.
 
-## Error message - Local Network Access permissions in Firefox 153 and later
+<div class="multi-panel-end"></div>
 
-### Overview
+<div class="multi-panel-start"></div>
 
-Firefox is rolling out its own Local Network Access (LNA) protections, with a similar goal to Chromium's but on a different timeline and with different permission names. See Mozilla's official documentation: [Control personal device and local network permissions in Firefox](https://support.mozilla.org/en-US/kb/control-personal-device-local-network-permissions-firefox).
+Firefox is rolling out its own Local Network Access protections, with a similar goal to Chromium's but on a different timeline and with different permission names.
+
+> [!NOTE]
+> For background and configuration details, see Mozilla's documentation: [Control personal device and local network permissions in Firefox](https://support.mozilla.org/en-US/kb/control-personal-device-local-network-permissions-firefox).
 
 Rollout timeline:
 
@@ -188,11 +189,7 @@ Because Firefox blocks the WebSocket connection itself (rather than a subset of 
 ![Firefox LNA prompt](/assets/imgs/local-network-access/firefox-LNA-prompt.png)
 
 > [!NOTE]
-> As observed on Firefox 153+, DWT currently shows this generic service-installation dialog on Firefox rather than the enhanced guidance dialogs described in [Product Improvements Related to Local Network Access](#product-improvements-related-to-local-network-access) above - even though Firefox does support querying the underlying permission (see Root Cause below). Until DWT's guided dialogs are extended to Firefox, use the manual steps below to resolve this.
-
-### Root Cause
-
-Same underlying cause as the Chromium behavior above: a page on a public origin is attempting to reach a loopback address (`127.0.0.1`), and Firefox now requires explicit user permission before allowing that connection.
+> As observed on Firefox 153+, DWT currently shows this generic service-installation dialog on Firefox rather than the enhanced guidance dialogs described under "Product Improvements Related to Local Network Access" in the Chromium tab - even though Firefox does support querying the underlying permission (see Developer Notes below). Until DWT's guided dialogs are extended to Firefox, use the manual steps below to resolve this.
 
 ### Resolution
 
@@ -201,10 +198,6 @@ Same underlying cause as the Chromium behavior above: a page on a public origin 
 - Navigate to your Dynamic Web TWAIN page.
 - When Firefox shows the permission prompt near the address bar ("**\<site\> wants to access other apps and services on this device**"), click **Allow**.
 - To fix it after dismissing/blocking the prompt, or to manage it in advance: open Firefox **Settings → Privacy & Security → Permissions → Device apps and services → Settings...**, find your site, and set it to **Allow**.
-
-> [!NOTE]
-> Firefox's permission UI is also expected to evolve. For the latest screenshots, see:
-> [https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html](https://dynamsoft.github.io/Dynamic-Web-TWAIN/local-network-access.html)
 
 ***2. (For Admins) Apply this setting across an enterprise***
 
@@ -221,6 +214,10 @@ Firefox Enterprise / ESR supports the `LocalNetworkAccess` policy via `policies.
 ```
 
 Please refer to: [Firefox LocalNetworkAccess policy documentation](https://firefox-admin-docs.mozilla.org/reference/policies/localnetworkaccess/)
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>
 
 ## Developer Notes
 
