@@ -71,7 +71,7 @@ DLS-connected license keys begin with the `DLS` prefix. Learn more about the Dyn
 
 </div><div class="multi-panel-start"></div>
 
-Offline license keys usually begin with the `f00` prefix.
+Offline license keys usually begin with the `f` prefix.
 
 1. Without add-ons: activate the license in the customer portal, then acquire the offline key. This key only authorizes the use of the core DWT module.
 2. With add-ons: activate the license in the customer portal, then acquire the offline keys. This may result in multiple license keys - one for the base DWT module, and separate ones for the add-ons. To use multiple keys in a single project, concatenate them (in any order) into a single string, separated with semicolons.
@@ -110,7 +110,7 @@ To use a full license key, set the value of [`Dynamsoft.DWT.ProductKey`](/_artic
 2. Assign the license key string to [`Dynamsoft.DWT.ProductKey`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#productkey):
 
    ```javascript
-   Dynamsoft.DWT.ProductKey = 'f00******;'; // Use an offline key
+   Dynamsoft.DWT.ProductKey = 'f********;'; // Use an offline key
    ```
 
 3. Load (or reload, if replacing an existing key) the web application and see that it starts scanning.
