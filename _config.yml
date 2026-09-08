@@ -41,6 +41,13 @@ dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
 
 baseurl: /web-twain/docs/
 
+# Publish plain-Markdown copies of pages for llms.txt (see _plugins/copy_markdown.rb)
+copy_markdown:
+  enabled: true
+  collections:
+    - articles
+  pages: false
+
 future: true
 
 useVersionTreeV2: true
