@@ -41,6 +41,10 @@ dnt_icon: /web-twain/docs/assets/img-icon/icon-dnt.svg
 
 baseurl: /web-twain/docs/
 
+# Disable copy markdown plugin in template:
+copy_markdown:
+  enabled: false
+
 # Publish plain-Markdown copies of pages for llms.txt (see _plugins/copy_markdown.rb)
 copy_markdown_advanced:
   enabled: true
