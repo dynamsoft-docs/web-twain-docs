@@ -26,18 +26,18 @@
 # Which pages/collections are published, and the URL base, come from
 # _config.yml:
 #
-#   copy_markdown:
+#   copy_markdown_advanced:
 #     enabled: true
 #     collections: ["articles"]   # array of collection labels, or true = all
 #     pages: false                # also publish top-level Markdown pages
 #     exclude: ["README.md"]      # optional: path names or directory prefixes to skip
 #     full_url: ""                # optional; defaults to site.docFullPath, then url + baseurl
 #
-# The plugin is inert unless the copy_markdown block is present and enabled.
+# The plugin is inert unless the copy_markdown_advanced block is present and enabled.
 require 'fileutils'
 
 module CopyMarkdownForLlm
-  KEY = 'copy_markdown'
+  KEY = 'copy_markdown_advanced'
   MD_EXTENSIONS = %w[.md .markdown].freeze
 
   # "collection-doc:path" or "page:path" => rendered Markdown (front matter + body)
