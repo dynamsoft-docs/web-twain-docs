@@ -169,7 +169,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 22.  [The scanner's UI or the system's file dialog does not open when scanning](/_articles/faq/service-is-blocked.md)
 23.  [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md)
 24.  [Where can I download the Dynamic Web TWAIN Service installers only?](/_articles/faq/download-service-only.md)
-25.  [Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later](/_articles/faq/chromium-142-local-network-access-issue.md)
+25.  [Error message - Local network access permission denied (Chromium and Firefox)](/_articles/faq/chromium-142-local-network-access-issue.md)
 26.  [macOS Rosetta Discontinuation and Dynamic Web TWAIN Service](/_articles/faq/mac-rosetta-discontinuation.md)
 
 ## Error Troubleshooting
@@ -206,7 +206,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 30.  [How to debug on Dynamic Web TWAIN online demo?](/_articles/faq/debug-on-online-demo.md)
 31.  [Dynamic Web TWAIN prompts the .deb installer for Windows](/_articles/faq/incorrect-installer-for-windowsARM64.md)
 32.  [Why am I unable to load the TIFF file into Dynamic Web TWAIN?](/_articles/faq/unable-to-load-4-bit-tiff.md)
-33.  [Error message - CORS Errors caused by local network access permissions when using Chromium 142 and later](/_articles/faq/chromium-142-local-network-access-issue.md)
+33.  [Error message - Local network access permission denied (Chromium and Firefox)](/_articles/faq/chromium-142-local-network-access-issue.md)
 34.  [Error message - File is Damaged and Can’t Be Opened in macOS](/_articles/faq/file-damaged-on-macos.md)
 35.  [File Dialog Closes Immediately on Linux](/_articles/faq/file-dialog-on-linux.md)
 
