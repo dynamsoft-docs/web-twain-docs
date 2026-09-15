@@ -124,10 +124,10 @@ AcquireImage(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -231,10 +231,10 @@ CloseSource(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -283,10 +283,10 @@ CloseSourceAsync(): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -317,10 +317,10 @@ DisableSource(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -355,10 +355,10 @@ EnableSource(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -404,10 +404,10 @@ EnableSourceUI(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -442,10 +442,10 @@ OpenSource(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -495,10 +495,10 @@ OpenSourceAsync(): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -537,10 +537,10 @@ GetSourceNames(bIncludeDetails?: boolean): string[] | SourceDetails[];
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -581,10 +581,10 @@ GetSourceNamesAsync(bIncludeDetails: boolean): Promise<string[] | ISourceDetails
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -629,10 +629,10 @@ SelectSource(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -696,10 +696,10 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -749,10 +749,10 @@ SelectSourceByIndex(index: number): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -806,10 +806,10 @@ SelectSourceByIndexAsync(index: number): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -858,10 +858,10 @@ SetOpenSourceTimeout(duration: number): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -906,12 +906,12 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 <table>
 
 <tr>
-<td align="center">H5(Windows/TWAIN)</td>
-<td align="center">H5(Windows/WIA)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(macOS/eSCL)</td>
-<td align="center">H5(Linux/SANE)</td>
+<td align="center">Windows/TWAIN</td>
+<td align="center">Windows/WIA</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">macOS/eSCL</td>
+<td align="center">Linux/SANE</td>
 </tr>
 
 <tr>
@@ -951,10 +951,10 @@ CancelAllPendingTransfers(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -989,10 +989,10 @@ CloseSourceManager(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1029,10 +1029,10 @@ CloseSourceManagerAsync(): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1063,10 +1063,10 @@ CloseWorkingProcess(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1101,10 +1101,10 @@ FeedPage(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1143,10 +1143,10 @@ GetCustomDSData(fileName: string): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1188,10 +1188,10 @@ GetCustomDSDataEx(): string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1237,10 +1237,10 @@ GetSourceNameItems(index: number): string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1278,10 +1278,10 @@ OpenSourceManager(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1321,10 +1321,10 @@ OpenSourceManagerAsync(): Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1359,10 +1359,10 @@ ResetImageLayout(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1397,10 +1397,10 @@ RewindPage(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1439,10 +1439,10 @@ SetCustomDSData(fileName: string): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1488,10 +1488,10 @@ SetCustomDSDataEx(dsDataString: string): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1540,10 +1540,10 @@ SetFileXferInfo(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1629,10 +1629,10 @@ SetImageLayout(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1698,10 +1698,10 @@ BitDepth: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1738,10 +1738,10 @@ IfAppendImage: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1780,10 +1780,10 @@ IfDisableSourceAfterAcquire: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1831,10 +1831,10 @@ IfDuplexEnabled: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1893,10 +1893,10 @@ IfFeederEnabled: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1950,10 +1950,10 @@ IfShowUI: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2010,10 +2010,10 @@ ImageCaptureDriverType: Dynamsoft.DWT.EnumDWT_Driver | number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2063,10 +2063,10 @@ PageSize: Dynamsoft.DWT.EnumDWT_CapSupportedSizes | number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2103,10 +2103,10 @@ Please refer to [`EnumDWT_PixelType`](/_articles/info/api/Dynamsoft_Enum.md#dyna
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2141,10 +2141,10 @@ Resolution: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2179,10 +2179,10 @@ readonly SourceCount: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2213,10 +2213,10 @@ BlankImageThreshold: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2251,10 +2251,10 @@ Brightness: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2291,10 +2291,10 @@ Contrast: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2331,10 +2331,10 @@ readonly CurrentSourceName: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2369,10 +2369,10 @@ DataSourceStatus: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2412,10 +2412,10 @@ DefaultSourceName: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2446,10 +2446,10 @@ readonly Duplex: Dynamsoft.DWT.EnumDWT_DUPLEX | number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2492,10 +2492,10 @@ IfAutoBright: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2526,10 +2526,10 @@ IfAutoDiscardBlankpages: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2566,10 +2566,10 @@ IfAutoFeed: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2604,10 +2604,10 @@ IfAutomaticBorderDetection: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2644,10 +2644,10 @@ IfAutomaticDeskew: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2682,10 +2682,10 @@ IfAutoScan: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2722,10 +2722,10 @@ readonly IfFeederLoaded: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2760,10 +2760,10 @@ readonly IfPaperDetectable: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2797,10 +2797,10 @@ IfShowIndicator: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2837,10 +2837,10 @@ readonly IfUIControllable: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2875,10 +2875,10 @@ IfUseTwainDSM: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2913,10 +2913,10 @@ readonly ImageLayoutFrameBottom: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2947,10 +2947,10 @@ readonly ImageLayoutFrameLeft: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2981,10 +2981,10 @@ readonly ImageLayoutFrameNumber: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3022,10 +3022,10 @@ readonly ImageLayoutFrameRight: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3056,10 +3056,10 @@ readonly ImageLayoutFrameTop: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3090,10 +3090,10 @@ readonly ImageLayoutDocumentNumber: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3124,10 +3124,10 @@ readonly ImageLayoutPageNumber: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3158,10 +3158,10 @@ readonly ImageBitsPerPixel: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3192,10 +3192,10 @@ readonly ImageLength: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3225,10 +3225,10 @@ readonly ImageWidth: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3258,10 +3258,10 @@ readonly ImageXResolution: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3292,10 +3292,10 @@ readonly ImageYResolution: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3328,10 +3328,10 @@ Please refer to [`EnumDWT_PixelType`](/_articles/info/api/Dynamsoft_Enum.md#dyna
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3362,10 +3362,10 @@ readonly MagData: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3398,10 +3398,10 @@ Please refer to [`EnumDWT_MagType`](/_articles/info/api/Dynamsoft_Enum.md#dynams
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3440,10 +3440,10 @@ readonly PendingXfers: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3480,10 +3480,10 @@ PixelFlavor: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3523,10 +3523,10 @@ Please refer to [`EnumDWT_TransferMode`](/_articles/info/api/Dynamsoft_Enum.md#d
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3573,10 +3573,10 @@ Unit: Dynamsoft.DWT.EnumDWT_UnitType | number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3621,10 +3621,10 @@ XferCount: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3659,10 +3659,10 @@ RegisterEvent("OnPostAllTransfers", function () {});
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3705,10 +3705,10 @@ RegisterEvent("OnPostTransfer", function () {});
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3751,10 +3751,10 @@ RegisterEvent("OnPostTransferAsync", function (outputInfo: OutputInfo) {});
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3794,10 +3794,10 @@ RegisterEvent("OnPreAllTransfers", function () {});
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3839,10 +3839,10 @@ RegisterEvent('OnPreTransfer',function(){...});
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3881,10 +3881,10 @@ RegisterEvent("OnSourceUIClose", function () {});
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3934,12 +3934,12 @@ getCapabilities(
 <div class="availability">
 <table>
 <tr>
-<td align="center">H5(Windows/TWAIN)</td>
-<td align="center">H5(Windows/WIA)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(macOS/eSCL)</td>
-<td align="center">H5(Linux/SANE)</td>
+<td align="center">Windows/TWAIN</td>
+<td align="center">Windows/WIA</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">macOS/eSCL</td>
+<td align="center">Linux/SANE</td>
 </tr>
 
 <tr>
@@ -3987,12 +3987,12 @@ Please refer to [`Capabilities`](/_articles/info/api/interfaces.md#capabilities)
 <table>
 
 <tr>
-<td align="center">H5(Windows/TWAIN)</td>
-<td align="center">H5(Windows/WIA)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(macOS/eSCL)</td>
-<td align="center">H5(Linux/SANE)</td>
+<td align="center">Windows/TWAIN</td>
+<td align="center">Windows/WIA</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">macOS/eSCL</td>
+<td align="center">Linux/SANE</td>
 </tr>
 
 <tr>
@@ -4107,12 +4107,12 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <table>
 
 <tr>
-<td align="center">H5(Windows/TWAIN)</td>
-<td align="center">H5(Windows/WIA)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(macOS/eSCL)</td>
-<td align="center">H5(Linux/SANE)</td>
+<td align="center">Windows/TWAIN</td>
+<td align="center">Windows/WIA</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">macOS/eSCL</td>
+<td align="center">Linux/SANE</td>
 </tr>
 
 <tr>
@@ -4163,12 +4163,12 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <table>
 
 <tr>
-<td align="center">H5(Windows/TWAIN)</td>
-<td align="center">H5(Windows/WIA)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(macOS/eSCL)</td>
-<td align="center">H5(Linux/SANE)</td>
+<td align="center">Windows/TWAIN</td>
+<td align="center">Windows/WIA</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">macOS/eSCL</td>
+<td align="center">Linux/SANE</td>
 </tr>
 
 <tr>
@@ -4207,12 +4207,12 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <table>
 
 <tr>
-<td align="center">H5(Windows/TWAIN)</td>
-<td align="center">H5(Windows/WIA)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(macOS/eSCL)</td>
-<td align="center">H5(Linux/SANE)</td>
+<td align="center">Windows/TWAIN</td>
+<td align="center">Windows/WIA</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">macOS/eSCL</td>
+<td align="center">Linux/SANE</td>
 </tr>
 
 <tr>

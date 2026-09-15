@@ -46,10 +46,10 @@ RegisterEvent(name: string, callback: (...arg: any[]) => void): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -90,10 +90,10 @@ UnregisterEvent(name: string, callback?: (...arg: any[]) => void): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -153,10 +153,10 @@ GenerateURLForUploadData(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -212,10 +212,10 @@ readonly ErrorCode: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -250,10 +250,10 @@ readonly ErrorCause: null | {code: number, message: string};
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -284,10 +284,10 @@ readonly ErrorString: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -322,10 +322,10 @@ LogLevel: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -362,10 +362,10 @@ readonly Manufacturer: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -400,10 +400,10 @@ readonly ProductFamily: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -438,10 +438,10 @@ readonly ProductName: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -476,10 +476,10 @@ readonly VersionInfo: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>

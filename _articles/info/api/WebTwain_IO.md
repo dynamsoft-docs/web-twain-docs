@@ -93,10 +93,10 @@ LoadImage(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -165,10 +165,10 @@ LoadImageEx(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -263,10 +263,10 @@ LoadImageFromBase64Binary(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -344,10 +344,10 @@ LoadImageFromBinary(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -424,10 +424,10 @@ LoadDibFromClipboard(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -485,10 +485,10 @@ RegisterEvent(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -556,10 +556,10 @@ RegisterEvent(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -616,10 +616,10 @@ FTPDownload(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -671,10 +671,10 @@ FTPDownloadEx(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -752,10 +752,10 @@ FTPUpload(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -833,10 +833,10 @@ FTPUploadEx(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -885,10 +885,10 @@ FTPUploadAllAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -937,10 +937,10 @@ FTPUploadAllAsPDF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -989,10 +989,10 @@ FTPUploadAsMultiPagePDF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1042,10 +1042,10 @@ FTPUploadAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1076,10 +1076,10 @@ FTPUserName: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1110,10 +1110,10 @@ FTPPassword: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1144,10 +1144,10 @@ FTPPort: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1178,10 +1178,10 @@ IfPASVMode: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1256,10 +1256,10 @@ HTTPDownload(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1333,10 +1333,10 @@ HTTPDownloadEx(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1425,10 +1425,10 @@ HTTPDownloadThroughPost(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1503,10 +1503,10 @@ HTTPUpload(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1591,10 +1591,10 @@ HTTPUploadThroughPutEx(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1650,10 +1650,10 @@ HTTPUploadThroughPost(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1747,10 +1747,10 @@ HTTPUploadThroughPostEx(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1810,10 +1810,10 @@ HTTPUploadAllThroughPostAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1873,10 +1873,10 @@ HTTPUploadAllThroughPostAsPDF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1936,10 +1936,10 @@ HTTPUploadThroughPostAsMultiPagePDF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1999,10 +1999,10 @@ HTTPUploadThroughPostAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2081,10 +2081,10 @@ A Promise object of the response that is resolved based on the `responseType` pa
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2119,10 +2119,10 @@ HttpFieldNameOfUploadedImage: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2153,10 +2153,10 @@ HTTPPort: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2187,10 +2187,10 @@ IfSSL: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2221,10 +2221,10 @@ readonly HTTPPostResponseString: string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2255,10 +2255,10 @@ MaxUploadImageSize: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2293,10 +2293,10 @@ RegisterEvent("OnInternetTransferPercentage", function (percentage: number) {});
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2349,10 +2349,10 @@ ConvertToBase64(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2444,10 +2444,10 @@ ConvertToBlob(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2513,10 +2513,10 @@ OutputSelectedAreaAsync(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2587,10 +2587,10 @@ SaveAsBMP(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2649,10 +2649,10 @@ SaveAsJPEG(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2711,10 +2711,10 @@ SaveAsPDF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2775,10 +2775,10 @@ SaveAsPNG(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2824,10 +2824,10 @@ SaveAsTIFF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2895,10 +2895,10 @@ SaveAllAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2955,10 +2955,10 @@ SaveAllAsPDF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3015,10 +3015,10 @@ SaveSelectedImagesAsMultiPagePDF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3075,10 +3075,10 @@ SaveSelectedImagesAsMultiPageTIFF(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3129,10 +3129,10 @@ saveBlob(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3167,10 +3167,10 @@ ClearTiffCustomTag(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3213,10 +3213,10 @@ SetTiffCustomTag(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3261,10 +3261,10 @@ ClearAllHTTPFormField(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3316,10 +3316,10 @@ SetHTTPFormField(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3359,10 +3359,10 @@ SetHTTPHeader(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3402,10 +3402,10 @@ SetUploadSegment(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3436,10 +3436,10 @@ IfShowFileDialog: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3470,10 +3470,10 @@ IfShowCancelDialogWhenImageTransfer: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3508,10 +3508,10 @@ IfShowProgressBar: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3569,10 +3569,10 @@ ShowFileDialog(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3652,10 +3652,10 @@ Print(useOSPrintWindow?: boolean): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3692,10 +3692,10 @@ PrintEx(indices: number[], settings?: PrintSettings): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3740,10 +3740,10 @@ A Promise object which will be resolved with the uid string which will be used a
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3792,10 +3792,10 @@ localStorageExist(uid: string):Promise<boolean>;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3848,10 +3848,10 @@ A Promise object which will be resolved with the array of image ids which are sa
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3913,10 +3913,10 @@ A Promise object which will be resolved with the array of object which contains 
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3959,10 +3959,10 @@ removeLocalStorage(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -3993,10 +3993,10 @@ JPEGQuality: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -4033,10 +4033,10 @@ IfTiffMultiPage: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -4075,10 +4075,10 @@ TIFFCompressionType: Dynamsoft.DWT.EnumDWT_TIFFCompressionType | number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -4119,10 +4119,10 @@ IfSortBySelectionOrder: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>

@@ -64,10 +64,10 @@ IndexToImageID(index: number): string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -102,10 +102,10 @@ ImageIDToIndex(imageId: string): number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -146,10 +146,10 @@ RenameTag(oldTag:string, newTag:string): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -186,10 +186,10 @@ RemoveTag(tagName: string, indices?: number[]):boolean
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -228,10 +228,10 @@ GetTagList(): TagInfo[];
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -266,10 +266,10 @@ ClearImageTags(index: number): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -304,10 +304,10 @@ FilterImagesByTag(tag: string): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -338,10 +338,10 @@ ClearFilter(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -376,10 +376,10 @@ SetDefaultTag(tag: string): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -416,10 +416,10 @@ TagImages(indices: number[], tag: string): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -454,10 +454,10 @@ GetImageBitDepth(index: number): number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -508,10 +508,10 @@ GetImageHeight(index: number): number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -546,10 +546,10 @@ GetImageWidth(index: number): number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -584,10 +584,10 @@ GetImageXResolution(index: number): number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -622,10 +622,10 @@ GetImageYResolution(index: number): number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -678,10 +678,10 @@ GetSkewAngle(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -750,10 +750,10 @@ GetSkewAngleEx(
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -796,10 +796,10 @@ GetImageSize(index: number, width: number, height: number): number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -836,10 +836,10 @@ GetImageSizeWithSpecifiedType(index: number, type: Dynamsoft.DWT.EnumDWT_ImageTy
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -874,10 +874,10 @@ GetSelectedImagesSize(type: Dynamsoft.DWT.EnumDWT_ImageType | number): number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -922,10 +922,10 @@ GetImagePartURL(index: number, width: number, height: number): string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -979,10 +979,10 @@ GetImageURL(index: number, width: number, height: number): string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1026,10 +1026,10 @@ SelectAllImages(): number[];
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1064,10 +1064,10 @@ SelectImages(indices: number[]): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1104,10 +1104,10 @@ MoveImage(from: number, to: number): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1144,10 +1144,10 @@ SwitchImage(index1: number, index2: number): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1182,10 +1182,10 @@ RemoveImage(index: number): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1218,10 +1218,10 @@ RemoveAllImages(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1267,10 +1267,10 @@ RemoveAllSelectedImages(): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1316,10 +1316,10 @@ CurrentImageIndexInBuffer: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1350,10 +1350,10 @@ readonly HowManyImagesInBuffer: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1384,10 +1384,10 @@ MaxImagesInBuffer: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1422,10 +1422,10 @@ readonly SelectedImagesIndices: number[];
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1456,10 +1456,10 @@ SelectionRectAspectRatio: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1490,10 +1490,10 @@ readonly BlankImageCurrentStdDev: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1524,10 +1524,10 @@ BlankImageMaxStdDev: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1562,10 +1562,10 @@ BlankImageThreshold: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1600,10 +1600,10 @@ BufferMemoryLimit: number;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1645,10 +1645,10 @@ IsBlankImage(index: number): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1705,10 +1705,10 @@ IsBlankImageAsync(index: number,
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1743,10 +1743,10 @@ IsBlankImageExpress(index: number): boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1789,10 +1789,10 @@ IfAllowLocalCache: boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1836,10 +1836,10 @@ RegisterEvent('OnBufferChanged',
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1898,10 +1898,10 @@ RegisterEvent('OnBitmapChanged',
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1946,10 +1946,10 @@ RegisterEvent('OnTopImageInTheViewChanged',
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -1992,10 +1992,10 @@ Pair: [from: number, to: number];
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2030,10 +2030,10 @@ GetTagListByIndex(index: number):string[]
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2086,10 +2086,10 @@ CopyToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2139,10 +2139,10 @@ CreateDocument(documentName:string):boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2204,10 +2204,10 @@ MoveToDocumentAsync(from: string, to: string, sourceIndices: number[], targetInd
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2257,10 +2257,10 @@ OpenDocument(documentName:string):boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2308,10 +2308,10 @@ GetCurrentDocumentName():string;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2348,10 +2348,10 @@ RenameDocument(oldDocumentName:string, newDocumentName:string):boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2386,10 +2386,10 @@ RemoveDocument(documentName:string):boolean;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2424,10 +2424,10 @@ GetDocumentInfoList(): DocumentInfo[];
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2466,10 +2466,10 @@ updateImage(imageId: string, blob: Blob): Promise <void>;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -2506,10 +2506,10 @@ RegisterEvent('OnDiskExceedLimit',
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>

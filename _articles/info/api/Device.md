@@ -73,10 +73,10 @@ interface DeviceConfiguration {
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS/TWAIN)</td>
-<td align="center">H5(macOS/ICA)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS/TWAIN</td>
+<td align="center">macOS/ICA</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
