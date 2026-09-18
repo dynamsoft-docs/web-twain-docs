@@ -102,10 +102,28 @@ module CopyMarkdownForLlm
     [full, root]
   end
 
-  # Rewrite an internal docs URL (…/foo.html in either its root-absolute or
-  # full-URL form) to the .md form. Anything else is returned unchanged; a
-  # "#fragment" is preserved.
-  def to_full_md(dest, full_base, root_base)
+  # Root-relative URL of every published page that Jekyll serves from a
+  # directory ("/", "/parameters/", …) mapped to the .md URL of its copy. A page
+  # whose basename is "index" gets a directory URL instead of "…/index.html"
+  # (see Jekyll::Page#template), so it never matches the ".html" rule below and
+  # needs its own mapping. Only pages we actually publish are listed, so links
+  # never point at a .md copy that will not be written.
+  def index_url_map(site)
+    items = site.pages.dup
+    site.collections.each_value { |collection| items.concat(collection.docs) }
+
+    items.each_with_object({}) do |item, map|
+      next unless process?(site, item)
+
+      url = item.url.to_s
+      map[url] = "#{url}index.md" if url.end_with?('/')
+    end
+  end
+
+  # Rewrite an internal docs URL (…/foo.html, or the directory form …/foo/ of an
+  # index page, in either its root-absolute or full-URL shape) to the .md form.
+  # Anything else is returned unchanged; a "#fragment" is preserved.
+  def to_full_md(dest, full_base, root_base, index_url_map)
     rel =
       if !root_base.empty? && dest.start_with?("#{root_base}/")
         dest.sub(%r{\A#{Regexp.escape(root_base)}}, '')
@@ -115,13 +133,14 @@ module CopyMarkdownForLlm
     return dest unless rel
 
     path, fragment = rel.split('#', 2)
-    return dest unless path =~ /\.html\z/i
+    md = if path =~ /\.html\z/i
+           path.sub(/\.html\z/i, '') + '.md'
+         else
+           index_url_map[path]
+         end
+    return dest unless md
 
-    output = if full_base.empty?
-               "#{root_base}#{path.sub(/\.html\z/i, '')}.md"
-             else
-               "#{full_base}#{path.sub(/\.html\z/i, '')}.md"
-             end
+    output = "#{full_base.empty? ? root_base : full_base}#{md}"
     fragment ? "#{output}##{fragment}" : output
   end
 
@@ -131,6 +150,7 @@ module CopyMarkdownForLlm
     return nil unless File.exist?(source_path)
 
     full_base, root_base = link_bases(site)
+    index_urls = index_url_map(site)
 
     # Keep the original YAML front matter byte-for-byte.
     raw = File.binread(source_path).force_encoding('UTF-8')
@@ -149,7 +169,7 @@ module CopyMarkdownForLlm
     content = content.gsub(%r{(\]\()([^)\s]+)}) do
       head = Regexp.last_match(1)
       dest = Regexp.last_match(2)
-      "#{head}#{to_full_md(dest, full_base, root_base)}"
+      "#{head}#{to_full_md(dest, full_base, root_base, index_urls)}"
     end
 
     front_matter + content
@@ -157,9 +177,19 @@ module CopyMarkdownForLlm
 
   # Filesystem path of the .md copy inside site.dest (mirrors the .html page URL).
   def dest_path(site, item)
-    return nil unless item.url.to_s =~ /\.html\z/i
+    url = item.url.to_s
+    relative =
+      if url =~ /\.html\z/i
+        url.sub(/\.html\z/i, '') + '.md'
+      elsif url.end_with?('/')
+        # A page whose basename is "index" is served from its directory
+        # ("/parameters/" rather than "/parameters/index.html"), so its copy is
+        # that directory's index.md — matching the rewrite in to_full_md.
+        "#{url}index.md"
+      end
+    return nil unless relative
 
-    File.join(site.dest, item.url.sub(/\.html\z/i, '').sub(%r{\A/+}, '') + '.md')
+    File.join(site.dest, relative.sub(%r{\A/+}, ''))
   end
 
   def buffer_key(item)
