@@ -38,9 +38,9 @@ Promise of an [`OCRInfo`](/_articles/info/api/interfaces.md#ocrinfo) object.
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -83,9 +83,9 @@ Promise of an object of the orientation detection result. Please refer to [`Enum
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -155,9 +155,9 @@ Promise of the [`OCRResult`](/_articles/info/api/interfaces.md#ocrresult) object
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -204,9 +204,9 @@ Promise of a `boolean` result indicating the success of the operation.
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -250,9 +250,9 @@ Promise of a base64 string result.
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -296,9 +296,9 @@ Promise of a `Blob` object.
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>

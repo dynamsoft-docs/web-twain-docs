@@ -39,9 +39,9 @@ decode(index: number): Promise<TextResult[]> ;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -73,9 +73,9 @@ getRuntimeSettings(template?: string): Promise<RuntimeSettings> ;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -109,9 +109,9 @@ updateRuntimeSettings(settings: RuntimeSettings): Promise<RuntimeSettings> ;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -161,9 +161,9 @@ resetRuntimeSettings(): Promise<RuntimeSettings> ;
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
@@ -203,9 +203,9 @@ Please refer to [`RuntimeSettings`](/_articles/info/api/interfaces.md#runtimeset
 <table>
 
 <tr>
-<td align="center">H5(Windows)</td>
-<td align="center">H5(macOS)</td>
-<td align="center">H5(Linux)</td>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
 </tr>
 
 <tr>
