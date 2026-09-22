@@ -43,7 +43,7 @@ Dynamsoft.DWT.Containers = [{
 
     <body>
         <input type="button" value="Scan" onclick="AcquireImage();" /><br>
-        <div id="customDivID"></div> <!-- The WebTwain object binds to this div by default -->
+        <div id="customDivID"></div> <!-- The div to bind the WebTwain object to -->
         <script>
             let DWTObject; // Use this to store the WebTwain object after retrieval
 
@@ -108,7 +108,7 @@ Dynamsoft.DWT.AutoLoad = false;
 
     <body>
         <input type="button" value="Scan" onclick="AcquireImage();" /><br/>
-        <div id="customDivID"></div> <!-- The WebTwain object binds to this div by default -->
+        <div id="customDivID"></div> <!-- The div to bind the WebTwain object to -->
         <script>
             let DWTObject; // Use this to store the WebTwain object after retrieval
 
@@ -206,7 +206,7 @@ Here is a rudimentary sample that demonstrates page movement APIs:
 
     <body>
         <input type="button" value="Scan" onclick="AcquireImage();" /><br>
-        <div id="customDivID"></div> <!-- The WebTwain object binds to this div by default -->
+        <div id="customDivID"></div> <!-- The div to bind the WebTwain object to -->
         <!-- Buttons to demonstrate Viewer API calls -->
         <input
             type="button"
