@@ -20,6 +20,32 @@ require_cmd() {
   fi
 }
 
+port_in_use() {
+  local candidate="$1"
+  if (exec 3<>"/dev/tcp/127.0.0.1/$candidate") 2>/dev/null; then
+    exec 3<&- 2>/dev/null || true
+    exec 3>&- 2>/dev/null || true
+    return 0
+  fi
+  return 1
+}
+
+find_available_port() {
+  local candidate="$1"
+  local max_attempts=50
+  local attempt=0
+  while (( attempt < max_attempts )); do
+    if ! port_in_use "$candidate"; then
+      echo "$candidate"
+      return 0
+    fi
+    candidate=$((candidate + 1))
+    attempt=$((attempt + 1))
+  done
+  echo "Could not find an available port after $max_attempts attempts starting at $1" >&2
+  return 1
+}
+
 show_help() {
   cat <<'EOF'
 Usage: ./scripts/dev.sh [options]
@@ -90,6 +116,12 @@ require_cmd rsync
 require_cmd bundle
 require_cmd find
 require_cmd sed
+
+requested_port="$port"
+port="$(find_available_port "$requested_port")"
+if [[ "$port" != "$requested_port" ]]; then
+  write_step "Port $requested_port is in use on $bind_host; using $port instead"
+fi
 
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 repo_root="$(cd -- "$script_dir/.." && pwd)"
