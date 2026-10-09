@@ -27,6 +27,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 * Fixed the window focus issue when loading files using non-UI related APIs.
 * Fixed the processing of PNG files with unusual bit depth (2-bit e.g.).
 * Fixed the loading of text PDFs with a domain-bind license.
+* Fixed the issue where, with ADF enabled on Linux (SANE), single-page scanning on certain scanners could cause a paper jam and return an incorrect image.
 
 ## 19.4.4 (09/22/2026) 
 
