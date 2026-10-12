@@ -177,9 +177,13 @@ function PrettyPrintResult(result){
   let prettyResult = "";
   result.blocks.forEach(block => {
     block.lines.forEach(line => {
-      line.words.forEach(word => {
-        prettyResult += word.value + " ";
-      });
+      if (line.value) {
+        prettyResult += line.value + " ";
+      }else{
+        line.words.forEach(word => {
+          prettyResult += word.value + " ";
+        });
+      }
       prettyResult += "\n";
     });
     prettyResult += "\n";
@@ -403,9 +407,13 @@ Here is the complete code of the demo.
       let prettyResult = "";
       result.blocks.forEach(block => {
         block.lines.forEach(line => {
-          line.words.forEach(word => {
-            prettyResult += word.value + " ";
-          });
+          if (line.value) {
+            prettyResult += line.value + " ";
+          }else{
+            line.words.forEach(word => {
+              prettyResult += word.value + " ";
+            });
+          }
           prettyResult += "\n";
         });
         prettyResult += "\n";
