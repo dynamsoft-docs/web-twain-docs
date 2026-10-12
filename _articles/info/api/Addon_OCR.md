@@ -62,6 +62,9 @@ Promise of an [`OCRInfo`](/_articles/info/api/interfaces.md#ocrinfo) object.
 DetectPageOrientation( 
   index: number,  
   settings?: { 
+    engine?: { // Added in 19.5 
+      name: string; 
+    },
     detectionMode?: EnumDWT_PageOrientationDetectionMode | number
   }
 ): Promise<{angle: EnumDWT_PageOrientation | number, confidence: number}>; 
@@ -71,7 +74,7 @@ DetectPageOrientation(
 
 `index`: Index of the image to process.
 
-`settings`: Settings of the method. You can configure the accuracy mode. Please refer to [`EnumDWT_PageOrientationDetectionMode`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_pageorientationdetectionmode).
+`settings`: Settings of the method. You can configure the accuracy mode and which OCR engine to use. Please refer to [`EnumDWT_PageOrientationDetectionMode`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_pageorientationdetectionmode). Currently, only the `Onnx.Ocr` engine supports this.
 
 **Return Values**
 
@@ -90,7 +93,7 @@ Promise of an object of the orientation detection result. Please refer to [`Enum
 
 <tr>
 <td align="center">v19.3+ </td>
-<td align="center">not supported </td>
+<td align="center">v19.5+ </td>
 <td align="center">not supported</td>
 </tr>
 
