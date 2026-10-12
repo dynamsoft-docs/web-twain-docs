@@ -62,7 +62,7 @@ Promise of an [`OCRInfo`](/_articles/info/api/interfaces.md#ocrinfo) object.
 DetectPageOrientation( 
   index: number,  
   settings?: { 
-    engine?: { // Added in 19.5 
+    engine?: {
       name: string; 
     },
     detectionMode?: EnumDWT_PageOrientationDetectionMode | number
@@ -112,10 +112,14 @@ Recognize the text in one page.
 Recognize( 
   index: number,
   options?: {
+    engine?: { 
+      name :string 
+    },
     settings?: { 
       language?: string,
       pageOrientation?: EnumDWT_PageOrientation| number,
-    },  
+      recognitionLevel?: "accurate" | "fast",
+    },
     rects?: { 
       left: number, 
       top: number, 
@@ -132,9 +136,11 @@ Recognize(
 
 `options`:
 
+* `engine`: The OCR engine to use.
 * `settings`: Settings of the recognition.
   * `language`: Specify the code of language for recognition (`en`, `fr`, e.g.). See the table below listing supported languages.
   * `pageOrientation`: Specify the orientation of the page. The OCR will rotate the page before recognition. Please refer to [`EnumDWT_PageOrientation`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_pageorientation).
+  * `recognitionLevel`: Specify the recognition level for the OCR. It is only valid for macOS.
 * `rects`: An array of rectangles to limit the regions for recognition.
 
 **Return Values**
