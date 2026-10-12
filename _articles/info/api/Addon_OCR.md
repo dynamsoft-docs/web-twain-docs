@@ -147,17 +147,6 @@ Recognize(
 
 Promise of the [`OCRResult`](/_articles/info/api/interfaces.md#ocrresult) object.
 
-**Supported Languages**
-
-| Language Name              | Code  |
-| :------------------------- | :---- |
-| English                    | en    |
-| French                     | fr    |
-| Spanish                    | es    |
-| German                     | de    |
-| Italian                    | it    |
-| Portuguese                 | pt    |
-
 **Availability**
 
 <div class="availability">
@@ -171,7 +160,7 @@ Promise of the [`OCRResult`](/_articles/info/api/interfaces.md#ocrresult) object
 
 <tr>
 <td align="center">v19.3+ </td>
-<td align="center">not supported </td>
+<td align="center">v19.5+ </td>
 <td align="center">not supported</td>
 </tr>
 
@@ -220,7 +209,7 @@ Promise of a `boolean` result indicating the success of the operation.
 
 <tr>
 <td align="center">v19.3+ </td>
-<td align="center">not supported </td>
+<td align="center">v19.5+ </td>
 <td align="center">not supported</td>
 </tr>
 
@@ -266,7 +255,7 @@ Promise of a base64 string result.
 
 <tr>
 <td align="center">v19.3+ </td>
-<td align="center">not supported </td>
+<td align="center">v19.5+ </td>
 <td align="center">not supported</td>
 </tr>
 
@@ -312,7 +301,7 @@ Promise of a `Blob` object.
 
 <tr>
 <td align="center">v19.3+ </td>
-<td align="center">not supported </td>
+<td align="center">v19.5+ </td>
 <td align="center">not supported</td>
 </tr>
 
