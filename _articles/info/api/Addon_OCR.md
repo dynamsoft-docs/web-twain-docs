@@ -7,7 +7,7 @@ breadcrumbText: OCR Addon
 description: Dynamic Web TWAIN SDK Documentation API Reference OCR Addon APIs Page
 ---
 
-# {WebTwainObject}.Addon.OCRKit
+# {WebTwainObject}.Addon.OCRConnector
 
 > {WebTwainObject} denotes the `WebTwain` instance.
 
@@ -20,7 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference OCR Addon APIs Pa
 
 ## GetInstalledOCRInfo()
 
-Return the info of the installed OCR addon. It will throw an error if the OCR module is not installed.
+Return the info of the installed OCR addon.
 
 **Syntax**
 
@@ -45,7 +45,7 @@ Promise of an [`OCRInfo`](/_articles/info/api/interfaces.md#ocrinfo) object.
 
 <tr>
 <td align="center">v19.3+ </td>
-<td align="center">not supported </td>
+<td align="center">v19.5+ </td>
 <td align="center">not supported</td>
 </tr>
 

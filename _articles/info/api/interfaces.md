@@ -1709,9 +1709,13 @@ The info of the installed OCR add-on.
 **Syntax**
 
 ```ts
-interface OCRInfo {
-  version: string;     
-}
+interface OCRInfo {     
+  version: string;    
+  engines: { // Added in 19.5 
+     name: string;
+     languages: string[]; //Supported languages
+  }[];
+} 
 ```
 
 ### OCRResult
