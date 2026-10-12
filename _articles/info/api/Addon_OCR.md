@@ -20,7 +20,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference OCR Addon APIs Pa
 
 ## GetInstalledOCRInfo()
 
-Return the info of the installed OCR addon.
+Return the info of the installed OCR addon. It contains a list of OCR engines and their supported languages.
 
 **Syntax**
 
@@ -55,6 +55,8 @@ Promise of an [`OCRInfo`](/_articles/info/api/interfaces.md#ocrinfo) object.
 ---
 
 ## DetectPageOrientation()
+
+Detect the orientation of a page.
 
 **Syntax**
 
