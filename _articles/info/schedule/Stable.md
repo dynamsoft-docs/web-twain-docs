@@ -10,7 +10,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
-## 19.5 (10/15/2026)
+## 19.5 (10/27/2026)
 
 ### Improvements
 
