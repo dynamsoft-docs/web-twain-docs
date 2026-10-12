@@ -12,7 +12,7 @@ You can enable access token to avoid the APIs of Dynamic Web TWAIN Service being
 
 It can control the access via the JavaScript library and the REST APIs. Currently, only Windows is supported.
 
-## How to Use
+## How to Use Token Validation
 
 1. Configure the service to enable token validation. Open CMD as administrator to run the following command.
 
