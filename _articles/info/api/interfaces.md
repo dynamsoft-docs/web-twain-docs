@@ -1711,7 +1711,7 @@ The info of the installed OCR add-on.
 ```ts
 interface OCRInfo {     
   version: string;    
-  engines: { // Added in 19.5 
+  engines: { // Added in 19.5 with the following supported engines: Windows.Media.Ocr, Onnx.Ocr and Vision.Ocr
      name: string;
      languages: string[]; //Supported languages
   }[];
