@@ -181,7 +181,7 @@ Save the result to a local path.
 ```ts
 SaveToPath(
   indices: number[],  
-  outputFormat: Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat | number,  
+  outputFormat: Dynamsoft.DWT.EnumDWT_OCRConnectorOutputFormat | number,  
   path: string
 ): Promise<boolean>;
 ```
@@ -190,7 +190,7 @@ SaveToPath(
 
 `indices`: Indices of the pages to save.
 
-`outputFormat`: Please refer to [`EnumDWT_OCRKitOutputFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_ocrkitoutputformat).
+`outputFormat`: Please refer to [`EnumDWT_OCRConnectorOutputFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_ocrconnectoroutputformat).
 
 `path`: System's absolute path or filename for saving. A file saving dialog will appear for confirmation.
 
@@ -230,7 +230,7 @@ Save the result as base64.
 ```ts
 SaveAsBase64(
   indices: number[],
-  outputFormat: Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat | number
+  outputFormat: Dynamsoft.DWT.EnumDWT_OCRConnectorOutputFormat | number
 ): Promise<string>;
 ```
 
@@ -238,7 +238,7 @@ SaveAsBase64(
 
 `indices`: Indices of the pages to save.
 
-`outputFormat`: Please refer to [`EnumDWT_OCRKitOutputFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_ocrkitoutputformat).
+`outputFormat`: Please refer to [`EnumDWT_OCRConnectorOutputFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_ocrconnectoroutputformat).
 
 **Return Values**
 
@@ -276,7 +276,7 @@ Save the result as blob.
 ```ts
 SaveAsBlob(
   indices: number[],  
-  outputFormat: Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat | number
+  outputFormat: Dynamsoft.DWT.EnumDWT_OCRConnectorOutputFormat | number
 ): Promise<Blob>;
 ```
 
