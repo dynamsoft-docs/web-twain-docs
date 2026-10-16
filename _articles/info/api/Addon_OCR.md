@@ -284,7 +284,7 @@ SaveAsBlob(
 
 `indices`: Indices of the pages to save.
 
-`outputFormat`: Please refer to [`EnumDWT_OCRKitOutputFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_ocrkitoutputformat).
+`outputFormat`: Please refer to [`EnumDWT_OCRConnectorOutputFormat`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_ocrconnectoroutputformat).
 
 **Return Values**
 
