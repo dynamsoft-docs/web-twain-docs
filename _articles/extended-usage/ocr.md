@@ -495,7 +495,6 @@ Here is the complete code of the demo.
         DWTObject.Addon.PDF.Write.Setup({
           pdfaVersion: pdfaOption !== "none" ? pdfaOption : ""
         });
-        console.log("PDF/A Option: " + (pdfaOption !== "none" ? pdfaOption : ""));
         if(format === "extralayer"){
           await DWTObject.Addon.OCRConnector.SaveToPath(DWTObject.SelectAllImages(),Dynamsoft.DWT.EnumDWT_OCRConnectorOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
         }else{
