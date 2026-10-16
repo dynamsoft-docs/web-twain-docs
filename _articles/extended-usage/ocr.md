@@ -199,16 +199,20 @@ APIs used:
 
 ### Step Four - Save as PDF
 
-After recognition, we can save the OCR results and images as a PDF file. It will add an invisible text layer above the original content so that the text becomes selectable and searchable.
+After recognition, we can save the OCR results and images as a PDF file. It will add an invisible text layer above the original content so that the text becomes selectable and searchable. You can also specify whether to save it as PDF/A.
 
 ```js
 let indicesOfAll = DWTObject.SelectAllImages();
+DWTObject.Addon.PDF.Write.Setup({
+  pdfaVersion: "pdf/a-3b"
+});
 await DWTObject.Addon.OCRKit.SaveToPath(indicesOfAll,Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
 ```
 
 APIs used:
 
-[`SaveToPath()`](/_articles/info/api/Addon_OCR.md#savetopath)
+* [`SaveToPath()`](/_articles/info/api/Addon_OCR.md#savetopath)
+* [`Write.Setup()`](/_articles/info/api/Addon_PDF.md#writesetup)
 
 ### Step Five - Review the Complete Code
 
@@ -222,6 +226,7 @@ Here is the complete code of the demo.
   <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
   <script src="Resources/dynamsoft.webtwain.config.js"></script>
   <script src="Resources/addon/dynamsoft.webtwain.addon.ocrconnector.js"></script>
+  <script src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"></script>
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
   <style>
     #dwtcontrolContainer {
@@ -233,7 +238,7 @@ Here is the complete code of the demo.
     #result {
       margin-top: 20px;
       padding: 10px;
-      width: 300px;
+      width: 640px;
       height: 380px;
       border: 1px solid #ccc;
       background-color: #f9f9f9;
@@ -281,6 +286,14 @@ Here is the complete code of the demo.
       <select id="outputFormat">
         <option value="extralayer">With Extra Text Layer</option>
         <option value="plaintext">Plain Text</option>
+      </select>
+    </label>
+    <label>PDF/A:
+      <select id="pdfaOption">
+        <option value="pdf/a-1b">PDF/A-1b</option>
+        <option value="pdf/a-2b">PDF/A-2b</option>
+        <option value="pdf/a-3b">PDF/A-3b</option>
+        <option value="none">Don't save as PDF/A</option>
       </select>
     </label>
   </div>
@@ -478,6 +491,11 @@ Here is the complete code of the demo.
     async function SaveAsPDF(){
       try {
         let format = document.getElementById('outputFormat').value;
+        let pdfaOption = document.getElementById('pdfaOption').value;
+        DWTObject.Addon.PDF.Write.Setup({
+          pdfaVersion: pdfaOption !== "none" ? pdfaOption : ""
+        });
+        console.log("PDF/A Option: " + (pdfaOption !== "none" ? pdfaOption : ""));
         if(format === "extralayer"){
           await DWTObject.Addon.OCRConnector.SaveToPath(DWTObject.SelectAllImages(),Dynamsoft.DWT.EnumDWT_OCRConnectorOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
         }else{
