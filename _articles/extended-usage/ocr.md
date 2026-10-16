@@ -13,12 +13,18 @@ description: Dynamic Web TWAIN SDK Documentation OCR Page
 
 Dynamic Web TWAIN includes the OCR Connector, an integration layer that connects your scanning workflow to OCR engines available on the end user's device. The Connector does not perform text recognition itself; recognition is carried out by the selected engine, typically the OCR built into the operating system (Windows.Media.Ocr on Windows or Apple.Vision on macOS). Dynamsoft supports the Connector integration layer only. Recognition accuracy, language coverage, and engine-specific behavior are determined by the engine provider and are outside the scope of Dynamsoft technical support.
 
-The OCR Connector is free to use with the core license module. Loading the saved searchable PDFs back into Dynamic Web TWAIN requires a [PDF Rasterizer](/_articles/info/api/Addon_PDF.md) license.
-
 > [!NOTE]
 > OCR output may contain errors. You are responsible for validating recognition results before relying on them, including for archival or compliance use such as PDF/A.
 
 Read on to learn about how to use it.
+
+## License
+
+The OCR Connector is license-controlled. It only works when the license key configured in [`Dynamsoft.DWT.ProductKey`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#productkey) includes the OCR Connector license.
+
+The OCR Connector license is included at no additional cost in Dynamic Web TWAIN core licenses purchased after the v19.5 release, and in trial licenses issued after that release. Core licenses purchased before v19.5 do not include it. Because it comes with the core license, it shares the same license type, expiration date, and renewal process, and no separate order item is required. See [Using License Keys](/_articles/general-usage/license.md) for how to configure a license.
+
+Loading the saved searchable PDFs back into Dynamic Web TWAIN requires a [PDF Rasterizer](/_articles/info/api/Addon_PDF.md) license, which is a separate add-on.
 
 ## Online Demo
 
