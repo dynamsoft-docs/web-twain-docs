@@ -76,7 +76,7 @@ Apple.Vision may support fewer languages on an old version of macOS. The table l
 
 ## How to Use
 
-Suppose you've already have a working html file using Dynamic Web TWAIN to scan documents. For example, the [hello world demo](/_articles/hello-world/index.md). Let's add the OCR function to it with the following steps.
+Suppose you already have a working html file using Dynamic Web TWAIN to scan documents. For example, the [hello world demo](/_articles/hello-world/index.md). Let's add the OCR function to it with the following steps.
 
 ### Step One - Include the Add-on
 
@@ -93,19 +93,21 @@ Then, you can run the following to get info of the installed OCR engines and lis
 ```html
 <label>
   Engine:
-  <select id="engine" onchange="listLanguagesOfSelectedEngine();">
+  <select id="engine" onchange="listLanguagesOfSelectedEngine(this.value);">
   </select>
 </label>
 <label>
   Language:
-  <select id="language"">
+  <select id="language">
   </select>
 </label>
 <script>
+var ocrInfo;
+
 async function GetInstalledOCRInfo(){
   try {
-    let info = await DWTObject.Addon.OCRConnector.GetInstalledOCRInfo();
-    console.log(info);
+    ocrInfo = await DWTObject.Addon.OCRConnector.GetInstalledOCRInfo();
+    listEngines();
   } catch (error) {
     alert(error.message);
   }
@@ -209,7 +211,7 @@ let indicesOfAll = DWTObject.SelectAllImages();
 DWTObject.Addon.PDF.Write.Setup({
   pdfaVersion: "pdf/a-3b"
 });
-await DWTObject.Addon.OCRKit.SaveToPath(indicesOfAll,Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
+await DWTObject.Addon.OCRConnector.SaveToPath(indicesOfAll,Dynamsoft.DWT.EnumDWT_OCRConnectorOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
 ```
 
 APIs used:
@@ -266,7 +268,7 @@ Here is the complete code of the demo.
     <input type="button" value="Recognize Text" onclick="Recognize();" />
     <label>
       Engine:
-      <select id="engine" onchange="listLanguagesOfSelectedEngine();">
+      <select id="engine" onchange="listLanguagesOfSelectedEngine(this.value);">
       </select>
     </label>
     <label>
@@ -518,7 +520,7 @@ This complete code is different from the [online demo](#online-demo)'s code, whi
 
 ### Can I Limit the Region for OCR?
 
-Yes. You can specify which regions for OCR using the `rects` option of the [`recognize()`](/_articles/info/api/Addon_OCR.md#recognize) function.
+Yes. You can specify which regions for OCR using the `rects` option of the [`Recognize()`](/_articles/info/api/Addon_OCR.md#recognize) function.
 
 ### Will My Document be Uploaded to a Remote Server?
 
