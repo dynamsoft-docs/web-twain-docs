@@ -17,6 +17,9 @@ It is free to use with the core license module.
 
 Read on to learn about how to use it.
 
+> [!NOTE]
+> OCR Connector is available free of charge to all Dynamsoft Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only supports the Connector integration layer. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
+
 ## Online Demo
 
 You can visit the [online demo](https://demo.dynamsoft.com/Samples/dwt/OCR/index.html) ([source code](https://download2.dynamsoft.com/Samples/DWT/Scan-Documents-and-Do-OCR.zip)) to try it.
