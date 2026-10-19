@@ -9,21 +9,21 @@ description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
 
 # Processing PDFs
 
-In this next section, we will address all the input and output operations that allow the user to properly handle PDF files.
+In this next section, we will address all the input and output operations that allow the user to properly handle PDF files with the PDF add-on.
 
 ## Environment
 
 * Supported on [Desktop](/_articles/introduction/system-requirements.md).
 
-## Including the PDF addon 
+## Including the PDF add-on 
 
-To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder](/_articles/faq/what-are-the-resources-files.md).
+To include the PDF add-on, simply add a reference to the corresponding JavaScript file, included in the [resources folder](/_articles/faq/what-are-the-resources-files.md).
 
 ``` html
 <script src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"></script>
 ```
 
-> If you are using the [dwt package](https://www.npmjs.com/package/dwt), the pdf addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
+> If you are using the [dwt package](https://www.npmjs.com/package/dwt), the pdf add-on is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
 ## Input
 
@@ -67,11 +67,11 @@ The method [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderopti
 
 ### Save images as image-based PDFs
 
-`Dynamic Web TWAIN` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module, and no addon is required as was covered in the [output](/_articles/general-usage/image-export/index.md) section.
+`Dynamic Web TWAIN` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module, and no add-on is required as was covered in the [output](/_articles/general-usage/image-export/index.md) section.
 
 ### PDF save settings
 
-However, some advanced features are only possible with the help of the PDF addon. At present, that means configuring the resulting file(s) with the API [ `Write.Setup()` ](/_articles/info/api/Addon_PDF.md#writesetup) as shown below
+However, some advanced features are only possible with the help of the PDF add-on. At present, that means configuring the resulting file(s) with the API [ `Write.Setup()` ](/_articles/info/api/Addon_PDF.md#writesetup) as shown below
 
 ``` javascript
 DWTObject.Addon.PDF.Write.Setup({
