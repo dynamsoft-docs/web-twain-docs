@@ -13,12 +13,10 @@ description: Dynamic Web TWAIN SDK Documentation OCR Page
 
 Dynamic Web TWAIN provides an OCR add-on to extract text from scanned images. It utilizes the system's built-in OCR or a custom OCR based on ONNX runtime. All processing occurs locally on end-user devices, with no data uploaded to cloud servers.
 
-It is free to use with the core license module.
-
 Read on to learn about how to use it.
 
 > [!NOTE]
-> OCR Connector is available free of charge to all Dynamsoft Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only supports the Connector integration layer. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
+> The OCR add-on (OCR Connector) is available free of charge to all Dynamic Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only supports the integration layer. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
 
 ## Online Demo
 
@@ -93,7 +91,7 @@ Then, you can run the following to get info of the installed OCR engines and lis
 ```html
 <label>
   Engine:
-  <select id="engine" onchange="listLanguagesOfSelectedEngine();">
+  <select id="engine" onchange="listLanguagesOfSelectedEngine(this.value);">
   </select>
 </label>
 <label>
@@ -102,10 +100,11 @@ Then, you can run the following to get info of the installed OCR engines and lis
   </select>
 </label>
 <script>
+let ocrInfo;
 async function GetInstalledOCRInfo(){
   try {
-    let info = await DWTObject.Addon.OCRConnector.GetInstalledOCRInfo();
-    console.log(info);
+    ocrInfo = await DWTObject.Addon.OCRConnector.GetInstalledOCRInfo();
+    console.log(ocrInfo);
   } catch (error) {
     alert(error.message);
   }
@@ -209,7 +208,7 @@ let indicesOfAll = DWTObject.SelectAllImages();
 DWTObject.Addon.PDF.Write.Setup({
   pdfaVersion: "pdf/a-3b"
 });
-await DWTObject.Addon.OCRKit.SaveToPath(indicesOfAll,Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
+await DWTObject.Addon.OCRConnector.SaveToPath(indicesOfAll,Dynamsoft.DWT.EnumDWT_OCRConnectorOutputFormat.PDF_WITH_EXTRA_TEXTLAYER,"output.pdf");
 ```
 
 APIs used:
@@ -266,7 +265,7 @@ Here is the complete code of the demo.
     <input type="button" value="Recognize Text" onclick="Recognize();" />
     <label>
       Engine:
-      <select id="engine" onchange="listLanguagesOfSelectedEngine();">
+      <select id="engine" onchange="listLanguagesOfSelectedEngine(this.value);">
       </select>
     </label>
     <label>
@@ -307,9 +306,9 @@ Here is the complete code of the demo.
   </div>
   
   <script type="text/javascript">
-    var DWTObject;
-    var storedOCRResults = {};
-    var ocrInfo;
+    let DWTObject;
+    let storedOCRResults = {};
+    let ocrInfo;
 
     Dynamsoft.DWT.ProductKey = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; //one-day trial license
     Dynamsoft.DWT.RegisterEvent("OnWebTwainReady", function () {
@@ -386,6 +385,7 @@ Here is the complete code of the demo.
           DWTObject.Rotate(index,-result.angle,true);
         }
       }catch(error) {
+        console.log(error);
         alert(error.message);
       }
     }
@@ -438,8 +438,8 @@ Here is the complete code of the demo.
       ApplyResultDirection();
     }
 
-    var RTL_LANGUAGES = [
-      "ar", "he"
+    let RTL_LANGUAGES = [
+      "ar"
     ];
 
     function isRtlLanguage(language) {
