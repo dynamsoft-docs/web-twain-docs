@@ -11,12 +11,12 @@ description: Dynamic Web TWAIN SDK Documentation OCR Page
 
 # OCR
 
-Dynamic Web TWAIN provides an OCR add-on to extract text from scanned images. It utilizes the system's built-in OCR or a custom OCR based on ONNX runtime. All processing occurs locally on end-user devices, with no data uploaded to cloud servers.
+Dynamic Web TWAIN provides an OCR add-on (OCR Connector) to extract text from scanned images. It utilizes the system's built-in OCR or a custom OCR based on ONNX runtime. All processing occurs locally on end-user devices, with no data uploaded to cloud servers.
 
 Read on to learn about how to use it.
 
 > [!NOTE]
-> The OCR add-on (OCR Connector) is available free of charge to all Dynamic Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only supports the integration layer. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
+> OCR Connector is available free of charge to all Dynamic Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only supports the integration layer. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
 
 ## Online Demo
 
@@ -513,6 +513,22 @@ Here is the complete code of the demo.
 ```
 
 This complete code is different from the [online demo](#online-demo)'s code, which supports regional OCR. You can find the code for the online demo [here](https://download2.dynamsoft.com/Samples/DWT/Scan-Documents-and-Do-OCR.zip).
+
+## Licensing
+
+OCR Connector is license-controlled. Its availability depends on your Dynamic Web TWAIN license.
+
+### Trial License
+
+Trial licenses include access to all Dynamic Web TWAIN Core Module and add-on features, including OCR Connector, at no additional cost.
+
+### Purchased License
+
+OCR Connector is available at no additional cost to eligible Dynamic Web TWAIN Core Module customers.
+
+* Core Module v19.5 or later: OCR Connector is included in the license by default.
+* Earlier versions with an active Support & Maintenance contract: contact [sales@dynamsoft.com](mailto:sales@dynamsoft.com) or your account manager to request a free license upgrade that enables OCR Connector.
+* Earlier versions with an expired Support & Maintenance contract: contact [sales@dynamsoft.com](mailto:sales@dynamsoft.com) for a quote to upgrade to v19.5 or later.
 
 ## FAQ
 
