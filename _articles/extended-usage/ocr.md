@@ -562,7 +562,7 @@ To distinguish it from the previous add-ons, the new OCR introduced in v19.3 use
 
 ### Why Can't I Load Saved PDF Files?
 
-The saved searchable PDF contains a text layer, so it must be loaded with [PDF Rasterizer](/_articles/info/api/Addon_PDF.md). A PDF Rasterizer license is required.
+The saved searchable PDF contains a text layer, so it must be loaded with [PDF Rasterizer](/_articles/extended-usage/pdf-processing.md). A PDF Rasterizer license is required.
 
 ### Are RTL Languages Supported?
 
