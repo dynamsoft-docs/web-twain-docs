@@ -83,6 +83,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 7.  [Can I convert a color image to grayscale or black & white?](/_articles/faq/convert-color-image-to-grayscale.md)
 8.  [Is there an undo functionality?](/_articles/faq/undo-functionality.md)
 9.  [How can I remove only the selected images?](/_articles/faq/remove-selected-images.md)
+10.  [How can I erase everything outside the selected area of an image?](/_articles/faq/erase-area-outside-selection.md)
 
 ## UI Customization
 
