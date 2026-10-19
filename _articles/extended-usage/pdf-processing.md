@@ -116,8 +116,6 @@ DWTObject.SaveAllAsPDF(' ', function() {}, function() {})
 
 When you set a password prior to generating a PDF file, that password becomes necessary each time you attempt to open the file thereafter. The password does not restrict the usage permissions of the PDF. The encryption algorithm utilized is AES256, ensuring robust security measures.
 
-Note: Only the core module license is required to use this method.
-
 ## Append Pages to a PDF
 
 If you need to append a scanned document to a PDF file and keep the rest pages unmodified. You can use the following code to read a PDF file by setting the `preserveUnmodifiedOnSave` property to `true`.
@@ -169,3 +167,7 @@ Related FAQ:
 
 * [How can I generate PDF/A files?](/_articles/faq/generate-pdf-files.md)
 * [How can I load PDF/A files into the Dynamic Web TWAIN SDK?](/_articles/faq/load-pdf-files.md)
+
+## Licensing
+
+Loading a PDF file that is not pure image requires the `PDF Rasterizer` license in addition to the core module license, because the PDF must be rasterized first. Other PDF operations, such as loading image-only PDFs or saving images as PDFs, only require the core module license.
