@@ -16,7 +16,7 @@ Dynamic Web TWAIN provides an OCR add-on (OCR Connector) to extract text from sc
 Read on to learn how to use it.
 
 > [!NOTE]
-> OCR Connector is available free of charge to all Dynamic Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only supports the integration layer. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
+> OCR Connector is available free of charge to all Dynamic Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only provides support for the integration. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
 
 ## Online Demo
 
