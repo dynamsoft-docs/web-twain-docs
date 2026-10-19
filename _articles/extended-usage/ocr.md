@@ -3,32 +3,34 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamic Web TWAIN SDK Features - OCR
+title: Dynamic Web TWAIN SDK Features - OCR Connector
 keywords: Dynamic Web TWAIN, Documentation, OCR
-breadcrumbText: OCR
+breadcrumbText: OCR Connector
 description: Dynamic Web TWAIN SDK Documentation OCR Page
 ---
 
 # OCR
 
-Dynamic Web TWAIN provides an OCR add-on (OCR Connector) to extract text from scanned images. It uses the system's built-in OCR or a custom OCR engine based on ONNX Runtime. All processing occurs locally on end-user devices, with no data uploaded to cloud servers.
+Dynamic Web TWAIN provides an OCR add-on (OCR Connector) that connects to OCR engines to extract text from scanned images. It works with the system's built-in OCR or an optional engine based on ONNX Runtime. Recognition runs locally on end-user devices, and OCR Connector does not upload images or OCR results to cloud servers.
 
 Read on to learn how to use it.
 
 > [!NOTE]
-> OCR Connector is available free of charge to all Dynamic Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only provides support for the integration. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
+> OCR Connector is available at no additional cost to eligible Dynamic Web TWAIN customers (see [Licensing](#licensing)) and serves as a bridge to supported OCR engines. Please note that Dynamsoft only provides support for the integration. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
+>
+> OCR output may contain errors. Validate recognition results before relying on them, including for archival or compliance use such as PDF/A.
 
 ## Online Demo
 
 You can visit the [online demo](https://demo.dynamsoft.com/Samples/dwt/OCR/index.html) ([source code](https://download2.dynamsoft.com/Samples/DWT/Scan-Documents-and-Do-OCR.zip)) to try it.
 
-## Engines
+## Supported OCR Engines
 
 The OCR add-on supports the following engines:
 
 * Windows.Media.Ocr: The built-in OCR for Windows, available since Windows 10 (build 10240).
 * Apple.Vision: The built-in OCR for macOS, available since macOS 10.15.
-* Onnx.Ocr: A custom OCR engine based on ONNX Runtime. It provides higher accuracy for Latin-script languages and can detect page orientation. It is only supported on Windows 10 and later.
+* Onnx.Ocr: An optional OCR engine based on ONNX Runtime. It can detect page orientation. It is only supported on Windows 10 and later.
 
 ### Installation
 
@@ -36,7 +38,7 @@ Windows.Media.Ocr and Apple.Vision can be used without any extra installation. F
 
 Onnx.Ocr requires additional installation. Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it, and run the `Install.cmd` file as administrator to install the OCR package. It will copy the additional runtime and model files to the `ocr` folder of Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 
-### Supported Languages
+### Languages Reported by Each Engine
 
 | Language | Windows.Media.Ocr | Apple.Vision | Onnx.Ocr |
 | :--- | :--- | :--- | :--- |
@@ -71,6 +73,8 @@ Onnx.Ocr requires additional installation. Download [DynamicWebTWAINOCRPack.zip]
 | Cantonese | Unsupported | Supported | Unsupported |
 
 Apple.Vision may support fewer languages on an older version of macOS. The table lists the languages supported on macOS 27.
+
+Language availability depends on the engine, the operating system version, and installed language packs, and may change. Use [`GetInstalledOCRInfo()`](/_articles/info/api/Addon_OCR.md#getinstalledocrinfo) to check the languages available on a given device.
 
 ## How to Use
 
@@ -545,7 +549,7 @@ Yes. You can specify which regions to OCR using the `rects` option of the [`Reco
 
 ### Will My Document Be Uploaded to a Remote Server?
 
-No. The OCR process happens locally on your machine. No data is sent to any remote servers. We also do not collect data for AI training.
+No. OCR Connector processes images locally on your machine and does not send images or OCR results to Dynamsoft or any remote server. We also do not collect data for AI training. For how an OS-provided engine (Windows.Media.Ocr or Apple.Vision) handles data, refer to that provider's privacy terms.
 
 ### What Is a Searchable PDF?
 
