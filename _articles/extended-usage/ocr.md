@@ -564,3 +564,8 @@ To distinguish it from the previous add-ons, the new OCR introduced in v19.3 use
 
 The saved searchable PDF contains a text layer, so it must be loaded with [PDF Rasterizer](/_articles/info/api/Addon_PDF.md). A PDF Rasterizer license is required.
 
+### Are RTL Languages Supported?
+
+Yes. Arabic is the only RTL (right-to-left) language we support. Windows.Media.Ocr and Apple.Vision can recognize Arabic.
+
+For the output PDF, OCR Connector uses [ICU](https://icu.unicode.org/) for text segmentation and [HarfBuzz](https://harfbuzz.github.io/) for text shaping, so Arabic characters are correctly shaped and ordered.
