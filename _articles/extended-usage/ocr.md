@@ -11,14 +11,12 @@ description: Dynamic Web TWAIN SDK Documentation OCR Page
 
 # OCR
 
-Dynamic Web TWAIN provides an OCR add-on (OCR Connector) that connects to OCR engines to extract text from scanned images. It works with the system's built-in OCR or an optional engine based on ONNX Runtime. Recognition runs locally on end-user devices, and OCR Connector does not upload images or OCR results to cloud servers.
+Dynamic Web TWAIN provides an OCR add-on (OCR Connector) that connects to OCR engines to extract text from scanned images. It works with the system's built-in OCR or a custom engine based on ONNX Runtime. Recognition runs locally on end-user devices, and OCR Connector does not upload images or OCR results to cloud servers.
 
 Read on to learn how to use it.
 
 > [!NOTE]
 > OCR Connector is available at no additional cost to eligible Dynamic Web TWAIN customers (see [Licensing](#licensing)) and serves as a bridge to supported OCR engines. Please note that Dynamsoft only provides support for the integration. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
->
-> OCR output may contain errors. Validate recognition results before relying on them, including for archival or compliance use such as PDF/A.
 
 ## Online Demo
 
@@ -30,7 +28,7 @@ The OCR add-on supports the following engines:
 
 * Windows.Media.Ocr: The built-in OCR for Windows, available since Windows 10 (build 10240).
 * Apple.Vision: The built-in OCR for macOS, available since macOS 10.15.
-* Onnx.Ocr: An optional OCR engine based on ONNX Runtime. It can detect page orientation. It is only supported on Windows 10 and later.
+* Onnx.Ocr: A custom OCR engine based on ONNX Runtime. It can detect page orientation. It is only supported on Windows 10 and later.
 
 ### Installation
 
@@ -73,8 +71,6 @@ Onnx.Ocr requires additional installation. Download [DynamicWebTWAINOCRPack.zip]
 | Cantonese | Unsupported | Supported | Unsupported |
 
 Apple.Vision may support fewer languages on an older version of macOS. The table lists the languages supported on macOS 27.
-
-Language availability depends on the engine, the operating system version, and installed language packs, and may change. Use [`GetInstalledOCRInfo()`](/_articles/info/api/Addon_OCR.md#getinstalledocrinfo) to check the languages available on a given device.
 
 ## How to Use
 
