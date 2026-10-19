@@ -76,7 +76,7 @@ DetectPageOrientation(
 
 `index`: Index of the image to process.
 
-`settings`: Settings of the method. You can configure the accuracy mode and which OCR engine to use. Please refer to [`EnumDWT_PageOrientationDetectionMode`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_pageorientationdetectionmode). Currently, only the `Onnx.Ocr` engine supports this.
+`settings`: Settings of the method. You can configure the accuracy mode and which OCR engine to use. Please refer to [`EnumDWT_PageOrientationDetectionMode`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_pageorientationdetectionmode). Currently, only the `Onnx.Ocr` engine supports this and it is used by default if installed.
 
 **Return Values**
 
