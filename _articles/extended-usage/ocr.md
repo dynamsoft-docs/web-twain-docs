@@ -70,7 +70,7 @@ Onnx.Ocr needs extra installation. Download [DynamicWebTWAINOCRPack.zip](https:/
 | Marathi | Unsupported | Supported | Unsupported |
 | Cantonese | Unsupported | Supported | Unsupported |
 
-Apple.Vision may support fewer languages on an old version of macOS. The table lists the supported languages on macOS 26.
+Apple.Vision may support fewer languages on an old version of macOS. The table lists the supported languages on macOS 27.
 
 ## How to Use
 
