@@ -138,7 +138,7 @@ Then, it will keep the unmodified pages in the PDF file instead of converting th
 
 PDF/A is a version of PDF specialized for use in the archiving and long-term preservation of electronic documents. For example, it does not allow using external fonts, which will change the appearance if opening it on another device.
 
-Starting from Web TWAIN v19.3, it can save PDF as PDF/A-1b or PDF/A-2b by specifying `pdfaVersion` in [`PDFWSettings`](/_articles/info/api/interfaces.md#pdfwsettings).
+Starting from Web TWAIN v19.3, it can save PDF as PDF/A by specifying `pdfaVersion` in [`PDFWSettings`](/_articles/info/api/interfaces.md#pdfwsettings). The supported PDF/A standards are PDF/A-1b, PDF/A-2b and PDF/A-3b.
 
 Here is the code to do this:
 
@@ -150,15 +150,20 @@ DWTObject.IfShowFileDialog = true;
 DWTObject.SaveAllAsPDF(' ', function() {}, function() {})
 ```
 
-Both PDF/A-1b and PDF/A-2b are basic conformation level standards. PDF/A-1b is based on PDF version 1.4 and PDF/A-2b is based on PDF version 1.7. PDF/A-2b has the following new features compared to PDF/A-1b:
 
-* JPEG 2000 image compression.
-* support for transparency effects and layers.
-* embedding of OpenType fonts.
-* provisions for digital signatures in accordance with the PDF Advanced Electronic Signatures – PAdES standard.
-* the option of embedding PDF/A files to facilitate archiving of sets of documents with a single file.
+PDF/A-1b, PDF/A-2b and PDF/A-3b are basic conformance level standards. PDF/A-1b is based on PDF version 1.4, while PDF/A-2b and PDF/A-3b are based on PDF version 1.7.
 
-It is recommended to use PDF/A-2b because of the support for more features.
+| Feature | PDF/A-1b | PDF/A-2b | PDF/A-3b |
+|---------|----------|----------|----------|
+| Based on PDF version | 1.4 | 1.7 | 1.7 |
+| JPEG 2000 image compression | - | ✓ | ✓ |
+| Transparency effects and layers | - | ✓ | ✓ |
+| Embedding OpenType fonts | - | ✓ | ✓ |
+| PAdES digital signatures | - | ✓ | ✓ |
+| Embedding PDF/A files | - | ✓ | ✓ |
+| Embedding files of any format (e.g. XML) | - | - | ✓ |
+
+PDF/A-3b has all the features of PDF/A-2b and additionally allows embedding files of any format (such as XML data) as attachments. It is recommended to use PDF/A-2b because of the support for more features than PDF/A-1b, and use PDF/A-3b only if you need to attach non-PDF files.
 
 Related FAQ:
 
