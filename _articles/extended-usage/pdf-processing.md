@@ -170,4 +170,6 @@ Related FAQ:
 
 ## Licensing
 
-Loading a PDF file that is not pure image requires the `PDF Rasterizer` license in addition to the core module license, because the PDF must be rasterized first. Other PDF operations, such as loading image-only PDFs or saving images as PDFs, only require the core module license.
+PDF features are license-controlled. Loading a PDF file that is not pure image requires the `PDF Rasterizer` license in addition to the core module license, because the PDF must be rasterized first. Other PDF operations, such as loading image-only PDFs or saving images as PDFs, only require the core module license.
+
+A trial license includes all Dynamic Web TWAIN features, so you can evaluate it before purchasing. For a production license, contact [Dynamsoft Sales](https://www.dynamsoft.com/company/contact/) or your account manager.
