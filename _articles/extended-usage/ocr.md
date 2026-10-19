@@ -11,9 +11,9 @@ description: Dynamic Web TWAIN SDK Documentation OCR Page
 
 # OCR
 
-Dynamic Web TWAIN provides an OCR add-on (OCR Connector) to extract text from scanned images. It utilizes the system's built-in OCR or a custom OCR based on ONNX runtime. All processing occurs locally on end-user devices, with no data uploaded to cloud servers.
+Dynamic Web TWAIN provides an OCR add-on (OCR Connector) to extract text from scanned images. It uses the system's built-in OCR or a custom OCR engine based on ONNX Runtime. All processing occurs locally on end-user devices, with no data uploaded to cloud servers.
 
-Read on to learn about how to use it.
+Read on to learn how to use it.
 
 > [!NOTE]
 > OCR Connector is available free of charge to all Dynamic Web TWAIN customers and serves as a bridge to supported free third-party OCR engines. Please note that Dynamsoft only supports the integration layer. Technical issues related to the underlying OCR engine itself, including recognition quality and engine-specific behavior, are outside the scope of Dynamsoft technical support.
@@ -24,17 +24,17 @@ You can visit the [online demo](https://demo.dynamsoft.com/Samples/dwt/OCR/index
 
 ## Engines
 
-The OCR add-on has several engines to use.
+The OCR add-on supports the following engines:
 
-* Windows.Media.Ocr: The built-in OCR for Windows since Windows 10 10240.
-* Apple.Vision: The built-in OCR for macOS since macOS 10.15.
-* Onnx.Ocr: A custom OCR based on ONNX runtime. It provides higher latin recognition accuracy and can detect page orientations. It is only supported on Windows 10+.
+* Windows.Media.Ocr: The built-in OCR for Windows, available since Windows 10 (build 10240).
+* Apple.Vision: The built-in OCR for macOS, available since macOS 10.15.
+* Onnx.Ocr: A custom OCR engine based on ONNX Runtime. It provides higher accuracy for Latin-script languages and can detect page orientation. It is only supported on Windows 10 and later.
 
 ### Installation
 
 Windows.Media.Ocr and Apple.Vision can be used without any extra installation. For Windows.Media.Ocr, if the OCR model for a specific language does not exist by default, you need to install the language pack of that language in system settings.
 
-Onnx.Ocr needs extra installation. Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it and run `Install.cmd` file as admin to install the OCR package. It will copy extra runtime and models files to the `ocr` folder of Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
+Onnx.Ocr requires additional installation. Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it, and run the `Install.cmd` file as administrator to install the OCR package. It will copy the additional runtime and model files to the `ocr` folder of Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 
 ### Supported Languages
 
@@ -70,23 +70,23 @@ Onnx.Ocr needs extra installation. Download [DynamicWebTWAINOCRPack.zip](https:/
 | Marathi | Unsupported | Supported | Unsupported |
 | Cantonese | Unsupported | Supported | Unsupported |
 
-Apple.Vision may support fewer languages on an old version of macOS. The table lists the supported languages on macOS 27.
+Apple.Vision may support fewer languages on an older version of macOS. The table lists the languages supported on macOS 27.
 
 ## How to Use
 
-Suppose you already have a working html file using Dynamic Web TWAIN to scan documents. For example, the [hello world demo](/_articles/hello-world/index.md). Let's add the OCR function to it with the following steps.
+Suppose you already have a working HTML file using Dynamic Web TWAIN to scan documents. For example, the [hello world demo](/_articles/hello-world/index.md). Let's add OCR functionality to it with the following steps.
 
 ### Step One - Include the Add-on
 
 Reference the add-on's JavaScript with the following code.
 
-> If you are using the [npm package](https://www.npmjs.com/package/dwt), the OCR is already included in the main JavaScript file (`dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs`), which means you can skip this step.
+> If you are using the [npm package](https://www.npmjs.com/package/dwt), the OCR add-on is already included in the main JavaScript file (`dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs`), which means you can skip this step.
 
 ```html
 <script src="Resources/addon/dynamsoft.webtwain.addon.ocrconnector.js"></script>
 ```
 
-Then, you can run the following to get info of the installed OCR engines and list them in `select` elements:
+Then, you can get information about the installed OCR engines and list them in `select` elements with the following code:
 
 ```html
 <label>
@@ -105,6 +105,7 @@ async function GetInstalledOCRInfo(){
   try {
     ocrInfo = await DWTObject.Addon.OCRConnector.GetInstalledOCRInfo();
     console.log(ocrInfo);
+    listEngines();
   } catch (error) {
     alert(error.message);
   }
@@ -136,13 +137,15 @@ function listLanguagesOfSelectedEngine(engine) {
 </script>
 ```
 
+Call `GetInstalledOCRInfo()` after Dynamic Web TWAIN is initialized (for example, in the `OnWebTwainReady` event) to populate the `select` elements.
+
 APIs used:
 
 [`GetInstalledOCRInfo()`](/_articles/info/api/Addon_OCR.md#getinstalledocrinfo)
 
 ### Step Two - Detect Page Orientation
 
-This is an optional step. If the scanned document is rotated, we can detect its orientation and rotate it. The Onnx.Ocr is required for this operation.
+This is an optional step. If the scanned document is rotated, we can detect its orientation and rotate it. Onnx.Ocr is required for this operation.
 
 ```js
 async function CorrectOrientationForOne(index){
@@ -203,6 +206,8 @@ APIs used:
 
 After recognition, we can save the OCR results and images as a PDF file. It will add an invisible text layer above the original content so that the text becomes selectable and searchable. You can also specify whether to save it as PDF/A.
 
+> The PDF/A configuration uses the PDF add-on. Include `Resources/addon/dynamsoft.webtwain.addon.pdf.js` (not needed if you use the npm package), or skip the `Write.Setup()` call if you do not need PDF/A.
+
 ```js
 let indicesOfAll = DWTObject.SelectAllImages();
 DWTObject.Addon.PDF.Write.Setup({
@@ -218,7 +223,7 @@ APIs used:
 
 ### Step Five - Review the Complete Code
 
-Here is the complete code of the demo.
+Here is the complete code for the demo.
 
 ```html
 <!DOCTYPE html>
@@ -512,7 +517,7 @@ Here is the complete code of the demo.
 </html>
 ```
 
-This complete code is different from the [online demo](#online-demo)'s code, which supports regional OCR. You can find the code for the online demo [here](https://download2.dynamsoft.com/Samples/DWT/Scan-Documents-and-Do-OCR.zip).
+This code is different from the [online demo](#online-demo), which additionally supports selecting regions for OCR. You can find the online demo's code [here](https://download2.dynamsoft.com/Samples/DWT/Scan-Documents-and-Do-OCR.zip).
 
 ## Licensing
 
@@ -520,7 +525,7 @@ OCR Connector is license-controlled. Its availability depends on your Dynamic We
 
 ### Trial License
 
-Trial licenses include access to all Dynamic Web TWAIN Core Module and add-on features, including OCR Connector, at no additional cost.
+Trial licenses include access to all Dynamic Web TWAIN features, including OCR Connector, at no additional cost.
 
 ### Purchased License
 
@@ -534,28 +539,28 @@ OCR Connector is available at no additional cost to eligible Dynamic Web TWAIN C
 
 ### Can I Limit the Region for OCR?
 
-Yes. You can specify which regions for OCR using the `rects` option of the [`Recognize()`](/_articles/info/api/Addon_OCR.md#recognize) function.
+Yes. You can specify which regions to OCR using the `rects` option of the [`Recognize()`](/_articles/info/api/Addon_OCR.md#recognize) function.
 
-### Will My Document be Uploaded to a Remote Server?
+### Will My Document Be Uploaded to a Remote Server?
 
-No. The OCR process happens locally on your machine. No data is sent to any remote servers. Also, we do not collect data for training AI.
+No. The OCR process happens locally on your machine. No data is sent to any remote servers. We also do not collect data for AI training.
 
-### What is Searchable PDF?
+### What Is a Searchable PDF?
 
-A searchable PDF is a type of PDF file where the text content is recognized by a computer. This means you can use the Find function (usually Ctrl+F or Cmd+F) to search for specific words or phrases within the document, just like you would on a webpage or in a Word document. 
+A searchable PDF is a PDF file that contains a text layer, which makes its text selectable and searchable. You can use the Find function (usually Ctrl+F or Cmd+F) to search for specific words or phrases within the document, just like you would on a webpage or in a Word document.
 
 The OCR add-on supports two kinds of searchable PDF output.
 
-* Plain-text PDF, which will only keep a text layer of the OCRed text for each page.
-* Extra-text-layer PDF, which will add an extra invisible text layer of the OCRed text above each page.
+* Plain-text PDF, which contains only the OCRed text for each page.
+* Extra-text-layer PDF, which adds an invisible text layer of the OCRed text on top of the original page image.
 
-### What are OCR Basic and OCR Pro?
+### What Are OCR Basic and OCR Pro?
 
-OCR Basic and OCR Pro are previous OCR add-ons, which are deprecated in v16.2. But they are still usable in the latest version.
+OCR Basic and OCR Pro are legacy OCR add-ons that were deprecated in v16.2, but they are still usable in the latest version.
 
-To differentiate from previous versions, the new OCR added in v19.3 used `OCRKit` as the namespace and later changed `OCRKit` to `OCRConnector` in v19.5.
+To distinguish it from the previous add-ons, the new OCR introduced in v19.3 used `OCRKit` as its namespace and was renamed to `OCRConnector` in v19.5.
 
-### Why I Cannot Load Saved PDF Files
+### Why Can't I Load Saved PDF Files?
 
-The searchable PDF saved has a text layer. You need to use [PDF Rasterizer](/_articles/info/api/Addon_PDF.md) to load it. A PDF Rasterizer license is required.
+The saved searchable PDF contains a text layer, so it must be loaded with [PDF Rasterizer](/_articles/info/api/Addon_PDF.md). A PDF Rasterizer license is required.
 
