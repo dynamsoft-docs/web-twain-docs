@@ -96,7 +96,7 @@ Then, you can run the following to get info of the installed OCR engines and lis
 </label>
 <label>
   Language:
-  <select id="language"">
+  <select id="language">
   </select>
 </label>
 <script>
