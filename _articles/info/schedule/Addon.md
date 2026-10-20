@@ -317,7 +317,14 @@ Improved the performance by using persistent HTTP connection.
 
 ## OCR
 
-### OCR Kit
+### OCR Connector
+
+#### `19.5.0.0922` (10/27/2026)
+
+* Integrated the system's built-in OCR.
+* Added support for writing PDFs in more languages like Chinese and Arabic.
+
+The add-on was renamed to OCR Connector.
 
 #### `11.0.0.1028` (12/08/2025)
 
