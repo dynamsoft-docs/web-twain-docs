@@ -9,21 +9,21 @@ description: Dynamic Web TWAIN SDK Documentation Handle PDF Page
 
 # Processing PDFs
 
-In this next section, we will address all the input and output operations that allow the user to properly handle PDF files.
+In this next section, we will address all the input and output operations that allow the user to properly handle PDF files with the PDF add-on.
 
 ## Environment
 
 * Supported on [Desktop](/_articles/introduction/system-requirements.md).
 
-## Including the PDF addon 
+## Including the PDF add-on 
 
-To include the PDF addon, simply add a reference to the corresponding JavaScript file, included in the [resources folder](/_articles/faq/what-are-the-resources-files.md).
+To include the PDF add-on, simply add a reference to the corresponding JavaScript file, included in the [resources folder](/_articles/faq/what-are-the-resources-files.md).
 
 ``` html
 <script src="Resources/addon/dynamsoft.webtwain.addon.pdf.js"></script>
 ```
 
-> If you are using the [dwt package](https://www.npmjs.com/package/dwt), the pdf addon is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
+> If you are using the [dwt package](https://www.npmjs.com/package/dwt), the pdf add-on is already included in the main JavaScript file ( `dynamsoft.webtwain.min.js` or `dynamsoft.webtwain.min.mjs` ) which means you can skip this step.
 
 ## Input
 
@@ -67,11 +67,11 @@ The method [`SetReaderOptions()`](/_articles/info/api/Addon_PDF.md#setreaderopti
 
 ### Save images as image-based PDFs
 
-`Dynamic Web TWAIN` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module, and no addon is required as was covered in the [output](/_articles/general-usage/image-export/index.md) section.
+`Dynamic Web TWAIN` can output one or multiple images in the buffer as image-based PDF file(s). This feature is built into the core module, and no add-on is required as was covered in the [output](/_articles/general-usage/image-export/index.md) section.
 
 ### PDF save settings
 
-However, some advanced features are only possible with the help of the PDF addon. At present, that means configuring the resulting file(s) with the API [ `Write.Setup()` ](/_articles/info/api/Addon_PDF.md#writesetup) as shown below
+However, some advanced features are only possible with the help of the PDF add-on. At present, that means configuring the resulting file(s) with the API [ `Write.Setup()` ](/_articles/info/api/Addon_PDF.md#writesetup) as shown below
 
 ``` javascript
 DWTObject.Addon.PDF.Write.Setup({
@@ -116,8 +116,6 @@ DWTObject.SaveAllAsPDF(' ', function() {}, function() {})
 
 When you set a password prior to generating a PDF file, that password becomes necessary each time you attempt to open the file thereafter. The password does not restrict the usage permissions of the PDF. The encryption algorithm utilized is AES256, ensuring robust security measures.
 
-Note: Only the core module license is required to use this method.
-
 ## Append Pages to a PDF
 
 If you need to append a scanned document to a PDF file and keep the rest pages unmodified. You can use the following code to read a PDF file by setting the `preserveUnmodifiedOnSave` property to `true`.
@@ -138,7 +136,7 @@ Then, it will keep the unmodified pages in the PDF file instead of converting th
 
 PDF/A is a version of PDF specialized for use in the archiving and long-term preservation of electronic documents. For example, it does not allow using external fonts, which will change the appearance if opening it on another device.
 
-Starting from Web TWAIN v19.3, it can save PDF as PDF/A-1b or PDF/A-2b by specifying `pdfaVersion` in [`PDFWSettings`](/_articles/info/api/interfaces.md#pdfwsettings).
+Starting from Web TWAIN v19.3, it can save PDF as PDF/A by specifying `pdfaVersion` in [`PDFWSettings`](/_articles/info/api/interfaces.md#pdfwsettings). The supported PDF/A standards are PDF/A-1b, PDF/A-2b and PDF/A-3b.
 
 Here is the code to do this:
 
@@ -150,17 +148,28 @@ DWTObject.IfShowFileDialog = true;
 DWTObject.SaveAllAsPDF(' ', function() {}, function() {})
 ```
 
-Both PDF/A-1b and PDF/A-2b are basic conformation level standards. PDF/A-1b is based on PDF version 1.4 and PDF/A-2b is based on PDF version 1.7. PDF/A-2b has the following new features compared to PDF/A-1b:
 
-* JPEG 2000 image compression.
-* support for transparency effects and layers.
-* embedding of OpenType fonts.
-* provisions for digital signatures in accordance with the PDF Advanced Electronic Signatures – PAdES standard.
-* the option of embedding PDF/A files to facilitate archiving of sets of documents with a single file.
+PDF/A-1b, PDF/A-2b and PDF/A-3b are basic conformance level standards. PDF/A-1b is based on PDF version 1.4, while PDF/A-2b and PDF/A-3b are based on PDF version 1.7.
 
-It is recommended to use PDF/A-2b because of the support for more features.
+| Feature | PDF/A-1b | PDF/A-2b | PDF/A-3b |
+|---------|----------|----------|----------|
+| Based on PDF version | 1.4 | 1.7 | 1.7 |
+| JPEG 2000 image compression | - | ✓ | ✓ |
+| Transparency effects and layers | - | ✓ | ✓ |
+| Embedding OpenType fonts | - | ✓ | ✓ |
+| PAdES digital signatures | - | ✓ | ✓ |
+| Embedding PDF/A files | - | ✓ | ✓ |
+| Embedding files of any format (e.g. XML) | - | - | ✓ |
+
+PDF/A-3b has all the features of PDF/A-2b and additionally allows embedding files of any format (such as XML data) as attachments. It is recommended to use PDF/A-2b because of the support for more features than PDF/A-1b, and use PDF/A-3b only if you need to attach non-PDF files.
 
 Related FAQ:
 
 * [How can I generate PDF/A files?](/_articles/faq/generate-pdf-files.md)
 * [How can I load PDF/A files into the Dynamic Web TWAIN SDK?](/_articles/faq/load-pdf-files.md)
+
+## Licensing
+
+PDF features are license-controlled. Loading a PDF file that is not pure image requires the `PDF Rasterizer` license in addition to the core module license, because the PDF must be rasterized first. Other PDF operations, such as loading image-only PDFs or saving images as PDFs, only require the core module license.
+
+A trial license includes all Dynamic Web TWAIN features, so you can evaluate it before purchasing. For a production license, contact [Dynamsoft Sales](https://www.dynamsoft.com/company/contact/) or your account manager.

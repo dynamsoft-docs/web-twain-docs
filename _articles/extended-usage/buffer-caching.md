@@ -3,7 +3,6 @@ layout: default-layout
 needAutoGenerateSidebar: true
 title: Dynamic Web TWAIN SDK Guide - Buffer Caching
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamic Web TWAIN Service, caching, buffer,
-breadcrumbText: Dynamic Web TWAIN Service
 description: "Understand buffer caching in Dynamic Web TWAIN and how it improves scan performance, memory use, and document capture reliability for modern web and mobile apps"
 ---
 

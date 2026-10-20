@@ -13,6 +13,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference RESTful API
 
 This is the comprehensive reference for the Dynamic Web TWAIN RESTful API. By default, all APIs use the root URL [`https://127.0.0.1:18623/api`](https://127.0.0.1:18623/api) set by the Dynamic Web TWAIN Service. (can also use [`http://127.0.0.1:18622/api`](http://127.0.0.1:18622/api)) Read about how to alter the address along with a developer walkthrough in our [user guide](/_articles/extended-usage/restful-api.md).
 
+[**Authentication**](#authentication)
+
 [**Server Control**](#server-control)
 
 | Endpoint                                | Method  | Description                      |
@@ -55,6 +57,40 @@ This is the comprehensive reference for the Dynamic Web TWAIN RESTful API. By de
 | [`/process/read-barcode`](#post-processread-barcode) | `POST` | Read a barcode on a page scanned from a specified source |
 | [`/process/check-blank`](#post-processcheck-blank) | `POST` | Check if a page scanned from a specified source is blank |
 
+
+## Authentication
+
+By default, the Dynamic Web TWAIN Service accepts RESTful API requests without authentication. If [token validation](/_articles/extended-usage/access-token.md) is enabled for the service, every request must include an access token in the `Authorization` header:
+
+```
+Authorization: Bearer <access-token>
+```
+
+For example, get the server settings with an access token:
+
+```js
+const url = new URL("https://127.0.0.1:18623/api");
+const pathSegments = ['server'];
+url.pathname = `${url.pathname}/${pathSegments.join('/')}`;
+
+let myHeaders = new Headers();
+myHeaders.append("Authorization", "Bearer YOUR_ACCESS_TOKEN");
+
+let requestOptions = {
+   method: 'GET',
+   headers: myHeaders,
+   redirect: 'follow'
+};
+
+fetch(url, requestOptions)
+   .then(response => response.text())
+   .then(result => console.log(result))
+   .catch(error => console.log('error', error));
+```
+
+See the [Access Token](/_articles/extended-usage/access-token.md) guide for how to enable token validation and create a token. The request examples elsewhere in this reference omit the `Authorization` header for brevity; add it to every request when token validation is enabled.
+
+If the header is missing, the token is invalid or expired, the service returns `401 Unauthorized`. If the token is valid but does not have permission for the requested operation (for example, a non-admin token accessing an administrator-only setting), the service returns `403 Forbidden`. A `403` is also returned for license errors.
 
 ## Server Control
 
@@ -2344,7 +2380,7 @@ fetch(url, requestOptions)
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|`statusCode`|`number`|true|HTTP status code|HTTP status code|
+|`statusCode`|`number`|true|HTTP status code|HTTP status code. `401` is an authentication error (missing or invalid authentication); `403` is a license error or no access, e.g. a non-admin token accessing an admin resource.|
 |`code`|`number(int32)`|true|none|[Dynamic Web TWAIN Service status code](/_articles/info/api/appendix.md). `0` is the only successful code. All error codes are negative.|
 |`message`|`string`|true|none|none|
 |`cause`|`object`|false|none|If cause exists, shows the system error code and message.|

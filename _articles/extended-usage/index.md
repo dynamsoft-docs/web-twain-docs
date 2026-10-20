@@ -24,4 +24,5 @@ This set of guides builds on the fundamental features covered in the standard us
 - [OCR](./ocr.md)
 - [PDF Handling](/_articles/extended-usage/pdf-processing.md)
 - [Buffer Caching](/_articles/extended-usage/buffer-caching.md)
+- [Access Token](/_articles/extended-usage/access-token.md)
 - [Remote Scan](https://www.dynamsoft.com/remote-scan/docs/introduction/)

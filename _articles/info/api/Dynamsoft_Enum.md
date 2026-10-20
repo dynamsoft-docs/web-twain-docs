@@ -920,7 +920,7 @@ Note: The below enumeration value has been deprecated as of 18.4.
 | JSON        | 4     |
 
 
-## Dynamsoft.DWT.EnumDWT_OCRKitOutputFormat
+## Dynamsoft.DWT.EnumDWT_OCRConnectorOutputFormat
 
 | Label                      | Value |
 | :------------------------- | :---- |

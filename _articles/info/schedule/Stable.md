@@ -10,6 +10,25 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 # Stable Releases
 
+## 19.5 (10/27/2026)
+
+### Improvements
+
+* Integrated the system's built-in OCR and renamed the OCR add-on's namespace from `OCRKit` to `OCRConnector`.
+* Implemented more complete capability settings for SANE.
+* Added service access control via token.
+* Added service configuration protection via password.
+* Improved the checking of existing running services on Linux to avoid duplicate processes.
+* Updated third-party libraries to enhance security.
+
+### Bug Fixes
+
+* Fixed the support for ChromeOS.
+* Fixed the window focus issue when loading files using non-UI related APIs.
+* Fixed the processing of PNG files with unusual bit depth (e.g. 2-bit).
+* Fixed the loading of text PDFs with a domain-bound license.
+* Fixed the issue where, with ADF enabled on Linux (SANE), single-page scanning on certain scanners could cause a paper jam and return an incorrect image.
+
 ## 19.4.4 (09/22/2026) 
 
 Updated third-party libraries to enhance security.
