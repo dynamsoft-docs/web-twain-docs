@@ -12,8 +12,9 @@ description: Dynamic Web TWAIN SDK Documentation Schedule - Addon Release Page
 
 ## Recent Version Matches
 
-| Version | Service | Core | PDFR | Barcode | Camera/Webcam | OCRKit | OCRB | OCRPro | Uploader | 
+| Version | Service | Core | PDFR | Barcode | Camera/Webcam | OCRConnector | OCRB | OCRPro | Uploader | 
 |---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+| v19.5.0| 1.9.5.0922 | 19.5.0.0922 | 12.0.7.0922 | 9.6.60.1202 | N/A /19.4.0.0410 | 19.5.0.0922 | N/A | N/A | 1.9.5.0922 |
 | v19.4.4| 1.9.4.0918 | 19.4.0.0410 | 12.0.6.0918 | 9.6.60.1202 | N/A /19.4.0.0410 | 11.0.0.1028 | N/A | N/A | 1.9.4.0410 |
 | v19.4.3| 1.9.4.0728 | 19.4.0.0410 | 12.0.6.0825 | 9.6.60.1202 | N/A /19.4.0.0410 | 11.0.0.1028 | N/A | N/A | 1.9.4.0410 |
 | v19.4.2| 1.9.4.0728 | 19.4.0.0410 | 12.0.5.0728 | 9.6.60.1202 | N/A /19.4.0.0410 | 11.0.0.1028 | N/A | N/A | 1.9.4.0410 |
