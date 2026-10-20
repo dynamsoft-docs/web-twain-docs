@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamic Web TWAIN SDK Guide - Access Token
 keywords: Dynamic Web TWAIN, Documentation, Deployment, Dynamic Web TWAIN Service, access token
 description: "How to set up an access token to control the use of Dynamic Web TWAIN's APIs, including the REST API."
