@@ -36,7 +36,7 @@ Windows.Media.Ocr and Apple.Vision can be used without any extra installation. F
 
 Onnx.Ocr requires additional installation. Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it, and run the `Install.cmd` file as administrator to install the OCR package. It will copy the additional runtime and model files to the `ocr` folder of Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 
-### Languages Reported by Each Engine
+### Supported Languages Declared by Each Engine
 
 | Language | Windows.Media.Ocr | Apple.Vision | Onnx.Ocr |
 | :--- | :--- | :--- | :--- |
