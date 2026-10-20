@@ -9,7 +9,7 @@ breadcrumbText: OCR Connector
 description: Dynamic Web TWAIN SDK Documentation OCR Page
 ---
 
-# OCR
+# OCR Connector
 
 Dynamic Web TWAIN provides an OCR add-on (OCR Connector) that connects to OCR engines to extract text from scanned images. It works with the system's built-in OCR or a custom engine based on ONNX Runtime. Recognition runs locally on end-user devices, and OCR Connector does not upload images or OCR results to cloud servers.
 
