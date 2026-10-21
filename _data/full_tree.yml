@@ -92,6 +92,7 @@ tree_list:
       path: /extended-usage/access-token.html
     - name: Remote Scan
       path: https://www.dynamsoft.com/remote-scan/docs/introduction/
+      isTargetBlank: true
 
   # - name: Existing section
   #   isCategory: true
