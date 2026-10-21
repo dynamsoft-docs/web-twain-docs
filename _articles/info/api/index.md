@@ -39,7 +39,7 @@ breadcrumbText: API Reference
 | [`AutoLoad`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#autoload) | [`Containers`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#containers) | [`CustomizableDisplayInfo`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#customizabledisplayinfo) | [`DeviceFriendlyName`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#devicefriendlyname) |
 | [`EnableLocalNetworkMixedContent`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#enablelocalnetworkmixedcontent) | [`Host`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#host) | [`IfAddMD5InUploadHeader`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifconfinemaskwithintheviewer) |
 | [`JSVersion`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#jsversion) | [`ProductKey`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#productkey) | [`ResourcesPath`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#resourcespath) | [`ServiceInstallerLocation`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#serviceinstallerlocation) |
-| [`UseDefaultViewer`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#usedefaultviewer) | [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifalwaysfocusonpopupwindow) | |
+| [`UseDefaultViewer`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#usedefaultviewer) | [`IfCheckCORS`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#ifalwaysfocusonpopupwindow) | [`Token`](/_articles/info/api/Dynamsoft_WebTwainEnv.md#token) |
 
 ### Events
 

@@ -23,7 +23,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Global APIs Page
 | [`AutoLoad`](#autoload) | [`Containers`](#containers) | [`CustomizableDisplayInfo`](#customizabledisplayinfo) | [`DeviceFriendlyName`](#devicefriendlyname) |
 | [`EnableLocalNetworkMixedContent`](#enablelocalnetworkmixedcontent) | [`Host`](#host) | [`IfAddMD5InUploadHeader`](#ifaddmd5inuploadheader) | [`IfConfineMaskWithinTheViewer`](#ifconfinemaskwithintheviewer) |
 | [`JSVersion`](#jsversion) | [`ProductKey`](#productkey) | [`ResourcesPath`](#resourcespath) | [`ServiceInstallerLocation`](#serviceinstallerlocation) |
-| [`UseDefaultViewer`](#usedefaultviewer) | [`IfCheckCORS`](#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](#ifalwaysfocusonpopupwindow) | |
+| [`UseDefaultViewer`](#usedefaultviewer) | [`IfCheckCORS`](#ifcheckcors) | [`IfAlwaysFocusOnPopupWindow`](#ifalwaysfocusonpopupwindow) | [`Token`](#token) |
 
 **Events**
 
@@ -1218,6 +1218,38 @@ IfAlwaysFocusOnPopupWindow: boolean;
 - When set to `true`, the scanner-related UI and load/save UI will always be displayed in the foreground.
 
 - When set to `false`, the scanner-related UI and load/save UI will initially be displayed in the foreground, but by switching focus, they can be moved to the background behind the browser page.
+
+---
+
+## Token
+
+Set the access token if token authentication is enabled ([guide](/_articles/extended-usage/access-token.md)).
+
+**Syntax**
+
+```typescript
+Token: string;
+```
+
+**Availability**
+
+<div class="availability">
+<table>
+
+<tr>
+<td align="center">Windows</td>
+<td align="center">macOS</td>
+<td align="center">Linux</td>
+</tr>
+
+<tr>
+<td align="center">v19.5+</td>
+<td align="center">v19.5+</td>
+<td align="center">v19.5+</td>
+</tr>
+
+</table>
+</div>
 
 ---
 
