@@ -26,9 +26,11 @@ You can visit the [online demo](https://demo.dynamsoft.com/Samples/dwt/OCR/index
 
 The OCR add-on supports the following engines:
 
-* Windows.Media.Ocr: The built-in OCR for Windows, available since Windows 10 (build 10240).
-* Apple.Vision: The built-in OCR for macOS, available since macOS 10.15.
-* Onnx.Ocr: A custom OCR engine based on ONNX Runtime. It can detect page orientation. It is only supported on Windows 10 and later.
+| Engine | Description |
+| :--- | :--- |
+| Windows.Media.Ocr | The built-in OCR for Windows, available since Windows 10 (build 10240). |
+| Apple.Vision | The built-in OCR for macOS, available since macOS 10.15. |
+| Onnx.Ocr | A custom OCR engine based on ONNX Runtime. It can detect page orientation. It is only supported on Windows 10 and later. |
 
 ### Installation
 
