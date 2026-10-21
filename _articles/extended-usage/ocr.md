@@ -28,15 +28,15 @@ The OCR add-on supports the following engines:
 
 | Engine | Description |
 | :--- | :--- |
-| Windows.Media.Ocr | The built-in OCR for Windows, available since Windows 10 (build 10240). |
-| Apple.Vision | The built-in OCR for macOS, available since macOS 10.15. |
-| Onnx.Ocr | A custom OCR engine based on ONNX Runtime. It can detect page orientation. It is only supported on Windows 10 and later. |
+| `Windows.Media.Ocr` | The built-in OCR for Windows, available since Windows 10 (build 10240). |
+| `Apple.Vision` | The built-in OCR for macOS, available since macOS 10.15. |
+| `Onnx.Ocr` | A custom OCR engine based on ONNX Runtime. It can detect page orientation. It is only supported on Windows 10 and later. |
 
 ### Installation
 
-Windows.Media.Ocr and Apple.Vision can be used without any extra installation. For Windows.Media.Ocr, if the OCR model for a specific language does not exist by default, you need to install the language pack of that language in system settings.
+`Windows.Media.Ocr` and `Apple.Vision` can be used without any extra installation. For `Windows.Media.Ocr`, if the OCR model for a specific language does not exist by default, you need to install the language pack of that language in system settings.
 
-Onnx.Ocr requires additional installation. Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it, and run the `Install.cmd` file as administrator to install the OCR package. It will copy the additional runtime and model files to the `ocr` folder of Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
+`Onnx.Ocr` requires additional installation. Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it, and run the `Install.cmd` file as administrator to install the OCR package. It will copy the additional runtime and model files to the `ocr` folder of Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 
 ### Supported Languages Declared by Each Engine
 
@@ -72,7 +72,7 @@ Onnx.Ocr requires additional installation. Download [DynamicWebTWAINOCRPack.zip]
 | Marathi | Unsupported | Supported | Unsupported |
 | Cantonese | Unsupported | Supported | Unsupported |
 
-Apple.Vision may support fewer languages on an older version of macOS. The table lists the languages supported on macOS 27.
+`Apple.Vision` may support fewer languages on an older version of macOS. The table lists the languages supported on macOS 27.
 
 ## How to Use
 
@@ -547,7 +547,7 @@ Yes. You can specify which regions to OCR using the `rects` option of the [`Reco
 
 ### Will My Document Be Uploaded to a Remote Server?
 
-No. OCR Connector processes images locally on your machine and does not send images or OCR results to Dynamsoft or any remote server. We also do not collect data for AI training. For how an OS-provided engine (Windows.Media.Ocr or Apple.Vision) handles data, refer to that provider's privacy terms.
+No. OCR Connector processes images locally on your machine and does not send images or OCR results to Dynamsoft or any remote server. We also do not collect data for AI training. For how an OS-provided engine (`Windows.Media.Ocr` or `Apple.Vision`) handles data, refer to that provider's privacy terms.
 
 ### What Is a Searchable PDF?
 
