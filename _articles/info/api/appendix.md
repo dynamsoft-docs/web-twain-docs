@@ -57,6 +57,9 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2007 | The system is busy, some operations are not completed. Please try later |
 |-2120 | No plugin libraries found in the configured engine directory. \| The engine not available for action 'xxx'. \| No engine available. \| Engine 'xxx' not found. \| The specified engine does not support this action. |
 |-2137 | Cross-Origin Resource Sharing (CORS) policy is blocking the access. Please contact the Administrator to configure 'Access-Control-Allow-Origin'.|
+|-2139 | The token has expired. |
+|-2140 | The token is invalid. |
+|-2142 | The token is missing, or the requested service module version does not support token setting. The current security setting requires a token. |
 |-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website \| The installed Dynamic Web TWAIN Service (old version) is incompatible with the JavaScript version x.x.x used on this website. \| The installed Dynamic Web TWAIN Service (version x.x.x) is incompatible with the JavaScript version x.x.x used on this website. |
 |-2208 | The connection with the local Dynamic Web TWAIN Service encountered a problem and has been reset |
 |-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
