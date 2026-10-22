@@ -106,7 +106,7 @@ Promise of an object of the orientation detection result. Please refer to [`Enum
 
 ## Recognize()
 
-Recognize the text in one page.
+Recognize the text in one page. You can specify the engine and the language; their values can be retrieved via [`GetInstalledOCRInfo`](#getinstalledocrinfo)
 
 **Syntax**
 
@@ -140,7 +140,7 @@ Recognize(
 
 * `engine`: The OCR engine to use.
 * `settings`: Settings of the recognition.
-  * `language`: Specify the code of language for recognition (`en`, `fr`, e.g.). See the table below listing supported languages.
+  * `language`: Specify the code of language for recognition. See [the table](/_articles/extended-usage/ocr.md) to learn about supported languages.
   * `pageOrientation`: Specify the orientation of the page. The OCR will rotate the page before recognition. Please refer to [`EnumDWT_PageOrientation`](/_articles/info/api/Dynamsoft_Enum.md#dynamsoftdwtenumdwt_pageorientation).
   * `recognitionLevel`: Specify the recognition level for the OCR. It is only valid for macOS.
 * `rects`: An array of rectangles to limit the regions for recognition.
