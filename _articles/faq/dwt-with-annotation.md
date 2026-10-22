@@ -18,7 +18,7 @@ In this sample, we create a **headless** DWT instance to scan images, and then p
 
 ![Flow chart for Dynamic Web TWAIN with Annotations – Hello World](/assets/imgs/dwt-with-ddv.jpg)
 
-- Check out [HelloWorld](https://demo.dynamsoft.com/Samples/dwt/web-twian-document-viewer/index.html) online
+- Check out [HelloWorld](https://demo.dynamsoft.com/Samples/dwt/web-twain-document-viewer/index.html) online
 
 ## 1. Add Dependencies
 
