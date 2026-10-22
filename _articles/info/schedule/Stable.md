@@ -15,6 +15,7 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 ### Improvements
 
 * Integrated the system's built-in OCR and renamed the OCR add-on's namespace from `OCRKit` to `OCRConnector`.
+* Extended the OCR add-on to macOS (previously Windows only).
 * Implemented more complete capability settings for SANE.
 * Added service access control via [token](/_articles/extended-usage/access-token.md).
 * Added service configuration protection via [password](/_articles/extended-usage/access-token.md#access-to-the-configuration-page).
