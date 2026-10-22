@@ -40,7 +40,7 @@ npm install
 ```
 
 ``` cmd
-npm install dwt@19.4.1 ncp
+npm install dwt@19.5.0 ncp
 ```
 
 > `ncp` is used to copy static resources files.
