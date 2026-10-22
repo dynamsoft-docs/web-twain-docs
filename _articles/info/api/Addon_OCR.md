@@ -95,7 +95,7 @@ Promise of an object of the orientation detection result. Please refer to [`Enum
 
 <tr>
 <td align="center">v19.3+ </td>
-<td align="center">v19.5+ </td>
+<td align="center">not supported</td>
 <td align="center">not supported</td>
 </tr>
 
