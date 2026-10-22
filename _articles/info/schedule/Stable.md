@@ -16,8 +16,8 @@ description: Dynamic Web TWAIN SDK Documentation Schedule Stable Release Page
 
 * Integrated the system's built-in OCR and renamed the OCR add-on's namespace from `OCRKit` to `OCRConnector`.
 * Implemented more complete capability settings for SANE.
-* Added service access control via token.
-* Added service configuration protection via password.
+* Added service access control via [token](/_articles/extended-usage/access-token.md).
+* Added service configuration protection via [password](/_articles/extended-usage/access-token.md#access-to-the-configuration-page).
 * Improved the checking of existing running services on Linux to avoid duplicate processes.
 * Updated third-party libraries to enhance security.
 
