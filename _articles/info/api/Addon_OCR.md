@@ -106,7 +106,7 @@ Promise of an object of the orientation detection result. Please refer to [`Enum
 
 ## Recognize()
 
-Recognize the text in one page. You can specify the engine and the language; their values can be retrieved via [`GetInstalledOCRInfo`](#getinstalledocrinfo)
+Recognize the text in one page. You can specify the engine and the language; their values can be retrieved via [`GetInstalledOCRInfo()`](#getinstalledocrinfo).
 
 **Syntax**
 
