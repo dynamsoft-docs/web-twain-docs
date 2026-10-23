@@ -54,6 +54,18 @@ The OCR add-on supports the following engines:
 | Norwegian | Supported | Supported | Unsupported |
 | Finnish | Supported | Supported | Unsupported |
 | Danish | Supported | Supported | Unsupported |
+| Swedish | Supported | Supported | Unsupported |
+| Romanian | Supported | Supported | Unsupported |
+| Turkish | Supported | Supported | Unsupported |
+| Bulgarian | Supported | Unsupported | Unsupported |
+| Croatian | Supported | Unsupported | Unsupported |
+| Greek | Supported | Unsupported | Unsupported |
+| Hungarian | Supported | Unsupported | Unsupported |
+| Slovak | Supported | Unsupported | Unsupported |
+| Slovenian | Supported | Unsupported | Unsupported |
+| Serbian (Cyrillic) | Supported | Unsupported | Unsupported |
+| Serbian (Latin) | Supported | Unsupported | Unsupported |
+| Bosnian (Latin) | Supported | Unsupported | Unsupported |
 | Simplified Chinese | Supported | Supported | Unsupported |
 | Traditional Chinese | Supported | Supported | Unsupported |
 | Japanese | Supported | Supported | Unsupported |
@@ -63,11 +75,8 @@ The OCR add-on supports the following engines:
 | Ukrainian | Unsupported | Supported | Unsupported |
 | Thai | Unsupported | Supported | Unsupported |
 | Vietnamese | Unsupported | Supported | Unsupported |
-| Turkish | Unsupported | Supported | Unsupported |
 | Indonesian | Unsupported | Supported | Unsupported |
 | Malay | Unsupported | Supported | Unsupported |
-| Romanian | Unsupported | Supported | Unsupported |
-| Swedish | Unsupported | Supported | Unsupported |
 | Hindi | Unsupported | Supported | Unsupported |
 | Marathi | Unsupported | Supported | Unsupported |
 | Cantonese | Unsupported | Supported | Unsupported |
