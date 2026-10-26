@@ -691,17 +691,21 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <table>
 
 <tr>
-<td align="center">Windows</td>
+<td align="center">Windows/TWAIN</td>
+<td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">Linux</td>
+<td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
 <td align="center">v16.1+</td>
+<td align="center">v18.2+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -905,8 +909,8 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -914,8 +918,8 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 <td align="center">v18.5+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
-<td align="center">v18.5+</td>
 <td align="center">v15.1+</td>
+<td align="center">v18.5+</td>
 </tr>
 
 </table>
@@ -3933,8 +3937,8 @@ getCapabilities(
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -3942,8 +3946,8 @@ getCapabilities(
 <td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">v18.2+</td>
 <td align="center">v18.5+</td>
+<td align="center">v18.2+</td>
 </tr>
 </table>
 </div>
@@ -3986,8 +3990,8 @@ Please refer to [`Capabilities`](/_articles/info/api/interfaces.md#capabilities)
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -3995,8 +3999,8 @@ Please refer to [`Capabilities`](/_articles/info/api/interfaces.md#capabilities)
 <td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
-<td align="center">v18.2+</td>
 <td align="center">v18.5+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4106,8 +4110,8 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -4115,8 +4119,8 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4162,8 +4166,8 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -4171,8 +4175,8 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4206,8 +4210,8 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -4215,8 +4219,8 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
