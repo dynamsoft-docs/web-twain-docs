@@ -23,6 +23,12 @@ It can control the access via the JavaScript library and the REST APIs. Currentl
       "C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service 19\DynamicWebTWAINService.exe" Config --init 
       ```
 
+      The password must be at least 8 characters long and include:
+
+      - At least one uppercase letter
+      - At least one lowercase letter
+      - At least one specical character
+
    2. Enable token validation.
 
       ```
