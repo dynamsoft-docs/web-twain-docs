@@ -68,7 +68,7 @@ Run the following to change the password.
 
 ## Access to the Configuration Page
 
-When the password is enabled, you need to enter the password to access <https://127.0.0.1:18623/>. Check the steps above to learn how to enable and disable the password.
+When the password is enabled, you need to enter the password to access <https://127.0.0.1:18625/>. Check the steps above to learn how to enable and disable the password.
 
 
 
