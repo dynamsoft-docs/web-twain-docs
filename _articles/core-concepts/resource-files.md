@@ -27,6 +27,7 @@ Resources
 ├─addon
 │      dynamsoft.upload.js
 │      dynamsoft.webtwain.addon.barcodereader.js
+│      dynamsoft.webtwain.addon.ocrconnector.js
 │      dynamsoft.webtwain.addon.pdf.js
 │      dynamsoft.webtwain.addon.webcam.js
 │
@@ -60,7 +61,6 @@ dwt
     │  dynamsoft.webtwain.min.mjs
     │
     ├─dist
-    │      DynamicWebTWAINServiceSetup-arm64.deb
     │      DynamicWebTWAINServiceSetup.deb
     │      DynamicWebTWAINServiceSetup.msi
     │      DynamicWebTWAINServiceSetup.pkg
@@ -76,7 +76,7 @@ dwt
     └─types
             Addon.BarcodeReader.d.ts
             Addon.OCR.d.ts
-            Addon.OCRKit.d.ts
+            Addon.OCRConnector.d.ts
             Addon.OCRPro.d.ts
             Addon.PDF.d.ts
             Addon.Webcam.d.ts
