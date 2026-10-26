@@ -33,68 +33,30 @@ Starting from v19.4, the Dynamic Web TWAIN Service installer on **Windows, macOS
 > [!NOTE]
 > The bundled 18.x version depends on the 19.4.x release you install.
 
-You only need to copy resources by hand (see [instructions](#instructions-for-setting-up-cross-major-version-support) below) if:
+### Supporting older major versions
+
+**Windows**
+
+You can copy resources by hand (see [instructions](#instructions-for-setting-up-cross-major-version-support-windows-only) below) if:
 - you need to support a version older than 18.x (for example, 17.x alongside 19.4), or
 - your newer service is v19.0 - v19.3, which does not include the 18.x resources.
 
-### Platform-specific limitations
+**macOS and Linux**
 
-**Windows and Linux**
-
-You can copy the older resources into the newer service. Unlike macOS, there is no Universal/Intel installer split that blocks this. On Linux, the older and newer services must be built for the same CPU architecture (x64, ARM64 or MIPS64EL), because the library files of one architecture cannot be loaded by a service built for another.
-
-**macOS**
-
-Whether you can copy the older resources depends on which macOS installer you use. See [macOS Rosetta Discontinuation and Dynamic Web TWAIN Service](/_articles/faq/mac-rosetta-discontinuation.md) for background.
-
-| macOS installer | Built-in 18.x support | Can use copied resources from older versions |
-|---|---|---|
-| Universal installer (standard installer since v19.4) | Yes | **No.** The Universal service runs natively on Apple Silicon and cannot load the Intel-only resources of older versions. |
-| Intel-only installer (available separately on the [GitHub releases page](https://github.com/Dynamsoft/Dynamic-Web-TWAIN/releases)) | Yes | Possible, but not verified for every older version. Test before deploying. |
+On macOS and Linux, copying the resources of an older service into a newer service is **not supported**. Use a v19.4+ service, which supports applications using either 19.x or 18.x through the bundled 18.x resources.
 
 > [!IMPORTANT]
-> On Apple Silicon Macs, the Intel-only service needs Rosetta. Rosetta is removed in macOS 28. **From macOS 28 on Apple Silicon Macs, only the Universal service runs, so only applications using 19.x and the bundled 18.x are supported.** You cannot run an older version alongside them.
+> On macOS and Linux, you cannot run applications using Dynamic Web TWAIN 19.x and 17.x (or older) on the same computer.
 
-> [!WARNING]
-> The Intel-only service cannot detect Universal TWAIN drivers. Use it only if you need to support versions older than 18.x, or if your scanner only has an Intel TWAIN driver.
+> [!NOTE]
+> The Barcode Reader add-on is supported on macOS and Linux starting from v18.0.
 
-**Barcode Reader add-on on macOS and Linux**
-
-Before v18.0, the Barcode Reader add-on was not supported on macOS or Linux. If you copy 17.x or older resources on these platforms, there is no barcode reader library to copy. Barcode reading will not be available to applications using those versions.
-
-### Instructions for setting up cross major version support
-
-<div class="multi-panel-switching-prefix"></div>
-
-- [Windows](#windows)
-- [macOS / Linux](#maclinux)
-
-<div class="multi-panel-start"></div>
+### Instructions for setting up cross major version support (Windows only)
 
 1. Install the _older_ version of Dynamic Web TWAIN Service (also called "Dynamsoft Service").
 2. Copy the .dll files from `C:\Windows\SysWOW64\Dynamsoft\DynamsoftServicex64_{version number}\` to a temporary location. For the list of .dll files you are required to copy, please refer to the [list below](#list-of-required-dll-files-windows).
 3. Install the _newer_ version of the Dynamic Web TWAIN Service.
 4. Copy the .dll files from your temporary location into the _new_ Dynamic Web TWAIN Service folder (from v19.0+, the target path is `C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN Service {version number}`).
-
-<div class="multi-panel-end"></div>
-
-<div class="multi-panel-start"></div>
-
-1. Install the _older_ version of Dynamic Web TWAIN Service (also called "Dynamsoft Service").
-2. Copy the version-specific library files of the older service to a temporary location. The older service is installed in:
-   - macOS: `/Applications/Dynamsoft/DynamsoftServicex64_{version number}/{installed version No.}`
-   - Linux: `/opt/dynamsoft/DynamsoftService`
-3. Install the _newer_ version of the Dynamic Web TWAIN Service. On macOS, use the **Intel-only** installer (see [Platform-specific limitations](#platform-specific-limitations) above).
-4. Copy the library files from your temporary location into the _new_ Dynamic Web TWAIN Service folder:
-   - macOS: `/Users/{username}/Applications/Dynamsoft/Dynamic Web TWAIN Service {version number}`
-   - Linux: `/opt/dynamsoft/Dynamic Web TWAIN Service {version number}`
-
-> [!NOTE]
-> We do not publish exact file lists for macOS and Linux. Use the [Windows list](#list-of-required-dll-files-windows) to see which components to copy, such as the core `dwt` library, the PDF rasterizer libraries, the `DWASManager` and the upload module. On macOS, these files have the `.dylib` extension, and on Linux, `.so`. Leave out the barcode reader library (`dbr`) for versions below 18.0. Test the setup on a target machine before deploying it to end users.
-
-<div class="multi-panel-end"></div>
-
-<div class="multi-panel-switching-end"></div>
 
 ### List of required .dll files (Windows)
 
