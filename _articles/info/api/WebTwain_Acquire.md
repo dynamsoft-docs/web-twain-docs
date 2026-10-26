@@ -3948,7 +3948,7 @@ getCapabilities(
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
-<td align="center">v19.5+</td>
+<td align="center">v18.5+</td>
 </tr>
 </table>
 </div>
@@ -4001,7 +4001,7 @@ Please refer to [`Capabilities`](/_articles/info/api/interfaces.md#capabilities)
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
 <td align="center">v18.2+</td>
-<td align="center">v19.5+</td>
+<td align="center">v18.5+</td>
 </tr>
 
 </table>
