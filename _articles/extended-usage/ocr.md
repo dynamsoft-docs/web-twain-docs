@@ -161,7 +161,7 @@ This is an optional step. If the scanned document is rotated, we can detect its 
 ```js
 async function CorrectOrientationForOne(index){
   let engine = document.getElementById("engine").value;
-  let result = await DWTObject.Addon.OCRConnector.DetectPageOrientation(index,{engine:engine});
+  let result = await DWTObject.Addon.OCRConnector.DetectPageOrientation(index,{engine:{name:engine}});
   if (result.angle != 0) {
     DWTObject.Rotate(index,-result.angle,true);
   }
@@ -397,7 +397,7 @@ Here is the complete code for the demo.
     async function CorrectOrientationForOne(index){
       try {
         let engine = document.getElementById("engine").value;
-        let result = await DWTObject.Addon.OCRConnector.DetectPageOrientation(index,{engine:engine});
+        let result = await DWTObject.Addon.OCRConnector.DetectPageOrientation(index,{engine:{name:engine}});
         console.log(result);
         if (result.angle != 0) {
           DWTObject.Rotate(index,-result.angle,true);
