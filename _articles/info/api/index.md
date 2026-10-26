@@ -183,7 +183,7 @@ breadcrumbText: API Reference
 | [`OpenSource()`](/_articles/info/api/WebTwain_Acquire.md#opensource)                 | [`OpenSourceAsync()`](/_articles/info/api/WebTwain_Acquire.md#opensourceasync)         | [`EnableSourceUI()`](/_articles/info/api/WebTwain_Acquire.md#enablesourceui)                     | [`EnableSource()`](/_articles/info/api/WebTwain_Acquire.md#enablesource)                 |
 | [`AcquireImage()`](/_articles/info/api/WebTwain_Acquire.md#acquireimage)             | [`startScan()`](/_articles/info/api/WebTwain_Acquire.md#startscan)                     | [`DisableSource()`](/_articles/info/api/WebTwain_Acquire.md#disablesource)                       | [`CloseSource()`](/_articles/info/api/WebTwain_Acquire.md#closesource)                   |
 | [`CloseSourceAsync()`](/_articles/info/api/WebTwain_Acquire.md#closesourceasync)     | [`CloseWorkingProcess()`](/_articles/info/api/WebTwain_Acquire.md#closeworkingprocess) | [`GetDevicesAsync()`](/_articles/info/api/WebTwain_Acquire.md#getdevicesasync)                   | [`SelectDeviceAsync()`](/_articles/info/api/WebTwain_Acquire.md#selectdeviceasync)       |
-| [`AcquireImageAsync()`](/_articles/info/api/WebTwain_Acquire.md#acquireimageasync)   |
+| [`AcquireImageAsync()`](/_articles/info/api/WebTwain_Acquire.md#acquireimageasync)   | [`getCapabilities()`](/_articles/info/api/WebTwain_Acquire.md#getcapabilities)         | [`setCapabilities()`](/_articles/info/api/WebTwain_Acquire.md#setcapabilities)                   |                                                                                         |
 
 <!--
 * [`GetSourceNameItems()`](/_articles/info/api/WebTwain_Acquire.md#getsourcenameitems)
@@ -235,12 +235,6 @@ breadcrumbText: API Reference
 * [`OnPreAllTransfers`](/_articles/info/api/WebTwain_Acquire.md#onprealltransfers)
 * [`OnPreTransfer`](/_articles/info/api/WebTwain_Acquire.md#onpretransfer)
 -->
-
-> The following APIs are compatible with TWAIN and ICA
-
-### Methods
-
-|[`getCapabilities()`](/_articles/info/api/WebTwain_Acquire.md#getcapabilities) | [`setCapabilities()`](/_articles/info/api/WebTwain_Acquire.md#setcapabilities)|
 
 > The following APIs are compatible with TWAIN (mostly Windows, but could also be macOS)
 
