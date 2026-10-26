@@ -22,7 +22,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | [`OpenSourceAsync()`](#opensourceasync)           | [`EnableSourceUI()`](#enablesourceui)           | [`EnableSource()`](#enablesource)                         | [`AcquireImage()`](#acquireimage)           |
 | [`AcquireImageAsync()`](#acquireimageasync)       | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       | [`CloseSource()`](#closesource)             |
 | [`CloseSourceAsync()`](#closesourceasync)         | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)                   | [`SelectDeviceAsync()`](#selectdeviceasync) |
-| [`SetOpenSourceTimeout()`](#setopensourcetimeout) |
+| [`SetOpenSourceTimeout()`](#setopensourcetimeout) | [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
 
 **Properties**
 
@@ -38,14 +38,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 
 
-**2. The following APIs are compatible with TWAIN and ICA** 
-
-**Methods**
-
-
-| [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
-
-**3. The following APIs are compatible with TWAIN (mostly Windows, but also possibly macOS)** 
+**2. The following APIs are compatible with TWAIN (mostly Windows, but also possibly macOS)** 
 
 **Methods**
 
