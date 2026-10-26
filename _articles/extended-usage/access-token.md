@@ -27,7 +27,7 @@ It can control the access via the JavaScript library and the REST APIs. Currentl
 
       - At least one uppercase letter
       - At least one lowercase letter
-      - At least one specical character
+      - At least one special character
 
    2. Enable token validation.
 
