@@ -14,6 +14,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 **1. The following APIs are compatible with TWAIN, ICA, and SANE (Windows, macOS and Linux)** 
 
+> WIA and eSCL scanners are only supported through the device APIs, which start with [`GetDevicesAsync()`](#getdevicesasync) — for example [`SelectDeviceAsync()`](#selectdeviceasync) and [`AcquireImageAsync()`](#acquireimageasync). The source-name based APIs, such as [`GetSourceNames()`](#getsourcenames) and [`SelectSource()`](#selectsource), do not include WIA or eSCL devices.
+
 **Methods**
 
 
