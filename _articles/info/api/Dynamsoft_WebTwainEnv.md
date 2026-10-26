@@ -1244,8 +1244,8 @@ Token: string;
 
 <tr>
 <td align="center">v19.5+</td>
-<td align="center">v19.5+</td>
-<td align="center">v19.5+</td>
+<td align="center">not supported</td>
+<td align="center">not supported</td>
 </tr>
 
 </table>
