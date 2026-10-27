@@ -705,7 +705,7 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
-<td align="center">v18.2+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -4120,7 +4120,7 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -4176,7 +4176,7 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
@@ -4220,7 +4220,7 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
+<td align="center">v18.0+</td>
 </tr>
 
 </table>
