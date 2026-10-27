@@ -1709,14 +1709,18 @@ The info of the installed OCR add-on.
 **Syntax**
 
 ```ts
-interface OCRInfo {
-  version: string;     
-}
+interface OCRInfo {     
+  version: string;    
+  engines: { // Added in 19.5 with the following supported engines: Windows.Media.Ocr, Onnx.Ocr and Apple.Vision
+     name: string;
+     languages: string[]; //Supported languages
+  }[];
+} 
 ```
 
 ### OCRResult
 
-The OCR result of one page. If the page is rotated, the geometry will be based on the orientation-corrected version.
+The OCR result of one page.
 
 **Syntax**
 
@@ -1724,14 +1728,16 @@ The OCR result of one page. If the page is rotated, the geometry will be based o
 interface OCRResult {     
   imageID: string;     
   dimensions: {width: number; height: number};  
-  orientation: {value: number; confidence: number};  
+  orientation: {value: number; confidence?: number};  // only the ONNX OCR has the confidence value
   blocks:{ 
     geometry: {left: number; top: number; right: number; bottom: number}; 
     lines: { 
+      value?: string,  // only macOS's OCR and Windows's OCR have this value
+      confidence?: number, // only macOS's OCR has this value
       geometry: {left: number; top: number; right: number; bottom: number}; 
       words?:{ 
         value: string;  
-        confidence: number;
+        confidence?: number;  // only macOS's OCR and the ONNX OCR have this value
         geometry: {left: number; top: number; right: number; bottom: number}; 
       }[];
     }[];	 

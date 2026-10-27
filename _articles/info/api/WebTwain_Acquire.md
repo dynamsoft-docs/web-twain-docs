@@ -14,6 +14,8 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 **1. The following APIs are compatible with TWAIN, ICA, and SANE (Windows, macOS and Linux)** 
 
+> WIA and eSCL scanners are supported through the newer device and async APIs, such as [`GetDevicesAsync()`](#getdevicesasync), [`SelectDeviceAsync()`](#selectdeviceasync), [`SelectSourceAsync()`](#selectsourceasync), [`AcquireImageAsync()`](#acquireimageasync), [`startScan()`](#startscan), [`getCapabilities()`](#getcapabilities) and [`setCapabilities()`](#setcapabilities). The older APIs they replace, such as [`GetSourceNames()`](#getsourcenames), [`SelectSourceByIndex()`](#selectsourcebyindex) and [`AcquireImage()`](#acquireimage), only work with TWAIN/ICA/SANE devices.
+
 **Methods**
 
 
@@ -22,7 +24,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 | [`OpenSourceAsync()`](#opensourceasync)           | [`EnableSourceUI()`](#enablesourceui)           | [`EnableSource()`](#enablesource)                         | [`AcquireImage()`](#acquireimage)           |
 | [`AcquireImageAsync()`](#acquireimageasync)       | [`startScan()`](#startscan)                     | [`DisableSource()`](#disablesource)                       | [`CloseSource()`](#closesource)             |
 | [`CloseSourceAsync()`](#closesourceasync)         | [`CloseWorkingProcess()`](#closeworkingprocess) | [`GetDevicesAsync()`](#getdevicesasync)                   | [`SelectDeviceAsync()`](#selectdeviceasync) |
-| [`SetOpenSourceTimeout()`](#setopensourcetimeout) |
+| [`SetOpenSourceTimeout()`](#setopensourcetimeout) | [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
 
 **Properties**
 
@@ -38,14 +40,7 @@ description: Dynamic Web TWAIN SDK Documentation API Reference Acquire APIs Page
 
 
 
-**2. The following APIs are compatible with TWAIN and ICA** 
-
-**Methods**
-
-
-| [`getCapabilities()`](#getcapabilities) | [`setCapabilities()`](#setcapabilities) |
-
-**3. The following APIs are compatible with TWAIN (mostly Windows, but also possibly macOS)** 
+**2. The following APIs are compatible with TWAIN (mostly Windows, but also possibly macOS)** 
 
 **Methods**
 
@@ -696,17 +691,21 @@ SelectSourceAsync(deviceType?: Dynamsoft.DWT.EnumDWT_DeviceType | number): Promi
 <table>
 
 <tr>
-<td align="center">Windows</td>
+<td align="center">Windows/TWAIN</td>
+<td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">Linux</td>
+<td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
 <td align="center">v16.1+</td>
+<td align="center">v18.2+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
 <td align="center">v16.1+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -910,8 +909,8 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -919,8 +918,8 @@ startScan(scanSetup: ScanSetup): Promise<ScanSetup>;
 <td align="center">v18.5+</td>
 <td align="center">v15.1+</td>
 <td align="center">v15.1+</td>
-<td align="center">v18.5+</td>
 <td align="center">v15.1+</td>
+<td align="center">v18.5+</td>
 </tr>
 
 </table>
@@ -3938,8 +3937,8 @@ getCapabilities(
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -3947,8 +3946,8 @@ getCapabilities(
 <td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">v18.5+</td>
 <td align="center">v18.2+</td>
-<td align="center">not supported</td>
 </tr>
 </table>
 </div>
@@ -3991,8 +3990,8 @@ Please refer to [`Capabilities`](/_articles/info/api/interfaces.md#capabilities)
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -4000,8 +3999,8 @@ Please refer to [`Capabilities`](/_articles/info/api/interfaces.md#capabilities)
 <td align="center">v18.2+</td>
 <td align="center">v16.0+</td>
 <td align="center">v16.0+</td>
+<td align="center">v18.5+</td>
 <td align="center">v18.2+</td>
-<td align="center">not supported</td>
 </tr>
 
 </table>
@@ -4111,8 +4110,8 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -4120,8 +4119,8 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4167,8 +4166,8 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -4176,8 +4175,8 @@ DWTObject.GetDevicesAsync().then((deviceList)=>{
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>
@@ -4211,8 +4210,8 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <td align="center">Windows/WIA</td>
 <td align="center">macOS/TWAIN</td>
 <td align="center">macOS/ICA</td>
-<td align="center">macOS/eSCL</td>
 <td align="center">Linux/SANE</td>
+<td align="center">eSCL</td>
 </tr>
 
 <tr>
@@ -4220,8 +4219,8 @@ AcquireImageAsync(deviceConfiguration?: DeviceConfiguration): Promise< boolean>;
 <td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
 <td align="center">v18.0+</td>
-<td align="center">v18.2+</td>
 <td align="center">v18.0+</td>
+<td align="center">v18.2+</td>
 </tr>
 
 </table>

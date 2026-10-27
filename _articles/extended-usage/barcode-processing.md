@@ -430,3 +430,9 @@ ReadBarcode(0);
 ```
 
 [Try](https://demo.dynamsoft.com/Samples/dwt/Scan-Documents-and-Separate-them-by-Barcode/Scan-Separate-Barcode.html) or [download](https://www.dynamsoft.com/handle-sample?demoSampleId=102&type=2&productId=1000001&link=https%3a%2f%2fdownload2.dynamsoft.com%2fSamples%2fDWT%2fScan-Documents-and-Separate-them-by-Barcode.zip) the official demo.
+
+## Licensing
+
+The Barcode Reader add-on is license-controlled. Using barcode reading requires a `Barcode Reader` add-on license in addition to the core module license.
+
+A trial license includes all Dynamic Web TWAIN features, including the Barcode Reader add-on, so you can evaluate it before purchasing. For a production license, contact [Dynamsoft Sales](https://www.dynamsoft.com/company/contact/) or your account manager.

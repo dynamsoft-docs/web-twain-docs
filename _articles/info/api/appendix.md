@@ -55,13 +55,17 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-1126 | The specified module could not be found. |
 |-1200 | PDF format error or not supported |
 |-2007 | The system is busy, some operations are not completed. Please try later |
+|-2120 | No plugin libraries found in the configured engine directory. \| The engine not available for action 'xxx'. \| No engine available. \| Engine 'xxx' not found. \| The specified engine does not support this action. |
 |-2137 | Cross-Origin Resource Sharing (CORS) policy is blocking the access. Please contact the Administrator to configure 'Access-Control-Allow-Origin'.|
+|-2139 | The token has expired. |
+|-2140 | The token is invalid. |
+|-2142 | The token is missing, or the requested service module version does not support token setting. The current security setting requires a token. |
 |-2207 | The Dynamic Web TWAIN Service installed on your computer is outdated and no longer works with the JavaScript code on the website \| The installed Dynamic Web TWAIN Service (old version) is incompatible with the JavaScript version x.x.x used on this website. \| The installed Dynamic Web TWAIN Service (version x.x.x) is incompatible with the JavaScript version x.x.x used on this website. |
 |-2208 | The connection with the local Dynamic Web TWAIN Service encountered a problem and has been reset |
 |-2209 | The HTML5 (Chrome&Firefox) edition does not support this method or property |
 |-2210 | You cannot call this method on this WebTwain instance because it does not use the default viewer. |
 |-2211 | The element is already bound to the viewer. |
-|-2217 | Missing dependent files for OCR Kit.  |
+|-2219 | The Linux system does not support the OCR Connector.  |
 |-2300 | Http upload error: the HTTP Server cannot empty |
 |-2301 | Network error |
 |-2302 | The result format is invalid |
@@ -93,7 +97,7 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2330 | The current product key does not support Edge. Please contact the site administrator |
 |-2338 | The current product key does not support Webcam. Please contact the site administrator |
 |-2339 | The current product key does not support pdf rasterizer. Please contact the site administrator |
-|-2340 | The license for the module OCR Kit is not found or has expired. |
+|-2340 | The license for the module OCR Connector is not found or has expired. |
 |-2342 | The domain of your current site does not match the domain bound in the current product key. Please contact the site administrator |
 |-2343 | The current product key does not support your browser. Please contact the site administrator |
 |-2344 | The current product key does not support Windows OS. Please contact the site administrator |
@@ -201,7 +205,6 @@ description: Dynamic Web TWAIN SDK Documentation API Appendix Page
 |-2624 | The element within Dynamsoft.DWT.Containers should be a valid object. |
 |-2625 | Error: The WebTwainId cannot be empty string while creating a Dynamic Web TWAIN object. |
 |-2626 | Error: The ContainerId cannot be empty string while creating a Dynamic Web TWAIN object. |
-|-2701 | The OCR Kit feature is only supported on x64 versions of Windows.  |
 |-2800 | Please make sure the Dynamic Web TWAIN Service has been installed. |
 |-2801 | Invalid response data was returned from the Dynamic Web TWAIN Service. |
 |-2802 | The file dynamsoft.webtwain.config.js timed out while loading. |
