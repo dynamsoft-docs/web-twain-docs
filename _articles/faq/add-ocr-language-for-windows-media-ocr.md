@@ -2,17 +2,17 @@
 layout: default-layout
 noTitleIndex: true
 needAutoGenerateSidebar: true
-title: How can I add more OCR languages (e.g. Japanese or Chinese) for the Windows.Media.Ocr engine?
+title: How can I add more OCR languages for the Windows.Media.Ocr engine?
 keywords: Dynamic Web TWAIN, Addon, OCR Connector, Windows.Media.Ocr, OCR language pack, Japanese, Chinese
-breadcrumbText: How can I add more OCR languages (e.g. Japanese or Chinese) for the Windows.Media.Ocr engine?
-description: How can I add more OCR languages (e.g. Japanese or Chinese) for the Windows.Media.Ocr engine used by OCR Connector?
+breadcrumbText: How can I add more OCR languages for the Windows.Media.Ocr engine?
+description: How can I add more OCR languages for the Windows.Media.Ocr engine used by OCR Connector?
 date: 2026-10-28 00:00:00 +0000
 last_modified: 2026-10-28 00:00:00 +0000
 ---
 
 # Addon
 
-## How can I add more OCR languages (e.g. Japanese or Chinese) for the Windows.Media.Ocr engine?
+## How can I add more OCR languages for the Windows.Media.Ocr engine?
 
 The `Windows.Media.Ocr` engine used by [OCR Connector](/_articles/extended-usage/ocr.md){:target="_blank"} is the built-in OCR of Windows. It can only recognize languages whose **OCR language pack** is installed on the device. By default, Windows usually installs the OCR language pack only for the display language, so [`GetInstalledOCRInfo()`](/_articles/info/api/Addon_OCR.md#getinstalledocrinfo){:target="_blank"} may return only one language (e.g. `en-US`).
 
