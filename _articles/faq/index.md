@@ -143,7 +143,7 @@ description: Dynamic Web TWAIN SDK Documentation FAQ
 9.  [Is there any way to speed up the barcode reading process?](/_articles/faq/speed-up-barcode-reading-process.md)
 10.  [What types of webcams does the Webcam Capture addon support](/_articles/faq/webcam-supported-by-webcam-capture-addon.md)
 11.  [How can I prompt users for a password when loading a password-protected PDF?](/_articles/faq/prompt-password-for-protected-pdf.md)
-12.  [How can I add more OCR languages (e.g. Japanese or Chinese) for the Windows.Media.Ocr engine?](/_articles/faq/add-ocr-language-for-windows-media-ocr.md)
+12.  [How can I add more OCR languages for the Windows.Media.Ocr engine?](/_articles/faq/add-ocr-language-for-windows-media-ocr.md)
 
 ## Project Deployment and End-user Installation
 
