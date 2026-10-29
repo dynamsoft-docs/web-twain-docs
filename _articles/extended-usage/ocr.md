@@ -34,9 +34,11 @@ The OCR add-on supports the following engines:
 
 ### Installation
 
-`Windows.Media.Ocr` and `Apple.Vision` can be used without any extra installation. For `Windows.Media.Ocr`, if the OCR model for a specific language does not exist by default, you need to install the language pack of that language in system settings.
+`Windows.Media.Ocr` and `Apple.Vision` can be used without any extra installation. 
 
-`Onnx.Ocr` requires additional installation. Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it, and run the `Install.cmd` file as administrator to install the OCR package. It will copy the additional runtime and model files to the `ocr` folder of Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
+For `Windows.Media.Ocr`, if the OCR model for a specific language does not exist by default, you need to install the language pack of that language in system settings following this [guide](/_articles/faq/add-ocr-language-for-windows-media-ocr.md).
+
+For `Onnx.Ocr`, it requires additional installation. Download [DynamicWebTWAINOCRPack.zip](https://download2.dynamsoft.com/dwt/DynamicWebTWAINOCRPack.zip), unzip it, and run the `Install.cmd` file as administrator to install the OCR package. It will copy the additional runtime and model files to the `ocr` folder of Dynamic Web TWAIN Service's [installation folder](/_articles/extended-usage/dynamsoft-service-configuration.md#installation-folder).
 
 ### Supported Languages Declared by Each Engine
 

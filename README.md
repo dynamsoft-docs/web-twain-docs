@@ -22,6 +22,6 @@ The recommended environment is Linux — for Windows users, WSL is recommended.
 
 ### License
 
-All documentation is available under the terms of [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+See the [LICENSE](./LICENSE) file for details.
 
 
