@@ -64,6 +64,47 @@ function Invoke-Robocopy {
     }
 }
 
+function Resolve-BindAddress {
+    param([string]$BindHostValue)
+    if ($BindHostValue -eq "0.0.0.0" -or $BindHostValue -eq "*") {
+        return [System.Net.IPAddress]::Any
+    }
+    if ($BindHostValue -eq "localhost") {
+        return [System.Net.IPAddress]::Loopback
+    }
+    try {
+        return [System.Net.IPAddress]::Parse($BindHostValue)
+    } catch {
+        return ([System.Net.Dns]::GetHostAddresses($BindHostValue))[0]
+    }
+}
+
+function Test-PortAvailable {
+    param([string]$BindHostValue, [int]$Port)
+    $address = Resolve-BindAddress -BindHostValue $BindHostValue
+    $listener = [System.Net.Sockets.TcpListener]::new($address, $Port)
+    try {
+        $listener.Start()
+        return $true
+    } catch {
+        return $false
+    } finally {
+        $listener.Stop()
+    }
+}
+
+function Find-AvailablePort {
+    param([string]$BindHostValue, [int]$StartPort, [int]$MaxAttempts = 50)
+    $candidate = $StartPort
+    for ($i = 0; $i -lt $MaxAttempts; $i++) {
+        if (Test-PortAvailable -BindHostValue $BindHostValue -Port $candidate) {
+            return $candidate
+        }
+        $candidate++
+    }
+    throw "Could not find an available port after $MaxAttempts attempts starting at $StartPort (bind host: $BindHostValue)"
+}
+
 Ensure-Command "git"
 Ensure-Command "robocopy"
 Ensure-Command "bundle"
@@ -136,6 +177,12 @@ $env:BUNDLE_USER_CACHE = Join-Path $bundleUserHome "cache"
 $env:JEKYLL_CACHE_DIR = $jekyllCache
 $env:JEKYLL_ENV = "development"
 New-Item -ItemType Directory -Force -Path $bundlePath, $bundleConfig, $bundleUserHome, $jekyllCache, $siteDir | Out-Null
+
+$requestedPort = $Port
+$Port = Find-AvailablePort -BindHostValue $BindHost -StartPort $requestedPort
+if ($Port -ne $requestedPort) {
+    Write-Step "Port $requestedPort is in use on $BindHost; using $Port instead"
+}
 
 Push-Location $docHome
 try {
