@@ -78,7 +78,7 @@ There are some files and folders you may pay attention to:
 
 The Dynamic Web TWAIN Service uses `localhost` and `18622` `18625` ports for HTTP connection and `18623` `18626` ports for HTTPS connection.  
 
-These ports can be configured in the `DSConfiguration.ini` file located in the service's installatin folder.
+These ports can be configured in the `DSConfiguration.ini` file located in the service's installation folder.
 
 
 ## Access-Control-Allow-Origin
