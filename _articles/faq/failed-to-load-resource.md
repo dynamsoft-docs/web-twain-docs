@@ -54,8 +54,8 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 
     > Choose between Admin (requires admin privileges) or Personal (for individual users).
     - Version 19
-      - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.msi)
-      - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.exe)
+      - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.msi)
+      - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceUserSetup.msi)
     - Version 18
       - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.msi)
       - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.exe)
@@ -65,7 +65,7 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
     <div class="multi-panel-start"></div>
 
     > Use the installer matching your SDK version.
-    - [macOS Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.pkg)
+    - [macOS Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.pkg)
     - [macOS Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.pkg)
 
     <div class="multi-panel-end"></div>
@@ -74,16 +74,16 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 
     > Select the installer format based on your distribution type.
     - RPM Packages (Red Hat, Fedora, CentOS, etc.)
-      - [Linux RPM Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.rpm)
+      - [Linux RPM Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.rpm)
       - [Linux RPM Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.rpm)
     - DEB Packages (Ubuntu, Debian, etc.)
-      - [Linux DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.deb)
+      - [Linux DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.deb)
       - [Linux DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.deb)
     - ARM64 Architecture
-      - [Linux ARM64 DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup-arm64.deb)
+      - [Linux ARM64 DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup-arm64.deb)
       - [Linux ARM64 DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup-arm64.deb)
     - MIPS Architecture
-      - [Linux MIPS DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup-mips64el.deb)
+      - [Linux MIPS DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup-mips64el.deb)
       - [Linux MIPS DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup-mips64el.deb)
 
     <div class="multi-panel-end"></div>
