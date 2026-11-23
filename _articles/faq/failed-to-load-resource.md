@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Message, Failed to load resource, CERT INVALI
 breadcrumbText: Error Message - Failed to load resource
 description: Error Message - Failed to load resource
 date: 2021-12-01 17:04:03 +0000
-last_modified: 2026-03-25 12:48:00 -0700
+last_modified: 2026-11-23 00:00:00 +0000
 ---
 
 # Error Troubleshooting
@@ -22,10 +22,10 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, "127.0.0.1" is used for service connection. "127.0.0.1" uses a self-signed SSL certificate without an expiry date. It is installed to your system so that the browser can trust it. If your environment requires high level security, self-signed certificates may not be accepted. Moreover, it is not easy to install the self-signed certificate for systems like Chrome OS.
 
-In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign’ed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2025 November 20th</font>, and the latest certificate will expire on <font color=red>2026 November 21st</font>.
+In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign’ed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2026 November 21st</font>, and the latest certificate will expire on <font color=red>2027 May 6th</font>.
 
 > [!NOTE]
-> All official third-party certificates come with an expiry date (generally one year). If `local.dynamsoft.com` is used, the certificate needs to be updated each year.
+> All official third-party certificates come with an expiry date. If `local.dynamsoft.com` is used, the certificate needs to be updated before it expires.
 
 
 ### Resolution
@@ -36,13 +36,13 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 - **High Level Security Requirement**
 
   > [!WARNING]
-  > If you use `local.dynamsoft.com`, replace the certificate annually due to expiration.
+  > If you use `local.dynamsoft.com`, replace the certificate before its expiry date.
 
   If you have to use "local.dynamsoft.com", the following methods can be taken:
 
   - Method 1. Use the following links to download and install the Dynamic Web TWAIN Service Installer.
     > [!IMPORTANT]
-    > Dynamic Web TWAIN Service installers are backward-compatible within the same major version. Identify the major SDK version first, then download the corresponding installer (for example, 19.x SDK uses v19 installers, 18.x SDK uses v18 installers). If you are unsure about your SDK version, follow [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md).
+    > The v19.5 installers below are backward-compatible with Dynamic Web TWAIN 18.x, so use them whether your application uses a 19.x or 18.x SDK. See [Service Backward Compatibility](/_articles/faq/service-backward-compatibility.md) for details. If you are unsure about your SDK version, follow [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md).
 
     <div class="multi-panel-switching-prefix"></div>
 
@@ -53,38 +53,24 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
     <div class="multi-panel-start"></div>
 
     > Choose between Admin (requires admin privileges) or Personal (for individual users).
-    - Version 19
-      - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.msi)
-      - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.exe)
-    - Version 18
-      - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.msi)
-      - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.exe)
+    - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.msi)
+    - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceUserSetup.msi)
 
     <div class="multi-panel-end"></div>
 
     <div class="multi-panel-start"></div>
 
-    > Use the installer matching your SDK version.
-    - [macOS Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.pkg)
-    - [macOS Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.pkg)
+    - [macOS Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.pkg)
 
     <div class="multi-panel-end"></div>
 
     <div class="multi-panel-start"></div>
 
     > Select the installer format based on your distribution type.
-    - RPM Packages (Red Hat, Fedora, CentOS, etc.)
-      - [Linux RPM Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.rpm)
-      - [Linux RPM Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.rpm)
-    - DEB Packages (Ubuntu, Debian, etc.)
-      - [Linux DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup.deb)
-      - [Linux DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup.deb)
-    - ARM64 Architecture
-      - [Linux ARM64 DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup-arm64.deb)
-      - [Linux ARM64 DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup-arm64.deb)
-    - MIPS Architecture
-      - [Linux MIPS DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.3.2/DynamicWebTWAINServiceSetup-mips64el.deb)
-      - [Linux MIPS DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.4/DynamsoftServiceSetup-mips64el.deb)
+    - [Linux RPM Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.rpm) (Red Hat, Fedora, CentOS, etc.)
+    - [Linux DEB Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.deb) (Ubuntu, Debian, etc.)
+    - [Linux ARM64 DEB Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup-arm64.deb)
+    - [Linux MIPS DEB Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup-mips64el.deb)
 
     <div class="multi-panel-end"></div>
 
