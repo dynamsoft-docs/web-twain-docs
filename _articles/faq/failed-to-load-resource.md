@@ -42,7 +42,7 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 
   - Method 1. Use the following links to download and install the Dynamic Web TWAIN Service Installer.
     > [!IMPORTANT]
-    > Dynamic Web TWAIN Service installers are backward-compatible within the same major version. Identify the major SDK version first, then download the corresponding installer (for example, 19.x SDK uses v19 installers, 18.x SDK uses v18 installers). If you are unsure about your SDK version, follow [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md).
+    > Dynamic Web TWAIN Service installers are backward-compatible within the same major version. Starting from v19.4, the service also supports applications using the previous major version (18.x), so the v19 installers below work with both 19.x and 18.x SDKs. The v18 installers remain available if you prefer to match an 18.x SDK. See [Service Backward Compatibility](/_articles/faq/service-backward-compatibility.md) for details. If you are unsure about your SDK version, follow [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md).
 
     <div class="multi-panel-switching-prefix"></div>
 
@@ -64,7 +64,7 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 
     <div class="multi-panel-start"></div>
 
-    > Use the installer matching your SDK version.
+    > The v19 installer works with both 19.x and 18.x SDKs.
     - [macOS Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.pkg)
     - [macOS Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.5/DynamsoftServiceSetup.pkg)
 
