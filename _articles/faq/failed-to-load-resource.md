@@ -42,7 +42,7 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 
   - Method 1. Use the following links to download and install the Dynamic Web TWAIN Service Installer.
     > [!IMPORTANT]
-    > Dynamic Web TWAIN Service installers are backward-compatible within the same major version. Starting from v19.4, the service also supports applications using the previous major version (18.x), so the v19 installers below work with both 19.x and 18.x SDKs. The v18 installers remain available if you prefer to match an 18.x SDK. See [Service Backward Compatibility](/_articles/faq/service-backward-compatibility.md) for details. If you are unsure about your SDK version, follow [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md).
+    > The v19.5 installers below are backward-compatible with Dynamic Web TWAIN 18.x, so use them whether your application uses a 19.x or 18.x SDK. See [Service Backward Compatibility](/_articles/faq/service-backward-compatibility.md) for details. If you are unsure about your SDK version, follow [How do I know which SDK version I am using?](/_articles/faq/find-SDK-version.md).
 
     <div class="multi-panel-switching-prefix"></div>
 
@@ -53,38 +53,24 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
     <div class="multi-panel-start"></div>
 
     > Choose between Admin (requires admin privileges) or Personal (for individual users).
-    - Version 19
-      - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.msi)
-      - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceUserSetup.msi)
-    - Version 18
-      - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.5/DynamsoftServiceSetup.msi)
-      - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.5/DynamsoftServiceSetup.exe)
+    - [Windows Installer (Admin)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.msi)
+    - [Windows Installer (Personal)](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceUserSetup.msi)
 
     <div class="multi-panel-end"></div>
 
     <div class="multi-panel-start"></div>
 
-    > The v19 installer works with both 19.x and 18.x SDKs.
-    - [macOS Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.pkg)
-    - [macOS Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.5/DynamsoftServiceSetup.pkg)
+    - [macOS Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.pkg)
 
     <div class="multi-panel-end"></div>
 
     <div class="multi-panel-start"></div>
 
     > Select the installer format based on your distribution type.
-    - RPM Packages (Red Hat, Fedora, CentOS, etc.)
-      - [Linux RPM Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.rpm)
-      - [Linux RPM Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.5/DynamsoftServiceSetup.rpm)
-    - DEB Packages (Ubuntu, Debian, etc.)
-      - [Linux DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.deb)
-      - [Linux DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.5/DynamsoftServiceSetup.deb)
-    - ARM64 Architecture
-      - [Linux ARM64 DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup-arm64.deb)
-      - [Linux ARM64 DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.5/DynamsoftServiceSetup-arm64.deb)
-    - MIPS Architecture
-      - [Linux MIPS DEB Installer v19](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup-mips64el.deb)
-      - [Linux MIPS DEB Installer v18](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/18.5.5/DynamsoftServiceSetup-mips64el.deb)
+    - [Linux RPM Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.rpm) (Red Hat, Fedora, CentOS, etc.)
+    - [Linux DEB Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup.deb) (Ubuntu, Debian, etc.)
+    - [Linux ARM64 DEB Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup-arm64.deb)
+    - [Linux MIPS DEB Installer](https://download2.dynamsoft.com/Demo/DWT/Resources/dist/19.5/DynamicWebTWAINServiceSetup-mips64el.deb)
 
     <div class="multi-panel-end"></div>
 
