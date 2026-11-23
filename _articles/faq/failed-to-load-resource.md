@@ -7,7 +7,7 @@ keywords: Dynamic Web TWAIN, Error Message, Failed to load resource, CERT INVALI
 breadcrumbText: Error Message - Failed to load resource
 description: Error Message - Failed to load resource
 date: 2021-12-01 17:04:03 +0000
-last_modified: 2026-03-25 12:48:00 -0700
+last_modified: 2026-11-23 00:00:00 +0000
 ---
 
 # Error Troubleshooting
@@ -22,10 +22,10 @@ You get an error message that says **"Failed to load resource: net::ERR_CERT_DAT
 
 By default, "127.0.0.1" is used for service connection. "127.0.0.1" uses a self-signed SSL certificate without an expiry date. It is installed to your system so that the browser can trust it. If your environment requires high level security, self-signed certificates may not be accepted. Moreover, it is not easy to install the self-signed certificate for systems like Chrome OS.
 
-In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign’ed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2025 November 20th</font>, and the latest certificate will expire on <font color=red>2026 November 21st</font>.
+In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0.0.1". It has a VeriSign’ed certificate that has an expiry date. The most recent expired "local.dynamsoft.com" certificate expired on <font color=red>2026 November 21st</font>, and the latest certificate will expire on <font color=red>2027 May 6th</font>.
 
 > [!NOTE]
-> All official third-party certificates come with an expiry date (generally one year). If `local.dynamsoft.com` is used, the certificate needs to be updated each year.
+> All official third-party certificates come with an expiry date. If `local.dynamsoft.com` is used, the certificate needs to be updated before it expires.
 
 
 ### Resolution
@@ -36,7 +36,7 @@ In this case, we provide a domain, "local.dynamsoft.com", which points to "127.0
 - **High Level Security Requirement**
 
   > [!WARNING]
-  > If you use `local.dynamsoft.com`, replace the certificate annually due to expiration.
+  > If you use `local.dynamsoft.com`, replace the certificate before its expiry date.
 
   If you have to use "local.dynamsoft.com", the following methods can be taken:
 
