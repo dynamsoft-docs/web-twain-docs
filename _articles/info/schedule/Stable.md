@@ -155,7 +155,7 @@ Added a new method [`getVisiblePagesInfo()`](/_articles/info/api/WebTwain_Viewer
 
 ### Improvements
 
-- Added support for reading special TIFFs (e.g. 4-bit RGB interleaved, old-style JPEG compression) on Windows.
+- Added support for reading special TIFFs (e.g. 4-bit RGB interleaved) on Windows.
 - Added support for keeping the PDF forms when saving.
 - Updated the way of checking CSS file integrity from fetching to examining the effectiveness of CSS rules.
 - Updated the format of license expiry date to avoid misunderstanding.
