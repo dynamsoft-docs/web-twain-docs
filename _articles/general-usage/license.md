@@ -73,9 +73,6 @@ DLS-connected license keys begin with the `DLS` prefix. Learn more about the Dyn
 
 Offline license keys usually begin with the `f` prefix.
 
-1. Without add-ons: activate the license in the customer portal, then acquire the offline key. This key only authorizes the use of the core DWT module.
-2. With add-ons: activate the license in the customer portal, then acquire the offline keys. This may result in multiple license keys - one for the base DWT module, and separate ones for the add-ons. To use multiple keys in a single project, concatenate them (in any order) into a single string, separated with semicolons.
-
 <div class="multi-panel-switching-end"></div>
 
 ### Configuring Full License Keys
